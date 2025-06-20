@@ -1,0 +1,13 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "team_logos:item/orange_otter.png",
+      "height": 8,
+      "ascent": 8,
+      "chars": [
+        "\ua000"
+      ]
+    }
+  ]
+}
