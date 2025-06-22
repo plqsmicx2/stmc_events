@@ -14,7 +14,7 @@ function lobby:points_update
 # first, we update the stage
 # this function doesn't really do anything, but it's still useful for keeping some info
 # this function WAS going to do something, but now each subthread's /reset function updates the stage, so it isn't needed
-function stage_update
+function lobby:stage_update
 
 # and depending on our current stage, we call an update somewhere else in the world
 # but we only call that update if the event is unpaused
