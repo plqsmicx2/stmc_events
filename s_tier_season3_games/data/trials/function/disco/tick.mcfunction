@@ -35,7 +35,7 @@ execute if score disco.handler disco.stage matches 2 run scoreboard players add 
 # move to next stage after 10 seconds
 execute if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 199 run title @a title {"text":"Example!","color":"dark_aqua","bold":true}
 execute if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 199 run title @a actionbar {"text":"Get to the block in your hotbar!","color":"dark_aqua"}
-execute as @a if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 198 run playsound minecraft:music_disc.otherside master @s ~ ~ ~ 0.8 1.0
+execute as @a at @s if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 198 run playsound minecraft:music_disc.otherside master @s ~ ~ ~ 0.8 1.0
 execute if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 200.. run scoreboard players set disco.handler disco.stage 3
 
 # if we're in stage 3, increment the timer & run the example function
@@ -65,7 +65,7 @@ execute if score disco.handler disco.timer.delay3 matches 400.. run scoreboard p
 
 # if we're in stage 5 (game in progress), increment the game timer & run the main game function
 execute if score disco.handler disco.stage matches 5 run scoreboard players add disco.handler disco.timer.game 1
-execute if score disco.handler disco.stage matches 5 run function trials:disco/round
+execute if score disco.handler disco.stage matches 5..5 unless score disco.handler disco.rounds_played matches 60.. run function trials:disco/round
 # move to next stage after 60 rounds
 execute if score disco.handler disco.rounds_played matches 60.. run scoreboard players set disco.handler disco.stage 6
 # or move to next stage if only 1 player is alive

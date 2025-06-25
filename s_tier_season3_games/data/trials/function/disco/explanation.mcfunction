@@ -40,7 +40,7 @@ execute if score disco.handler disco.timer.explanation matches 480 run tellraw @
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"1 point","color":"red"},{"text":" for each round you survive.","color":"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"3 points","color":"red"},{"text":" each time someone else dies.","color":"aqua"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"5 points","color":"red"},{"text":" each time someone else dies.","color":"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"If you survive all 60 rounds, you will earn a bonus +",color:"aqua"},{"text":"15 points","color":"red"},{"text":".","color":"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
