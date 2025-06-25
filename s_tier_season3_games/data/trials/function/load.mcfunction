@@ -45,5 +45,11 @@ scoreboard players reset towers.handler towers.stage
 # set stage to 0
 scoreboard players set tr.handler tr.stage 0
 
+# reset game order
+scoreboard players set tr.handler tr.stage.game1 0
+scoreboard players set tr.handler tr.stage.game2 0
+scoreboard players set tr.handler tr.stage.game3 0
+scoreboard players set tr.handler tr.stage.game4 0
+
 # set some necessary values for players
 scoreboard players set @a tr.points.indiv 0

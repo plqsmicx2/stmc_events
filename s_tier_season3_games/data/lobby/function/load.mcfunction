@@ -91,7 +91,7 @@ scoreboard objectives add v3.stage dummy
 # scoreboard objectives add puzzle.stage dummy
 scoreboard objectives add d3.stage dummy
 scoreboard objectives add v4.stage dummy
-scoreboard objectives add trials.stage dummy
+scoreboard objectives add tr.stage dummy
 scoreboard objectives add d4.stage dummy
 scoreboard objectives add v5.stage dummy
 # scoreboard objectives add tbd.stage dummy
@@ -113,7 +113,7 @@ scoreboard players reset v3.handler v3.stage
 # scoreboard players reset puzzle.handler puzzle.stage
 scoreboard players reset d3.handler d3.stage
 scoreboard players reset v4.handler v4.stage
-scoreboard players reset trials.handler trials.stage
+scoreboard players reset tr.handler tr.stage
 scoreboard players reset d4.handler d4.stage
 scoreboard players reset v5.handler v5.stage
 # scoreboard players reset tbd.handler tbd.stage

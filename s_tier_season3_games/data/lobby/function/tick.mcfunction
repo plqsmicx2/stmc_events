@@ -21,4 +21,6 @@ function lobby:stage_update
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 0 run function lobby:pre_event/tick
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 1 run function voting:tick1
 
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 11 run function trials:tick
+
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 17 run function survival_games:tick
