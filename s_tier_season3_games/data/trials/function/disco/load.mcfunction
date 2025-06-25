@@ -44,6 +44,7 @@ yawp local trials:disco disco-world add flag spawning-all Denied
 yawp local trials:disco disco-world add flag fall-damage Denied
 yawp local trials:disco disco-world add flag no-pvp Allowed
 yawp local trials:disco disco-world add flag no-hunger Allowed
+yawp local trials:disco disco-world add flag knockback-players Denied
 yawp local trials:disco disco-world add flag item-drop Denied
 yawp local trials:disco disco-world add flag item-pickup Denied
 
@@ -56,12 +57,12 @@ team modify CYAN_COUGARS collisionRule never
 team modify PURPLE_PENGUINS collisionRule never
 
 # give everyone leather boots
-execute as @a[team=RED_RACCOONS] run item replace entity @a armor.feet with minecraft:leather_boots[dyed_color=11546150]
-execute as @a[team=ORANGE_OTTERS] run item replace entity @a armor.feet with minecraft:leather_boots[dyed_color=16351261]
-execute as @a[team=PINK_PIKAS] run item replace entity @a armor.feet with minecraft:leather_boots[dyed_color=15961002]
-execute as @a[team=GREEN_GOATS] run item replace entity @a armor.feet with minecraft:leather_boots[dyed_color=6192150]
-execute as @a[team=CYAN_COUGARS] run item replace entity @a armor.feet with minecraft:leather_boots[dyed_color=1481884]
-execute as @a[team=PURPLE_PENGUINS] run item replace entity @a armor.feet with minecraft:leather_boots[dyed_color=8991416]
+execute as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150]
+execute as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261]
+execute as @a[team=PINK_PIKAS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=15961002]
+execute as @a[team=GREEN_GOATS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=6192150]
+execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=1481884]
+execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416]
 
 # and wrap it up with some scoreboard stuff
 # timers
