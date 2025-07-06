@@ -69,7 +69,7 @@ execute if score disco.handler disco.stage matches 5..5 unless score disco.handl
 # move to next stage after 60 rounds
 execute if score disco.handler disco.rounds_played matches 60.. run scoreboard players set disco.handler disco.stage 6
 # or move to next stage if only 1 player is alive
-# execute if score disco.handler disco.stage matches 5 if score disco.handler disco.players_alive matches 0..1 run scoreboard players set disco.handler disco.stage 6
+execute if score disco.handler disco.stage matches 5 if score disco.handler disco.players_alive matches 0..1 run scoreboard players set disco.handler disco.stage 6
 
 # if we're in stage 6, increment the timer
 execute if score disco.handler disco.stage matches 6 run scoreboard players add disco.handler disco.timer.delay4 1
