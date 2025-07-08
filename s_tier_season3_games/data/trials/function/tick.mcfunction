@@ -16,6 +16,7 @@ execute unless score tr.handler tr.stage matches 0.. run function trials:load
 # <===== run the lobbies & games =====>
 
 # lobby 1
+execute if score tr.handler tr.stage matches 0 run scoreboard players add tr.handler tr.timer.lobby1 1
 execute if score tr.handler tr.stage matches 0 run function trials:lobby1
 
 # game 1
@@ -25,28 +26,34 @@ execute if score tr.handler tr.stage matches 1 if score tr.handler tr.stage.game
 execute if score tr.handler tr.stage matches 1 if score tr.handler tr.stage.game1 matches 4 run function trials:towers/tick
 
 # lobby 2
-execute if score tr.handler tr.stage matches 2 run function trials:lobby1
+execute if score tr.handler tr.stage matches 2 run scoreboard players add tr.handler tr.timer.lobby2 1
+execute if score tr.handler tr.stage matches 2 run function trials:lobby2
 
 # game 2
-execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game1 matches 1 run function trials:disco/tick
-execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game1 matches 2 run function trials:replicate/tick
-execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game1 matches 3 run function trials:spleef/tick
-execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game1 matches 4 run function trials:towers/tick
+execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 1 run function trials:disco/tick
+execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 2 run function trials:replicate/tick
+execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 3 run function trials:spleef/tick
+execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 4 run function trials:towers/tick
 
 # lobby 3
-execute if score tr.handler tr.stage matches 4 run function trials:lobby1
+execute if score tr.handler tr.stage matches 4 run scoreboard players add tr.handler tr.timer.lobby3 1
+execute if score tr.handler tr.stage matches 4 run function trials:lobby3
 
 # game 3
-execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game1 matches 1 run function trials:disco/tick
-execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game1 matches 2 run function trials:replicate/tick
-execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game1 matches 3 run function trials:spleef/tick
-execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game1 matches 4 run function trials:towers/tick
+execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 1 run function trials:disco/tick
+execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 2 run function trials:replicate/tick
+execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 3 run function trials:spleef/tick
+execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 4 run function trials:towers/tick
 
 # lobby 4
-execute if score tr.handler tr.stage matches 6 run function trials:lobby1
+execute if score tr.handler tr.stage matches 6 run scoreboard players add tr.handler tr.timer.lobby4 1
+execute if score tr.handler tr.stage matches 6 run function trials:lobby4
 
 # game 4
-execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game1 matches 1 run function trials:disco/tick
-execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game1 matches 2 run function trials:replicate/tick
-execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game1 matches 3 run function trials:spleef/tick
-execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game1 matches 4 run function trials:towers/tick
+execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 1 run function trials:disco/tick
+execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 2 run function trials:replicate/tick
+execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 3 run function trials:spleef/tick
+execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 4 run function trials:towers/tick
+
+# send us back to main lobby
+execute if score tr.handler tr.stage matches 8 run scoreboard players add stmc.handler event.stage 1

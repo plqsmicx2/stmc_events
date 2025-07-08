@@ -30,7 +30,7 @@ execute as @a[team=CYAN_COUGARS] at @s run scoreboard players operation disco.Cy
 scoreboard players set disco.PurplePenguins disco.points.team 0
 execute as @a[team=PURPLE_PENGUINS] at @s run scoreboard players operation disco.PurplePenguins disco.points.team += @s disco.points.indiv
 
-# <===== Kills Actionbar =====>
+# <===== Actionbar =====>
 
 # sets player actionbar to their points
 execute as @a if score disco.handler disco.stage matches 5..6 run title @s actionbar ["",{text:"Individual Points: ",bold:true,color:"yellow"},{score:{name:"@s",objective:"disco.points.indiv"},bold:true,color:"red"}]

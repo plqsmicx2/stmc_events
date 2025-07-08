@@ -199,7 +199,7 @@ execute in trials:replicate if score replicate.PinkPikas replicate.timer.build6 
 execute in trials:replicate if score replicate.PinkPikas replicate.timer.build6 matches 3 run fill -36 112 11 -32 112 15 tinted_glass
 # re-add chiseled tuff bricks
 execute in trials:replicate if score replicate.PinkPikas replicate.timer.build6 matches 3 run fill -31 111 21 -27 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.PinkPikas replicate.timer.build6 matches 3 run fill -41 112 21 -37 111 25 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.PinkPikas replicate.timer.build6 matches 3 run fill -41 111 21 -37 111 25 chiseled_tuff_bricks
 execute in trials:replicate if score replicate.PinkPikas replicate.timer.build6 matches 3 run fill -51 111 21 -47 111 25 chiseled_tuff_bricks
 execute in trials:replicate if score replicate.PinkPikas replicate.timer.build6 matches 3 run fill -46 111 11 -42 111 15 chiseled_tuff_bricks
 execute in trials:replicate if score replicate.PinkPikas replicate.timer.build6 matches 3 run fill -36 111 11 -32 111 15 chiseled_tuff_bricks

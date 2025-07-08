@@ -15,6 +15,9 @@ execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches
 execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 5 if score disco.handler disco.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
 execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 5 if score disco.handler disco.deathThisTick matches 1 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+5 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Outlasted Player!",bold:true,color:"red"}]
 
+# check total # of players alive
+execute as @a[scores={disco.alive=1}] run scoreboard players add disco.handler disco.players_alive 1
+
 # next, let's check up on our teams
 # first we update the players alive of each team
 scoreboard players set disco.RedRaccoons disco.players_alive 0

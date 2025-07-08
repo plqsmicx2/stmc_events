@@ -963,3 +963,9 @@ execute if score replicate.PinkPikas replicate.points.rank.build6 matches 5 as @
 execute if score replicate.GreenGoats replicate.points.rank.build6 matches 5 as @a[team=GREEN_GOATS] run scoreboard players add @s replicate.points.indiv 2
 execute if score replicate.CyanCougars replicate.points.rank.build6 matches 5 as @a[team=CYAN_COUGARS] run scoreboard players add @s replicate.points.indiv 2
 execute if score replicate.PurplePenguins replicate.points.rank.build6 matches 5 as @a[team=PURPLE_PENGUINS] run scoreboard players add @s replicate.points.indiv 2
+
+# reset effects
+effect clear @a
+
+# clear inventories
+clear @a
