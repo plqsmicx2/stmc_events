@@ -20,6 +20,7 @@ function lobby:stage_update
 # but we only call that update if the event is unpaused
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 0 run function lobby:pre_event/tick
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 1 run function voting:tick1
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 2 run function race:tick
 
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 11 run function trials:tick
 
