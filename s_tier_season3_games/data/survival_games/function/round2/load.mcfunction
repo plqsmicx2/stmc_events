@@ -8,6 +8,7 @@ execute in survival_games:sg2 run tp @a 0 178 0
 
 # force gamemode
 gamemode survival @a
+execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set time
 time set 12000
@@ -102,7 +103,7 @@ scoreboard players reset sg.r2.handler sg.r2.timer.round
 scoreboard players reset sg.r2.handler sg.r2.timer.delay3
 
 # reset players alive
-execute as @a at @s run scoreboard players set @s sg.alive 1
+execute as @a[team=!SPECTATORS] at @s run scoreboard players set @s sg.alive 1
 function survival_games:round2/death_handler
 
 # randomize borderEnd

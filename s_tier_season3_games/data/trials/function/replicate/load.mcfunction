@@ -12,6 +12,7 @@ execute in trials:replicate as @a[team=PURPLE_PENGUINS] run tp @s 39 113 -18
 
 # force gamemode
 gamemode survival @a
+execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set appropriate gamerules
 gamerule doDaylightCycle false

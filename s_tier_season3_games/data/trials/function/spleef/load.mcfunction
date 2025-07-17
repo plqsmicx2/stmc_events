@@ -7,6 +7,7 @@ execute in trials:spleef run tp @a 0 152 0
 
 # force gamemode
 gamemode survival @a
+execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set appropriate gamerules
 gamerule doDaylightCycle false
@@ -103,7 +104,7 @@ scoreboard players set spleef.handler spleef.timer.delay2 0
 scoreboard players set spleef.handler spleef.timer.game 0
 scoreboard players set spleef.handler spleef.timer.delay3 0
 
-scoreboard players set @a spleef.alive 1
+scoreboard players set @a[team=!SPECTATORS] spleef.alive 1
 
 scoreboard players set @a spleef.points.indiv 0
 

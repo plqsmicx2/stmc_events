@@ -5,6 +5,7 @@ execute in trials:disco run tp @a 0 109 0
 
 # force gamemode
 gamemode survival @a
+execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set time
 time set 12000
@@ -104,7 +105,7 @@ scoreboard players set disco.handler disco.timer.delay4 0
 
 scoreboard players set disco.handler disco.rounds_played 0
 scoreboard players set disco.handler disco.example_rounds 0
-scoreboard players set @a disco.alive 1
+scoreboard players set @a[team=!SPECTATORS] disco.alive 1
 
 scoreboard players set @a disco.points.indiv 0
 

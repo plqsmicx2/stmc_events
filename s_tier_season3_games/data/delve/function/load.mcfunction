@@ -16,6 +16,7 @@ execute in delve:delve as @a[team=PURPLE_PENGUINS] run spawnpoint @s 0 243 0
 
 # force gamemode
 gamemode survival @a
+execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set weather
 weather clear

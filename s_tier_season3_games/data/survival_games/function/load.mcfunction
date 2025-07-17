@@ -86,6 +86,7 @@ scoreboard players set sg.handler sg.teams_alive 6
 # and set some necessary values for our players
 scoreboard players set @a sg.kills 0
 scoreboard players set @a sg.alive 1
+scoreboard players set @a[team=SPECTATORS] sg.alive 0
 scoreboard players set @a sg.points.indiv 0
 
 # set the sidebar

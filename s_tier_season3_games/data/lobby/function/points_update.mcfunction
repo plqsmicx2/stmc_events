@@ -1,8 +1,14 @@
 # updates player points (on a global level)
 
 # first, we make sure that all players have points
-# sets players with an indiv less than 0 (or null) to 0
-# these values will be changed by each game's tick function, so we just need to set them to 0 if they don't exist right now
+# sets players' game values to whatever the game itself has stored
+execute as @a run scoreboard players operation @s stats.points.indiv.g1 = @s race.points.indiv
+#execute as @a run scoreboard players operation @s stats.points.indiv.g2 = @s solve.points.indiv
+#execute as @a run scoreboard players operation @s stats.points.indiv.g3 = @s extract.points.indiv
+execute as @a run scoreboard players operation @s stats.points.indiv.g4 = @s tr.points.indiv
+execute as @a run scoreboard players operation @s stats.points.indiv.g5 = @s delve.points.indiv
+execute as @a run scoreboard players operation @s stats.points.indiv.g6 = @s sg.points.indiv
+# and now sets players with an indiv less than 0 (or null) to 0 in case they don't exist yet
 execute as @a unless entity @s[scores={stats.points.indiv.g1=0..}] run scoreboard players set @s stats.points.indiv.g1 0
 execute as @a unless entity @s[scores={stats.points.indiv.g2=0..}] run scoreboard players set @s stats.points.indiv.g2 0
 execute as @a unless entity @s[scores={stats.points.indiv.g3=0..}] run scoreboard players set @s stats.points.indiv.g3 0
@@ -83,3 +89,6 @@ execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCouga
 execute as @a[team=CYAN_COUGARS] run scoreboard players operation @s stats.points.team = team.CyanCougars stats.points.team
 execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += @s stats.points.indiv
 execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation @s stats.points.team = team.PurplePenguins stats.points.team
+
+# and finally, set the players' actionbar to their individual rank & points
+execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]

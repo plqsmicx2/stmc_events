@@ -7,6 +7,7 @@ execute in trials:towers run tp @a 0 104 0
 
 # force gamemode
 gamemode survival @a
+execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set appropriate gamerules
 gamerule doDaylightCycle false
@@ -103,7 +104,7 @@ scoreboard players set towers.handler towers.timer.game.secondsElapsed 0
 scoreboard players set towers.handler towers.timer.game.minsElapsed 0
 scoreboard players set towers.handler towers.timer.delay3 0
 
-scoreboard players set @a towers.alive 1
+scoreboard players set @a[team=!SPECTATORS] towers.alive 1
 scoreboard players set @a towers.deathCounter 0
 
 scoreboard players set @a towers.points.indiv 0

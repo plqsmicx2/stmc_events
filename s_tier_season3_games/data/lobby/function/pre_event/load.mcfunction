@@ -1,6 +1,11 @@
-# idk this function doesn't do anything
+# force gamemode
+gamemode survival @a
 
-# world protections
+# do some clears
+clear @a
+effect clear @a
+
+# lobby world protections
 yawp dim lobby:lobby delete-all regions
 yawp dim lobby:lobby create local lobby-world Cuboid -30 90 -30 30 120 30
 yawp local lobby:lobby lobby-world add flag break-blocks Denied
@@ -12,9 +17,6 @@ yawp local lobby:lobby lobby-world add flag no-hunger Allowed
 yawp local lobby:lobby lobby-world add flag knockback-players Allowed
 yawp local lobby:lobby lobby-world add flag item-drop Allowed
 yawp local lobby:lobby lobby-world add flag item-pickup Allowed
-
-# set stage
-scoreboard players set stmc.handler pre.stage 0
 
 # scoreboard stuff
 scoreboard objectives add pre.timer dummy

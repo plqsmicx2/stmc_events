@@ -2,13 +2,37 @@
 # serves as the single thread handling the whole event
 
 # first things first, let's automatically add our players to their respective teams
-# TODO
-# something like execute as @a[team=!] if @s uuid == ... run team join @s
-# each player will be their own command
 
-# now that joined players have teams, let's handle their scores
-function lobby:points_update
-function lobby:sidebar
+# RED RACCOONS
+execute as Krisppy unless entity @s[team=] run team join RED_RACCOONS Krisppy
+execute as authenticflame unless entity @s[team=] run team join RED_RACCOONS authenticflame
+execute as IISona unless entity @s[team=] run team join RED_RACCOONS IISona
+execute as ZeroStep2 unless entity @s[team=] run team join RED_RACCOONS ZeroStep2
+# ORANGE OTTERS
+execute as plqsmic unless entity @s[team=] run team join ORANGE_OTTERS plqsmic
+execute as limeae unless entity @s[team=] run team join ORANGE_OTTERS limeae
+#execute as GERAD unless entity @s[team=] run team join ORANGE_OTTERS GERAD
+execute as Quacken64 unless entity @s[team=] run team join ORANGE_OTTERS Quacken64
+# PINK PIKAS
+#execute as STOMPPPY unless entity @s[team=] run team join PINK_PIKAS STOMPPPY
+#execute as KAI unless entity @s[team=] run team join PINK_PIKAS KAI
+#execute as NUGG unless entity @s[team=] run team join PINK_PIKAS NUGG
+#execute as MAC unless entity @s[team=] run team join PINK_PIKAS MAC
+# GREEN GOATS
+#execute as ALINA unless entity @s[team=] run team join GREEN_GOATS ALINA
+#execute as GRACE unless entity @s[team=] run team join GREEN_GOATS GRACE
+execute as GoldShort unless entity @s[team=] run team join GREEN_GOATS GoldShort
+#execute as BLAINE unless entity @s[team=] run team join GREEN_GOATS BLAINE
+# CYAN COUGARS
+execute as tastygushers unless entity @s[team=] run team join CYAN_COUGARS tastygushers
+execute as seagull_spam unless entity @s[team=] run team join CYAN_COUGARS seagull_spam
+#execute as AARON unless entity @s[team=] run team join CYAN_COUGARS AARON
+#execute as MADISON unless entity @s[team=] run team join CYAN_COUGARS MADISON
+# PURPLE PENGUINS
+execute as damien___ unless entity @s[team=] run team join PURPLE_PENGUINS damien___
+execute as Exrry unless entity @s[team=] run team join PURPLE_PENGUINS Exrry
+#execute as REID unless entity @s[team=] run team join PURPLE_PENGUINS REID
+#execute as TARANG unless entity @s[team=] run team join PURPLE_PENGUINS TARANG
 
 # and finally, we can get to the thread of the event
 

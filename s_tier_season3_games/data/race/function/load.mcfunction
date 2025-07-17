@@ -7,6 +7,7 @@ execute in race:race run tp @a -13 105 14
 
 # force gamemode
 gamemode survival @a
+execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set time
 time set 4000
