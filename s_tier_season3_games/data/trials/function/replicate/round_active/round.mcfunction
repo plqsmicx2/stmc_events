@@ -21,7 +21,11 @@
 # <===== GAME-WIDE =====>
 
 # reset inventories
-item replace entity @a hotbar.0 with minecraft:netherite_pickaxe
+item replace entity @a hotbar.0 with diamond_pickaxe[custom_name={"text":"BREAKER","color":"dark_aqua","bold":true},tool={default_mining_speed:10000,damage_per_block:0,rules:[{speed:.1,blocks:["red_wool","orange_wool","pink_wool","green_wool","cyan_wool","purple_wool","deepslate_tiles","deepslate_tile_slab","deepslate_tile_stairs","deepslate_tile_wall","tinted_glass","soul_lantern","red_nether_brick_slab","red_nether_brick_stairs","red_nether_brick_wall","shroomlight","crying_obsidian"]}]}]
+item replace entity @a hotbar.1 with air
+
+# kill item drops
+execute in trials:replicate run kill @e[type=item]
 
 # if game timer is 4800 [4 minutes], end game
 execute if score replicate.handler replicate.timer.game matches 4800 run scoreboard players add replicate.handler replicate.stage 1

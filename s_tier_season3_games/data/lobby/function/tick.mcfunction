@@ -8,6 +8,7 @@
 
 # now that joined players have teams, let's handle their scores
 function lobby:points_update
+function lobby:sidebar
 
 # and finally, we can get to the thread of the event
 
@@ -19,9 +20,17 @@ function lobby:stage_update
 # and depending on our current stage, we call an update somewhere else in the world
 # but we only call that update if the event is unpaused
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 0 run function lobby:pre_event/tick
-execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 1 run function voting:tick1
-execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 2 run function race:tick
-
-execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 11 run function trials:tick
-
-execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 17 run function survival_games:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 1 run function race:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 2 run function lobby:between_game
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 3 run function solve:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 4 run function lobby:between_game
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 5 run function extract:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 6 run function lobby:between_game
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 7 run function trials:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 8 run function lobby:between_game
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 9 run function delve:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 10 run function lobby:between_game
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 11 run function survival_games:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 12 run function lobby:between_game
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 13 run function finale:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 14 run function lobby:after_event

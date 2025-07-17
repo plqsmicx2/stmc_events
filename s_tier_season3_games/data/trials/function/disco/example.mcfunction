@@ -132,5 +132,6 @@ execute if score disco.handler disco.timer.example = disco.handler disco.current
 # <===== ROUND END =====>
 
 # round ends, reset timer & kill !players
+execute if score disco.handler disco.timer.example = disco.handler disco.current_round_length_delay in trials:disco run clear @a *[!minecraft:dyed_color]
 execute if score disco.handler disco.timer.example = disco.handler disco.current_round_length_delay in trials:disco run kill @e[type=!player]
 execute if score disco.handler disco.timer.example = disco.handler disco.current_round_length_delay run scoreboard players set disco.handler disco.timer.example 0

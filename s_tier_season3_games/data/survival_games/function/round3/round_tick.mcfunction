@@ -29,7 +29,8 @@ execute if score sg.r3.handler sg.r3.timer.round matches 2 in survival_games:sg3
 execute as @a if score sg.r3.handler sg.r3.timer.round matches 40.. if items entity @s armor.chest minecraft:elytra unless entity @s[nbt={FallFlying:1b}] run item replace entity @s armor.chest with minecraft:air
 
 # after 5 seconds remove fall damage immunity
-execute if score sg.r3.handler sg.r3.timer.round matches 100 run yawp flag local survival_games:sg3 sg3-world fall-damage state Allowed
+execute if score sg.r3.handler sg.r3.timer.round matches 200 run yawp flag local survival_games:sg3 sg3-world fall-damage state Allowed
+execute if score sg.r3.handler sg.r3.timer.round matches 200 run effect clear @a
 
 # check if game is over & call reset if it is
 execute if score sg.r3.handler sg.teams_alive matches 1 run function survival_games:round3/reset

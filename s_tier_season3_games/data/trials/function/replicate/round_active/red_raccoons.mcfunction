@@ -31,13 +31,11 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 3 run clone -2 81 -2 2 81 2 37 111 21
 
 # give players necessary blocks
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.1 with snow_block 64
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.2 with green_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.3 with spruce_wood 64
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.4 with red_mushroom_block 64
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.5 with brown_mushroom_block 64
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.6 with mushroom_stem 64
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.7 with mossy_cobblestone 64
+execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.3 with snow_block 64
+execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.4 with green_concrete 64
+execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.5 with brown_concrete 64
+execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.6 with packed_mud 64
+execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.7 with podzol 64
 execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with cobblestone 64
 
 # remove the tinted glass barrier
@@ -45,8 +43,8 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if score replicate.RedRaccoons replicate.stage matches 0 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players remove replicate.RedRaccoons replicate.timer.build1 60
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if score replicate.RedRaccoons replicate.stage matches 0 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players set replicate.RedRaccoons replicate.stage 1
+execute if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if score replicate.RedRaccoons replicate.stage matches 0 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build1 60
+execute if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if score replicate.RedRaccoons replicate.stage matches 0 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 1
 
 # Build 2
 
@@ -82,8 +80,8 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 60.. if score replicate.RedRaccoons replicate.stage matches 1 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players remove replicate.RedRaccoons replicate.timer.build2 60
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 60.. if score replicate.RedRaccoons replicate.stage matches 1 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players set replicate.RedRaccoons replicate.stage 2
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 60.. if score replicate.RedRaccoons replicate.stage matches 1 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build2 60
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 60.. if score replicate.RedRaccoons replicate.stage matches 1 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 2
 
 # Build 3
 
@@ -115,8 +113,8 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build3 matches 60.. if score replicate.RedRaccoons replicate.stage matches 2 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players remove replicate.RedRaccoons replicate.timer.build3 60
-execute if score replicate.RedRaccoons replicate.timer.build3 matches 60.. if score replicate.RedRaccoons replicate.stage matches 2 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players set replicate.RedRaccoons replicate.stage 3
+execute if score replicate.RedRaccoons replicate.timer.build3 matches 60.. if score replicate.RedRaccoons replicate.stage matches 2 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build3 60
+execute if score replicate.RedRaccoons replicate.timer.build3 matches 60.. if score replicate.RedRaccoons replicate.stage matches 2 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 3
 
 # Build 4
 
@@ -152,8 +150,8 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 60.. if score replicate.RedRaccoons replicate.stage matches 3 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players remove replicate.RedRaccoons replicate.timer.build4 60
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 60.. if score replicate.RedRaccoons replicate.stage matches 3 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players set replicate.RedRaccoons replicate.stage 4
+execute if score replicate.RedRaccoons replicate.timer.build4 matches 60.. if score replicate.RedRaccoons replicate.stage matches 3 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build4 60
+execute if score replicate.RedRaccoons replicate.timer.build4 matches 60.. if score replicate.RedRaccoons replicate.stage matches 3 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 4
 
 # Build 5
 
@@ -187,8 +185,8 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
 
 # store time to complete this build & move to next build
-execute if score replicate.RedRaccoons replicate.timer.build5 matches 60.. if score replicate.RedRaccoons replicate.stage matches 4 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players remove replicate.RedRaccoons replicate.timer.build5 60
-execute if score replicate.RedRaccoons replicate.timer.build5 matches 60.. if score replicate.RedRaccoons replicate.stage matches 4 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players set replicate.RedRaccoons replicate.stage 5
+execute if score replicate.RedRaccoons replicate.timer.build5 matches 60.. if score replicate.RedRaccoons replicate.stage matches 4 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build5 60
+execute if score replicate.RedRaccoons replicate.timer.build5 matches 60.. if score replicate.RedRaccoons replicate.stage matches 4 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 5
 
 # Build 6
 
@@ -222,5 +220,5 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build6 matches 60.. if score replicate.RedRaccoons replicate.stage matches 5 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players remove replicate.RedRaccoons replicate.timer.build6 60
-execute if score replicate.RedRaccoons replicate.timer.build6 matches 60.. if score replicate.RedRaccoons replicate.stage matches 5 if score replicate.RedRaccoons replicate.playersCompleted matches 1 run scoreboard players set replicate.RedRaccoons replicate.stage 6
+execute if score replicate.RedRaccoons replicate.timer.build6 matches 60.. if score replicate.RedRaccoons replicate.stage matches 5 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build6 60
+execute if score replicate.RedRaccoons replicate.timer.build6 matches 60.. if score replicate.RedRaccoons replicate.stage matches 5 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 6

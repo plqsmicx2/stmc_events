@@ -6,7 +6,7 @@
 # BUILD 1
 scoreboard objectives add replicate.points.rank.build1 dummy
 
-scoreboard players set $replicate.highest replicate.timer.build1 -1
+scoreboard players set $replicate.highest replicate.timer.build1 4800
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.RedRaccoons replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.OrangeOtters replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.PinkPikas replicate.timer.build1
@@ -26,7 +26,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build1 matches 1 run
 execute if score replicate.CyanCougars replicate.points.rank.build1 matches 1 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build1 matches 1 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build1 -1
+scoreboard players set $replicate.highest replicate.timer.build1 4800
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.RedRaccoons replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.OrangeOtters replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.PinkPikas replicate.timer.build1
@@ -46,7 +46,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build1 matches 2 run
 execute if score replicate.CyanCougars replicate.points.rank.build1 matches 2 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build1 matches 2 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build1 -1
+scoreboard players set $replicate.highest replicate.timer.build1 4800
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.RedRaccoons replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.OrangeOtters replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.PinkPikas replicate.timer.build1
@@ -66,7 +66,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build1 matches 3 run
 execute if score replicate.CyanCougars replicate.points.rank.build1 matches 3 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build1 matches 3 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build1 -1
+scoreboard players set $replicate.highest replicate.timer.build1 4800
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.RedRaccoons replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.OrangeOtters replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.PinkPikas replicate.timer.build1
@@ -86,7 +86,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build1 matches 4 run
 execute if score replicate.CyanCougars replicate.points.rank.build1 matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build1 matches 4 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build1 -1
+scoreboard players set $replicate.highest replicate.timer.build1 4800
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.RedRaccoons replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.OrangeOtters replicate.timer.build1
 scoreboard players operation $replicate.highest replicate.timer.build1 < replicate.PinkPikas replicate.timer.build1
@@ -109,7 +109,7 @@ execute if score replicate.PurplePenguins replicate.points.rank.build1 matches 5
 # BUILD 2
 scoreboard objectives add replicate.points.rank.build2 dummy
 
-scoreboard players set $replicate.highest replicate.timer.build2 -1
+scoreboard players set $replicate.highest replicate.timer.build2 4800
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.RedRaccoons replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.OrangeOtters replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.PinkPikas replicate.timer.build2
@@ -129,7 +129,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build2 matches 1 run
 execute if score replicate.CyanCougars replicate.points.rank.build2 matches 1 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build2 matches 1 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build2 -1
+scoreboard players set $replicate.highest replicate.timer.build2 4800
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.RedRaccoons replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.OrangeOtters replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.PinkPikas replicate.timer.build2
@@ -149,7 +149,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build2 matches 2 run
 execute if score replicate.CyanCougars replicate.points.rank.build2 matches 2 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build2 matches 2 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build2 -1
+scoreboard players set $replicate.highest replicate.timer.build2 4800
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.RedRaccoons replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.OrangeOtters replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.PinkPikas replicate.timer.build2
@@ -169,7 +169,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build2 matches 3 run
 execute if score replicate.CyanCougars replicate.points.rank.build2 matches 3 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build2 matches 3 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build2 -1
+scoreboard players set $replicate.highest replicate.timer.build2 4800
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.RedRaccoons replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.OrangeOtters replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.PinkPikas replicate.timer.build2
@@ -189,7 +189,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build2 matches 4 run
 execute if score replicate.CyanCougars replicate.points.rank.build2 matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build2 matches 4 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build2 -1
+scoreboard players set $replicate.highest replicate.timer.build2 4800
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.RedRaccoons replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.OrangeOtters replicate.timer.build2
 scoreboard players operation $replicate.highest replicate.timer.build2 < replicate.PinkPikas replicate.timer.build2
@@ -212,7 +212,7 @@ execute if score replicate.PurplePenguins replicate.points.rank.build2 matches 5
 # BUILD 3
 scoreboard objectives add replicate.points.rank.build3 dummy
 
-scoreboard players set $replicate.highest replicate.timer.build3 -1
+scoreboard players set $replicate.highest replicate.timer.build3 4800
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.RedRaccoons replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.OrangeOtters replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.PinkPikas replicate.timer.build3
@@ -232,7 +232,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build3 matches 1 run
 execute if score replicate.CyanCougars replicate.points.rank.build3 matches 1 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build3 matches 1 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build3 -1
+scoreboard players set $replicate.highest replicate.timer.build3 4800
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.RedRaccoons replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.OrangeOtters replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.PinkPikas replicate.timer.build3
@@ -252,7 +252,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build3 matches 2 run
 execute if score replicate.CyanCougars replicate.points.rank.build3 matches 2 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build3 matches 2 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build3 -1
+scoreboard players set $replicate.highest replicate.timer.build3 4800
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.RedRaccoons replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.OrangeOtters replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.PinkPikas replicate.timer.build3
@@ -272,7 +272,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build3 matches 3 run
 execute if score replicate.CyanCougars replicate.points.rank.build3 matches 3 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build3 matches 3 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build3 -1
+scoreboard players set $replicate.highest replicate.timer.build3 4800
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.RedRaccoons replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.OrangeOtters replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.PinkPikas replicate.timer.build3
@@ -292,7 +292,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build3 matches 4 run
 execute if score replicate.CyanCougars replicate.points.rank.build3 matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build3 matches 4 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build3 -1
+scoreboard players set $replicate.highest replicate.timer.build3 4800
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.RedRaccoons replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.OrangeOtters replicate.timer.build3
 scoreboard players operation $replicate.highest replicate.timer.build3 < replicate.PinkPikas replicate.timer.build3
@@ -315,7 +315,7 @@ execute if score replicate.PurplePenguins replicate.points.rank.build3 matches 5
 # BUILD 4
 scoreboard objectives add replicate.points.rank.build4 dummy
 
-scoreboard players set $replicate.highest replicate.timer.build4 -1
+scoreboard players set $replicate.highest replicate.timer.build4 4800
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.RedRaccoons replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.OrangeOtters replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.PinkPikas replicate.timer.build4
@@ -335,7 +335,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build4 matches 1 run
 execute if score replicate.CyanCougars replicate.points.rank.build4 matches 1 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build4 matches 1 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build4 -1
+scoreboard players set $replicate.highest replicate.timer.build4 4800
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.RedRaccoons replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.OrangeOtters replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.PinkPikas replicate.timer.build4
@@ -355,7 +355,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build4 matches 2 run
 execute if score replicate.CyanCougars replicate.points.rank.build4 matches 2 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build4 matches 2 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build4 -1
+scoreboard players set $replicate.highest replicate.timer.build4 4800
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.RedRaccoons replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.OrangeOtters replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.PinkPikas replicate.timer.build4
@@ -375,7 +375,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build4 matches 3 run
 execute if score replicate.CyanCougars replicate.points.rank.build4 matches 3 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build4 matches 3 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build4 -1
+scoreboard players set $replicate.highest replicate.timer.build4 4800
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.RedRaccoons replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.OrangeOtters replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.PinkPikas replicate.timer.build4
@@ -395,7 +395,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build4 matches 4 run
 execute if score replicate.CyanCougars replicate.points.rank.build4 matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build4 matches 4 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build4 -1
+scoreboard players set $replicate.highest replicate.timer.build4 4800
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.RedRaccoons replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.OrangeOtters replicate.timer.build4
 scoreboard players operation $replicate.highest replicate.timer.build4 < replicate.PinkPikas replicate.timer.build4
@@ -418,7 +418,7 @@ execute if score replicate.PurplePenguins replicate.points.rank.build4 matches 5
 # BUILD 5
 scoreboard objectives add replicate.points.rank.build5 dummy
 
-scoreboard players set $replicate.highest replicate.timer.build5 -1
+scoreboard players set $replicate.highest replicate.timer.build5 4800
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.RedRaccoons replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.OrangeOtters replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.PinkPikas replicate.timer.build5
@@ -438,7 +438,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build5 matches 1 run
 execute if score replicate.CyanCougars replicate.points.rank.build5 matches 1 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build5 matches 1 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build5 -1
+scoreboard players set $replicate.highest replicate.timer.build5 4800
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.RedRaccoons replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.OrangeOtters replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.PinkPikas replicate.timer.build5
@@ -458,7 +458,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build5 matches 2 run
 execute if score replicate.CyanCougars replicate.points.rank.build5 matches 2 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build5 matches 2 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build5 -1
+scoreboard players set $replicate.highest replicate.timer.build5 4800
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.RedRaccoons replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.OrangeOtters replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.PinkPikas replicate.timer.build5
@@ -478,7 +478,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build5 matches 3 run
 execute if score replicate.CyanCougars replicate.points.rank.build5 matches 3 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build5 matches 3 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build5 -1
+scoreboard players set $replicate.highest replicate.timer.build5 4800
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.RedRaccoons replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.OrangeOtters replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.PinkPikas replicate.timer.build5
@@ -498,7 +498,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build5 matches 4 run
 execute if score replicate.CyanCougars replicate.points.rank.build5 matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build5 matches 4 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build5 -1
+scoreboard players set $replicate.highest replicate.timer.build5 4800
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.RedRaccoons replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.OrangeOtters replicate.timer.build5
 scoreboard players operation $replicate.highest replicate.timer.build5 < replicate.PinkPikas replicate.timer.build5
@@ -521,7 +521,7 @@ execute if score replicate.PurplePenguins replicate.points.rank.build5 matches 5
 # BUILD 6
 scoreboard objectives add replicate.points.rank.build6 dummy
 
-scoreboard players set $replicate.highest replicate.timer.build6 -1
+scoreboard players set $replicate.highest replicate.timer.build6 4800
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.RedRaccoons replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.OrangeOtters replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.PinkPikas replicate.timer.build6
@@ -541,7 +541,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build6 matches 1 run
 execute if score replicate.CyanCougars replicate.points.rank.build6 matches 1 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build6 matches 1 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build6 -1
+scoreboard players set $replicate.highest replicate.timer.build6 4800
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.RedRaccoons replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.OrangeOtters replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.PinkPikas replicate.timer.build6
@@ -561,7 +561,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build6 matches 2 run
 execute if score replicate.CyanCougars replicate.points.rank.build6 matches 2 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build6 matches 2 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build6 -1
+scoreboard players set $replicate.highest replicate.timer.build6 4800
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.RedRaccoons replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.OrangeOtters replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.PinkPikas replicate.timer.build6
@@ -581,7 +581,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build6 matches 3 run
 execute if score replicate.CyanCougars replicate.points.rank.build6 matches 3 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build6 matches 3 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build6 -1
+scoreboard players set $replicate.highest replicate.timer.build6 4800
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.RedRaccoons replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.OrangeOtters replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.PinkPikas replicate.timer.build6
@@ -601,7 +601,7 @@ execute if score replicate.GreenGoats replicate.points.rank.build6 matches 4 run
 execute if score replicate.CyanCougars replicate.points.rank.build6 matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.builds 4800
 execute if score replicate.PurplePenguins replicate.points.rank.build6 matches 4 run scoreboard players set replicate.PurplePenguins replicate.timer.builds 4800
 
-scoreboard players set $replicate.highest replicate.timer.build6 -1
+scoreboard players set $replicate.highest replicate.timer.build6 4800
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.RedRaccoons replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.OrangeOtters replicate.timer.build6
 scoreboard players operation $replicate.highest replicate.timer.build6 < replicate.PinkPikas replicate.timer.build6
@@ -963,6 +963,20 @@ execute if score replicate.PinkPikas replicate.points.rank.build6 matches 5 as @
 execute if score replicate.GreenGoats replicate.points.rank.build6 matches 5 as @a[team=GREEN_GOATS] run scoreboard players add @s replicate.points.indiv 2
 execute if score replicate.CyanCougars replicate.points.rank.build6 matches 5 as @a[team=CYAN_COUGARS] run scoreboard players add @s replicate.points.indiv 2
 execute if score replicate.PurplePenguins replicate.points.rank.build6 matches 5 as @a[team=PURPLE_PENGUINS] run scoreboard players add @s replicate.points.indiv 2
+
+# update team scores
+scoreboard players set replicate.RedRaccoons replicate.points.team 0
+execute as @a[team=RED_RACCOONS] run scoreboard players operation replicate.RedRaccoons replicate.points.team += @s replicate.points.indiv
+scoreboard players set replicate.OrangeOtters replicate.points.team 0
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation replicate.OrangeOtters replicate.points.team += @s replicate.points.indiv
+scoreboard players set replicate.PinkPikas replicate.points.team 0
+execute as @a[team=PINK_PIKAS] run scoreboard players operation replicate.PinkPikas replicate.points.team += @s replicate.points.indiv
+scoreboard players set replicate.GreenGoats replicate.points.team 0
+execute as @a[team=GREEN_GOATS] run scoreboard players operation replicate.GreenGoats replicate.points.team += @s replicate.points.indiv
+scoreboard players set replicate.CyanCougars replicate.points.team 0
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation replicate.CyanCougars replicate.points.team += @s replicate.points.indiv
+scoreboard players set replicate.PurplePenguins replicate.points.team 0
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation replicate.PurplePenguins replicate.points.team += @s replicate.points.indiv
 
 # reset effects
 effect clear @a

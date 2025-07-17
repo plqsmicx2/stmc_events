@@ -26,6 +26,7 @@ effect clear @a
 # ensure full health & hunger
 effect give @a saturation 1 1 true
 effect give @a regeneration 10 1 true
+effect give @a mining_fatigue infinite 3 true
 
 # set xp
 xp set @a 0
@@ -36,7 +37,6 @@ execute in trials:replicate run kill @e[type=!player]
 # set world protections
 yawp dim trials:replicate delete-all regions
 yawp dim trials:replicate create local replicate-world Cuboid -50 100 -50 50 140 50
-yawp local trials:replicate replicate-world add flag break-blocks Denied
 yawp local trials:replicate replicate-world add flag spawning-all Denied
 yawp local trials:replicate replicate-world add flag fall-damage Denied
 yawp local trials:replicate replicate-world add flag no-pvp Allowed
@@ -44,6 +44,24 @@ yawp local trials:replicate replicate-world add flag no-hunger Allowed
 yawp local trials:replicate replicate-world add flag knockback-players Denied
 yawp local trials:replicate replicate-world add flag item-drop Denied
 yawp local trials:replicate replicate-world add flag item-pickup Denied
+
+yawp dim trials:replicate create local red-build Cuboid 43 113 19 35 110 27
+yawp local trials:replicate red-build add flag break-blocks Denied
+
+yawp dim trials:replicate create local orange-build Cuboid 4 113 19 -4 110 27
+yawp local trials:replicate orange-build add flag break-blocks Denied
+
+yawp dim trials:replicate create local pink-build Cuboid -35 113 19 -43 110 27
+yawp local trials:replicate pink-build add flag break-blocks Denied
+
+yawp dim trials:replicate create local green-build Cuboid -35 113 -17 -43 110 -9
+yawp local trials:replicate green-build add flag break-blocks Denied
+
+yawp dim trials:replicate create local cyan-build Cuboid 4 113 -17 -4 110 -9
+yawp local trials:replicate cyan-build add flag break-blocks Denied
+
+yawp dim trials:replicate create local purple-build Cuboid 43 113 -17 35 110 -9
+yawp local trials:replicate purple-build add flag break-blocks Denied
 
 # scoreboard stuff
 # timers

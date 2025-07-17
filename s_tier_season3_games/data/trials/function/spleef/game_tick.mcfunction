@@ -10,8 +10,8 @@
 execute if score spleef.handler spleef.timer.game matches 2 as @a in trials:spleef run tp @s 0 140 0
 
 # give items (after 10s)
-execute if score spleef.handler spleef.timer.game matches 200.. run item replace entity @a hotbar.0 with minecraft:netherite_shovel[enchantments={"minecraft:efficiency":5},unbreakable={}]
-execute if score spleef.handler spleef.timer.game matches 200.. run item replace entity @a hotbar.1 with minecraft:netherite_pickaxe[enchantments={"minecraft:efficiency":5},unbreakable={}]
+execute if score spleef.handler spleef.timer.game matches 200.. run item replace entity @a hotbar.0 with minecraft:netherite_shovel[custom_name={"text":"Snow Shovel","color":"dark_aqua","bold":true},tool={default_mining_speed:0.1,rules:[{speed:10000,blocks:"snow_block"}]},unbreakable={}]
+execute if score spleef.handler spleef.timer.game matches 200.. run item replace entity @a hotbar.1 with minecraft:netherite_pickaxe[custom_name={"text":"Ice Pick","color":"dark_aqua","bold":true},tool={default_mining_speed:0.1,rules:[{speed:10000,blocks:["packed_ice","blue_ice"]}]},unbreakable={}]
 
 # <==== END GAME ====>
 

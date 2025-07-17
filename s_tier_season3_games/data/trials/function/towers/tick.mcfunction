@@ -21,6 +21,10 @@ function trials:towers/sidebar
 execute if score towers.handler towers.stage matches 0 run scoreboard players add towers.handler towers.timer.delay1 1
 # reset world
 execute in trials:towers if score towers.handler towers.stage matches 0 if score towers.handler towers.timer.delay1 matches 3 run clone -20 90 -20 20 92 20 -20 100 -20
+execute in trials:towers if score towers.handler towers.stage matches 0 if score towers.handler towers.timer.delay1 matches 5 run fill 0 100 0 -20 120 -20 air replace #concrete_powder
+execute in trials:towers if score towers.handler towers.stage matches 0 if score towers.handler towers.timer.delay1 matches 7 run fill 0 100 0 20 120 -20 air replace #concrete_powder
+execute in trials:towers if score towers.handler towers.stage matches 0 if score towers.handler towers.timer.delay1 matches 9 run fill 0 100 0 -20 120 20 air replace #concrete_powder
+execute in trials:towers if score towers.handler towers.stage matches 0 if score towers.handler towers.timer.delay1 matches 11 run fill 0 100 0 20 120 20 air replace #concrete_powder
 # move to next stage after 20 seconds
 execute if score towers.handler towers.stage matches 0 if score towers.handler towers.timer.delay1 matches 400.. run scoreboard players set towers.handler towers.stage 1
 

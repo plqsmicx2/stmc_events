@@ -8,7 +8,6 @@
 
 # first, remove temporary scoreboards
 scoreboard objectives remove sg.r2.timer.delay1
-scoreboard objectives remove sg.r2.timer.explanation
 scoreboard objectives remove sg.r2.timer.delay2
 scoreboard objectives remove sg.r2.timer.round
 scoreboard objectives remove sg.r2.death
@@ -16,7 +15,7 @@ scoreboard objectives remove sg.r2.deathThisTick
 scoreboard objectives remove sg.r2.currentPlacement
 
 # then, handle some important resets
-execute in survival_games:sg1 run kill @e[type=!player]
+execute in survival_games:sg2 run kill @e[type=!player]
 
 # next, assign the winning team a placement of 1
 # this is successful because this function is only called when ONE team matches 1..4

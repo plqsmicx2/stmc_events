@@ -8,7 +8,6 @@
 
 # first, remove temporary scoreboards
 scoreboard objectives remove sg.r3.timer.delay1
-scoreboard objectives remove sg.r3.timer.explanation
 scoreboard objectives remove sg.r3.timer.delay2
 scoreboard objectives remove sg.r3.timer.round
 scoreboard objectives remove sg.r3.death
@@ -16,7 +15,10 @@ scoreboard objectives remove sg.r3.deathThisTick
 scoreboard objectives remove sg.r3.currentPlacement
 
 # then, handle some important resets
-execute in survival_games:sg1 run kill @e[type=!player]
+execute in survival_games:sg3 run kill @e[type=!player]
+worldborder center 0.0 0.0
+worldborder set 1000
+effect clear @a
 
 # next, assign the winning team a placement of 1
 # this is successful because this function is only called when ONE team matches 1..4
@@ -103,3 +105,6 @@ execute as @a if score sg.PurplePenguins sg.r3.teamPlacement matches 1 run title
 
 # lastly, update sg.r3.stage
 scoreboard players set sg.r3.handler sg.r3.stage 4
+
+# update player points
+execute as @a run scoreboard players operation @s stats.points.indiv.g6 = @s sg.points.indiv

@@ -29,6 +29,7 @@ effect clear @a
 # ensure full health & hunger
 effect give @a saturation 1 1 true
 effect give @a regeneration 10 1 true
+effect give @a resistance infinite 10 true
 
 # set xp
 xp set @a 0
@@ -43,6 +44,7 @@ execute in survival_games:sg2 run spawnpoint @a 0 178 0
 yawp dim survival_games:sg2 delete-all regions
 yawp dim survival_games:sg2 create local sg2-spawn Cuboid -10 174 -10 10 181 10
 yawp local survival_games:sg2 sg2-spawn add flag no-pvp Allowed
+yawp local survival_games:sg2 sg2-spawn add flag melee-players Denied
 yawp local survival_games:sg2 sg2-spawn add flag no-hunger Allowed
 yawp dim survival_games:sg2 create local sg2-world Cuboid -200 100 -200 200 200 200
 yawp local survival_games:sg2 sg2-world add flag break-blocks Denied

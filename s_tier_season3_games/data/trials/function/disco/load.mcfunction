@@ -26,6 +26,7 @@ effect clear @a
 # ensure full health & hunger
 effect give @a saturation 1 1 true
 effect give @a regeneration 5 1 true
+effect give @a resistance infinite 10 true
 
 # set xp
 xp set @a 0
