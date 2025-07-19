@@ -54,4 +54,4 @@ execute if score race.handler race.stage matches 3 run function race:game_tick
 execute if score race.handler race.stage matches 4 run scoreboard players add race.handler race.timer.delay3 1
 execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 3 run function race:reset
 execute if score race.handler race.stage matches 4 run function race:points_announcement
-execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 400.. run scoreboard players add stmc.handler event.stage 1
+execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 400.. run scoreboard players add stmc.handler event.stage 5

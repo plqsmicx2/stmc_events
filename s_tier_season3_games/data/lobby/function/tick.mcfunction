@@ -14,7 +14,7 @@ execute as limeae unless entity @s[team=] run team join ORANGE_OTTERS limeae
 #execute as GERAD unless entity @s[team=] run team join ORANGE_OTTERS GERAD
 execute as Quacken64 unless entity @s[team=] run team join ORANGE_OTTERS Quacken64
 # PINK PIKAS
-#execute as STOMPPPY unless entity @s[team=] run team join PINK_PIKAS STOMPPPY
+execute as stompppy unless entity @s[team=] run team join PINK_PIKAS stompppy
 #execute as KAI unless entity @s[team=] run team join PINK_PIKAS KAI
 #execute as NUGG unless entity @s[team=] run team join PINK_PIKAS NUGG
 #execute as MAC unless entity @s[team=] run team join PINK_PIKAS MAC
@@ -32,7 +32,7 @@ execute as seagull_spam unless entity @s[team=] run team join CYAN_COUGARS seagu
 execute as damien___ unless entity @s[team=] run team join PURPLE_PENGUINS damien___
 execute as Exrry unless entity @s[team=] run team join PURPLE_PENGUINS Exrry
 #execute as REID unless entity @s[team=] run team join PURPLE_PENGUINS REID
-#execute as TARANG unless entity @s[team=] run team join PURPLE_PENGUINS TARANG
+execute as notpanda911 unless entity @s[team=] run team join PURPLE_PENGUINS notpanda911
 
 # and finally, we can get to the thread of the event
 

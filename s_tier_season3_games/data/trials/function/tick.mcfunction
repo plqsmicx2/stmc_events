@@ -56,5 +56,10 @@ execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game
 execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 4 run function trials:towers/tick
 
 # send us back to main lobby
+execute if score tr.handler tr.stage matches 8 run scoreboard players set @a tr.points.indiv 0
+execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s disco.points.indiv
+execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s replicate.points.indiv
+execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s spleef.points.indiv
+execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s towers.points.indiv
 execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s stats.points.indiv.g4 = @s tr.points.indiv
 execute if score tr.handler tr.stage matches 8 run scoreboard players add stmc.handler event.stage 1

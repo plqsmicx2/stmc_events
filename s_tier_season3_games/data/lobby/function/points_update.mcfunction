@@ -2,12 +2,12 @@
 
 # first, we make sure that all players have points
 # sets players' game values to whatever the game itself has stored
-execute as @a run scoreboard players operation @s stats.points.indiv.g1 = @s race.points.indiv
-#execute as @a run scoreboard players operation @s stats.points.indiv.g2 = @s solve.points.indiv
-#execute as @a run scoreboard players operation @s stats.points.indiv.g3 = @s extract.points.indiv
-execute as @a run scoreboard players operation @s stats.points.indiv.g4 = @s tr.points.indiv
-execute as @a run scoreboard players operation @s stats.points.indiv.g5 = @s delve.points.indiv
-execute as @a run scoreboard players operation @s stats.points.indiv.g6 = @s sg.points.indiv
+execute if score stmc.handler event.stage matches 2.. as @a run scoreboard players operation @s stats.points.indiv.g1 = @s race.points.indiv
+#execute if score stmc.handler event.stage matches 4.. as @a run scoreboard players operation @s stats.points.indiv.g2 = @s solve.points.indiv
+execute if score stmc.handler event.stage matches 6.. as @a run scoreboard players operation @s stats.points.indiv.g3 = @s extract.points.indiv
+execute if score stmc.handler event.stage matches 8.. as @a run scoreboard players operation @s stats.points.indiv.g4 = @s tr.points.indiv
+execute if score stmc.handler event.stage matches 10.. as @a run scoreboard players operation @s stats.points.indiv.g5 = @s delve.points.indiv
+execute if score stmc.handler event.stage matches 12.. as @a run scoreboard players operation @s stats.points.indiv.g6 = @s sg.points.indiv
 # and now sets players with an indiv less than 0 (or null) to 0 in case they don't exist yet
 execute as @a unless entity @s[scores={stats.points.indiv.g1=0..}] run scoreboard players set @s stats.points.indiv.g1 0
 execute as @a unless entity @s[scores={stats.points.indiv.g2=0..}] run scoreboard players set @s stats.points.indiv.g2 0

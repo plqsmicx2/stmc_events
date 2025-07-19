@@ -1,5 +1,3 @@
-# reset function for race
-
 # handle important resets
 effect clear @a
 
@@ -9,3 +7,6 @@ gamemode spectator @a
 
 # set player points
 execute as @a run scoreboard players operation @s stats.points.indiv.g5 = @s delve.points.indiv
+
+# move to next stage
+scoreboard players add stmc.handler event.stage 1

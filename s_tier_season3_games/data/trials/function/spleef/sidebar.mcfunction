@@ -17,6 +17,20 @@ scoreboard objectives setdisplay sidebar spleef.sidebar
 # <===== RANK TEAMS =====>
 # first, we run some calculations to determine which teams should be present
 
+# calculate team points
+scoreboard players set spleef.RedRaccoons spleef.points.team 0
+execute as @a[team=RED_RACCOONS] run scoreboard players operation spleef.RedRaccoons spleef.points.team += @s spleef.points.indiv
+scoreboard players set spleef.OrangeOtters spleef.points.team 0
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation spleef.OrangeOtters spleef.points.team += @s spleef.points.indiv
+scoreboard players set spleef.PinkPikas spleef.points.team 0
+execute as @a[team=PINK_PIKAS] run scoreboard players operation spleef.PinkPikas spleef.points.team += @s spleef.points.indiv
+scoreboard players set spleef.GreenGoats spleef.points.team 0
+execute as @a[team=GREEN_GOATS] run scoreboard players operation spleef.GreenGoats spleef.points.team += @s spleef.points.indiv
+scoreboard players set spleef.CyanCougars spleef.points.team 0
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation spleef.CyanCougars spleef.points.team += @s spleef.points.indiv
+scoreboard players set spleef.PurplePenguins spleef.points.team 0
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation spleef.PurplePenguins spleef.points.team += @s spleef.points.indiv
+
 # save values in a temporary place (to use later in the sidebar)
 scoreboard objectives add spleef.points.team.temp dummy
 scoreboard players operation spleef.RedRaccoons spleef.points.team.temp = spleef.RedRaccoons spleef.points.team

@@ -263,7 +263,7 @@ execute if score delve.CyanCougars delve.teams_completed matches 1 run scoreboar
 execute if score delve.PurplePenguins delve.teams_completed matches 1 run scoreboard players add delve.handler delve.teams_completed 1
 
 # and end game if all teams are completed
-execute if score delve.handler delve.teams_completed matches 6 run scoreboard players add delve.handler delve.stage 1
+execute if score delve.handler delve.teams_completed matches 6 run scoreboard players set delve.handler delve.stage 4
 
 # set players to spectator
 execute as @a at @s[gamemode=!spectator] at @s[team=RED_RACCOONS] if score delve.RedRaccoons delve.teams_completed matches 1 run gamemode spectator @s

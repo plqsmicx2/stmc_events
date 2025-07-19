@@ -8,7 +8,7 @@ execute if score replicate.handler replicate.timer.explanation matches 1 run tel
 execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:"Replicate is a team construction game.",color:"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:" "}
-execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:"There will be one, 4 mi round.",color:"aqua"}
+execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:"There will be one, 4 minute round.",color:"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:"---------------------------------------------------",color:"gray"}
 

@@ -1,7 +1,83 @@
 # function handling everything that needs to happen between games
 
 # increment timer
-scoreboard players add stmc.handler event.timer.bg1 1
+execute if score stmc.handler event.stage matches 2 run scoreboard players add stmc.handler event.timer.bg1 1
+execute if score stmc.handler event.stage matches 4 run scoreboard players add stmc.handler event.timer.bg2 1
+execute if score stmc.handler event.stage matches 6 run scoreboard players add stmc.handler event.timer.bg3 1
+execute if score stmc.handler event.stage matches 8 run scoreboard players add stmc.handler event.timer.bg4 1
+execute if score stmc.handler event.stage matches 10 run scoreboard players add stmc.handler event.timer.bg5 1
+execute if score stmc.handler event.stage matches 12 run scoreboard players add stmc.handler event.timer.bg6 1
+
+# create bossbars
+execute if score stmc.handler event.timer.bg1 matches 1 run bossbar add delay.bossbar {text:"Time until next game",color:aqua}
+execute if score stmc.handler event.timer.bg1 matches 1 run bossbar set delay.bossbar color blue
+execute if score stmc.handler event.timer.bg1 matches 1 run bossbar set delay.bossbar max 1500
+execute if score stmc.handler event.timer.bg1 matches 1 run bossbar set delay.bossbar players @a
+execute if score stmc.handler event.timer.bg1 matches 1 run bossbar set delay.bossbar visible true
+
+execute if score stmc.handler event.timer.bg2 matches 1 run bossbar add delay.bossbar {text:"Time until next game",color:aqua}
+execute if score stmc.handler event.timer.bg2 matches 1 run bossbar set delay.bossbar color blue
+execute if score stmc.handler event.timer.bg2 matches 1 run bossbar set delay.bossbar max 1500
+execute if score stmc.handler event.timer.bg2 matches 1 run bossbar set delay.bossbar players @a
+execute if score stmc.handler event.timer.bg2 matches 1 run bossbar set delay.bossbar visible true
+
+execute if score stmc.handler event.timer.bg3 matches 1 run bossbar add delay.bossbar {text:"Time until next game",color:aqua}
+execute if score stmc.handler event.timer.bg3 matches 1 run bossbar set delay.bossbar color blue
+execute if score stmc.handler event.timer.bg3 matches 1 run bossbar set delay.bossbar max 7500
+execute if score stmc.handler event.timer.bg3 matches 1 run bossbar set delay.bossbar players @a
+execute if score stmc.handler event.timer.bg3 matches 1 run bossbar set delay.bossbar visible true
+
+execute if score stmc.handler event.timer.bg4 matches 1 run bossbar add delay.bossbar {text:"Time until next game",color:aqua}
+execute if score stmc.handler event.timer.bg4 matches 1 run bossbar set delay.bossbar color blue
+execute if score stmc.handler event.timer.bg4 matches 1 run bossbar set delay.bossbar max 1500
+execute if score stmc.handler event.timer.bg4 matches 1 run bossbar set delay.bossbar players @a
+execute if score stmc.handler event.timer.bg4 matches 1 run bossbar set delay.bossbar visible true
+
+execute if score stmc.handler event.timer.bg5 matches 1 run bossbar add delay.bossbar {text:"Time until next game",color:aqua}
+execute if score stmc.handler event.timer.bg5 matches 1 run bossbar set delay.bossbar color blue
+execute if score stmc.handler event.timer.bg5 matches 1 run bossbar set delay.bossbar max 1500
+execute if score stmc.handler event.timer.bg5 matches 1 run bossbar set delay.bossbar players @a
+execute if score stmc.handler event.timer.bg5 matches 1 run bossbar set delay.bossbar visible true
+
+execute if score stmc.handler event.timer.bg6 matches 1 run bossbar set delay.bossbar name {text:"Time until finale",color:aqua}
+execute if score stmc.handler event.timer.bg6 matches 1 run bossbar set delay.bossbar color blue
+execute if score stmc.handler event.timer.bg6 matches 1 run bossbar set delay.bossbar max 900
+execute if score stmc.handler event.timer.bg6 matches 1 run bossbar set delay.bossbar players @a
+execute if score stmc.handler event.timer.bg6 matches 1 run bossbar set delay.bossbar visible true
+
+# update bossbars
+execute if score stmc.handler event.stage matches 2 store result bossbar delay.bossbar value run scoreboard players get stmc.handler event.timer.bg1
+execute if score stmc.handler event.stage matches 4 store result bossbar delay.bossbar value run scoreboard players get stmc.handler event.timer.bg2
+execute if score stmc.handler event.stage matches 6 store result bossbar delay.bossbar value run scoreboard players get stmc.handler event.timer.bg3
+execute if score stmc.handler event.stage matches 8 store result bossbar delay.bossbar value run scoreboard players get stmc.handler event.timer.bg4
+execute if score stmc.handler event.stage matches 10 store result bossbar delay.bossbar value run scoreboard players get stmc.handler event.timer.bg5
+execute if score stmc.handler event.stage matches 12 store result bossbar delay.bossbar value run scoreboard players get stmc.handler event.timer.bg6
+
+# bring players back to the lobby
+execute in lobby:lobby if score stmc.handler event.timer.bg1 matches 1 run teleport @a 0 101 0
+execute in lobby:lobby if score stmc.handler event.timer.bg1 matches 1 run gamemode survival @a
+execute in lobby:lobby if score stmc.handler event.timer.bg1 matches 1 run effect clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg1 matches 1 run clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg2 matches 1 run teleport @a 0 101 0
+execute in lobby:lobby if score stmc.handler event.timer.bg2 matches 1 run gamemode survival @a
+execute in lobby:lobby if score stmc.handler event.timer.bg2 matches 1 run effect clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg2 matches 1 run clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg3 matches 1 run teleport @a 0 101 0
+execute in lobby:lobby if score stmc.handler event.timer.bg3 matches 1 run gamemode survival @a
+execute in lobby:lobby if score stmc.handler event.timer.bg3 matches 1 run effect clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg3 matches 1 run clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg4 matches 1 run teleport @a 0 101 0
+execute in lobby:lobby if score stmc.handler event.timer.bg4 matches 1 run gamemode survival @a
+execute in lobby:lobby if score stmc.handler event.timer.bg4 matches 1 run effect clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg4 matches 1 run clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg5 matches 1 run teleport @a 0 101 0
+execute in lobby:lobby if score stmc.handler event.timer.bg5 matches 1 run gamemode survival @a
+execute in lobby:lobby if score stmc.handler event.timer.bg5 matches 1 run effect clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg5 matches 1 run clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg6 matches 1 run teleport @a 0 101 0
+execute in lobby:lobby if score stmc.handler event.timer.bg6 matches 1 run gamemode survival @a
+execute in lobby:lobby if score stmc.handler event.timer.bg6 matches 1 run effect clear @a
+execute in lobby:lobby if score stmc.handler event.timer.bg6 matches 1 run clear @a
 
 # run functions
 function lobby:points_update
@@ -9,94 +85,66 @@ function lobby:sidebar
 
 # run ranking calculations
 execute if score stmc.handler event.timer.bg1 matches 1 run function lobby:calculate_rankings
+execute if score stmc.handler event.timer.bg2 matches 1 run function lobby:calculate_rankings
+execute if score stmc.handler event.timer.bg3 matches 1 run function lobby:calculate_rankings
+execute if score stmc.handler event.timer.bg4 matches 1 run function lobby:calculate_rankings
+execute if score stmc.handler event.timer.bg5 matches 1 run function lobby:calculate_rankings
+execute if score stmc.handler event.timer.bg6 matches 1 run function lobby:calculate_rankings
 
 # announce rankings
 
 # team rankings
-execute if score stmc.handler event.timer.bg1 matches 100 run tellraw @a [{"text":"Team Rankings:","color":"gold","bold":true}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.RedRaccoons stats.points.team.rank matches 1 run tellraw @a [{text:"#1: ",color:gold},{text:"Red Raccoons",color:red},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:red},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.OrangeOtters stats.points.team.rank matches 1 run tellraw @a [{text:"#1: ",color:gold},{text:"Orange Otters",color:gold},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:gold},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PinkPikas stats.points.team.rank matches 1 run tellraw @a [{text:"#1: ",color:gold},{text:"Pink Pikas",color:light_purple},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:light_purple},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.GreenGoats stats.points.team.rank matches 1 run tellraw @a [{text:"#1: ",color:gold},{text:"Green Goats",color:dark_green},{text:" - ",color:gold},{score:{name:"team.GreenGoats",objective:"stats.points.team"},color:dark_green},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.CyanCougars stats.points.team.rank matches 1 run tellraw @a [{text:"#1: ",color:gold},{text:"Cyan Cougars",color:dark_aqua},{text:" - ",color:gold},{score:{name:"team.CyanCougars",objective:"stats.points.team"},color:dark_aqua},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PurplePenguins stats.points.team.rank matches 1 run tellraw @a [{text:"#1: ",color:gold},{text:"Purple Penguins",color:dark_purple},{text:" - ",color:gold},{score:{name:"team.PurplePenguins",objective:"stats.points.team"},color:dark_purple},{text:" points",color:gold}]
-
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.RedRaccoons stats.points.team.rank matches 2 run tellraw @a [{text:"#2: ",color:gold},{text:"Red Raccoons",color:red},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:red},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.OrangeOtters stats.points.team.rank matches 2 run tellraw @a [{text:"#2: ",color:gold},{text:"Orange Otters",color:gold},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:gold},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PinkPikas stats.points.team.rank matches 2 run tellraw @a [{text:"#2: ",color:gold},{text:"Pink Pikas",color:light_purple},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:light_purple},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.GreenGoats stats.points.team.rank matches 2 run tellraw @a [{text:"#2: ",color:gold},{text:"Green Goats",color:dark_green},{text:" - ",color:gold},{score:{name:"team.GreenGoats",objective:"stats.points.team"},color:dark_green},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.CyanCougars stats.points.team.rank matches 2 run tellraw @a [{text:"#2: ",color:gold},{text:"Cyan Cougars",color:dark_aqua},{text:" - ",color:gold},{score:{name:"team.CyanCougars",objective:"stats.points.team"},color:dark_aqua},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PurplePenguins stats.points.team.rank matches 2 run tellraw @a [{text:"#2: ",color:gold},{text:"Purple Penguins",color:dark_purple},{text:" - ",color:gold},{score:{name:"team.PurplePenguins",objective:"stats.points.team"},color:dark_purple},{text:" points",color:gold}]
-
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.RedRaccoons stats.points.team.rank matches 3 run tellraw @a [{text:"#3: ",color:gold},{text:"Red Raccoons",color:red},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:red},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.OrangeOtters stats.points.team.rank matches 3 run tellraw @a [{text:"#3: ",color:gold},{text:"Orange Otters",color:gold},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:gold},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PinkPikas stats.points.team.rank matches 3 run tellraw @a [{text:"#3: ",color:gold},{text:"Pink Pikas",color:light_purple},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:light_purple},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.GreenGoats stats.points.team.rank matches 3 run tellraw @a [{text:"#3: ",color:gold},{text:"Green Goats",color:dark_green},{text:" - ",color:gold},{score:{name:"team.GreenGoats",objective:"stats.points.team"},color:dark_green},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.CyanCougars stats.points.team.rank matches 3 run tellraw @a [{text:"#3: ",color:gold},{text:"Cyan Cougars",color:dark_aqua},{text:" - ",color:gold},{score:{name:"team.CyanCougars",objective:"stats.points.team"},color:dark_aqua},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PurplePenguins stats.points.team.rank matches 3 run tellraw @a [{text:"#3: ",color:gold},{text:"Purple Penguins",color:dark_purple},{text:" - ",color:gold},{score:{name:"team.PurplePenguins",objective:"stats.points.team"},color:dark_purple},{text:" points",color:gold}]
-
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.RedRaccoons stats.points.team.rank matches 4 run tellraw @a [{text:"#4: ",color:gold},{text:"Red Raccoons",color:red},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:red},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.OrangeOtters stats.points.team.rank matches 4 run tellraw @a [{text:"#4: ",color:gold},{text:"Orange Otters",color:gold},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:gold},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PinkPikas stats.points.team.rank matches 4 run tellraw @a [{text:"#4: ",color:gold},{text:"Pink Pikas",color:light_purple},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:light_purple},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.GreenGoats stats.points.team.rank matches 4 run tellraw @a [{text:"#4: ",color:gold},{text:"Green Goats",color:dark_green},{text:" - ",color:gold},{score:{name:"team.GreenGoats",objective:"stats.points.team"},color:dark_green},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.CyanCougars stats.points.team.rank matches 4 run tellraw @a [{text:"#4: ",color:gold},{text:"Cyan Cougars",color:dark_aqua},{text:" - ",color:gold},{score:{name:"team.CyanCougars",objective:"stats.points.team"},color:dark_aqua},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PurplePenguins stats.points.team.rank matches 4 run tellraw @a [{text:"#4: ",color:gold},{text:"Purple Penguins",color:dark_purple},{text:" - ",color:gold},{score:{name:"team.PurplePenguins",objective:"stats.points.team"},color:dark_purple},{text:" points",color:gold}]
-
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.RedRaccoons stats.points.team.rank matches 5 run tellraw @a [{text:"#5: ",color:gold},{text:"Red Raccoons",color:red},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:red},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.OrangeOtters stats.points.team.rank matches 5 run tellraw @a [{text:"#5: ",color:gold},{text:"Orange Otters",color:gold},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:gold},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PinkPikas stats.points.team.rank matches 5 run tellraw @a [{text:"#5: ",color:gold},{text:"Pink Pikas",color:light_purple},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:light_purple},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.GreenGoats stats.points.team.rank matches 5 run tellraw @a [{text:"#5: ",color:gold},{text:"Green Goats",color:dark_green},{text:" - ",color:gold},{score:{name:"team.GreenGoats",objective:"stats.points.team"},color:dark_green},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.CyanCougars stats.points.team.rank matches 5 run tellraw @a [{text:"#5: ",color:gold},{text:"Cyan Cougars",color:dark_aqua},{text:" - ",color:gold},{score:{name:"team.CyanCougars",objective:"stats.points.team"},color:dark_aqua},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PurplePenguins stats.points.team.rank matches 5 run tellraw @a [{text:"#5: ",color:gold},{text:"Purple Penguins",color:dark_purple},{text:" - ",color:gold},{score:{name:"team.PurplePenguins",objective:"stats.points.team"},color:dark_purple},{text:" points",color:gold}]
-
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.RedRaccoons stats.points.team.rank matches 6 run tellraw @a [{text:"#6: ",color:gold},{text:"Red Raccoons",color:red},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:red},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.OrangeOtters stats.points.team.rank matches 6 run tellraw @a [{text:"#6: ",color:gold},{text:"Orange Otters",color:gold},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:gold},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PinkPikas stats.points.team.rank matches 6 run tellraw @a [{text:"#6: ",color:gold},{text:"Pink Pikas",color:light_purple},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:light_purple},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.GreenGoats stats.points.team.rank matches 6 run tellraw @a [{text:"#6: ",color:gold},{text:"Green Goats",color:dark_green},{text:" - ",color:gold},{score:{name:"team.GreenGoats",objective:"stats.points.team"},color:dark_green},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.CyanCougars stats.points.team.rank matches 6 run tellraw @a [{text:"#6: ",color:gold},{text:"Cyan Cougars",color:dark_aqua},{text:" - ",color:gold},{score:{name:"team.CyanCougars",objective:"stats.points.team"},color:dark_aqua},{text:" points",color:gold}]
-execute if score stmc.handler event.timer.bg1 matches 100 if score team.PurplePenguins stats.points.team.rank matches 6 run tellraw @a [{text:"#6: ",color:gold},{text:"Purple Penguins",color:dark_purple},{text:" - ",color:gold},{score:{name:"team.PurplePenguins",objective:"stats.points.team"},color:dark_purple},{text:" points",color:gold}]
+execute if score stmc.handler event.timer.bg1 matches 100 run function lobby:team_announcements
+execute if score stmc.handler event.timer.bg2 matches 100 run function lobby:team_announcements
+execute if score stmc.handler event.timer.bg3 matches 100 run function lobby:team_announcements
+execute if score stmc.handler event.timer.bg4 matches 100 run function lobby:team_announcements
+execute if score stmc.handler event.timer.bg5 matches 100 run function lobby:team_announcements
+execute if score stmc.handler event.timer.bg6 matches 100 run function lobby:team_announcements
 
 # player rankings
-execute if score stmc.handler event.timer.bg1 matches 200 run tellraw @a [{"text":"Player Rankings:","color":"gold","bold":true}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 1 run tellraw @a [{text:"#1: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 2 run tellraw @a [{text:"#2: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 3 run tellraw @a [{text:"#3: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 4 run tellraw @a [{text:"#4: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 5 run tellraw @a [{text:"#5: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 6 run tellraw @a [{text:"#6: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 7 run tellraw @a [{text:"#7: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 8 run tellraw @a [{text:"#8: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 9 run tellraw @a [{text:"#9: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 10 run tellraw @a [{text:"#10: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 11 run tellraw @a [{text:"#11: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 12 run tellraw @a [{text:"#12: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 13 run tellraw @a [{text:"#13: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 14 run tellraw @a [{text:"#14: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 15 run tellraw @a [{text:"#15: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 16 run tellraw @a [{text:"#16: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 17 run tellraw @a [{text:"#17: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 18 run tellraw @a [{text:"#18: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 19 run tellraw @a [{text:"#19: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 20 run tellraw @a [{text:"#20: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 21 run tellraw @a [{text:"#21: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 22 run tellraw @a [{text:"#22: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 23 run tellraw @a [{text:"#23: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
-execute as @a if score stmc.handler event.timer.bg1 matches 200 if score @s stats.points.indiv.rank matches 24 run tellraw @a [{text:"#24: ",color:gold},{selector:"@s"},{text:" - ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"},color:red},{text:" points",color:gold}]
+execute if score stmc.handler event.timer.bg1 matches 200 run function lobby:player_announcements
+execute if score stmc.handler event.timer.bg2 matches 200 run function lobby:player_announcements
+execute if score stmc.handler event.timer.bg3 matches 200 run function lobby:player_announcements
+execute if score stmc.handler event.timer.bg4 matches 200 run function lobby:player_announcements
+execute if score stmc.handler event.timer.bg5 matches 200 run function lobby:player_announcements
+execute if score stmc.handler event.timer.bg6 matches 200 run function lobby:player_announcements
 
 # announce next game
 
-execute unless score stmc.handler event.stage matches 6 unless score stmc.handler event.stage matches 12 if score stmc.handler event.timer.bg1 matches 300 run tellraw @a [{"text":"Teleporting to next game in one minute!","color":"white","bold":true}]
-execute if score stmc.handler event.stage matches 12 if score stmc.handler event.timer.bg1 matches 300 run tellraw @a [{"text":"Teleporting to finale in thirty seconds!","color":"white","bold":true}]
-execute if score stmc.handler event.stage matches 6 if score stmc.handler event.timer.bg1 matches 300 run tellraw @a [{"text":"Break! Teleporting to next game in six minutes!","color":"white","bold":true}]
+execute if score stmc.handler event.timer.bg1 matches 300 run tellraw @a [{"text":"Teleporting to game in one minute!","color":"white","bold":true}]
+execute if score stmc.handler event.timer.bg2 matches 300 run tellraw @a [{"text":"Teleporting to game in one minute!","color":"white","bold":true}]
+execute if score stmc.handler event.timer.bg3 matches 300 run tellraw @a [{"text":"Break! Teleporting to game in six minutes!","color":"white","bold":true}]
+execute if score stmc.handler event.timer.bg4 matches 300 run tellraw @a [{"text":"Teleporting to game in one minute!","color":"white","bold":true}]
+execute if score stmc.handler event.timer.bg5 matches 300 run tellraw @a [{"text":"Teleporting to game in one minute!","color":"white","bold":true}]
+execute if score stmc.handler event.timer.bg6 matches 300 run tellraw @a [{"text":"Teleporting to finale in thirty seconds!","color":"white","bold":true}]
 
-execute if score stmc.handler event.stage matches 2 if score stmc.handler event.timer.bg1 matches 1500 run title @a title {text:"Solve",color:yellow,bold:true}
-execute if score stmc.handler event.stage matches 4 if score stmc.handler event.timer.bg1 matches 1500 run title @a title {text:"Extract",color:red,bold:true}
-execute if score stmc.handler event.stage matches 6 if score stmc.handler event.timer.bg1 matches 7500 run title @a title {text:"Trials",color:dark_aqua,bold:true}
-execute if score stmc.handler event.stage matches 8 if score stmc.handler event.timer.bg1 matches 1500 run title @a title {text:"Delve",color:light_purple,bold:true}
-execute if score stmc.handler event.stage matches 10 if score stmc.handler event.timer.bg1 matches 1500 run title @a title {text:"Brawl",color:gold,bold:true}
-execute if score stmc.handler event.stage matches 12 if score stmc.handler event.timer.bg1 matches 900 run title @a title {text:"Dodgebolt",color:white,bold:true}
+execute if score stmc.handler event.timer.bg1 matches 1500 run title @a title {text:"Solve",color:yellow,bold:true}
+execute if score stmc.handler event.timer.bg2 matches 1500 run title @a title {text:"Extract",color:red,bold:true}
+execute if score stmc.handler event.timer.bg3 matches 7500 run title @a title {text:"Trials",color:dark_aqua,bold:true}
+execute if score stmc.handler event.timer.bg4 matches 1500 run title @a title {text:"Delve",color:light_purple,bold:true}
+execute if score stmc.handler event.timer.bg5 matches 1500 run title @a title {text:"Brawl",color:gold,bold:true}
+execute if score stmc.handler event.timer.bg6 matches 900 run title @a title {text:"Dodgebolt",color:white,bold:true}
 
 # move to next game
-execute unless score stmc.handler event.stage matches 6 unless score stmc.handler event.stage matches 12 if score stmc.handler event.timer.bg1 matches 1560 run scoreboard players add stmc.handler event.stage 1
-execute if score stmc.handler event.stage matches 12 if score stmc.handler event.timer.bg1 matches 960 run scoreboard players add stmc.handler event.stage 1
-execute if score stmc.handler event.stage matches 6 if score stmc.handler event.timer.bg1 matches 7560 run scoreboard players add stmc.handler event.stage 1
+execute if score stmc.handler event.timer.bg1 matches 1560 run scoreboard players add stmc.handler event.stage 1
+execute if score stmc.handler event.timer.bg2 matches 1560 run scoreboard players add stmc.handler event.stage 1
+execute if score stmc.handler event.timer.bg3 matches 7560 run scoreboard players add stmc.handler event.stage 1
+execute if score stmc.handler event.timer.bg4 matches 1560 run scoreboard players add stmc.handler event.stage 1
+execute if score stmc.handler event.timer.bg5 matches 1560 run scoreboard players add stmc.handler event.stage 1
+execute if score stmc.handler event.timer.bg6 matches 960 run scoreboard players add stmc.handler event.stage 1
+
+# reset bossbars
+execute if score stmc.handler event.timer.bg1 matches 1560 run bossbar remove delay.bossbar
+execute if score stmc.handler event.timer.bg2 matches 1560 run bossbar remove delay.bossbar
+execute if score stmc.handler event.timer.bg3 matches 7560 run bossbar remove delay.bossbar
+execute if score stmc.handler event.timer.bg4 matches 1560 run bossbar remove delay.bossbar
+execute if score stmc.handler event.timer.bg5 matches 1560 run bossbar remove delay.bossbar
+execute if score stmc.handler event.timer.bg6 matches 960 run bossbar remove delay.bossbar
+
+# and reset timers
+execute if score stmc.handler event.timer.bg1 matches 1560 run scoreboard players set stmc.handler event.timer.bg1 0
+execute if score stmc.handler event.timer.bg2 matches 1560 run scoreboard players set stmc.handler event.timer.bg2 0
+execute if score stmc.handler event.timer.bg3 matches 7560 run scoreboard players set stmc.handler event.timer.bg3 0
+execute if score stmc.handler event.timer.bg4 matches 1560 run scoreboard players set stmc.handler event.timer.bg4 0
+execute if score stmc.handler event.timer.bg5 matches 1560 run scoreboard players set stmc.handler event.timer.bg5 0
+execute if score stmc.handler event.timer.bg6 matches 960 run scoreboard players set stmc.handler event.timer.bg6 0

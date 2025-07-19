@@ -21,7 +21,7 @@
 # <===== GAME-WIDE =====>
 
 # reset inventories
-item replace entity @a hotbar.0 with diamond_pickaxe[custom_name={"text":"BREAKER","color":"dark_aqua","bold":true},tool={default_mining_speed:10000,damage_per_block:0,rules:[{speed:.1,blocks:["red_wool","orange_wool","pink_wool","green_wool","cyan_wool","purple_wool","deepslate_tiles","deepslate_tile_slab","deepslate_tile_stairs","deepslate_tile_wall","tinted_glass","soul_lantern","red_nether_brick_slab","red_nether_brick_stairs","red_nether_brick_wall","shroomlight","crying_obsidian"]}]}]
+item replace entity @a hotbar.0 with diamond_pickaxe[custom_name={"text":"BREAKER","color":"dark_aqua","bold":true},tool={default_mining_speed:1000000,damage_per_block:0,rules:[{speed:.1,blocks:["red_wool","orange_wool","pink_wool","green_wool","cyan_wool","purple_wool","deepslate_tiles","deepslate_tile_slab","deepslate_tile_stairs","deepslate_tile_wall","tinted_glass","soul_lantern","red_nether_brick_slab","red_nether_brick_stairs","red_nether_brick_wall","shroomlight","crying_obsidian"]}]}]
 item replace entity @a hotbar.1 with air
 
 # kill item drops
@@ -38,6 +38,13 @@ execute if score replicate.PinkPikas replicate.completed matches 1 run scoreboar
 execute if score replicate.GreenGoats replicate.completed matches 1 run scoreboard players add replicate.handler replicate.completed 1
 execute if score replicate.CyanCougars replicate.completed matches 1 run scoreboard players add replicate.handler replicate.completed 1
 execute if score replicate.PurplePenguins replicate.completed matches 1 run scoreboard players add replicate.handler replicate.completed 1
+
+execute as @a[team=RED_RACCOONS,gamemode=!spectator] if score replicate.RedRaccoons replicate.completed matches 1 run gamemode spectator @s
+execute as @a[team=ORANGE_OTTERS,gamemode=!spectator] if score replicate.OrangeOtters replicate.completed matches 1 run gamemode spectator @s
+execute as @a[team=PINK_PIKAS,gamemode=!spectator] if score replicate.PinkPikas replicate.completed matches 1 run gamemode spectator @s
+execute as @a[team=GREEN_GOATS,gamemode=!spectator] if score replicate.GreenGoats replicate.completed matches 1 run gamemode spectator @s
+execute as @a[team=CYAN_COUGARS,gamemode=!spectator] if score replicate.CyanCougars replicate.completed matches 1 run gamemode spectator @s
+execute as @a[team=PURPLE_PENGUINS,gamemode=!spectator] if score replicate.PurplePenguins replicate.completed matches 1 run gamemode spectator @s
 
 execute if score replicate.handler replicate.completed matches 6 run scoreboard players add replicate.handler replicate.stage 1
 

@@ -8,7 +8,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:splash_potion",
-          "weight": 10,
+          "weight": 6,
           "quality": 1,
           "functions": [
             {
@@ -16,43 +16,17 @@
               "components": {
                 "minecraft:potion_contents": {
                   "custom_color": 655386,
-                  "custom_name": "Splash Potion of Darkness",
                   "custom_effects": [
                     {
                       "id": "minecraft:darkness",
                       "amplifier": 0,
-                      "duration": 250,
-                      "hidden_effect": {
-                        "id": "minecraft:blindness",
-                        "amplifier": 0,
-                        "duration": 250
-                      }
+                      "duration": 250
                     }
                   ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:splash_potion",
-          "weight": 10,
-          "quality": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:potion_contents": {
-                  "custom_color": 16766968,
-                  "custom_name": "Splash Potion of Levitation",
-                  "custom_effects": [
-                    {
-                      "id": "minecraft:levitation",
-                      "amplifier": 0,
-                      "duration": 100
-                    }
-                  ]
+                },
+                "minecraft:custom_name": {
+                  "text": "Splash Potion of Darkness",
+                  "italic": false
                 }
               }
             }
@@ -62,6 +36,33 @@
           "type": "minecraft:item",
           "name": "minecraft:splash_potion",
           "weight": 8,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 16766968,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:levitation",
+                      "amplifier": 0,
+                      "duration": 100
+                    }
+                  ]
+                },
+                "minecraft:custom_name": {
+                  "text": "Splash Potion of Levitation",
+                  "italic": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 6,
           "quality": 1,
           "functions": [
             {
@@ -82,7 +83,11 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 3,
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 12
+              },
               "add": false
             }
           ]
@@ -95,7 +100,11 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 16,
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 16,
+                "max": 64
+              },
               "add": false
             },
             {
@@ -129,7 +138,11 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 6,
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 8,
+                "max": 16
+              },
               "add": false
             },
             {
@@ -141,6 +154,49 @@
                 },
                 "minecraft:item_name": "Meow"
               }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:silverfish_spawn_egg",
+          "weight": 6,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:entity_data": {
+                  "id": "minecraft:evoker_fangs"
+                },
+                "minecraft:custom_name": "Maw"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 8,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              },
+              "add": false
             }
           ]
         }
@@ -177,7 +233,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:feather",
-          "weight": 6,
+          "weight": 10,
           "quality": 1,
           "functions": [
             {
@@ -206,26 +262,41 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:silverfish_spawn_egg",
+          "name": "minecraft:mace",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": 0.004,
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:vex_spawn_egg",
           "weight": 8,
           "quality": 1,
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 2,
-              "add": false
-            },
-            {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:entity_data": {
-                  "id": "minecraft:evoker_fangs"
+                  "id": "vex",
+                  "attributes": [
+                    {
+                      "id": "minecraft:attack_damage",
+                      "base": -3,
+                      "modifiers": []
+                    }
+                  ],
+                  "DeathLootTable": "lobby:lobbyloottable"
                 },
-                "minecraft:item_name": "Maw"
+                "minecraft:rarity": "rare"
               }
             }
-          ],
-          "conditions": []
+          ]
         }
       ]
     }
