@@ -15,87 +15,8 @@ scoreboard objectives add sg.sidebar dummy {"text": "    STMC Invitational    ",
 scoreboard objectives setdisplay sidebar sg.sidebar
 
 # <===== RANK TEAMS =====>
-# first, we run some calculations to determine which teams should be present
 
-# save values in a temporary place (to use later in the sidebar)
-scoreboard objectives add sg.points.team.temp dummy
-scoreboard players operation sg.RedRaccoons sg.points.team.temp = sg.RedRaccoons sg.points.team
-scoreboard players operation sg.OrangeOtters sg.points.team.temp = sg.OrangeOtters sg.points.team
-scoreboard players operation sg.PinkPikas sg.points.team.temp = sg.PinkPikas sg.points.team
-scoreboard players operation sg.GreenGoats sg.points.team.temp = sg.GreenGoats sg.points.team
-scoreboard players operation sg.CyanCougars sg.points.team.temp = sg.CyanCougars sg.points.team
-scoreboard players operation sg.PurplePenguins sg.points.team.temp = sg.PurplePenguins sg.points.team
-
-# set a dummy player to -1
-scoreboard players set $sg.highest sg.points.team -1
-
-# determine highest value
-# because we're using fake players, we have to manually test each one
-scoreboard players operation $sg.highest sg.points.team > sg.RedRaccoons sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.OrangeOtters sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.PinkPikas sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.GreenGoats sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.CyanCougars sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.PurplePenguins sg.points.team
-
-# determine who has that highest value & assign them #1 rank
-# again manually checking
-execute if score sg.RedRaccoons sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.RedRaccoons sg.points.team.rank 1
-execute if score sg.OrangeOtters sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.OrangeOtters sg.points.team.rank 1
-execute if score sg.PinkPikas sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.PinkPikas sg.points.team.rank 1
-execute if score sg.GreenGoats sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.GreenGoats sg.points.team.rank 1
-execute if score sg.CyanCougars sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.CyanCougars sg.points.team.rank 1
-execute if score sg.PurplePenguins sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.PurplePenguins sg.points.team.rank 1
-
-# pop the highest value to reset it
-# & again, manually checking
-execute if score sg.RedRaccoons sg.points.team.rank matches 1 run scoreboard players reset sg.RedRaccoons sg.points.team
-execute if score sg.OrangeOtters sg.points.team.rank matches 1 run scoreboard players reset sg.OrangeOtters sg.points.team
-execute if score sg.PinkPikas sg.points.team.rank matches 1 run scoreboard players reset sg.PinkPikas sg.points.team
-execute if score sg.GreenGoats sg.points.team.rank matches 1 run scoreboard players reset sg.GreenGoats sg.points.team
-execute if score sg.CyanCougars sg.points.team.rank matches 1 run scoreboard players reset sg.CyanCougars sg.points.team
-execute if score sg.PurplePenguins sg.points.team.rank matches 1 run scoreboard players reset sg.PurplePenguins sg.points.team
-
-# and repeat two more times
-scoreboard players set $sg.highest sg.points.team -1
-scoreboard players operation $sg.highest sg.points.team > sg.RedRaccoons sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.OrangeOtters sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.PinkPikas sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.GreenGoats sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.CyanCougars sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.PurplePenguins sg.points.team
-execute if score sg.RedRaccoons sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.RedRaccoons sg.points.team.rank 2
-execute if score sg.OrangeOtters sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.OrangeOtters sg.points.team.rank 2
-execute if score sg.PinkPikas sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.PinkPikas sg.points.team.rank 2
-execute if score sg.GreenGoats sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.GreenGoats sg.points.team.rank 2
-execute if score sg.CyanCougars sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.CyanCougars sg.points.team.rank 2
-execute if score sg.PurplePenguins sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.PurplePenguins sg.points.team.rank 2
-execute if score sg.RedRaccoons sg.points.team.rank matches 2 run scoreboard players reset sg.RedRaccoons sg.points.team
-execute if score sg.OrangeOtters sg.points.team.rank matches 2 run scoreboard players reset sg.OrangeOtters sg.points.team
-execute if score sg.PinkPikas sg.points.team.rank matches 2 run scoreboard players reset sg.PinkPikas sg.points.team
-execute if score sg.GreenGoats sg.points.team.rank matches 2 run scoreboard players reset sg.GreenGoats sg.points.team
-execute if score sg.CyanCougars sg.points.team.rank matches 2 run scoreboard players reset sg.CyanCougars sg.points.team
-execute if score sg.PurplePenguins sg.points.team.rank matches 2 run scoreboard players reset sg.PurplePenguins sg.points.team
-
-scoreboard players set $sg.highest sg.points.team -1
-scoreboard players operation $sg.highest sg.points.team > sg.RedRaccoons sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.OrangeOtters sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.PinkPikas sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.GreenGoats sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.CyanCougars sg.points.team
-scoreboard players operation $sg.highest sg.points.team > sg.PurplePenguins sg.points.team
-execute if score sg.RedRaccoons sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.RedRaccoons sg.points.team.rank 3
-execute if score sg.OrangeOtters sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.OrangeOtters sg.points.team.rank 3
-execute if score sg.PinkPikas sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.PinkPikas sg.points.team.rank 3
-execute if score sg.GreenGoats sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.GreenGoats sg.points.team.rank 3
-execute if score sg.CyanCougars sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.CyanCougars sg.points.team.rank 3
-execute if score sg.PurplePenguins sg.points.team = $sg.highest sg.points.team run scoreboard players set sg.PurplePenguins sg.points.team.rank 3
-scoreboard players reset sg.RedRaccoons sg.points.team
-scoreboard players reset sg.OrangeOtters sg.points.team
-scoreboard players reset sg.PinkPikas sg.points.team
-scoreboard players reset sg.GreenGoats sg.points.team
-scoreboard players reset sg.CyanCougars sg.points.team
-scoreboard players reset sg.PurplePenguins sg.points.team
+function survival_games:calculate_rankings
 
 # <===== BUILD FROM THE BOTTOM =====>
 

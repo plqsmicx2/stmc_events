@@ -15,8 +15,12 @@ execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.stage matc
 execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.stage matches 3 if score spleef.handler spleef.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
 execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.stage matches 3 if score spleef.handler spleef.deathThisTick matches 1 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+5 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Outlasted Player!",bold:true,color:"red"}]
 
+# check total # of players alive
+scoreboard players set spleef.handler spleef.players_alive 0
+execute as @a[scores={spleef.alive=1}] run scoreboard players add spleef.handler spleef.players_alive 1
+
 # and run points update to give bonus placement points if applicable
-execute if score spleef.handler spleef.stage matches 3 if score spleef.handler spleef.deathThisTick matches 1 run function trials:spleef/points_update
+execute if score spleef.handler spleef.stage matches 3 if score spleef.handler spleef.deathThisTick matches 1 run function trials:spleef/placement_update
 
 # next, let's check up on our teams
 # first we update the players alive of each team

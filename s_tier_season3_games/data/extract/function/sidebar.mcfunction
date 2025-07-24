@@ -55,13 +55,13 @@ team join PURPLE_PENGUINS extract.PurplePenguins
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: extract.sidebar 2481
+scoreboard players set §e§lPoints: extract.sidebar 2601
 
 # blank line
-scoreboard players set §a extract.sidebar 2482
+scoreboard players set §a extract.sidebar 2602
 
 # round number
-scoreboard players set extract.stats.roundsCompleted extract.sidebar 2483
+scoreboard players set extract.stats.roundsCompleted extract.sidebar 2603
 execute if score extract.handler extract.stats.roundsCompleted matches 0 run scoreboard players display name extract.stats.roundsCompleted extract.sidebar {"text": "Rounds Completed: 0/5", "color": "gold", "bold": true}
 execute if score extract.handler extract.stats.roundsCompleted matches 1 run scoreboard players display name extract.stats.roundsCompleted extract.sidebar {"text": "Rounds Completed: 1/5", "color": "gold", "bold": true}
 execute if score extract.handler extract.stats.roundsCompleted matches 2 run scoreboard players display name extract.stats.roundsCompleted extract.sidebar {"text": "Rounds Completed: 2/5", "color": "gold", "bold": true}
@@ -70,8 +70,8 @@ execute if score extract.handler extract.stats.roundsCompleted matches 4 run sco
 execute if score extract.handler extract.stats.roundsCompleted matches 5 run scoreboard players display name extract.stats.roundsCompleted extract.sidebar {"text": "Rounds Completed: 5/5", "color": "gold", "bold": true}
 
 # current game
-scoreboard players set Disco extract.sidebar 2484
+scoreboard players set Disco extract.sidebar 2604
 scoreboard players display name Disco extract.sidebar {"text": "Extract", "color": "red", "bold": true}
 
 # blank line #2
-scoreboard players set § extract.sidebar 2485
+scoreboard players set § extract.sidebar 2605

@@ -22,7 +22,7 @@ scoreboard objectives add sg.points.indiv dummy
 # this value is only attributed to the sg.TEAM players
 scoreboard objectives add sg.points.team dummy
 # tracks the rank of each player
-scoreboard objectives add sg.points.player.rank dummy
+scoreboard objectives add sg.points.indiv.rank dummy
 # tracks the rank of each team
 scoreboard objectives add sg.points.team.rank dummy
 # stores which quadrant the border will end in

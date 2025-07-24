@@ -107,7 +107,4 @@ execute as @a if score sg.PurplePenguins sg.r3.teamPlacement matches 1 run title
 scoreboard players set sg.r3.handler sg.r3.stage 4
 
 # update player points
-execute as @a run scoreboard players operation @s stats.points.indiv.g6 = @s sg.points.indiv
-
-# move to next event stage
-scoreboard players add stmc.handler event.stage 1
+execute as @a run scoreboard players operation @s stats.points.indiv.g2 = @s sg.points.indiv

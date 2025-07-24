@@ -97,10 +97,10 @@ scoreboard players reset sg.CyanCougars sg.r3.teamPlacement
 scoreboard players reset sg.PurplePenguins sg.r3.teamPlacement
 
 # and reset timers
-scoreboard players reset sg.r3.handler sg.r3.timer.delay1
-scoreboard players reset sg.r3.handler sg.r3.timer.delay2
-scoreboard players reset sg.r3.handler sg.r3.timer.round
-scoreboard players reset sg.r3.handler sg.r3.timer.delay3
+scoreboard players set sg.r3.handler sg.r3.timer.delay1 0
+scoreboard players set sg.r3.handler sg.r3.timer.delay2 0
+scoreboard players set sg.r3.handler sg.r3.timer.round 0
+scoreboard players set sg.r3.handler sg.r3.timer.delay3 0
 
 # reset players alive
 execute as @a[team=!SPECTATORS] at @s run scoreboard players set @s sg.alive 1

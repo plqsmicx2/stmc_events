@@ -89,6 +89,12 @@ scoreboard objectives add replicate.playersCompleted dummy
 scoreboard objectives add replicate.points.indiv dummy
 scoreboard objectives add replicate.points.team dummy
 scoreboard objectives add replicate.points.rank.overall dummy
+scoreboard objectives add replicate.points.rank.build1 dummy
+scoreboard objectives add replicate.points.rank.build2 dummy
+scoreboard objectives add replicate.points.rank.build3 dummy
+scoreboard objectives add replicate.points.rank.build4 dummy
+scoreboard objectives add replicate.points.rank.build5 dummy
+scoreboard objectives add replicate.points.rank.build6 dummy
 scoreboard objectives add replicate.team.rank dummy
 
 # reset some scoreboards

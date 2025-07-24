@@ -9,7 +9,7 @@ execute in extract:extract run forceload remove 250 27 -20 -32
 bossbar remove extract.timer
 
 # update points
-execute as @a run scoreboard players operation @s stats.points.indiv.g3 = @s extract.points.indiv
+execute as @a run scoreboard players operation @s stats.points.indiv.g5 = @s extract.points.indiv
 
 # move to next stage
 scoreboard players add stmc.handler event.stage 1

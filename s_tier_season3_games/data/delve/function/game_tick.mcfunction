@@ -245,13 +245,27 @@ execute in delve:delve run kill @e[type=minecraft:experience_orb]
 
 # <===== END GAME =====>
 
+# if furnace is lit, reset furnace unlit time
+execute in delve:delve unless block 1 91 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 10.. run scoreboard players set delve.RedRaccoons delve.timer.game.furnaceUnlit 0
+execute in delve:delve unless block 1 121 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 10.. run scoreboard players set delve.OrangeOtters delve.timer.game.furnaceUnlit 0
+execute in delve:delve unless block 1 151 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 10.. run scoreboard players set delve.PinkPikas delve.timer.game.furnaceUnlit 0
+execute in delve:delve unless block 1 181 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 10.. run scoreboard players set delve.GreenGoats delve.timer.game.furnaceUnlit 0
+execute in delve:delve unless block 1 211 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 10.. run scoreboard players set delve.CyanCougars delve.timer.game.furnaceUnlit 0
+execute in delve:delve unless block 1 241 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 10.. run scoreboard players set delve.PurplePenguins delve.timer.game.furnaceUnlit 0
+
 # if furnace is not lit, end the game for that team
-execute in delve:delve if block 1 91 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. unless score delve.RedRaccoons delve.stats.coalCount matches 1.. run scoreboard players set delve.RedRaccoons delve.teams_completed 1
-execute in delve:delve if block 1 121 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. unless score delve.OrangeOtters delve.stats.coalCount matches 1.. run scoreboard players set delve.OrangeOtters delve.teams_completed 1
-execute in delve:delve if block 1 151 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. unless score delve.PinkPikas delve.stats.coalCount matches 1.. run scoreboard players set delve.PinkPikas delve.teams_completed 1
-execute in delve:delve if block 1 181 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. unless score delve.GreenGoats delve.stats.coalCount matches 1.. run scoreboard players set delve.GreenGoats delve.teams_completed 1
-execute in delve:delve if block 1 211 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. unless score delve.CyanCougars delve.stats.coalCount matches 1.. run scoreboard players set delve.CyanCougars delve.teams_completed 1
-execute in delve:delve if block 1 241 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. unless score delve.PurplePenguins delve.stats.coalCount matches 1.. run scoreboard players set delve.PurplePenguins delve.teams_completed 1
+execute in delve:delve if block 1 91 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. run scoreboard players add delve.RedRaccoons delve.timer.game.furnaceUnlit 1
+execute if score delve.RedRaccoons delve.timer.game.furnaceUnlit matches 5.. run scoreboard players set delve.RedRaccoons delve.teams_completed 1
+execute in delve:delve if block 1 121 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. run scoreboard players add delve.OrangeOtters delve.timer.game.furnaceUnlit 1
+execute if score delve.OrangeOtters delve.timer.game.furnaceUnlit matches 5.. run scoreboard players set delve.OrangeOtters delve.teams_completed 1
+execute in delve:delve if block 1 151 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. run scoreboard players add delve.PinkPikas delve.timer.game.furnaceUnlit 1
+execute if score delve.PinkPikas delve.timer.game.furnaceUnlit matches 5.. run scoreboard players set delve.PinkPikas delve.teams_completed 1
+execute in delve:delve if block 1 181 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. run scoreboard players add delve.GreenGoats delve.timer.game.furnaceUnlit 1
+execute if score delve.GreenGoats delve.timer.game.furnaceUnlit matches 5.. run scoreboard players set delve.GreenGoats delve.teams_completed 1
+execute in delve:delve if block 1 211 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. run scoreboard players add delve.CyanCougars delve.timer.game.furnaceUnlit 1
+execute if score delve.CyanCougars delve.timer.game.furnaceUnlit matches 5.. run scoreboard players set delve.CyanCougars delve.teams_completed 1
+execute in delve:delve if block 1 241 0 furnace{lit_time_remaining:0s} if score delve.handler delve.timer.game matches 40.. run scoreboard players add delve.PurplePenguins delve.timer.game.furnaceUnlit 1
+execute if score delve.PurplePenguins delve.timer.game.furnaceUnlit matches 5.. run scoreboard players set delve.PurplePenguins delve.teams_completed 1
 
 # update delve.teams_completed for each team
 scoreboard players set delve.handler delve.teams_completed 0

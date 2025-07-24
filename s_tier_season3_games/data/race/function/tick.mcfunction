@@ -53,5 +53,6 @@ execute if score race.handler race.stage matches 3 run function race:game_tick
 # if we're in stage 4, run reset & point announcement
 execute if score race.handler race.stage matches 4 run scoreboard players add race.handler race.timer.delay3 1
 execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 3 run function race:reset
-execute if score race.handler race.stage matches 4 run function race:points_announcement
-execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 400.. run scoreboard players add stmc.handler event.stage 5
+execute if score race.handler race.timer.delay3 matches 100 run function race:fastest_lap_announcement
+execute if score race.handler race.timer.delay3 matches 300 run function race:team_announcement
+execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 400.. run scoreboard players add stmc.handler event.stage 1

@@ -44,6 +44,7 @@ execute in trials:replicate if score replicate.CyanCougars replicate.timer.build
 
 # move to next build
 execute if score replicate.CyanCougars replicate.timer.build1 matches 60.. if score replicate.CyanCougars replicate.stage matches 0 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players remove replicate.CyanCougars replicate.timer.build1 60
+execute if score replicate.CyanCougars replicate.timer.build1 matches 60.. if score replicate.CyanCougars replicate.stage matches 0 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.build2 1
 execute if score replicate.CyanCougars replicate.timer.build1 matches 60.. if score replicate.CyanCougars replicate.stage matches 0 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.stage 1
 
 # Build 2
@@ -81,6 +82,7 @@ execute in trials:replicate if score replicate.CyanCougars replicate.timer.build
 
 # move to next build
 execute if score replicate.CyanCougars replicate.timer.build2 matches 60.. if score replicate.CyanCougars replicate.stage matches 1 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players remove replicate.CyanCougars replicate.timer.build2 60
+execute if score replicate.CyanCougars replicate.timer.build2 matches 60.. if score replicate.CyanCougars replicate.stage matches 1 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.build3 1
 execute if score replicate.CyanCougars replicate.timer.build2 matches 60.. if score replicate.CyanCougars replicate.stage matches 1 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.stage 2
 
 # Build 3
@@ -114,6 +116,7 @@ execute in trials:replicate if score replicate.CyanCougars replicate.timer.build
 
 # move to next build
 execute if score replicate.CyanCougars replicate.timer.build3 matches 60.. if score replicate.CyanCougars replicate.stage matches 2 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players remove replicate.CyanCougars replicate.timer.build3 60
+execute if score replicate.CyanCougars replicate.timer.build3 matches 60.. if score replicate.CyanCougars replicate.stage matches 2 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.build4 1
 execute if score replicate.CyanCougars replicate.timer.build3 matches 60.. if score replicate.CyanCougars replicate.stage matches 2 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.stage 3
 
 # Build 4
@@ -151,6 +154,7 @@ execute in trials:replicate if score replicate.CyanCougars replicate.timer.build
 
 # move to next build
 execute if score replicate.CyanCougars replicate.timer.build4 matches 60.. if score replicate.CyanCougars replicate.stage matches 3 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players remove replicate.CyanCougars replicate.timer.build4 60
+execute if score replicate.CyanCougars replicate.timer.build4 matches 60.. if score replicate.CyanCougars replicate.stage matches 3 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.build5 1
 execute if score replicate.CyanCougars replicate.timer.build4 matches 60.. if score replicate.CyanCougars replicate.stage matches 3 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.stage 4
 
 # Build 5
@@ -186,6 +190,7 @@ execute in trials:replicate if score replicate.CyanCougars replicate.timer.build
 
 # store time to complete this build & move to next build
 execute if score replicate.CyanCougars replicate.timer.build5 matches 60.. if score replicate.CyanCougars replicate.stage matches 4 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players remove replicate.CyanCougars replicate.timer.build5 60
+execute if score replicate.CyanCougars replicate.timer.build5 matches 60.. if score replicate.CyanCougars replicate.stage matches 4 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.timer.build6 1
 execute if score replicate.CyanCougars replicate.timer.build5 matches 60.. if score replicate.CyanCougars replicate.stage matches 4 if score replicate.CyanCougars replicate.playersCompleted matches 4 run scoreboard players set replicate.CyanCougars replicate.stage 5
 
 # Build 6

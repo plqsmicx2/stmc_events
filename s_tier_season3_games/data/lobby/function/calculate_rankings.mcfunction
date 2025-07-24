@@ -12,18 +12,26 @@ scoreboard players operation team.GreenGoats stats.points.team.temp = team.Green
 scoreboard players operation team.CyanCougars stats.points.team.temp = team.CyanCougars stats.points.team
 scoreboard players operation team.PurplePenguins stats.points.team.temp = team.PurplePenguins stats.points.team
 
+# then reset ranks
+scoreboard players set team.RedRaccoons stats.points.team.rank -1
+scoreboard players set team.OrangeOtters stats.points.team.rank -1
+scoreboard players set team.PinkPikas stats.points.team.rank -1
+scoreboard players set team.GreenGoats stats.points.team.rank -1
+scoreboard players set team.CyanCougars stats.points.team.rank -1
+scoreboard players set team.PurplePenguins stats.points.team.rank -1
+
 # set our highest value to -1
 scoreboard players set $stmc.highest stats.points.team.temp -1
 
-# then determine the highest value
-execute if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
+# then determine the highest value of teams without a rank
+execute unless score team.RedRaccoons stats.points.team.rank matches 1.. if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
+execute unless score team.OrangeOtters stats.points.team.rank matches 1.. if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
+execute unless score team.PinkPikas stats.points.team.rank matches 1.. if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
+execute unless score team.GreenGoats stats.points.team.rank matches 1.. if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
+execute unless score team.CyanCougars stats.points.team.rank matches 1.. if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
+execute unless score team.PurplePenguins stats.points.team.rank matches 1.. if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
 
-# then determine which team has that highest value & give them the highest rank applicable
+# then determine which team has that exact value & give them the highest rank applicable
 execute if score $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp run scoreboard players set team.RedRaccoons stats.points.team.rank 1
 execute if score $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp run scoreboard players set team.OrangeOtters stats.points.team.rank 1
 execute if score $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp run scoreboard players set team.PinkPikas stats.points.team.rank 1
@@ -31,114 +39,76 @@ execute if score $stmc.highest stats.points.team.temp = team.GreenGoats stats.po
 execute if score $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp run scoreboard players set team.CyanCougars stats.points.team.rank 1
 execute if score $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp run scoreboard players set team.PurplePenguins stats.points.team.rank 1
 
-# and then reset the score of whoever had the highest value
-execute if score team.RedRaccoons stats.points.team.rank matches 1 run scoreboard players reset team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.rank matches 1 run scoreboard players reset team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.rank matches 1 run scoreboard players reset team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.rank matches 1 run scoreboard players reset team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.rank matches 1 run scoreboard players reset team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.rank matches 1 run scoreboard players reset team.PurplePenguins stats.points.team.temp
-
 # and then repeat the process until all teams have been ranked
 scoreboard players set $stmc.highest stats.points.team.temp -1
-execute if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
+execute unless score team.RedRaccoons stats.points.team.rank matches 1.. if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
+execute unless score team.OrangeOtters stats.points.team.rank matches 1.. if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
+execute unless score team.PinkPikas stats.points.team.rank matches 1.. if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
+execute unless score team.GreenGoats stats.points.team.rank matches 1.. if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
+execute unless score team.CyanCougars stats.points.team.rank matches 1.. if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
+execute unless score team.PurplePenguins stats.points.team.rank matches 1.. if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
 execute if score $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp run scoreboard players set team.RedRaccoons stats.points.team.rank 2
 execute if score $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp run scoreboard players set team.OrangeOtters stats.points.team.rank 2
 execute if score $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp run scoreboard players set team.PinkPikas stats.points.team.rank 2
 execute if score $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp run scoreboard players set team.GreenGoats stats.points.team.rank 2
 execute if score $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp run scoreboard players set team.CyanCougars stats.points.team.rank 2
 execute if score $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp run scoreboard players set team.PurplePenguins stats.points.team.rank 2
-execute if score team.RedRaccoons stats.points.team.rank matches 2 run scoreboard players reset team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.rank matches 2 run scoreboard players reset team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.rank matches 2 run scoreboard players reset team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.rank matches 2 run scoreboard players reset team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.rank matches 2 run scoreboard players reset team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.rank matches 2 run scoreboard players reset team.PurplePenguins stats.points.team.temp
 
 scoreboard players set $stmc.highest stats.points.team.temp -1
-execute if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
+execute unless score team.RedRaccoons stats.points.team.rank matches 1.. if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
+execute unless score team.OrangeOtters stats.points.team.rank matches 1.. if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
+execute unless score team.PinkPikas stats.points.team.rank matches 1.. if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
+execute unless score team.GreenGoats stats.points.team.rank matches 1.. if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
+execute unless score team.CyanCougars stats.points.team.rank matches 1.. if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
+execute unless score team.PurplePenguins stats.points.team.rank matches 1.. if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
 execute if score $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp run scoreboard players set team.RedRaccoons stats.points.team.rank 3
 execute if score $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp run scoreboard players set team.OrangeOtters stats.points.team.rank 3
 execute if score $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp run scoreboard players set team.PinkPikas stats.points.team.rank 3
 execute if score $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp run scoreboard players set team.GreenGoats stats.points.team.rank 3
 execute if score $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp run scoreboard players set team.CyanCougars stats.points.team.rank 3
 execute if score $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp run scoreboard players set team.PurplePenguins stats.points.team.rank 3
-execute if score team.RedRaccoons stats.points.team.rank matches 3 run scoreboard players reset team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.rank matches 3 run scoreboard players reset team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.rank matches 3 run scoreboard players reset team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.rank matches 3 run scoreboard players reset team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.rank matches 3 run scoreboard players reset team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.rank matches 3 run scoreboard players reset team.PurplePenguins stats.points.team.temp
 
 scoreboard players set $stmc.highest stats.points.team.temp -1
-execute if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
+execute unless score team.RedRaccoons stats.points.team.rank matches 1.. if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
+execute unless score team.OrangeOtters stats.points.team.rank matches 1.. if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
+execute unless score team.PinkPikas stats.points.team.rank matches 1.. if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
+execute unless score team.GreenGoats stats.points.team.rank matches 1.. if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
+execute unless score team.CyanCougars stats.points.team.rank matches 1.. if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
+execute unless score team.PurplePenguins stats.points.team.rank matches 1.. if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
 execute if score $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp run scoreboard players set team.RedRaccoons stats.points.team.rank 4
 execute if score $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp run scoreboard players set team.OrangeOtters stats.points.team.rank 4
 execute if score $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp run scoreboard players set team.PinkPikas stats.points.team.rank 4
 execute if score $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp run scoreboard players set team.GreenGoats stats.points.team.rank 4
 execute if score $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp run scoreboard players set team.CyanCougars stats.points.team.rank 4
 execute if score $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp run scoreboard players set team.PurplePenguins stats.points.team.rank 4
-execute if score team.RedRaccoons stats.points.team.rank matches 4 run scoreboard players reset team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.rank matches 4 run scoreboard players reset team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.rank matches 4 run scoreboard players reset team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.rank matches 4 run scoreboard players reset team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.rank matches 4 run scoreboard players reset team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.rank matches 4 run scoreboard players reset team.PurplePenguins stats.points.team.temp
 
 scoreboard players set $stmc.highest stats.points.team.temp -1
-execute if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
+execute unless score team.RedRaccoons stats.points.team.rank matches 1.. if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
+execute unless score team.OrangeOtters stats.points.team.rank matches 1.. if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
+execute unless score team.PinkPikas stats.points.team.rank matches 1.. if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
+execute unless score team.GreenGoats stats.points.team.rank matches 1.. if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
+execute unless score team.CyanCougars stats.points.team.rank matches 1.. if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
+execute unless score team.PurplePenguins stats.points.team.rank matches 1.. if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
 execute if score $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp run scoreboard players set team.RedRaccoons stats.points.team.rank 5
 execute if score $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp run scoreboard players set team.OrangeOtters stats.points.team.rank 5
 execute if score $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp run scoreboard players set team.PinkPikas stats.points.team.rank 5
 execute if score $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp run scoreboard players set team.GreenGoats stats.points.team.rank 5
 execute if score $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp run scoreboard players set team.CyanCougars stats.points.team.rank 5
 execute if score $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp run scoreboard players set team.PurplePenguins stats.points.team.rank 5
-execute if score team.RedRaccoons stats.points.team.rank matches 5 run scoreboard players reset team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.rank matches 5 run scoreboard players reset team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.rank matches 5 run scoreboard players reset team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.rank matches 5 run scoreboard players reset team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.rank matches 5 run scoreboard players reset team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.rank matches 5 run scoreboard players reset team.PurplePenguins stats.points.team.temp
 
 scoreboard players set $stmc.highest stats.points.team.temp -1
-execute if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
-execute if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
-execute if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
-execute if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
-execute if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
-execute if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
+execute unless score team.RedRaccoons stats.points.team.rank matches 1.. if score team.RedRaccoons stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp
+execute unless score team.OrangeOtters stats.points.team.rank matches 1.. if score team.OrangeOtters stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp
+execute unless score team.PinkPikas stats.points.team.rank matches 1.. if score team.PinkPikas stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp
+execute unless score team.GreenGoats stats.points.team.rank matches 1.. if score team.GreenGoats stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp
+execute unless score team.CyanCougars stats.points.team.rank matches 1.. if score team.CyanCougars stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp
+execute unless score team.PurplePenguins stats.points.team.rank matches 1.. if score team.PurplePenguins stats.points.team.temp > $stmc.highest stats.points.team.temp run scoreboard players operation $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp
 execute if score $stmc.highest stats.points.team.temp = team.RedRaccoons stats.points.team.temp run scoreboard players set team.RedRaccoons stats.points.team.rank 6
 execute if score $stmc.highest stats.points.team.temp = team.OrangeOtters stats.points.team.temp run scoreboard players set team.OrangeOtters stats.points.team.rank 6
 execute if score $stmc.highest stats.points.team.temp = team.PinkPikas stats.points.team.temp run scoreboard players set team.PinkPikas stats.points.team.rank 6
 execute if score $stmc.highest stats.points.team.temp = team.GreenGoats stats.points.team.temp run scoreboard players set team.GreenGoats stats.points.team.rank 6
 execute if score $stmc.highest stats.points.team.temp = team.CyanCougars stats.points.team.temp run scoreboard players set team.CyanCougars stats.points.team.rank 6
 execute if score $stmc.highest stats.points.team.temp = team.PurplePenguins stats.points.team.temp run scoreboard players set team.PurplePenguins stats.points.team.rank 6
-scoreboard players reset team.RedRaccoons stats.points.team.temp
-scoreboard players reset team.OrangeOtters stats.points.team.temp
-scoreboard players reset team.PinkPikas stats.points.team.temp
-scoreboard players reset team.GreenGoats stats.points.team.temp
-scoreboard players reset team.CyanCougars stats.points.team.temp
-scoreboard players reset team.PurplePenguins stats.points.team.temp
 
 # <===== INDIVIDUAL RANKINGS =====>
 

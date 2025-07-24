@@ -93,7 +93,7 @@ scoreboard objectives add race.fastest_lap.rank dummy
 scoreboard objectives add race.completion.rank dummy
 # points
 scoreboard objectives add race.points.indiv dummy
-scoreboard objectives add race.points.player.rank dummy
+scoreboard objectives add race.points.indiv.rank dummy
 scoreboard objectives add race.points.team dummy
 scoreboard objectives add race.points.team.rank dummy
 # handlers

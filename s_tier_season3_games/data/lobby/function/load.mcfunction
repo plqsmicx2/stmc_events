@@ -48,6 +48,8 @@ scoreboard objectives add event.stage dummy
 # tracks points of team [is always set based on sum of @a[team=...] indiv]
 scoreboard objectives add stats.points.team dummy
 scoreboard objectives add stats.points.team.rank dummy
+# winning team
+scoreboard objectives add stats.winningTeam dummy
 # tracks individual points across event [set by sum of indiv.g# but weighted for game multipliers]
 scoreboard objectives add stats.points.indiv dummy
 scoreboard objectives add stats.points.indiv.rank dummy
@@ -130,3 +132,5 @@ scoreboard players set @a stats.points.indiv.g3 0
 scoreboard players set @a stats.points.indiv.g4 0
 scoreboard players set @a stats.points.indiv.g5 0
 scoreboard players set @a stats.points.indiv.g6 0
+function lobby:points_update
+function lobby:sidebar

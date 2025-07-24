@@ -61,5 +61,5 @@ execute as @a if score tr.handler tr.stage matches 8 run scoreboard players oper
 execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s replicate.points.indiv
 execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s spleef.points.indiv
 execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s towers.points.indiv
-execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s stats.points.indiv.g4 = @s tr.points.indiv
+execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s stats.points.indiv.g6 = @s tr.points.indiv
 execute if score tr.handler tr.stage matches 8 run scoreboard players add stmc.handler event.stage 1

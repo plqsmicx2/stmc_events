@@ -1,0 +1,628 @@
+{
+  "type": "minecraft:vault",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ominous_trial_key",
+          "weight": 10,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              },
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 655386,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:darkness",
+                      "amplifier": 0,
+                      "duration": 250
+                    }
+                  ]
+                },
+                "minecraft:custom_name": {
+                  "text": "Splash Potion of Darkness",
+                  "italic": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 458756,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:wither",
+                      "amplifier": 0,
+                      "duration": 1800
+                    }
+                  ]
+                },
+                "minecraft:custom_name": {
+                  "text": "Lingering Potion of Wither",
+                  "italic": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:fire_resistance"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chicken_spawn_egg",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 16
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:entity_data": {
+                  "id": "minecraft:tnt",
+                  "fuse": 0,
+                  "block_state": {
+                    "Name": "minecraft:air"
+                  },
+                  "explosion_power": 0.06
+                },
+                "minecraft:item_model": "minecraft:torchflower",
+                "minecraft:item_name": "Firecracker",
+                "minecraft:can_place_on": [
+                  {
+                    "blocks": "#minecraft:mineable/pickaxe"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/shovel"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/axe"
+                  }
+                ],
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_place_on"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying",
+          "weight": 10,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:silverfish_spawn_egg",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 8
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:entity_data": {
+                  "id": "minecraft:evoker_fangs"
+                },
+                "minecraft:item_name": "Chomper",
+                "minecraft:can_place_on": [
+                  {
+                    "blocks": "#minecraft:mineable/pickaxe"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/shovel"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/axe"
+                  }
+                ],
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_place_on"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wind_charge",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 5
+              },
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 16766968,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:levitation",
+                      "amplifier": 0,
+                      "duration": 100
+                    }
+                  ]
+                },
+                "minecraft:custom_name": {
+                  "text": "Splash Potion of Levitation",
+                  "italic": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:invisibility"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_turtle_master"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spyglass",
+          "weight": 10,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              },
+              "add": false
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "conditions": []
+    },
+    {
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 8,
+        "p": 0.01
+      },
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:mace",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 0.01
+              },
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bat_spawn_egg",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:entity_data": {
+                  "id": "minecraft:firework_rocket",
+                  "LifeTime": 0,
+                  "FireworksItem": {
+                    "id": "minecraft:firework_rocket",
+                    "components": {
+                      "minecraft:fireworks": {
+                        "explosions": [
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          },
+                          {
+                            "shape": "star",
+                            "colors": [
+                              14483456
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "minecraft:item_model": "minecraft:firework_star",
+                "minecraft:item_name": "Explosive",
+                "minecraft:lore": [
+                  {
+                    "text": "x100",
+                    "color": "black",
+                    "shadow_color": -2293760,
+                    "italic": false
+                  }
+                ],
+                "minecraft:rarity": "rare",
+                "minecraft:can_place_on": [
+                  {
+                    "blocks": "#minecraft:mineable/pickaxe"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/shovel"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/axe"
+                  }
+                ],
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_place_on"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:feather",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "minecraft:glass",
+                "minecraft:item_name": "Space Helmet",
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:gravity",
+                    "id": "minecraft:gravity",
+                    "amount": -0.5,
+                    "operation": "add_multiplied_total"
+                  }
+                ],
+                "minecraft:equippable": {
+                  "slot": "head",
+                  "equip_sound": "minecraft:item.bottle.fill_dragonbreath",
+                  "camera_overlay": "minecraft:block/tinted_glass"
+                },
+                "minecraft:max_stack_size": 1,
+                "minecraft:rarity": "epic"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:equippable": {
+                  "slot": "head",
+                  "equip_sound": "minecraft:block.moss.place",
+                  "camera_overlay": "minecraft:entity/phantom_eyes"
+                },
+                "minecraft:item_model": "minecraft:flowering_azalea",
+                "minecraft:item_name": "Moss Helmet",
+                "minecraft:max_stack_size": 1,
+                "minecraft:rarity": "epic"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:breeze_spawn_egg",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:entity_data": {
+                  "id": "minecraft:breeze",
+                  "DeathLootTable": "lobby:lobbyvaultominous"
+                },
+                "minecraft:item_name": "Summon Wind",
+                "minecraft:item_model": "minecraft:guster_pottery_sherd",
+                "minecraft:can_place_on": [
+                  {
+                    "blocks": "#minecraft:mineable/pickaxe"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/shovel"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/axe"
+                  }
+                ],
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_place_on"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:vindicator_spawn_egg",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:entity_data": {
+                  "id": "minecraft:vindicator",
+                  "DeathLootTable": "lobby:lobbyvaultominous"
+                },
+                "minecraft:item_name": "Summon Axe",
+                "minecraft:item_model": "minecraft:scrape_pottery_sherd",
+                "minecraft:can_place_on": [
+                  {
+                    "blocks": "#minecraft:mineable/pickaxe"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/shovel"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/axe"
+                  }
+                ],
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_place_on"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wither_skeleton_spawn_egg",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:entity_data": {
+                  "id": "minecraft:wither_skeleton",
+                  "DeathLootTable": "lobby:lobbyvaultominous"
+                },
+                "minecraft:item_name": "Summon Skull",
+                "minecraft:item_model": "minecraft:skull_pottery_sherd",
+                "minecraft:can_place_on": [
+                  {
+                    "blocks": "#minecraft:mineable/pickaxe"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/shovel"
+                  },
+                  {
+                    "blocks": "#minecraft:mineable/axe"
+                  }
+                ],
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:can_place_on"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "minecraft:sequence"
+}

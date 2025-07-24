@@ -58,5 +58,5 @@ execute if score delve.handler delve.stage matches 3 run function delve:game_tic
 
 # if we're in stage 5 increment timer
 execute if score delve.handler delve.stage matches 4 run scoreboard players add delve.handler delve.timer.delay3 1
-execute if score delve.handler delve.stage matches 4 run function delve:points_announcement
-execute if score delve.handler delve.stage matches 4 if score delve.handler delve.timer.delay2 matches 400.. run function delve:reset
+execute if score delve.handler delve.stage matches 4 if score delve.handler delve.timer.delay3 matches 200 run function delve:points_announcement
+execute if score delve.handler delve.stage matches 4 if score delve.handler delve.timer.delay3 matches 400.. run function delve:reset

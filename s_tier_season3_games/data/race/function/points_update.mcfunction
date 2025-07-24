@@ -9,6 +9,9 @@
 
 # <===== PLAYER POINTS =====>
 
+# reset individual points
+execute as @a run scoreboard players set @s race.points.indiv 0
+
 # indiv placement
 execute as @a if score @s race.completion.rank matches 1 run scoreboard players set @s race.points.indiv 565
 execute as @a if score @s race.completion.rank matches 2 run scoreboard players set @s race.points.indiv 500
@@ -86,6 +89,14 @@ execute as @a if score @s race.fastest_lap.rank matches 4 run scoreboard players
 execute as @a if score @s race.fastest_lap.rank matches 5 run scoreboard players add @s race.points.indiv 10
 
 # <===== TEAM POINTS =====>
+
+# reset team points
+scoreboard players set race.RedRaccoons race.points.team 0
+scoreboard players set race.OrangeOtters race.points.team 0
+scoreboard players set race.PinkPikas race.points.team 0
+scoreboard players set race.GreenGoats race.points.team 0
+scoreboard players set race.CyanCougars race.points.team 0
+scoreboard players set race.PurplePenguins race.points.team 0
 
 # sum up team points
 execute as @a[team=RED_RACCOONS] run scoreboard players operation race.RedRaccoons race.points.team += @s race.points.indiv

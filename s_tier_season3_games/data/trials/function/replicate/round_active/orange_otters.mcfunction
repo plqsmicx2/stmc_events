@@ -44,6 +44,7 @@ execute in trials:replicate if score replicate.OrangeOtters replicate.timer.buil
 
 # move to next build
 execute if score replicate.OrangeOtters replicate.timer.build1 matches 60.. if score replicate.OrangeOtters replicate.stage matches 0 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players remove replicate.OrangeOtters replicate.timer.build1 60
+execute if score replicate.OrangeOtters replicate.timer.build1 matches 60.. if score replicate.OrangeOtters replicate.stage matches 0 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.timer.build2 1
 execute if score replicate.OrangeOtters replicate.timer.build1 matches 60.. if score replicate.OrangeOtters replicate.stage matches 0 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.stage 1
 
 # Build 2
@@ -81,6 +82,7 @@ execute in trials:replicate if score replicate.OrangeOtters replicate.timer.buil
 
 # move to next build
 execute if score replicate.OrangeOtters replicate.timer.build2 matches 60.. if score replicate.OrangeOtters replicate.stage matches 1 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players remove replicate.OrangeOtters replicate.timer.build2 60
+execute if score replicate.OrangeOtters replicate.timer.build2 matches 60.. if score replicate.OrangeOtters replicate.stage matches 1 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.timer.build3 1
 execute if score replicate.OrangeOtters replicate.timer.build2 matches 60.. if score replicate.OrangeOtters replicate.stage matches 1 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.stage 2
 
 # Build 3
@@ -114,6 +116,7 @@ execute in trials:replicate if score replicate.OrangeOtters replicate.timer.buil
 
 # move to next build
 execute if score replicate.OrangeOtters replicate.timer.build3 matches 60.. if score replicate.OrangeOtters replicate.stage matches 2 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players remove replicate.OrangeOtters replicate.timer.build3 60
+execute if score replicate.OrangeOtters replicate.timer.build3 matches 60.. if score replicate.OrangeOtters replicate.stage matches 2 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.timer.build4 1
 execute if score replicate.OrangeOtters replicate.timer.build3 matches 60.. if score replicate.OrangeOtters replicate.stage matches 2 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.stage 3
 
 # Build 4
@@ -151,6 +154,7 @@ execute in trials:replicate if score replicate.OrangeOtters replicate.timer.buil
 
 # move to next build
 execute if score replicate.OrangeOtters replicate.timer.build4 matches 60.. if score replicate.OrangeOtters replicate.stage matches 3 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players remove replicate.OrangeOtters replicate.timer.build4 60
+execute if score replicate.OrangeOtters replicate.timer.build4 matches 60.. if score replicate.OrangeOtters replicate.stage matches 3 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.timer.build5 1
 execute if score replicate.OrangeOtters replicate.timer.build4 matches 60.. if score replicate.OrangeOtters replicate.stage matches 3 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.stage 4
 
 # Build 5
@@ -186,6 +190,7 @@ execute in trials:replicate if score replicate.OrangeOtters replicate.timer.buil
 
 # store time to complete this build & move to next build
 execute if score replicate.OrangeOtters replicate.timer.build5 matches 60.. if score replicate.OrangeOtters replicate.stage matches 4 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players remove replicate.OrangeOtters replicate.timer.build5 60
+execute if score replicate.OrangeOtters replicate.timer.build5 matches 60.. if score replicate.OrangeOtters replicate.stage matches 4 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.timer.build6 1
 execute if score replicate.OrangeOtters replicate.timer.build5 matches 60.. if score replicate.OrangeOtters replicate.stage matches 4 if score replicate.OrangeOtters replicate.playersCompleted matches 4 run scoreboard players set replicate.OrangeOtters replicate.stage 5
 
 # Build 6

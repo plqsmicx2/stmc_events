@@ -54,4 +54,4 @@ execute if score sg.r3.handler sg.r3.stage matches 3 run function survival_games
 # and then reset
 execute if score sg.r3.handler sg.r3.stage matches 4 run scoreboard players add sg.r3.handler sg.r3.timer.delay3 1
 execute if score sg.r3.handler sg.r3.stage matches 4 run function survival_games:round3/point_announcement
-execute if score sg.r3.handler sg.r3.stage matches 4 if score sg.r3.handler sg.r3.timer.delay3 matches 800.. run function survival_games:reset
+execute if score sg.r3.handler sg.r3.stage matches 4 if score sg.r3.handler sg.r3.timer.delay3 matches 800.. run scoreboard players add stmc.handler event.stage 1

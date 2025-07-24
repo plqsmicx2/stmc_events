@@ -15,87 +15,8 @@ scoreboard objectives add race.sidebar dummy {"text": "    STMC Invitational    
 scoreboard objectives setdisplay sidebar race.sidebar
 
 # <===== RANK TEAMS =====>
-# first, we run some calculations to determine which teams should be present
 
-# save values in a temporary place (to use later in the sidebar)
-scoreboard objectives add race.points.team.temp dummy
-scoreboard players operation race.RedRaccoons race.points.team.temp = race.RedRaccoons race.points.team
-scoreboard players operation race.OrangeOtters race.points.team.temp = race.OrangeOtters race.points.team
-scoreboard players operation race.PinkPikas race.points.team.temp = race.PinkPikas race.points.team
-scoreboard players operation race.GreenGoats race.points.team.temp = race.GreenGoats race.points.team
-scoreboard players operation race.CyanCougars race.points.team.temp = race.CyanCougars race.points.team
-scoreboard players operation race.PurplePenguins race.points.team.temp = race.PurplePenguins race.points.team
-
-# set a dummy player to -1
-scoreboard players set $race.highest race.points.team -1
-
-# determine highest value
-# because we're using fake players, we have to manually test each one
-scoreboard players operation $race.highest race.points.team > race.RedRaccoons race.points.team
-scoreboard players operation $race.highest race.points.team > race.OrangeOtters race.points.team
-scoreboard players operation $race.highest race.points.team > race.PinkPikas race.points.team
-scoreboard players operation $race.highest race.points.team > race.GreenGoats race.points.team
-scoreboard players operation $race.highest race.points.team > race.CyanCougars race.points.team
-scoreboard players operation $race.highest race.points.team > race.PurplePenguins race.points.team
-
-# determine who has that highest value & assign them #1 rank
-# again manually checking
-execute if score race.RedRaccoons race.points.team = $race.highest race.points.team run scoreboard players set race.RedRaccoons race.points.team.rank 1
-execute if score race.OrangeOtters race.points.team = $race.highest race.points.team run scoreboard players set race.OrangeOtters race.points.team.rank 1
-execute if score race.PinkPikas race.points.team = $race.highest race.points.team run scoreboard players set race.PinkPikas race.points.team.rank 1
-execute if score race.GreenGoats race.points.team = $race.highest race.points.team run scoreboard players set race.GreenGoats race.points.team.rank 1
-execute if score race.CyanCougars race.points.team = $race.highest race.points.team run scoreboard players set race.CyanCougars race.points.team.rank 1
-execute if score race.PurplePenguins race.points.team = $race.highest race.points.team run scoreboard players set race.PurplePenguins race.points.team.rank 1
-
-# pop the highest value to reset it
-# & again, manually checking
-execute if score race.RedRaccoons race.points.team.rank matches 1 run scoreboard players reset race.RedRaccoons race.points.team
-execute if score race.OrangeOtters race.points.team.rank matches 1 run scoreboard players reset race.OrangeOtters race.points.team
-execute if score race.PinkPikas race.points.team.rank matches 1 run scoreboard players reset race.PinkPikas race.points.team
-execute if score race.GreenGoats race.points.team.rank matches 1 run scoreboard players reset race.GreenGoats race.points.team
-execute if score race.CyanCougars race.points.team.rank matches 1 run scoreboard players reset race.CyanCougars race.points.team
-execute if score race.PurplePenguins race.points.team.rank matches 1 run scoreboard players reset race.PurplePenguins race.points.team
-
-# and repeat two more times
-scoreboard players set $race.highest race.points.team -1
-scoreboard players operation $race.highest race.points.team > race.RedRaccoons race.points.team
-scoreboard players operation $race.highest race.points.team > race.OrangeOtters race.points.team
-scoreboard players operation $race.highest race.points.team > race.PinkPikas race.points.team
-scoreboard players operation $race.highest race.points.team > race.GreenGoats race.points.team
-scoreboard players operation $race.highest race.points.team > race.CyanCougars race.points.team
-scoreboard players operation $race.highest race.points.team > race.PurplePenguins race.points.team
-execute if score race.RedRaccoons race.points.team = $race.highest race.points.team run scoreboard players set race.RedRaccoons race.points.team.rank 2
-execute if score race.OrangeOtters race.points.team = $race.highest race.points.team run scoreboard players set race.OrangeOtters race.points.team.rank 2
-execute if score race.PinkPikas race.points.team = $race.highest race.points.team run scoreboard players set race.PinkPikas race.points.team.rank 2
-execute if score race.GreenGoats race.points.team = $race.highest race.points.team run scoreboard players set race.GreenGoats race.points.team.rank 2
-execute if score race.CyanCougars race.points.team = $race.highest race.points.team run scoreboard players set race.CyanCougars race.points.team.rank 2
-execute if score race.PurplePenguins race.points.team = $race.highest race.points.team run scoreboard players set race.PurplePenguins race.points.team.rank 2
-execute if score race.RedRaccoons race.points.team.rank matches 2 run scoreboard players reset race.RedRaccoons race.points.team
-execute if score race.OrangeOtters race.points.team.rank matches 2 run scoreboard players reset race.OrangeOtters race.points.team
-execute if score race.PinkPikas race.points.team.rank matches 2 run scoreboard players reset race.PinkPikas race.points.team
-execute if score race.GreenGoats race.points.team.rank matches 2 run scoreboard players reset race.GreenGoats race.points.team
-execute if score race.CyanCougars race.points.team.rank matches 2 run scoreboard players reset race.CyanCougars race.points.team
-execute if score race.PurplePenguins race.points.team.rank matches 2 run scoreboard players reset race.PurplePenguins race.points.team
-
-scoreboard players set $race.highest race.points.team -1
-scoreboard players operation $race.highest race.points.team > race.RedRaccoons race.points.team
-scoreboard players operation $race.highest race.points.team > race.OrangeOtters race.points.team
-scoreboard players operation $race.highest race.points.team > race.PinkPikas race.points.team
-scoreboard players operation $race.highest race.points.team > race.GreenGoats race.points.team
-scoreboard players operation $race.highest race.points.team > race.CyanCougars race.points.team
-scoreboard players operation $race.highest race.points.team > race.PurplePenguins race.points.team
-execute if score race.RedRaccoons race.points.team = $race.highest race.points.team run scoreboard players set race.RedRaccoons race.points.team.rank 3
-execute if score race.OrangeOtters race.points.team = $race.highest race.points.team run scoreboard players set race.OrangeOtters race.points.team.rank 3
-execute if score race.PinkPikas race.points.team = $race.highest race.points.team run scoreboard players set race.PinkPikas race.points.team.rank 3
-execute if score race.GreenGoats race.points.team = $race.highest race.points.team run scoreboard players set race.GreenGoats race.points.team.rank 3
-execute if score race.CyanCougars race.points.team = $race.highest race.points.team run scoreboard players set race.CyanCougars race.points.team.rank 3
-execute if score race.PurplePenguins race.points.team = $race.highest race.points.team run scoreboard players set race.PurplePenguins race.points.team.rank 3
-scoreboard players reset race.RedRaccoons race.points.team
-scoreboard players reset race.OrangeOtters race.points.team
-scoreboard players reset race.PinkPikas race.points.team
-scoreboard players reset race.GreenGoats race.points.team
-scoreboard players reset race.CyanCougars race.points.team
-scoreboard players reset race.PurplePenguins race.points.team
+function race:calculate_rankings
 
 # <===== BUILD FROM THE BOTTOM =====>
 
@@ -109,17 +30,17 @@ scoreboard players reset race.PurplePenguins race.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
-execute if score race.RedRaccoons race.points.team.rank matches 1..3 run scoreboard players operation race.RedRaccoons race.sidebar = race.RedRaccoons race.points.team.temp
+execute if score race.RedRaccoons race.points.team.rank matches 1..3 run scoreboard players operation race.RedRaccoons race.sidebar = race.RedRaccoons race.points.team
 execute if score race.RedRaccoons race.points.team.rank matches 1..3 run scoreboard players display name race.RedRaccoons race.sidebar {"text": "  Red Raccoons", "color": "red"}
-execute if score race.OrangeOtters race.points.team.rank matches 1..3 run scoreboard players operation race.OrangeOtters race.sidebar = race.OrangeOtters race.points.team.temp
+execute if score race.OrangeOtters race.points.team.rank matches 1..3 run scoreboard players operation race.OrangeOtters race.sidebar = race.OrangeOtters race.points.team
 execute if score race.OrangeOtters race.points.team.rank matches 1..3 run scoreboard players display name race.OrangeOtters race.sidebar {"text": "  Orange Otters", "color": "gold"}
-execute if score race.PinkPikas race.points.team.rank matches 1..3 run scoreboard players operation race.PinkPikas race.sidebar = race.PinkPikas race.points.team.temp
+execute if score race.PinkPikas race.points.team.rank matches 1..3 run scoreboard players operation race.PinkPikas race.sidebar = race.PinkPikas race.points.team
 execute if score race.PinkPikas race.points.team.rank matches 1..3 run scoreboard players display name race.PinkPikas race.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
-execute if score race.GreenGoats race.points.team.rank matches 1..3 run scoreboard players operation race.GreenGoats race.sidebar = race.GreenGoats race.points.team.temp
+execute if score race.GreenGoats race.points.team.rank matches 1..3 run scoreboard players operation race.GreenGoats race.sidebar = race.GreenGoats race.points.team
 execute if score race.GreenGoats race.points.team.rank matches 1..3 run scoreboard players display name race.GreenGoats race.sidebar {"text": "  Green Goats", "color": "dark_green"}
-execute if score race.CyanCougars race.points.team.rank matches 1..3 run scoreboard players operation race.CyanCougars race.sidebar = race.CyanCougars race.points.team.temp
+execute if score race.CyanCougars race.points.team.rank matches 1..3 run scoreboard players operation race.CyanCougars race.sidebar = race.CyanCougars race.points.team
 execute if score race.CyanCougars race.points.team.rank matches 1..3 run scoreboard players display name race.CyanCougars race.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
-execute if score race.PurplePenguins race.points.team.rank matches 1..3 run scoreboard players operation race.PurplePenguins race.sidebar = race.PurplePenguins race.points.team.temp
+execute if score race.PurplePenguins race.points.team.rank matches 1..3 run scoreboard players operation race.PurplePenguins race.sidebar = race.PurplePenguins race.points.team
 execute if score race.PurplePenguins race.points.team.rank matches 1..3 run scoreboard players display name race.PurplePenguins race.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)

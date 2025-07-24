@@ -16,6 +16,7 @@ execute unless score spleef.handler spleef.stage matches 0.. run function trials
 function trials:spleef/death_handler
 
 # update sidebar
+function trials:spleef/points_update
 function trials:spleef/sidebar
 
 # if we're in stage 0, wait 20 seconds

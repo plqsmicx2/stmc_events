@@ -67,6 +67,7 @@ scoreboard objectives add delve.timer.delay1 dummy
 scoreboard objectives add delve.timer.explanation dummy
 scoreboard objectives add delve.timer.delay2 dummy
 scoreboard objectives add delve.timer.game dummy
+scoreboard objectives add delve.timer.game.furnaceUnlit dummy
 scoreboard objectives add delve.timer.game.copperGateTimer dummy
 scoreboard objectives add delve.timer.game.exposedGateTimer dummy
 scoreboard objectives add delve.timer.game.weatheredGateTimer dummy
@@ -157,6 +158,13 @@ scoreboard players set delve.PurplePenguins delve.timer.game.weatheredGateTimer 
 scoreboard players set delve.PurplePenguins delve.timer.game.weatheredGateOpen 0
 scoreboard players set delve.PurplePenguins delve.timer.game.oxidizedGateTimer 0
 scoreboard players set delve.PurplePenguins delve.timer.game.oxidizedGateOpen 0
+
+scoreboard players set delve.RedRaccoons delve.timer.game.furnaceUnlit 0
+scoreboard players set delve.OrangeOtters delve.timer.game.furnaceUnlit 0
+scoreboard players set delve.PinkPikas delve.timer.game.furnaceUnlit 0
+scoreboard players set delve.GreenGoats delve.timer.game.furnaceUnlit 0
+scoreboard players set delve.CyanCougars delve.timer.game.furnaceUnlit 0
+scoreboard players set delve.PurplePenguins delve.timer.game.furnaceUnlit 0
 
 scoreboard players set delve.RedRaccoons delve.stats.diamondCount 0
 scoreboard players set delve.RedRaccoons delve.stats.copperCount 0
