@@ -47,6 +47,10 @@ execute as @a run scoreboard players operation $extract.highest extract.stats.ki
 execute as @a if score @s extract.stats.kills.temp = $extract.highest extract.stats.kills.temp unless score @s extract.stats.kills.rank matches 0.. run scoreboard players set @s extract.stats.kills.rank 5
 scoreboard players reset @s extract.stats.kills.temp
 
+# <===== END OF ROUND RESETS =====>
+execute if score extract.handler extract.timer.delay3 matches 2 run scoreboard players set extract.handler extract.stats.roundsCompleted 5
+execute if score extract.handler extract.timer.delay3 matches 2 run gamemode spectator @a
+
 # <===== KILLS ANNOUNCEMENT =====>
 
 execute if score extract.handler extract.timer.delay3 matches 200 run tellraw @a {text:"Top Killers:",color:red}

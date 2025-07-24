@@ -22,6 +22,7 @@ execute unless score sg.r2.handler sg.r2.stage matches 0.. run function survival
 # if we're in stage 0, we only need to increment our timer & check if 10 seconds have elapsed
 # and then update our stage to 1
 execute if score sg.r2.handler sg.r2.stage matches 0 run scoreboard players add sg.r2.handler sg.r2.timer.delay1 1
+execute in survival_games:sg2 if score sg.r2.handler sg.r2.timer.delay1 matches 2 run fill -8 175 -8 8 175 8 tinted_glass replace air
 execute if score sg.r2.handler sg.r2.stage matches 0 if score sg.r2.handler sg.r2.timer.delay1 matches 200.. run scoreboard players set sg.r2.handler sg.r2.stage 2
 
 # skips "stage 1" since there's no explanation phase
