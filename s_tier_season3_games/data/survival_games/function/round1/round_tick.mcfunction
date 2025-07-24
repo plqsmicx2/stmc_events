@@ -18,18 +18,12 @@ execute as @a[team=PURPLE_PENGUINS] at @s if score @s sg.alive matches 1 anchore
 # announcement
 execute if score sg.r1.handler sg.r1.timer.round matches 1 run title @a title {text:"Go!",bold:true,color:"gold"}
 # remove the glass barrier
-# TODO ONLY WHEN IMPORTING INTO SERVER (need EssentialsX plugin)
-# execute if score sg.r1.handler sg.r1.timer.round matches 1 run sudo plqsmic /pos1 -9 175 -9
-# execute if score sg.r1.handler sg.r1.timer.round matches 1 run sudo plqsmic /pos2 9 180 9
-# execute if score sg.r1.handler sg.r1.timer.round matches 2 run sudo plqsmic /replace red_wool green_wool
-# in the meantime
-execute if score sg.r1.handler sg.r1.timer.round matches 2 in survival_games:sg1 run tp @a 0 172 0
+execute in survival_games:sg1 if score sg.r1.handler sg.r1.timer.round matches 1 run fill 8 175 8 -8 175 -8 air replace tinted_glass
 
 # after 2 seconds begin testing for players landing
 execute as @a if score sg.r1.handler sg.r1.timer.round matches 40.. if items entity @s armor.chest minecraft:elytra unless entity @s[nbt={FallFlying:1b}] run item replace entity @s armor.chest with minecraft:air
 
-# after 10 seconds remove fall damage immunity
-execute if score sg.r1.handler sg.r1.timer.round matches 200 run yawp flag local survival_games:sg1 sg1-world fall-damage state Allowed
+# after 10 seconds remove immunity
 execute if score sg.r1.handler sg.r1.timer.round matches 200 run effect clear @a
 
 # check if game is over & call reset if it is

@@ -31,6 +31,7 @@ execute if score sg.r1.handler sg.r1.stage matches 1 if score sg.r1.handler sg.r
 
 # if we're in stage 2, we just need to increment the timer & update the actionbar
 execute if score sg.r1.handler sg.r1.stage matches 2 run scoreboard players add sg.r1.handler sg.r1.timer.delay2 1
+execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 5 run item replace entity @a armor.chest with minecraft:elytra
 execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 300 run title @a actionbar {text:"5 seconds!",bold:true,color:"gold"}
 execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 320 run title @a actionbar {text:"4 seconds!",bold:true,color:"gold"}
 execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 340 run title @a actionbar {text:"3 seconds!",bold:true,color:"gold"}

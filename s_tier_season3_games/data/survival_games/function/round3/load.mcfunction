@@ -42,22 +42,11 @@ execute in survival_games:sg3 run kill @e[type=!player]
 execute in survival_games:sg3 run spawnpoint @a 0 178 0
 
 # set world protections
-yawp dim survival_games:sg3 delete-all regions
-yawp dim survival_games:sg3 create local sg3-spawn Cuboid -10 174 -10 10 181 10
-yawp local survival_games:sg3 sg3-spawn add flag no-pvp Allowed
-yawp local survival_games:sg3 sg3-spawn add flag melee-players Denied
-yawp local survival_games:sg3 sg3-spawn add flag no-hunger Allowed
-yawp dim survival_games:sg3 create local sg3-world Cuboid -200 100 -200 200 200 200
-yawp local survival_games:sg3 sg3-world add flag break-blocks Denied
-yawp local survival_games:sg3 sg3-world add flag spawning-all Denied
-yawp local survival_games:sg3 sg3-world add flag fall-damage Denied
+execute as @a run attribute @s block_break_speed base set 0.01
 
 # set worldborder
 worldborder center 0 0
 worldborder set 250
-
-# assign elytra to players' chest slot
-item replace entity @a armor.chest with minecraft:elytra
 
 # and wrap it up with some scoreboard stuff
 # initial delay timer

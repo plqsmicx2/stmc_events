@@ -2,76 +2,101 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "rolls": 12,
+      "rolls": 4,
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 1000
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:carrot",
-          "weight": 800
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:baked_potato",
-          "weight": 800
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:apple",
-          "weight": 800
+          "weight": 3000
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:bread",
-          "weight": 400
+          "weight": 90
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:baked_potato",
+          "weight": 90
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:cooked_beef",
-          "weight": 400
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:cooked_chicken",
-          "weight": 200
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:pumpkin_pie",
-          "weight": 200
+          "weight": 60
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:golden_carrot",
-          "weight": 200
+          "weight": 45
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:golden_apple",
-          "weight": 200
+          "weight": 15
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_axe",
-          "weight": 200
+          "name": "minecraft:leather_helmet",
+          "weight": 510
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_chestplate",
+          "weight": 510
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_leggings",
+          "weight": 510
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "weight": 510
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_helmet",
+          "weight": 180
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_chestplate",
+          "weight": 180
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_leggings",
+          "weight": 180
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_boots",
+          "weight": 180
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
+          "weight": 60
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_chestplate",
+          "weight": 60
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_leggings",
+          "weight": 60
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_boots",
+          "weight": 60
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:wooden_sword",
-          "weight": 200
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bow",
-          "weight": 300
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:stone_axe",
-          "weight": 300
+          "weight": 600
         },
         {
           "type": "minecraft:item",
@@ -80,18 +105,38 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
+          "weight": 120
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone_axe",
+          "weight": 300
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_axe",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "weight": 600
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:crossbow",
           "weight": 300
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_sword",
-          "weight": 100
+          "name": "minecraft:shield",
+          "weight": 150
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:trident",
-          "weight": 100,
+          "weight": 30,
           "functions": [
             {
               "function": "minecraft:set_enchantments",
@@ -103,13 +148,63 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_axe",
-          "weight": 100
+          "name": "minecraft:arrow",
+          "weight": 360,
+          "functions": [
+            {
+              "function": "minecraft:limit_count",
+              "limit": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "weight": 150,
+          "functions": [
+            {
+              "function": "minecraft:limit_count",
+              "limit": 5
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spectral_arrow",
+          "weight": 60,
+          "functions": [
+            {
+              "function": "minecraft:limit_count",
+              "limit": 3
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "weight": 300,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:swiftness"
+            }
+          ]
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:splash_potion",
-          "weight": 100,
+          "weight": 150,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:healing"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 50,
           "functions": [
             {
               "function": "minecraft:set_potion",
@@ -119,23 +214,72 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather_boots",
+          "name": "minecraft:stick",
+          "weight": 100
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "weight": 80
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 3000
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bread",
+          "weight": 250
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:baked_potato",
+          "weight": 250
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cooked_beef",
+          "weight": 250
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_carrot",
           "weight": 150
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather_chestplate",
-          "weight": 150
+          "name": "minecraft:golden_apple",
+          "weight": 100
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:leather_helmet",
-          "weight": 150
+          "weight": 135
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_chestplate",
+          "weight": 135
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:leather_leggings",
-          "weight": 150
+          "weight": 135
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "weight": 135
         },
         {
           "type": "minecraft:item",
@@ -160,27 +304,102 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_helmet",
-          "weight": 75
+          "weight": 90
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_chestplate",
-          "weight": 75
+          "weight": 90
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_leggings",
-          "weight": 75
+          "weight": 90
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_boots",
+          "weight": 90
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wooden_sword",
+          "weight": 150
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone_sword",
+          "weight": 225
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
           "weight": 75
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:stone_axe",
+          "weight": 120
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_axe",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "weight": 225
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crossbow",
+          "weight": 225
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "weight": 150
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:trident",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:loyalty": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:arrow",
-          "weight": 700,
+          "weight": 120,
+          "functions": [
+            {
+              "function": "minecraft:limit_count",
+              "limit": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "weight": 105,
+          "functions": [
+            {
+              "function": "minecraft:limit_count",
+              "limit": 5
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spectral_arrow",
+          "weight": 75,
           "functions": [
             {
               "function": "minecraft:limit_count",
@@ -190,18 +409,51 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "weight": 600,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:swiftness"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 450,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:healing"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 450,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:harming"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:stick",
-          "weight": 300
+          "weight": 450
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:gold_ingot",
-          "weight": 225
+          "weight": 600
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 75
+          "weight": 450
         }
       ]
     }
