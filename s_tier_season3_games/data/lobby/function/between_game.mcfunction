@@ -118,12 +118,12 @@ execute if score stmc.handler event.timer.bg4 matches 300 run tellraw @a [{"text
 execute if score stmc.handler event.timer.bg5 matches 300 run tellraw @a [{"text":"Teleporting to game in one minute!","color":"white","bold":true}]
 execute if score stmc.handler event.timer.bg6 matches 300 run tellraw @a [{"text":"Teleporting to finale in thirty seconds!","color":"white","bold":true}]
 
-execute if score stmc.handler event.timer.bg1 matches 1500 run title @a title {text:"Solve",color:yellow,bold:true}
-execute if score stmc.handler event.timer.bg2 matches 1500 run title @a title {text:"Extract",color:red,bold:true}
-execute if score stmc.handler event.timer.bg3 matches 7500 run title @a title {text:"Trials",color:dark_aqua,bold:true}
-execute if score stmc.handler event.timer.bg4 matches 1500 run title @a title {text:"Delve",color:light_purple,bold:true}
-execute if score stmc.handler event.timer.bg5 matches 1500 run title @a title {text:"Brawl",color:gold,bold:true}
-execute if score stmc.handler event.timer.bg6 matches 900 run title @a title {text:"Dodgebolt",color:white,bold:true}
+execute if score stmc.handler event.timer.bg1 matches 1500 run title @a title {text:"Brawl",color:gold,bold:true}
+execute if score stmc.handler event.timer.bg2 matches 1500 run title @a title {text:"Delve",color:light_purple,bold:true}
+execute if score stmc.handler event.timer.bg3 matches 7500 run title @a title {text:"Race",color:green,bold:true}
+execute if score stmc.handler event.timer.bg4 matches 1500 run title @a title {text:"Extract",color:red,bold:true}
+execute if score stmc.handler event.timer.bg5 matches 1500 run title @a title {text:"Trials",color:dark_aqua,bold:true}
+execute if score stmc.handler event.timer.bg6 matches 900 run title @a title {text:"Finale",color:white,bold:true}
 
 # move to next game
 execute if score stmc.handler event.timer.bg1 matches 1560 run scoreboard players add stmc.handler event.stage 1

@@ -10,7 +10,7 @@
 # <team color><Team>: <Rooms><team color>
 # <team color><Team>: <Rooms><team color>
 
-scoreboard objectives add solve.sidebar dummy {"text": "    STMC Invitational    ", "color": "green", "bold": true}
+scoreboard objectives add solve.sidebar dummy {"text": "  STMC Invitational Reloaded  ", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar solve.sidebar
 
 # <===== RANK TEAMS =====>

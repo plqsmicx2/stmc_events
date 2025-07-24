@@ -4,6 +4,7 @@
 
 # blurb #1
 execute if score sg.r1.handler sg.r1.timer.explanation matches 1 run title @a title {text:"BRAWL",color:"gold"}
+execute if score sg.r1.handler sg.r1.timer.explanation matches 1 run gamemode spectator @a
 execute if score sg.r1.handler sg.r1.timer.explanation matches 1 in survival_games:sg1 run teleport @a 95 140 -95 -60 20
 execute if score sg.r1.handler sg.r1.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score sg.r1.handler sg.r1.timer.explanation matches 1 run tellraw @a {text:"Brawl is played just like hunger games, but faster.",color:"gold"}
@@ -76,6 +77,7 @@ execute if score sg.r1.handler sg.r1.timer.explanation matches 640 run tellraw @
 
 # blurb #6
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 in survival_games:sg1 run teleport @a 0 177 0
+execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run gamemode survival @a
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:" "}
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:"The round starts in about 20 seconds.",color:"gold"}
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:" "}

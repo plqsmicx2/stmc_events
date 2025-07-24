@@ -11,7 +11,7 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add spleef.sidebar dummy {"text": "    STMC Invitational    ", "color": "green", "bold": true}
+scoreboard objectives add spleef.sidebar dummy {"text": "  STMC Invitational Reloaded  ", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar spleef.sidebar
 
 # determine ranking

@@ -10,7 +10,7 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add delve.sidebar dummy {"text": "    STMC Invitational    ", "color": "green", "bold": true}
+scoreboard objectives add delve.sidebar dummy {"text": "  STMC Invitational Reloaded  ", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar delve.sidebar
 
 # <===== RANK TEAMS =====>

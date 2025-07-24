@@ -20,6 +20,7 @@ worldborder center 0.0 0.0
 worldborder set 1000
 effect clear @a
 execute as @a run attribute @s block_break_speed base set 1
+gamemode spectator @a
 
 # next, assign the winning team a placement of 1
 # this is successful because this function is only called when ONE team matches 1..4

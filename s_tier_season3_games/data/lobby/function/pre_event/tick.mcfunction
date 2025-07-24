@@ -25,7 +25,7 @@ execute as @a unless entity @s[nbt={Dimension:"lobby:lobby"}] in lobby:lobby run
 execute if score stmc.handler event.timer.pre_game matches 5 run title @a title {"text":"STMC Invitational", "color":"green", "bold":true}
 
 # announce next game
-execute if score stmc.handler event.timer.pre_game matches 1500 run title @a title {"text":"Race", "color":"green"}
+execute if score stmc.handler event.timer.pre_game matches 1500 run title @a title {"text":"Solve", "color":"yellow"}
 
 # move to first game
 execute if score stmc.handler event.timer.pre_game matches 1560 run scoreboard players add stmc.handler event.stage 1
