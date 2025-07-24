@@ -40,6 +40,15 @@ team modify PURPLE_PENGUINS prefix {"text": "\ua000", "font": "team_logos:purple
 team add SPECTATORS {"text": "Spectators", "color": "gray"}
 team modify SPECTATORS color gray
 
+# prevent killing teammates
+team modify RED_RACCOONS friendlyFire false
+team modify ORANGE_OTTERS friendlyFire false
+team modify PINK_PIKAS friendlyFire false
+team modify GREEN_GOATS friendlyFire false
+team modify CYAN_COUGARS friendlyFire false
+team modify PURPLE_PENGUINS friendlyFire false
+team modify SPECTATORS friendlyFire false
+
 # create global scoreboards
 # records if the event is currently paused
 scoreboard objectives add event.paused dummy

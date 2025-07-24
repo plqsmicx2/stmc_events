@@ -12,7 +12,7 @@ execute as IISona unless entity @s[team=] run team join RED_RACCOONS IISona
 execute as ZeroStep2 unless entity @s[team=] run team join RED_RACCOONS ZeroStep2
 # ORANGE OTTERS
 execute as plqsmic unless entity @s[team=] run team join ORANGE_OTTERS plqsmic
-execute as limeae unless entity @s[team=] run team join ORANGE_OTTERS limeae
+execute as limeae unless entity @s[team=] run team join RED_RACCOONS limeae
 #execute as GERAD unless entity @s[team=] run team join ORANGE_OTTERS GERAD
 execute as Quacken64 unless entity @s[team=] run team join ORANGE_OTTERS Quacken64
 # PINK PIKAS
@@ -38,6 +38,7 @@ execute as notpanda911 unless entity @s[team=] run team join PURPLE_PENGUINS not
 
 # now, teleport players to the lobby
 #execute if score stmc.handler event.paused matches 1 in lobby:lobby as @a unless entity @s[nbt={Dimension:"lobby:lobby"}] run teleport @s 0 101 0
+#execute as @a if entity @s[nbt={Dimension:"lobby:lobby"}] run gamemode adventure @s
 
 # and finally, we can get to the thread of the event
 

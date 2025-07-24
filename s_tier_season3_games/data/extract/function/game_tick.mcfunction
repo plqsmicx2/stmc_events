@@ -89,7 +89,7 @@ execute in extract:extract if score extract.handler extract.timer.game.round1 ma
 
 # give armor
 execute as @a if score extract.handler extract.timer.game.round1 matches 5 run item replace entity @s armor.chest with chainmail_chestplate
-execute as @a if score extract.handler extract.timer.game.round1 matches 5 run item replace entity @s armor.feet with iron_boots
+execute as @a if score extract.handler extract.timer.game.round1 matches 5 run item replace entity @s armor.feet with iron_boots[attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # kills & block breaks are automatically calculated by the game, so no need to check up on them
 
@@ -172,7 +172,7 @@ execute in extract:extract if score extract.handler extract.timer.game.round2 ma
 
 # give armor
 execute as @a if score extract.handler extract.timer.game.round2 matches 5 run item replace entity @s armor.chest with chainmail_chestplate
-execute as @a if score extract.handler extract.timer.game.round2 matches 5 run item replace entity @s armor.feet with iron_boots
+execute as @a if score extract.handler extract.timer.game.round2 matches 5 run item replace entity @s armor.feet with iron_boots[attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # kills & block breaks are automatically calculated by the game, so no need to check up on them
 
@@ -255,7 +255,7 @@ execute in extract:extract if score extract.handler extract.timer.game.round3 ma
 
 # give armor
 execute as @a if score extract.handler extract.timer.game.round3 matches 5 run item replace entity @s armor.chest with chainmail_chestplate
-execute as @a if score extract.handler extract.timer.game.round3 matches 5 run item replace entity @s armor.feet with iron_boots
+execute as @a if score extract.handler extract.timer.game.round3 matches 5 run item replace entity @s armor.feet with iron_boots[attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # kills & block breaks are automatically calculated by the game, so no need to check up on them
 
@@ -338,7 +338,7 @@ execute in extract:extract if score extract.handler extract.timer.game.round4 ma
 
 # give armor
 execute as @a if score extract.handler extract.timer.game.round4 matches 5 run item replace entity @s armor.chest with chainmail_chestplate
-execute as @a if score extract.handler extract.timer.game.round4 matches 5 run item replace entity @s armor.feet with iron_boots
+execute as @a if score extract.handler extract.timer.game.round4 matches 5 run item replace entity @s armor.feet with iron_boots[attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # kills & block breaks are automatically calculated by the game, so no need to check up on them
 
@@ -421,7 +421,7 @@ execute in extract:extract if score extract.handler extract.timer.game.round5 ma
 
 # give armor
 execute as @a if score extract.handler extract.timer.game.round5 matches 5 run item replace entity @s armor.chest with chainmail_chestplate
-execute as @a if score extract.handler extract.timer.game.round5 matches 5 run item replace entity @s armor.feet with iron_boots
+execute as @a if score extract.handler extract.timer.game.round5 matches 5 run item replace entity @s armor.feet with iron_boots[attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # kills & block breaks are automatically calculated by the game, so no need to check up on them
 

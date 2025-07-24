@@ -6,7 +6,7 @@
 execute in extract:extract run tp @a 0 101 0
 
 # force gamemode
-gamemode survival @a
+gamemode adventure @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set time
@@ -38,13 +38,6 @@ xp set @a 0
 # kill all entities
 execute in extract:extract run kill @e[type=!player]
 
-# set world protections
-yawp dim extract:extract delete-all regions
-yawp dim extract:extract create local extract-world Cuboid -100 0 -100 100 150 100
-yawp local extract:extract extract-world add flag spawning-all Denied
-yawp local extract:extract extract-world add flag item-drop Denied
-yawp local extract:extract extract-world add flag item-pickup Denied
-
 # and wrap it up with some scoreboard stuff
 # timers
 scoreboard objectives add extract.timer.delay1 dummy
@@ -61,6 +54,7 @@ scoreboard objectives add extract.timer.delay3 dummy
 scoreboard objectives add extract.stats.kills playerKillCount
 scoreboard objectives add extract.stats.kills.rank dummy
 scoreboard objectives add extract.stats.alive dummy
+scoreboard objectives add extract.players dummy
 scoreboard objectives add extract.stats.deaths deathCount
 scoreboard objectives add extract.stats.roundsCompleted dummy
 scoreboard objectives add extract.stats.diamondsMined minecraft.mined:minecraft.diamond_block
