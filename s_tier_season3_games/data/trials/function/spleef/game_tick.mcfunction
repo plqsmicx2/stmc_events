@@ -23,8 +23,7 @@ execute if score spleef.handler spleef.teams_alive matches 1 run scoreboard play
 # kill entities (prevents unnecessary lag)
 execute if score spleef.handler spleef.timer.game matches 200.. run kill @e[type=!player]
 
-# after 30 seconds, allow block breaking on bottom layer & set it to snow blocks
-execute if score spleef.handler spleef.timer.game matches 600 run yawp flag local trials:spleef spleef-secondary break-blocks state Allowed
+# after 30 seconds, set bottom layer to snow blocks
 execute in trials:spleef if score spleef.handler spleef.timer.game matches 600 run fill -15 105 -15 15 105 15 minecraft:snow_block replace minecraft:chiseled_tuff_bricks
 
 # DECAY

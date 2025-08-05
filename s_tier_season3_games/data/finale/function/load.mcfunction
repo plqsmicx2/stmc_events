@@ -55,12 +55,7 @@ xp set @a 0
 execute in finale:finale run kill @e[type=!player]
 
 # set world protections
-yawp dim finale:finale delete-all regions
-yawp dim finale:finale create local finale-world Cuboid -30 100 -30 30 150 30
-yawp local finale:finale finale-world add flag spawning-all Denied
-yawp local finale:finale finale-world add flag break-blocks Denied
-yawp local finale:finale finale-world add flag item-drop Denied
-yawp local finale:finale finale-world add flag item-pickup Denied
+execute as @a run attribute @s block_break_speed base set 0.01
 
 # and wrap it up with some scoreboard stuff
 # timers
@@ -70,6 +65,7 @@ scoreboard objectives add finale.timer.delay2 dummy
 scoreboard objectives add finale.timer.game dummy
 # stats
 scoreboard objectives add finale.stats.alive dummy
+scoreboard objectives add finale.stats.deaths deathCount
 
 # (re)set all necessary values
 scoreboard players set finale.handler finale.stage 0
@@ -78,6 +74,8 @@ scoreboard players set finale.handler finale.timer.delay1 0
 scoreboard players set finale.handler finale.timer.explanation 0
 scoreboard players set finale.handler finale.timer.delay2 0
 scoreboard players set finale.handler finale.timer.game 0
+
+scoreboard players set @a finale.stats.deaths 0
 
 execute if score team.RedRaccoons stats.points.team.rank matches 1..2 run scoreboard players set @a[team=RED_RACCOONS] finale.stats.alive 1
 execute if score team.OrangeOtters stats.points.team.rank matches 1..2 run scoreboard players set @a[team=ORANGE_OTTERS] finale.stats.alive 1

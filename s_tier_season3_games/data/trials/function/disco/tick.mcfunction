@@ -47,7 +47,7 @@ execute if score disco.handler disco.stage matches 3 if score disco.handler disc
 # if we're in stage 4, increment the timer, & reset player alive & location
 execute if score disco.handler disco.stage matches 4 run scoreboard players add disco.handler disco.timer.delay3 1
 execute if score disco.handler disco.timer.delay3 matches 1 run scoreboard players set @a disco.alive 1
-execute if score disco.handler disco.timer.delay3 matches 1 run gamemode survival @a
+execute if score disco.handler disco.timer.delay3 matches 1 run gamemode adventure @a
 execute if score disco.handler disco.timer.delay3 matches 1 run effect give @a invisibility infinite 1 true
 execute in trials:disco if score disco.handler disco.timer.delay3 matches 1 run tp @a 0 109 0
 execute if score disco.handler disco.stage matches 4 in trials:disco if score disco.handler disco.timer.delay3 matches 3 run fill -5 103 -5 5 103 5 tinted_glass

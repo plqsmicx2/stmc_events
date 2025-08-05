@@ -8,6 +8,9 @@ execute as @a[team=GREEN_GOATS] if score @s finale.stats.alive matches 1.. run s
 execute as @a[team=CYAN_COUGARS] if score @s finale.stats.alive matches 1.. run scoreboard players set team.CyanCougars stats.winningTeam 1
 execute as @a[team=PURPLE_PENGUINS] if score @s finale.stats.alive matches 1.. run scoreboard players set team.PurplePenguins stats.winningTeam 1
 
+# resets
+execute as @a run attribute @s block_break_speed base set 1
+
 # teleport players to lobby
 execute in lobby:lobby run tp @a 0 101 0
 

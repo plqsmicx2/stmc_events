@@ -6,35 +6,38 @@
 # first things first, let's automatically add our players to their respective teams
 
 # RED RACCOONS
-execute as Krisppy unless entity @s[team=] run team join RED_RACCOONS Krisppy
-execute as authenticflame unless entity @s[team=] run team join RED_RACCOONS authenticflame
-execute as IISona unless entity @s[team=] run team join RED_RACCOONS IISona
-execute as ZeroStep2 unless entity @s[team=] run team join RED_RACCOONS ZeroStep2
+execute as Quacken_ unless entity @s[team=] run team join RED_RACCOONS Quacken_
+execute as SeagullSpams unless entity @s[team=] run team join RED_RACCOONS SeagullSpams
+execute as Epix809 unless entity @s[team=] run team join RED_RACCOONS Epix809
+#execute as AUSTIN unless entity @s[team=] run team join RED_RACCOONS AUSTIN
 # ORANGE OTTERS
-execute as plqsmic unless entity @s[team=] run team join ORANGE_OTTERS plqsmic
-execute as limeae unless entity @s[team=] run team join RED_RACCOONS limeae
-#execute as GERAD unless entity @s[team=] run team join ORANGE_OTTERS GERAD
-execute as Quacken64 unless entity @s[team=] run team join ORANGE_OTTERS Quacken64
+execute as Exrry unless entity @s[team=] run team join ORANGE_OTTERS Exrry
+#execute as KALI unless entity @s[team=] run team join RED_RACCOONS KALI
+execute as GoldShort unless entity @s[team=] run team join ORANGE_OTTERS GoldShort
+execute as stompppy unless entity @s[team=] run team join ORANGE_OTTERS stompppy
 # PINK PIKAS
-execute as stompppy unless entity @s[team=] run team join PINK_PIKAS stompppy
-#execute as KAI unless entity @s[team=] run team join PINK_PIKAS KAI
-execute as ThatOneGuy6699 unless entity @s[team=] run team join PINK_PIKAS ThatOneGuy6699
-execute as The_Fiend2 unless entity @s[team=] run team join PINK_PIKAS The_Fiend2
+execute as damien_____ unless entity @s[team=] run team join PINK_PIKAS damien_____
+execute as authentic_flame unless entity @s[team=] run team join PINK_PIKAS authentic_flame
+execute as SpringsMCJV unless entity @s[team=] run team join PINK_PIKAS SpringsMCJV
+#execute as ALIVE unless entity @s[team=] run team join PINK_PIKAS ALIVE
 # GREEN GOATS
-execute as notjynx unless entity @s[team=] run team join GREEN_GOATS notjynx
-execute as aimei6432 unless entity @s[team=] run team join GREEN_GOATS aimei6432
-execute as GoldShort unless entity @s[team=] run team join GREEN_GOATS GoldShort
-execute as MinttRose unless entity @s[team=] run team join GREEN_GOATS MinttRose
+execute as notsxnset unless entity @s[team=] run team join GREEN_GOATS notsxnset
+execute as IISona unless entity @s[team=] run team join GREEN_GOATS IISona
+execute as dailey_ unless entity @s[team=] run team join GREEN_GOATS dailey_
+execute as Ascellus706 unless entity @s[team=] run team join GREEN_GOATS Ascellus706
 # CYAN COUGARS
-execute as tastygushers unless entity @s[team=] run team join CYAN_COUGARS tastygushers
-execute as seagull_spam unless entity @s[team=] run team join CYAN_COUGARS seagull_spam
-execute as Ascellus unless entity @s[team=] run team join CYAN_COUGARS Ascellus
-#execute as MADISON unless entity @s[team=] run team join CYAN_COUGARS MADISON
+execute as Krisppy_ unless entity @s[team=] run team join CYAN_COUGARS Krisppy_
+execute as plqsmic unless entity @s[team=] run team join CYAN_COUGARS plqsmic
+execute as ZeroStep2 unless entity @s[team=] run team join CYAN_COUGARS ZeroStep2
+execute as NuggyWuggy420 unless entity @s[team=] run team join CYAN_COUGARS NuggyWuggy420
 # PURPLE PENGUINS
-execute as damien___ unless entity @s[team=] run team join PURPLE_PENGUINS damien___
-#execute as TBD unless entity @s[team=] run team join PURPLE_PENGUINS TBD
-execute as Epix809 unless entity @s[team=] run team join PURPLE_PENGUINS Epix809
-execute as notpanda911 unless entity @s[team=] run team join PURPLE_PENGUINS notpanda911
+execute as notjynxx unless entity @s[team=] run team join PURPLE_PENGUINS notjynxx
+execute as aimei6432 unless entity @s[team=] run team join PURPLE_PENGUINS aimei6432
+execute as limeae unless entity @s[team=] run team join PURPLE_PENGUINS limeae
+#execute as COLIN unless entity @s[team=] run team join PURPLE_PENGUINS COLIN
+
+# SPECTATORS
+execute as @a unless entity @s[team=] run team join SPECTATORS @s
 
 # now, teleport players to the lobby
 #execute if score stmc.handler event.paused matches 1 in lobby:lobby as @a unless entity @s[nbt={Dimension:"lobby:lobby"}] run teleport @s 0 101 0

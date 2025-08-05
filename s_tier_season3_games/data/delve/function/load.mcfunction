@@ -15,7 +15,7 @@ execute in delve:delve as @a[team=PURPLE_PENGUINS] run teleport @s 0 243 0
 execute in delve:delve as @a[team=PURPLE_PENGUINS] run spawnpoint @s 0 243 0
 
 # force gamemode
-gamemode survival @a
+gamemode adventure @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set weather
@@ -41,25 +41,6 @@ xp set @a 0
 
 # set difficulty
 difficulty normal
-
-# set world protections
-yawp dim delve:delve delete-all regions
-yawp dim delve:delve create local delve-world Cuboid -120 0 -120 120 250 120
-yawp local delve:delve delve-world add flag no-pvp Allowed
-yawp local delve:delve delve-world add flag tools-secondary Denied
-
-yawp dim delve:delve create local delve-red Cuboid -120 90 -120 120 90 120
-yawp local delve:delve delve-red add flag tools-secondary Denied
-yawp dim delve:delve create local delve-orange Cuboid -120 120 -120 120 120 120
-yawp local delve:delve delve-orange add flag tools-secondary Denied
-yawp dim delve:delve create local delve-pink Cuboid -120 150 -120 120 150 120
-yawp local delve:delve delve-pink add flag tools-secondary Denied
-yawp dim delve:delve create local delve-green Cuboid -120 180 -120 120 180 120
-yawp local delve:delve delve-green add flag tools-secondary Denied
-yawp dim delve:delve create local delve-cyan Cuboid -120 210 -120 120 210 120
-yawp local delve:delve delve-cyan add flag tools-secondary Denied
-yawp dim delve:delve create local delve-purple Cuboid -120 240 -120 120 240 120
-yawp local delve:delve delve-purple add flag tools-secondary Denied
 
 # and wrap it up with some scoreboard stuff
 # timers

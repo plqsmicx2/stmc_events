@@ -38,12 +38,11 @@ execute as @a if score @s race.laps_completed matches 0..3 if score @s race.lapt
 
 # <===== LAP COMPLETIONS =====>
 
-# check if player has completed a lap & increment laps completed & recentlyCompletedLap
-execute in race:race as @a[x=-16, y=114, z=10, dx=7, dy=10, dz=10, team=!SPECTATORS] unless score @s race.laps_completed matches 4.. if score @s race.recentlyCompletedLap matches 0 run scoreboard players add @s race.laps_completed 1
-execute in race:race as @a[x=-16, y=114, z=10, dx=7, dy=10, dz=10, team=!SPECTATORS] unless score @s race.laps_completed matches 4.. if score @s race.recentlyCompletedLap matches 0 unless score @s race.laps_completed matches 4 if score @s race.laptime.seconds matches 0..9 run tellraw @a ["",{selector:"@s"},{text:" just completed lap #",color:"green"},{score:{name:"@s",objective:"race.laps_completed"},bold:true,color:"light_purple"},{text:" at ",color:"green"},{score:{name:"@s",objective:"race.laptime.mins"},bold:true,color:"gold"},{text:":0",bold:true,color:"gold"},{score:{name:"@s",objective:"race.laptime.seconds"},bold:true,color:"gold"},{text:"!",color:"green"}]
-execute in race:race as @a[x=-16, y=114, z=10, dx=7, dy=10, dz=10, team=!SPECTATORS] unless score @s race.laps_completed matches 4.. if score @s race.recentlyCompletedLap matches 0 unless score @s race.laps_completed matches 4 if score @s race.laptime.seconds matches 10.. run tellraw @a ["",{selector:"@s"},{text:" just completed lap #",color:"green"},{score:{name:"@s",objective:"race.laps_completed"},bold:true,color:"light_purple"},{text:" at ",color:"green"},{score:{name:"@s",objective:"race.laptime.mins"},bold:true,color:"gold"},{text:":",bold:true,color:"gold"},{score:{name:"@s",objective:"race.laptime.seconds"},bold:true,color:"gold"},{text:"!",color:"green"}]
-execute in race:race as @a[x=-16, y=114, z=10, dx=7, dy=10, dz=10, team=!SPECTATORS] at @s unless score @s race.laps_completed matches 4.. if score @s race.recentlyCompletedLap matches 0 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
-execute in race:race as @a[x=-16, y=114, z=10, dx=7, dy=10, dz=10, team=!SPECTATORS] unless score @s race.laps_completed matches 4.. if score @s race.recentlyCompletedLap matches 0 run scoreboard players set @s race.recentlyCompletedLap 1
+# checkpoint update (also checks for lap completions)
+function race:checkpoint_update
+
+# grant elytra
+execute as @a[x=-17,y=125,z=-9,dx=6,dy=4,dz=3] run item replace entity @s armor.chest with minecraft:elytra[enchantments={"minecraft:binding_curse":1}]
 
 # set players to spectator mode & announce if they have completed all laps
 execute as @a[gamemode=!spectator] if score @s race.laps_completed matches 4.. run gamemode spectator @s

@@ -32,7 +32,7 @@ clear @a
 effect clear @a
 
 # ensure full health & hunger
-effect give @a saturation 1 1 true
+effect give @a saturation 1 0 true
 effect give @a regeneration 5 1 true
 effect give @a resistance infinite 4 true
 effect give @a mining_fatigue infinite 4 true
@@ -42,12 +42,6 @@ xp set @a 0
 
 # kill all entities
 execute in solve:solve run kill @e[type=!player]
-
-# set world protections
-yawp dim solve:solve delete-all regions
-yawp dim solve:solve create local solve-world Cuboid -100 0 -100 100 150 100
-yawp local solve:solve solve-world add flag no-hunger Allowed
-yawp local solve:solve solve-world add flag no-pvp Allowed
 
 # and wrap it up with some scoreboard stuff
 # timers

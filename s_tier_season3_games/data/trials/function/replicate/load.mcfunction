@@ -36,33 +36,12 @@ xp set @a 0
 execute in trials:replicate run kill @e[type=!player]
 
 # set world protections
-yawp dim trials:replicate delete-all regions
-yawp dim trials:replicate create local replicate-world Cuboid -50 100 -50 50 140 50
-yawp local trials:replicate replicate-world add flag spawning-all Denied
-yawp local trials:replicate replicate-world add flag fall-damage Denied
-yawp local trials:replicate replicate-world add flag no-pvp Allowed
-yawp local trials:replicate replicate-world add flag no-hunger Allowed
-yawp local trials:replicate replicate-world add flag knockback-players Denied
-yawp local trials:replicate replicate-world add flag item-drop Denied
-yawp local trials:replicate replicate-world add flag item-pickup Denied
-
-yawp dim trials:replicate create local red-build Cuboid 43 113 19 35 110 27
-yawp local trials:replicate red-build add flag break-blocks Denied
-
-yawp dim trials:replicate create local orange-build Cuboid 4 113 19 -4 110 27
-yawp local trials:replicate orange-build add flag break-blocks Denied
-
-yawp dim trials:replicate create local pink-build Cuboid -35 113 19 -43 110 27
-yawp local trials:replicate pink-build add flag break-blocks Denied
-
-yawp dim trials:replicate create local green-build Cuboid -35 113 -17 -43 110 -9
-yawp local trials:replicate green-build add flag break-blocks Denied
-
-yawp dim trials:replicate create local cyan-build Cuboid 4 113 -17 -4 110 -9
-yawp local trials:replicate cyan-build add flag break-blocks Denied
-
-yawp dim trials:replicate create local purple-build Cuboid 43 113 -17 35 110 -9
-yawp local trials:replicate purple-build add flag break-blocks Denied
+execute as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.9,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.9,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=PINK_PIKAS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=15961002,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.9,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=GREEN_GOATS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=6192150,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.9,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=1481884,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.9,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.9,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # scoreboard stuff
 # timers

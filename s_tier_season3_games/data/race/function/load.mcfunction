@@ -30,6 +30,7 @@ effect give @a saturation 1 1 true
 effect give @a regeneration 5 1 true
 
 # give effects
+effect give @a saturation infinite 0 true
 effect give @a dolphins_grace infinite 0 true
 effect give @a water_breathing infinite 0 true
 
@@ -40,16 +41,12 @@ xp set @a 0
 execute in race:race run kill @e[type=!player]
 
 # set world protections
-yawp dim race:race delete-all regions
-yawp dim race:race create local race-world Cuboid -100 100 -100 100 140 100
-yawp local race:race race-world add flag break-blocks Denied
-yawp local race:race race-world add flag spawning-all Denied
-yawp local race:race race-world add flag fall-damage Denied
-yawp local race:race race-world add flag no-pvp Allowed
-yawp local race:race race-world add flag no-hunger Allowed
-yawp local race:race race-world add flag knockback-players Denied
-yawp local race:race race-world add flag item-drop Denied
-yawp local race:race race-world add flag item-pickup Denied
+execute as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=PINK_PIKAS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=15961002,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=GREEN_GOATS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=6192150,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=1481884,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # disable player collision (best i've got)
 team modify RED_RACCOONS collisionRule never
@@ -58,14 +55,6 @@ team modify PINK_PIKAS collisionRule never
 team modify GREEN_GOATS collisionRule never
 team modify CYAN_COUGARS collisionRule never
 team modify PURPLE_PENGUINS collisionRule never
-
-# give everyone leather boots
-execute as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150]
-execute as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261]
-execute as @a[team=PINK_PIKAS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=15961002]
-execute as @a[team=GREEN_GOATS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=6192150]
-execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=1481884]
-execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416]
 
 # and wrap it up with some scoreboard stuff
 # timers
@@ -91,6 +80,8 @@ scoreboard objectives add race.laptime.mins dummy
 scoreboard objectives add race.fastest_lap dummy
 scoreboard objectives add race.fastest_lap.rank dummy
 scoreboard objectives add race.completion.rank dummy
+scoreboard objectives add race.checkpoints_completed dummy
+scoreboard objectives add race.currentPlacement dummy
 # points
 scoreboard objectives add race.points.indiv dummy
 scoreboard objectives add race.points.indiv.rank dummy
@@ -127,6 +118,8 @@ scoreboard players set @a race.laptime.mins 0
 scoreboard players set @a race.fastest_lap 0
 scoreboard players set @a race.fastest_lap.rank 0
 scoreboard players set @a race.completion.rank 0
+scoreboard players set @a race.checkpoints_completed 0
+scoreboard players set @a race.currentPlacement 0
 scoreboard players set race.RedRaccoons race.completion.rank 0
 scoreboard players set race.OrangeOtters race.completion.rank 0
 scoreboard players set race.PinkPikas race.completion.rank 0

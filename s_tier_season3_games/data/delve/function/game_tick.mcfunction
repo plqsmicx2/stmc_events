@@ -11,12 +11,7 @@ execute in delve:delve if score delve.handler delve.timer.game matches 3 run ite
 
 execute in delve:delve if score delve.handler delve.timer.game matches 3 run fill -120 90 -120 120 270 120 air replace tinted_glass
 
-execute if score delve.handler delve.timer.game matches 3 run yawp flag local delve:delve delve-red tools-secondary state Allowed
-execute if score delve.handler delve.timer.game matches 3 run yawp flag local delve:delve delve-orange tools-secondary state Allowed
-execute if score delve.handler delve.timer.game matches 3 run yawp flag local delve:delve delve-pink tools-secondary state Allowed
-execute if score delve.handler delve.timer.game matches 3 run yawp flag local delve:delve delve-green tools-secondary state Allowed
-execute if score delve.handler delve.timer.game matches 3 run yawp flag local delve:delve delve-cyan tools-secondary state Allowed
-execute if score delve.handler delve.timer.game matches 3 run yawp flag local delve:delve delve-purple tools-secondary state Allowed
+execute if score delve.handler delve.timer.game matches 3 run gamemode survival @a
 
 # <===== CHECK FOR ITEMS =====>
 

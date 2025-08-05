@@ -9,6 +9,9 @@
 # run load function if this is our first time here
 execute unless score finale.handler finale.stage matches 0.. run function finale:load
 
+# run death handler
+function finale:death_handler
+
 # if we're in stage 0, increment timer
 execute if score finale.handler finale.stage matches 0 run scoreboard players add finale.handler finale.timer.delay1 1
 
