@@ -82,6 +82,7 @@ scoreboard objectives add race.fastest_lap.rank dummy
 scoreboard objectives add race.completion.rank dummy
 scoreboard objectives add race.checkpoints_completed dummy
 scoreboard objectives add race.currentPlacement dummy
+scoreboard objectives add race.soundThisTick dummy
 # points
 scoreboard objectives add race.points.indiv dummy
 scoreboard objectives add race.points.indiv.rank dummy
@@ -120,6 +121,8 @@ scoreboard players set @a race.fastest_lap.rank 0
 scoreboard players set @a race.completion.rank 0
 scoreboard players set @a race.checkpoints_completed 0
 scoreboard players set @a race.currentPlacement 0
+scoreboard players set @a race.soundThisTick 0
+
 scoreboard players set race.RedRaccoons race.completion.rank 0
 scoreboard players set race.OrangeOtters race.completion.rank 0
 scoreboard players set race.PinkPikas race.completion.rank 0

@@ -42,7 +42,7 @@ execute as @a if score @s race.laps_completed matches 0..3 if score @s race.lapt
 function race:checkpoint_update
 
 # grant elytra
-execute as @a[x=-17,y=125,z=-9,dx=6,dy=4,dz=3] run item replace entity @s armor.chest with minecraft:elytra[enchantments={"minecraft:binding_curse":1}]
+execute in race:race as @a[x=-17,y=125,z=-10,dx=7,dy=3,dz=4] run item replace entity @s armor.chest with minecraft:elytra[enchantments={"minecraft:binding_curse":1}]
 
 # set players to spectator mode & announce if they have completed all laps
 execute as @a[gamemode=!spectator] if score @s race.laps_completed matches 4.. run gamemode spectator @s

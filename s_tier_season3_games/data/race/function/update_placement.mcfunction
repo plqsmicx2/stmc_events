@@ -27,8 +27,9 @@ scoreboard players set race.helper race.currentPlacement 0
 # MISC STUFF
 
 # playsound
-execute as @s at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1.4
-execute as @s at @s run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1.3
+execute as @s at @s if score @s race.soundThisTick matches 0.. run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1.4
+execute as @s at @s if score @s race.soundThisTick matches 0.. run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1.3
+execute as @a if score @s race.soundThisTick matches 0.. run scoreboard players remove @s race.soundThisTick 1
 
 # reset inventory
 execute as @s run clear @s

@@ -9,10 +9,10 @@
 execute as Quacken_ unless entity @s[team=] run team join RED_RACCOONS Quacken_
 execute as SeagullSpams unless entity @s[team=] run team join RED_RACCOONS SeagullSpams
 execute as Epix809 unless entity @s[team=] run team join RED_RACCOONS Epix809
-#execute as AUSTIN unless entity @s[team=] run team join RED_RACCOONS AUSTIN
+execute as .yungGeorge8249 unless entity @s[team=] run team join RED_RACCOONS .yungGeorge8249
 # ORANGE OTTERS
 execute as Exrry unless entity @s[team=] run team join ORANGE_OTTERS Exrry
-#execute as KALI unless entity @s[team=] run team join RED_RACCOONS KALI
+execute as xcmimi unless entity @s[team=] run team join RED_RACCOONS xcmimi
 execute as GoldShort unless entity @s[team=] run team join ORANGE_OTTERS GoldShort
 execute as stompppy unless entity @s[team=] run team join ORANGE_OTTERS stompppy
 # PINK PIKAS
@@ -37,7 +37,7 @@ execute as limeae unless entity @s[team=] run team join PURPLE_PENGUINS limeae
 #execute as COLIN unless entity @s[team=] run team join PURPLE_PENGUINS COLIN
 
 # SPECTATORS
-execute as @a unless entity @s[team=] run team join SPECTATORS @s
+#execute as @a unless entity @s[team=] run team join SPECTATORS @s
 
 # now, teleport players to the lobby
 #execute if score stmc.handler event.paused matches 1 in lobby:lobby as @a unless entity @s[nbt={Dimension:"lobby:lobby"}] run teleport @s 0 101 0
