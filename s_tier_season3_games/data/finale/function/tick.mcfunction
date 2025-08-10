@@ -12,6 +12,8 @@ execute unless score finale.handler finale.stage matches 0.. run function finale
 # run death handler
 function finale:death_handler
 
+function lobby:sidebar
+
 # if we're in stage 0, increment timer
 execute if score finale.handler finale.stage matches 0 run scoreboard players add finale.handler finale.timer.delay1 1
 

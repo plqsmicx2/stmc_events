@@ -57,8 +57,9 @@ scoreboard players set §a lobby.sidebar 20001
 
 # timer
 scoreboard players set lobby.timer lobby.sidebar 20002
-execute unless score stmc.handler event.stage matches 14 if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
-execute unless score stmc.handler event.stage matches 14 if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+execute unless score stmc.handler event.stage matches 13.. if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+execute unless score stmc.handler event.stage matches 13.. if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+execute if score stmc.handler event.stage matches 13 run scoreboard players display name lobby.timer lobby.sidebar {text:"Finale!",color:white,bold:true}
 execute if score stmc.handler event.stage matches 14 run scoreboard players display name lobby.timer lobby.sidebar {text:"THANKS FOR PLAYING!",color:red,bold:true}
 
 # blank line

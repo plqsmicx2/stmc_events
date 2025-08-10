@@ -5,7 +5,7 @@ scoreboard players add stmc.handler event.timer.post_game 1
 
 # bring players back to the lobby
 execute in lobby:lobby if score stmc.handler event.timer.post_game matches 1 run teleport @a 0 101 0
-execute in lobby:lobby if score stmc.handler event.timer.post_game matches 1 run gamemode survival @a
+execute in lobby:lobby if score stmc.handler event.timer.post_game matches 1 run gamemode adventure @a
 execute in lobby:lobby if score stmc.handler event.timer.post_game matches 1 run effect clear @a
 execute in lobby:lobby if score stmc.handler event.timer.post_game matches 1 run clear @a
 

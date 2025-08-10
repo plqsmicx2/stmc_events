@@ -51,11 +51,11 @@ scoreboard players operation sg.r2.handler sg.r2.currentPlacement += sg.r2.handl
 
 # and if any teams need their placement set, let's do that now
 execute if score sg.RedRaccoons sg.players_alive matches 0 unless score sg.RedRaccoons sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.RedRaccoons sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
-execute if score sg.OrangeOtters sg.players_alive matches 0 unless score sg.OrangeOtters sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.RedRaccoons sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
-execute if score sg.PinkPikas sg.players_alive matches 0 unless score sg.PinkPikas sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.RedRaccoons sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
-execute if score sg.GreenGoats sg.players_alive matches 0 unless score sg.GreenGoats sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.RedRaccoons sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
-execute if score sg.CyanCougars sg.players_alive matches 0 unless score sg.CyanCougars sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.RedRaccoons sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
-execute if score sg.PurplePenguins sg.players_alive matches 0 unless score sg.PurplePenguins sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.RedRaccoons sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
+execute if score sg.OrangeOtters sg.players_alive matches 0 unless score sg.OrangeOtters sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.OrangeOtters sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
+execute if score sg.PinkPikas sg.players_alive matches 0 unless score sg.PinkPikas sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.PinkPikas sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
+execute if score sg.GreenGoats sg.players_alive matches 0 unless score sg.GreenGoats sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.GreenGoats sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
+execute if score sg.CyanCougars sg.players_alive matches 0 unless score sg.CyanCougars sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.CyanCougars sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
+execute if score sg.PurplePenguins sg.players_alive matches 0 unless score sg.PurplePenguins sg.r2.teamPlacement matches 1..6 run scoreboard players operation sg.PurplePenguins sg.r2.teamPlacement = sg.r2.handler sg.r2.currentPlacement
 
 # and finally, with all of those teams & players updates, let's update scores
 execute if score sg.r2.handler sg.r2.deathThisTick matches 1.. run function survival_games:round2/placement_update

@@ -143,3 +143,11 @@ scoreboard players set replicate.PinkPikas replicate.stage 0
 scoreboard players set replicate.GreenGoats replicate.stage 0
 scoreboard players set replicate.CyanCougars replicate.stage 0
 scoreboard players set replicate.PurplePenguins replicate.stage 0
+
+# and completion rank to 0
+scoreboard players set replicate.RedRaccoons replicate.points.rank.overall 0
+scoreboard players set replicate.OrangeOtters replicate.points.rank.overall 0
+scoreboard players set replicate.PinkPikas replicate.points.rank.overall 0
+scoreboard players set replicate.GreenGoats replicate.points.rank.overall 0
+scoreboard players set replicate.CyanCougars replicate.points.rank.overall 0
+scoreboard players set replicate.PurplePenguins replicate.points.rank.overall 0

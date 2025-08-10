@@ -3,6 +3,11 @@
 # increment timer
 scoreboard players add stmc.handler event.timer.pre_game 1
 
+# seconds reset
+execute if score stmc.handler event.timer.pre_game matches 1 run scoreboard players set stmc.handler event.timer.bgTickCount 0
+execute if score stmc.handler event.timer.pre_game matches 1 run scoreboard players set stmc.handler event.timer.bgSecs 18
+execute if score stmc.handler event.timer.pre_game matches 1 run scoreboard players set stmc.handler event.timer.bgMins 2
+
 # seconds timer
 scoreboard players add stmc.handler event.timer.bgTickCount 1
 

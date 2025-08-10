@@ -24,7 +24,7 @@ execute if score tr.handler tr.timer.lobby3 matches 2 run gamemode adventure @a
 
 execute in trials:lobby if score tr.handler tr.timer.lobby3 matches 2 run tp @a 0 100 0
 
-execute in trials:lobby if score tr.handler tr.timer.lobby3 matches 100 run tellraw @a {"text":"Choosing game 3 in 10 seconds.", "color":"aqua"}
+execute in trials:lobby if score tr.handler tr.timer.lobby3 matches 100 run tellraw @a {"text":"Choosing game 3 in 20 seconds.", "color":"aqua"}
 
 # <===== RANDOMLY CHOOSE GAME 3 =====>
 

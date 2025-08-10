@@ -41,7 +41,7 @@ execute if score tr.handler tr.timer.lobby1 matches 560 run tellraw @a {text:" "
 
 # blurb #3
 execute if score tr.handler tr.timer.lobby1 matches 720 run tellraw @a {text:" "}
-execute if score tr.handler tr.timer.lobby1 matches 720 run tellraw @a {text:"The first game will be selected in 10 seconds.",color:"aqua"}
+execute if score tr.handler tr.timer.lobby1 matches 720 run tellraw @a {text:"The first game will be selected in 20 seconds.",color:"aqua"}
 execute if score tr.handler tr.timer.lobby1 matches 720 run tellraw @a {text:" "}
 execute if score tr.handler tr.timer.lobby1 matches 720 run tellraw @a {text:"Good luck!","color":"aqua"}
 execute if score tr.handler tr.timer.lobby1 matches 720 run tellraw @a {text:" "}

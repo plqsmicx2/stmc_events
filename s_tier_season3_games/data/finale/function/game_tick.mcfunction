@@ -4,7 +4,7 @@
 
 # <==== GAME START ====>
 
-execute if score finale.handler finale.timer.game matches 3 in finale:finale run fill 4 102 20 -4 104 -20 air replace #impermeable
+execute if score finale.handler finale.timer.game matches 3 in finale:finale run fill 3 100 25 -3 104 -25 air replace #impermeable
 
 # <==== EVERY TICK ====>
 
@@ -36,5 +36,5 @@ execute if score finale.handler finale.stats.alive matches 1 run function finale
 
 # <==== SPEED GAME ====>
 
-# if game is lasting too long, begin withering players
-execute if score finale.handler finale.timer.game matches 1200.. run effect give @a[scores={finale.stats.alive=1}] poison 1 0 true
+# if game is lasting too long, begin poisoning players
+execute if score finale.handler finale.timer.game matches 1200 run effect give @a[scores={finale.stats.alive=1}] poison infinite 0 true

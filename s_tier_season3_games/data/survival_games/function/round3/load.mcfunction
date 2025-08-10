@@ -28,8 +28,8 @@ clear @a
 effect clear @a
 
 # ensure full health & hunger
-effect give @a saturation 1 1 true
-effect give @a regeneration 10 1 true
+effect give @a saturation 1 4 true
+effect give @a instant_health 1 110 true
 effect give @a resistance infinite 10 true
 
 # set xp
@@ -78,12 +78,12 @@ scoreboard players set @a sg.r3.kills 0
 scoreboard players set @a sg.r3.killPoints 0
 scoreboard players set @a sg.r3.indivPlacementPoints 0
 scoreboard players set @a sg.r3.teamPlacementPoints 0
-scoreboard players reset sg.RedRaccoons sg.r3.teamPlacement
-scoreboard players reset sg.OrangeOtters sg.r3.teamPlacement
-scoreboard players reset sg.PinkPikas sg.r3.teamPlacement
-scoreboard players reset sg.GreenGoats sg.r3.teamPlacement
-scoreboard players reset sg.CyanCougars sg.r3.teamPlacement
-scoreboard players reset sg.PurplePenguins sg.r3.teamPlacement
+scoreboard players set sg.RedRaccoons sg.r3.teamPlacement 0
+scoreboard players set sg.OrangeOtters sg.r3.teamPlacement 0
+scoreboard players set sg.PinkPikas sg.r3.teamPlacement 0
+scoreboard players set sg.GreenGoats sg.r3.teamPlacement 0
+scoreboard players set sg.CyanCougars sg.r3.teamPlacement 0
+scoreboard players set sg.PurplePenguins sg.r3.teamPlacement 0
 
 # and reset timers
 scoreboard players set sg.r3.handler sg.r3.timer.delay1 0
