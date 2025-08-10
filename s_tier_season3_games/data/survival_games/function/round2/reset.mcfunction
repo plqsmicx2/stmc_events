@@ -15,7 +15,7 @@ scoreboard objectives remove sg.r2.deathThisTick
 scoreboard objectives remove sg.r2.currentPlacement
 
 # then, handle some important resets
-execute in survival_games:sg2 run kill @e[type=!player]
+execute in survival_games:sg1 run kill @e[type=!player]
 execute as @a run attribute @s block_break_speed base set 1
 
 # next, assign the winning team a placement of 1

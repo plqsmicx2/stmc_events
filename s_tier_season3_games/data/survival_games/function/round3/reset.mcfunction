@@ -15,7 +15,7 @@ scoreboard objectives remove sg.r3.deathThisTick
 scoreboard objectives remove sg.r3.currentPlacement
 
 # then, handle some important resets
-execute in survival_games:sg3 run kill @e[type=!player]
+execute in survival_games:sg1 run kill @e[type=!player]
 worldborder center 0.0 0.0
 worldborder set 1000
 effect clear @a

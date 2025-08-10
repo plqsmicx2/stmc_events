@@ -33,12 +33,13 @@ effect clear @a
 
 # ensure full health & hunger
 effect give @a saturation 1 0 true
-effect give @a regeneration 5 1 true
+effect give @a instant_health 1 110 true
 effect give @a resistance infinite 4 true
 effect give @a mining_fatigue infinite 4 true
 
 # set xp
-xp set @a 0
+xp set @a 0 points
+xp set @a 0 levels
 
 # kill all entities
 execute in solve:solve run kill @e[type=!player]
@@ -49,6 +50,9 @@ scoreboard objectives add solve.timer.delay1 dummy
 scoreboard objectives add solve.timer.explanation dummy
 scoreboard objectives add solve.timer.delay2 dummy
 scoreboard objectives add solve.timer.game dummy
+scoreboard objectives add solve.timer.game.mins dummy
+scoreboard objectives add solve.timer.game.secs dummy
+scoreboard objectives add solve.timer.game.tickCount dummy
 scoreboard objectives add solve.timer.game.room1 dummy
 scoreboard objectives add solve.timer.game.room2 dummy
 scoreboard objectives add solve.timer.game.room3 dummy
@@ -79,6 +83,9 @@ scoreboard players set solve.handler solve.timer.delay1 0
 scoreboard players set solve.handler solve.timer.explanation 0
 scoreboard players set solve.handler solve.timer.delay2 0
 scoreboard players set solve.handler solve.timer.game 0
+scoreboard players set solve.handler solve.timer.game.mins 0
+scoreboard players set solve.handler solve.timer.game.secs 0
+scoreboard players set solve.handler solve.timer.game.tickCount 0
 scoreboard players set solve.handler solve.timer.delay3 0
 
 scoreboard players set solve.RedRaccoons solve.timer.game.room1 0

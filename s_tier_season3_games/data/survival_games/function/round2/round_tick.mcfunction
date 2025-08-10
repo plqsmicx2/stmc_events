@@ -18,7 +18,7 @@ execute as @a[team=PURPLE_PENGUINS] at @s if score @s sg.alive matches 1 anchore
 # announcement
 execute if score sg.r2.handler sg.r2.timer.round matches 1 run title @a title {text:"Go!",bold:true,color:"gold"}
 # remove the glass barrier
-execute in survival_games:sg2 if score sg.r2.handler sg.r2.timer.round matches 1 run fill 8 175 8 -8 175 -8 air replace tinted_glass
+execute in survival_games:sg1 if score sg.r2.handler sg.r2.timer.round matches 1 run fill 8 175 8 -8 175 -8 air replace tinted_glass
 
 # after 2 seconds begin testing for players landing
 execute as @a if score sg.r2.handler sg.r2.timer.round matches 40.. if items entity @s armor.chest minecraft:elytra unless entity @s[nbt={FallFlying:1b}] run item replace entity @s armor.chest with minecraft:air

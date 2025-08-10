@@ -19,7 +19,7 @@ execute as stompppy unless entity @s[team=] run team join ORANGE_OTTERS stompppy
 execute as damien_____ unless entity @s[team=] run team join PINK_PIKAS damien_____
 execute as authentic_flame unless entity @s[team=] run team join PINK_PIKAS authentic_flame
 execute as SpringsMCJV unless entity @s[team=] run team join PINK_PIKAS SpringsMCJV
-#execute as ALIVE unless entity @s[team=] run team join PINK_PIKAS ALIVE
+execute as Alivemc unless entity @s[team=] run team join PINK_PIKAS Alivemc
 # GREEN GOATS
 execute as notsxnset unless entity @s[team=] run team join GREEN_GOATS notsxnset
 execute as IISona unless entity @s[team=] run team join GREEN_GOATS IISona
@@ -29,12 +29,12 @@ execute as Ascellus706 unless entity @s[team=] run team join GREEN_GOATS Ascellu
 execute as Krisppy_ unless entity @s[team=] run team join CYAN_COUGARS Krisppy_
 execute as plqsmic unless entity @s[team=] run team join CYAN_COUGARS plqsmic
 execute as ZeroStep2 unless entity @s[team=] run team join CYAN_COUGARS ZeroStep2
-execute as NuggyWuggy420 unless entity @s[team=] run team join CYAN_COUGARS NuggyWuggy420
+execute as minttrose unless entity @s[team=] run team join CYAN_COUGARS minttrose
 # PURPLE PENGUINS
 execute as notjynxx unless entity @s[team=] run team join PURPLE_PENGUINS notjynxx
 execute as aimei6432 unless entity @s[team=] run team join PURPLE_PENGUINS aimei6432
 execute as limeae unless entity @s[team=] run team join PURPLE_PENGUINS limeae
-#execute as COLIN unless entity @s[team=] run team join PURPLE_PENGUINS COLIN
+execute as Navahamsta unless entity @s[team=] run team join PURPLE_PENGUINS Navahamsta
 
 # SPECTATORS
 #execute as @a unless entity @s[team=] run team join SPECTATORS @s

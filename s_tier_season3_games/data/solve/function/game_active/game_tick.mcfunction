@@ -14,6 +14,19 @@ execute in solve:solve if score solve.handler solve.timer.game matches 1 run fil
 
 # <===== DURING TICK =====>
 
+# update timers
+scoreboard players add solve.handler solve.timer.game.tickCount 1
+
+execute if score solve.handler solve.timer.game.tickCount matches 20 run scoreboard players add solve.handler solve.timer.game.secs 1
+execute if score solve.handler solve.timer.game.tickCount matches 20 run scoreboard players set solve.handler solve.timer.game.tickCount 0
+
+execute if score solve.handler solve.timer.game.secs matches 60 run scoreboard players add solve.handler solve.timer.game.mins 1
+execute if score solve.handler solve.timer.game.secs matches 60 run scoreboard players set solve.handler solve.timer.game.secs 0
+
+# show timer
+execute if score solve.handler solve.timer.game.secs matches 0..9 run title @a actionbar [{text:"Time elapsed: ",color:yellow},{score:{name:"solve.handler",objective:"solve.timer.game.mins"},color:yellow},{text:":0",color:yellow},{score:{name:"solve.handler",objective:"solve.timer.game.secs"},color:yellow}]
+execute if score solve.handler solve.timer.game.secs matches 10.. run title @a actionbar [{text:"Time elapsed: ",color:yellow},{score:{name:"solve.handler",objective:"solve.timer.game.mins"},color:yellow},{text:":",color:yellow},{score:{name:"solve.handler",objective:"solve.timer.game.secs"},color:yellow}]
+
 # determine players on a team
 scoreboard players set solve.RedRaccoons solve.stats.players 0
 scoreboard players set solve.OrangeOtters solve.stats.players 0
@@ -96,3 +109,7 @@ execute if score solve.CyanCougars solve.stats.roomsCompleted matches 4 run scor
 execute if score solve.PurplePenguins solve.stats.roomsCompleted matches 4 run scoreboard players add solve.handler solve.stats.roomsCompleted 1
 
 execute if score solve.handler solve.stats.roomsCompleted matches 6 run scoreboard players set solve.handler solve.stage 4
+
+# if we've hit 12 minutes, end game
+execute if score solve.handler solve.timer.game.mins matches 12 run gamemode spectator @a
+execute if score solve.handler solve.timer.game.mins matches 12 run scoreboard players set solve.handler solve.stage 4

@@ -11,8 +11,18 @@
 execute unless score delve.handler delve.stage matches 0.. run function delve:load
 
 # every tick functions
-execute if score delve.handler delve.stage matches 3 run function delve:points_update
+function delve:points_update
 function delve:sidebar
+function delve:bulb_checks
+
+# <===== KILL SHERDS =====>
+
+# pots
+execute in delve:delve run kill @e[type=item,nbt={Item:{id:"minecraft:decorated_pot"}}]
+
+# sherds
+execute in delve:delve run clear @a[gamemode=survival] #minecraft:decorated_pot_sherds
+
 
 # if we're in stage 1, increment timer
 execute if score delve.handler delve.stage matches 0 run scoreboard players add delve.handler delve.timer.delay1 1
@@ -43,14 +53,14 @@ execute if score delve.handler delve.stage matches 1 if score delve.handler delv
 execute if score delve.handler delve.stage matches 2 run scoreboard players add delve.handler delve.timer.delay2 1
 
 # countdown
-execute if score delve.handler delve.timer.delay2 matches 700 run title @a actionbar {"text":"5 seconds!", "color":"light_purple", "bold":true}
-execute if score delve.handler delve.timer.delay2 matches 720 run title @a actionbar {"text":"4 seconds!", "color":"light_purple", "bold":true}
-execute if score delve.handler delve.timer.delay2 matches 740 run title @a actionbar {"text":"3 seconds!", "color":"light_purple", "bold":true}
-execute if score delve.handler delve.timer.delay2 matches 760 run title @a actionbar {"text":"2 seconds!", "color":"light_purple", "bold":true}
-execute if score delve.handler delve.timer.delay2 matches 780 run title @a actionbar {"text":"1 second!", "color":"light_purple", "bold":true}
-execute if score delve.handler delve.timer.delay2 matches 799 run title @a title {"text":"Go!", "color":"light_purple", "bold":true}
+execute if score delve.handler delve.timer.delay2 matches 1100 run title @a actionbar {"text":"5 seconds!", "color":"light_purple", "bold":true}
+execute if score delve.handler delve.timer.delay2 matches 1120 run title @a actionbar {"text":"4 seconds!", "color":"light_purple", "bold":true}
+execute if score delve.handler delve.timer.delay2 matches 1140 run title @a actionbar {"text":"3 seconds!", "color":"light_purple", "bold":true}
+execute if score delve.handler delve.timer.delay2 matches 1160 run title @a actionbar {"text":"2 seconds!", "color":"light_purple", "bold":true}
+execute if score delve.handler delve.timer.delay2 matches 1180 run title @a actionbar {"text":"1 second!", "color":"light_purple", "bold":true}
+execute if score delve.handler delve.timer.delay2 matches 1199 run title @a title {"text":"Go!", "color":"light_purple", "bold":true}
 
-execute if score delve.handler delve.stage matches 2 if score delve.handler delve.timer.delay2 matches 800.. run scoreboard players set delve.handler delve.stage 3
+execute if score delve.handler delve.stage matches 2 if score delve.handler delve.timer.delay2 matches 1200.. run scoreboard players set delve.handler delve.stage 3
 
 # if we're in stage 4 run game
 execute if score delve.handler delve.stage matches 3 run scoreboard players add delve.handler delve.timer.game 1

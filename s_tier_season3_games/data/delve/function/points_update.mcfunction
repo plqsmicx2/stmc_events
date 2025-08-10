@@ -90,12 +90,12 @@ scoreboard players operation delve.PurplePenguins delve.points.team.temp *= delv
 scoreboard players operation delve.PurplePenguins delve.points.team += delve.PurplePenguins delve.points.team.temp
 
 # update actionbar with team points
-execute as @a[team=RED_RACCOONS] run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.RedRaccoons", "objective":"delve.points.team"}}]
-execute as @a[team=ORANGE_OTTERS] run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.OrangeOtters", "objective":"delve.points.team"}}]
-execute as @a[team=PINK_PIKAS] run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.PinkPikas", "objective":"delve.points.team"}}]
-execute as @a[team=GREEN_GOATS] run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.GreenGoats", "objective":"delve.points.team"}}]
-execute as @a[team=CYAN_COUGARS] run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.CyanCougars", "objective":"delve.points.team"}}]
-execute as @a[team=PURPLE_PENGUINS] run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.PurplePenguins", "objective":"delve.points.team"}}]
+execute as @a[team=RED_RACCOONS] if score delve.handler delve.stage matches 3.. run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.RedRaccoons", "objective":"delve.points.team"}}]
+execute as @a[team=ORANGE_OTTERS] if score delve.handler delve.stage matches 3.. run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.OrangeOtters", "objective":"delve.points.team"}}]
+execute as @a[team=PINK_PIKAS] if score delve.handler delve.stage matches 3.. run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.PinkPikas", "objective":"delve.points.team"}}]
+execute as @a[team=GREEN_GOATS] if score delve.handler delve.stage matches 3.. run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.GreenGoats", "objective":"delve.points.team"}}]
+execute as @a[team=CYAN_COUGARS] if score delve.handler delve.stage matches 3.. run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.CyanCougars", "objective":"delve.points.team"}}]
+execute as @a[team=PURPLE_PENGUINS] if score delve.handler delve.stage matches 3.. run title @s actionbar [{"text": "Game Points: ", "color":"yellow"}, {"score": {"name":"delve.PurplePenguins", "objective":"delve.points.team"}}]
 
 # <===== INDIVIDUAL POINTS =====>
 

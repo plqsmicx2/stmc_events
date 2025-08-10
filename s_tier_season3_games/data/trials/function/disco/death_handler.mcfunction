@@ -11,11 +11,12 @@ execute as @a[gamemode=!spectator,scores={disco.alive=0}] at @s run playsound mi
 execute as @a[gamemode=!spectator,scores={disco.alive=0}] run gamemode spectator @s
 
 # and award points to players still alive
-execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 5 if score disco.handler disco.deathThisTick matches 1 run scoreboard players add @s disco.points.indiv 5
-execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 5 if score disco.handler disco.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
-execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 5 if score disco.handler disco.deathThisTick matches 1 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+5 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Outlasted Player!",bold:true,color:"red"}]
+execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 run scoreboard players add @s disco.points.indiv 5
+execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
+execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+5 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Outlasted Player!",bold:true,color:"red"}]
 
 # check total # of players alive
+scoreboard players set disco.handler disco.players_alive 0
 execute as @a[scores={disco.alive=1}] run scoreboard players add disco.handler disco.players_alive 1
 
 # next, let's check up on our teams

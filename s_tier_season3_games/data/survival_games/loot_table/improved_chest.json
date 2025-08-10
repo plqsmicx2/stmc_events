@@ -141,7 +141,7 @@
             {
               "function": "minecraft:set_enchantments",
               "enchantments": {
-                "minecraft:loyalty": 3
+                "minecraft:riptide": 1
               }
             }
           ]
@@ -369,7 +369,7 @@
             {
               "function": "minecraft:set_enchantments",
               "enchantments": {
-                "minecraft:loyalty": 3
+                "minecraft:riptide": 1
               }
             }
           ]

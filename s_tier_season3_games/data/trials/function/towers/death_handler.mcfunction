@@ -16,9 +16,9 @@ execute as @a[gamemode=!spectator, scores={towers.deathCounter=1..}] run scorebo
 gamemode spectator @a[gamemode=!spectator, scores={towers.deathCounter=1..}]
 
 # and award points to players still alive
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.stage matches 5 if score towers.handler towers.deathThisTick matches 1 run scoreboard players add @s towers.points.indiv 3
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.stage matches 5 if score towers.handler towers.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.stage matches 5 if score towers.handler towers.deathThisTick matches 1 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+3 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Outlasted Player!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] if score towers.handler towers.stage matches 3 if score towers.handler towers.deathThisTick matches 1 run scoreboard players add @s towers.points.indiv 3
+execute as @a[scores={towers.alive=1}] if score towers.handler towers.stage matches 3 if score towers.handler towers.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
+execute as @a[scores={towers.alive=1}] if score towers.handler towers.stage matches 3 if score towers.handler towers.deathThisTick matches 1 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+3 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Outlasted Player!",bold:true,color:"red"}]
 
 # check how many players are alive in total
 scoreboard players set towers.handler towers.players_alive 0

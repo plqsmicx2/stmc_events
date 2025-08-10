@@ -13,7 +13,7 @@
 execute unless score towers.handler towers.stage matches 0.. run function trials:towers/load
 
 # runs every tick
-function trials:towers/death_handler
+execute if score towers.handler towers.stage matches 3 run function trials:towers/death_handler
 function trials:towers/points_update
 function trials:towers/sidebar
 

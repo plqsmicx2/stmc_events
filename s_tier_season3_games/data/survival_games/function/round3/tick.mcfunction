@@ -1,4 +1,4 @@
-# thread handler for survival games round 2
+# thread handler for survival games round 3
 
 # stage key:
 # 0- 20s delay to allow all players to teleport
@@ -8,10 +8,10 @@
 # 4- round end; 15 second delay to announce winners before resetting & updating sg.stage to next round
 
 # manually force iron_blocks
-execute unless score sg.r3.handler sg.borderEnd matches 1 in survival_games:sg3 run setblock -50 108 -50 minecraft:iron_block
-execute unless score sg.r3.handler sg.borderEnd matches 2 in survival_games:sg3 run setblock 50 111 -50 minecraft:iron_block
-execute unless score sg.r3.handler sg.borderEnd matches 3 in survival_games:sg3 run setblock -50 110 50 minecraft:iron_block
-execute unless score sg.r3.handler sg.borderEnd matches 4 in survival_games:sg3 run setblock 50 107 50 minecraft:iron_block
+execute unless score sg.r3.handler sg.borderEnd matches 1 in survival_games:sg1 run setblock -50 108 -50 minecraft:iron_block
+execute unless score sg.r3.handler sg.borderEnd matches 2 in survival_games:sg1 run setblock 50 111 -50 minecraft:iron_block
+execute unless score sg.r3.handler sg.borderEnd matches 3 in survival_games:sg1 run setblock -50 110 50 minecraft:iron_block
+execute unless score sg.r3.handler sg.borderEnd matches 4 in survival_games:sg1 run setblock 50 107 50 minecraft:iron_block
 
 # update points every tick (regardless of stage)
 function survival_games:round3/points_update
@@ -22,7 +22,7 @@ execute unless score sg.r3.handler sg.r3.stage matches 0.. run function survival
 # if we're in stage 0, we only need to increment our timer & check if 10 seconds have elapsed
 # and then update our stage to 1
 execute if score sg.r3.handler sg.r3.stage matches 0 run scoreboard players add sg.r3.handler sg.r3.timer.delay1 1
-execute in survival_games:sg3 if score sg.r3.handler sg.r3.timer.delay1 matches 2 run fill -8 175 -8 8 175 8 tinted_glass replace air
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.delay1 matches 1..40 run function survival_games:round3/reset_world
 execute if score sg.r3.handler sg.r3.stage matches 0 if score sg.r3.handler sg.r3.timer.delay1 matches 200.. run scoreboard players set sg.r3.handler sg.r3.stage 2
 
 # skips "stage 1" since there's no explanation phase
@@ -32,14 +32,14 @@ execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r
 execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 1 run title @a subtitle {text:"begins in 20 seconds!",color:"dark_red",bold:true}
 
 # new borderEnd! update beacons
-execute if score sg.r3.handler sg.r3.timer.delay2 matches 50 if score sg.r3.handler sg.borderEnd matches 1 in survival_games:sg3 run setblock -50 108 -50 minecraft:beacon
-execute if score sg.r3.handler sg.r3.timer.delay2 matches 50 if score sg.r3.handler sg.borderEnd matches 2 in survival_games:sg3 run setblock 50 111 -50 minecraft:beacon
-execute if score sg.r3.handler sg.r3.timer.delay2 matches 50 if score sg.r3.handler sg.borderEnd matches 3 in survival_games:sg3 run setblock -50 110 50 minecraft:beacon
-execute if score sg.r3.handler sg.r3.timer.delay2 matches 50 if score sg.r3.handler sg.borderEnd matches 4 in survival_games:sg3 run setblock 50 107 50 minecraft:beacon
+execute if score sg.r3.handler sg.r3.timer.delay2 matches 50 if score sg.r3.handler sg.borderEnd matches 1 in survival_games:sg1 run setblock -50 108 -50 minecraft:beacon
+execute if score sg.r3.handler sg.r3.timer.delay2 matches 50 if score sg.r3.handler sg.borderEnd matches 2 in survival_games:sg1 run setblock 50 111 -50 minecraft:beacon
+execute if score sg.r3.handler sg.r3.timer.delay2 matches 50 if score sg.r3.handler sg.borderEnd matches 3 in survival_games:sg1 run setblock -50 110 50 minecraft:beacon
+execute if score sg.r3.handler sg.r3.timer.delay2 matches 50 if score sg.r3.handler sg.borderEnd matches 4 in survival_games:sg1 run setblock 50 107 50 minecraft:beacon
 
 # if we're in stage 2, we just need to increment the timer & update the actionbar
 execute if score sg.r3.handler sg.r3.stage matches 2 run scoreboard players add sg.r3.handler sg.r3.timer.delay2 1
-execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 5 run item replace entity @a armor.chest with minecraft:elytra
+execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 5 run item replace entity @a armor.chest with minecraft:elytra[enchantments={"minecraft:binding_curse":1b}]
 execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 300 run title @a actionbar {text:"5 seconds!",bold:true,color:"gold"}
 execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 320 run title @a actionbar {text:"4 seconds!",bold:true,color:"gold"}
 execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 340 run title @a actionbar {text:"3 seconds!",bold:true,color:"gold"}

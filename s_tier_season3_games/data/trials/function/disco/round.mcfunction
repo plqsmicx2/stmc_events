@@ -1,5 +1,8 @@
 # runs a single round of disco
 
+# Game Start
+execute in trials:disco if score disco.handler disco.rounds_played matches 0 if score disco.handler disco.timer.game matches 1 run playsound music_disc.otherside master @a 0 105 0 0.9
+
 # <===== ROUND START =====>
 
 # set current round length

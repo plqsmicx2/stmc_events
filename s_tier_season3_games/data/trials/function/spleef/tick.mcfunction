@@ -13,7 +13,7 @@
 execute unless score spleef.handler spleef.stage matches 0.. run function trials:spleef/load
 
 # check for deaths (before sidebar so it will reflect this tick's new points)
-function trials:spleef/death_handler
+execute if score spleef.handler spleef.stage matches 3 run function trials:spleef/death_handler
 
 # update sidebar
 function trials:spleef/points_update

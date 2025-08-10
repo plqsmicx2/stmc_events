@@ -1,8 +1,26 @@
 # second lobby instance of trials game
 
+# timer update
+execute if score tr.handler tr.timer.lobby3 matches 1 run scoreboard players set tr.handler tr.timer.tickCount 0
+execute if score tr.handler tr.timer.lobby3 matches 1 run scoreboard players set tr.handler tr.timer.secs 40
+execute if score tr.handler tr.timer.lobby3 matches 1 run scoreboard players set tr.handler tr.timer.mins 0
+
+scoreboard players add tr.handler tr.timer.tickCount 1
+
+execute if score tr.handler tr.timer.tickCount matches 20 run scoreboard players remove tr.handler tr.timer.secs 1
+execute if score tr.handler tr.timer.tickCount matches 20 run scoreboard players set tr.handler tr.timer.tickCount 0
+
+execute if score tr.handler tr.timer.secs matches 60 run scoreboard players remove tr.handler tr.timer.mins 1
+execute if score tr.handler tr.timer.secs matches 60 run scoreboard players set tr.handler tr.timer.secs 59
+
 # randomly chooses game 3
 
-gamemode survival @a
+# reset
+execute if score tr.handler tr.timer.lobby3 matches 2 run clear @a
+execute if score tr.handler tr.timer.lobby3 matches 2 run effect clear @a
+execute if score tr.handler tr.timer.lobby3 matches 2 run effect give @a instant_health 1 100 true
+execute if score tr.handler tr.timer.lobby3 matches 2 run effect give @a resistance infinite 10 true
+execute if score tr.handler tr.timer.lobby3 matches 2 run gamemode adventure @a
 
 execute in trials:lobby if score tr.handler tr.timer.lobby3 matches 2 run tp @a 0 100 0
 

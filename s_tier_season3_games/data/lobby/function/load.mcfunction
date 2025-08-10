@@ -83,12 +83,10 @@ scoreboard objectives add event.multipliers.precision dummy
 
 # create some timers
 scoreboard objectives add event.timer.pre_game dummy
-scoreboard objectives add event.timer.bg1 dummy
-scoreboard objectives add event.timer.bg2 dummy
-scoreboard objectives add event.timer.bg3 dummy
-scoreboard objectives add event.timer.bg4 dummy
-scoreboard objectives add event.timer.bg5 dummy
-scoreboard objectives add event.timer.bg6 dummy
+scoreboard objectives add event.timer.bgActive dummy
+scoreboard objectives add event.timer.bgTickCount dummy
+scoreboard objectives add event.timer.bgSecs dummy
+scoreboard objectives add event.timer.bgMins dummy
 scoreboard objectives add event.timer.post_game dummy
 
 # set the scoreboards that are applicable
@@ -107,14 +105,12 @@ scoreboard players set stmc.handler event.multipliers.g6 200
 scoreboard players set stmc.handler event.multipliers.precision 100
 
 # and reset each timer
-scoreboard players reset stmc.handler event.timer.pre_game
-scoreboard players reset stmc.handler event.timer.bg1
-scoreboard players reset stmc.handler event.timer.bg2
-scoreboard players reset stmc.handler event.timer.bg3
-scoreboard players reset stmc.handler event.timer.bg4
-scoreboard players reset stmc.handler event.timer.bg5
-scoreboard players reset stmc.handler event.timer.bg6
-scoreboard players reset stmc.handler event.timer.post_game
+scoreboard players set stmc.handler event.timer.pre_game 0
+scoreboard players set stmc.handler event.timer.bgActive 0
+scoreboard players set stmc.handler event.timer.bgTickCount 0
+scoreboard players set stmc.handler event.timer.bgSecs 0
+scoreboard players set stmc.handler event.timer.bgMins 2
+scoreboard players set stmc.handler event.timer.post_game 0
 
 # and finally, create each game thread's scoreboard
 scoreboard objectives add race.stage dummy

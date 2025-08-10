@@ -111,3 +111,4 @@ scoreboard players set disco.handler disco.current_round_length_delay 80
 scoreboard players set disco.handler disco.current_round_block -1
 
 scoreboard objectives remove disco.sidebar
+function trials:disco/death_handler

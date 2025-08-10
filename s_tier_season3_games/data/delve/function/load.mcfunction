@@ -15,7 +15,7 @@ execute in delve:delve as @a[team=PURPLE_PENGUINS] run teleport @s 0 243 0
 execute in delve:delve as @a[team=PURPLE_PENGUINS] run spawnpoint @s 0 243 0
 
 # force gamemode
-gamemode adventure @a
+gamemode survival @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set weather
@@ -29,8 +29,8 @@ gamerule doWeatherCycle false
 effect clear @a
 
 # give effects
-effect give @a regeneration 5 1
-effect give @a saturation 2 2
+effect give @a instant_health 1 110 true
+effect give @a saturation 2 2 true
 effect give @a mining_fatigue infinite 2 true
 
 # clear inventories
@@ -149,27 +149,27 @@ scoreboard players set delve.PurplePenguins delve.timer.game.furnaceUnlit 0
 
 scoreboard players set delve.RedRaccoons delve.stats.diamondCount 0
 scoreboard players set delve.RedRaccoons delve.stats.copperCount 0
-scoreboard players set delve.RedRaccoons delve.stats.coalCount 0
+scoreboard players set delve.RedRaccoons delve.stats.coalCount 30
 
 scoreboard players set delve.OrangeOtters delve.stats.diamondCount 0
 scoreboard players set delve.OrangeOtters delve.stats.copperCount 0
-scoreboard players set delve.OrangeOtters delve.stats.coalCount 0
+scoreboard players set delve.OrangeOtters delve.stats.coalCount 30
 
 scoreboard players set delve.PinkPikas delve.stats.diamondCount 0
 scoreboard players set delve.PinkPikas delve.stats.copperCount 0
-scoreboard players set delve.PinkPikas delve.stats.coalCount 0
+scoreboard players set delve.PinkPikas delve.stats.coalCount 30
 
 scoreboard players set delve.GreenGoats delve.stats.diamondCount 0
 scoreboard players set delve.GreenGoats delve.stats.copperCount 0
-scoreboard players set delve.GreenGoats delve.stats.coalCount 0
+scoreboard players set delve.GreenGoats delve.stats.coalCount 30
 
 scoreboard players set delve.CyanCougars delve.stats.diamondCount 0
 scoreboard players set delve.CyanCougars delve.stats.copperCount 0
-scoreboard players set delve.CyanCougars delve.stats.coalCount 0
+scoreboard players set delve.CyanCougars delve.stats.coalCount 30
 
 scoreboard players set delve.PurplePenguins delve.stats.diamondCount 0
 scoreboard players set delve.PurplePenguins delve.stats.copperCount 0
-scoreboard players set delve.PurplePenguins delve.stats.coalCount 0
+scoreboard players set delve.PurplePenguins delve.stats.coalCount 30
 
 scoreboard players set delve.handler delve.teams_completed 0
 

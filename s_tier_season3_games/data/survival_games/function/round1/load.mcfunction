@@ -7,7 +7,7 @@
 execute in survival_games:sg1 run tp @a 0 178 0
 
 # force gamemode
-gamemode survival @a
+gamemode adventure @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set time

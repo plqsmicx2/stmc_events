@@ -82,11 +82,11 @@ execute as @a[team=PURPLE_PENGUINS] if score race.PurplePenguins race.completion
 execute as @a[team=PURPLE_PENGUINS] if score race.PurplePenguins race.completion.rank matches 6 run scoreboard players add @s race.points.indiv 0
 
 # fastest laps
-execute as @a if score @s race.fastest_lap.rank matches 1 run scoreboard players add @s race.points.indiv 50
-execute as @a if score @s race.fastest_lap.rank matches 2 run scoreboard players add @s race.points.indiv 40
-execute as @a if score @s race.fastest_lap.rank matches 3 run scoreboard players add @s race.points.indiv 30
-execute as @a if score @s race.fastest_lap.rank matches 4 run scoreboard players add @s race.points.indiv 20
-execute as @a if score @s race.fastest_lap.rank matches 5 run scoreboard players add @s race.points.indiv 10
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 1 run scoreboard players add @s race.points.indiv 50
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 2 run scoreboard players add @s race.points.indiv 40
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 3 run scoreboard players add @s race.points.indiv 30
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 4 run scoreboard players add @s race.points.indiv 20
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 5 run scoreboard players add @s race.points.indiv 10
 
 # <===== TEAM POINTS =====>
 

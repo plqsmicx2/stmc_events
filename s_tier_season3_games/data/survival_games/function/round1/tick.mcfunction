@@ -22,7 +22,7 @@ execute unless score sg.r1.handler sg.r1.stage matches 0.. run function survival
 # if we're in stage 0, we only need to increment our timer & check if 20 seconds have elapsed
 # and then update our stage to 1
 execute if score sg.r1.handler sg.r1.stage matches 0 run scoreboard players add sg.r1.handler sg.r1.timer.delay1 1
-execute in survival_games:sg1 if score sg.r1.handler sg.r1.timer.delay1 matches 2 run fill -8 175 -8 8 175 8 tinted_glass replace air
+execute in survival_games:sg1 if score sg.r1.handler sg.r1.timer.delay1 matches 1..40 run function survival_games:round1/reset_world
 execute if score sg.r1.handler sg.r1.stage matches 0 if score sg.r1.handler sg.r1.timer.delay1 matches 400.. run scoreboard players set sg.r1.handler sg.r1.stage 1
 
 # if we're in stage 1, we need to increment the timer, call our explanation function, & check if 30 seconds have elapsed
@@ -32,7 +32,7 @@ execute if score sg.r1.handler sg.r1.stage matches 1 if score sg.r1.handler sg.r
 
 # if we're in stage 2, we just need to increment the timer & update the actionbar
 execute if score sg.r1.handler sg.r1.stage matches 2 run scoreboard players add sg.r1.handler sg.r1.timer.delay2 1
-execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 5 run item replace entity @a armor.chest with minecraft:elytra
+execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 5 run item replace entity @a armor.chest with minecraft:elytra[enchantments={"minecraft:binding_curse":1b}]
 execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 300 run title @a actionbar {text:"5 seconds!",bold:true,color:"gold"}
 execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 320 run title @a actionbar {text:"4 seconds!",bold:true,color:"gold"}
 execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 340 run title @a actionbar {text:"3 seconds!",bold:true,color:"gold"}

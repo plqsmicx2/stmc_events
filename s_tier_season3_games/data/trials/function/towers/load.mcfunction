@@ -6,7 +6,7 @@
 execute in trials:towers run tp @a 0 104 0
 
 # force gamemode
-gamemode survival @a
+gamemode adventure @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set appropriate gamerules
@@ -99,3 +99,4 @@ scoreboard players set @a towers.deathCounter 0
 scoreboard players set @a towers.points.indiv 0
 
 scoreboard objectives remove towers.sidebar
+function trials:towers/death_handler

@@ -6,7 +6,7 @@
 execute in race:race run tp @a -13 105 14
 
 # force gamemode
-gamemode survival @a
+gamemode adventure @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set time
@@ -27,10 +27,11 @@ effect clear @a
 
 # ensure full health & hunger
 effect give @a saturation 1 1 true
-effect give @a regeneration 5 1 true
+effect give @a instant_health 1 110 true
 
 # give effects
 effect give @a saturation infinite 0 true
+effect give @a resistance infinite 10 true
 effect give @a dolphins_grace infinite 0 true
 effect give @a water_breathing infinite 0 true
 

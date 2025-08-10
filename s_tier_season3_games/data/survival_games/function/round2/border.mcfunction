@@ -7,7 +7,7 @@ execute if score sg.r2.handler sg.r2.timer.round matches 1 run worldborder damag
 execute if score sg.r2.handler sg.r2.timer.round matches 1 run worldborder damage buffer 1
 
 # summon the entity that will track the center of our worldborder
-execute in survival_games:sg2 if score sg.r2.handler sg.r2.timer.round matches 1 run summon armor_stand 0 200 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Glowing:0b,Invisible:1b,Tags:["sg.r2.worldborder.center"]}
+execute in survival_games:sg1 if score sg.r2.handler sg.r2.timer.round matches 1 run summon armor_stand 0 200 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Glowing:0b,Invisible:1b,Tags:["sg.r2.worldborder.center"]}
 
 # <===== STAGE HANDLING =====>
 
@@ -39,16 +39,16 @@ execute if score sg.r2.handler sg.r2.timer.round matches 4500.. run scoreboard p
 # shrink to 100 & recenter to appropriate beacon
 
 # shrink 0.125 each tick
-execute in survival_games:sg2 if score sg.r2.handler sg.r2.borderStage matches 1 run worldborder add -0.125
+execute in survival_games:sg1 if score sg.r2.handler sg.r2.borderStage matches 1 run worldborder add -0.125
 
 # migrate about 0.04167 blocks each tick in the appropriate direction
 # this is achieved by moving our custom armor stand
-execute in survival_games:sg2 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 if score sg.r2.handler sg.borderEnd matches 1 at @s run tp @s ~-0.04208 ~ ~-0.04208
-execute in survival_games:sg2 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 if score sg.r2.handler sg.borderEnd matches 2 at @s run tp @s ~0.04125 ~ ~-0.04208
-execute in survival_games:sg2 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 if score sg.r2.handler sg.borderEnd matches 3 at @s run tp @s ~-0.04208 ~ ~0.04125
-execute in survival_games:sg2 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 if score sg.r2.handler sg.borderEnd matches 4 at @s run tp @s ~0.04125 ~ ~0.04125
+execute in survival_games:sg1 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 if score sg.r2.handler sg.borderEnd matches 1 at @s run tp @s ~-0.04208 ~ ~-0.04208
+execute in survival_games:sg1 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 if score sg.r2.handler sg.borderEnd matches 2 at @s run tp @s ~0.04125 ~ ~-0.04208
+execute in survival_games:sg1 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 if score sg.r2.handler sg.borderEnd matches 3 at @s run tp @s ~-0.04208 ~ ~0.04125
+execute in survival_games:sg1 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 if score sg.r2.handler sg.borderEnd matches 4 at @s run tp @s ~0.04125 ~ ~0.04125
 # and then updating the center based on the coordinates of that armor stand
-execute in survival_games:sg2 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 at @s run worldborder center ~ ~
+execute in survival_games:sg1 as @e[tag=sg.r2.worldborder.center] if score sg.r2.handler sg.r2.borderStage matches 1 at @s run worldborder center ~ ~
 
 # borderStage 2
 
@@ -61,7 +61,7 @@ execute if score sg.r2.handler sg.r2.timer.round matches 2400 run worldborder da
 # shrinks worldborder from 100 -> 50 blocks across 30 seconds
 
 # shrink 0.0833 each tick
-execute in survival_games:sg2 if score sg.r2.handler sg.r2.borderStage matches 3 run worldborder add -0.0833
+execute in survival_games:sg1 if score sg.r2.handler sg.r2.borderStage matches 3 run worldborder add -0.0833
 
 # borderStage 4
 
@@ -74,7 +74,7 @@ execute if score sg.r2.handler sg.r2.timer.round matches 3600 run worldborder da
 # shrinks worldborder from 50 -> 5 blocks across 30 seconds
 
 # shrink 0.075 each tick
-execute in survival_games:sg2 if score sg.r2.handler sg.r2.borderStage matches 5 run worldborder add -0.075
+execute in survival_games:sg1 if score sg.r2.handler sg.r2.borderStage matches 5 run worldborder add -0.075
 
 # borderStage 6 [FINAL]
 

@@ -4,10 +4,10 @@
 # excluding anything done in the parent load function
 
 # teleport players to spawn platform
-execute in survival_games:sg2 run tp @a 0 178 0
+execute in survival_games:sg1 run tp @a 0 178 0
 
 # force gamemode
-gamemode survival @a
+gamemode adventure @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set time
@@ -36,10 +36,10 @@ effect give @a resistance infinite 10 true
 xp set @a 0
 
 # kill all entities
-execute in survival_games:sg2 run kill @e[type=!player]
+execute in survival_games:sg1 run kill @e[type=!player]
 
 # failsafe spawn point
-execute in survival_games:sg2 run spawnpoint @a 0 178 0
+execute in survival_games:sg1 run spawnpoint @a 0 178 0
 
 # set world protections
 execute as @a run attribute @s block_break_speed base set 0.01
@@ -102,10 +102,10 @@ execute store result score sg.r2.handler sg.borderEnd run random value 1..4
 scoreboard players reset sg.r2.handler sg.r2.borderStage
 
 # and reset beacons
-execute in survival_games:sg2 run setblock -50 108 -50 minecraft:iron_block
-execute in survival_games:sg2 run setblock 50 111 -50 minecraft:iron_block
-execute in survival_games:sg2 run setblock -50 110 50 minecraft:iron_block
-execute in survival_games:sg2 run setblock 50 107 50 minecraft:iron_block
+execute in survival_games:sg1 run setblock -50 108 -50 minecraft:iron_block
+execute in survival_games:sg1 run setblock 50 111 -50 minecraft:iron_block
+execute in survival_games:sg1 run setblock -50 110 50 minecraft:iron_block
+execute in survival_games:sg1 run setblock 50 107 50 minecraft:iron_block
 
 # set stage to 0
 scoreboard players set sg.r2.handler sg.r2.stage 0

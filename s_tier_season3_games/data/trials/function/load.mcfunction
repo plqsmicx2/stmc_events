@@ -37,10 +37,14 @@ execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with m
 scoreboard objectives add tr.stage dummy
 
 # some necessary behind-the-scenes timers
+scoreboard objectives add tr.timer.tickCount dummy
+scoreboard objectives add tr.timer.secs dummy
+scoreboard objectives add tr.timer.mins dummy
 scoreboard objectives add tr.timer.lobby1 dummy
 scoreboard objectives add tr.timer.lobby2 dummy
 scoreboard objectives add tr.timer.lobby3 dummy
 scoreboard objectives add tr.timer.lobby4 dummy
+scoreboard objectives add tr.timer.pointsAnnouncement dummy
 
 # tracks individual points a player has earned
 scoreboard objectives add tr.points.indiv dummy
@@ -50,7 +54,7 @@ scoreboard objectives add tr.points.indiv dummy
 scoreboard objectives add tr.points.team dummy
 
 # tracks the rank of each player
-scoreboard objectives add tr.points.player.rank dummy
+scoreboard objectives add tr.points.indiv.rank dummy
 
 # tracks the rank of each team
 scoreboard objectives add tr.points.team.rank dummy
@@ -77,10 +81,14 @@ scoreboard players reset towers.handler towers.stage
 scoreboard players set tr.handler tr.stage 0
 
 # reset timers
+scoreboard players set tr.handler tr.timer.tickCount 0
+scoreboard players set tr.handler tr.timer.secs 0
+scoreboard players set tr.handler tr.timer.mins 0
 scoreboard players set tr.handler tr.timer.lobby1 0
 scoreboard players set tr.handler tr.timer.lobby2 0
 scoreboard players set tr.handler tr.timer.lobby3 0
 scoreboard players set tr.handler tr.timer.lobby4 0
+scoreboard players set tr.handler tr.timer.pointsAnnouncement 0
 
 # reset game order
 scoreboard players set tr.handler tr.stage.game1 0
@@ -90,3 +98,7 @@ scoreboard players set tr.handler tr.stage.game4 0
 
 # set some necessary values for players
 scoreboard players set @a tr.points.indiv 0
+scoreboard players set @a disco.points.indiv 0
+scoreboard players set @a replicate.points.indiv 0
+scoreboard players set @a spleef.points.indiv 0
+scoreboard players set @a towers.points.indiv 0

@@ -20,13 +20,7 @@ execute if score solve.handler solve.stage matches 0 run scoreboard players add 
 # reset world
 execute in solve:solve if score solve.handler solve.timer.delay1 matches 3 run forceload add 0 0 120 120
 execute in solve:solve if score solve.handler solve.timer.delay1 matches 3 run kill @e[type=item]
-execute in solve:solve if score solve.handler solve.timer.delay1 matches 5 run clone 0 0 0 109 9 14 -1 91 -1
-execute in solve:solve if score solve.handler solve.timer.delay1 matches 6 run clone 0 0 0 109 9 14 -1 91 19
-execute in solve:solve if score solve.handler solve.timer.delay1 matches 7 run clone 0 0 0 109 9 14 -1 91 39
-execute in solve:solve if score solve.handler solve.timer.delay1 matches 8 run clone 0 0 0 109 9 14 -1 91 59
-execute in solve:solve if score solve.handler solve.timer.delay1 matches 9 run clone 0 0 0 109 9 14 -1 91 79
-execute in solve:solve if score solve.handler solve.timer.delay1 matches 10 run clone 0 0 0 109 9 14 -1 91 99
-
+execute in solve:solve if score solve.handler solve.timer.delay1 matches 5..15 run function solve:reset_world
 execute if score solve.handler solve.stage matches 0 if score solve.handler solve.timer.delay1 matches 400.. run scoreboard players set solve.handler solve.stage 1
 
 # if we're in stage 1, increment timer & run explanation
@@ -37,14 +31,14 @@ execute if score solve.handler solve.stage matches 1 if score solve.handler solv
 # if we're in stage 2, increment timer & countdown at 5 seconds
 execute if score solve.handler solve.stage matches 2 run scoreboard players add solve.handler solve.timer.delay2 1
 # countdown
-execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 300 run title @a actionbar {"text":"5 seconds!", "color":"yellow"}
-execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 320 run title @a actionbar {"text":"4 seconds!", "color":"yellow"}
-execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 340 run title @a actionbar {"text":"3 seconds!", "color":"yellow"}
-execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 360 run title @a actionbar {"text":"2 seconds!", "color":"yellow"}
-execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 380 run title @a actionbar {"text":"1 second!", "color":"yellow"}
-execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 399 run title @a title {"text":"Go!", "color":"yellow"}
+execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 700 run title @a actionbar {"text":"5 seconds!", "color":"yellow"}
+execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 720 run title @a actionbar {"text":"4 seconds!", "color":"yellow"}
+execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 740 run title @a actionbar {"text":"3 seconds!", "color":"yellow"}
+execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 760 run title @a actionbar {"text":"2 seconds!", "color":"yellow"}
+execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 780 run title @a actionbar {"text":"1 second!", "color":"yellow"}
+execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 799 run title @a title {"text":"Go!", "color":"yellow"}
 
-execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 400.. run scoreboard players set solve.handler solve.stage 3
+execute if score solve.handler solve.stage matches 2 if score solve.handler solve.timer.delay2 matches 800.. run scoreboard players set solve.handler solve.stage 3
 
 # if we're in stage 3, increment timer & run game
 execute if score solve.handler solve.stage matches 3 run scoreboard players add solve.handler solve.timer.game 1

@@ -22,4 +22,5 @@ execute as @a[scores={spleef.alive=1}] run tellraw @a ["",{selector:"@s"},{text:
 # reset some stuff
 effect clear @a
 clear @a
+gamemode spectator @a
 time set day

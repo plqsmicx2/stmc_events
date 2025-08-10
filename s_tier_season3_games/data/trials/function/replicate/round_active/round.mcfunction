@@ -21,7 +21,7 @@
 # <===== GAME-WIDE =====>
 
 # reset inventories
-item replace entity @a hotbar.0 with diamond_pickaxe[custom_name={"text":"BREAKER","color":"dark_aqua","bold":true},tool={default_mining_speed:1000000,damage_per_block:0,rules:[{speed:.1,blocks:["red_wool","orange_wool","pink_wool","green_wool","cyan_wool","purple_wool","deepslate_tiles","deepslate_tile_slab","deepslate_tile_stairs","deepslate_tile_wall","tinted_glass","soul_lantern","red_nether_brick_slab","red_nether_brick_stairs","red_nether_brick_wall","shroomlight","crying_obsidian"]}]}]
+item replace entity @a hotbar.0 with diamond_pickaxe[custom_name={"text":"BREAKER","color":"dark_aqua","bold":true},tool={default_mining_speed:.1,damage_per_block:0,rules:[{speed:9999999,blocks:["deepslate_tiles","mud","mangrove_roots","soul_sand","white_concrete","light_blue_concrete","pink_concrete","purple_concrete","blue_concrete","yellow_concrete","orange_concrete","prismarine","dark_prismarine","prismarine_bricks","light_blue_stained_glass","sea_lantern","light_blue_wool","lime_concrete","yellow_wool","lapis_block","dirt","coarse_dirt","cobblestone","tuff_bricks","waxed_chiseled_copper","waxed_exposed_copper_bulb","waxed_weathered_copper_grate","waxed_oxidized_cut_copper","red_concrete"]}]}]
 item replace entity @a hotbar.1 with air
 
 # kill item drops

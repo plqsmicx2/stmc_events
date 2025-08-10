@@ -16,23 +16,37 @@ function finale:death_handler
 execute if score finale.handler finale.stage matches 0 run scoreboard players add finale.handler finale.timer.delay1 1
 
 # set world
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 1 in finale:finale run fill 4 102 18 -4 104 20 red_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 1 in finale:finale run fill 4 102 -18 -4 104 -20 red_stained_glass replace #impermeable
+execute in finale:finale if score finale.handler finale.timer.delay1 matches 2 run clone -31 58 -31 31 75 31 -31 98 -31
 
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 1 in finale:finale run fill 4 102 18 -4 104 20 orange_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 1 in finale:finale run fill 4 102 -18 -4 104 -20 orange_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 red_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 red_wool replace #wool
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 red_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 red_wool replace #wool
 
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 1 in finale:finale run fill 4 102 18 -4 104 20 pink_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 1 in finale:finale run fill 4 102 -18 -4 104 -20 pink_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 orange_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 orange_wool replace #wool
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 orange_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 orange_wool replace #wool
 
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 1 in finale:finale run fill 4 102 18 -4 104 20 green_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 1 in finale:finale run fill 4 102 -18 -4 104 -20 green_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 pink_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 pink_wool replace #wool
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 pink_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 pink_wool replace #wool
 
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 1 in finale:finale run fill 4 102 18 -4 104 20 cyan_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 1 in finale:finale run fill 4 102 -18 -4 104 -20 cyan_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 green_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 green_wool replace #wool
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 green_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 green_wool replace #wool
 
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 1 in finale:finale run fill 4 102 18 -4 104 20 purple_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 1 in finale:finale run fill 4 102 -18 -4 104 -20 purple_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 cyan_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 cyan_wool replace #wool
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 cyan_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 cyan_wool replace #wool
+
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 purple_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 purple_wool replace #wool
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 purple_stained_glass replace #impermeable
+execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 purple_wool replace #wool
 
 execute if score finale.handler finale.stage matches 0 if score finale.handler finale.timer.delay1 matches 400.. run scoreboard players set finale.handler finale.stage 1
 

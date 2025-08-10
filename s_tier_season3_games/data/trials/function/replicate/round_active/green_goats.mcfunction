@@ -31,12 +31,10 @@ execute in trials:replicate if score replicate.GreenGoats replicate.timer.build1
 execute in trials:replicate if score replicate.GreenGoats replicate.timer.build1 matches 3 run clone -2 81 -2 2 81 2 -41 111 -15
 
 # give players necessary blocks
-execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.3 with snow_block 64
-execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.4 with green_concrete 64
-execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.5 with brown_concrete 64
-execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.6 with packed_mud 64
-execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.7 with podzol 64
-execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.8 with cobblestone 64
+execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.5 with deepslate_tiles 64
+execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.6 with soul_sand 64
+execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.7 with mangrove_roots 64
+execute if score replicate.GreenGoats replicate.timer.build1 matches 4.. if score replicate.GreenGoats replicate.stage matches 0 run item replace entity @a[team=GREEN_GOATS] hotbar.8 with mud 64
 
 # remove the tinted glass barrier
 execute in trials:replicate if score replicate.GreenGoats replicate.timer.build1 matches 60 run fill -25 110 -8 -53 114 -27 air replace tinted_glass
@@ -104,9 +102,11 @@ execute if score replicate.GreenGoats replicate.timer.build3 matches 3 run clear
 execute in trials:replicate if score replicate.GreenGoats replicate.timer.build3 matches 3 run clone -2 83 -2 2 83 2 -41 111 -15
 
 # give players necessary blocks
-execute if score replicate.GreenGoats replicate.timer.build3 matches 4.. if score replicate.GreenGoats replicate.stage matches 2 run item replace entity @a[team=GREEN_GOATS] hotbar.6 with pink_concrete 64
-execute if score replicate.GreenGoats replicate.timer.build3 matches 4.. if score replicate.GreenGoats replicate.stage matches 2 run item replace entity @a[team=GREEN_GOATS] hotbar.7 with black_concrete 64
-execute if score replicate.GreenGoats replicate.timer.build3 matches 4.. if score replicate.GreenGoats replicate.stage matches 2 run item replace entity @a[team=GREEN_GOATS] hotbar.8 with red_concrete 64
+execute if score replicate.GreenGoats replicate.timer.build3 matches 4.. if score replicate.GreenGoats replicate.stage matches 2 run item replace entity @a[team=GREEN_GOATS] hotbar.4 with prismarine_bricks 64
+execute if score replicate.GreenGoats replicate.timer.build3 matches 4.. if score replicate.GreenGoats replicate.stage matches 2 run item replace entity @a[team=GREEN_GOATS] hotbar.5 with dark_prismarine 64
+execute if score replicate.GreenGoats replicate.timer.build3 matches 4.. if score replicate.GreenGoats replicate.stage matches 2 run item replace entity @a[team=GREEN_GOATS] hotbar.6 with light_blue_stained_glass 64
+execute if score replicate.GreenGoats replicate.timer.build3 matches 4.. if score replicate.GreenGoats replicate.stage matches 2 run item replace entity @a[team=GREEN_GOATS] hotbar.7 with sea_lantern 64
+execute if score replicate.GreenGoats replicate.timer.build3 matches 4.. if score replicate.GreenGoats replicate.stage matches 2 run item replace entity @a[team=GREEN_GOATS] hotbar.8 with prismarine 64
 
 # remove the tinted glass barrier
 execute in trials:replicate if score replicate.GreenGoats replicate.timer.build3 matches 60 run fill -25 110 -8 -53 114 -27 air replace tinted_glass
@@ -174,11 +174,11 @@ execute if score replicate.GreenGoats replicate.timer.build5 matches 3 run clear
 execute in trials:replicate if score replicate.GreenGoats replicate.timer.build5 matches 3 run clone -2 85 -2 2 85 2 -41 111 -15
 
 # give players necessary blocks
-execute if score replicate.GreenGoats replicate.timer.build5 matches 4.. if score replicate.GreenGoats replicate.stage matches 4 run item replace entity @a[team=GREEN_GOATS] hotbar.4 with waxed_chiseled_copper 64
+execute if score replicate.GreenGoats replicate.timer.build5 matches 4.. if score replicate.GreenGoats replicate.stage matches 4 run item replace entity @a[team=GREEN_GOATS] hotbar.4 with tuff_bricks 64
 execute if score replicate.GreenGoats replicate.timer.build5 matches 4.. if score replicate.GreenGoats replicate.stage matches 4 run item replace entity @a[team=GREEN_GOATS] hotbar.5 with waxed_oxidized_cut_copper 64
 execute if score replicate.GreenGoats replicate.timer.build5 matches 4.. if score replicate.GreenGoats replicate.stage matches 4 run item replace entity @a[team=GREEN_GOATS] hotbar.6 with waxed_weathered_copper_grate 64
 execute if score replicate.GreenGoats replicate.timer.build5 matches 4.. if score replicate.GreenGoats replicate.stage matches 4 run item replace entity @a[team=GREEN_GOATS] hotbar.7 with waxed_exposed_copper_bulb 64
-execute if score replicate.GreenGoats replicate.timer.build5 matches 4.. if score replicate.GreenGoats replicate.stage matches 4 run item replace entity @a[team=GREEN_GOATS] hotbar.8 with tuff_bricks 64
+execute if score replicate.GreenGoats replicate.timer.build5 matches 4.. if score replicate.GreenGoats replicate.stage matches 4 run item replace entity @a[team=GREEN_GOATS] hotbar.8 with waxed_chiseled_copper 64
 
 # remove the tinted glass barrier
 execute in trials:replicate if score replicate.GreenGoats replicate.timer.build5 matches 60 run fill -25 110 -8 -53 114 -27 air replace tinted_glass

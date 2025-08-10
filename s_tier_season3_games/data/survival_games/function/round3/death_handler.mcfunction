@@ -6,7 +6,7 @@ scoreboard players set sg.r3.handler sg.r3.deathThisTick 0
 # first, let's make sure players go into spectator immediately when they die
 # and we run points_update at the same time to ensure immediate points reflections
 # updating only after deaths also ensures placement points are only given out ONCE
-execute in survival_games:sg3 as @a at @s run spawnpoint @s ~ ~ ~
+execute in survival_games:sg1 as @a at @s run spawnpoint @s ~ ~ ~
 execute as @a[gamemode=!spectator, scores={sg.r3.death=1..}] run scoreboard players set sg.r3.handler sg.r3.deathThisTick 1
 gamemode spectator @a[gamemode=!spectator, scores={sg.r3.death=1..}]
 

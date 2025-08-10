@@ -15,6 +15,8 @@ execute unless score tr.handler tr.stage matches 0.. run function trials:load
 
 # <===== run the lobbies & games =====>
 
+function trials:sidebar
+
 # lobby 1
 execute if score tr.handler tr.stage matches 0 run scoreboard players add tr.handler tr.timer.lobby1 1
 execute if score tr.handler tr.stage matches 0 run function trials:lobby1
@@ -55,11 +57,12 @@ execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game
 execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 3 run function trials:spleef/tick
 execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 4 run function trials:towers/tick
 
+# points announcement
+execute if score tr.handler tr.stage matches 8 run scoreboard players add tr.handler tr.timer.pointsAnnouncement 1
+execute if score tr.handler tr.stage matches 8 run function trials:point_announcements
+execute if score tr.handler tr.timer.pointsAnnouncement matches 401.. run scoreboard players set tr.handler tr.stage 9
+
 # send us back to main lobby
-execute if score tr.handler tr.stage matches 8 run scoreboard players set @a tr.points.indiv 0
-execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s disco.points.indiv
-execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s replicate.points.indiv
-execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s spleef.points.indiv
-execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s tr.points.indiv += @s towers.points.indiv
-execute as @a if score tr.handler tr.stage matches 8 run scoreboard players operation @s stats.points.indiv.g6 = @s tr.points.indiv
-execute if score tr.handler tr.stage matches 8 run scoreboard players add stmc.handler event.stage 1
+execute if score tr.handler tr.stage matches 9 run scoreboard players set @a tr.points.indiv 0
+execute as @a if score tr.handler tr.stage matches 9 run scoreboard players operation @s stats.points.indiv.g6 = @s tr.points.indiv
+execute if score tr.handler tr.stage matches 9 run scoreboard players add stmc.handler event.stage 1
