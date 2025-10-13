@@ -21,6 +21,9 @@ execute as @a[team=ORANGE_OTTERS] at @s run scoreboard players operation disco.O
 scoreboard players set disco.PinkPikas disco.points.team 0
 execute as @a[team=PINK_PIKAS] at @s run scoreboard players operation disco.PinkPikas disco.points.team += @s disco.points.indiv
 
+scoreboard players set disco.YellowYaks disco.points.team 0
+execute as @a[team=YELLOW_YAKS] at @s run scoreboard players operation disco.YellowYaks disco.points.team += @s disco.points.indiv
+
 scoreboard players set disco.GreenGoats disco.points.team 0
 execute as @a[team=GREEN_GOATS] at @s run scoreboard players operation disco.GreenGoats disco.points.team += @s disco.points.indiv
 
@@ -29,6 +32,9 @@ execute as @a[team=CYAN_COUGARS] at @s run scoreboard players operation disco.Cy
 
 scoreboard players set disco.PurplePenguins disco.points.team 0
 execute as @a[team=PURPLE_PENGUINS] at @s run scoreboard players operation disco.PurplePenguins disco.points.team += @s disco.points.indiv
+
+scoreboard players set disco.BlueBears disco.points.team 0
+execute as @a[team=BLUE_BEARS] at @s run scoreboard players operation disco.BlueBears disco.points.team += @s disco.points.indiv
 
 # <===== Actionbar =====>
 

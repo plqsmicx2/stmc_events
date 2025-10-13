@@ -21,7 +21,13 @@
 # <===== GAME-WIDE =====>
 
 # reset inventories
-item replace entity @a hotbar.0 with diamond_pickaxe[custom_name={"text":"BREAKER","color":"dark_aqua","bold":true},tool={default_mining_speed:.1,damage_per_block:0,rules:[{speed:9999999,blocks:["deepslate_tiles","mud","mangrove_roots","soul_sand","white_concrete","light_blue_concrete","pink_concrete","purple_concrete","blue_concrete","yellow_concrete","orange_concrete","prismarine","dark_prismarine","prismarine_bricks","light_blue_stained_glass","sea_lantern","light_blue_wool","lime_concrete","yellow_wool","lapis_block","dirt","coarse_dirt","cobblestone","tuff_bricks","waxed_chiseled_copper","waxed_exposed_copper_bulb","waxed_weathered_copper_grate","waxed_oxidized_cut_copper","red_concrete"]}]}]
+item replace entity @a hotbar.0 with diamond_pickaxe[custom_name={"text":"BREAKER","color":"dark_aqua","bold":true},tool={default_mining_speed:.1,damage_per_block:0,rules:[{speed:9999999,blocks:[ \
+                                                    "deepslate_tiles","mud","mangrove_roots","soul_sand", \
+                                                    "light_blue_wool","packed_ice","snow_block","redstone_block","coarse_dirt","stone_bricks","iron_block", \
+                                                    "prismarine_bricks","dark_prismarine","light_blue_stained_glass","sea_lantern","prismarine", \
+                                                    "white_wool","calcite","white_terracotta","black_concrete", \
+                                                    "tuff_bricks","waxed_oxidized_cut_copper","waxed_weathered_copper_grate","waxed_exposed_copper_bulb","waxed_chiseled_copper", \
+                                                    "red_concrete","orange_concrete","yellow_concrete","lime_concrete","blue_concrete"]}]}]
 item replace entity @a hotbar.1 with air
 
 # kill item drops
@@ -86,7 +92,7 @@ scoreboard players operation replicate.RedRaccoons replicate.timer.game += repli
 
 # <===== ORANGE OTTERS =====>
 
-function trials:replicate/round_active/orange_otters
+# function trials:replicate/round_active/orange_otters
 
 # increment appropriate timer for Orange Otters
 execute if score replicate.OrangeOtters replicate.stage matches 0 run scoreboard players add replicate.OrangeOtters replicate.timer.build1 1
@@ -109,7 +115,7 @@ scoreboard players operation replicate.OrangeOtters replicate.timer.game += repl
 
 # <===== PINK PIKAS =====>
 
-function trials:replicate/round_active/pink_pikas
+# function trials:replicate/round_active/pink_pikas
 
 # increment appropriate timer for Pink Pikas
 execute if score replicate.PinkPikas replicate.stage matches 0 run scoreboard players add replicate.PinkPikas replicate.timer.build1 1
@@ -132,7 +138,7 @@ scoreboard players operation replicate.PinkPikas replicate.timer.game += replica
 
 # <===== GREEN GOATS =====>
 
-function trials:replicate/round_active/green_goats
+# function trials:replicate/round_active/green_goats
 
 # increment appropriate timer for Green Goats
 execute if score replicate.GreenGoats replicate.stage matches 0 run scoreboard players add replicate.GreenGoats replicate.timer.build1 1
@@ -155,7 +161,7 @@ scoreboard players operation replicate.GreenGoats replicate.timer.game += replic
 
 # <===== CYAN COUGARS =====>
 
-function trials:replicate/round_active/cyan_cougars
+# function trials:replicate/round_active/cyan_cougars
 
 # increment appropriate timer for Cyan Cougars
 execute if score replicate.CyanCougars replicate.stage matches 0 run scoreboard players add replicate.CyanCougars replicate.timer.build1 1
@@ -178,7 +184,7 @@ scoreboard players operation replicate.CyanCougars replicate.timer.game += repli
 
 # <===== PURPLE PENGUINS =====>
 
-function trials:replicate/round_active/purple_penguins
+# function trials:replicate/round_active/purple_penguins
 
 # increment appropriate timer for Purple Penguins
 execute if score replicate.PurplePenguins replicate.stage matches 0 run scoreboard players add replicate.PurplePenguins replicate.timer.build1 1

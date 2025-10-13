@@ -21,6 +21,11 @@ team add PINK_PIKAS {"text": "Pink Pikas", "color": "light_purple"}
 team modify PINK_PIKAS color light_purple
 team modify PINK_PIKAS prefix {"text": "\ua000", "font": "team_logos:pink_pikas"}
 
+# Yellow Yaks
+team add YELLOW_YAKS {"text": "Yellow Yaks", "color": "yellow"}
+team modify YELLOW_YAKS color yellow
+team modify YELLOW_YAKS prefix {"text": "\ua000", "font": "team_logos:yellow_yaks"}
+
 # Green Goats
 team add GREEN_GOATS {"text": "Green Goats", "color": "dark_green"}
 team modify GREEN_GOATS color dark_green
@@ -35,6 +40,11 @@ team modify CYAN_COUGARS prefix {"text": "\ua000", "font": "team_logos:cyan_coug
 team add PURPLE_PENGUINS {"text": "Purple Penguins", "color": "dark_purple"}
 team modify PURPLE_PENGUINS color dark_purple
 team modify PURPLE_PENGUINS prefix {"text": "\ua000", "font": "team_logos:purple_penguins"}
+
+# Blue Bears
+team add BLUE_BEARS {"text": "Blue Bears", "color": "blue"}
+team modify BLUE_BEARS color blue
+team modify BLUE_BEARS prefix {"text": "\ua000", "font": "team_logos:blue_bears"}
 
 # Spectators
 team add SPECTATORS {"text": "Spectators", "color": "gray"}
@@ -62,8 +72,9 @@ scoreboard objectives add stats.winningTeam dummy
 # tracks individual points across event [set by sum of indiv.g# but weighted for game multipliers]
 scoreboard objectives add stats.points.indiv dummy
 scoreboard objectives add stats.points.indiv.rank dummy
-# tracks individual points across event [set by sum of indiv.g#]
-scoreboard objectives add stats.points.indiv_unmultiplied dummy
+# voting trackers
+scoreboard objectives add event.voting.investedTokens dummy
+scoreboard objectives add event.voting.bank used:carrot_on_a_stick
 # tracks individual points in each game VVVV
 scoreboard objectives add stats.points.indiv.g1 dummy
 scoreboard objectives add stats.points.indiv.g2 dummy
@@ -71,6 +82,8 @@ scoreboard objectives add stats.points.indiv.g3 dummy
 scoreboard objectives add stats.points.indiv.g4 dummy
 scoreboard objectives add stats.points.indiv.g5 dummy
 scoreboard objectives add stats.points.indiv.g6 dummy
+scoreboard objectives add stats.points.indiv.g7 dummy
+scoreboard objectives add stats.points.indiv.g8 dummy
 # constants that store the multiplier value of each game
 scoreboard objectives add event.multipliers.g1 dummy
 scoreboard objectives add event.multipliers.g2 dummy
@@ -78,6 +91,8 @@ scoreboard objectives add event.multipliers.g3 dummy
 scoreboard objectives add event.multipliers.g4 dummy
 scoreboard objectives add event.multipliers.g5 dummy
 scoreboard objectives add event.multipliers.g6 dummy
+scoreboard objectives add event.multipliers.g7 dummy
+scoreboard objectives add event.multipliers.g8 dummy
 # value of 100 to divide each raw multiplier by (since we can't have floats)
 scoreboard objectives add event.multipliers.precision dummy
 
@@ -95,13 +110,18 @@ scoreboard players set stmc.handler event.paused 1
 # /reset functions will increment the stage
 scoreboard players set stmc.handler event.stage 0
 
+# everyone starts with 0 invested tokens
+scoreboard players set @a event.voting.investedTokens 0
+
 # and set some multiplier values
 scoreboard players set stmc.handler event.multipliers.g1 100
 scoreboard players set stmc.handler event.multipliers.g2 100
 scoreboard players set stmc.handler event.multipliers.g3 125
-scoreboard players set stmc.handler event.multipliers.g4 150
-scoreboard players set stmc.handler event.multipliers.g5 175
-scoreboard players set stmc.handler event.multipliers.g6 200
+scoreboard players set stmc.handler event.multipliers.g4 125
+scoreboard players set stmc.handler event.multipliers.g5 150
+scoreboard players set stmc.handler event.multipliers.g6 150
+scoreboard players set stmc.handler event.multipliers.g7 175
+scoreboard players set stmc.handler event.multipliers.g8 200
 scoreboard players set stmc.handler event.multipliers.precision 100
 
 # and reset each timer
@@ -137,5 +157,7 @@ scoreboard players set @a stats.points.indiv.g3 0
 scoreboard players set @a stats.points.indiv.g4 0
 scoreboard players set @a stats.points.indiv.g5 0
 scoreboard players set @a stats.points.indiv.g6 0
+scoreboard players set @a stats.points.indiv.g7 0
+scoreboard players set @a stats.points.indiv.g8 0
 function lobby:points_update
 function lobby:sidebar

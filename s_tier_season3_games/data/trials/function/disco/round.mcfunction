@@ -6,8 +6,16 @@ execute in trials:disco if score disco.handler disco.rounds_played matches 0 if 
 # <===== ROUND START =====>
 
 # set current round length
-execute if score disco.handler disco.rounds_played matches 0..14 run scoreboard players set disco.handler disco.current_round_length 40
+execute if score disco.handler disco.rounds_played matches 0..4 run scoreboard players set disco.handler disco.current_round_length 60
 execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 0 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
+
+execute if score disco.handler disco.rounds_played matches 5..9 run scoreboard players set disco.handler disco.current_round_length 50
+execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 5 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
+execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 5 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
+
+execute if score disco.handler disco.rounds_played matches 10..14 run scoreboard players set disco.handler disco.current_round_length 40
+execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 10 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
+execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 10 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
 
 execute if score disco.handler disco.rounds_played matches 15..24 run scoreboard players set disco.handler disco.current_round_length 30
 execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 15 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
@@ -36,60 +44,60 @@ scoreboard players operation disco.handler disco.current_round_length_delay += d
 execute if score disco.handler disco.timer.game matches 1 store result score disco.handler disco.current_round_block run random value 1..5
 
 # and give the player that block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.0 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.1 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.2 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.3 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.4 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.5 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.6 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.7 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.8 with minecraft:amethyst_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s weapon.offhand with minecraft:amethyst_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.0 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.1 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.2 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.3 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.4 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.5 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.6 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.7 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s hotbar.8 with minecraft:stripped_dark_oak_wood
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 1 run item replace entity @s weapon.offhand with minecraft:stripped_dark_oak_wood
 
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.0 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.1 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.2 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.3 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.4 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.5 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.6 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.7 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.8 with minecraft:ochre_froglight
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s weapon.offhand with minecraft:ochre_froglight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.0 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.1 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.2 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.3 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.4 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.5 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.6 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.7 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s hotbar.8 with minecraft:snow_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 2 run item replace entity @s weapon.offhand with minecraft:snow_block
 
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.0 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.1 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.2 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.3 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.4 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.5 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.6 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.7 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.8 with minecraft:pink_wool
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s weapon.offhand with minecraft:pink_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.0 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.1 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.2 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.3 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.4 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.5 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.6 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.7 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s hotbar.8 with minecraft:light_blue_wool
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 3 run item replace entity @s weapon.offhand with minecraft:light_blue_wool
 
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.0 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.1 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.2 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.3 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.4 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.5 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.6 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.7 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.8 with minecraft:emerald_block
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s weapon.offhand with minecraft:emerald_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.0 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.1 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.2 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.3 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.4 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.5 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.6 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.7 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s hotbar.8 with minecraft:moss_block
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 4 run item replace entity @s weapon.offhand with minecraft:moss_block
 
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.0 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.1 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.2 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.3 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.4 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.5 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.6 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.7 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.8 with minecraft:orange_glazed_terracotta
-execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s weapon.offhand with minecraft:orange_glazed_terracotta
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.0 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.1 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.2 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.3 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.4 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.5 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.6 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.7 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s hotbar.8 with minecraft:shroomlight
+execute as @a if score disco.handler disco.timer.game matches 1 if score disco.handler disco.current_round_block matches 5 run item replace entity @s weapon.offhand with minecraft:shroomlight
 
 # and update the floor
 
@@ -122,39 +130,39 @@ execute if score disco.handler disco.timer.game = disco.handler disco.current_ro
 # remove black concrete
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:black_concrete
 
-# keep amethyst block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:ochre_froglight
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:pink_wool
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:emerald_block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:orange_glazed_terracotta
+# keep dark oak wood
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:snow_block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:light_blue_wool
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:moss_block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:shroomlight
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 1 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:tinted_glass
 
-# keep ochre froglight
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:amethyst_block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:pink_wool
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:emerald_block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:orange_glazed_terracotta
+# keep snow block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:stripped_dark_oak_wood
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:light_blue_wool
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:moss_block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:shroomlight
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 2 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:tinted_glass
 
-# keep pink wool
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:amethyst_block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:ochre_froglight
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:emerald_block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:orange_glazed_terracotta
+# keep light blue wool
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:stripped_dark_oak_wood
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:snow_block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:moss_block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:shroomlight
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 3 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:tinted_glass
 
-# keep emerald block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:amethyst_block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:ochre_froglight
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:pink_wool
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:orange_glazed_terracotta
+# keep moss block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:stripped_dark_oak_wood
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:snow_block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:light_blue_wool
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:shroomlight
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 4 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:tinted_glass
 
-# keep orange glazed terracotta
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:amethyst_block
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:ochre_froglight
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:pink_wool
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:emerald_block
+# keep shroomlight
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:stripped_dark_oak_wood
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:snow_block
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:light_blue_wool
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:moss_block
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length if score disco.handler disco.current_round_block matches 5 in trials:disco run fill -5 103 -5 5 107 5 air replace minecraft:tinted_glass
 
 # <===== ROUND END =====>
@@ -162,3 +170,10 @@ execute if score disco.handler disco.timer.game = disco.handler disco.current_ro
 # round ends, reset timer & kill !players
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length_delay in trials:disco run kill @e[type=!player]
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length_delay run scoreboard players set disco.handler disco.timer.game 0
+
+# <===== GAME END =====>
+
+# move to next stage after 60 rounds
+execute if score disco.handler disco.rounds_played matches 60.. run scoreboard players set disco.handler disco.stage 4
+# or move to next stage no players are alive
+execute if score disco.handler disco.players_alive matches 0 run scoreboard players set disco.handler disco.stage 4

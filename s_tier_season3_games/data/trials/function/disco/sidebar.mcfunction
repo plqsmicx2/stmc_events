@@ -1,9 +1,9 @@
 # creates the sidebar for the game
 
 # sidebar looks like this:
-# <lime>STMC Invitational<lime>
+# <lime>STMC Open<lime>
 # 
-# <gold>Disco<gold>
+# <cyan>Disco<cyan>
 # <red>Rounds Played: ##<red>
 # 
 # <yellow>Points:<yellow>
@@ -11,91 +11,13 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add disco.sidebar dummy {"text": "  STMC Invitational Reloaded  ", "color": "green", "bold": true}
+scoreboard objectives add disco.sidebar dummy {"text": "  STMC Open  ", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar disco.sidebar
 
 # <===== RANK TEAMS =====>
 # first, we run some calculations to determine which teams should be present
 
-# save values in a temporary place (to use later in the sidebar)
-scoreboard objectives add disco.points.team.temp dummy
-scoreboard players operation disco.RedRaccoons disco.points.team.temp = disco.RedRaccoons disco.points.team
-scoreboard players operation disco.OrangeOtters disco.points.team.temp = disco.OrangeOtters disco.points.team
-scoreboard players operation disco.PinkPikas disco.points.team.temp = disco.PinkPikas disco.points.team
-scoreboard players operation disco.GreenGoats disco.points.team.temp = disco.GreenGoats disco.points.team
-scoreboard players operation disco.CyanCougars disco.points.team.temp = disco.CyanCougars disco.points.team
-scoreboard players operation disco.PurplePenguins disco.points.team.temp = disco.PurplePenguins disco.points.team
-
-# set a dummy player to -1
-scoreboard players set $disco.highest disco.points.team -1
-
-# determine highest value
-# because we're using fake players, we have to manually test each one
-scoreboard players operation $disco.highest disco.points.team > disco.RedRaccoons disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.OrangeOtters disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.PinkPikas disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.GreenGoats disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.CyanCougars disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.PurplePenguins disco.points.team
-
-# determine who has that highest value & assign them #1 rank
-# again manually checking
-execute if score disco.RedRaccoons disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.RedRaccoons disco.points.team.rank 1
-execute if score disco.OrangeOtters disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.OrangeOtters disco.points.team.rank 1
-execute if score disco.PinkPikas disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.PinkPikas disco.points.team.rank 1
-execute if score disco.GreenGoats disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.GreenGoats disco.points.team.rank 1
-execute if score disco.CyanCougars disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.CyanCougars disco.points.team.rank 1
-execute if score disco.PurplePenguins disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.PurplePenguins disco.points.team.rank 1
-
-# pop the highest value to reset it
-# & again, manually checking
-execute if score disco.RedRaccoons disco.points.team.rank matches 1 run scoreboard players reset disco.RedRaccoons disco.points.team
-execute if score disco.OrangeOtters disco.points.team.rank matches 1 run scoreboard players reset disco.OrangeOtters disco.points.team
-execute if score disco.PinkPikas disco.points.team.rank matches 1 run scoreboard players reset disco.PinkPikas disco.points.team
-execute if score disco.GreenGoats disco.points.team.rank matches 1 run scoreboard players reset disco.GreenGoats disco.points.team
-execute if score disco.CyanCougars disco.points.team.rank matches 1 run scoreboard players reset disco.CyanCougars disco.points.team
-execute if score disco.PurplePenguins disco.points.team.rank matches 1 run scoreboard players reset disco.PurplePenguins disco.points.team
-
-# and repeat two more times
-scoreboard players set $disco.highest disco.points.team -1
-scoreboard players operation $disco.highest disco.points.team > disco.RedRaccoons disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.OrangeOtters disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.PinkPikas disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.GreenGoats disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.CyanCougars disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.PurplePenguins disco.points.team
-execute if score disco.RedRaccoons disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.RedRaccoons disco.points.team.rank 2
-execute if score disco.OrangeOtters disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.OrangeOtters disco.points.team.rank 2
-execute if score disco.PinkPikas disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.PinkPikas disco.points.team.rank 2
-execute if score disco.GreenGoats disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.GreenGoats disco.points.team.rank 2
-execute if score disco.CyanCougars disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.CyanCougars disco.points.team.rank 2
-execute if score disco.PurplePenguins disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.PurplePenguins disco.points.team.rank 2
-execute if score disco.RedRaccoons disco.points.team.rank matches 2 run scoreboard players reset disco.RedRaccoons disco.points.team
-execute if score disco.OrangeOtters disco.points.team.rank matches 2 run scoreboard players reset disco.OrangeOtters disco.points.team
-execute if score disco.PinkPikas disco.points.team.rank matches 2 run scoreboard players reset disco.PinkPikas disco.points.team
-execute if score disco.GreenGoats disco.points.team.rank matches 2 run scoreboard players reset disco.GreenGoats disco.points.team
-execute if score disco.CyanCougars disco.points.team.rank matches 2 run scoreboard players reset disco.CyanCougars disco.points.team
-execute if score disco.PurplePenguins disco.points.team.rank matches 2 run scoreboard players reset disco.PurplePenguins disco.points.team
-
-scoreboard players set $disco.highest disco.points.team -1
-scoreboard players operation $disco.highest disco.points.team > disco.RedRaccoons disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.OrangeOtters disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.PinkPikas disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.GreenGoats disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.CyanCougars disco.points.team
-scoreboard players operation $disco.highest disco.points.team > disco.PurplePenguins disco.points.team
-execute if score disco.RedRaccoons disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.RedRaccoons disco.points.team.rank 3
-execute if score disco.OrangeOtters disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.OrangeOtters disco.points.team.rank 3
-execute if score disco.PinkPikas disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.PinkPikas disco.points.team.rank 3
-execute if score disco.GreenGoats disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.GreenGoats disco.points.team.rank 3
-execute if score disco.CyanCougars disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.CyanCougars disco.points.team.rank 3
-execute if score disco.PurplePenguins disco.points.team = $disco.highest disco.points.team run scoreboard players set disco.PurplePenguins disco.points.team.rank 3
-scoreboard players reset disco.RedRaccoons disco.points.team
-scoreboard players reset disco.OrangeOtters disco.points.team
-scoreboard players reset disco.PinkPikas disco.points.team
-scoreboard players reset disco.GreenGoats disco.points.team
-scoreboard players reset disco.CyanCougars disco.points.team
-scoreboard players reset disco.PurplePenguins disco.points.team
+function trials:disco/calculate_rankings
 
 # <===== BUILD FROM THE BOTTOM =====>
 
@@ -103,9 +25,11 @@ scoreboard players reset disco.PurplePenguins disco.points.team
 scoreboard players reset disco.RedRaccoons disco.sidebar
 scoreboard players reset disco.OrangeOtters disco.sidebar
 scoreboard players reset disco.PinkPikas disco.sidebar
+scoreboard players reset disco.YellowYaks disco.sidebar
 scoreboard players reset disco.GreenGoats disco.sidebar
 scoreboard players reset disco.CyanCougars disco.sidebar
 scoreboard players reset disco.PurplePenguins disco.sidebar
+scoreboard players reset disco.BlueBears disco.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
@@ -115,45 +39,53 @@ execute if score disco.OrangeOtters disco.points.team.rank matches 1..3 run scor
 execute if score disco.OrangeOtters disco.points.team.rank matches 1..3 run scoreboard players display name disco.OrangeOtters disco.sidebar {"text": "  Orange Otters", "color": "gold"}
 execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players operation disco.PinkPikas disco.sidebar = disco.PinkPikas disco.points.team.temp
 execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players display name disco.PinkPikas disco.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+execute if score disco.YellowYaks disco.points.team.rank matches 1..3 run scoreboard players operation disco.YellowYaks disco.sidebar = disco.YellowYaks disco.points.team.temp
+execute if score disco.YellowYaks disco.points.team.rank matches 1..3 run scoreboard players display name disco.YellowYaks disco.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 execute if score disco.GreenGoats disco.points.team.rank matches 1..3 run scoreboard players operation disco.GreenGoats disco.sidebar = disco.GreenGoats disco.points.team.temp
 execute if score disco.GreenGoats disco.points.team.rank matches 1..3 run scoreboard players display name disco.GreenGoats disco.sidebar {"text": "  Green Goats", "color": "dark_green"}
 execute if score disco.CyanCougars disco.points.team.rank matches 1..3 run scoreboard players operation disco.CyanCougars disco.sidebar = disco.CyanCougars disco.points.team.temp
 execute if score disco.CyanCougars disco.points.team.rank matches 1..3 run scoreboard players display name disco.CyanCougars disco.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
 execute if score disco.PurplePenguins disco.points.team.rank matches 1..3 run scoreboard players operation disco.PurplePenguins disco.sidebar = disco.PurplePenguins disco.points.team.temp
 execute if score disco.PurplePenguins disco.points.team.rank matches 1..3 run scoreboard players display name disco.PurplePenguins disco.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
+execute if score disco.BlueBears disco.points.team.rank matches 1..3 run scoreboard players operation disco.BlueBears disco.sidebar = disco.BlueBears disco.points.team.temp
+execute if score disco.BlueBears disco.points.team.rank matches 1..3 run scoreboard players display name disco.BlueBears disco.sidebar {"text": "  Blue Bears", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS disco.RedRaccoons
 team join ORANGE_OTTERS disco.OrangeOtters
 team join PINK_PIKAS disco.PinkPikas
+team join YELLOW_YAKS disco.YellowYaks
 team join GREEN_GOATS disco.GreenGoats
 team join CYAN_COUGARS disco.CyanCougars
 team join PURPLE_PENGUINS disco.PurplePenguins
+team join BLUE_BEARS disco.BlueBears
 
 # <==== HEADER INFO =====>
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: disco.sidebar 4201
+scoreboard players set §e§lPoints: disco.sidebar 380
 
 # blank line
-scoreboard players set §a disco.sidebar 4202
+scoreboard players set §a disco.sidebar 381
 
 # teams alive
-scoreboard players set disco.teamsAlive disco.sidebar 4203
-execute if score disco.handler disco.teams_alive matches 6 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 6/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 5 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 5/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 4 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 4/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 3 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 3/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 2 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 2/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 1 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 1/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 0 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 0/6", "color": "red", "bold": true}
+scoreboard players set disco.teamsAlive disco.sidebar 382
+execute if score disco.handler disco.teams_alive matches 8 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 8/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 7 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 7/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 6 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 6/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 5 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 5/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 4 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 4/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 3 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 3/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 2 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 2/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 1 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 1/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 0 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 0/8", "color": "red", "bold": true}
 
 # blank line
-scoreboard players set §b disco.sidebar 4204
+scoreboard players set §b disco.sidebar 383
 
 # round number
-scoreboard players set disco.roundsPlayed disco.sidebar 4205
+scoreboard players set disco.roundsPlayed disco.sidebar 384
 execute if score disco.handler disco.rounds_played matches 0 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 0", "color": "dark_red", "bold": true}
 execute if score disco.handler disco.rounds_played matches 1 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 1", "color": "dark_red", "bold": true}
 execute if score disco.handler disco.rounds_played matches 2 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 2", "color": "dark_red", "bold": true}
@@ -217,8 +149,8 @@ execute if score disco.handler disco.rounds_played matches 59 run scoreboard pla
 execute if score disco.handler disco.rounds_played matches 60 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 60", "color": "dark_red", "bold": true}
 
 # current game
-scoreboard players set Disco disco.sidebar 4206
+scoreboard players set Disco disco.sidebar 385
 scoreboard players display name Disco disco.sidebar {"text": "Disco", "color": "dark_aqua", "bold": true}
 
 # blank line #2
-scoreboard players set § disco.sidebar 4207
+scoreboard players set § disco.sidebar 386

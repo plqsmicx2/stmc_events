@@ -35,27 +35,23 @@ execute in trials:spleef if score spleef.handler spleef.timer.explanation matche
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:"All points are determined by placement.",color:"aqua"}
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"5 points","color":"red"},{"text":" each time someone else dies.","color":"aqua"}]
+execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"3 points","color":"red"},{"text":" each time someone else dies.","color":"aqua"}]
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}
 
-# blurb #4
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 640 run tp @a 0.0 140 0.0 180 90
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:" "}
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:"You will also earn the following bonus points when this # of players remain:","color":"aqua"}
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:" "}
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a ["",{text:"Top 10: +",color:"aqua"},{"text":"15 points","color":"red"}]
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a ["",{text:"Top 5: +",color:"aqua"},{"text":"10 points","color":"red"}]
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a ["",{text:"Top 3: +",color:"aqua"},{"text":"10 points","color":"red"}]
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a ["",{text:"Top 2: +",color:"aqua"},{"text":"15 points","color":"red"}]
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a ["",{text:"Top 1: +",color:"aqua"},{"text":"20 points","color":"red"}]
-execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:" "}
-
 # blurb #5
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 800 run tp @a 0 154 0 -180 90
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 800 run gamemode survival @a
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 800 run gamemode spectator @a[team=SPECTATORS]
-execute if score spleef.handler spleef.timer.explanation matches 800 run tellraw @a {text:" "}
-execute if score spleef.handler spleef.timer.explanation matches 800 run tellraw @a {text:"Good luck!","color":"aqua"}
-execute if score spleef.handler spleef.timer.explanation matches 800 run tellraw @a {text:" "}
-execute if score spleef.handler spleef.timer.explanation matches 800 run tellraw @a {text:"The game begins in 20 seconds!","color":"aqua"}
-execute if score spleef.handler spleef.timer.explanation matches 800 run tellraw @a {text:" "}
+execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 640 run tp @a 0 121 0 -180 90
+execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 640 run gamemode survival @a
+execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 640 run gamemode spectator @a[team=SPECTATORS]
+execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=PINK_PIKAS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=15961002,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=YELLOW_YAKS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16701501,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=GREEN_GOATS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=6192150,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=1481884,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=3949738,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:" "}
+execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:"Good luck!","color":"aqua"}
+execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:" "}
+execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:"The game begins in 20 seconds!","color":"aqua"}
+execute if score spleef.handler spleef.timer.explanation matches 640 run tellraw @a {text:" "}

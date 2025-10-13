@@ -3,7 +3,7 @@
 # this function is called as the game is starting to initialize everything
 
 # teleport players
-execute in trials:replicate as @a[team=RED_RACCOONS] run tp @s 39 113 18
+execute in trials:replicate as @a[team=RED_RACCOONS] run tp @s 45 106 64
 execute in trials:replicate as @a[team=ORANGE_OTTERS] run tp @s 0 113 18
 execute in trials:replicate as @a[team=PINK_PIKAS] run tp @s -39 113 18
 execute in trials:replicate as @a[team=GREEN_GOATS] run tp @s -39 113 -18

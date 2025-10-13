@@ -8,107 +8,171 @@ scoreboard objectives add race.points.team.temp dummy
 scoreboard players operation race.RedRaccoons race.points.team.temp = race.RedRaccoons race.points.team
 scoreboard players operation race.OrangeOtters race.points.team.temp = race.OrangeOtters race.points.team
 scoreboard players operation race.PinkPikas race.points.team.temp = race.PinkPikas race.points.team
+scoreboard players operation race.YellowYaks race.points.team.temp = race.YellowYaks race.points.team
 scoreboard players operation race.GreenGoats race.points.team.temp = race.GreenGoats race.points.team
 scoreboard players operation race.CyanCougars race.points.team.temp = race.CyanCougars race.points.team
 scoreboard players operation race.PurplePenguins race.points.team.temp = race.PurplePenguins race.points.team
+scoreboard players operation race.BlueBears race.points.team.temp = race.BlueBears race.points.team
 
 # then reset ranks
 scoreboard players set race.RedRaccoons race.points.team.rank -1
 scoreboard players set race.OrangeOtters race.points.team.rank -1
 scoreboard players set race.PinkPikas race.points.team.rank -1
+scoreboard players set race.YellowYaks race.points.team.rank -1
 scoreboard players set race.GreenGoats race.points.team.rank -1
 scoreboard players set race.CyanCougars race.points.team.rank -1
 scoreboard players set race.PurplePenguins race.points.team.rank -1
+scoreboard players set race.BlueBears race.points.team.rank -1
 
 # set our highest value to -1
-scoreboard players set $race.highest race.points.team.temp -1
+scoreboard players set $stmc.highest race.points.team.temp -1
 
 # then determine the highest value of teams without a rank
-execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
-execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
-execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp
-execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp
-execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp
-execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
+execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
+execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp
+execute unless score race.YellowYaks race.points.team.rank matches 1.. if score race.YellowYaks race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp
+execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp
+execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp
+execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.BlueBears race.points.team.rank matches 1.. if score race.BlueBears race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp
 
 # then determine which team has that exact value & give them the highest rank applicable
-execute if score $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 1
-execute if score $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 1
-execute if score $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 1
-execute if score $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 1
-execute if score $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 1
-execute if score $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 1
+execute if score $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 1
+execute if score $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 1
+execute if score $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 1
+execute if score $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp run scoreboard players set race.YellowYaks race.points.team.rank 1
+execute if score $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 1
+execute if score $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 1
+execute if score $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 1
+execute if score $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp run scoreboard players set race.BlueBears race.points.team.rank 1
 
 # and then repeat the process until all teams have been ranked
-scoreboard players set $race.highest race.points.team.temp -1
-execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
-execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
-execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp
-execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp
-execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp
-execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
-execute if score $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 2
-execute if score $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 2
-execute if score $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 2
-execute if score $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 2
-execute if score $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 2
-execute if score $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 2
+scoreboard players set $stmc.highest race.points.team.temp -1
+execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
+execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
+execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp
+execute unless score race.YellowYaks race.points.team.rank matches 1.. if score race.YellowYaks race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp
+execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp
+execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp
+execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.BlueBears race.points.team.rank matches 1.. if score race.BlueBears race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp
+execute if score $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 2
+execute if score $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 2
+execute if score $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 2
+execute if score $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp run scoreboard players set race.YellowYaks race.points.team.rank 2
+execute if score $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 2
+execute if score $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 2
+execute if score $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 2
+execute if score $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp run scoreboard players set race.BlueBears race.points.team.rank 2
 
-scoreboard players set $race.highest race.points.team.temp -1
-execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
-execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
-execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp
-execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp
-execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp
-execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
-execute if score $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 3
-execute if score $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 3
-execute if score $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 3
-execute if score $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 3
-execute if score $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 3
-execute if score $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 3
+scoreboard players set $stmc.highest race.points.team.temp -1
+execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
+execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
+execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp
+execute unless score race.YellowYaks race.points.team.rank matches 1.. if score race.YellowYaks race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp
+execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp
+execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp
+execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.BlueBears race.points.team.rank matches 1.. if score race.BlueBears race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp
+execute if score $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 3
+execute if score $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 3
+execute if score $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 3
+execute if score $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp run scoreboard players set race.YellowYaks race.points.team.rank 3
+execute if score $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 3
+execute if score $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 3
+execute if score $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 3
+execute if score $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp run scoreboard players set race.BlueBears race.points.team.rank 3
 
-scoreboard players set $race.highest race.points.team.temp -1
-execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
-execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
-execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp
-execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp
-execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp
-execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
-execute if score $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 4
-execute if score $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 4
-execute if score $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 4
-execute if score $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 4
-execute if score $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 4
-execute if score $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 4
+scoreboard players set $stmc.highest race.points.team.temp -1
+execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
+execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
+execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp
+execute unless score race.YellowYaks race.points.team.rank matches 1.. if score race.YellowYaks race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp
+execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp
+execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp
+execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.BlueBears race.points.team.rank matches 1.. if score race.BlueBears race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp
+execute if score $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 4
+execute if score $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 4
+execute if score $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 4
+execute if score $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp run scoreboard players set race.YellowYaks race.points.team.rank 4
+execute if score $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 4
+execute if score $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 4
+execute if score $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 4
+execute if score $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp run scoreboard players set race.BlueBears race.points.team.rank 4
 
-scoreboard players set $race.highest race.points.team.temp -1
-execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
-execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
-execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp
-execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp
-execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp
-execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
-execute if score $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 5
-execute if score $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 5
-execute if score $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 5
-execute if score $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 5
-execute if score $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 5
-execute if score $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 5
+scoreboard players set $stmc.highest race.points.team.temp -1
+execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
+execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
+execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp
+execute unless score race.YellowYaks race.points.team.rank matches 1.. if score race.YellowYaks race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp
+execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp
+execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp
+execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.BlueBears race.points.team.rank matches 1.. if score race.BlueBears race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp
+execute if score $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 5
+execute if score $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 5
+execute if score $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 5
+execute if score $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp run scoreboard players set race.YellowYaks race.points.team.rank 5
+execute if score $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 5
+execute if score $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 5
+execute if score $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 5
+execute if score $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp run scoreboard players set race.BlueBears race.points.team.rank 5
 
-scoreboard players set $race.highest race.points.team.temp -1
-execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
-execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
-execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp
-execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp
-execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp
-execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $race.highest race.points.team.temp run scoreboard players operation $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
-execute if score $race.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 6
-execute if score $race.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 6
-execute if score $race.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 6
-execute if score $race.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 6
-execute if score $race.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 6
-execute if score $race.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 6
+scoreboard players set $stmc.highest race.points.team.temp -1
+execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
+execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
+execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp
+execute unless score race.YellowYaks race.points.team.rank matches 1.. if score race.YellowYaks race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp
+execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp
+execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp
+execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.BlueBears race.points.team.rank matches 1.. if score race.BlueBears race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp
+execute if score $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 6
+execute if score $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 6
+execute if score $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 6
+execute if score $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp run scoreboard players set race.YellowYaks race.points.team.rank 6
+execute if score $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 6
+execute if score $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 6
+execute if score $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 6
+execute if score $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp run scoreboard players set race.BlueBears race.points.team.rank 6
+
+scoreboard players set $stmc.highest race.points.team.temp -1
+execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
+execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
+execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp
+execute unless score race.YellowYaks race.points.team.rank matches 1.. if score race.YellowYaks race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp
+execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp
+execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp
+execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.BlueBears race.points.team.rank matches 1.. if score race.BlueBears race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp
+execute if score $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 7
+execute if score $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 7
+execute if score $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 7
+execute if score $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp run scoreboard players set race.YellowYaks race.points.team.rank 7
+execute if score $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 7
+execute if score $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 7
+execute if score $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 7
+execute if score $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp run scoreboard players set race.BlueBears race.points.team.rank 7
+
+scoreboard players set $stmc.highest race.points.team.temp -1
+execute unless score race.RedRaccoons race.points.team.rank matches 1.. if score race.RedRaccoons race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp
+execute unless score race.OrangeOtters race.points.team.rank matches 1.. if score race.OrangeOtters race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp
+execute unless score race.PinkPikas race.points.team.rank matches 1.. if score race.PinkPikas race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp
+execute unless score race.YellowYaks race.points.team.rank matches 1.. if score race.YellowYaks race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp
+execute unless score race.GreenGoats race.points.team.rank matches 1.. if score race.GreenGoats race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp
+execute unless score race.CyanCougars race.points.team.rank matches 1.. if score race.CyanCougars race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp
+execute unless score race.PurplePenguins race.points.team.rank matches 1.. if score race.PurplePenguins race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp
+execute unless score race.BlueBears race.points.team.rank matches 1.. if score race.BlueBears race.points.team.temp > $stmc.highest race.points.team.temp run scoreboard players operation $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp
+execute if score $stmc.highest race.points.team.temp = race.RedRaccoons race.points.team.temp run scoreboard players set race.RedRaccoons race.points.team.rank 8
+execute if score $stmc.highest race.points.team.temp = race.OrangeOtters race.points.team.temp run scoreboard players set race.OrangeOtters race.points.team.rank 8
+execute if score $stmc.highest race.points.team.temp = race.PinkPikas race.points.team.temp run scoreboard players set race.PinkPikas race.points.team.rank 8
+execute if score $stmc.highest race.points.team.temp = race.YellowYaks race.points.team.temp run scoreboard players set race.YellowYaks race.points.team.rank 8
+execute if score $stmc.highest race.points.team.temp = race.GreenGoats race.points.team.temp run scoreboard players set race.GreenGoats race.points.team.rank 8
+execute if score $stmc.highest race.points.team.temp = race.CyanCougars race.points.team.temp run scoreboard players set race.CyanCougars race.points.team.rank 8
+execute if score $stmc.highest race.points.team.temp = race.PurplePenguins race.points.team.temp run scoreboard players set race.PurplePenguins race.points.team.rank 8
+execute if score $stmc.highest race.points.team.temp = race.BlueBears race.points.team.temp run scoreboard players set race.BlueBears race.points.team.rank 8
 
 # <===== INDIVIDUAL RANKINGS =====>
 

@@ -1,8 +1,5 @@
 # main thread handler for trials [TRIALS]
 
-# first, we call our load function if this is the first time we're here
-execute unless score tr.handler tr.stage matches 0.. run function trials:load
-
 # stage key:
 # 0- lobby #1: explains how trials works, randomly chooses game 1, then teleports us there
 # 1- game 1: exists as its own thread with tick & load; runs the whole game from start to finish
@@ -16,6 +13,7 @@ execute unless score tr.handler tr.stage matches 0.. run function trials:load
 # <===== run the lobbies & games =====>
 
 function trials:sidebar
+# sidebar also runs points update
 
 # lobby 1
 execute if score tr.handler tr.stage matches 0 run scoreboard players add tr.handler tr.timer.lobby1 1

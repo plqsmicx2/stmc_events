@@ -25,10 +25,9 @@ execute as @a run scoreboard players operation @s sg.r1.killPoints *= sg.handler
 # reset to 0
 execute as @a run scoreboard players set @s sg.r1.points 0
 
-# sum killPoints & indivPlacementPoints for players
+# sum killPoints & teamPlacementPoints for players
 
 execute as @a run scoreboard players operation @s sg.r1.points += @s sg.r1.killPoints
-execute as @a run scoreboard players operation @s sg.r1.points += @s sg.r1.indivPlacementPoints
 execute as @a run scoreboard players operation @s sg.r1.points += @s sg.r1.teamPlacementPoints
 
 # update indivPoints tracker
@@ -60,6 +59,11 @@ execute as @a[team=PINK_PIKAS] at @s run scoreboard players operation sg.PinkPik
 scoreboard players set sg.PinkPikas sg.points.team 0
 scoreboard players operation sg.PinkPikas sg.points.team += sg.PinkPikas sg.r1.points
 
+scoreboard players set sg.YellowYaks sg.r1.points 0
+execute as @a[team=YELLOW_YAKS] at @s run scoreboard players operation sg.YellowYaks sg.r1.points += @s sg.r1.points
+scoreboard players set sg.YellowYaks sg.points.team 0
+scoreboard players operation sg.YellowYaks sg.points.team += sg.YellowYaks sg.r1.points
+
 scoreboard players set sg.GreenGoats sg.r1.points 0
 execute as @a[team=GREEN_GOATS] at @s run scoreboard players operation sg.GreenGoats sg.r1.points += @s sg.r1.points
 scoreboard players set sg.GreenGoats sg.points.team 0
@@ -75,7 +79,12 @@ execute as @a[team=PURPLE_PENGUINS] at @s run scoreboard players operation sg.Pu
 scoreboard players set sg.PurplePenguins sg.points.team 0
 scoreboard players operation sg.PurplePenguins sg.points.team += sg.PurplePenguins sg.r1.points
 
-# <===== Kills Actionbar =====>
+scoreboard players set sg.BlueBears sg.r1.points 0
+execute as @a[team=BLUE_BEARS] at @s run scoreboard players operation sg.BlueBears sg.r1.points += @s sg.r1.points
+scoreboard players set sg.BlueBears sg.points.team 0
+scoreboard players operation sg.BlueBears sg.points.team += sg.BlueBears sg.r1.points
 
-# sets player actionbar to their # of kills
-execute as @a if score sg.r1.handler sg.r1.stage matches 3..4 run title @s actionbar ["",{text:"Kills: ",bold:true,color:"yellow"},{score:{name:"@s",objective:"sg.r1.kills"},bold:true,color:"red"},{text:"   |   Players Alive: ",bold:true,color:"yellow"},{score:{name:"sg.r1.handler",objective:"sg.players_alive"},bold:true,color:"red"},{text:"   |   Individual Points: ",bold:true,color:"yellow"},{score:{name:"@s",objective:"sg.points.indiv"},bold:true,color:"red"}]
+# <===== Actionbar =====>
+
+# sets player actionbar to Kills: # | Indiv Points: ## | Distance From Border: ##
+execute as @a if score sg.r1.handler sg.r1.stage matches 3..4 run title @s actionbar [{"text":"Kills: ","color":"yellow"},{"score":{"name":"@s","objective":"sg.r1.kills"},"color":"red"},{"text":"   |   Individual Points: ","color":"yellow"},{"score":{"name":"@s","objective":"sg.points.indiv"},"color":"red"},{"text":"   |   Distance From Border: ","color":"yellow"},{"score":{"name":"@s","objective":"sg.borderDistance"},"color":"red"}]
