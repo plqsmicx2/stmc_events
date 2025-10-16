@@ -66,7 +66,7 @@ execute if score stmc.handler event.stage matches 12 if score stmc.handler event
 # move to next game
 execute if score stmc.handler event.stage matches 2 if score stmc.handler event.timer.bgActive matches 3960.. run scoreboard players set stmc.handler event.stage 3
 execute if score stmc.handler event.stage matches 4 if score stmc.handler event.timer.bgActive matches 2760.. run scoreboard players set stmc.handler event.stage 5
-execute if score stmc.handler event.stage matches 6 if score stmc.handler event.timer.bgActive matches 9960.. run scoreboard players set stmc.handler event.stage 7
+execute if score stmc.handler event.stage matches 6 if score stmc.handler event.timer.bgActive matches 9960.. run function race:start
 execute if score stmc.handler event.stage matches 8 if score stmc.handler event.timer.bgActive matches 2760.. run scoreboard players set stmc.handler event.stage 9
 execute if score stmc.handler event.stage matches 10 if score stmc.handler event.timer.bgActive matches 2760.. run scoreboard players set stmc.handler event.stage 11
 execute if score stmc.handler event.stage matches 12 if score stmc.handler event.timer.bgActive matches 1560.. run scoreboard players set stmc.handler event.stage 13

@@ -11,9 +11,9 @@ execute as @a[gamemode=!spectator,scores={disco.alive=0}] at @s run playsound mi
 execute as @a[gamemode=!spectator,scores={disco.alive=0}] run gamemode spectator @s
 
 # and award points to players still alive
-execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 run scoreboard players add @s disco.points.indiv 5
+execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 run scoreboard players add @s disco.points.indiv 1
 execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
-execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+5 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Outlasted Player!",bold:true,color:"red"}]
+execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Outlasted Player!",bold:true,color:"red"}]
 
 # check total # of players alive
 scoreboard players set disco.handler disco.players_alive 0
@@ -27,21 +27,27 @@ scoreboard players set disco.OrangeOtters disco.players_alive 0
 execute as @a[team=ORANGE_OTTERS] if score @s disco.alive matches 1 run scoreboard players add disco.OrangeOtters disco.players_alive 1
 scoreboard players set disco.PinkPikas disco.players_alive 0
 execute as @a[team=PINK_PIKAS] if score @s disco.alive matches 1 run scoreboard players add disco.PinkPikas disco.players_alive 1
-scoreboard players set disco.GreenGoats disco.players_alive 0
+scoreboard players set disco.PinkPikas disco.players_alive 0
+execute as @a[team=YELLOW_YAKS] if score @s disco.alive matches 1 run scoreboard players add disco.YellowYaks disco.players_alive 1
+scoreboard players set disco.YellowYaks disco.players_alive 0
 execute as @a[team=GREEN_GOATS] if score @s disco.alive matches 1 run scoreboard players add disco.GreenGoats disco.players_alive 1
 scoreboard players set disco.CyanCougars disco.players_alive 0
 execute as @a[team=CYAN_COUGARS] if score @s disco.alive matches 1 run scoreboard players add disco.CyanCougars disco.players_alive 1
 scoreboard players set disco.PurplePenguins disco.players_alive 0
 execute as @a[team=PURPLE_PENGUINS] if score @s disco.alive matches 1 run scoreboard players add disco.PurplePenguins disco.players_alive 1
+scoreboard players set disco.BlueBears disco.players_alive 0
+execute as @a[team=BLUE_BEARS] if score @s disco.alive matches 1 run scoreboard players add disco.BlueBears disco.players_alive 1
 
 # and then for each team with > 0 players alive, we note that in teams_alive
 scoreboard players set disco.handler disco.teams_alive 0
 execute if score disco.RedRaccoons disco.players_alive matches 1..4 run scoreboard players add disco.handler disco.teams_alive 1
 execute if score disco.OrangeOtters disco.players_alive matches 1..4 run scoreboard players add disco.handler disco.teams_alive 1
 execute if score disco.PinkPikas disco.players_alive matches 1..4 run scoreboard players add disco.handler disco.teams_alive 1
+execute if score disco.YellowYaks disco.players_alive matches 1..4 run scoreboard players add disco.handler disco.teams_alive 1
 execute if score disco.GreenGoats disco.players_alive matches 1..4 run scoreboard players add disco.handler disco.teams_alive 1
 execute if score disco.CyanCougars disco.players_alive matches 1..4 run scoreboard players add disco.handler disco.teams_alive 1
 execute if score disco.PurplePenguins disco.players_alive matches 1..4 run scoreboard players add disco.handler disco.teams_alive 1
+execute if score disco.BlueBears disco.players_alive matches 1..4 run scoreboard players add disco.handler disco.teams_alive 1
 
 # reset deathThisTick
 scoreboard players set disco.handler disco.deathThisTick 0

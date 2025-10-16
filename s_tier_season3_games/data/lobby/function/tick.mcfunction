@@ -27,7 +27,7 @@ execute as dailey_ unless entity @s[team=] run team join GREEN_GOATS dailey_
 execute as MadsAlleyway unless entity @s[team=] run team join GREEN_GOATS MadsAlleyway
 # CYAN COUGARS
 execute as Krisppy_ unless entity @s[team=] run team join CYAN_COUGARS Krisppy_
-execute as plqsmic unless entity @s[team=] run team join CYAN_COUGARS plqsmic
+execute as plqsmic unless entity @s[team=] run team join BLUE_BEARS plqsmic
 execute as ZeroStep2 unless entity @s[team=] run team join CYAN_COUGARS ZeroStep2
 execute as minttrose unless entity @s[team=] run team join CYAN_COUGARS minttrose
 # PURPLE PENGUINS
@@ -53,7 +53,7 @@ function lobby:stage_update
 # and depending on our current stage, we call an update somewhere else in the world
 # but we only call that update if the event is unpaused
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 0 run function lobby:pre_event/tick
-execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 1 run function solve:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 1 run function trials:tick
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 2 run function lobby:between_game
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 3 run function survival_games:tick
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 4 run function lobby:between_game
@@ -63,7 +63,7 @@ execute if score stmc.handler event.paused matches 0 if score stmc.handler event
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 8 run function lobby:between_game
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 9 run function extract:tick
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 10 run function lobby:between_game
-execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 11 run function trials:tick
+execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 11 run function solve:tick
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 12 run function lobby:between_game
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 13 run function finale:tick
 execute if score stmc.handler event.paused matches 0 if score stmc.handler event.stage matches 14 run function lobby:after_event

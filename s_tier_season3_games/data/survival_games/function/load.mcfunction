@@ -26,20 +26,22 @@ scoreboard objectives add sg.points.indiv.rank dummy
 # tracks the rank of each team
 scoreboard objectives add sg.points.team.rank dummy
 # stores which quadrant the border will end in
-scoreboard objectives add sg.borderEnd dummy
+scoreboard objectives add sg.borderFirstCenterX dummy
+scoreboard objectives add sg.borderSecondCenterX dummy
+scoreboard objectives add sg.borderThirdCenterX dummy
+scoreboard objectives add sg.borderFourthCenterX dummy
+scoreboard objectives add sg.borderFirstCenterZ dummy
+scoreboard objectives add sg.borderSecondCenterZ dummy
+scoreboard objectives add sg.borderThirdCenterZ dummy
+scoreboard objectives add sg.borderFourthCenterZ dummy
+scoreboard objectives add sg.borderDistance dummy
+scoreboard objectives add sg.borderRadius dummy
 # point constants
 # how many points each kill is worth
 scoreboard objectives add sg.points.killValue dummy
-# how many points each placement is worth
-scoreboard objectives add sg.points.topTwentyValue dummy
-scoreboard objectives add sg.points.topSixteenValue dummy
-scoreboard objectives add sg.points.topTwelveValue dummy
-scoreboard objectives add sg.points.topEightValue dummy
-scoreboard objectives add sg.points.topFourValue dummy
-scoreboard objectives add sg.points.topThreeValue dummy
-scoreboard objectives add sg.points.topTwoValue dummy
-scoreboard objectives add sg.points.topOneValue dummy
 # how many points each team placement is worth
+scoreboard objectives add sg.points.topEightTeamValue dummy
+scoreboard objectives add sg.points.topSevenTeamValue dummy
 scoreboard objectives add sg.points.topSixTeamValue dummy
 scoreboard objectives add sg.points.topFiveTeamValue dummy
 scoreboard objectives add sg.points.topFourTeamValue dummy
@@ -60,21 +62,15 @@ scoreboard players reset sg.r2.handler sg.r2.stage
 scoreboard players reset sg.r3.handler sg.r3.stage
 
 # set point constants
-scoreboard players set sg.handler sg.points.killValue 30
-scoreboard players set sg.handler sg.points.topTwentyValue 10
-scoreboard players set sg.handler sg.points.topSixteenValue 10
-scoreboard players set sg.handler sg.points.topTwelveValue 10
-scoreboard players set sg.handler sg.points.topEightValue 10
-scoreboard players set sg.handler sg.points.topFourValue 10
-scoreboard players set sg.handler sg.points.topThreeValue 10
-scoreboard players set sg.handler sg.points.topTwoValue 15
-scoreboard players set sg.handler sg.points.topOneValue 25
-scoreboard players set sg.handler sg.points.topSixTeamValue 0
-scoreboard players set sg.handler sg.points.topFiveTeamValue 40
-scoreboard players set sg.handler sg.points.topFourTeamValue 100
-scoreboard players set sg.handler sg.points.topThreeTeamValue 160
-scoreboard players set sg.handler sg.points.topTwoTeamValue 260
-scoreboard players set sg.handler sg.points.topOneTeamValue 400
+scoreboard players set sg.handler sg.points.killValue 20
+scoreboard players set sg.handler sg.points.topEightTeamValue 0
+scoreboard players set sg.handler sg.points.topSevenTeamValue 60
+scoreboard players set sg.handler sg.points.topSixTeamValue 120
+scoreboard players set sg.handler sg.points.topFiveTeamValue 180
+scoreboard players set sg.handler sg.points.topFourTeamValue 240
+scoreboard players set sg.handler sg.points.topThreeTeamValue 300
+scoreboard players set sg.handler sg.points.topTwoTeamValue 360
+scoreboard players set sg.handler sg.points.topOneTeamValue 440
 scoreboard players set sg.handler sg.points.teamSplitFour 4
 
 # now, we set stage to 0

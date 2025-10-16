@@ -34,25 +34,26 @@ execute if score disco.handler disco.stage matches 1 if score disco.handler disc
 execute if score disco.handler disco.stage matches 2 run scoreboard players add disco.handler disco.timer.delay2 1
 # countdown at last 5 seconds
 execute if score disco.handler disco.timer.delay2 matches 700 run title @a actionbar {"text":"Starting in 5!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 700 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.4 1.6
 execute if score disco.handler disco.timer.delay2 matches 720 run title @a actionbar {"text":"Starting in 4!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 720 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.4 1.7
 execute if score disco.handler disco.timer.delay2 matches 740 run title @a actionbar {"text":"Starting in 3!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 740 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.5 1.8
 execute if score disco.handler disco.timer.delay2 matches 760 run title @a actionbar {"text":"Starting in 2!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 760 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.6 1.9
 execute if score disco.handler disco.timer.delay2 matches 780 run title @a actionbar {"text":"Starting in 1!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 780 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.7 2.0
 # move to next stage after 20 seconds
 execute if score disco.handler disco.timer.delay2 matches 799 run title @a title {"text":"Go!","color":"dark_aqua","bold":true}
-execute if score disco.handler disco.timer.delay2 matches 800.. run scoreboard players set disco.handler disco.stage 3
+execute if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 800.. run scoreboard players set disco.handler disco.stage 3
 
 # if we're in stage 3 (game in progress), increment the game timer & run the main game function
 execute if score disco.handler disco.stage matches 3 run scoreboard players add disco.handler disco.timer.game 1
-execute if score disco.handler disco.stage matches 3..3 unless score disco.handler disco.rounds_played matches 60.. run function trials:disco/round
-# move to next stage after 60 rounds
-execute if score disco.handler disco.rounds_played matches 60.. run scoreboard players set disco.handler disco.stage 4
-# or move to next stage no players are alive
-execute if score disco.handler disco.stage matches 3 if score disco.handler disco.players_alive matches 0 run scoreboard players set disco.handler disco.stage 4
+execute if score disco.handler disco.stage matches 3 run function trials:disco/round
 
 # if we're in stage 4, increment the timer
 execute if score disco.handler disco.stage matches 4 run scoreboard players add disco.handler disco.timer.delay3 1
 execute if score disco.handler disco.stage matches 4 if score disco.handler disco.timer.delay3 matches 3 run function trials:disco/reset
-# no point announcements for disco, just after all if trials ends
+execute if score disco.handler disco.stage matches 4 if score disco.handler disco.timer.delay3 matches 200 run function trials:disco/point_announcements
 # move to next stage after 15 seconds
 execute if score disco.handler disco.stage matches 4 if score disco.handler disco.timer.delay3 matches 300.. run scoreboard players add tr.handler tr.stage 1

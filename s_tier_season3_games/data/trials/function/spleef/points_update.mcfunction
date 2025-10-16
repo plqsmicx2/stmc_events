@@ -16,6 +16,10 @@ execute as @a[team=ORANGE_OTTERS] run scoreboard players operation spleef.Orange
 scoreboard players set spleef.PinkPikas spleef.points.team 0
 execute as @a[team=PINK_PIKAS] run scoreboard players operation spleef.PinkPikas spleef.points.team += @s spleef.points.indiv
 
+# Yellow Yaks
+scoreboard players set spleef.YellowYaks spleef.points.team 0
+execute as @a[team=YELLOW_YAKS] run scoreboard players operation spleef.YellowYaks spleef.points.team += @s spleef.points.indiv
+
 # Green Goats
 scoreboard players set spleef.GreenGoats spleef.points.team 0
 execute as @a[team=GREEN_GOATS] run scoreboard players operation spleef.GreenGoats spleef.points.team += @s spleef.points.indiv
@@ -27,3 +31,7 @@ execute as @a[team=CYAN_COUGARS] run scoreboard players operation spleef.CyanCou
 # Purple Penguins
 scoreboard players set spleef.PurplePenguins spleef.points.team 0
 execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation spleef.PurplePenguins spleef.points.team += @s spleef.points.indiv
+
+# Blue Bears
+scoreboard players set spleef.BlueBears spleef.points.team 0
+execute as @a[team=BLUE_BEARS] run scoreboard players operation spleef.BlueBears spleef.points.team += @s spleef.points.indiv

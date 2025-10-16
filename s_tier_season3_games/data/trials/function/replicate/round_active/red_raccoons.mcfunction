@@ -1,12 +1,26 @@
 # tick function handling the active game for the Red Raccoons in replicate [REPLICATE]
 
 # stages:
+
+# BUILDS FINDABLE:
 # 0- build 1
+# --> clone 5 101 10 9 101 14 37 104 62
+# ----> clone 11 102 10 11 106 14 34 106 62
 # 1- build 2
+# --> clone -9 102 2 -5 102 6 37 104 62
+# ----> clone -11 102 2 -11 106 6 34 106 62
 # 2- build 3
+# --> clone -9 102 -6 -5 102 -2 37 104 62
+# ----> clone -11 102 -6 -11 106 -2 34 106 62
 # 3- build 4
+# --> clone 5 101 -14 9 101 -10 37 104 62
+# ----> clone 11 102 -14 11 106 -10 34 106 62
 # 4- build 5
+# --> clone 5 101 -6 9 101 -2 37 104 62
+# ----> clone 11 102 -6 11 106 -2 34 106 62
 # 5- build 6
+# --> clone 5 101 2 9 101 6 37 104 62
+# ----> clone build 6: 11 102 2 11 106 6 34 106 62
 # 6- team complete
 
 # each build stage is the same:
@@ -20,15 +34,16 @@
 
 scoreboard players set replicate.RedRaccoons replicate.playersCompleted 0
 
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 47 111 21 51 111 25 37 111 21 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 27 111 21 31 111 25 37 111 21 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 32 111 11 36 111 15 37 111 21 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 42 111 11 46 111 15 37 111 21 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 37 105 70 41 105 74 37 104 62 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 47 105 67 51 105 71 37 104 62 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 47 105 57 51 105 61 37 104 62 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 37 105 54 41 105 58 37 104 62 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
 
 # Build 1
 
 # clone the build
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 3 run clone -2 81 -2 2 81 2 37 111 21
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 3 run clone 5 101 10 9 101 14 37 104 62
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 3 run clone 11 102 10 11 106 14 34 106 62
 
 # give players necessary blocks
 execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.5 with deepslate_tiles 64
@@ -37,8 +52,8 @@ execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if sco
 execute if score replicate.RedRaccoons replicate.timer.build1 matches 4.. if score replicate.RedRaccoons replicate.stage matches 0 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with mud 64
 
 # remove the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60 run fill 53 110 27 25 114 9 air replace tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60 run fill 27 100 47 59 114 82 air replace tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
 execute if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if score replicate.RedRaccoons replicate.stage matches 0 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build1 60
@@ -47,35 +62,37 @@ execute if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if sc
 # Build 2
 
 # re-add the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 47 112 21 51 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 27 112 21 31 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 32 112 11 36 112 15 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 42 112 11 46 112 15 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 37 106 70 41 106 74 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 47 106 67 51 106 71 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 47 106 57 51 106 61 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 37 106 54 41 106 58 tinted_glass
 # re-add chiseled tuff bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 47 111 21 51 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 37 111 21 41 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 27 111 21 31 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 32 111 11 36 111 15 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 42 111 11 46 111 15 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 37 105 70 41 105 74 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 37 104 62 41 104 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 34 106 62 34 110 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 47 105 67 51 105 71 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 47 105 57 51 105 61 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 37 105 54 41 105 58 chiseled_tuff_bricks
 
 # reset inventories
 execute if score replicate.RedRaccoons replicate.timer.build2 matches 3 run clear @a[team=RED_RACCOONS]
 
 # clone the build
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run clone -2 82 -2 2 82 2 37 111 21
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run clone -9 102 2 -5 102 6 37 104 62
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run clone -11 102 2 -11 106 6 34 106 62
 
 # give players necessary blocks
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.2 with white_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.3 with light_blue_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.4 with pink_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.5 with purple_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.6 with blue_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.7 with yellow_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with orange_concrete 64
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.2 with light_blue_wool 64
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.3 with packed_ice 64
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.4 with snow_block 64
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.5 with redstone_block 64
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.6 with coarse_dirt 64
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.7 with stone_bricks 64
+execute if score replicate.RedRaccoons replicate.timer.build2 matches 4.. if score replicate.RedRaccoons replicate.stage matches 1 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with iron_block 64
 
 # remove the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 60 run fill 53 110 27 25 114 9 air replace tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 60 run fill 27 100 47 59 114 82 air replace tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
 execute if score replicate.RedRaccoons replicate.timer.build2 matches 60.. if score replicate.RedRaccoons replicate.stage matches 1 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build2 60
@@ -84,22 +101,24 @@ execute if score replicate.RedRaccoons replicate.timer.build2 matches 60.. if sc
 # Build 3
 
 # re-add the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 47 112 21 51 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 27 112 21 31 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 32 112 11 36 112 15 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 42 112 11 46 112 15 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 37 106 70 41 106 74 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 47 106 67 51 106 71 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 47 106 57 51 106 61 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 37 106 54 41 106 58 tinted_glass
 # re-add chiseled tuff bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 47 111 21 51 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 37 111 21 41 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 27 111 21 31 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 32 111 11 36 111 15 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 42 111 11 46 111 15 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 37 105 70 41 105 74 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 37 104 62 41 104 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 34 106 62 34 110 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 47 105 67 51 105 71 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 47 105 57 51 105 61 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 37 105 54 41 105 58 chiseled_tuff_bricks
 
 # reset inventories
 execute if score replicate.RedRaccoons replicate.timer.build3 matches 3 run clear @a[team=RED_RACCOONS]
 
 # clone the build
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run clone -2 83 -2 2 83 2 37 111 21
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run clone -9 102 -6 -5 102 -2 37 104 62
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run clone -11 102 -6 -11 106 -2 34 106 62
 
 # give players necessary blocks
 execute if score replicate.RedRaccoons replicate.timer.build3 matches 4.. if score replicate.RedRaccoons replicate.stage matches 2 run item replace entity @a[team=RED_RACCOONS] hotbar.4 with prismarine_bricks 64
@@ -109,8 +128,8 @@ execute if score replicate.RedRaccoons replicate.timer.build3 matches 4.. if sco
 execute if score replicate.RedRaccoons replicate.timer.build3 matches 4.. if score replicate.RedRaccoons replicate.stage matches 2 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with prismarine 64
 
 # remove the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 60 run fill 53 110 27 25 114 9 air replace tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 60 run fill 27 100 47 59 114 82 air replace tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
 execute if score replicate.RedRaccoons replicate.timer.build3 matches 60.. if score replicate.RedRaccoons replicate.stage matches 2 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build3 60
@@ -119,35 +138,34 @@ execute if score replicate.RedRaccoons replicate.timer.build3 matches 60.. if sc
 # Build 4
 
 # re-add the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 47 112 21 51 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 27 112 21 31 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 32 112 11 36 112 15 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 42 112 11 46 112 15 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 37 106 70 41 106 74 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 47 106 67 51 106 71 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 47 106 57 51 106 61 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 37 106 54 41 106 58 tinted_glass
 # re-add chiseled tuff bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 47 111 21 51 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 37 111 21 41 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 27 111 21 31 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 32 111 11 36 111 15 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 42 111 11 46 111 15 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 37 105 70 41 105 74 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 37 104 62 41 104 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 34 106 62 34 110 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 47 105 67 51 105 71 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 47 105 57 51 105 61 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 37 105 54 41 105 58 chiseled_tuff_bricks
 
 # reset inventories
 execute if score replicate.RedRaccoons replicate.timer.build4 matches 3 run clear @a[team=RED_RACCOONS]
 
 # clone the build
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run clone -2 84 -2 2 84 2 37 111 21
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run clone 5 101 -14 9 101 -10 37 104 62
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run clone 11 102 -14 11 106 -10 34 106 62
 
 # give players necessary blocks
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.2 with light_blue_wool 64
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.3 with lime_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.4 with yellow_wool 64
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.5 with lapis_block 64
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.6 with dirt 64
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.7 with cobblestone 64
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with coarse_dirt 64
+execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.5 with white_wool 64
+execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.6 with calcite 64
+execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.7 with white_terracotta 64
+execute if score replicate.RedRaccoons replicate.timer.build4 matches 4.. if score replicate.RedRaccoons replicate.stage matches 3 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with black_concrete 64
 
 # remove the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 60 run fill 53 110 27 25 114 9 air replace tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 60 run fill 27 100 47 59 114 82 air replace tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
 execute if score replicate.RedRaccoons replicate.timer.build4 matches 60.. if score replicate.RedRaccoons replicate.stage matches 3 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build4 60
@@ -156,22 +174,24 @@ execute if score replicate.RedRaccoons replicate.timer.build4 matches 60.. if sc
 # Build 5
 
 # re-add the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 47 112 21 51 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 27 112 21 31 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 32 112 11 36 112 15 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 42 112 11 46 112 15 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 37 106 70 41 106 74 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 47 106 67 51 106 71 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 47 106 57 51 106 61 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 37 106 54 41 106 58 tinted_glass
 # re-add chiseled tuff bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 47 111 21 51 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 37 111 21 41 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 27 111 21 31 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 32 111 11 36 111 15 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 42 111 11 46 111 15 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 37 105 70 41 105 74 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 37 104 62 41 104 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 34 106 62 34 110 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 47 105 67 51 105 71 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 47 105 57 51 105 61 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 37 105 54 41 105 58 chiseled_tuff_bricks
 
 # reset inventories
 execute if score replicate.RedRaccoons replicate.timer.build5 matches 3 run clear @a[team=RED_RACCOONS]
 
 # clone the build
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run clone -2 85 -2 2 85 2 37 111 21
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run clone 5 101 -6 9 101 -2 37 104 62
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run clone 11 102 -6 11 106 -2 34 106 62
 
 # give players necessary blocks
 execute if score replicate.RedRaccoons replicate.timer.build5 matches 4.. if score replicate.RedRaccoons replicate.stage matches 4 run item replace entity @a[team=RED_RACCOONS] hotbar.4 with tuff_bricks 64
@@ -181,43 +201,45 @@ execute if score replicate.RedRaccoons replicate.timer.build5 matches 4.. if sco
 execute if score replicate.RedRaccoons replicate.timer.build5 matches 4.. if score replicate.RedRaccoons replicate.stage matches 4 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with waxed_chiseled_copper 64
 
 # remove the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 60 run fill 53 110 27 25 114 9 air replace tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 60 run fill 27 100 47 59 114 82 air replace tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
-# store time to complete this build & move to next build
+# move to next build
 execute if score replicate.RedRaccoons replicate.timer.build5 matches 60.. if score replicate.RedRaccoons replicate.stage matches 4 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build5 60
 execute if score replicate.RedRaccoons replicate.timer.build5 matches 60.. if score replicate.RedRaccoons replicate.stage matches 4 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 5
 
 # Build 6
 
 # re-add the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 47 112 21 51 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 27 112 21 31 112 25 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 32 112 11 36 112 15 tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 42 112 11 46 112 15 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 37 106 70 41 106 74 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 47 106 67 51 106 71 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 47 106 57 51 106 61 tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 37 106 54 41 106 58 tinted_glass
 # re-add chiseled tuff bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 47 111 21 51 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 37 111 21 41 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 27 111 21 31 111 25 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 32 111 11 36 111 15 chiseled_tuff_bricks
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 42 111 11 46 111 15 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 37 105 70 41 105 74 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 37 104 62 41 104 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 34 106 62 34 110 66 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 47 105 67 51 105 71 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 47 105 57 51 105 61 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 37 105 54 41 105 58 chiseled_tuff_bricks
 
 # reset inventories
 execute if score replicate.RedRaccoons replicate.timer.build6 matches 3 run clear @a[team=RED_RACCOONS]
 
 # clone the build
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run clone -2 86 -2 2 86 2 37 111 21
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run clone 5 101 2 9 101 6 37 104 62
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run clone 11 102 2 11 106 6 34 106 62
 
 # give players necessary blocks
 execute if score replicate.RedRaccoons replicate.timer.build6 matches 4.. if score replicate.RedRaccoons replicate.stage matches 5 run item replace entity @a[team=RED_RACCOONS] hotbar.4 with red_concrete 64
 execute if score replicate.RedRaccoons replicate.timer.build6 matches 4.. if score replicate.RedRaccoons replicate.stage matches 5 run item replace entity @a[team=RED_RACCOONS] hotbar.5 with orange_concrete 64
 execute if score replicate.RedRaccoons replicate.timer.build6 matches 4.. if score replicate.RedRaccoons replicate.stage matches 5 run item replace entity @a[team=RED_RACCOONS] hotbar.6 with yellow_concrete 64
 execute if score replicate.RedRaccoons replicate.timer.build6 matches 4.. if score replicate.RedRaccoons replicate.stage matches 5 run item replace entity @a[team=RED_RACCOONS] hotbar.7 with lime_concrete 64
-execute if score replicate.RedRaccoons replicate.timer.build6 matches 4.. if score replicate.RedRaccoons replicate.stage matches 5 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with light_blue_concrete 64
+execute if score replicate.RedRaccoons replicate.timer.build6 matches 4.. if score replicate.RedRaccoons replicate.stage matches 5 run item replace entity @a[team=RED_RACCOONS] hotbar.8 with blue_concrete 64
 
 # remove the tinted glass barrier
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 60 run fill 53 110 27 25 114 9 air replace tinted_glass
-execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 60 run fill 53 110 27 25 114 9 air replace chiseled_tuff_bricks
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 60 run fill 27 100 47 59 114 82 air replace tinted_glass
+execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
 execute if score replicate.RedRaccoons replicate.timer.build6 matches 60.. if score replicate.RedRaccoons replicate.stage matches 5 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build6 60

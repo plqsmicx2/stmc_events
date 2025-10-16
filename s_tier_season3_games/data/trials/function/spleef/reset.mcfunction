@@ -2,14 +2,14 @@
 
 # a little point handling in case multiple people from one team live
 
-# 2 players alive --> give 1st place points
-execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.players_alive matches 2 run scoreboard players add @s spleef.points.indiv 20
+# 2 players alive --> give +1 survivor points
+execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.players_alive matches 2 run scoreboard players add @s spleef.points.indiv 3
 
-# 3 players alive --> give 1st & 2nd place points
-execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.players_alive matches 3 run scoreboard players add @s spleef.points.indiv 35
+# 3 players alive --> give +2 survivor points
+execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.players_alive matches 3 run scoreboard players add @s spleef.points.indiv 6
 
-# 4 players alive --> give 1st - 3rd place points
-execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.players_alive matches 4 run scoreboard players add @s spleef.points.indiv 45
+# 4 players alive --> give +3 survivor points
+execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.players_alive matches 4 run scoreboard players add @s spleef.points.indiv 9
 
 # play a sound effect
 execute as @a[scores={spleef.alive=1}] at @s run playsound minecraft:entity.firework_rocket.blast player @s ~ ~ ~ 2 1

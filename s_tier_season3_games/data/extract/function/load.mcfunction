@@ -49,6 +49,8 @@ scoreboard objectives add extract.timer.game.round2 dummy
 scoreboard objectives add extract.timer.game.round3 dummy
 scoreboard objectives add extract.timer.game.round4 dummy
 scoreboard objectives add extract.timer.game.round5 dummy
+scoreboard objectives add extract.timer.game.round6 dummy
+scoreboard objectives add extract.timer.game.round7 dummy
 scoreboard objectives add extract.timer.delay3 dummy
 # stats
 scoreboard objectives add extract.stats.kills playerKillCount
@@ -62,6 +64,7 @@ scoreboard objectives add extract.stats.goldMined minecraft.mined:minecraft.gold
 scoreboard objectives add extract.stats.game1completed dummy
 scoreboard objectives add extract.stats.game2completed dummy
 scoreboard objectives add extract.stats.game3completed dummy
+scoreboard objectives add extract.stats.game4completed dummy
 scoreboard objectives add extract.stats.gamescompleted dummy
 scoreboard objectives add extract.stats.playersAlive dummy
 # points
@@ -72,6 +75,7 @@ scoreboard objectives add extract.points.team.rank dummy
 scoreboard objectives add extract.points.diamondValue dummy
 scoreboard objectives add extract.points.goldValue dummy
 scoreboard objectives add extract.points.killValue dummy
+scoreboard objectives add extract.points.survivalValue dummy
 
 # (re)set all necessary values
 scoreboard players set extract.handler extract.stage 0
@@ -85,6 +89,8 @@ scoreboard players set extract.handler extract.timer.game.round2 0
 scoreboard players set extract.handler extract.timer.game.round3 0
 scoreboard players set extract.handler extract.timer.game.round4 0
 scoreboard players set extract.handler extract.timer.game.round5 0
+scoreboard players set extract.handler extract.timer.game.round6 0
+scoreboard players set extract.handler extract.timer.game.round7 0
 scoreboard players set extract.handler extract.timer.delay3 0
 
 scoreboard players set @a extract.stats.kills 0
@@ -95,11 +101,13 @@ scoreboard players set @a extract.stats.goldMined 0
 scoreboard players set extract.handler extract.stats.game1completed 0
 scoreboard players set extract.handler extract.stats.game2completed 0
 scoreboard players set extract.handler extract.stats.game3completed 0
+scoreboard players set extract.handler extract.stats.game4completed 0
 
 scoreboard players set @a extract.points.indiv 0
-scoreboard players set extract.handler extract.points.diamondValue 30
-scoreboard players set extract.handler extract.points.goldValue 15
-scoreboard players set extract.handler extract.points.killValue 5
+scoreboard players set extract.handler extract.points.diamondValue 10
+scoreboard players set extract.handler extract.points.goldValue 4
+scoreboard players set extract.handler extract.points.killValue 3
+scoreboard players set extract.handler extract.points.survivalValue 3
 function extract:points_update
 function extract:death_handler
 

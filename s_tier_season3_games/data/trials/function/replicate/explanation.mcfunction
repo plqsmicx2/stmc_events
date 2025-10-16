@@ -14,7 +14,7 @@ execute if score replicate.handler replicate.timer.explanation matches 1 run tel
 
 # blurb #2
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 160 run tp @a 44 114 15 28 20
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 160 run clone -2 85 -2 2 85 2 37 111 21
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 160 run clone 5 101 10 9 101 14 37 104 62
 execute if score replicate.handler replicate.timer.explanation matches 160 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 160 run tellraw @a {text:"When the game begins, the central build will generate with a pattern.",color:"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 160 run tellraw @a {text:" "}
@@ -25,7 +25,7 @@ execute if score replicate.handler replicate.timer.explanation matches 160 run t
 
 # blurb #3
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 320 run tp @a 27 114 23 -90 25
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 320 run fill 41 111 21 37 111 25 chiseled_tuff_bricks
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 320 run fill 37 104 62 41 104 66 chiseled_tuff_bricks
 execute if score replicate.handler replicate.timer.explanation matches 320 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 320 run tellraw @a {text:"There will be six unique patterns.",color:"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 320 run tellraw @a {text:" "}
@@ -49,7 +49,7 @@ execute if score replicate.handler replicate.timer.explanation matches 640 run t
 execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:" "}
 
 # blurb #6
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=RED_RACCOONS] 39 113 18 0 10
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=RED_RACCOONS] 45 106 64 0 10
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=ORANGE_OTTERS] 0 113 18 0 10
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=PINK_PIKAS] -39 113 18 0 10
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=GREEN_GOATS] -39 113 -18 0 10

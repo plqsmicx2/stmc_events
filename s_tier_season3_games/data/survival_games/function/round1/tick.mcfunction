@@ -7,12 +7,6 @@
 # 3- round start; round_timer begins
 # 4- round end; 15 second delay to announce winners before resetting & updating sg.stage to next round
 
-# manually force iron_blocks
-execute unless score sg.r1.handler sg.borderEnd matches 1 in survival_games:sg1 run setblock -50 108 -50 minecraft:iron_block
-execute unless score sg.r1.handler sg.borderEnd matches 2 in survival_games:sg1 run setblock 50 111 -50 minecraft:iron_block
-execute unless score sg.r1.handler sg.borderEnd matches 3 in survival_games:sg1 run setblock -50 110 50 minecraft:iron_block
-execute unless score sg.r1.handler sg.borderEnd matches 4 in survival_games:sg1 run setblock 50 107 50 minecraft:iron_block
-
 # update points every tick (regardless of stage)
 function survival_games:round1/points_update
 
@@ -33,12 +27,21 @@ execute if score sg.r1.handler sg.r1.stage matches 1 if score sg.r1.handler sg.r
 # if we're in stage 2, we just need to increment the timer & update the actionbar
 execute if score sg.r1.handler sg.r1.stage matches 2 run scoreboard players add sg.r1.handler sg.r1.timer.delay2 1
 execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 5 run item replace entity @a armor.chest with minecraft:elytra[enchantments={"minecraft:binding_curse":1b}]
-execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 300 run title @a actionbar {text:"5 seconds!",bold:true,color:"gold"}
-execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 320 run title @a actionbar {text:"4 seconds!",bold:true,color:"gold"}
-execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 340 run title @a actionbar {text:"3 seconds!",bold:true,color:"gold"}
-execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 360 run title @a actionbar {text:"2 seconds!",bold:true,color:"gold"}
-execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 380 run title @a actionbar {text:"1 seconds!",bold:true,color:"gold"}
+# generate border
+execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 5 run function survival_games:border_generate
+# start game
+execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 300 run title @a actionbar {"text":"5 seconds!","bold":true,"color":"gold"}
+execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 320 run title @a actionbar {"text":"4 seconds!","bold":true,"color":"gold"}
+execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 340 run title @a actionbar {"text":"3 seconds!","bold":true,"color":"gold"}
+execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 360 run title @a actionbar {"text":"2 seconds!","bold":true,"color":"gold"}
+execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 380 run title @a actionbar {"text":"1 seconds!","bold":true,"color":"gold"}
 execute if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 400.. run scoreboard players set sg.r1.handler sg.r1.stage 3
+execute as @a at @s if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 300 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1
+execute as @a at @s if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 320 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.1
+execute as @a at @s if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 340 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.2
+execute as @a at @s if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 360 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.3
+execute as @a at @s if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 380 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.4
+execute as @a at @s if score sg.r1.handler sg.r1.stage matches 2 if score sg.r1.handler sg.r1.timer.delay2 matches 399 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 1 2
 
 # if we're in stage 3, we need to increment the timer & call the round_tick function (a lot happens in there)
 # round_tick will automatically update the stage when the round ends
