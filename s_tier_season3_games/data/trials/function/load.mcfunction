@@ -9,7 +9,6 @@ execute in trials:lobby run tp @a 0 100 0
 
 # force gamemode
 gamemode survival @a
-execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # clear stuff
 effect clear @a

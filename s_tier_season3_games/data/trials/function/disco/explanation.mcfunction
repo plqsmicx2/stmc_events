@@ -61,6 +61,7 @@ execute in trials:disco if score disco.handler disco.timer.explanation matches 6
 execute in trials:disco if score disco.handler disco.timer.explanation matches 640 run fill 4 107 4 -4 107 -4 tinted_glass
 execute in trials:disco if score disco.handler disco.timer.explanation matches 640 run fill 5 103 5 -5 103 -5 tinted_glass
 execute if score disco.handler disco.timer.explanation matches 640 run gamemode adventure @a
+execute if score disco.handler disco.timer.explanation matches 640 run gamemode spectator @a[team=SPECTATORS]
 execute if score disco.handler disco.timer.explanation matches 640 run effect give @a minecraft:resistance infinite 10 true
 execute if score disco.handler disco.timer.explanation matches 640 run effect give @a minecraft:saturation infinite 2 true
 execute if score disco.handler disco.timer.explanation matches 640 run effect give @a minecraft:invisibility infinite 0 true

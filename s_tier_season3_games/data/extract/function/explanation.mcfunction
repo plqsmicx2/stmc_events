@@ -50,6 +50,7 @@ execute if score extract.handler extract.timer.explanation matches 640 run tellr
 
 # blurb #6
 execute if score extract.handler extract.timer.explanation matches 799 run gamemode survival @a
+execute if score extract.handler extract.timer.explanation matches 799 run gamemode spectator @a[team=SPECTATORS]
 execute in extract:extract if score extract.handler extract.timer.explanation matches 799 run teleport @a 0 101 0 -90 0
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:"The first round begins in about 20 seconds.",color:"red"}

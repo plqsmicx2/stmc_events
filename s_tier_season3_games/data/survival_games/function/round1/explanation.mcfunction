@@ -62,8 +62,9 @@ execute if score sg.r1.handler sg.r1.timer.explanation matches 640 run tellraw @
 # blurb #6
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 in survival_games:sg1 run teleport @a 0 177 0
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run gamemode adventure @a
-execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {"text":" "}
-execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {"text":"The round starts in about 20 seconds.","color":"gold"}
-execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {"text":" "}
-execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {"text":"Good luck!","color":"gold"}
-execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {"text":" "}
+execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run gamemode spectator @a[team=SPECTATORS]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:" "}
+execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:"The round starts in about 20 seconds.",color:"gold"}
+execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:" "}
+execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:"Good luck!",color:"gold"}
+execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:" "}

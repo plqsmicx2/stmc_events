@@ -61,7 +61,8 @@ execute in solve:solve as @a[team=PINK_PIKAS] if score solve.handler solve.timer
 execute in solve:solve as @a[team=GREEN_GOATS] if score solve.handler solve.timer.explanation matches 799 run tp @s 2 93 66 -90 0
 execute in solve:solve as @a[team=CYAN_COUGARS] if score solve.handler solve.timer.explanation matches 799 run tp @s 2 93 86 -90 0
 execute in solve:solve as @a[team=PURPLE_PENGUINS] if score solve.handler solve.timer.explanation matches 799 run tp @s 2 93 106 -90 0
-execute in solve:solve if score solve.handler solve.timer.explanation matches 799 run gamemode adventure @a[team=!SPECTATORS]
+execute in solve:solve if score solve.handler solve.timer.explanation matches 799 run gamemode adventure @a
+execute in solve:solve if score solve.handler solve.timer.explanation matches 799 run gamemode spectator @a[team=SPECTATORS]
 execute if score solve.handler solve.timer.explanation matches 799 run tellraw @a {text:" "}
 execute if score solve.handler solve.timer.explanation matches 799 run tellraw @a {text:"The first hallway opens in about 40 seconds.",color:"yellow"}
 execute if score solve.handler solve.timer.explanation matches 799 run tellraw @a {text:" "}

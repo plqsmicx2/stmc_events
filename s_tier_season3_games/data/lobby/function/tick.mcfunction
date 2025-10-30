@@ -12,7 +12,7 @@ execute as Epix809 unless entity @s[team=] run team join RED_RACCOONS Epix809
 execute as .yungGeorge8249 unless entity @s[team=] run team join RED_RACCOONS .yungGeorge8249
 # ORANGE OTTERS
 execute as Exrry unless entity @s[team=] run team join ORANGE_OTTERS Exrry
-execute as xcmimi unless entity @s[team=] run team join RED_RACCOONS xcmimi
+execute as xcmimi unless entity @s[team=] run team join ORANGE_OTTERS xcmimi
 execute as GoldShort unless entity @s[team=] run team join ORANGE_OTTERS GoldShort
 execute as stompppy unless entity @s[team=] run team join ORANGE_OTTERS stompppy
 # PINK PIKAS
@@ -24,7 +24,7 @@ execute as Alivemc unless entity @s[team=] run team join PINK_PIKAS Alivemc
 execute as notsxnset unless entity @s[team=] run team join GREEN_GOATS notsxnset
 execute as IISona unless entity @s[team=] run team join GREEN_GOATS IISona
 execute as dailey_ unless entity @s[team=] run team join GREEN_GOATS dailey_
-execute as Ascellus706 unless entity @s[team=] run team join GREEN_GOATS Ascellus706
+execute as MadsAlleyway unless entity @s[team=] run team join GREEN_GOATS MadsAlleyway
 # CYAN COUGARS
 execute as Krisppy_ unless entity @s[team=] run team join CYAN_COUGARS Krisppy_
 execute as plqsmic unless entity @s[team=] run team join BLUE_BEARS plqsmic
