@@ -1,83 +1,151 @@
 # function controlling the border based on round_time elapsed
 
 # go ahead and set initial border again
-execute if score sg.r3.handler sg.r3.timer.round matches 1 run worldborder set 250
+execute if score sg.r3.handler sg.r3.timer.round matches 1 run worldborder set 300
 execute if score sg.r3.handler sg.r3.timer.round matches 1 run worldborder center 0 0
 execute if score sg.r3.handler sg.r3.timer.round matches 1 run worldborder damage amount 0.2
 execute if score sg.r3.handler sg.r3.timer.round matches 1 run worldborder damage buffer 1
+execute if score sg.r3.handler sg.r3.timer.round matches 1 run scoreboard players set sg.handler sg.borderRadius 200
 
 # summon the entity that will track the center of our worldborder
-execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run summon armor_stand 0 200 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Glowing:0b,Invisible:1b,Tags:["sg.r3.worldborder.center"]}
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run kill @e[type=!player]
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run summon armor_stand 0 120 0 {Rotation:[0F,0F],NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Glowing:0b,Invisible:1b,Tags:["sg.worldborder.center"]}
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run summon armor_stand 0 120 0 {Rotation:[0F,0F],NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Glowing:0b,Invisible:1b,Tags:["sg.worldborder.centerVisual","sg.worldborder.centerVisual1"]}
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run summon armor_stand 0 120 0 {Rotation:[0F,90F],NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Glowing:0b,Invisible:1b,Tags:["sg.worldborder.centerVisual","sg.worldborder.centerVisual2"]}
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run summon armor_stand 0 120 0 {Rotation:[0F,180F],NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Glowing:0b,Invisible:1b,Tags:["sg.worldborder.centerVisual","sg.worldborder.centerVisual3"]}
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run summon armor_stand 0 120 0 {Rotation:[0F,270F],NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Glowing:0b,Invisible:1b,Tags:["sg.worldborder.centerVisual","sg.worldborder.centerVisual4"]}
 
-# <===== STAGE HANDLING =====>
+# create temporary timer scoreboard
+execute if score sg.r3.handler sg.r3.timer.round matches 1 run scoreboard objectives add sg.r3.borderTickCounter dummy
+execute if score sg.r3.handler sg.r3.timer.round matches 1 run scoreboard players set sg.handler sg.r3.borderTickCounter 0
 
-# begin borderStage 0 at start1
-execute if score sg.r3.handler sg.r3.timer.round matches 0..1199 run scoreboard players set sg.r3.handler sg.r3.borderStage 0
+# update temporary timer
+scoreboard players add sg.r3.handler sg.r3.borderTickCounter 1
 
-# after 1 minute, begin borderStage 1
-execute if score sg.r3.handler sg.r3.timer.round matches 1200..2399 run scoreboard players set sg.r3.handler sg.r3.borderStage 1
+# announce quadrant of final border
+execute if score sg.r3.handler sg.r3.timer.round matches 100 \
+        if score sg.handler sg.borderFourthCenterX matches 0.. if score sg.handler sg.borderFourthCenterZ matches 0.. run \
+        tellraw @a {"text":"The border will end toward the Southeast.","color":"dark_red"}
+execute if score sg.r3.handler sg.r3.timer.round matches 100 \
+        if score sg.handler sg.borderFourthCenterX matches 0.. if score sg.handler sg.borderFourthCenterZ matches ..-1 run \
+        tellraw @a {"text":"The border will end toward the Northeast.","color":"dark_red"}
+execute if score sg.r3.handler sg.r3.timer.round matches 100 \
+        if score sg.handler sg.borderFourthCenterX matches ..-1 if score sg.handler sg.borderFourthCenterZ matches 0.. run \
+        tellraw @a {"text":"The border will end toward the Southwest.","color":"dark_red"}
+execute if score sg.r3.handler sg.r3.timer.round matches 100 \
+        if score sg.handler sg.borderFourthCenterX matches ..-1 if score sg.handler sg.borderFourthCenterZ matches ..-1 run \
+        tellraw @a {"text":"The border will end toward the Northwest.","color":"dark_red"}
 
-# after +1 minute [previous border has closed], begin borderStage 2
-execute if score sg.r3.handler sg.r3.timer.round matches 2400..2999 run scoreboard players set sg.r3.handler sg.r3.borderStage 2
+# <===== UPDATE BORDER =====>
 
-# after +30 seconds, begin borderStage 3
-execute if score sg.r3.handler sg.r3.timer.round matches 3000..3599 run scoreboard players set sg.r3.handler sg.r3.borderStage 3
-
-# after +30 seconds, begin borderStage 4
-execute if score sg.r3.handler sg.r3.timer.round matches 3600..3899 run scoreboard players set sg.r3.handler sg.r3.borderStage 4
-
-# after +15 seconds, begin borderStage 5
-execute if score sg.r3.handler sg.r3.timer.round matches 3900..4499 run scoreboard players set sg.r3.handler sg.r3.borderStage 5
-
-# after +45 seconds, begin borderStage 6 [final border, no updates will happen once borderStage 6 is reached]
+# determine current border stage
+execute if score sg.r3.handler sg.r3.timer.round matches ..599 run scoreboard players set sg.r3.handler sg.r3.borderStage 0
+execute if score sg.r3.handler sg.r3.timer.round matches 600..2400 run scoreboard players set sg.r3.handler sg.r3.borderStage 1
+execute if score sg.r3.handler sg.r3.timer.round matches 2400..2700 run scoreboard players set sg.r3.handler sg.r3.borderStage 2
+execute if score sg.r3.handler sg.r3.timer.round matches 2700..3300 run scoreboard players set sg.r3.handler sg.r3.borderStage 3
+execute if score sg.r3.handler sg.r3.timer.round matches 3300..3900 run scoreboard players set sg.r3.handler sg.r3.borderStage 4
+execute if score sg.r3.handler sg.r3.timer.round matches 3900..4500 run scoreboard players set sg.r3.handler sg.r3.borderStage 5
 execute if score sg.r3.handler sg.r3.timer.round matches 4500.. run scoreboard players set sg.r3.handler sg.r3.borderStage 6
 
-# <===== BORDER UPDATING =====>
+# border stage 0
+# constant radius of 200
+# 1 damage per second
+# reset tick counter every 20 ticks (1 second)
+execute if score sg.r3.handler sg.r3.borderStage matches 0 if score sg.r3.handler sg.r3.borderTickCounter matches 20.. run scoreboard players set sg.r3.handler sg.r3.borderTickCounter 0
+execute if score sg.r3.handler sg.r3.borderStage matches 0 run function survival_games:border_damage {radius:200, damage:0.1}
 
-# borderStage 1
+# border stage 1
+# handles going from radius of 200 to radius of 80 over 90 seconds
+# decreases radius by 1.33 blocks per second
+# decrease radius by 1 block every 15 ticks
+# does 1 damage per second (0.05 per tick)
 
-# shrink to 100 & recenter to appropriate beacon
+# decrease radius every 15 ticks
+execute if score sg.r3.handler sg.r3.borderStage matches 1 if score sg.r3.handler sg.r3.borderTickCounter matches 15.. run scoreboard players remove sg.handler sg.borderRadius 1
+execute if score sg.r3.handler sg.r3.borderStage matches 1 if score sg.r3.handler sg.r3.borderTickCounter matches 15.. run scoreboard players set sg.r3.handler sg.r3.borderTickCounter 0
 
-# shrink 0.125 each tick
-execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 1 run worldborder add -0.125
+# update center of border
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 1 run function survival_games:round3/border_changes/stage1
 
-# migrate about 0.04167 blocks each tick in the appropriate direction
-# this is achieved by moving our custom armor stand
-execute in survival_games:sg1 as @e[tag=sg.r3.worldborder.center] if score sg.r3.handler sg.r3.borderStage matches 1 if score sg.r3.handler sg.borderEnd matches 1 at @s run tp @s ~-0.04208 ~ ~-0.04208
-execute in survival_games:sg1 as @e[tag=sg.r3.worldborder.center] if score sg.r3.handler sg.r3.borderStage matches 1 if score sg.r3.handler sg.borderEnd matches 2 at @s run tp @s ~0.04125 ~ ~-0.04208
-execute in survival_games:sg1 as @e[tag=sg.r3.worldborder.center] if score sg.r3.handler sg.r3.borderStage matches 1 if score sg.r3.handler sg.borderEnd matches 3 at @s run tp @s ~-0.04208 ~ ~0.04125
-execute in survival_games:sg1 as @e[tag=sg.r3.worldborder.center] if score sg.r3.handler sg.r3.borderStage matches 1 if score sg.r3.handler sg.borderEnd matches 4 at @s run tp @s ~0.04125 ~ ~0.04125
-# and then updating the center based on the coordinates of that armor stand
-execute in survival_games:sg1 as @e[tag=sg.r3.worldborder.center] if score sg.r3.handler sg.r3.borderStage matches 1 at @s run worldborder center ~ ~
+# visualize border & call damage on players outside it
+execute if score sg.r3.handler sg.r3.borderStage matches 1 store result storage survival_games:data radius double 1 run scoreboard players get sg.handler sg.borderRadius
+execute if score sg.r3.handler sg.r3.borderStage matches 1 store success storage survival_games:data damage double 0.1 run scoreboard players get sg.handler sg.borderRadius
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 1 run function survival_games:border_damage with storage survival_games:data
 
-# borderStage 2
+# at end of border stage, force teleport center to actual center to avoid any rounding errors
+execute if score sg.r3.handler sg.r3.timer.round matches 2400 as @e[tag=sg.worldborder.centerZoneOne] at @s run tp @e[tag=sg.worldborder.center] ~ ~ ~
 
-# increases damage by 200% while waiting for next border to close
+# border stage 2
+# constant radius of 80
+# 2 damage per second (0.1 per tick)
+execute if score sg.r3.handler sg.r3.borderStage matches 2 if score sg.r3.handler sg.r3.borderTickCounter matches 20.. run scoreboard players set sg.r3.handler sg.r3.borderTickCounter 0
+execute if score sg.r3.handler sg.r3.borderStage matches 2 run function survival_games:border_damage {radius:80, damage:0.2}
 
-execute if score sg.r3.handler sg.r3.timer.round matches 2400 run worldborder damage amount 0.6
+# border stage 3
+# handles going from radius of 80 to radius of 40 over 30 seconds
+# decreases radius by 1.33 blocks per second
+# decrease radius by 1 block every 15 ticks
+# does 2 damage per second (0.1 per tick)
 
-# borderStage 3
+# decrease radius every 9 ticks
+execute if score sg.r3.handler sg.r3.borderStage matches 3 if score sg.r3.handler sg.r3.borderTickCounter matches 15.. run scoreboard players remove sg.handler sg.borderRadius 1
+execute if score sg.r3.handler sg.r3.borderStage matches 3 if score sg.r3.handler sg.r3.borderTickCounter matches 15.. run scoreboard players set sg.r3.handler sg.r3.borderTickCounter 0
 
-# shrinks worldborder from 100 -> 50 blocks across 30 seconds
+# update center of border
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 3 run function survival_games:round3/border_changes/stage2
 
-# shrink 0.0833 each tick
-execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 3 run worldborder add -0.0833
+# visualize border & call damage on players outside it
+execute if score sg.r3.handler sg.r3.borderStage matches 3 store result storage survival_games:data radius double 1 run scoreboard players get sg.handler sg.borderRadius
+execute if score sg.r3.handler sg.r3.borderStage matches 3 store success storage survival_games:data damage double 0.2 run scoreboard players get sg.handler sg.borderRadius
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 3 run function survival_games:border_damage with storage survival_games:data
 
-# borderStage 4
+# at end of border stage, force teleport center to actual center to avoid any rounding errors
+execute if score sg.r3.handler sg.r3.timer.round matches 3300 as @e[tag=sg.worldborder.centerZoneTwo] at @s run tp @e[tag=sg.worldborder.center] ~ ~ ~
 
-# increases damage by the same amount as the last increase while waiting for border to close
+# border stage 4
+# handles going from radius of 40 to radius of 20 over 30 seconds
+# decreases radius by 0.67 blocks per second
+# decrease radius by 1 block every 30 ticks
+# does 5 damage per second (0.25 per tick)
 
-execute if score sg.r3.handler sg.r3.timer.round matches 3600 run worldborder damage amount 1
+# decrease radius every 9 ticks
+execute if score sg.r3.handler sg.r3.borderStage matches 4 if score sg.r3.handler sg.r3.borderTickCounter matches 30.. run scoreboard players remove sg.handler sg.borderRadius 1
+execute if score sg.r3.handler sg.r3.borderStage matches 4 if score sg.r3.handler sg.r3.borderTickCounter matches 30.. run scoreboard players set sg.r3.handler sg.r3.borderTickCounter 0
 
-# borderStage 5
+# update center of border
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 4 run function survival_games:round3/border_changes/stage3
 
-# shrinks worldborder from 50 -> 5 blocks across 30 seconds
+# visualize border & call damage on players outside it
+execute if score sg.r3.handler sg.r3.borderStage matches 4 store result storage survival_games:data radius double 1 run scoreboard players get sg.handler sg.borderRadius
+execute if score sg.r3.handler sg.r3.borderStage matches 4 store success storage survival_games:data damage double 0.5 run scoreboard players get sg.handler sg.borderRadius
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 4 run function survival_games:border_damage with storage survival_games:data
 
-# shrink 0.075 each tick
-execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 5 run worldborder add -0.075
+# at end of border stage, force teleport center to actual center to avoid any rounding errors
+execute if score sg.r3.handler sg.r3.timer.round matches 3900 as @e[tag=sg.worldborder.centerZoneThree] at @s run tp @e[tag=sg.worldborder.center] ~ ~ ~
 
-# borderStage 6 [FINAL]
+# border stage 5
+# handles going from radius of 20 to radius of 0 over 30 seconds
+# decreases radius by 0.6 blocks per second
+# decrease radius by 1 block every 33 ticks
+# does 8 damage per second (0.4 per tick)
 
-# doubles damage again
+# decrease radius every 9 ticks
+execute if score sg.r3.handler sg.r3.borderStage matches 5 if score sg.r3.handler sg.r3.borderTickCounter matches 33.. run scoreboard players remove sg.handler sg.borderRadius 1
+execute if score sg.r3.handler sg.r3.borderStage matches 5 if score sg.r3.handler sg.r3.borderTickCounter matches 33.. run scoreboard players set sg.r3.handler sg.r3.borderTickCounter 0
 
-execute if score sg.r3.handler sg.r3.timer.round matches 3600 run worldborder damage amount 2
+# update center of border
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 5 run function survival_games:round3/border_changes/stage4
+
+# visualize border & call damage on players outside it
+execute if score sg.r3.handler sg.r3.borderStage matches 5 store result storage survival_games:data radius double 1 run scoreboard players get sg.handler sg.borderRadius
+execute if score sg.r3.handler sg.r3.borderStage matches 5 store success storage survival_games:data damage double 0.9 run scoreboard players get sg.handler sg.borderRadius
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.borderStage matches 5 run function survival_games:border_damage with storage survival_games:data
+
+# at end of border stage, force teleport center to actual center to avoid any rounding errors
+execute if score sg.r3.handler sg.r3.timer.round matches 4500 as @e[tag=sg.worldborder.centerZoneFour] at @s run tp @e[tag=sg.worldborder.center] ~ ~ ~
+
+# border stage 6
+# constant radius of 0
+# 8 damage per second (0.4 per tick)
+execute if score sg.r3.handler sg.r3.borderStage matches 6 if score sg.r3.handler sg.r3.borderTickCounter matches 20.. run scoreboard players set sg.r3.handler sg.r3.borderTickCounter 0
+execute if score sg.r3.handler sg.r3.borderStage matches 6 run function survival_games:border_damage {radius:0, damage:0.9}

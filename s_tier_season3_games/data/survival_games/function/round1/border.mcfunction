@@ -23,16 +23,16 @@ execute if score sg.r1.handler sg.r1.timer.round matches 1 run scoreboard player
 scoreboard players add sg.r1.handler sg.r1.borderTickCounter 1
 
 # announce quadrant of final border
-execute if score sg.r1.handler sg.r1.timer.round matches 1 \
+execute if score sg.r1.handler sg.r1.timer.round matches 100 \
         if score sg.handler sg.borderFourthCenterX matches 0.. if score sg.handler sg.borderFourthCenterZ matches 0.. run \
         tellraw @a {"text":"The border will end toward the Southeast.","color":"dark_red"}
-execute if score sg.r1.handler sg.r1.timer.round matches 1 \
+execute if score sg.r1.handler sg.r1.timer.round matches 100 \
         if score sg.handler sg.borderFourthCenterX matches 0.. if score sg.handler sg.borderFourthCenterZ matches ..-1 run \
         tellraw @a {"text":"The border will end toward the Northeast.","color":"dark_red"}
-execute if score sg.r1.handler sg.r1.timer.round matches 1 \
+execute if score sg.r1.handler sg.r1.timer.round matches 100 \
         if score sg.handler sg.borderFourthCenterX matches ..-1 if score sg.handler sg.borderFourthCenterZ matches 0.. run \
         tellraw @a {"text":"The border will end toward the Southwest.","color":"dark_red"}
-execute if score sg.r1.handler sg.r1.timer.round matches 1 \
+execute if score sg.r1.handler sg.r1.timer.round matches 100 \
         if score sg.handler sg.borderFourthCenterX matches ..-1 if score sg.handler sg.borderFourthCenterZ matches ..-1 run \
         tellraw @a {"text":"The border will end toward the Northwest.","color":"dark_red"}
 
@@ -40,12 +40,12 @@ execute if score sg.r1.handler sg.r1.timer.round matches 1 \
 
 # determine current border stage
 execute if score sg.r1.handler sg.r1.timer.round matches ..600 run scoreboard players set sg.r1.handler sg.r1.borderStage 0
-execute if score sg.r1.handler sg.r1.timer.round matches 601..2400 run scoreboard players set sg.r1.handler sg.r1.borderStage 1
-execute if score sg.r1.handler sg.r1.timer.round matches 2401..2700 run scoreboard players set sg.r1.handler sg.r1.borderStage 2
-execute if score sg.r1.handler sg.r1.timer.round matches 2701..3300 run scoreboard players set sg.r1.handler sg.r1.borderStage 3
-execute if score sg.r1.handler sg.r1.timer.round matches 3301..3900 run scoreboard players set sg.r1.handler sg.r1.borderStage 4
-execute if score sg.r1.handler sg.r1.timer.round matches 3901..4500 run scoreboard players set sg.r1.handler sg.r1.borderStage 5
-execute if score sg.r1.handler sg.r1.timer.round matches 4501.. run scoreboard players set sg.r1.handler sg.r1.borderStage 6
+execute if score sg.r1.handler sg.r1.timer.round matches 600..2400 run scoreboard players set sg.r1.handler sg.r1.borderStage 1
+execute if score sg.r1.handler sg.r1.timer.round matches 2400..2700 run scoreboard players set sg.r1.handler sg.r1.borderStage 2
+execute if score sg.r1.handler sg.r1.timer.round matches 2700..3300 run scoreboard players set sg.r1.handler sg.r1.borderStage 3
+execute if score sg.r1.handler sg.r1.timer.round matches 3300..3900 run scoreboard players set sg.r1.handler sg.r1.borderStage 4
+execute if score sg.r1.handler sg.r1.timer.round matches 3900..4500 run scoreboard players set sg.r1.handler sg.r1.borderStage 5
+execute if score sg.r1.handler sg.r1.timer.round matches 4500.. run scoreboard players set sg.r1.handler sg.r1.borderStage 6
 
 # border stage 0
 # constant radius of 200

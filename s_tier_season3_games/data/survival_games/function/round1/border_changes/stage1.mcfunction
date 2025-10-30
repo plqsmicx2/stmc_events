@@ -1,9 +1,9 @@
 # handles dx & dy for stage 1 of border
 
 # summon marker at new center
-execute if score sg.r1.handler sg.r1.timer.round matches 601 run summon marker 0 120 0 {Tags:["sg.worldborder.centerZoneOne"]}
-execute if score sg.r1.handler sg.r1.timer.round matches 601 as @e[tag=sg.worldborder.centerZoneOne] store result entity @s Pos[0] double 1 run scoreboard players get sg.handler sg.borderFirstCenterX
-execute if score sg.r1.handler sg.r1.timer.round matches 601 as @e[tag=sg.worldborder.centerZoneOne] store result entity @s Pos[2] double 1 run scoreboard players get sg.handler sg.borderFirstCenterZ
+execute in survival_games:sg1 if score sg.r1.handler sg.r1.timer.round matches 601 run summon marker 0 120 0 {Tags:["sg.worldborder.centerZoneOne"]}
+execute in survival_games:sg1 if score sg.r1.handler sg.r1.timer.round matches 601 as @e[tag=sg.worldborder.centerZoneOne] store result entity @s Pos[0] double 1 run scoreboard players get sg.handler sg.borderFirstCenterX
+execute in survival_games:sg1 if score sg.r1.handler sg.r1.timer.round matches 601 as @e[tag=sg.worldborder.centerZoneOne] store result entity @s Pos[2] double 1 run scoreboard players get sg.handler sg.borderFirstCenterZ
 
 # determine rounded distance to new center (manual unfortunately)
 execute if score sg.r1.handler sg.r1.timer.round matches 601 as @e[tag=sg.worldborder.center] at @s if entity @e[tag=sg.worldborder.centerZoneOne,distance=0..0.5] run scoreboard players set sg.handler sg.borderDistance 0

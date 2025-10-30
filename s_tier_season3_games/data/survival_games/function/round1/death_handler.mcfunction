@@ -1,8 +1,5 @@
 # function to track player deaths & update appropriate scoreboards
 
-# quick reset of tick
-scoreboard players set sg.r1.handler sg.r1.deathThisTick 0
-
 # first, let's make sure players go into spectator immediately when they die
 # and we run points_update at the same time to ensure immediate points reflections
 # updating only after deaths also ensures placement points are only given out ONCE

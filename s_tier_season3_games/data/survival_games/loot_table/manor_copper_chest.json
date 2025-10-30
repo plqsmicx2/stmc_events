@@ -2,11 +2,11 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "rolls": 10,
+      "rolls": 8,
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 395
+          "weight": 195
         },
         {
           "type": "minecraft:item",

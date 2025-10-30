@@ -84,6 +84,9 @@ scoreboard players set @a sg.kills 0
 scoreboard players set @a sg.alive 1
 scoreboard players set @a[team=SPECTATORS] sg.alive 0
 scoreboard players set @a sg.points.indiv 0
+scoreboard players set @a sg.r1.points 0
+scoreboard players set @a sg.r2.points 0
+scoreboard players set @a sg.r3.points 0
 
 # set the sidebar
 scoreboard objectives setdisplay sidebar sg.sidebar
