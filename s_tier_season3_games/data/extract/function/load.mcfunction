@@ -104,10 +104,10 @@ scoreboard players set extract.handler extract.stats.game3completed 0
 scoreboard players set extract.handler extract.stats.game4completed 0
 
 scoreboard players set @a extract.points.indiv 0
-scoreboard players set extract.handler extract.points.diamondValue 10
-scoreboard players set extract.handler extract.points.goldValue 4
-scoreboard players set extract.handler extract.points.killValue 3
-scoreboard players set extract.handler extract.points.survivalValue 3
+scoreboard players set extract.handler extract.points.diamondValue 2
+scoreboard players set extract.handler extract.points.goldValue 1
+scoreboard players set extract.handler extract.points.killValue 1
+scoreboard players set extract.handler extract.points.survivalValue 0
 function extract:points_update
 function extract:death_handler
 

@@ -1,5 +1,5 @@
 # support function that ranks teams & players based on scores
-# stores these rankings either in disco.points.team.rank or disco.points.indiv.rank
+# stores these rankings either in disco.points.team.rank or disco.points.player.rank
 
 # <===== TEAM RANKINGS =====>
 
@@ -181,7 +181,7 @@ scoreboard objectives add disco.points.indiv.temp dummy
 execute as @a run scoreboard players operation @s disco.points.indiv.temp = @s disco.points.indiv
 
 # and reset our rankings
-execute as @a run scoreboard players set @s disco.points.indiv.rank -1
+execute as @a run scoreboard players set @s disco.points.player.rank -1
 
 # set our highest value to -1
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
@@ -190,163 +190,163 @@ scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
 
 # then determine which player has that highest value & give them the highest rank applicable
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 1
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 1
 
 # and then reset the score of whoever had the highest value
-execute as @a if score @s disco.points.indiv.rank matches 1 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.player.rank matches 1 run scoreboard players reset @s disco.points.indiv.temp
 
 # and then repeat the process until all players have been ranked
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 2
-execute as @a if score @s disco.points.indiv.rank matches 2 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 2
+execute as @a if score @s disco.points.player.rank matches 2 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 3
-execute as @a if score @s disco.points.indiv.rank matches 3 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 3
+execute as @a if score @s disco.points.player.rank matches 3 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 4
-execute as @a if score @s disco.points.indiv.rank matches 4 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 4
+execute as @a if score @s disco.points.player.rank matches 4 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 5
-execute as @a if score @s disco.points.indiv.rank matches 5 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 5
+execute as @a if score @s disco.points.player.rank matches 5 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 6
-execute as @a if score @s disco.points.indiv.rank matches 6 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 6
+execute as @a if score @s disco.points.player.rank matches 6 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 7
-execute as @a if score @s disco.points.indiv.rank matches 7 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 7
+execute as @a if score @s disco.points.player.rank matches 7 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 8
-execute as @a if score @s disco.points.indiv.rank matches 8 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 8
+execute as @a if score @s disco.points.player.rank matches 8 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 9
-execute as @a if score @s disco.points.indiv.rank matches 9 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 9
+execute as @a if score @s disco.points.player.rank matches 9 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 10
-execute as @a if score @s disco.points.indiv.rank matches 10 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 10
+execute as @a if score @s disco.points.player.rank matches 10 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 11
-execute as @a if score @s disco.points.indiv.rank matches 11 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 11
+execute as @a if score @s disco.points.player.rank matches 11 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 12
-execute as @a if score @s disco.points.indiv.rank matches 12 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 12
+execute as @a if score @s disco.points.player.rank matches 12 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 13
-execute as @a if score @s disco.points.indiv.rank matches 13 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 13
+execute as @a if score @s disco.points.player.rank matches 13 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 14
-execute as @a if score @s disco.points.indiv.rank matches 14 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 14
+execute as @a if score @s disco.points.player.rank matches 14 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 15
-execute as @a if score @s disco.points.indiv.rank matches 15 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 15
+execute as @a if score @s disco.points.player.rank matches 15 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 16
-execute as @a if score @s disco.points.indiv.rank matches 16 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 16
+execute as @a if score @s disco.points.player.rank matches 16 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 17
-execute as @a if score @s disco.points.indiv.rank matches 17 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 17
+execute as @a if score @s disco.points.player.rank matches 17 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 18
-execute as @a if score @s disco.points.indiv.rank matches 18 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 18
+execute as @a if score @s disco.points.player.rank matches 18 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 19
-execute as @a if score @s disco.points.indiv.rank matches 19 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 19
+execute as @a if score @s disco.points.player.rank matches 19 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 20
-execute as @a if score @s disco.points.indiv.rank matches 20 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 20
+execute as @a if score @s disco.points.player.rank matches 20 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 21
-execute as @a if score @s disco.points.indiv.rank matches 21 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 21
+execute as @a if score @s disco.points.player.rank matches 21 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 22
-execute as @a if score @s disco.points.indiv.rank matches 22 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 22
+execute as @a if score @s disco.points.player.rank matches 22 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 23
-execute as @a if score @s disco.points.indiv.rank matches 23 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 23
+execute as @a if score @s disco.points.player.rank matches 23 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 24
-execute as @a if score @s disco.points.indiv.rank matches 24 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 24
+execute as @a if score @s disco.points.player.rank matches 24 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 25
-execute as @a if score @s disco.points.indiv.rank matches 25 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 25
+execute as @a if score @s disco.points.player.rank matches 25 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 26
-execute as @a if score @s disco.points.indiv.rank matches 26 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 26
+execute as @a if score @s disco.points.player.rank matches 26 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 27
-execute as @a if score @s disco.points.indiv.rank matches 27 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 27
+execute as @a if score @s disco.points.player.rank matches 27 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 28
-execute as @a if score @s disco.points.indiv.rank matches 28 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 28
+execute as @a if score @s disco.points.player.rank matches 28 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 29
-execute as @a if score @s disco.points.indiv.rank matches 29 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 29
+execute as @a if score @s disco.points.player.rank matches 29 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 30
-execute as @a if score @s disco.points.indiv.rank matches 30 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 30
+execute as @a if score @s disco.points.player.rank matches 30 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 31
-execute as @a if score @s disco.points.indiv.rank matches 31 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 31
+execute as @a if score @s disco.points.player.rank matches 31 run scoreboard players reset @s disco.points.indiv.temp
 
 scoreboard players set $stmc.highest disco.points.indiv.temp -1
 execute as @a run scoreboard players operation $stmc.highest disco.points.indiv.temp > @s disco.points.indiv.temp
-execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.indiv.rank matches 0.. run scoreboard players set @s disco.points.indiv.rank 32
-execute as @a if score @s disco.points.indiv.rank matches 32 run scoreboard players reset @s disco.points.indiv.temp
+execute as @a if score @s disco.points.indiv.temp = $stmc.highest disco.points.indiv.temp unless score @s disco.points.player.rank matches 0.. run scoreboard players set @s disco.points.player.rank 32
+execute as @a if score @s disco.points.player.rank matches 32 run scoreboard players reset @s disco.points.indiv.temp

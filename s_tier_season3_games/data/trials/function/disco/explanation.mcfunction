@@ -49,11 +49,15 @@ execute if score disco.handler disco.timer.explanation matches 320 run tellraw @
 # blurb #4
 execute in trials:disco if score disco.handler disco.timer.explanation matches 480 run tp @a -27 91 27 -135 5
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"1 point","color":"red"},{"text":" for each round you survive.","color":"aqua"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"1 point","color":"red"},{"text":" each six rounds you survive.","color":"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"1 points","color":"red"},{"text":" each time someone else dies.","color":"aqua"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will also earn the following placement points:",color:"aqua"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 16: +","color":"aqua"},{"text":"1 point","color":"red"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 8: +","color":"aqua"},{"text":"1 point","color":"red"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 4: +","color":"aqua"},{"text":"1 point","color":"red"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 2: +","color":"aqua"},{"text":"1 point","color":"red"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"If you survive all 60 rounds, you will earn a bonus +",color:"aqua"},{"text":"5 points","color":"red"},{"text":".","color":"aqua"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"If you survive all 60 rounds, you will earn a bonus +",color:"aqua"},{"text":"2 points","color":"red"},{"text":".","color":"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
 
 # blurb #5
@@ -75,6 +79,8 @@ execute if score disco.handler disco.timer.explanation matches 640 as @a[team=GR
 execute if score disco.handler disco.timer.explanation matches 640 as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=1481884,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 execute if score disco.handler disco.timer.explanation matches 640 as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 execute if score disco.handler disco.timer.explanation matches 640 as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=3949738,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute if score disco.handler disco.timer.explanation matches 640 run tellraw @a {text:" "}
+execute if score disco.handler disco.timer.explanation matches 640 run tellraw @a {text:"The round beings in 20 seconds!","color":"aqua"}
 execute if score disco.handler disco.timer.explanation matches 640 run tellraw @a {text:" "}
 execute if score disco.handler disco.timer.explanation matches 640 run tellraw @a {text:"Good luck!","color":"aqua"}
 execute if score disco.handler disco.timer.explanation matches 640 run tellraw @a {text:" "}

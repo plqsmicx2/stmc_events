@@ -69,6 +69,7 @@ scoreboard objectives add spleef.teams_alive dummy
 scoreboard objectives add spleef.alive dummy
 # points
 scoreboard objectives add spleef.points.indiv dummy
+scoreboard objectives add spleef.points.placement dummy
 scoreboard objectives add spleef.points.indiv.rank dummy
 scoreboard objectives add spleef.points.team dummy
 scoreboard objectives add spleef.points.team.rank dummy
@@ -93,3 +94,4 @@ scoreboard players set @a spleef.points.indiv 0
 
 scoreboard objectives remove spleef.sidebar
 function trials:spleef/death_handler
+scoreboard players set @a spleef.points.placement 32

@@ -76,6 +76,8 @@ scoreboard objectives add disco.teams_alive dummy
 scoreboard objectives add disco.alive dummy
 # points=
 scoreboard objectives add disco.points.indiv dummy
+scoreboard objectives add disco.points.placement dummy
+scoreboard objectives add disco.points.rounds dummy
 scoreboard objectives add disco.points.player.rank dummy
 scoreboard objectives add disco.points.team dummy
 scoreboard objectives add disco.points.team.rank dummy
@@ -101,6 +103,7 @@ scoreboard players set disco.handler disco.example_rounds 0
 scoreboard players set @a[team=!SPECTATORS] disco.alive 1
 
 scoreboard players set @a disco.points.indiv 0
+scoreboard players set @a disco.points.rounds 0
 
 scoreboard players set disco.handler disco.current_round_length 40
 scoreboard players set disco.handler disco.current_round_length_delay 80
@@ -108,3 +111,4 @@ scoreboard players set disco.handler disco.current_round_block -1
 
 scoreboard objectives remove disco.sidebar
 function trials:disco/death_handler
+scoreboard players set @a disco.points.placement 32

@@ -33,19 +33,19 @@ execute if score disco.handler disco.stage matches 1 if score disco.handler disc
 # if we're in stage 2, increment the timer, & reset player alive & location
 execute if score disco.handler disco.stage matches 2 run scoreboard players add disco.handler disco.timer.delay2 1
 # countdown at last 5 seconds
-execute if score disco.handler disco.timer.delay2 matches 700 run title @a actionbar {"text":"Starting in 5!","color":"dark_aqua"}
-execute as @a at @s if score disco.handler disco.timer.delay2 matches 700 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.4 1.6
-execute if score disco.handler disco.timer.delay2 matches 720 run title @a actionbar {"text":"Starting in 4!","color":"dark_aqua"}
-execute as @a at @s if score disco.handler disco.timer.delay2 matches 720 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.4 1.7
-execute if score disco.handler disco.timer.delay2 matches 740 run title @a actionbar {"text":"Starting in 3!","color":"dark_aqua"}
-execute as @a at @s if score disco.handler disco.timer.delay2 matches 740 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.5 1.8
-execute if score disco.handler disco.timer.delay2 matches 760 run title @a actionbar {"text":"Starting in 2!","color":"dark_aqua"}
-execute as @a at @s if score disco.handler disco.timer.delay2 matches 760 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.6 1.9
-execute if score disco.handler disco.timer.delay2 matches 780 run title @a actionbar {"text":"Starting in 1!","color":"dark_aqua"}
-execute as @a at @s if score disco.handler disco.timer.delay2 matches 780 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.7 2.0
+execute if score disco.handler disco.timer.delay2 matches 300 run title @a actionbar {"text":"Starting in 5!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 300 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.4 1.6
+execute if score disco.handler disco.timer.delay2 matches 320 run title @a actionbar {"text":"Starting in 4!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 320 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.4 1.7
+execute if score disco.handler disco.timer.delay2 matches 340 run title @a actionbar {"text":"Starting in 3!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 340 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.5 1.8
+execute if score disco.handler disco.timer.delay2 matches 360 run title @a actionbar {"text":"Starting in 2!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 360 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.6 1.9
+execute if score disco.handler disco.timer.delay2 matches 380 run title @a actionbar {"text":"Starting in 1!","color":"dark_aqua"}
+execute as @a at @s if score disco.handler disco.timer.delay2 matches 380 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.7 2.0
 # move to next stage after 20 seconds
-execute if score disco.handler disco.timer.delay2 matches 799 run title @a title {"text":"Go!","color":"dark_aqua","bold":true}
-execute if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 800.. run scoreboard players set disco.handler disco.stage 3
+execute if score disco.handler disco.timer.delay2 matches 399 run title @a title {"text":"Go!","color":"dark_aqua","bold":true}
+execute if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 400.. run scoreboard players set disco.handler disco.stage 3
 
 # if we're in stage 3 (game in progress), increment the game timer & run the main game function
 execute if score disco.handler disco.stage matches 3 run scoreboard players add disco.handler disco.timer.game 1

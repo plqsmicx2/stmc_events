@@ -123,8 +123,7 @@ kill @e[tag=lower_level]
 
 # increment round counter
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length run scoreboard players add disco.handler disco.rounds_played 1
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length as @a[scores={disco.alive=1}] run scoreboard players add @s disco.points.indiv 1
-execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length as @a[scores={disco.alive=1}] run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Round Survived!",bold:true,color:"red"}]
+execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length as @a[scores={disco.alive=1}] run scoreboard players add @s disco.points.rounds 1
 execute if score disco.handler disco.timer.game = disco.handler disco.current_round_length as @a[scores={disco.alive=1}] at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
 
 # remove black concrete

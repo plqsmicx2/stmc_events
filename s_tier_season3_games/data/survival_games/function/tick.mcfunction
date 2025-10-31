@@ -16,6 +16,9 @@ execute if score sg.handler sg.stage matches 0 run function survival_games:round
 execute if score sg.handler sg.stage matches 1 run function survival_games:round2/tick
 execute if score sg.handler sg.stage matches 2 run function survival_games:round3/tick
 
+# if stage is 3, run full reset function
+execute if score sg.handler sg.stage matches 3 run function survival_games:reset
+
 # set team points to 0 if they don't exist
 execute unless score sg.RedRaccoons sg.points.team matches 0.. run scoreboard players set sg.RedRaccoons sg.points.team 0
 execute unless score sg.OrangeOtters sg.points.team matches 0.. run scoreboard players set sg.OrangeOtters sg.points.team 0

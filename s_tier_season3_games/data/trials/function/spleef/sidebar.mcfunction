@@ -33,21 +33,21 @@ scoreboard players reset spleef.BlueBears spleef.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
-execute if score spleef.RedRaccoons spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.RedRaccoons spleef.sidebar = spleef.RedRaccoons spleef.points.team.temp
+execute if score spleef.RedRaccoons spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.RedRaccoons spleef.sidebar = spleef.RedRaccoons spleef.points.team
 execute if score spleef.RedRaccoons spleef.points.team.rank matches 1..3 run scoreboard players display name spleef.RedRaccoons spleef.sidebar {"text": "  Red Raccoons", "color": "red"}
-execute if score spleef.OrangeOtters spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.OrangeOtters spleef.sidebar = spleef.OrangeOtters spleef.points.team.temp
+execute if score spleef.OrangeOtters spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.OrangeOtters spleef.sidebar = spleef.OrangeOtters spleef.points.team
 execute if score spleef.OrangeOtters spleef.points.team.rank matches 1..3 run scoreboard players display name spleef.OrangeOtters spleef.sidebar {"text": "  Orange Otters", "color": "gold"}
-execute if score spleef.PinkPikas spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.PinkPikas spleef.sidebar = spleef.PinkPikas spleef.points.team.temp
+execute if score spleef.PinkPikas spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.PinkPikas spleef.sidebar = spleef.PinkPikas spleef.points.team
 execute if score spleef.PinkPikas spleef.points.team.rank matches 1..3 run scoreboard players display name spleef.PinkPikas spleef.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
-execute if score spleef.YellowYaks spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.YellowYaks spleef.sidebar = spleef.YellowYaks spleef.points.team.temp
+execute if score spleef.YellowYaks spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.YellowYaks spleef.sidebar = spleef.YellowYaks spleef.points.team
 execute if score spleef.YellowYaks spleef.points.team.rank matches 1..3 run scoreboard players display name spleef.YellowYaks spleef.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
-execute if score spleef.GreenGoats spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.GreenGoats spleef.sidebar = spleef.GreenGoats spleef.points.team.temp
+execute if score spleef.GreenGoats spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.GreenGoats spleef.sidebar = spleef.GreenGoats spleef.points.team
 execute if score spleef.GreenGoats spleef.points.team.rank matches 1..3 run scoreboard players display name spleef.GreenGoats spleef.sidebar {"text": "  Green Goats", "color": "dark_green"}
-execute if score spleef.CyanCougars spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.CyanCougars spleef.sidebar = spleef.CyanCougars spleef.points.team.temp
+execute if score spleef.CyanCougars spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.CyanCougars spleef.sidebar = spleef.CyanCougars spleef.points.team
 execute if score spleef.CyanCougars spleef.points.team.rank matches 1..3 run scoreboard players display name spleef.CyanCougars spleef.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
-execute if score spleef.PurplePenguins spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.PurplePenguins spleef.sidebar = spleef.PurplePenguins spleef.points.team.temp
+execute if score spleef.PurplePenguins spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.PurplePenguins spleef.sidebar = spleef.PurplePenguins spleef.points.team
 execute if score spleef.PurplePenguins spleef.points.team.rank matches 1..3 run scoreboard players display name spleef.PurplePenguins spleef.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
-execute if score spleef.BlueBears spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.BlueBears spleef.sidebar = spleef.BlueBears spleef.points.team.temp
+execute if score spleef.BlueBears spleef.points.team.rank matches 1..3 run scoreboard players operation spleef.BlueBears spleef.sidebar = spleef.BlueBears spleef.points.team
 execute if score spleef.BlueBears spleef.points.team.rank matches 1..3 run scoreboard players display name spleef.BlueBears spleef.sidebar {"text": "  Blue Bears", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)

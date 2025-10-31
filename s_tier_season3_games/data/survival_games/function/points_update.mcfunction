@@ -32,3 +32,11 @@ execute as @a[team=PURPLE_PENGUINS] at @s run scoreboard players operation sg.Pu
 
 scoreboard players set sg.BlueBears sg.points.team 0
 execute as @a[team=BLUE_BEARS] at @s run scoreboard players operation sg.BlueBears sg.points.team += @s sg.points.indiv
+
+# <===== most kill points =====>
+
+execute as @a if score @s sg.kills.rank matches 1 run scoreboard players add @s sg.points.indiv 10
+execute as @a if score @s sg.kills.rank matches 2 run scoreboard players add @s sg.points.indiv 8
+execute as @a if score @s sg.kills.rank matches 3 run scoreboard players add @s sg.points.indiv 6
+execute as @a if score @s sg.kills.rank matches 4 run scoreboard players add @s sg.points.indiv 4
+execute as @a if score @s sg.kills.rank matches 5 run scoreboard players add @s sg.points.indiv 2

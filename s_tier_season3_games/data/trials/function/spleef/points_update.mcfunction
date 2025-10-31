@@ -2,7 +2,22 @@
 
 # this function is called every tick
 
-# Update team points
+# <===== indiv points =====>
+
+scoreboard players set @a spleef.points.indiv 0
+
+# outlast calculation
+execute as @a if score @s spleef.points.placement matches ..16 run scoreboard players set @s spleef.points.indiv 17
+execute as @a if score @s spleef.points.placement matches ..16 run scoreboard players operation @s spleef.points.indiv -= @s spleef.points.placement
+
+# placement
+execute as @a if score @s spleef.points.placement matches ..24 run scoreboard players add @s spleef.points.indiv 4
+execute as @a if score @s spleef.points.placement matches ..8 run scoreboard players add @s spleef.points.indiv 1
+execute as @a if score @s spleef.points.placement matches ..4 run scoreboard players add @s spleef.points.indiv 1
+execute as @a if score @s spleef.points.placement matches ..2 run scoreboard players add @s spleef.points.indiv 1
+execute as @a if score @s spleef.points.placement matches ..1 run scoreboard players add @s spleef.points.indiv 1
+
+# <===== team points =====>
 
 # Red Raccoons
 scoreboard players set spleef.RedRaccoons spleef.points.team 0

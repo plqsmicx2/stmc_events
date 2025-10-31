@@ -32,11 +32,11 @@ execute if score extract.handler extract.timer.explanation matches 320 run tellr
 # blurb #4
 execute in extract:extract if score extract.handler extract.timer.explanation matches 480 run teleport @a -18 103 6 -125 5
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:"You will earn the following points when playing:",color:"red"}
+execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:"You may earn the following points when playing:",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Diamond Block: +",color:"red"},{text:"30",color:"dark_red"},{text:" points",color:"red"}]
-execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Gold Block: +",color:"red"},{text:"15",color:"dark_red"},{text:" points",color:"red"}]
-execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Kill: +",color:"red"},{text:"5",color:"dark_red"},{text:" points",color:"red"}]
+execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Diamond Block: +",color:"red"},{text:"2",color:"dark_red"},{text:" point",color:"red"}]
+execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Gold Block: +",color:"red"},{text:"1",color:"dark_red"},{text:" point",color:"red"}]
+execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Kill: +",color:"red"},{text:"1",color:"dark_red"},{text:" point",color:"red"}]
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
 
 # blurb #5
@@ -44,7 +44,7 @@ execute in extract:extract if score extract.handler extract.timer.explanation ma
 execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:"You will play each other team once.",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:" "}
-execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:"So there will be a total of five rounds.",color:"red"}
+execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:"So there will be a total of seven rounds.",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:" "}
 
 

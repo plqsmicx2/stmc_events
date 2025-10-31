@@ -47,6 +47,9 @@ execute as @a[team=BLUE_BEARS] run scoreboard players operation tr.BlueBears tr.
 
 function trials:calculate_rankings
 
+# actionbar
+execute as @a if score disco.handler disco.stage matches 3..4 run title @s actionbar ["",{text:"Current Placement: ",bold:true,color:"yellow"},{score:{name:"disco.handler",objective:"disco.players_alive"},bold:true,color:"red"},{text:" | Individual Points: ",bold:true,color:"yellow"},{score:{name:"@s",objective:"disco.points.indiv"},bold:true,color:"red"}]
+
 # <===== BUILD FROM THE BOTTOM =====>
 
 # reset teams

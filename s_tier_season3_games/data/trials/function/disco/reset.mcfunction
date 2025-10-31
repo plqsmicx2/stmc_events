@@ -1,10 +1,7 @@
 # reset function for disco [DISCO]
 
-# actually doesn't function as a typical reset, but rather the point awards
-
-# award completion points [if applicable]
-execute as @a[scores={disco.alive=1..}] run scoreboard players add @s disco.points.indiv 5
-execute as @a[scores={disco.alive=1..}] run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+5 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" Completed all rounds!",bold:true,color:"red"}]
+# set all alive players to a placement of #1
+execute as @a[scores={disco.alive=1..}] run scoreboard players set @s disco.points.placement 1
 
 # and play fireworks for those who completed
 execute as @a[scores={disco.alive=1..}] at @s run summon minecraft:firework_rocket ~-1 ~ ~ {LifeTime:40}

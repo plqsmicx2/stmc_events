@@ -44,4 +44,4 @@ execute if score sg.r3.handler sg.r3.stage matches 1 run function survival_games
 # if we're in stage 2, we just need to increment its timer [points are not announced after this round]
 # and then update sg.stage to 1
 execute if score sg.r3.handler sg.r3.stage matches 2 run scoreboard players add sg.r3.handler sg.r3.timer.delay2 1
-execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 200.. run scoreboard players set sg.handler sg.stage 2
+execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 200.. run scoreboard players set sg.handler sg.stage 3

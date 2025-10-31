@@ -311,12 +311,13 @@ execute as @a run scoreboard players operation $sg.highest sg.points.indiv.temp 
 execute as @a if score @s sg.points.indiv.temp = $sg.highest sg.points.indiv.temp unless score @s sg.points.indiv.rank matches 0.. run scoreboard players set @s sg.points.indiv.rank 24
 execute as @a if score @s sg.points.indiv.rank matches 24 run scoreboard players reset @s sg.points.indiv.temp
 
-# <===== FASTEST LAPS =====>
+# <===== KILL RANKING =====>
 
 # calculate fastest laps for each player
 scoreboard players set @a sg.kills 0
 
 # reset ranks
+scoreboard objectives add sg.kills.rank dummy
 execute as @a run scoreboard players set @s sg.kills.rank -1
 
 # first, store our data in a temporary place to work with
@@ -332,19 +333,26 @@ execute as @a unless score @s sg.kills.rank matches 1.. run scoreboard players o
 # determine who has that highest value & assign them appropriate rank
 execute as @a if score @s sg.kills.temp = $sg.highest sg.kills.temp run scoreboard players set @s sg.kills.rank 1
 
+# then remove that player's value from consideration
+execute as @a if score @s sg.kills.rank matches 1 run scoreboard players reset @s sg.kills.temp
+
 # and repeat four more times
 scoreboard players set $sg.highest sg.kills.temp 0
 execute as @a unless score @s sg.kills.rank matches 1.. run scoreboard players operation $sg.highest sg.kills.temp < @s sg.kills.temp
 execute as @a if score @s sg.kills.temp = $sg.highest sg.kills.temp run scoreboard players set @s sg.kills.rank 2
+execute as @a if score @s sg.kills.rank matches 2 run scoreboard players reset @s sg.kills.temp
 
 scoreboard players set $sg.highest sg.kills.temp 0
 execute as @a unless score @s sg.kills.rank matches 1.. run scoreboard players operation $sg.highest sg.kills.temp < @s sg.kills.temp
 execute as @a if score @s sg.kills.temp = $sg.highest sg.kills.temp run scoreboard players set @s sg.kills.rank 3
+execute as @a if score @s sg.kills.rank matches 3 run scoreboard players reset @s sg.kills.temp
 
 scoreboard players set $sg.highest sg.kills.temp 0
 execute as @a unless score @s sg.kills.rank matches 1.. run scoreboard players operation $sg.highest sg.kills.temp < @s sg.kills.temp
 execute as @a if score @s sg.kills.temp = $sg.highest sg.kills.temp run scoreboard players set @s sg.kills.rank 4
+execute as @a if score @s sg.kills.rank matches 4 run scoreboard players reset @s sg.kills.temp
 
 scoreboard players set $sg.highest sg.kills.temp 0
 execute as @a unless score @s sg.kills.rank matches 1.. run scoreboard players operation $sg.highest sg.kills.temp < @s sg.kills.temp
 execute as @a if score @s sg.kills.temp = $sg.highest sg.kills.temp run scoreboard players set @s sg.kills.rank 5
+execute as @a if score @s sg.kills.rank matches 5 run scoreboard players reset @s sg.kills.temp

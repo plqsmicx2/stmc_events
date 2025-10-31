@@ -50,4 +50,4 @@ execute if score spleef.handler spleef.stage matches 3 run function trials:splee
 # if we're in stage 4, wait 20 seconds & reset
 execute if score spleef.handler spleef.stage matches 4 run scoreboard players add spleef.handler spleef.timer.delay3 1
 execute if score spleef.handler spleef.stage matches 4 if score spleef.handler spleef.timer.delay3 matches 3 run function trials:spleef/reset
-execute if score spleef.handler spleef.stage matches 4 if score spleef.handler spleef.timer.delay3 matches 400.. run scoreboard players add tr.handler tr.stage 1
+execute if score spleef.handler spleef.stage matches 4 if score spleef.handler spleef.timer.delay3 matches 200.. run scoreboard players add tr.handler tr.stage 1

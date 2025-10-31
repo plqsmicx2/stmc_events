@@ -16,7 +16,7 @@ execute if score sg.r1.handler sg.r1.timer.explanation matches 1 run tellraw @a 
 # blurb #2
 execute if score sg.r1.handler sg.r1.timer.explanation matches 160 in survival_games:sg1 run teleport @a 110 142 -137 20 25
 execute if score sg.r1.handler sg.r1.timer.explanation matches 160 run tellraw @a {"text":" "}
-execute if score sg.r1.handler sg.r1.timer.explanation matches 160 run tellraw @a [{"text":"Kills are worth ","color":"gold"},{"text":"+20","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 160 run tellraw @a [{"text":"Kills are worth ","color":"gold"},{"text":"+4","color":"dark_red"},{"text":" points","color":"gold"}]
 execute if score sg.r1.handler sg.r1.timer.explanation matches 160 run tellraw @a {"text":" "}
 execute if score sg.r1.handler sg.r1.timer.explanation matches 160 run tellraw @a {"text":"There is a 10 second grace period.","color":"red","bold":true}
 execute if score sg.r1.handler sg.r1.timer.explanation matches 160 run tellraw @a {"text":" "}
@@ -28,13 +28,13 @@ execute if score sg.r1.handler sg.r1.timer.explanation matches 320 in survival_g
 execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a {"text":" "}
 execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a {"text":"Placing higher as a team earns points.","color":"gold"}
 execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a {"text":"These are split evenly among the team & awarded at the round end.","color":"gold"}
-execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"1st: ","color":"gold"},{"text":"440","color":"dark_red"},{"text":" points","color":"gold"}, \
-                                                                                    {"text":"  |  ","color":"gold"},{"text":"2nd: ","color":"gold"},{"text":"360","color":"dark_red"},{"text":" points","color":"gold"}]
-execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"3rd: ","color":"gold"},{"text":"300","color":"dark_red"},{"text":" points","color":"gold"}, \
-                                                                                    {"text":"  |  ","color":"gold"},{"text":"4th: ","color":"gold"},{"text":"240","color":"dark_red"},{"text":" points","color":"gold"}]
-execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"5th: ","color":"gold"},{"text":"180","color":"dark_red"},{"text":" points","color":"gold"}, \
-                                                                                    {"text":"  |  ","color":"gold"},{"text":"6th: ","color":"gold"},{"text":"120","color":"dark_red"},{"text":" points","color":"gold"}]
-execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"7th: ","color":"gold"},{"text":"60","color":"dark_red"},{"text":" points","color":"gold"}, \
+execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"1st: ","color":"gold"},{"text":"52","color":"dark_red"},{"text":" points","color":"gold"}, \
+                                                                                    {"text":"  |  ","color":"gold"},{"text":"2nd: ","color":"gold"},{"text":"40","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"3rd: ","color":"gold"},{"text":"32","color":"dark_red"},{"text":" points","color":"gold"}, \
+                                                                                    {"text":"  |  ","color":"gold"},{"text":"4th: ","color":"gold"},{"text":"24","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"5th: ","color":"gold"},{"text":"16","color":"dark_red"},{"text":" points","color":"gold"}, \
+                                                                                    {"text":"  |  ","color":"gold"},{"text":"6th: ","color":"gold"},{"text":"8","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"7th: ","color":"gold"},{"text":"4","color":"dark_red"},{"text":" points","color":"gold"}, \
                                                                                     {"text":"  |  ","color":"gold"},{"text":"8th: ","color":"gold"},{"text":"0","color":"dark_red"},{"text":" points","color":"gold"}]
 execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a {"text":" "}
 
@@ -42,11 +42,11 @@ execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @
 execute if score sg.r1.handler sg.r1.timer.explanation matches 480 in survival_games:sg1 run teleport @a -3 140 -35 135 25
 execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a {"text":" "}
 execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a {"text":"The players who get the most kills will also earn a bonus:","color":"gold"}
-execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"1st: ","color":"gold"},{"text":"75","color":"dark_red"},{"text":" points","color":"gold"}]
-execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"2nd: ","color":"gold"},{"text":"50","color":"dark_red"},{"text":" points","color":"gold"}]
-execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"3rd: ","color":"gold"},{"text":"35","color":"dark_red"},{"text":" points","color":"gold"}]
-execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"4th: ","color":"gold"},{"text":"20","color":"dark_red"},{"text":" points","color":"gold"}]
-execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"5th: ","color":"gold"},{"text":"10","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"1st: ","color":"gold"},{"text":"20","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"2nd: ","color":"gold"},{"text":"16","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"3rd: ","color":"gold"},{"text":"12","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"4th: ","color":"gold"},{"text":"8","color":"dark_red"},{"text":" points","color":"gold"}]
+execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a [{"text":"5th: ","color":"gold"},{"text":"4","color":"dark_red"},{"text":" points","color":"gold"}]
 execute if score sg.r1.handler sg.r1.timer.explanation matches 480 run tellraw @a {"text":" "}
 
 # blurb #5

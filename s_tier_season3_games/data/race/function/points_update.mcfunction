@@ -13,24 +13,17 @@
 execute as @a run scoreboard players set @s race.points.indiv 0
 
 # indiv placement
-scoreboard players set race.handler race.points.placement 8
+scoreboard players set race.handler race.points.placement 2
 execute as @a if score @s race.completion.rank matches 1.. run scoreboard players set @s race.points.indiv 32
 execute as @a if score @s race.completion.rank matches 1.. run scoreboard players operation @s race.points.indiv -= @s race.completion.rank
 execute as @a if score @s race.completion.rank matches 1.. run scoreboard players operation @s race.points.indiv *= race.handler race.points.placement
 
-# indiv bonuses
-execute as @a if score @s race.completion.rank matches 1..20 run scoreboard players add @s race.points.indiv 25
-execute as @a if score @s race.completion.rank matches 1..10 run scoreboard players add @s race.points.indiv 25
-execute as @a if score @s race.completion.rank matches 1..5 run scoreboard players add @s race.points.indiv 15
-execute as @a if score @s race.completion.rank matches 1..3 run scoreboard players add @s race.points.indiv 15
-execute as @a if score @s race.completion.rank matches 1 run scoreboard players add @s race.points.indiv 15
-
 # fastest laps
-execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 1 run scoreboard players add @s race.points.indiv 50
-execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 2 run scoreboard players add @s race.points.indiv 40
-execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 3 run scoreboard players add @s race.points.indiv 30
-execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 4 run scoreboard players add @s race.points.indiv 20
-execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 5 run scoreboard players add @s race.points.indiv 10
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 1 run scoreboard players add @s race.points.indiv 10
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 2 run scoreboard players add @s race.points.indiv 8
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 3 run scoreboard players add @s race.points.indiv 6
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 4 run scoreboard players add @s race.points.indiv 4
+execute if score race.handler race.stage matches 4 as @a if score @s race.fastest_lap.rank matches 5 run scoreboard players add @s race.points.indiv 2
 
 # <===== TEAM POINTS =====>
 

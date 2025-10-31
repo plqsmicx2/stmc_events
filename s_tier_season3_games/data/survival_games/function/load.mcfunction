@@ -62,15 +62,15 @@ scoreboard players reset sg.r2.handler sg.r2.stage
 scoreboard players reset sg.r3.handler sg.r3.stage
 
 # set point constants
-scoreboard players set sg.handler sg.points.killValue 20
+scoreboard players set sg.handler sg.points.killValue 4
 scoreboard players set sg.handler sg.points.topEightTeamValue 0
-scoreboard players set sg.handler sg.points.topSevenTeamValue 60
-scoreboard players set sg.handler sg.points.topSixTeamValue 120
-scoreboard players set sg.handler sg.points.topFiveTeamValue 180
-scoreboard players set sg.handler sg.points.topFourTeamValue 240
-scoreboard players set sg.handler sg.points.topThreeTeamValue 300
-scoreboard players set sg.handler sg.points.topTwoTeamValue 360
-scoreboard players set sg.handler sg.points.topOneTeamValue 440
+scoreboard players set sg.handler sg.points.topSevenTeamValue 4
+scoreboard players set sg.handler sg.points.topSixTeamValue 8
+scoreboard players set sg.handler sg.points.topFiveTeamValue 16
+scoreboard players set sg.handler sg.points.topFourTeamValue 24
+scoreboard players set sg.handler sg.points.topThreeTeamValue 32
+scoreboard players set sg.handler sg.points.topTwoTeamValue 40
+scoreboard players set sg.handler sg.points.topOneTeamValue 52
 scoreboard players set sg.handler sg.points.teamSplitFour 4
 
 # now, we set stage to 0

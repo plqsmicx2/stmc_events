@@ -23,25 +23,18 @@ execute if score race.handler race.timer.explanation matches 160 run tellraw @a 
 # blurb #3
 execute in race:race if score race.handler race.timer.explanation matches 320 run tp @a 58 112 65 -135 25
 execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"You will earn +",color:"green"},{text:"8",color:"dark_red"},{text:" points for each player outplaced.",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:"You will also earn the following bonuses:",color:"green"}
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 1: +",color:"green"},{text:"15",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 3: +",color:"green"},{text:"15",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 5: +",color:"green"},{text:"15",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 10: +",color:"green"},{text:"25",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 20: +",color:"green"},{text:"25",color:"dark_red"},{text:" points",color:"green"}]
+execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"You will earn +",color:"green"},{text:"2",color:"dark_red"},{text:" points for each player outplaced.",color:"green"}]
 execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
 
 # blurb #4
 execute in race:race if score race.handler race.timer.explanation matches 480 run tp @a -32 109 -17 -85 -5
 execute if score race.handler race.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score race.handler race.timer.explanation matches 480 run tellraw @a {text:"The players with the fastest laps will also earn the following bonuses:",color:"green"}
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"1st: +",color:"green"},{text:"50",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"2nd: +",color:"green"},{text:"40",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"3rd: +",color:"green"},{text:"30",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"4th: +",color:"green"},{text:"20",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"5th: +",color:"green"},{text:"10",color:"dark_red"},{text:" points",color:"green"}]
+execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"1st: +",color:"green"},{text:"10",color:"dark_red"},{text:" points",color:"green"}]
+execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"2nd: +",color:"green"},{text:"8",color:"dark_red"},{text:" points",color:"green"}]
+execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"3rd: +",color:"green"},{text:"6",color:"dark_red"},{text:" points",color:"green"}]
+execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"4th: +",color:"green"},{text:"4",color:"dark_red"},{text:" points",color:"green"}]
+execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"5th: +",color:"green"},{text:"2",color:"dark_red"},{text:" points",color:"green"}]
 execute if score race.handler race.timer.explanation matches 480 run tellraw @a {text:" "}
 
 # blurb #5

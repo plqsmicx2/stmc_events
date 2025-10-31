@@ -51,12 +51,12 @@ execute as @a run item replace entity @s hotbar.8 with carrot_on_a_stick[item_mo
 execute in lobby:lobby run kill @e[type=item,nbt={Item:{components:{"minecraft:item_model":"stmc:bank_model","minecraft:item_name":{text:"Bank",color:green,bold:true,italic:true}}}}]
 
 # teleport player to bank if they right click it
-execute in lobby:lobby as @a if score @s event.voting.bank matches 1.. run tp @s 0 100 0
+execute in lobby:lobby as @a if score @s event.voting.bank matches 1.. run tp @s -26 100 30 90 0
 scoreboard players set @a event.voting.bank 0
 
 # anyone with a successful trade should have their invested tokens converted into a scoreboard
 scoreboard objectives add event.voting.investedTokensTemp dummy
-execute as @a store result score @s event.voting.investedTokensTemp run clear @s emerald[item_name={text:"Invested Token",color:dark_green,bold:true}] 0
+execute as @a store result score @s event.voting.investedTokensTemp run clear @s paper[item_name={text:"Invested Token",color:yellow}] 0
 execute as @a run scoreboard players operation @s event.voting.investedTokens += @s event.voting.investedTokensTemp
 execute as @a if score @s event.voting.investedTokens matches 50.. run scoreboard players set @s event.voting.investedTokens 50
 scoreboard objectives remove event.voting.investedTokensTemp

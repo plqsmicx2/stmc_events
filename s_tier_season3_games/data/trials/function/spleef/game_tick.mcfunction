@@ -233,4 +233,4 @@ execute in trials:spleef if score spleef.handler spleef.timer.game matches 2960 
 # <==== END GAME ====>
 
 # check if game should be ended (one team alive)
-#execute if score spleef.handler spleef.teams_alive matches 1 run scoreboard players set spleef.handler spleef.stage 4
+execute if score spleef.handler spleef.teams_alive matches 1 run scoreboard players set spleef.handler spleef.stage 4
