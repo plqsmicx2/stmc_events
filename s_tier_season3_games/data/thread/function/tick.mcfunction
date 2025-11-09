@@ -33,7 +33,7 @@ execute as minttrose unless entity @s[team=] run team join CYAN_COUGARS minttros
 # PURPLE PENGUINS
 execute as notjynxx unless entity @s[team=] run team join PURPLE_PENGUINS notjynxx
 execute as aimei6432 unless entity @s[team=] run team join PURPLE_PENGUINS aimei6432
-execute as limeae unless entity @s[team=] run team join PURPLE_PENGUINS limeae
+execute as limeae unless entity @s[team=] run team join BLUE_BEARS limeae
 execute as Navahamsta unless entity @s[team=] run team join PURPLE_PENGUINS Navahamsta
 
 # SPECTATORS

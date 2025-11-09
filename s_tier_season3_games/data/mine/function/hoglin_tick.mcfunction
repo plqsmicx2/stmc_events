@@ -18,10 +18,11 @@ execute as @a if items entity @s weapon.offhand compass at @s as @n[type=hoglin,
 execute as @a if items entity @s weapon.offhand compass at @s if score @n[type=hoglin,distance=..20] mine.game.y = @s mine.game.y run item replace entity @s weapon.offhand from block ~ 199 ~ container.0
 execute as @a if items entity @s weapon.offhand compass at @s if score @n[type=hoglin,distance=..20] mine.game.y = @s mine.game.y run setblock ~ 199 ~ air
 
-
 execute unless entity @a[gamemode=adventure] run function mine:general_end
 
-
+execute if score mine.handler mine.timer matches 20 run recipe give @a mine:mine_hoglin_archer
+execute if score mine.handler mine.timer matches 20 run recipe give @a mine:mine_hoglin_builder
+execute if score mine.handler mine.timer matches 20 run recipe give @a mine:mine_hoglin_tracker
 
 execute if score mine.handler mine.timer matches 20 run function mine:mobs/game/hoglin/archer
 execute if score mine.handler mine.timer matches 20 run function mine:mobs/game/hoglin/builder
@@ -34,10 +35,18 @@ execute if score mine.handler mine.timer matches 40 run title @a title "Hoglin"
 execute if score mine.handler mine.timer matches 400 run function mine:game/openwalls
 
 execute if score mine.handler mine.timer matches 450 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
-execute if score mine.handler mine.timer matches 650 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
-execute if score mine.handler mine.timer matches 850 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 750 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
 execute if score mine.handler mine.timer matches 1050 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
-execute if score mine.handler mine.timer matches 1250 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
-execute if score mine.handler mine.timer matches 1450 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 1350 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
 execute if score mine.handler mine.timer matches 1650 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
-
+execute if score mine.handler mine.timer matches 1950 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 2250 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 2550 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 2850 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 3150 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 3450 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 3750 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 4050 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 4350 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 4650 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin
+execute if score mine.handler mine.timer matches 4950 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/hoglin/hoglin

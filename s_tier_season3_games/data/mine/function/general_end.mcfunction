@@ -7,6 +7,7 @@ gamemode adventure @a
 scoreboard players reset @a mine.game.mined.diamond_ore
 scoreboard players reset @a mine.game.deathcount
 scoreboard players reset mine.handler mine.timer
+scoreboard players reset mine.handler mine.timer.summon
 
 execute in mine:lobby run spawnpoint @a 0 100 0
 

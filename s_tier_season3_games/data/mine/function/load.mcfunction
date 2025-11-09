@@ -5,9 +5,13 @@ effect give @a instant_health 1 10
 effect give @a resistance infinite 3
 effect give @a strength 20 0 true
 gamemode adventure @a
+scoreboard objectives add mine.points.team dummy
+scoreboard objectives add mine.points.indiv dummy
+scoreboard players set @a mine.points.indiv 0
 scoreboard players reset @a mine.game.mined.diamond_ore
 scoreboard players reset @a mine.game.deathcount
 scoreboard players reset mine.handler mine.timer
+scoreboard players reset mine.handler mine.timer.summon
 
 scoreboard players set mine.handler mine.stage.creaking 0
 scoreboard players set mine.handler mine.stage.hoglin 0

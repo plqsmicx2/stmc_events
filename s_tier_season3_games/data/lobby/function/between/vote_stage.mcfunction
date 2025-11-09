@@ -777,9 +777,9 @@ execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.
         run function collect:start
 #execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
         run return 0
-#execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
+execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
         run function mine:start
-#execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
+execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
         run function extract:start

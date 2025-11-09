@@ -11,10 +11,6 @@ scoreboard players reset @a mine.game.deathcount
 scoreboard players reset mine.handler mine.timer
 scoreboard players set mine.handler mine.stage.lobby 0
 
-scoreboard objectives setdisplay sidebar mine.points.mined.diamond_ore
-scoreboard players set STMC mine.points.mined.diamond_ore 2001
-scoreboard players set ---- mine.points.mined.diamond_ore 2000
-
 spawnpoint @a 0 90 0
 
 forceload add -49 -49 49 49

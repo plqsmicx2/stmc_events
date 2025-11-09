@@ -14,6 +14,8 @@ execute as @a if items entity @s weapon.offhand compass at @s if score @n[type=c
 
 execute unless entity @a[gamemode=adventure] run function mine:general_end
 
+execute if score mine.handler mine.timer matches 20 run recipe give @a mine:mine_creaking_archer
+execute if score mine.handler mine.timer matches 20 run recipe give @a mine:mine_creaking_builder
 
 execute if score mine.handler mine.timer matches 20 run function mine:mobs/game/creaking/archer
 execute if score mine.handler mine.timer matches 20 run function mine:mobs/game/creaking/builder
@@ -25,12 +27,19 @@ execute if score mine.handler mine.timer matches 40 run title @a title "Creaking
 
 execute if score mine.handler mine.timer matches 400 run function mine:game/openwalls
 
-execute if score mine.handler mine.timer matches 450 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
-execute if score mine.handler mine.timer matches 650 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
-execute if score mine.handler mine.timer matches 850 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
-execute if score mine.handler mine.timer matches 1050 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
-execute if score mine.handler mine.timer matches 1250 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
-execute if score mine.handler mine.timer matches 1450 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
-execute if score mine.handler mine.timer matches 1650 as @a[gamemode=adventure] at @s rotated as @s rotated ~ 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
-
-
+$execute if score mine.handler mine.timer matches 450 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 750 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 1050 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 1350 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 1550 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 1850 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 2150 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 2450 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 2750 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 3050 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 3350 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 3650 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 3950 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 4250 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 4550 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
+$execute if score mine.handler mine.timer matches 4850 as @a[gamemode=adventure] at @s rotated as @s rotated ~$(rot) 0 positioned ^ ^ ^10 run function mine:mobs/game/creaking/creaking
