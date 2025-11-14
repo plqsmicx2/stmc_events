@@ -4,7 +4,7 @@
 # excluding anything done in the parent load function
 
 # teleport players to spawn platform
-execute in survival_games:sg1 run tp @a 0 178 0
+execute in survival_games:sg1 run tp @a 0 172 0
 
 # force gamemode
 gamemode adventure @a
@@ -38,7 +38,7 @@ xp set @a 0
 execute in survival_games:sg1 run kill @e[type=!player]
 
 # failsafe spawn point
-execute in survival_games:sg1 run spawnpoint @a 0 178 0
+execute in survival_games:sg1 run spawnpoint @a 0 172 0
 
 # set worldborder
 worldborder center 0 0
@@ -80,9 +80,11 @@ scoreboard players set @a sg.r2.teamPlacementPoints 0
 scoreboard players set sg.RedRaccoons sg.r2.teamPlacement 0
 scoreboard players set sg.OrangeOtters sg.r2.teamPlacement 0
 scoreboard players set sg.PinkPikas sg.r2.teamPlacement 0
+scoreboard players set sg.YellowYaks sg.r2.teamPlacement 0
 scoreboard players set sg.GreenGoats sg.r2.teamPlacement 0
 scoreboard players set sg.CyanCougars sg.r2.teamPlacement 0
 scoreboard players set sg.PurplePenguins sg.r2.teamPlacement 0
+scoreboard players set sg.BlueBears sg.r2.teamPlacement 0
 
 # and reset timers
 scoreboard players reset sg.r2.handler sg.r2.timer.delay1

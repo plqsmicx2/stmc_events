@@ -94,19 +94,19 @@ team join BLUE_BEARS tr.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: tr.sidebar 1350
+scoreboard players set §e§lPoints: tr.sidebar 300
 
 # blank line
-scoreboard players set §a tr.sidebar 1351
+scoreboard players set §a tr.sidebar 301
 
 # timer
-scoreboard players set tr.timer tr.sidebar 1352
+scoreboard players set tr.timer tr.sidebar 302
 execute if score tr.handler tr.timer.secs matches ..9 run scoreboard players display name tr.timer tr.sidebar [{text:"Time: ",color:aqua,bold:true},{score:{name:"tr.handler",objective:"tr.timer.mins"},color:aqua},{text:":0",color:aqua},{score:{name:"tr.handler",objective:"tr.timer.secs"},color:aqua}]
 execute if score tr.handler tr.timer.secs matches 10..59 run scoreboard players display name tr.timer tr.sidebar [{text:"Time: ",color:aqua,bold:true},{score:{name:"tr.handler",objective:"tr.timer.mins"},color:aqua},{text:":",color:aqua},{score:{name:"tr.handler",objective:"tr.timer.secs"},color:aqua}]
 
 # game name
-scoreboard players set tr.game tr.sidebar 1353
+scoreboard players set tr.game tr.sidebar 303
 scoreboard players display name tr.game tr.sidebar {"text": "Trials", "color": "dark_aqua", "bold": true}
 
 # blank line
-scoreboard players set §b tr.sidebar 1354
+scoreboard players set §b tr.sidebar 304

@@ -765,9 +765,9 @@ execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.
         run function race:start
 execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.raceCount = .lobby .voteMax \
         run return 0
-#execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
+execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
         run function solve:start
-#execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
+execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.handler lobby.voting.trialsCount = .lobby .voteMax \
         run function trials:start
@@ -797,20 +797,36 @@ execute if score lobby.handler lobby.timer.voteStage matches 565 if score lobby.
 # remove the chest of winner in vote rooms
 execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.raceCount = .lobby .voteMax \
         in lobby:lobby run fill 15 40 -86 26 45 86 air replace lime_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.raceCount = .lobby .voteMax \
+        in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
         in lobby:lobby run fill 15 40 -86 26 45 86 air replace yellow_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
+        in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.trialsCount = .lobby .voteMax \
         in lobby:lobby run fill 15 40 -86 26 45 86 air replace blue_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.trialsCount = .lobby .voteMax \
+        in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
         in lobby:lobby run fill 15 40 -86 26 45 86 air replace light_blue_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
+        in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
         in lobby:lobby run fill 15 40 -86 26 45 86 air replace gray_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
+        in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
         in lobby:lobby run fill 15 40 -86 26 45 86 air replace red_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
+        in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
         in lobby:lobby run fill 15 40 -86 26 45 86 air replace pink_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
+        in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.brawlCount = .lobby .voteMax \
         in lobby:lobby run fill 15 40 -86 26 45 86 air replace orange_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 561 if score lobby.handler lobby.voting.brawlCount = .lobby .voteMax \
+        in lobby:lobby run return 0
 
 execute if score lobby.handler lobby.timer.voteStage matches 562 in lobby:lobby as @e[type=item] if items entity @s container.0 #wool \
         at @s positioned as @s run setblock ~ ~1 ~ air

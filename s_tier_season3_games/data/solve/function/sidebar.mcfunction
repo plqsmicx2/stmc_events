@@ -10,7 +10,7 @@
 # <team color><Team>: <Rooms><team color>
 # <team color><Team>: <Rooms><team color>
 
-scoreboard objectives add solve.sidebar dummy {"text": "  STMC Invitational Reloaded  ", "color": "green", "bold": true}
+scoreboard objectives add solve.sidebar dummy {"text": "  STMC Open  ", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar solve.sidebar
 
 # <===== RANK TEAMS =====>
@@ -23,9 +23,11 @@ function solve:calculate_rankings
 scoreboard players reset solve.RedRaccoons solve.sidebar
 scoreboard players reset solve.OrangeOtters solve.sidebar
 scoreboard players reset solve.PinkPikas solve.sidebar
+scoreboard players reset solve.YellowYaks solve.sidebar
 scoreboard players reset solve.GreenGoats solve.sidebar
 scoreboard players reset solve.CyanCougars solve.sidebar
 scoreboard players reset solve.PurplePenguins solve.sidebar
+scoreboard players reset solve.BlueBears solve.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
@@ -35,20 +37,26 @@ execute if score solve.OrangeOtters solve.points.team.rank matches 1..3 run scor
 execute if score solve.OrangeOtters solve.points.team.rank matches 1..3 run scoreboard players display name solve.OrangeOtters solve.sidebar {"text": "  Orange Otters", "color": "gold"}
 execute if score solve.PinkPikas solve.points.team.rank matches 1..3 run scoreboard players operation solve.PinkPikas solve.sidebar = solve.PinkPikas solve.stats.roomsCompleted
 execute if score solve.PinkPikas solve.points.team.rank matches 1..3 run scoreboard players display name solve.PinkPikas solve.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+execute if score solve.YellowYaks solve.points.team.rank matches 1..3 run scoreboard players operation solve.YellowYaks solve.sidebar = solve.YellowYaks solve.stats.roomsCompleted
+execute if score solve.YellowYaks solve.points.team.rank matches 1..3 run scoreboard players display name solve.YellowYaks solve.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 execute if score solve.GreenGoats solve.points.team.rank matches 1..3 run scoreboard players operation solve.GreenGoats solve.sidebar = solve.GreenGoats solve.stats.roomsCompleted
 execute if score solve.GreenGoats solve.points.team.rank matches 1..3 run scoreboard players display name solve.GreenGoats solve.sidebar {"text": "  Green Goats", "color": "dark_green"}
 execute if score solve.CyanCougars solve.points.team.rank matches 1..3 run scoreboard players operation solve.CyanCougars solve.sidebar = solve.CyanCougars solve.stats.roomsCompleted
 execute if score solve.CyanCougars solve.points.team.rank matches 1..3 run scoreboard players display name solve.CyanCougars solve.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
 execute if score solve.PurplePenguins solve.points.team.rank matches 1..3 run scoreboard players operation solve.PurplePenguins solve.sidebar = solve.PurplePenguins solve.stats.roomsCompleted
 execute if score solve.PurplePenguins solve.points.team.rank matches 1..3 run scoreboard players display name solve.PurplePenguins solve.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
+execute if score solve.BlueBears solve.points.team.rank matches 1..3 run scoreboard players operation solve.BlueBears solve.sidebar = solve.BlueBears solve.stats.roomsCompleted
+execute if score solve.BlueBears solve.points.team.rank matches 1..3 run scoreboard players display name solve.BlueBears solve.sidebar {"text": "  Blue Bears", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS solve.RedRaccoons
 team join ORANGE_OTTERS solve.OrangeOtters
 team join PINK_PIKAS solve.PinkPikas
+team join YELLOW_YAKS solve.YellowYaks
 team join GREEN_GOATS solve.GreenGoats
 team join CYAN_COUGARS solve.CyanCougars
 team join PURPLE_PENGUINS solve.PurplePenguins
+team join BLUE_BEARS solve.BlueBears
 
 # <==== HEADER INFO =====>
 

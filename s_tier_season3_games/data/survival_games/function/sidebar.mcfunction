@@ -63,13 +63,13 @@ team join BLUE_BEARS sg.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: sg.sidebar 2201
+scoreboard players set §e§lPoints: sg.sidebar 401
 
 # blank line
-scoreboard players set §a sg.sidebar 2202
+scoreboard players set §a sg.sidebar 402
 
 # teams alive
-scoreboard players set sg.teamsAlive sg.sidebar 2203
+scoreboard players set sg.teamsAlive sg.sidebar 403
 execute if score sg.handler sg.teams_alive matches 8 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 8/8", "color": "red", "bold": true}
 execute if score sg.handler sg.teams_alive matches 7 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 7/8", "color": "red", "bold": true}
 execute if score sg.handler sg.teams_alive matches 6 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 6/8", "color": "red", "bold": true}
@@ -81,17 +81,17 @@ execute if score sg.handler sg.teams_alive matches 1 run scoreboard players disp
 execute if score sg.handler sg.teams_alive matches 0 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 0/8", "color": "red", "bold": true}
 
 # blank line
-scoreboard players set §b sg.sidebar 2204
+scoreboard players set §b sg.sidebar 404
 
 # round number
-scoreboard players set sg.roundNum sg.sidebar 2205
+scoreboard players set sg.roundNum sg.sidebar 405
 execute if score sg.handler sg.stage matches 0 run scoreboard players display name sg.roundNum sg.sidebar {"text": "Round: 1/3", "color": "dark_red", "bold": true}
 execute if score sg.handler sg.stage matches 1 run scoreboard players display name sg.roundNum sg.sidebar {"text": "Round: 2/3", "color": "dark_red", "bold": true}
 execute if score sg.handler sg.stage matches 2 run scoreboard players display name sg.roundNum sg.sidebar {"text": "Round: 3/3", "color": "dark_red", "bold": true}
 
 # current game
-scoreboard players set SurvivalGames sg.sidebar 2206
+scoreboard players set SurvivalGames sg.sidebar 406
 scoreboard players display name SurvivalGames sg.sidebar {"text": "Brawl", "color": "gold", "bold": true}
 
 # blank line #2
-scoreboard players set § sg.sidebar 2207
+scoreboard players set § sg.sidebar 407

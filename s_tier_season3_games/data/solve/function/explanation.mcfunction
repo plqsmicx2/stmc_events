@@ -4,7 +4,7 @@
 
 # blurb #1
 execute if score solve.handler solve.timer.explanation matches 1 run gamemode spectator @a
-execute in solve:solve if score solve.handler solve.timer.explanation matches 1 run tp @a 22 95 4 -45 30
+execute in solve:solve if score solve.handler solve.timer.explanation matches 1 run tp @a 3 96 5 -60 25
 execute if score solve.handler solve.timer.explanation matches 1 run title @a title {text:"SOLVE",color:"yellow"}
 execute if score solve.handler solve.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score solve.handler solve.timer.explanation matches 1 run tellraw @a {text:"Solve is a team-based puzzle game.",color:"yellow"}
@@ -13,45 +13,51 @@ execute if score solve.handler solve.timer.explanation matches 1 run tellraw @a 
 execute if score solve.handler solve.timer.explanation matches 1 run tellraw @a {text:" "}
 
 # blurb #2
-execute in solve:solve if score solve.handler solve.timer.explanation matches 160 run tp @a 47 95 3 50 20
+execute in solve:solve if score solve.handler solve.timer.explanation matches 160 run tp @a 27 96 12 -190 15
 execute if score solve.handler solve.timer.explanation matches 160 run tellraw @a {text:" "}
 execute if score solve.handler solve.timer.explanation matches 160 run tellraw @a {text:"Each room will present a unique puzzle.",color:"yellow"}
 execute if score solve.handler solve.timer.explanation matches 160 run tellraw @a {text:" "}
 execute if score solve.handler solve.timer.explanation matches 160 run tellraw @a {text:"To complete a room, all four players must be in the hallway leading into the next room.",color:"yellow"}
 execute if score solve.handler solve.timer.explanation matches 160 run tellraw @a {text:" "}
+execute if score solve.handler solve.timer.explanation matches 160 run tellraw @a {text:"You may reset a room at any time if you need.",color:"yellow"}
+execute if score solve.handler solve.timer.explanation matches 160 run tellraw @a {text:" "}
 
 # blurb #3
-execute in solve:solve if score solve.handler solve.timer.explanation matches 320 run tp @a 63 98 11 -180 35
+execute in solve:solve if score solve.handler solve.timer.explanation matches 320 run tp @a 52 99 2 50 20
 execute if score solve.handler solve.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score solve.handler solve.timer.explanation matches 320 run tellraw @a [{text:"You will earn +",color:yellow},{text:"125",color:red},{text:" points for completing each room.",color:yellow}]
+execute if score solve.handler solve.timer.explanation matches 320 run tellraw @a [{text:"You will earn +",color:yellow},{text:"4",color:red},{text:" points for completing each room.",color:yellow}]
 execute if score solve.handler solve.timer.explanation matches 320 run tellraw @a {text:" "}
 execute if score solve.handler solve.timer.explanation matches 320 run tellraw @a {text:"All points will be split evenly within each team.",color:yellow}
 execute if score solve.handler solve.timer.explanation matches 320 run tellraw @a {text:" "}
 
 # blurb #4
-execute in solve:solve if score solve.handler solve.timer.explanation matches 480 run tp @a 79 98 7 -110 30
+execute in solve:solve if score solve.handler solve.timer.explanation matches 480 run tp @a 67 96 13 -220 0
 execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a {text:"You will earn the following points based on your final ranking:",color:"yellow"}
 execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"1st: +",color:"yellow"},{text:"440",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"2nd: +",color:"yellow"},{text:"365",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"3rd: +",color:"yellow"},{text:"300",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"4th: +",color:"yellow"},{text:"240",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"5th: +",color:"yellow"},{text:"160",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"6th: +",color:"yellow"},{text:"100",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"1st: +",color:"yellow"},{text:"140",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"2nd: +",color:"yellow"},{text:"104",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"3rd: +",color:"yellow"},{text:"80",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"4th: +",color:"yellow"},{text:"56",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"5th: +",color:"yellow"},{text:"40",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"6th: +",color:"yellow"},{text:"24",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"7th: +",color:"yellow"},{text:"12",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a [{text:"8th: +",color:"yellow"},{text:"0",color:"red"},{text:" points",color:"yellow"}]
 execute if score solve.handler solve.timer.explanation matches 480 run tellraw @a {text:" "}
 
 # blurb #5
-execute in solve:solve if score solve.handler solve.timer.explanation matches 640 run tp @a 105 96 2 50 25
+execute in solve:solve if score solve.handler solve.timer.explanation matches 640 run tp @a 80 97 3 -70 15
 execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a {text:" "}
 execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a {text:"You will also earn the following points based on your ranking in each room:.",color:"yellow"}
 execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a {text:" "}
-execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"1st: +",color:"yellow"},{text:"180",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"2nd: +",color:"yellow"},{text:"120",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"3rd: +",color:"yellow"},{text:"89",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"4th: +",color:"yellow"},{text:"60",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"5th: +",color:"yellow"},{text:"40",color:"red"},{text:" points",color:"yellow"}]
-execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"6th: +",color:"yellow"},{text:"20",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"1st: +",color:"yellow"},{text:"28",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"2nd: +",color:"yellow"},{text:"24",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"3rd: +",color:"yellow"},{text:"20",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"4th: +",color:"yellow"},{text:"16",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"5th: +",color:"yellow"},{text:"12",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"6th: +",color:"yellow"},{text:"8",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"7th: +",color:"yellow"},{text:"4",color:"red"},{text:" points",color:"yellow"}]
+execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a [{text:"8th: +",color:"yellow"},{text:"0",color:"red"},{text:" points",color:"yellow"}]
 execute if score solve.handler solve.timer.explanation matches 640 run tellraw @a {text:" "}
 
 # blurb #6
@@ -61,6 +67,8 @@ execute in solve:solve as @a[team=PINK_PIKAS] if score solve.handler solve.timer
 execute in solve:solve as @a[team=GREEN_GOATS] if score solve.handler solve.timer.explanation matches 799 run tp @s 2 93 66 -90 0
 execute in solve:solve as @a[team=CYAN_COUGARS] if score solve.handler solve.timer.explanation matches 799 run tp @s 2 93 86 -90 0
 execute in solve:solve as @a[team=PURPLE_PENGUINS] if score solve.handler solve.timer.explanation matches 799 run tp @s 2 93 106 -90 0
+execute in solve:solve as @a[team=YELLOW_YAKS] if score solve.handler solve.timer.explanation matches 799 run tp @s 2 93 126 -90 0
+execute in solve:solve as @a[team=BLUE_BEARS] if score solve.handler solve.timer.explanation matches 799 run tp @s 2 93 146 -90 0
 execute in solve:solve if score solve.handler solve.timer.explanation matches 799 run gamemode adventure @a
 execute in solve:solve if score solve.handler solve.timer.explanation matches 799 run gamemode spectator @a[team=SPECTATORS]
 execute if score solve.handler solve.timer.explanation matches 799 run tellraw @a {text:" "}

@@ -4,8 +4,8 @@
 
 # <===== Kill Point Update =====>
 
-# DO NOT ALTER THE FOLLOWING LINE WHEN COPYING FUNCTIONS [sg.r2.kills will keep track of all kills across all rounds]
-execute as @a run scoreboard players operation @s sg.kills = @s sg.r2.kills
+# DO NOT ALTER THE FOLLOWING LINE WHEN COPYING FUNCTIONS [sg.r1.kills will keep track of all kills across all rounds]
+execute as @a run scoreboard players operation @s sg.kills = @s sg.r1.kills
 
 # set this round's kills to our killPoints value
 execute as @a run scoreboard players operation @s sg.r2.killPoints = @s sg.r2.kills
@@ -67,6 +67,9 @@ execute as @a[team=PURPLE_PENGUINS] at @s run scoreboard players operation sg.Pu
 
 scoreboard players set sg.BlueBears sg.r2.points 0
 execute as @a[team=BLUE_BEARS] at @s run scoreboard players operation sg.BlueBears sg.r2.points += @s sg.r2.points
+
+# update main points update with new values
+function survival_games:points_update
 
 # <===== Actionbar =====>
 

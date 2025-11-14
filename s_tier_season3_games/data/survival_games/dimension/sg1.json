@@ -3,7 +3,7 @@
   "generator": {
     "type": "minecraft:flat",
     "settings": {
-      "biome": "minecraft:the_void",
+      "biome": "survival_games:sgbiome",
       "layers": [
         {
           "height": 0,

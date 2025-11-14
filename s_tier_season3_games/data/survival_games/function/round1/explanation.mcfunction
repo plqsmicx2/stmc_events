@@ -60,7 +60,7 @@ execute if score sg.r1.handler sg.r1.timer.explanation matches 640 run tellraw @
 execute if score sg.r1.handler sg.r1.timer.explanation matches 640 run tellraw @a {"text":" "}
 
 # blurb #6
-execute if score sg.r1.handler sg.r1.timer.explanation matches 799 in survival_games:sg1 run teleport @a 0 177 0
+execute if score sg.r1.handler sg.r1.timer.explanation matches 799 in survival_games:sg1 run teleport @a 0 172 0
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run gamemode adventure @a
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run gamemode spectator @a[team=SPECTATORS]
 execute if score sg.r1.handler sg.r1.timer.explanation matches 799 run tellraw @a {text:" "}

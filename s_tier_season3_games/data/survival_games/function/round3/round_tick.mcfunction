@@ -20,7 +20,7 @@ execute as @a[team=BLUE_BEARS] at @s if score @s sg.alive matches 1 anchored fee
 # announcement
 execute if score sg.r3.handler sg.r3.timer.round matches 1 run title @a title {"text":"Go!","bold":true,"color":"gold"}
 # remove the glass barrier
-execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run fill 8 175 8 -8 175 -8 air replace tinted_glass
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.round matches 1 run fill 8 170 8 -8 170 -8 air replace tinted_glass
 
 # after 3 seconds begin testing for players landing
 execute as @a if items entity @s armor.chest minecraft:elytra run effect give @s resistance 1 110 true

@@ -64,13 +64,13 @@ team join BLUE_BEARS disco.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: disco.sidebar 380
+scoreboard players set §e§lPoints: disco.sidebar 70
 
 # blank line
-scoreboard players set §a disco.sidebar 381
+scoreboard players set §a disco.sidebar 71
 
 # teams alive
-scoreboard players set disco.teamsAlive disco.sidebar 382
+scoreboard players set disco.teamsAlive disco.sidebar 72
 execute if score disco.handler disco.teams_alive matches 8 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 8/8", "color": "red", "bold": true}
 execute if score disco.handler disco.teams_alive matches 7 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 7/8", "color": "red", "bold": true}
 execute if score disco.handler disco.teams_alive matches 6 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 6/8", "color": "red", "bold": true}
@@ -82,10 +82,10 @@ execute if score disco.handler disco.teams_alive matches 1 run scoreboard player
 execute if score disco.handler disco.teams_alive matches 0 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 0/8", "color": "red", "bold": true}
 
 # blank line
-scoreboard players set §b disco.sidebar 383
+scoreboard players set §b disco.sidebar 73
 
 # round number
-scoreboard players set disco.roundsPlayed disco.sidebar 384
+scoreboard players set disco.roundsPlayed disco.sidebar 74
 execute if score disco.handler disco.rounds_played matches 0 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 0", "color": "dark_red", "bold": true}
 execute if score disco.handler disco.rounds_played matches 1 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 1", "color": "dark_red", "bold": true}
 execute if score disco.handler disco.rounds_played matches 2 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 2", "color": "dark_red", "bold": true}
@@ -149,8 +149,8 @@ execute if score disco.handler disco.rounds_played matches 59 run scoreboard pla
 execute if score disco.handler disco.rounds_played matches 60 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 60", "color": "dark_red", "bold": true}
 
 # current game
-scoreboard players set Disco disco.sidebar 385
+scoreboard players set Disco disco.sidebar 75
 scoreboard players display name Disco disco.sidebar {"text": "Disco", "color": "dark_aqua", "bold": true}
 
 # blank line #2
-scoreboard players set § disco.sidebar 386
+scoreboard players set § disco.sidebar 76

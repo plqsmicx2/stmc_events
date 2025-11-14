@@ -2,10 +2,18 @@
 
 # <===== EVERY TICK =====>
 
+# update elapsed secs & mins for sidebar
+scoreboard players add lobby.handler lobby.timer.temp 1
+execute if score lobby.handler lobby.timer.temp matches 20 run scoreboard players remove stmc.handler event.timer.bgSecs 1
+execute if score lobby.handler lobby.timer.temp matches 20 run scoreboard players set lobby.handler lobby.timer.temp 0
+execute if score stmc.handler event.timer.bgSecs matches ..-1 run scoreboard players remove stmc.handler event.timer.bgMins 1
+execute if score stmc.handler event.timer.bgSecs matches ..-1 run scoreboard players set stmc.handler event.timer.bgSecs 60
+
 # check for invested tokens
 execute as @a store result score @s event.voting.investedTokensTemp run clear @s paper[custom_data={invest: 1b}] 0
 execute as @a run scoreboard players operation @s event.voting.investedTokens += @s event.voting.investedTokensTemp
 scoreboard players set @a event.voting.investedTokensTemp 0
+clear @a paper[custom_data={invest: 1b}]
 
 # <===== TIME DEPENDENT =====>
 
@@ -58,6 +66,20 @@ execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby
         tellraw @a ["",{text:"",color:green,bold:true}]
 
 # NOT FIRST LOBBY:
+
+# increment players' invested tokens
+execute unless score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 2 run \
+        scoreboard objectives add .investMultiplier dummy
+execute unless score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 2 run \
+        scoreboard players set #math .investMultiplier 125
+execute as @a unless score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 2 run \
+        scoreboard players operation @s event.voting.investedTokens *= #math .investMultiplier
+execute as @a unless score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 2 run \
+        scoreboard players set #math .investMultiplier 100
+execute as @a unless score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 2 run \
+        scoreboard players operation @s event.voting.investedTokens /= #math .investMultiplier
+execute unless score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 2 run \
+        scoreboard objectives remove .investMultiplier
 
 # for 50 ticks, return players' invested tokens to them
 execute as @a unless score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 2 run \

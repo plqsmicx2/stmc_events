@@ -1,7 +1,7 @@
 # reset survival games world
 
 # set the world spawn
-execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.delay1 matches 2 run fill -8 175 -8 8 175 8 tinted_glass replace air
+execute in survival_games:sg1 if score sg.r3.handler sg.r3.timer.delay1 matches 2 run fill -8 170 -8 8 170 8 tinted_glass replace air
 
 # REMOVE PLACED BLOCKS
 

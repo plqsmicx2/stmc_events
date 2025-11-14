@@ -10,9 +10,11 @@ execute in solve:solve run tp @a[team=PINK_PIKAS] 5 94 46
 execute in solve:solve run tp @a[team=GREEN_GOATS] 5 94 66
 execute in solve:solve run tp @a[team=CYAN_COUGARS] 5 94 86
 execute in solve:solve run tp @a[team=PURPLE_PENGUINS] 5 94 106
+execute in solve:solve run tp @a[team=YELLOW_YAKS] 5 94 126
+execute in solve:solve run tp @a[team=BLUE_BEARS] 5 94 146
 
 # force gamemode
-gamemode survival @a
+gamemode adventure @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s
 
 # set time
@@ -118,6 +120,16 @@ scoreboard players set solve.PurplePenguins solve.timer.game.room2 0
 scoreboard players set solve.PurplePenguins solve.timer.game.room3 0
 scoreboard players set solve.PurplePenguins solve.timer.game.room4 0
 scoreboard players set solve.PurplePenguins solve.timer.game.rooms 0
+scoreboard players set solve.YellowYaks solve.timer.game.room1 0
+scoreboard players set solve.YellowYaks solve.timer.game.room2 0
+scoreboard players set solve.YellowYaks solve.timer.game.room3 0
+scoreboard players set solve.YellowYaks solve.timer.game.room4 0
+scoreboard players set solve.YellowYaks solve.timer.game.rooms 0
+scoreboard players set solve.BlueBears solve.timer.game.room1 0
+scoreboard players set solve.BlueBears solve.timer.game.room2 0
+scoreboard players set solve.BlueBears solve.timer.game.room3 0
+scoreboard players set solve.BlueBears solve.timer.game.room4 0
+scoreboard players set solve.BlueBears solve.timer.game.rooms 0
 
 scoreboard players set solve.RedRaccoons solve.stats.roomsCompleted 0
 scoreboard players set solve.OrangeOtters solve.stats.roomsCompleted 0
@@ -125,6 +137,8 @@ scoreboard players set solve.PinkPikas solve.stats.roomsCompleted 0
 scoreboard players set solve.GreenGoats solve.stats.roomsCompleted 0
 scoreboard players set solve.CyanCougars solve.stats.roomsCompleted 0
 scoreboard players set solve.PurplePenguins solve.stats.roomsCompleted 0
+scoreboard players set solve.YellowYaks solve.stats.roomsCompleted 0
+scoreboard players set solve.BlueBears solve.stats.roomsCompleted 0
 scoreboard players set @a solve.stats.roomsCompleted 0
 
 scoreboard players set solve.RedRaccoons solve.stats.playersCompleted 0
@@ -133,10 +147,12 @@ scoreboard players set solve.PinkPikas solve.stats.playersCompleted 0
 scoreboard players set solve.GreenGoats solve.stats.playersCompleted 0
 scoreboard players set solve.CyanCougars solve.stats.playersCompleted 0
 scoreboard players set solve.PurplePenguins solve.stats.playersCompleted 0
+scoreboard players set solve.YellowYaks solve.stats.playersCompleted 0
+scoreboard players set solve.BlueBears solve.stats.playersCompleted 0
 scoreboard players set @a solve.stats.playersCompleted 0
 
 scoreboard players set @a solve.points.indiv 0
-scoreboard players set solve.handler solve.points.roomValue 125
+scoreboard players set solve.handler solve.points.roomValue 4
 function solve:points_update
 
 scoreboard objectives remove solve.sidebar

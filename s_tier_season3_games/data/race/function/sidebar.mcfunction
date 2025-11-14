@@ -63,13 +63,13 @@ team join BLUE_BEARS race.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: race.sidebar 1410
+scoreboard players set §e§lPoints: race.sidebar 300
 
 # blank line
-scoreboard players set §a race.sidebar 1411
+scoreboard players set §a race.sidebar 301
 
 # round number
-scoreboard players set race.playersCompleted race.sidebar 1412
+scoreboard players set race.playersCompleted race.sidebar 302
 execute if score race.handler race.players_completed matches 0 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 0/32", "color": "gold", "bold": true}
 execute if score race.handler race.players_completed matches 1 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 1/32", "color": "gold", "bold": true}
 execute if score race.handler race.players_completed matches 2 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 2/32", "color": "gold", "bold": true}
@@ -105,8 +105,8 @@ execute if score race.handler race.players_completed matches 31 run scoreboard p
 execute if score race.handler race.players_completed matches 32 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 32/32", "color": "gold", "bold": true}
 
 # current game
-scoreboard players set Disco race.sidebar 1413
+scoreboard players set Disco race.sidebar 303
 scoreboard players display name Disco race.sidebar {"text": "Race", "color": "green", "bold": true}
 
 # blank line #2
-scoreboard players set § race.sidebar 1414
+scoreboard players set § race.sidebar 304

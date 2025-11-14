@@ -127,22 +127,22 @@ scoreboard players set @a event.voting.investedTokens 0
 scoreboard players set @a event.voting.investedTokensTemp 0
 
 # and set some multiplier values
-scoreboard players set stmc.handler event.multipliers.g1 100
-scoreboard players set stmc.handler event.multipliers.g2 100
-scoreboard players set stmc.handler event.multipliers.g3 125
-scoreboard players set stmc.handler event.multipliers.g4 125
-scoreboard players set stmc.handler event.multipliers.g5 150
-scoreboard players set stmc.handler event.multipliers.g6 150
-scoreboard players set stmc.handler event.multipliers.g7 175
-scoreboard players set stmc.handler event.multipliers.g8 200
-scoreboard players set stmc.handler event.multipliers.precision 100
+scoreboard players set #math event.multipliers.g1 100
+scoreboard players set #math event.multipliers.g2 100
+scoreboard players set #math event.multipliers.g3 125
+scoreboard players set #math event.multipliers.g4 125
+scoreboard players set #math event.multipliers.g5 150
+scoreboard players set #math event.multipliers.g6 150
+scoreboard players set #math event.multipliers.g7 175
+scoreboard players set #math event.multipliers.g8 200
+scoreboard players set #math event.multipliers.precision 100
 
 # and reset each timer
 scoreboard players set stmc.handler event.timer.pre_game 0
 scoreboard players set stmc.handler event.timer.bgActive 0
 scoreboard players set stmc.handler event.timer.bgTickCount 0
 scoreboard players set stmc.handler event.timer.bgSecs 0
-scoreboard players set stmc.handler event.timer.bgMins 2
+scoreboard players set stmc.handler event.timer.bgMins 0
 scoreboard players set stmc.handler event.timer.post_game 0
 
 # and finally, create each game thread's scoreboard

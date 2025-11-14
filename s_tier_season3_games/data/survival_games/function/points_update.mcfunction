@@ -7,6 +7,14 @@ execute as @a run scoreboard players operation @s sg.points.indiv += @s sg.r1.po
 execute as @a run scoreboard players operation @s sg.points.indiv += @s sg.r2.points
 execute as @a run scoreboard players operation @s sg.points.indiv += @s sg.r3.points
 
+# <===== most kill points =====>
+
+execute as @a if score sg.r3.handler sg.r3.stage matches 2 if score @s sg.kills.rank matches 1 run scoreboard players add @s sg.points.indiv 20
+execute as @a if score sg.r3.handler sg.r3.stage matches 2 if score @s sg.kills.rank matches 2 run scoreboard players add @s sg.points.indiv 16
+execute as @a if score sg.r3.handler sg.r3.stage matches 2 if score @s sg.kills.rank matches 3 run scoreboard players add @s sg.points.indiv 12
+execute as @a if score sg.r3.handler sg.r3.stage matches 2 if score @s sg.kills.rank matches 4 run scoreboard players add @s sg.points.indiv 8
+execute as @a if score sg.r3.handler sg.r3.stage matches 2 if score @s sg.kills.rank matches 5 run scoreboard players add @s sg.points.indiv 4
+
 # <===== sum team points =====>
 
 scoreboard players set sg.RedRaccoons sg.points.team 0
@@ -32,11 +40,3 @@ execute as @a[team=PURPLE_PENGUINS] at @s run scoreboard players operation sg.Pu
 
 scoreboard players set sg.BlueBears sg.points.team 0
 execute as @a[team=BLUE_BEARS] at @s run scoreboard players operation sg.BlueBears sg.points.team += @s sg.points.indiv
-
-# <===== most kill points =====>
-
-execute as @a if score @s sg.kills.rank matches 1 run scoreboard players add @s sg.points.indiv 10
-execute as @a if score @s sg.kills.rank matches 2 run scoreboard players add @s sg.points.indiv 8
-execute as @a if score @s sg.kills.rank matches 3 run scoreboard players add @s sg.points.indiv 6
-execute as @a if score @s sg.kills.rank matches 4 run scoreboard players add @s sg.points.indiv 4
-execute as @a if score @s sg.kills.rank matches 5 run scoreboard players add @s sg.points.indiv 2
