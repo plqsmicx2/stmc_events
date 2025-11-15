@@ -1,4 +1,4 @@
-# lobby sidebar
+# default sidebar
 
 # sidebar looks like this:
 # <lime>STMC Open<lime>

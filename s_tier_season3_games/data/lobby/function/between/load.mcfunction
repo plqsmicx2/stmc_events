@@ -187,7 +187,6 @@ execute in lobby:lobby run summon villager -30 100 30 \
         buy:{id:"minecraft:sunflower",count:1,components:{"minecraft:item_name":{"color":"#FF6000","text":"Token"}}}, \
         sell:{id:"minecraft:paper",count:1,components:{"minecraft:item_name":{"color":"dark_green","text":"Invested Token"},"minecraft:custom_data":{invest:1b}}}}]}} 
 
-# prevent weird red wool bug
-execute in lobby:lobby run setblock 0 100 0 air
+function lobby:between/reset_chests
 
 scoreboard objectives remove lobby.sidebar
