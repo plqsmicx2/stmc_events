@@ -17,7 +17,7 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add tr.sidebar dummy {"text": "  STMC Open  ", "color": "green", "bold": true}
+scoreboard objectives add tr.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar tr.sidebar
 
 # <===== POINTS UPDATE =====>

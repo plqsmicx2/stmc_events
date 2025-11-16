@@ -1,7 +1,5 @@
 # tick function handling the active game for the Red Raccoons in replicate [REPLICATE]
 
-# stages:
-
 # BUILDS FINDABLE:
 # 0- build 1
 # --> clone 5 101 10 9 101 14 37 104 62
@@ -23,6 +21,26 @@
 # ----> clone build 6: 11 102 2 11 106 6 34 106 62
 # 6- team complete
 
+# REPLACE FINDABLE:
+# player1:
+# --> build: 37 105 70 to 41 105 74
+# --> glass: 37 106 70 to 41 106 74
+# player2:
+# --> build: 47 105 67 to 51 105 71
+# --> glass: 47 106 67 to 51 106 71
+# player3:
+# --> build: 47 105 57 to 51 105 61
+# --> glass: 47 106 57 to 51 106 61
+# player4:
+# --> build: 37 105 54 to 41 105 58
+# --> glass: 37 106 54 to 41 106 58
+# lower template:
+# --> build: 37 104 62 to 41 104 66
+# upper template:
+# --> build: 34 106 62 to 34 110 66
+# whole box:
+# --> 27 100 47 to 59 114 82
+
 # each build stage is the same:
 # at 3 ticks, clone the build
 # at >4 ticks, give players necessary blocks
@@ -32,6 +50,22 @@
 # at >40 ticks, if playersCompleted is 4, increment stage, reset each player's completion, and re-add the tinted glass barrier
 # these are all handled within each team's function
 
+# <===== GAME WIDE =====>
+
+# increment appropriate timer
+execute if score replicate.RedRaccoons replicate.stage matches 0 run scoreboard players add replicate.RedRaccoons replicate.timer.build1 1
+execute if score replicate.RedRaccoons replicate.stage matches 1 run scoreboard players add replicate.RedRaccoons replicate.timer.build2 1
+execute if score replicate.RedRaccoons replicate.stage matches 2 run scoreboard players add replicate.RedRaccoons replicate.timer.build3 1
+execute if score replicate.RedRaccoons replicate.stage matches 3 run scoreboard players add replicate.RedRaccoons replicate.timer.build4 1
+execute if score replicate.RedRaccoons replicate.stage matches 4 run scoreboard players add replicate.RedRaccoons replicate.timer.build5 1
+execute if score replicate.RedRaccoons replicate.stage matches 5 run scoreboard players add replicate.RedRaccoons replicate.timer.build6 1
+
+# end game if we're in stage 6
+execute if score replicate.RedRaccoons replicate.stage matches 6 run scoreboard players set replicate.RedRaccoons replicate.completed 1
+execute if score replicate.RedRaccoons replicate.stage matches 6 run gamemode spectator @a[team=RED_RACCOONS]
+execute if score replicate.RedRaccoons replicate.stage matches 6 run return 0
+
+# determine # of players completed with active build
 scoreboard players set replicate.RedRaccoons replicate.playersCompleted 0
 
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 37 105 70 41 105 74 37 104 62 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
@@ -39,7 +73,7 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 47 105 57 51 105 61 37 104 62 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if blocks 37 105 54 41 105 58 37 104 62 all run scoreboard players add replicate.RedRaccoons replicate.playersCompleted 1
 
-# Build 1
+# <===== BUILD 1 =====>
 
 # clone the build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 3 run clone 5 101 10 9 101 14 37 104 62
@@ -56,10 +90,9 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build1 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if score replicate.RedRaccoons replicate.stage matches 0 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build1 60
 execute if score replicate.RedRaccoons replicate.timer.build1 matches 60.. if score replicate.RedRaccoons replicate.stage matches 0 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 1
 
-# Build 2
+# <===== BUILD 2 =====>
 
 # re-add the tinted glass barrier
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 3 run fill 37 106 70 41 106 74 tinted_glass
@@ -95,10 +128,9 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build2 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build2 matches 60.. if score replicate.RedRaccoons replicate.stage matches 1 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build2 60
 execute if score replicate.RedRaccoons replicate.timer.build2 matches 60.. if score replicate.RedRaccoons replicate.stage matches 1 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 2
 
-# Build 3
+# <===== BUILD 3 =====>
 
 # re-add the tinted glass barrier
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 3 run fill 37 106 70 41 106 74 tinted_glass
@@ -132,10 +164,9 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build3 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build3 matches 60.. if score replicate.RedRaccoons replicate.stage matches 2 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build3 60
 execute if score replicate.RedRaccoons replicate.timer.build3 matches 60.. if score replicate.RedRaccoons replicate.stage matches 2 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 3
 
-# Build 4
+# <===== BUILD 4 =====>
 
 # re-add the tinted glass barrier
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 3 run fill 37 106 70 41 106 74 tinted_glass
@@ -168,10 +199,9 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build4 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build4 matches 60.. if score replicate.RedRaccoons replicate.stage matches 3 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build4 60
 execute if score replicate.RedRaccoons replicate.timer.build4 matches 60.. if score replicate.RedRaccoons replicate.stage matches 3 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 4
 
-# Build 5
+# <===== BUILD 5 =====>
 
 # re-add the tinted glass barrier
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 3 run fill 37 106 70 41 106 74 tinted_glass
@@ -205,10 +235,9 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build5 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build5 matches 60.. if score replicate.RedRaccoons replicate.stage matches 4 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build5 60
 execute if score replicate.RedRaccoons replicate.timer.build5 matches 60.. if score replicate.RedRaccoons replicate.stage matches 4 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 5
 
-# Build 6
+# <===== BUILD 6 =====>
 
 # re-add the tinted glass barrier
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 3 run fill 37 106 70 41 106 74 tinted_glass
@@ -242,5 +271,4 @@ execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build
 execute in trials:replicate if score replicate.RedRaccoons replicate.timer.build6 matches 60 run fill 27 100 47 59 114 82 air replace chiseled_tuff_bricks
 
 # move to next build
-execute if score replicate.RedRaccoons replicate.timer.build6 matches 60.. if score replicate.RedRaccoons replicate.stage matches 5 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players remove replicate.RedRaccoons replicate.timer.build6 60
 execute if score replicate.RedRaccoons replicate.timer.build6 matches 60.. if score replicate.RedRaccoons replicate.stage matches 5 if score replicate.RedRaccoons replicate.playersCompleted matches 4 run scoreboard players set replicate.RedRaccoons replicate.stage 6

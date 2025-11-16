@@ -26,6 +26,7 @@ clear @a
 effect clear @a
 
 # ensure full health & hunger
+execute as @a run attribute @s max_health base set 22
 effect give @a saturation 1 1 true
 effect give @a instant_health 1 110 true
 
@@ -186,7 +187,5 @@ execute in lobby:lobby run summon villager -30 100 30 \
         Offers:{Recipes:[{rewardExp:0b,maxUses:9999999, \
         buy:{id:"minecraft:sunflower",count:1,components:{"minecraft:item_name":{"color":"#FF6000","text":"Token"}}}, \
         sell:{id:"minecraft:paper",count:1,components:{"minecraft:item_name":{"color":"dark_green","text":"Invested Token"},"minecraft:custom_data":{invest:1b}}}}]}} 
-
-function lobby:between/reset_chests
 
 scoreboard objectives remove lobby.sidebar

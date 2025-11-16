@@ -3,7 +3,6 @@
 
 # <===== PLAYER RANKINGS =====>
 
-
 # first, store our data in a temporary place to work with
 scoreboard objectives add tr.points.indiv.temp dummy
 execute as @a run scoreboard players operation @s tr.points.indiv.temp = @s tr.points.indiv

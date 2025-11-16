@@ -43,18 +43,20 @@ execute if score replicate.handler replicate.timer.explanation matches 480 run t
 # blurb #5
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 640 run tp @a 25 116 11 -60 30
 execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:" "}
-execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:"There are also points for relative placement for each buid.","color":"aqua"}
+execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:"There are also points for relative placement for each build.","color":"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:"So you'll get bonus points for doing exceptional for the whole time.","color":"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:" "}
 
 # blurb #6
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=RED_RACCOONS] 45 106 64 0 10
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=ORANGE_OTTERS] 0 113 18 0 10
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=PINK_PIKAS] -39 113 18 0 10
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=GREEN_GOATS] -39 113 -18 0 10
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=CYAN_COUGARS] 0 113 -18 0 10
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run tp @a[team=PURPLE_PENGUINS] 39 113 -18 0 10
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 as @a[team=RED_RACCOONS] run tp @s 45 105 64 90 0
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 as @a[team=ORANGE_OTTERS] run tp @s 45 105 21 90 0
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 as @a[team=PINK_PIKAS] run tp @s 45 105 -22 90 0
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 as @a[team=YELLOW_YAKS] run tp @s 45 105 -65 90 0
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 as @a[team=GREEN_GOATS] run tp @s -45 105 -65 -90 0
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 as @a[team=CYAN_COUGARS] run tp @s -45 105 -22 -90 0
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 as @a[team=PURPLE_PENGUINS] run tp @s -45 105 21 -90 0
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 as @a[team=BLUE_BEARS] run tp @s -45 105 64 -90 0
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run gamemode survival @a
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 800 run gamemode spectator @a[team=SPECTATORS]
 execute if score replicate.handler replicate.timer.explanation matches 800 run tellraw @a {text:" "}

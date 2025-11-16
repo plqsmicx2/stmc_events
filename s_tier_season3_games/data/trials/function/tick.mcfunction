@@ -61,4 +61,4 @@ execute if score tr.handler tr.stage matches 8 run function trials:point_announc
 execute if score tr.handler tr.timer.pointsAnnouncement matches 401.. run scoreboard players set tr.handler tr.stage 9
 
 # send us back to main lobby
-execute if score tr.handler tr.stage matches 9 run scoreboard players add stmc.handler event.stage 1
+execute if score tr.handler tr.stage matches 9 run function trials:reset

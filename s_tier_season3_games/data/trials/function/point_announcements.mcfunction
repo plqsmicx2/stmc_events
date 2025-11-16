@@ -5,16 +5,6 @@
 # top 5 player individual points
 # team leaderboard
 
-# also wraps in the necessary global indiv assignment
-execute if score stmc.handler event.stage matches 1 as @a run scoreboard players operation @s stats.points.indiv.g1 = @s tr.points.indiv
-execute if score stmc.handler event.stage matches 3 as @a run scoreboard players operation @s stats.points.indiv.g2 = @s tr.points.indiv
-execute if score stmc.handler event.stage matches 5 as @a run scoreboard players operation @s stats.points.indiv.g3 = @s tr.points.indiv
-execute if score stmc.handler event.stage matches 7 as @a run scoreboard players operation @s stats.points.indiv.g4 = @s tr.points.indiv
-execute if score stmc.handler event.stage matches 9 as @a run scoreboard players operation @s stats.points.indiv.g5 = @s tr.points.indiv
-execute if score stmc.handler event.stage matches 11 as @a run scoreboard players operation @s stats.points.indiv.g6 = @s tr.points.indiv
-execute if score stmc.handler event.stage matches 13 as @a run scoreboard players operation @s stats.points.indiv.g7 = @s tr.points.indiv
-execute if score stmc.handler event.stage matches 15 as @a run scoreboard players operation @s stats.points.indiv.g8 = @s tr.points.indiv
-
 # <===== ANNOUNCE POINTS =====>
 
 # indiv points

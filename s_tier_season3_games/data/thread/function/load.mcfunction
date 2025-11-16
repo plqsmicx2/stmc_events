@@ -66,6 +66,8 @@ team modify SPECTATORS friendlyFire false
 scoreboard objectives add event.paused dummy
 # records the current stage
 scoreboard objectives add event.stage dummy
+# records if teams should be automatically assigned
+scoreboard objectives add event.teamAssignment dummy
 # tracks points of team [is always set based on sum of @a[team=...] indiv]
 scoreboard objectives add stats.points.team dummy
 scoreboard objectives add stats.points.team.rank dummy
@@ -121,6 +123,8 @@ scoreboard objectives add event.timer.post_game dummy
 scoreboard players set stmc.handler event.paused 1
 # /reset functions will increment the stage
 scoreboard players set stmc.handler event.stage 0
+# will be turned off if a player's team must be swapped
+scoreboard players set stmc.handler event.teamAssignment 1
 
 # everyone starts with 0 invested tokens
 scoreboard players set @a event.voting.investedTokens 0
