@@ -5,6 +5,9 @@
 # teleport players to spawn
 execute as @a in lobby:lobby run tp @s 0 100 0
 
+# spawnpoint players
+execute as @a in lobby:lobby run spawnpoint @s 0 100 0 0 0
+
 # force gamemode
 gamemode adventure @a
 
@@ -46,6 +49,17 @@ team modify GREEN_GOATS collisionRule never
 team modify CYAN_COUGARS collisionRule never
 team modify PURPLE_PENGUINS collisionRule never
 team modify BLUE_BEARS collisionRule never
+
+# reset chest loot
+execute in lobby:lobby run fill -60 60 -80 60 160 110 chest[facing=north]{LootTable:"lobby:chest"} replace chest[facing=north]
+execute in lobby:lobby run fill -60 60 -80 60 160 110 chest[facing=east]{LootTable:"lobby:chest"} replace chest[facing=east]
+execute in lobby:lobby run fill -60 60 -80 60 160 110 chest[facing=south]{LootTable:"lobby:chest"} replace chest[facing=south]
+execute in lobby:lobby run fill -60 60 -80 60 160 110 chest[facing=west]{LootTable:"lobby:chest"} replace chest[facing=west]
+# reset copper chest loot
+execute in lobby:lobby run fill -60 60 -80 60 160 110 copper_chest[facing=north]{LootTable:"lobby:chest"} replace copper_chest[facing=north]
+execute in lobby:lobby run fill -60 60 -80 60 160 110 copper_chest[facing=east]{LootTable:"lobby:chest"} replace copper_chest[facing=east]
+execute in lobby:lobby run fill -60 60 -80 60 160 110 copper_chest[facing=south]{LootTable:"lobby:chest"} replace copper_chest[facing=south]
+execute in lobby:lobby run fill -60 60 -80 60 160 110 copper_chest[facing=west]{LootTable:"lobby:chest"} replace copper_chest[facing=west]
 
 # and wrap it up with some scoreboard stuff
 # timers
