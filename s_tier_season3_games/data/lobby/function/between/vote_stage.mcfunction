@@ -41,6 +41,11 @@ execute if score lobby.handler lobby.timer.voteStage matches 70 in lobby:lobby r
 
 execute if score lobby.handler lobby.timer.voteStage matches 399 run tellraw @a ["",{text:"Counting votes...",color:green}]
 
+execute if score lobby.handler lobby.timer.voteStage matches 399 in lobby:lobby run \
+        kill @e[type=item]
+execute if score lobby.handler lobby.timer.voteStage matches 399 in lobby:lobby run \
+        kill @e[type=chest_minecart]
+
 # team1
 
 # destroy wool to create an item that can be located

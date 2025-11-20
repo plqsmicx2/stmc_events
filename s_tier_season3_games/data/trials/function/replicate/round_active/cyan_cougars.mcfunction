@@ -264,7 +264,7 @@ execute if score replicate.CyanCougars replicate.timer.build6 matches 4.. if sco
 execute if score replicate.CyanCougars replicate.timer.build6 matches 4.. if score replicate.CyanCougars replicate.stage matches 5 run item replace entity @a[team=CYAN_COUGARS] hotbar.5 with orange_concrete 64
 execute if score replicate.CyanCougars replicate.timer.build6 matches 4.. if score replicate.CyanCougars replicate.stage matches 5 run item replace entity @a[team=CYAN_COUGARS] hotbar.6 with yellow_concrete 64
 execute if score replicate.CyanCougars replicate.timer.build6 matches 4.. if score replicate.CyanCougars replicate.stage matches 5 run item replace entity @a[team=CYAN_COUGARS] hotbar.7 with lime_concrete 64
-execute if score replicate.CyanCougars replicate.timer.build6 matches 4.. if score replicate.CyanCougars replicate.stage matches 5 run item replace entity @a[team=CYAN_COUGARS] hotbar.8 with blue_concrete 64
+execute if score replicate.CyanCougars replicate.timer.build6 matches 4.. if score replicate.CyanCougars replicate.stage matches 5 run item replace entity @a[team=CYAN_COUGARS] hotbar.8 with light_blue_concrete 64
 
 # remove the tinted glass barrier
 execute in trials:replicate if score replicate.CyanCougars replicate.timer.build6 matches 60 run fill -58 100 -39 -26 114 -4 air replace tinted_glass

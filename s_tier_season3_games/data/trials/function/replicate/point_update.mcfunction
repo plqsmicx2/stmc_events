@@ -8,35 +8,35 @@ function trials:replicate/calculate_rankings
 
 # Red
 scoreboard players set replicate.RedRaccoons replicate.points.team 0
-execute as @a[team=RED_RACCOONS] store result score @s replicate.points.team run \
+execute as @a[team=RED_RACCOONS] store result score replicate.RedRaccoons replicate.points.team run \
         function trials:replicate/award_points
 # Orange
 scoreboard players set replicate.OrangeOtters replicate.points.team 0
-execute as @a[team=ORANGE_OTTERS] store result score @s replicate.points.team run \
+execute as @a[team=ORANGE_OTTERS] store result score replicate.OrangeOtters replicate.points.team run \
         function trials:replicate/award_points
 # Pink
 scoreboard players set replicate.PinkPikas replicate.points.team 0
-execute as @a[team=PINK_PIKAS] store result score @s replicate.points.team run \
+execute as @a[team=PINK_PIKAS] store result score replicate.PinkPikas replicate.points.team run \
         function trials:replicate/award_points
 # Yellow
 scoreboard players set replicate.YellowYaks replicate.points.team 0
-execute as @a[team=YELLOW_YAKS] store result score @s replicate.points.team run \
+execute as @a[team=YELLOW_YAKS] store result score replicate.YellowYaks replicate.points.team run \
         function trials:replicate/award_points
 # Green
 scoreboard players set replicate.GreenGoats replicate.points.team 0
-execute as @a[team=GREEN_GOATS] store result score @s replicate.points.team run \
+execute as @a[team=GREEN_GOATS] store result score replicate.GreenGoats replicate.points.team run \
         function trials:replicate/award_points
 # Cyan
 scoreboard players set replicate.CyanCougars replicate.points.team 0
-execute as @a[team=CYAN_COUGARS] store result score @s replicate.points.team run \
+execute as @a[team=CYAN_COUGARS] store result score replicate.CyanCougars replicate.points.team run \
         function trials:replicate/award_points
 # Purple
 scoreboard players set replicate.PurplePenguins replicate.points.team 0
-execute as @a[team=PURPLE_PENGUINS] store result score @s replicate.points.team run \
+execute as @a[team=PURPLE_PENGUINS] store result score replicate.PurplePenguins replicate.points.team run \
         function trials:replicate/award_points
 # Blue
 scoreboard players set replicate.BlueBears replicate.points.team 0
-execute as @a[team=BLUE_BEARS] store result score @s replicate.points.team run \
+execute as @a[team=BLUE_BEARS] store result score replicate.BlueBears replicate.points.team run \
         function trials:replicate/award_points
 
 # <===== PLAYER POINTS =====>

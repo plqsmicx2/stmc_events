@@ -61,6 +61,9 @@ team modify PURPLE_PENGUINS friendlyFire false
 team modify BLUE_BEARS friendlyFire false
 team modify SPECTATORS friendlyFire false
 
+# set some global defaults
+execute as @a run attribute @s max_health base set 20
+
 # create global scoreboards
 # records if the event is currently paused
 scoreboard objectives add event.paused dummy
