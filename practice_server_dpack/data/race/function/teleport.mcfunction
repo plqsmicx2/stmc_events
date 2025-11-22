@@ -17,3 +17,17 @@ effect give @a instant_health 1 110 true
 
 xp set @a 0 levels
 xp set @a 0 points
+
+# set default scoreboards
+scoreboard players set @a race.laps_completed 0
+scoreboard players set @a race.laptime.1 0
+scoreboard players set @a race.laptime.2 0
+scoreboard players set @a race.laptime.3 0
+scoreboard players set @a race.laptime.4 0
+scoreboard players set @a race.laptime.total 0
+scoreboard players set @a race.laptime.tick 0
+scoreboard players set @a race.laptime.seconds 0
+scoreboard players set @a race.laptime.mins 0
+scoreboard players set @a race.fastest_lap 0
+scoreboard players set @a race.checkpoints_completed 0
+scoreboard players set @a race.soundThisTick 0

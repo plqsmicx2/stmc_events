@@ -55,3 +55,19 @@ scoreboard players set @s race.gameActive 0
 # reset temporary scoreboards
 scoreboard objectives remove race.fastest_lap.mins
 scoreboard objectives remove race.fastest_lap.secs
+
+# reset player scoreboards
+
+# and set those scoreboards
+scoreboard players set @s race.laps_completed 0
+scoreboard players set @s race.laptime.1 0
+scoreboard players set @s race.laptime.2 0
+scoreboard players set @s race.laptime.3 0
+scoreboard players set @s race.laptime.4 0
+scoreboard players set @s race.laptime.total 0
+scoreboard players set @s race.laptime.tick 0
+scoreboard players set @s race.laptime.seconds 0
+scoreboard players set @s race.laptime.mins 0
+scoreboard players set @s race.fastest_lap 0
+scoreboard players set @s race.checkpoints_completed 0
+scoreboard players set @s race.soundThisTick 0

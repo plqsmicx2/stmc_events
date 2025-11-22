@@ -7,4 +7,4 @@ execute as @a if score @s race.return matches 1.. run function lobby:teleport
 scoreboard players set @a race.return 0
 
 # update players currently playing
-execute as @a if score @s race.gameActive matches 1 as @s run function race:game_tick
+execute as @a if score @s race.gameActive matches 1.. run function race:game_tick

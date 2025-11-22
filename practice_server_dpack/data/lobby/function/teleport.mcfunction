@@ -6,3 +6,5 @@ execute in lobby:lobby run tp @s 0 100 0 0 0
 
 clear @s
 effect clear @s
+
+execute in lobby:lobby run spawnpoint @s 0 100 0
