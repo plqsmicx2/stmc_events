@@ -1,0 +1,76 @@
+{
+  "type": "chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 6,
+        "max": 8
+      },
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "loot_table",
+          "weight": 48,
+          "quality": 1,
+          "value": "lobby:subtype/armor",
+          "functions": []
+        },
+        {
+          "type": "loot_table",
+          "weight": 36,
+          "quality": 1,
+          "value": "lobby:subtype/craft",
+          "functions": []
+        },
+        {
+          "type": "loot_table",
+          "weight": 21,
+          "quality": 1,
+          "value": "lobby:subtype/damage",
+          "functions": []
+        },
+        {
+          "type": "loot_table",
+          "weight": 31,
+          "quality": 1,
+          "value": "lobby:subtype/debuff",
+          "functions": []
+        },
+        {
+          "type": "loot_table",
+          "weight": 108,
+          "quality": 1,
+          "value": "lobby:subtype/heal",
+          "functions": []
+        },
+        {
+          "type": "loot_table",
+          "weight": 24,
+          "quality": 1,
+          "value": "lobby:subtype/passive",
+          "functions": []
+        },
+        {
+          "type": "loot_table",
+          "weight": 48,
+          "quality": 1,
+          "value": "lobby:subtype/puzzle",
+          "functions": []
+        },
+        {
+          "type": "loot_table",
+          "weight": 120,
+          "quality": 1,
+          "value": "lobby:subtype/token",
+          "functions": []
+        }
+      ],
+      "functions": [
+        {
+          "function": "set_damage",
+          "damage": 0.02
+        }
+      ]
+    }
+  ]
+}
