@@ -11,7 +11,7 @@ team add dim.tr.ascend
 # modify team colors (for use in setting sidebars)
 team modify dim.lobby color white
 team modify dim.race color green
-team modify dim.extract color red
+team modify dim.extract color gold
 team modify dim.trials color aqua
 team modify dim.tr.scramble color dark_green
 team modify dim.tr.replicate color dark_purple

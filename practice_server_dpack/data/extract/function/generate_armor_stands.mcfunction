@@ -1,7 +1,7 @@
 # red team
 execute in extract:extract run \ 
         summon armor_stand 45 102 -23 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract run \ 
         summon interaction 45 102 -23 {width:1f,height:2f,Tags:["zombie"]}
 
@@ -38,7 +38,7 @@ execute in extract:extract run \
 # blue team
 execute in extract:extract run \ 
         summon armor_stand 55 102 23 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract run \ 
         summon interaction 55 102 23 {width:1f,height:2f,Tags:["zombie"]}
 

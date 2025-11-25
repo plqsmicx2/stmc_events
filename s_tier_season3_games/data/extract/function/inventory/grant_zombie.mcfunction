@@ -14,10 +14,9 @@ item replace entity @s hotbar.1 with iron_pickaxe[can_break=[{blocks:"diamond_bl
                 tool={default_mining_speed:0.1,damage_per_block:0, \ 
                 rules:[{speed:500,correct_for_drops:true,blocks:"gold_block"},{speed:450,correct_for_drops:true,blocks:"diamond_block"}]}, \ 
                 custom_name={"color":"yellow","text":"Ore Breaker"}]
-item replace entity @s hotbar.0 with stone_sword
 
 # zombie specific items
-item replace entity @s armor.chest with iron_chestplate[enchantments={"minecraft:binding_curse":1}]
+item replace entity @s armor.chest with chainmail_chestplate[enchantments={"minecraft:binding_curse":1}]
 item replace entity @s hotbar.0 with wooden_axe
 item replace entity @s weapon.offhand with shield
 item replace entity @s hotbar.2 with fishing_rod[enchantments={"knockback":1}]

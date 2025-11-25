@@ -14,7 +14,6 @@ item replace entity @s hotbar.1 with iron_pickaxe[can_break=[{blocks:"diamond_bl
                 tool={default_mining_speed:0.1,damage_per_block:0, \ 
                 rules:[{speed:500,correct_for_drops:true,blocks:"gold_block"},{speed:450,correct_for_drops:true,blocks:"diamond_block"}]}, \ 
                 custom_name={"color":"yellow","text":"Ore Breaker"}]
-item replace entity @s hotbar.0 with stone_sword
 
 # skeleton specific items
 item replace entity @s armor.legs with leather_leggings[enchantments={"minecraft:binding_curse":1}]

@@ -8,3 +8,6 @@ clear @s
 effect clear @s
 
 execute in lobby:lobby run spawnpoint @s 0 100 0
+
+scoreboard players set @s race.gameActive 0
+scoreboard players set @s extract.gamesActive 0

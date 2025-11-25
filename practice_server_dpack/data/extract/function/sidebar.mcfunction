@@ -9,7 +9,7 @@
 # <red>#<red><white> vs. <white><blue>#<blue> OR <white>None<white>
 
 scoreboard objectives add extract.sidebar dummy {"text": "  STMC Practice  ", "color": "green", "bold": true}
-scoreboard objectives setdisplay sidebar.team.red extract.sidebar
+scoreboard objectives setdisplay sidebar.team.gold extract.sidebar
 
 # <===== BUILD FROM THE BOTTOM =====>
 

@@ -1,4 +1,5 @@
 # set player team by dimension (to ensure the correct sidebar is always displayed)
+execute as @a run team leave @s
 execute as @a[nbt={Dimension:"lobby:lobby"}] run team join dim.lobby
 execute as @a[nbt={Dimension:"race:race"}] run team join dim.race
 execute as @a[nbt={Dimension:"extract:extract"}] run team join dim.extract
