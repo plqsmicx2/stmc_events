@@ -27,13 +27,16 @@ clear @a
 effect clear @a
 
 # ensure full health & hunger
-effect give @a saturation 1 1 true
+execute as @a run attribute @s max_health base set 20
+execute as @a run attribute @s max_health modifier remove all
+effect give @a saturation 1 110 true
 effect give @a regeneration 5 1 true
 effect give @a resistance infinite 4 true
 effect give @a mining_fatigue infinite 4 true
 
 # set xp
-xp set @a 0
+xp set @a 0 levels
+xp set @a 0 points
 
 # kill all entities
 execute in extract:extract run kill @e[type=!player]
@@ -104,8 +107,8 @@ scoreboard players set extract.handler extract.stats.game3completed 0
 scoreboard players set extract.handler extract.stats.game4completed 0
 
 scoreboard players set @a extract.points.indiv 0
-scoreboard players set extract.handler extract.points.diamondValue 2
-scoreboard players set extract.handler extract.points.goldValue 1
+scoreboard players set extract.handler extract.points.diamondValue 4
+scoreboard players set extract.handler extract.points.goldValue 2
 scoreboard players set extract.handler extract.points.killValue 1
 scoreboard players set extract.handler extract.points.survivalValue 0
 function extract:points_update

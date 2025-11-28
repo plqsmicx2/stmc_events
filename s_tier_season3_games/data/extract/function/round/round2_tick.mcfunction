@@ -32,14 +32,14 @@ execute if score extract.handler extract.timer.game.round2 matches 1 run item re
         enchantments={"minecraft:binding_curse":1}]
 
 # build world
-execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot1:1}
-execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot2:3}
-execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot3:2}
-execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot4:4}
-execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot5:5}
-execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot6:8}
-execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot7:6}
-execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot8:7}
+execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot1:2}
+execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot2:5}
+execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot3:4}
+execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot4:8}
+execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot5:6}
+execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot6:7}
+execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot7:1}
+execute if score extract.handler extract.timer.game.round2 matches 1 run data merge storage extract:map {slot8:3}
 execute if score extract.handler extract.timer.game.round2 matches 0..60 store result storage extract:map time int 1 run scoreboard players get extract.handler extract.timer.game.round2
 execute if score extract.handler extract.timer.game.round2 matches 0..60 run function extract:build_world with storage extract:map
 

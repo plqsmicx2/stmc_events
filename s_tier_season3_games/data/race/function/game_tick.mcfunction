@@ -28,7 +28,7 @@ execute if score race.handler race.timer.game matches 1 as @a[team=BLUE_BEARS] r
 execute if score race.handler race.timer.game matches 14400.. run scoreboard players set race.handler race.stage 4
 
 # end by all players completed
-execute if score race.handler race.teams_completed matches 8 run scoreboard players set race.handler race.stage 4
+execute if score race.handler race.teams_completed matches 6 run scoreboard players set race.handler race.stage 4
 
 # <===== INCREMENT TIMERS =====>
 

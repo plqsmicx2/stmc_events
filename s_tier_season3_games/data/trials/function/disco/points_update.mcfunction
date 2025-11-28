@@ -7,8 +7,10 @@
 scoreboard players set @a disco.points.indiv 0
 
 # placement
+execute as @a if score @s disco.points.placement matches ..8 run scoreboard players set @s disco.points.indiv 9
+execute as @a if score @s disco.points.placement matches ..8 run scoreboard players operation @s disco.points.indiv -= @s disco.points.placement
+
 execute as @a if score @s disco.points.placement matches ..16 run scoreboard players add @s disco.points.indiv 1
-execute as @a if score @s disco.points.placement matches ..8 run scoreboard players add @s disco.points.indiv 1
 execute as @a if score @s disco.points.placement matches ..4 run scoreboard players add @s disco.points.indiv 1
 execute as @a if score @s disco.points.placement matches ..2 run scoreboard players add @s disco.points.indiv 1
 

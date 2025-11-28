@@ -31,12 +31,12 @@ scoreboard players reset solve.BlueBears solve.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
-execute if score solve.RedRaccoons solve.points.team.rank matches 1..3 run scoreboard players operation solve.RedRaccoons solve.sidebar = solve.RedRaccoons solve.stats.roomsCompleted
-execute if score solve.RedRaccoons solve.points.team.rank matches 1..3 run scoreboard players display name solve.RedRaccoons solve.sidebar {"text": "  Red Raccoons", "color": "red"}
+#execute if score solve.RedRaccoons solve.points.team.rank matches 1..3 run scoreboard players operation solve.RedRaccoons solve.sidebar = solve.RedRaccoons solve.stats.roomsCompleted
+#execute if score solve.RedRaccoons solve.points.team.rank matches 1..3 run scoreboard players display name solve.RedRaccoons solve.sidebar {"text": "  Red Raccoons", "color": "red"}
 execute if score solve.OrangeOtters solve.points.team.rank matches 1..3 run scoreboard players operation solve.OrangeOtters solve.sidebar = solve.OrangeOtters solve.stats.roomsCompleted
 execute if score solve.OrangeOtters solve.points.team.rank matches 1..3 run scoreboard players display name solve.OrangeOtters solve.sidebar {"text": "  Orange Otters", "color": "gold"}
-execute if score solve.PinkPikas solve.points.team.rank matches 1..3 run scoreboard players operation solve.PinkPikas solve.sidebar = solve.PinkPikas solve.stats.roomsCompleted
-execute if score solve.PinkPikas solve.points.team.rank matches 1..3 run scoreboard players display name solve.PinkPikas solve.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+#execute if score solve.PinkPikas solve.points.team.rank matches 1..3 run scoreboard players operation solve.PinkPikas solve.sidebar = solve.PinkPikas solve.stats.roomsCompleted
+#execute if score solve.PinkPikas solve.points.team.rank matches 1..3 run scoreboard players display name solve.PinkPikas solve.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 execute if score solve.YellowYaks solve.points.team.rank matches 1..3 run scoreboard players operation solve.YellowYaks solve.sidebar = solve.YellowYaks solve.stats.roomsCompleted
 execute if score solve.YellowYaks solve.points.team.rank matches 1..3 run scoreboard players display name solve.YellowYaks solve.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 execute if score solve.GreenGoats solve.points.team.rank matches 1..3 run scoreboard players operation solve.GreenGoats solve.sidebar = solve.GreenGoats solve.stats.roomsCompleted

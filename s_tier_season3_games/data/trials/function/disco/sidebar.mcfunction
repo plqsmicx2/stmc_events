@@ -33,12 +33,12 @@ scoreboard players reset disco.BlueBears disco.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
-execute if score disco.RedRaccoons disco.points.team.rank matches 1..3 run scoreboard players operation disco.RedRaccoons disco.sidebar = disco.RedRaccoons disco.points.team.temp
-execute if score disco.RedRaccoons disco.points.team.rank matches 1..3 run scoreboard players display name disco.RedRaccoons disco.sidebar {"text": "  Red Raccoons", "color": "red"}
+#execute if score disco.RedRaccoons disco.points.team.rank matches 1..3 run scoreboard players operation disco.RedRaccoons disco.sidebar = disco.RedRaccoons disco.points.team.temp
+#execute if score disco.RedRaccoons disco.points.team.rank matches 1..3 run scoreboard players display name disco.RedRaccoons disco.sidebar {"text": "  Red Raccoons", "color": "red"}
 execute if score disco.OrangeOtters disco.points.team.rank matches 1..3 run scoreboard players operation disco.OrangeOtters disco.sidebar = disco.OrangeOtters disco.points.team.temp
 execute if score disco.OrangeOtters disco.points.team.rank matches 1..3 run scoreboard players display name disco.OrangeOtters disco.sidebar {"text": "  Orange Otters", "color": "gold"}
-execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players operation disco.PinkPikas disco.sidebar = disco.PinkPikas disco.points.team.temp
-execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players display name disco.PinkPikas disco.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+#execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players operation disco.PinkPikas disco.sidebar = disco.PinkPikas disco.points.team.temp
+#execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players display name disco.PinkPikas disco.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 execute if score disco.YellowYaks disco.points.team.rank matches 1..3 run scoreboard players operation disco.YellowYaks disco.sidebar = disco.YellowYaks disco.points.team.temp
 execute if score disco.YellowYaks disco.points.team.rank matches 1..3 run scoreboard players display name disco.YellowYaks disco.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 execute if score disco.GreenGoats disco.points.team.rank matches 1..3 run scoreboard players operation disco.GreenGoats disco.sidebar = disco.GreenGoats disco.points.team.temp
@@ -64,28 +64,28 @@ team join BLUE_BEARS disco.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: disco.sidebar 70
+scoreboard players set §e§lPoints: disco.sidebar 100
 
 # blank line
-scoreboard players set §a disco.sidebar 71
+scoreboard players set §a disco.sidebar 101
 
 # teams alive
-scoreboard players set disco.teamsAlive disco.sidebar 72
-execute if score disco.handler disco.teams_alive matches 8 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 8/8", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 7 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 7/8", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 6 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 6/8", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 5 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 5/8", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 4 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 4/8", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 3 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 3/8", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 2 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 2/8", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 1 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 1/8", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 0 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 0/8", "color": "red", "bold": true}
+scoreboard players set disco.teamsAlive disco.sidebar 102
+execute if score disco.handler disco.teams_alive matches 8 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 8/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 7 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 7/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 6 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 6/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 5 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 5/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 4 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 4/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 3 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 3/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 2 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 2/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 1 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 1/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 0 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 0/6", "color": "red", "bold": true}
 
 # blank line
-scoreboard players set §b disco.sidebar 73
+scoreboard players set §b disco.sidebar 103
 
 # round number
-scoreboard players set disco.roundsPlayed disco.sidebar 74
+scoreboard players set disco.roundsPlayed disco.sidebar 104
 execute if score disco.handler disco.rounds_played matches 0 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 0", "color": "dark_red", "bold": true}
 execute if score disco.handler disco.rounds_played matches 1 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 1", "color": "dark_red", "bold": true}
 execute if score disco.handler disco.rounds_played matches 2 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 2", "color": "dark_red", "bold": true}
@@ -149,8 +149,8 @@ execute if score disco.handler disco.rounds_played matches 59 run scoreboard pla
 execute if score disco.handler disco.rounds_played matches 60 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 60", "color": "dark_red", "bold": true}
 
 # current game
-scoreboard players set Disco disco.sidebar 75
-scoreboard players display name Disco disco.sidebar {"text": "Disco", "color": "dark_aqua", "bold": true}
+scoreboard players set Disco disco.sidebar 105
+scoreboard players display name Disco disco.sidebar {"text": "Scramble", "color": "dark_aqua", "bold": true}
 
 # blank line #2
-scoreboard players set § disco.sidebar 76
+scoreboard players set § disco.sidebar 106

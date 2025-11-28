@@ -1,7 +1,7 @@
 # start function for lobbies between games
 
 # run load function
-function lobby:final/load
+function lobby:post/load
 
 # update stage
-scoreboard players set lobby.handler lobby.stage 16
+scoreboard players set lobby.handler lobby.stage 18

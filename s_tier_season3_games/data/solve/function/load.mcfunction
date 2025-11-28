@@ -34,7 +34,9 @@ clear @a
 effect clear @a
 
 # ensure full health & hunger
-effect give @a saturation 1 0 true
+execute as @a run attribute @s max_health base set 20
+execute as @a run attribute @s max_health modifier remove all
+effect give @a saturation 1 110 true
 effect give @a instant_health 1 110 true
 effect give @a resistance infinite 4 true
 effect give @a mining_fatigue infinite 4 true

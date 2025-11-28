@@ -126,8 +126,7 @@ execute if score stmc.handler event.stage matches 13 if score stmc.handler stats
 
 execute if score stmc.handler event.stage matches 14 run function lobby:between/tick
 
-
-# <===== STAGE NINE =====>
+# <===== STAGE FIFTEEN =====>
 # game stage
 
 execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 0 run function race:tick
@@ -139,3 +138,17 @@ execute if score stmc.handler event.stage matches 15 if score stmc.handler stats
 execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 6 run function blitz:tick
 execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 7 run function survival_games:tick
 
+# <===== STAGE SIXTEEN =====>
+# lobby stage
+
+execute if score stmc.handler event.stage matches 16 run function lobby:final/tick
+
+# <===== STAGE SEVENTEEN =====>
+# finale stage
+
+execute if score stmc.handler event.stage matches 16 run function finale:tick
+
+# <===== STAGE EIGHTEEN =====>
+# lobby stage
+
+execute if score stmc.handler event.stage matches 14 run function lobby:post/tick

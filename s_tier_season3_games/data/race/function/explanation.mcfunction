@@ -23,7 +23,11 @@ execute if score race.handler race.timer.explanation matches 160 run tellraw @a 
 # blurb #3
 execute in race:race if score race.handler race.timer.explanation matches 320 run tp @a 58 112 65 -135 25
 execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"You will earn +",color:"green"},{text:"2",color:"dark_red"},{text:" points for each player outplaced.",color:"green"}]
+execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"You will earn +",color:"green"},{text:"3",color:"dark_red"},{text:" points for each player outplaced.",color:"green"}]
+execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"You will earn the following bonus points for achieving each placement:",color:"green"}]
+execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 20: +",color:"green"},{text:"2",color:"dark_red"},{text:" points | Top 10: +",color:"green"},{text:"2",color:"dark_red"},{text:" points",color:"green"}]
+execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 5: +",color:"green"},{text:"2",color:"dark_red"},{text:" points | Top 3: +",color:"green"},{text:"2",color:"dark_red"},{text:" points | Top 1: +",color:"green"},{text:"1",color:"dark_red"},{text:" point",color:"green"}]
 execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
 
 # blurb #4

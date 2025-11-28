@@ -5,9 +5,9 @@
 # blurb #1
 execute if score disco.handler disco.timer.explanation matches 1 run gamemode spectator @a
 execute in trials:disco if score disco.handler disco.timer.explanation matches 1 run tp @a -12 117 -12 -40 40
-execute if score disco.handler disco.timer.explanation matches 1 run title @a title {text:"DISCO",color:"dark_aqua"}
+execute if score disco.handler disco.timer.explanation matches 1 run title @a title {text:"SCRAMBLE",color:"dark_aqua"}
 execute if score disco.handler disco.timer.explanation matches 1 run tellraw @a {text:" "}
-execute if score disco.handler disco.timer.explanation matches 1 run tellraw @a {text:"Disco is a fast-paced reaction focused game.",color:"aqua"}
+execute if score disco.handler disco.timer.explanation matches 1 run tellraw @a {text:"Scramble is a fast-paced reaction focused game.",color:"aqua"}
 execute if score disco.handler disco.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score disco.handler disco.timer.explanation matches 1 run tellraw @a {text:"There will be one round.",color:"aqua"}
 execute if score disco.handler disco.timer.explanation matches 1 run tellraw @a {text:" "}
@@ -51,9 +51,10 @@ execute in trials:disco if score disco.handler disco.timer.explanation matches 4
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"1 point","color":"red"},{"text":" each six rounds you survive.","color":"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Once you reach top 8, you will earn +","color":"aqua"},{"text":"1 point","color":"red"},{"text":"per player outlasted.","color":"aqua"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will also earn the following placement points:",color:"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 16: +","color":"aqua"},{"text":"1 point","color":"red"}]
-execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 8: +","color":"aqua"},{"text":"1 point","color":"red"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 4: +","color":"aqua"},{"text":"1 point","color":"red"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 2: +","color":"aqua"},{"text":"1 point","color":"red"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}

@@ -93,5 +93,5 @@ scoreboard players set @a[team=!SPECTATORS] spleef.alive 1
 scoreboard players set @a spleef.points.indiv 0
 
 scoreboard objectives remove spleef.sidebar
-function trials:spleef/death_handler
 scoreboard players set @a spleef.points.placement 32
+function trials:spleef/death_handler

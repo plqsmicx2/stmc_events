@@ -37,7 +37,7 @@ execute if score tr.handler tr.timer.lobby2 matches 700 if score tr.handler tr.s
 execute if score tr.handler tr.timer.lobby2 matches 700 if score tr.handler tr.stage.game1 matches 3 if score tr.handler tr.stage.game2 matches 3.. run scoreboard players add tr.handler tr.stage.game2 1
 
 # announce game chosen
-execute if score tr.handler tr.timer.lobby2 matches 700 if score tr.handler tr.stage.game2 matches 1 run title @a title {"text":"DISCO",color:"dark_aqua"}
+execute if score tr.handler tr.timer.lobby2 matches 700 if score tr.handler tr.stage.game2 matches 1 run title @a title {"text":"SCRAMBLE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby2 matches 700 if score tr.handler tr.stage.game2 matches 2 run title @a title {"text":"REPLICATE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby2 matches 700 if score tr.handler tr.stage.game2 matches 3 run title @a title {"text":"SPLEEF",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby2 matches 700 if score tr.handler tr.stage.game2 matches 4 run title @a title {"text":"TOWERS",color:"dark_aqua"}

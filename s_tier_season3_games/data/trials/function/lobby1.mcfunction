@@ -51,7 +51,7 @@ execute if score tr.handler tr.timer.lobby1 matches 720 run tellraw @a {text:" "
 execute if score tr.handler tr.timer.lobby1 matches 920 store result score tr.handler tr.stage.game1 run random value 1..4
 
 # announce game chosen
-execute if score tr.handler tr.timer.lobby1 matches 920 if score tr.handler tr.stage.game1 matches 1 run title @a title {"text":"DISCO",color:"dark_aqua"}
+execute if score tr.handler tr.timer.lobby1 matches 920 if score tr.handler tr.stage.game1 matches 1 run title @a title {"text":"SCRAMBLE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby1 matches 920 if score tr.handler tr.stage.game1 matches 2 run title @a title {"text":"REPLICATE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby1 matches 920 if score tr.handler tr.stage.game1 matches 3 run title @a title {"text":"SPLEEF",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby1 matches 920 if score tr.handler tr.stage.game1 matches 4 run title @a title {"text":"TOWERS",color:"dark_aqua"}

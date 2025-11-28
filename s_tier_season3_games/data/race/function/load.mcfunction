@@ -26,6 +26,8 @@ clear @a
 effect clear @a
 
 # ensure full health & hunger
+execute as @a run attribute @s max_health base set 20
+execute as @a run attribute @s max_health modifier remove all
 effect give @a saturation 1 1 true
 effect give @a instant_health 1 110 true
 
@@ -130,6 +132,6 @@ scoreboard players set @a race.currentPlacement 0
 scoreboard players set @a race.soundThisTick 0
 
 scoreboard players set @a race.points.indiv 0
-scoreboard players set race.handler race.points.placement 8
+scoreboard players set race.handler race.points.placement 3
 
 scoreboard objectives remove race.sidebar

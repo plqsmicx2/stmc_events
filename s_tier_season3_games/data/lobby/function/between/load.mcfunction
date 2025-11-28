@@ -30,6 +30,7 @@ effect clear @a
 
 # ensure full health & hunger
 execute as @a run attribute @s max_health base set 20
+execute as @a run attribute @s max_health modifier remove all
 effect give @a saturation 1 1 true
 effect give @a instant_health 1 110 true
 
@@ -187,9 +188,6 @@ scoreboard players set lobby.blueBears lobby.voting.mineCount 0
 scoreboard players set lobby.blueBears lobby.voting.extractCount 0
 scoreboard players set lobby.blueBears lobby.voting.blitzCount 0
 scoreboard players set lobby.blueBears lobby.voting.brawlCount 0
-
-# set stage
-scoreboard players set lobby.handler lobby.stage 0
 
 # summon trading villager
 execute in lobby:lobby run kill @e[type=villager]

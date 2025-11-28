@@ -40,5 +40,5 @@ execute if score extract.handler extract.stats.roundsCompleted matches 6 run fun
 
 # <===== END GAME =====>
 
-execute if score extract.handler extract.stats.roundsCompleted matches 7 run scoreboard players set extract.handler extract.stage 4
+execute if score extract.handler extract.stats.roundsCompleted matches 5 run scoreboard players set extract.handler extract.stage 4
 

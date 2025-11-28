@@ -1,4 +1,4 @@
-# default sidebar
+# lobby sidebar
 
 # sidebar looks like this:
 # <lime>STMC Open<lime>
@@ -65,9 +65,8 @@ scoreboard players set §e§lPoints: lobby.sidebar 5000
 # blank line
 scoreboard players set §a lobby.sidebar 5001
 
-# timer
-scoreboard players set lobby.timer lobby.sidebar 5002
-scoreboard players display name lobby.timer lobby.sidebar [{text:"Starting Soon.",color:red,bold:true}]
+scoreboard players set lobby.header lobby.sidebar 5002
+scoreboard players display name lobby.header lobby.sidebar {text:"Thanks for Playing!",color:white,bold:true}
 
 # blank line
 scoreboard players set §b lobby.sidebar 5003

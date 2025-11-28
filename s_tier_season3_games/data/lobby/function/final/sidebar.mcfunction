@@ -1,4 +1,4 @@
-# default sidebar
+# lobby sidebar
 
 # sidebar looks like this:
 # <lime>STMC Open<lime>
@@ -67,10 +67,14 @@ scoreboard players set §a lobby.sidebar 5001
 
 # timer
 scoreboard players set lobby.timer lobby.sidebar 5002
-scoreboard players display name lobby.timer lobby.sidebar [{text:"Starting Soon.",color:red,bold:true}]
+execute if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+execute if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+
+scoreboard players set lobby.header lobby.sidebar 5003
+scoreboard players display name lobby.header lobby.sidebar {text:"Finale!",color:white,bold:true}
 
 # blank line
-scoreboard players set §b lobby.sidebar 5003
+scoreboard players set §b lobby.sidebar 5004
 
 # set the players' actionbar to their individual rank & points
 execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]

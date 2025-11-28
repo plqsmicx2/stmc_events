@@ -1,5 +1,7 @@
 clear @a
 effect clear @a
+execute as @a run attribute @s max_health base set 20
+execute as @a run attribute @s max_health modifier remove all
 effect give @a saturation 1 255
 effect give @a instant_health 1 10
 effect give @a resistance infinite 3

@@ -28,12 +28,12 @@ scoreboard players reset replicate.BlueBears replicate.sidebar
 
 # add teams' build completion #
 # they'll be automatically ranked by the scoreboard itself
-scoreboard players operation replicate.RedRaccoons replicate.sidebar = replicate.RedRaccoons replicate.stage
-scoreboard players display name replicate.RedRaccoons replicate.sidebar {"text": "  Red Raccoons", "color": "red"}
+#scoreboard players operation replicate.RedRaccoons replicate.sidebar = replicate.RedRaccoons replicate.stage
+#scoreboard players display name replicate.RedRaccoons replicate.sidebar {"text": "  Red Raccoons", "color": "red"}
 scoreboard players operation replicate.OrangeOtters replicate.sidebar = replicate.OrangeOtters replicate.stage
 scoreboard players display name replicate.OrangeOtters replicate.sidebar {"text": "  Orange Otters", "color": "gold"}
-scoreboard players operation replicate.PinkPikas replicate.sidebar = replicate.PinkPikas replicate.stage
-scoreboard players display name replicate.PinkPikas replicate.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+#scoreboard players operation replicate.PinkPikas replicate.sidebar = replicate.PinkPikas replicate.stage
+#scoreboard players display name replicate.PinkPikas replicate.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 scoreboard players operation replicate.YellowYaks replicate.sidebar = replicate.YellowYaks replicate.stage
 scoreboard players display name replicate.YellowYaks replicate.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 scoreboard players operation replicate.GreenGoats replicate.sidebar = replicate.GreenGoats replicate.stage

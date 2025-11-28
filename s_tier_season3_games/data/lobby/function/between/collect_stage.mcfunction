@@ -62,31 +62,16 @@ execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby
         tellraw @a ["",{text:"",color:green}]
 
 execute in lobby:lobby if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tp @a -19 100 7 180 10
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"Tokens may also be redeemed for items in trial vaults.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"These vaults are scattered all around the lobby, often in hard-to-reach spots.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"So be sure to explore all around!",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"But remain weary of flowers. Each one impacts your gameplay in a different way",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"",color:green}]
-
-execute in lobby:lobby if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 640 run \
         tp @a 4 42 0 90 15
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 640 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
         tellraw @a ["",{text:"",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 640 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
         tellraw @a ["",{text:"Once the collection phase concludes, you will be teleported to a voting room.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 640 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
         tellraw @a ["",{text:"Each team will have their own voting room.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 640 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
         tellraw @a ["",{text:"You will have 30 seconds to cast votes for which game will be played next. Any tokens not spent will be lost.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 640 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
         tellraw @a ["",{text:"",color:green}]
 
 execute in lobby:lobby if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 800 run \
