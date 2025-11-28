@@ -203,7 +203,7 @@ execute if score @s replicate.points.rank.build6 matches 7 run \
 execute if score @s replicate.points.rank.build6 matches 8 run \
         scoreboard players operation #math .return += replicate.handler replicate.points.build.rank8
 
-# return score (manual because return function does not input a score)
+# manually return score
 execute if score #math .return matches 0 run return 0
 execute if score #math .return matches 1 run return 1
 execute if score #math .return matches 2 run return 2
@@ -273,3 +273,27 @@ execute if score #math .return matches 65 run return 65
 execute if score #math .return matches 66 run return 66
 execute if score #math .return matches 67 run return 67
 execute if score #math .return matches 68 run return 68
+execute if score #math .return matches 69 run return 69
+execute if score #math .return matches 70 run return 70
+execute if score #math .return matches 71 run return 71
+execute if score #math .return matches 72 run return 72
+execute if score #math .return matches 73 run return 73
+execute if score #math .return matches 74 run return 74
+execute if score #math .return matches 75 run return 75
+execute if score #math .return matches 76 run return 76
+execute if score #math .return matches 77 run return 77
+execute if score #math .return matches 78 run return 78
+execute if score #math .return matches 79 run return 79
+execute if score #math .return matches 80 run return 80
+execute if score #math .return matches 81 run return 81
+execute if score #math .return matches 82 run return 82
+execute if score #math .return matches 83 run return 83
+execute if score #math .return matches 84 run return 84
+execute if score #math .return matches 85 run return 85
+execute if score #math .return matches 86 run return 86
+execute if score #math .return matches 87 run return 87
+execute if score #math .return matches 88 run return 88
+execute if score #math .return matches 89 run return 89
+execute if score #math .return matches 90 run return 90
+execute if score #math .return matches 91 run return 91
+execute if score #math .return matches 92 run return 92

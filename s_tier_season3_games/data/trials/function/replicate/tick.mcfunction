@@ -54,12 +54,12 @@ execute if score replicate.handler replicate.stage matches 2 if score replicate.
 execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 380 run title @a actionbar {"text": "1 second!", "color": "aqua", "bold":true}
 execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 399 run title @a title {"text":"Go!", "color":"green"}
 
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 300 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 320 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.1
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 340 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.2
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 360 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.3
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 380 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.4
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 399 run playsound minecraft:block.note_block.pling master @a -13 105 15 1 2
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 300 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 320 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.1
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 340 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.2
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 360 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.3
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 380 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.4
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 399 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 2
 
 # update stage
 execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 400.. run scoreboard players set replicate.handler replicate.stage 3

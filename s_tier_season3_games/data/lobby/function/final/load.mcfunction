@@ -66,24 +66,12 @@ execute in lobby:lobby run fill -60 60 -80 60 160 110 copper_chest[facing=west]{
 # and wrap it up with some scoreboard stuff
 # timers
 scoreboard objectives add lobby.timer dummy
-scoreboard objectives add lobby.timer.voteStage dummy
 scoreboard objectives add lobby.timer.temp dummy
 scoreboard objectives add lobby.timer.secs dummy
 scoreboard objectives add lobby.timer.mins dummy
-scoreboard objectives add lobby.timer.switch dummy
-# stats
-scoreboard objectives add lobby.voting.raceCount dummy
-scoreboard objectives add lobby.voting.solveCount dummy
-scoreboard objectives add lobby.voting.trialsCount dummy
-scoreboard objectives add lobby.voting.collectCount dummy
-scoreboard objectives add lobby.voting.mineCount dummy
-scoreboard objectives add lobby.voting.extractCount dummy
-scoreboard objectives add lobby.voting.blitzCount dummy
-scoreboard objectives add lobby.voting.brawlCount dummy
 
 # (re)set all necessary values
 scoreboard players set lobby.handler lobby.timer 0
-scoreboard players set lobby.handler lobby.timer.voteStage 0
 scoreboard players set lobby.handler lobby.timer.temp 0
 scoreboard players set lobby.handler lobby.timer.secs 0
 scoreboard players set lobby.handler lobby.timer.mins 0

@@ -1,21 +1,36 @@
+# tick function for mine
+
+# stages:
+# 0- delay1 (waiting for players)
+# 1- explanation
+# 2- delay2
+# 3- game
+# 4- delay4 (reset & point announcement)
+
+# run load function if this is our first time here
+execute unless score mine.handler mine.stage matches 0.. run function mine:load
+
+# run functions every tick
 function mine:sidebar
 
-execute if score mine.handler mine.stage.creaking matches 0 if score mine.handler mine.stage.hoglin matches 0 if score mine.handler mine.stage.warden matches 0 if score mine.handler mine.stage.lobby matches 0 in mine:lobby run function mine:load
+# if we're in stage 0, increment timer
+execute if score mine.handler mine.stage matches 0 run scoreboard players add mine.handler mine.timer.delay1 1
+execute if score mine.handler mine.stage matches 0 if score mine.handler mine.timer.delay1 matches 400.. run scoreboard players set mine.handler mine.stage 1
 
-execute if score mine.handler mine.stage.creaking matches 1 if score mine.handler mine.stage.lobby matches 1 in mine:creaking run function mine:general_start with storage mine:data
+# if we're in stage 1, increment timer & run explanation
+execute if score mine.handler mine.stage matches 1 run scoreboard players add mine.handler mine.timer.explanation 1
+execute if score mine.handler mine.stage matches 1 run function mine:explanation
+execute if score mine.handler mine.stage matches 1 if score mine.handler mine.timer.explanation matches 641.. run scoreboard players set mine.handler mine.stage 2
 
-execute if score mine.handler mine.stage.hoglin matches 1 if score mine.handler mine.stage.lobby matches 1 in mine:hoglin run function mine:general_start
+# if we're in stage 2, run game_tick (it handles everything lobby/game related, including delays)
+execute if score mine.handler mine.stage matches 2 run scoreboard players add mine.handler mine.timer 1
+execute if score mine.handler mine.stage matches 2 run function mine:game_tick
+# manually end game
+execute if score mine.handler mine.stage.creaking matches 2 if score mine.handler mine.stage.hoglin matches 2 if score mine.handler mine.stage.warden matches 2 run scoreboard players set mine.handler mine.stage 3
 
-execute if score mine.handler mine.stage.warden matches 1 if score mine.handler mine.stage.lobby matches 1 in mine:warden run function mine:general_start
-
-execute if score mine.handler mine.stage.creaking matches 1 in mine:creaking run function mine:creaking_tick with storage mine:data
-execute if score mine.handler mine.stage.creaking matches 1 in mine:creaking run function mine:general_tick
-
-execute if score mine.handler mine.stage.hoglin matches 1 in mine:hoglin run function mine:hoglin_tick
-execute if score mine.handler mine.stage.hoglin matches 1 in mine:hoglin run function mine:general_tick
-
-execute if score mine.handler mine.stage.warden matches 1 in mine:warden run function mine:warden_tick
-execute if score mine.handler mine.stage.warden matches 1 in mine:warden run function mine:general_tick
-
-execute if score mine.handler mine.stage.lobby matches 1 in mine:lobby run function mine:lobby_tick
-execute if score mine.handler mine.stage.lobby matches 1 in mine:lobby run function mine:general_tick
+# if we're in stage 3, run reset & point announcement
+execute if score mine.handler mine.stage matches 3 run scoreboard players add mine.handler mine.timer.delay2 1
+execute if score mine.handler mine.stage matches 3 if score mine.handler mine.timer.delay2 matches 3 run gamemode spectator @a
+execute if score mine.handler mine.timer.delay2 matches 100 run function mine:player_announcements
+execute if score mine.handler mine.timer.delay2 matches 300 run function mine:team_announcements
+execute if score mine.handler mine.stage matches 3 if score mine.handler mine.timer.delay2 matches 400.. run function mine:reset

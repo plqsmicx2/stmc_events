@@ -4,4 +4,4 @@
 function lobby:final/load
 
 # update stage
-scoreboard players set lobby.handler lobby.stage 16
+scoreboard players set stmc.handler event.stage 16

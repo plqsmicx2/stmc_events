@@ -4,7 +4,7 @@
 
 # blurb #1
 execute if score replicate.handler replicate.timer.explanation matches 1 run gamemode spectator @a
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 1 run tp @a 39 117 8 0 45
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 1 run tp @a 57 112 64 90 15
 execute if score replicate.handler replicate.timer.explanation matches 1 run title @a title {text:"REPLICATE",color:"dark_aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:"Replicate is a team construction game.",color:"aqua"}
@@ -13,7 +13,7 @@ execute if score replicate.handler replicate.timer.explanation matches 1 run tel
 execute if score replicate.handler replicate.timer.explanation matches 1 run tellraw @a {text:" "}
 
 # blurb #2
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 160 run tp @a 44 114 15 28 20
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 160 run tp @a 42 107 57 45 0
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 160 run clone 5 101 10 9 101 14 37 104 62
 execute if score replicate.handler replicate.timer.explanation matches 160 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 160 run tellraw @a {text:"When the game begins, the central build will generate with a pattern.",color:"aqua"}
@@ -24,7 +24,7 @@ execute if score replicate.handler replicate.timer.explanation matches 160 run t
 execute if score replicate.handler replicate.timer.explanation matches 160 run tellraw @a {text:" "}
 
 # blurb #3
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 320 run tp @a 27 114 23 -90 25
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 320 run tp @a 45 113 75 180 45
 execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 320 run fill 37 104 62 41 104 66 chiseled_tuff_bricks
 execute if score replicate.handler replicate.timer.explanation matches 320 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 320 run tellraw @a {text:"There will be six unique patterns.",color:"aqua"}
@@ -33,7 +33,7 @@ execute if score replicate.handler replicate.timer.explanation matches 320 run t
 execute if score replicate.handler replicate.timer.explanation matches 320 run tellraw @a {text:" "}
 
 # blurb #4
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 480 run tp @a 45 127 20 125 25
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 480 run tp @a 51 106 71 120 0
 execute if score replicate.handler replicate.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 480 run tellraw @a {text:"All points are determined by relative placement.",color:"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 480 run tellraw @a {text:" "}
@@ -41,7 +41,7 @@ execute if score replicate.handler replicate.timer.explanation matches 480 run t
 execute if score replicate.handler replicate.timer.explanation matches 480 run tellraw @a {text:" "}
 
 # blurb #5
-execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 640 run tp @a 25 116 11 -60 30
+execute in trials:replicate if score replicate.handler replicate.timer.explanation matches 640 run tp @a 31 112 50 -45 30
 execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:"There are also points for relative placement for each build.","color":"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 640 run tellraw @a {text:" "}

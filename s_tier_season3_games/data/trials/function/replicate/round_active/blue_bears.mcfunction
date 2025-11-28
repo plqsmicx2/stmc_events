@@ -2,22 +2,22 @@
 
 # BUILDS FINDABLE:
 # 0- build 1
-# --> clone 5 101 10 9 101 14 -40 104 62
+# --> clone 5 102 10 9 102 14 -40 104 62
 # ----> clone 11 102 10 11 106 14 -33 106 62
 # 1- build 2
-# --> clone -9 102 2 -5 102 6 -40 104 62
+# --> clone -9 101 2 -5 101 6 -40 104 62
 # ----> clone -11 102 2 -11 106 6 -33 106 62
 # 2- build 3
-# --> clone -9 102 -6 -5 102 -2 -40 104 62
+# --> clone -9 101 -6 -5 101 -2 -40 104 62
 # ----> clone -11 102 -6 -11 106 -2 -33 106 62
 # 3- build 4
-# --> clone 5 101 -14 9 101 -10 -40 104 62
+# --> clone 5 102 -14 9 102 -10 -40 104 62
 # ----> clone 11 102 -14 11 106 -10 -33 106 62
 # 4- build 5
-# --> clone 5 101 -6 9 101 -2 -40 104 62
+# --> clone 5 102 -6 9 102 -2 -40 104 62
 # ----> clone 11 102 -6 11 106 -2 -33 106 62
 # 5- build 6
-# --> clone 5 101 2 9 101 6 -40 104 62
+# --> clone 5 102 2 9 102 6 -40 104 62
 # ----> clone build 6: 11 102 2 11 106 6 -33 106 62
 # 6- team complete
 
@@ -76,7 +76,7 @@ execute in trials:replicate if score replicate.BlueBears replicate.timer.build1 
 # <===== BUILD 1 =====>
 
 # clone the build
-execute in trials:replicate if score replicate.BlueBears replicate.timer.build1 matches 3 run clone 5 101 10 9 101 14 -40 104 62
+execute in trials:replicate if score replicate.BlueBears replicate.timer.build1 matches 3 run clone 5 102 10 9 102 14 -40 104 62
 execute in trials:replicate if score replicate.BlueBears replicate.timer.build1 matches 3 run clone 11 102 10 11 106 14 -33 106 62
 
 # give players necessary blocks
@@ -111,7 +111,7 @@ execute in trials:replicate if score replicate.BlueBears replicate.timer.build2 
 execute if score replicate.BlueBears replicate.timer.build2 matches 3 run clear @a[team=BLUE_BEARS]
 
 # clone the build
-execute in trials:replicate if score replicate.BlueBears replicate.timer.build2 matches 3 run clone -9 102 2 -5 102 6 -40 104 62
+execute in trials:replicate if score replicate.BlueBears replicate.timer.build2 matches 3 run clone -9 101 2 -5 101 6 -40 104 62
 execute in trials:replicate if score replicate.BlueBears replicate.timer.build2 matches 3 run clone -11 102 2 -11 106 6 -33 106 62
 
 # give players necessary blocks
@@ -149,7 +149,7 @@ execute in trials:replicate if score replicate.BlueBears replicate.timer.build3 
 execute if score replicate.BlueBears replicate.timer.build3 matches 3 run clear @a[team=BLUE_BEARS]
 
 # clone the build
-execute in trials:replicate if score replicate.BlueBears replicate.timer.build3 matches 3 run clone -9 102 -6 -5 102 -2 -40 104 62
+execute in trials:replicate if score replicate.BlueBears replicate.timer.build3 matches 3 run clone -9 101 -6 -5 101 -2 -40 104 62
 execute in trials:replicate if score replicate.BlueBears replicate.timer.build3 matches 3 run clone -11 102 -6 -11 106 -2 -33 106 62
 
 # give players necessary blocks
@@ -185,7 +185,7 @@ execute in trials:replicate if score replicate.BlueBears replicate.timer.build4 
 execute if score replicate.BlueBears replicate.timer.build4 matches 3 run clear @a[team=BLUE_BEARS]
 
 # clone the build
-execute in trials:replicate if score replicate.BlueBears replicate.timer.build4 matches 3 run clone 5 101 -14 9 101 -10 -40 104 62
+execute in trials:replicate if score replicate.BlueBears replicate.timer.build4 matches 3 run clone 5 102 -14 9 102 -10 -40 104 62
 execute in trials:replicate if score replicate.BlueBears replicate.timer.build4 matches 3 run clone 11 102 -14 11 106 -10 -33 106 62
 
 # give players necessary blocks
@@ -220,7 +220,7 @@ execute in trials:replicate if score replicate.BlueBears replicate.timer.build5 
 execute if score replicate.BlueBears replicate.timer.build5 matches 3 run clear @a[team=BLUE_BEARS]
 
 # clone the build
-execute in trials:replicate if score replicate.BlueBears replicate.timer.build5 matches 3 run clone 5 101 -6 9 101 -2 -40 104 62
+execute in trials:replicate if score replicate.BlueBears replicate.timer.build5 matches 3 run clone 5 102 -6 9 102 -2 -40 104 62
 execute in trials:replicate if score replicate.BlueBears replicate.timer.build5 matches 3 run clone 11 102 -6 11 106 -2 -33 106 62
 
 # give players necessary blocks
@@ -256,7 +256,7 @@ execute in trials:replicate if score replicate.BlueBears replicate.timer.build6 
 execute if score replicate.BlueBears replicate.timer.build6 matches 3 run clear @a[team=BLUE_BEARS]
 
 # clone the build
-execute in trials:replicate if score replicate.BlueBears replicate.timer.build6 matches 3 run clone 5 101 2 9 101 6 -40 104 62
+execute in trials:replicate if score replicate.BlueBears replicate.timer.build6 matches 3 run clone 5 102 2 9 102 6 -40 104 62
 execute in trials:replicate if score replicate.BlueBears replicate.timer.build6 matches 3 run clone 11 102 2 11 106 6 -33 106 62
 
 # give players necessary blocks

@@ -1,5 +1,3 @@
-scoreboard players add mine.handler mine.timer 1
-
 # randomize current rotation
 execute store result storage mine:data rot int 1 run random value -179..180
 

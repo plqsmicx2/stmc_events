@@ -146,9 +146,9 @@ execute if score stmc.handler event.stage matches 16 run function lobby:final/ti
 # <===== STAGE SEVENTEEN =====>
 # finale stage
 
-execute if score stmc.handler event.stage matches 16 run function finale:tick
+execute if score stmc.handler event.stage matches 17 run function finale:tick
 
 # <===== STAGE EIGHTEEN =====>
 # lobby stage
 
-execute if score stmc.handler event.stage matches 14 run function lobby:post/tick
+execute if score stmc.handler event.stage matches 18 run function lobby:post/tick

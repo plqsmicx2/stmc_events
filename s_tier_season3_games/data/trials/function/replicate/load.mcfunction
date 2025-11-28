@@ -12,6 +12,9 @@ execute in trials:replicate as @a[team=CYAN_COUGARS] run tp @s -45 105 -22 -90 0
 execute in trials:replicate as @a[team=PURPLE_PENGUINS] run tp @s -45 105 21 -90 0
 execute in trials:replicate as @a[team=BLUE_BEARS] run tp @s -45 105 64 -90 0
 
+# make sure region is loaded
+execute in trials:replicate run forceload add -80 -150 80 150
+
 # force gamemode
 gamemode adventure @a
 execute as @a[team=SPECTATORS] run gamemode spectator @s

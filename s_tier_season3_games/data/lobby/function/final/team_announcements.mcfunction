@@ -1,6 +1,6 @@
 # slowly announce teams
 
-tellraw @a [{"text":"Team Rankings:","color":"gold","bold":true}]
+execute if score lobby.handler lobby.timer matches 400 run tellraw @a [{"text":"Team Rankings:","color":"gold","bold":true}]
 
 execute if score team.RedRaccoons stats.points.team.rank matches 6 if score lobby.handler lobby.timer matches 400 run tellraw @a [{text:"#6: ",color:gold},{text:"Red Raccoons",color:red},{text:" - ",color:gold},{score:{name:"team.RedRaccoons",objective:"stats.points.team"},color:red},{text:" points",color:gold}]
 execute if score team.OrangeOtters stats.points.team.rank matches 6 if score lobby.handler lobby.timer matches 400 run tellraw @a [{text:"#6: ",color:gold},{text:"Orange Otters",color:gold},{text:" - ",color:gold},{score:{name:"team.OrangeOtters",objective:"stats.points.team"},color:gold},{text:" points",color:gold}]

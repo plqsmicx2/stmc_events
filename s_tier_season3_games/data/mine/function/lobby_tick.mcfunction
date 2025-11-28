@@ -71,6 +71,8 @@ execute if score mine.handler mine.timer matches 30 run title @a title "Lobby"
 
 execute if score mine.handler mine.timer matches 200 run scoreboard players enable @a[gamemode=adventure] mine.vote
 
+execute as @a at @s if score mine.handler mine.timer matches 200 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1
+
 execute if score mine.handler mine.timer matches 200 run tellraw @a [{"color":"yellow","text":"\nVote!\n"},{"color":"dark_gray","text":" | "}]
 execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.creaking matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 0"},"color":"dark_red","text":"Creaking"}]
 execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.hoglin matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 1"},"color":"gold","text":"Hoglin"}]

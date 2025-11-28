@@ -8,7 +8,7 @@ execute in trials:lobby run tp @a 0 100 0
 # do some normal load stuff
 
 # force gamemode
-gamemode survival @a
+gamemode adventure @a
 
 # clear stuff
 effect clear @a

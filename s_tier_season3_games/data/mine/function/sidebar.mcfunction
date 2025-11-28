@@ -77,3 +77,7 @@ scoreboard players set § mine.sidebar 501
 # current game
 scoreboard players set Mine mine.sidebar 502
 scoreboard players display name Mine mine.sidebar {"text": "Mine", "color": "gray", "bold": true}
+
+# points header
+# no need to override display since it can be done in one line
+scoreboard players set §a mine.sidebar 503
