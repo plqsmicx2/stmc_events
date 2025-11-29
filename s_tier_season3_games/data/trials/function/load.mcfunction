@@ -112,3 +112,5 @@ scoreboard players set @a replicate.points.indiv 0
 scoreboard players set @a spleef.points.indiv 0
 scoreboard players set @a towers.points.indiv 0
 scoreboard players set @a ascend.points.indiv 0
+
+scoreboard objectives remove tr.sidebar

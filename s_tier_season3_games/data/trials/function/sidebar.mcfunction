@@ -27,6 +27,7 @@ execute as @a run scoreboard players operation @s tr.points.indiv += @s disco.po
 execute as @a run scoreboard players operation @s tr.points.indiv += @s replicate.points.indiv
 execute as @a run scoreboard players operation @s tr.points.indiv += @s spleef.points.indiv
 execute as @a run scoreboard players operation @s tr.points.indiv += @s towers.points.indiv
+execute as @a run scoreboard players operation @s tr.points.indiv += @s ascend.points.indiv
 
 scoreboard players set tr.RedRaccoons tr.points.team 0
 execute as @a[team=RED_RACCOONS] run scoreboard players operation tr.RedRaccoons tr.points.team += @s tr.points.indiv

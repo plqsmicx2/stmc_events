@@ -60,4 +60,4 @@ execute as @a[team=BLUE_BEARS] at @s run scoreboard players operation disco.Blue
 # <===== Actionbar =====>
 
 # sets player actionbar to their points
-execute as @a if score disco.handler disco.stage matches 3..4 run title @s actionbar ["",{text:"Current Placement: ",bold:true,color:"yellow"},{score:{name:"disco.handler",objective:"disco.players_alive"},bold:true,color:"red"},{text:" | Individual Points: ",bold:true,color:"yellow"},{score:{name:"@s",objective:"disco.points.indiv"},bold:true,color:"red"}]
+execute as @a if score disco.handler disco.stage matches 3 run title @s actionbar ["",{text:"Current Placement: ",bold:true,color:"yellow"},{score:{name:"disco.handler",objective:"disco.players_alive"},bold:true,color:"red"},{text:" | Individual Points: ",bold:true,color:"yellow"},{score:{name:"@s",objective:"disco.points.indiv"},bold:true,color:"red"}]

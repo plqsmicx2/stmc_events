@@ -51,7 +51,7 @@ execute in trials:disco if score disco.handler disco.timer.explanation matches 4
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will earn +",color:"aqua"},{"text":"1 point","color":"red"},{"text":" each six rounds you survive.","color":"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Once you reach top 8, you will earn +","color":"aqua"},{"text":"1 point","color":"red"},{"text":"per player outlasted.","color":"aqua"}]
+execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Once you reach top 8, you will earn +","color":"aqua"},{"text":"1 point","color":"red"},{"text":" per player outlasted.","color":"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{text:"You will also earn the following placement points:",color:"aqua"}]
 execute if score disco.handler disco.timer.explanation matches 480 run tellraw @a ["",{"text":"Top 16: +","color":"aqua"},{"text":"1 point","color":"red"}]

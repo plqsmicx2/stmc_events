@@ -27,7 +27,7 @@ item replace entity @a hotbar.0 with diamond_pickaxe[custom_name={"text":"BREAKE
                                                     "prismarine_bricks","dark_prismarine","light_blue_stained_glass","sea_lantern","prismarine", \
                                                     "white_wool","calcite","white_terracotta","black_concrete", \
                                                     "tuff_bricks","waxed_oxidized_cut_copper","waxed_weathered_copper_grate","waxed_exposed_copper_bulb","waxed_chiseled_copper", \
-                                                    "red_concrete","orange_concrete","yellow_concrete","lime_concrete","blue_concrete"]}]}]
+                                                    "red_concrete","orange_concrete","yellow_concrete","lime_concrete","light_blue_concrete"]}]}]
 item replace entity @a hotbar.1 with air
 
 # kill item drops

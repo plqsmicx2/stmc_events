@@ -36,7 +36,7 @@ execute as Ocean_Titan unless entity @s[team=] run team join PURPLE_PENGUINS Oce
 #execute as TBD unless entity @s[team=] run team join PURPLE_PENGUINS ..
 execute as MadsAlleyway unless entity @s[team=] run team join PURPLE_PENGUINS MadsAlleyway
 # BLUE BEARS
-execute as plqsmic unless entity @s[team=] run team join ORANGE_OTTERS plqsmic
+execute as plqsmic unless entity @s[team=] run team join BLUE_BEARS plqsmic
 execute as IISona unless entity @s[team=] run team join BLUE_BEARS IISona
 execute as GoldShort unless entity @s[team=] run team join BLUE_BEARS GoldShort
 execute as Loremasonn unless entity @s[team=] run team join BLUE_BEARS Loremasonn
