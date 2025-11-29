@@ -77,12 +77,14 @@ scoreboard objectives add disco.stage dummy
 scoreboard objectives add replicate.stage dummy
 scoreboard objectives add spleef.stage dummy
 scoreboard objectives add towers.stage dummy
+scoreboard objectives add ascend.stage dummy
 
 # and reset each game's stage
 scoreboard players reset disco.handler disco.stage
 scoreboard players reset replicate.handler replicate.stage
 scoreboard players reset spleef.handler spleef.stage
 scoreboard players reset towers.handler towers.stage
+scoreboard players reset ascend.handler ascend.stage
 
 # set stage to 0
 scoreboard players set tr.handler tr.stage 0
@@ -109,3 +111,4 @@ scoreboard players set @a disco.points.indiv 0
 scoreboard players set @a replicate.points.indiv 0
 scoreboard players set @a spleef.points.indiv 0
 scoreboard players set @a towers.points.indiv 0
+scoreboard players set @a ascend.points.indiv 0

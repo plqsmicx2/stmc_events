@@ -60,7 +60,7 @@ team join BLUE_BEARS team.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: lobby.sidebar 5000
+scoreboard players set §e§lTeams: lobby.sidebar 5000
 
 # blank line
 scoreboard players set §a lobby.sidebar 5001

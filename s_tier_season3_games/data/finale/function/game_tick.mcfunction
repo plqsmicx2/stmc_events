@@ -1,40 +1,15 @@
-# game tick function for finale [FINALE]
+# function running the thread for the finale game
 
-# this function will run each round individually
+# important things being tracked:
+# round.timer --> start_round & end_round set to 0
+# round.completed --> # of rounds completed & # of wins per team
 
-# <==== GAME START ====>
+# if round timer is zero, but only 1 team is alive start round
+execute if score finale.handler finale.stats.alive matches 1 if score finale.handler finale.round.timer matches 0 run \
+        function finale:start_round
 
-execute if score finale.handler finale.timer.game matches 3 in finale:finale run fill 3 100 25 -3 104 -25 air replace #impermeable
+# increment timer
+scoreboard players add finale.handler finale.round.timer 1
 
-# <==== EVERY TICK ====>
-
-# check for players alive
-scoreboard players set finale.RedRaccoons finale.stats.alive 0
-scoreboard players set finale.OrangeOtters finale.stats.alive 0
-scoreboard players set finale.PinkPikas finale.stats.alive 0
-scoreboard players set finale.GreenGoats finale.stats.alive 0
-scoreboard players set finale.CyanCougars finale.stats.alive 0
-scoreboard players set finale.PurplePenguins finale.stats.alive 0
-execute as @a[team=RED_RACCOONS,scores={finale.stats.alive=1}] run scoreboard players add finale.RedRaccoons finale.stats.alive 1
-execute as @a[team=ORANGE_OTTERS,scores={finale.stats.alive=1}] run scoreboard players add finale.OrangeOtters finale.stats.alive 1
-execute as @a[team=PINK_PIKAS,scores={finale.stats.alive=1}] run scoreboard players add finale.PinkPikas finale.stats.alive 1
-execute as @a[team=GREEN_GOATS,scores={finale.stats.alive=1}] run scoreboard players add finale.GreenGoats finale.stats.alive 1
-execute as @a[team=CYAN_COUGARS,scores={finale.stats.alive=1}] run scoreboard players add finale.CyanCougars finale.stats.alive 1
-execute as @a[team=PURPLE_PENGUINS,scores={finale.stats.alive=1}] run scoreboard players add finale.PurplePenguins finale.stats.alive 1
-
-# <==== END GAME ====>
-
-# end game if only one team is alive
-scoreboard players set finale.handler finale.stats.alive 0
-execute if score finale.RedRaccoons finale.stats.alive matches 1.. run scoreboard players add finale.handler finale.stats.alive 1
-execute if score finale.OrangeOtters finale.stats.alive matches 1.. run scoreboard players add finale.handler finale.stats.alive 1
-execute if score finale.PinkPikas finale.stats.alive matches 1.. run scoreboard players add finale.handler finale.stats.alive 1
-execute if score finale.GreenGoats finale.stats.alive matches 1.. run scoreboard players add finale.handler finale.stats.alive 1
-execute if score finale.CyanCougars finale.stats.alive matches 1.. run scoreboard players add finale.handler finale.stats.alive 1
-execute if score finale.PurplePenguins finale.stats.alive matches 1.. run scoreboard players add finale.handler finale.stats.alive 1
-execute if score finale.handler finale.stats.alive matches 1 run function finale:reset
-
-# <==== SPEED GAME ====>
-
-# if game is lasting too long, begin poisoning players
-execute if score finale.handler finale.timer.game matches 1200 run effect give @a[scores={finale.stats.alive=1}] poison infinite 0 true
+# run round tick
+function finale:round_tick

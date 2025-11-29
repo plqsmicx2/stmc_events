@@ -185,5 +185,16 @@ scoreboard players set @a stats.points.indiv.g5 0
 scoreboard players set @a stats.points.indiv.g6 0
 scoreboard players set @a stats.points.indiv.g7 0
 scoreboard players set @a stats.points.indiv.g8 0
-function lobby:points_update
-function lobby:sidebar
+
+# reset team stats
+scoreboard players set team.RedRaccoons stats.winningTeam 0
+scoreboard players set team.OrangeOtters stats.winningTeam 0
+scoreboard players set team.PinkPikas stats.winningTeam 0
+scoreboard players set team.YellowYaks stats.winningTeam 0
+scoreboard players set team.GreenGoats stats.winningTeam 0
+scoreboard players set team.CyanCougars stats.winningTeam 0
+scoreboard players set team.PurplePenguins stats.winningTeam 0
+scoreboard players set team.BlueBears stats.winningTeam 0
+
+scoreboard objectives remove lobby.sidebar
+function thread:default_sidebar

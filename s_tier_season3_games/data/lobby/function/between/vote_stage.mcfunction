@@ -21,8 +21,8 @@ execute if score lobby.handler lobby.timer.voteStage matches 1 in lobby:lobby ru
 # <===== SHORT EXPLANATION =====>
 
 # clear items
-execute if score lobby.handler lobby.timer.voteStage matches 10 in lobby:lobby run kill @e[type=item]
 execute if score lobby.handler lobby.timer.voteStage matches 10 in lobby:lobby run kill @e[type=chest_minecart]
+execute if score lobby.handler lobby.timer.voteStage matches 15 in lobby:lobby run kill @e[type=item]
 
 execute if score lobby.handler lobby.timer.voteStage matches 10 in lobby:lobby run \
         title @a title [{text:"Vote!",color:green}]

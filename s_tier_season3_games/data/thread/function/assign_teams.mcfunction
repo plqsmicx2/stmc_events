@@ -18,10 +18,10 @@ execute as Gioboiiii unless entity @s[team=] run team join ORANGE_OTTERS Gioboii
 # YELLOW YAKS
 execute as Krisppy_ unless entity @s[team=] run team join YELLOW_YAKS Krisppy_
 execute as kingjoey367 unless entity @s[team=] run team join YELLOW_YAKS kingjoey367
-#execute as ICE unless entity @s[team=] run team join YELLOW_YAKS ..
-#execute as KALE unless entity @s[team=] run team join ORANGE_OTTERS ..
+execute as Icevielbe unless entity @s[team=] run team join YELLOW_YAKS Icevielbe
+execute as kale15156686 unless entity @s[team=] run team join YELLOW_YAKS kale15156686
 # GREEN GOATS
-#execute as TEMPRANO unless entity @s[team=] run team join GREEN_GOATS ..
+execute as t3mprano unless entity @s[team=] run team join GREEN_GOATS t3mprano
 execute as SenkuXsummers unless entity @s[team=] run team join GREEN_GOATS SenkuXsummers
 execute as stompppy unless entity @s[team=] run team join GREEN_GOATS stompppy
 #execute as GOFYGAMER unless entity @s[team=] run team join GREEN_GOATS ..
@@ -36,7 +36,7 @@ execute as Ocean_Titan unless entity @s[team=] run team join PURPLE_PENGUINS Oce
 #execute as TBD unless entity @s[team=] run team join PURPLE_PENGUINS ..
 execute as MadsAlleyway unless entity @s[team=] run team join PURPLE_PENGUINS MadsAlleyway
 # BLUE BEARS
-execute as plqsmic unless entity @s[team=] run team join BLUE_BEARS plqsmic
+execute as plqsmic unless entity @s[team=] run team join ORANGE_OTTERS plqsmic
 execute as IISona unless entity @s[team=] run team join BLUE_BEARS IISona
 execute as GoldShort unless entity @s[team=] run team join BLUE_BEARS GoldShort
 execute as Loremasonn unless entity @s[team=] run team join BLUE_BEARS Loremasonn

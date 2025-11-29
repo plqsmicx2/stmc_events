@@ -3,6 +3,9 @@
 # run every tick
 function lobby:final/sidebar
 
+# set the players' actionbar to their individual rank & points
+execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]
+
 # update timer
 scoreboard players add lobby.handler lobby.timer 1
 

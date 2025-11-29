@@ -9,65 +9,38 @@
 # run load function if this is our first time here
 execute unless score finale.handler finale.stage matches 0.. run function finale:load
 
-# run death handler
-function finale:death_handler
-
 function lobby:final/sidebar
+
+# reset attributes
+execute as @a run attribute @s attack_damage base reset
+execute as @a run attribute @s attack_knockback base reset
+execute as @a run attribute @s attack_speed base reset
+execute as @a run attribute @s knockback_resistance base reset
+
+# set world protections
+execute as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=PINK_PIKAS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=15961002,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=YELLOW_YAKS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16701501,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=GREEN_GOATS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=6192150,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=1481884,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+execute as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=3949738,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # if we're in stage 0, increment timer
 execute if score finale.handler finale.stage matches 0 run scoreboard players add finale.handler finale.timer.delay1 1
-
-# set world
-execute in finale:finale if score finale.handler finale.timer.delay1 matches 2 run clone -31 58 -31 31 75 31 -31 98 -31
-
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 red_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 red_wool replace #wool
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 red_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.RedRaccoons stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 red_wool replace #wool
-
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 orange_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 orange_wool replace #wool
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 orange_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.OrangeOtters stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 orange_wool replace #wool
-
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 pink_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 pink_wool replace #wool
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 pink_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PinkPikas stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 pink_wool replace #wool
-
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 green_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 green_wool replace #wool
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 green_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.GreenGoats stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 green_wool replace #wool
-
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 cyan_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 cyan_wool replace #wool
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 cyan_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.CyanCougars stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 cyan_wool replace #wool
-
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 1 in finale:finale run fill 21 108 12 -21 100 24 purple_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 1 in finale:finale run fill 3 100 24 -3 100 24 purple_wool replace #wool
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 2 in finale:finale run fill 21 108 -12 -21 100 -24 purple_stained_glass replace #impermeable
-execute if score finale.handler finale.timer.delay1 matches 3 if score team.PurplePenguins stats.points.team.rank matches 2 in finale:finale run fill 3 100 -24 -3 100 -24 purple_wool replace #wool
-
 execute if score finale.handler finale.stage matches 0 if score finale.handler finale.timer.delay1 matches 400.. run scoreboard players set finale.handler finale.stage 1
 
 # if we're in stage 1, increment timer & run explanation
 execute if score finale.handler finale.stage matches 1 run scoreboard players add finale.handler finale.timer.explanation 1
 execute if score finale.handler finale.stage matches 1 run function finale:explanation
-execute if score finale.handler finale.stage matches 1 if score finale.handler finale.timer.explanation matches 800.. run scoreboard players set finale.handler finale.stage 2
+execute if score finale.handler finale.stage matches 1 if score finale.handler finale.timer.explanation matches 480.. run scoreboard players set finale.handler finale.stage 2
 
-# if we're in stage 2, increment timer & countdown at 5 seconds
-execute if score finale.handler finale.stage matches 2 run scoreboard players add finale.handler finale.timer.delay2 1
-# countdown
-execute if score finale.handler finale.stage matches 2 if score finale.handler finale.timer.delay2 matches 300 run title @a actionbar {"text":"5 seconds!", "color":white}
-execute if score finale.handler finale.stage matches 2 if score finale.handler finale.timer.delay2 matches 320 run title @a actionbar {"text":"4 seconds!", "color":white}
-execute if score finale.handler finale.stage matches 2 if score finale.handler finale.timer.delay2 matches 340 run title @a actionbar {"text":"3 seconds!", "color":white}
-execute if score finale.handler finale.stage matches 2 if score finale.handler finale.timer.delay2 matches 360 run title @a actionbar {"text":"2 seconds!", "color":white}
-execute if score finale.handler finale.stage matches 2 if score finale.handler finale.timer.delay2 matches 380 run title @a actionbar {"text":"1 second!", "color":white}
+# if we're in stage 2, increment timer & run game
+execute if score finale.handler finale.stage matches 2 run scoreboard players add finale.handler finale.timer.game 1
+execute if score finale.handler finale.stage matches 2 run function finale:game_tick
 
-execute if score finale.handler finale.stage matches 2 if score finale.handler finale.timer.delay2 matches 400.. run scoreboard players set finale.handler finale.stage 3
-
-# if we're in stage 3, increment timer & run game
-execute if score finale.handler finale.stage matches 3 run scoreboard players add finale.handler finale.timer.game 1
-execute if score finale.handler finale.stage matches 3 run function finale:game_tick
+# if we're in stage 3, increment timer & reset
+execute if score finale.handler finale.stage matches 3 run scoreboard players add finale.handler finale.timer.delay2 1
+execute if score finale.handler finale.stage matches 3 if score finale.handler finale.timer.delay2 matches 5 run function finale:announce_winner
+execute if score finale.handler finale.stage matches 3 if score finale.handler finale.timer.delay2 matches 60.. run function finale:reset

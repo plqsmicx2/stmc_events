@@ -75,6 +75,3 @@ scoreboard players display name lobby.header lobby.sidebar {text:"Finale!",color
 
 # blank line
 scoreboard players set §b lobby.sidebar 5004
-
-# set the players' actionbar to their individual rank & points
-execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]
