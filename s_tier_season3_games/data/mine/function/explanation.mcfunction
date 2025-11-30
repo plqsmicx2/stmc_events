@@ -4,7 +4,7 @@
 # and players will be teleported somewhere for an appropriate visual
 
 # blurb #1
-execute if score mine.handler mine.timer.explanation matches 1 run title @a title {text:"mine",color:"gray"}
+execute if score mine.handler mine.timer.explanation matches 1 run title @a title {text:"MINE",color:"gray"}
 execute if score mine.handler mine.timer.explanation matches 1 run gamemode spectator @a
 execute in mine:lobby if score mine.handler mine.timer.explanation matches 1 run teleport @a -4 100 0 -90 0
 execute if score mine.handler mine.timer.explanation matches 1 run tellraw @a {text:" "}

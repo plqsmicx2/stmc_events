@@ -25,7 +25,7 @@ execute if score ascend.CyanCougars ascend.completed matches 6.. run scoreboard 
 execute if score ascend.PurplePenguins ascend.completed matches 6.. run scoreboard players add ascend.handler ascend.completed 1
 execute if score ascend.BlueBears ascend.completed matches 6.. run scoreboard players add ascend.handler ascend.completed 1
 
-execute if score ascend.handler ascend.completed matches 8.. run scoreboard players set ascend.handler ascend.stage 4
+execute if score ascend.handler ascend.completed matches 6.. run scoreboard players set ascend.handler ascend.stage 4
 
 # give players return item
 execute as @a[team=!SPECTATORS] run item replace entity @s hotbar.8 with \
@@ -38,6 +38,7 @@ execute in trials:ascend run kill @e[type=item,nbt={Item:{id:"minecraft:fishing_
 execute as @a if score @s ascend.return matches 1.. run function trials:ascend/spawn_return
 
 # check for a completed armor stand nearby each player
+scoreboard players set @a ascend.completed 0
 execute at @a as @e[distance=..4,type=minecraft:armor_stand,nbt={equipment:{head:{id:"minecraft:leather_helmet"},chest:{id:"minecraft:leather_chestplate"},legs:{id:"minecraft:leather_leggings"},feet:{id:"minecraft:leather_boots"}}}] \
         run scoreboard players add @a ascend.completed 1
 

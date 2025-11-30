@@ -31,7 +31,7 @@ effect clear @a
 # ensure full health & hunger
 execute as @a run attribute @s max_health base set 20
 execute as @a run attribute @s max_health modifier remove all
-effect give @a saturation 1 1 true
+effect give @a saturation 1 110 true
 effect give @a instant_health 1 110 true
 
 # set attributes

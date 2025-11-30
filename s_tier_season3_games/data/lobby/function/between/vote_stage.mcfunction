@@ -112,12 +112,12 @@ execute if score lobby.handler lobby.timer.voteStage matches 702 as @e[type=item
         kill @s
 
 execute if score lobby.handler lobby.timer.voteStage matches 700 in lobby:lobby run \
-        fill 16 41 70 16 41 84 air replace pink_wool destroy
-execute if score lobby.handler lobby.timer.voteStage matches 701 as @e[type=item] if items entity @s container.0 pink_wool run \
+        fill 16 41 70 16 41 84 air replace magenta_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 701 as @e[type=item] if items entity @s container.0 magenta_wool run \
         execute at @s store result score lobby.redRaccoons lobby.voting.blitzCount if items block ~ ~1 ~ container.* sunflower
-execute if score lobby.handler lobby.timer.voteStage matches 702 as @e[type=item] if items entity @s container.0 pink_wool \ 
-        at @s positioned as @s run setblock ~ ~ ~ pink_wool
-execute if score lobby.handler lobby.timer.voteStage matches 702 as @e[type=item] if items entity @s container.0 pink_wool run \
+execute if score lobby.handler lobby.timer.voteStage matches 702 as @e[type=item] if items entity @s container.0 magenta_wool \ 
+        at @s positioned as @s run setblock ~ ~ ~ magenta_wool
+execute if score lobby.handler lobby.timer.voteStage matches 702 as @e[type=item] if items entity @s container.0 magenta_wool run \
         kill @s
 
 execute if score lobby.handler lobby.timer.voteStage matches 700 in lobby:lobby run \
@@ -179,12 +179,12 @@ execute if score lobby.handler lobby.timer.voteStage matches 705 as @e[type=item
 execute if score lobby.handler lobby.timer.voteStage matches 705 as @e[type=item] if items entity @s container.0 red_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 703 in lobby:lobby run \
-        fill 16 41 48 16 41 62 air replace pink_wool destroy
-execute if score lobby.handler lobby.timer.voteStage matches 704 as @e[type=item] if items entity @s container.0 pink_wool run \
+        fill 16 41 48 16 41 62 air replace magenta_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 704 as @e[type=item] if items entity @s container.0 magenta_wool run \
         execute at @s store result score lobby.orangeOtters lobby.voting.blitzCount if items block ~ ~1 ~ container.* sunflower
-execute if score lobby.handler lobby.timer.voteStage matches 705 as @e[type=item] if items entity @s container.0 pink_wool \ 
-        at @s positioned as @s run setblock ~ ~ ~ pink_wool
-execute if score lobby.handler lobby.timer.voteStage matches 705 as @e[type=item] if items entity @s container.0 pink_wool run \
+execute if score lobby.handler lobby.timer.voteStage matches 705 as @e[type=item] if items entity @s container.0 magenta_wool \ 
+        at @s positioned as @s run setblock ~ ~ ~ magenta_wool
+execute if score lobby.handler lobby.timer.voteStage matches 705 as @e[type=item] if items entity @s container.0 magenta_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 703 in lobby:lobby run \
         fill 16 41 48 16 41 62 air replace orange_wool destroy
@@ -245,12 +245,12 @@ execute if score lobby.handler lobby.timer.voteStage matches 708 as @e[type=item
 execute if score lobby.handler lobby.timer.voteStage matches 708 as @e[type=item] if items entity @s container.0 red_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 706 in lobby:lobby run \
-        fill 16 41 26 16 41 40 air replace pink_wool destroy
-execute if score lobby.handler lobby.timer.voteStage matches 707 as @e[type=item] if items entity @s container.0 pink_wool run \
+        fill 16 41 26 16 41 40 air replace magenta_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 707 as @e[type=item] if items entity @s container.0 magenta_wool run \
         execute at @s store result score lobby.pinkPikas lobby.voting.blitzCount if items block ~ ~1 ~ container.* sunflower
-execute if score lobby.handler lobby.timer.voteStage matches 708 as @e[type=item] if items entity @s container.0 pink_wool \ 
-        at @s positioned as @s run setblock ~ ~ ~ pink_wool
-execute if score lobby.handler lobby.timer.voteStage matches 708 as @e[type=item] if items entity @s container.0 pink_wool run \
+execute if score lobby.handler lobby.timer.voteStage matches 708 as @e[type=item] if items entity @s container.0 magenta_wool \ 
+        at @s positioned as @s run setblock ~ ~ ~ magenta_wool
+execute if score lobby.handler lobby.timer.voteStage matches 708 as @e[type=item] if items entity @s container.0 magenta_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 706 in lobby:lobby run \
         fill 16 41 26 16 41 40 air replace orange_wool destroy
@@ -311,12 +311,12 @@ execute if score lobby.handler lobby.timer.voteStage matches 711 as @e[type=item
 execute if score lobby.handler lobby.timer.voteStage matches 711 as @e[type=item] if items entity @s container.0 red_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 709 in lobby:lobby run \
-        fill 16 41 4 16 41 18 air replace pink_wool destroy
-execute if score lobby.handler lobby.timer.voteStage matches 710 as @e[type=item] if items entity @s container.0 pink_wool run \
+        fill 16 41 4 16 41 18 air replace magenta_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 710 as @e[type=item] if items entity @s container.0 magenta_wool run \
         execute at @s store result score lobby.yellowYaks lobby.voting.blitzCount if items block ~ ~1 ~ container.* sunflower
-execute if score lobby.handler lobby.timer.voteStage matches 711 as @e[type=item] if items entity @s container.0 pink_wool \ 
-        at @s positioned as @s run setblock ~ ~ ~ pink_wool
-execute if score lobby.handler lobby.timer.voteStage matches 711 as @e[type=item] if items entity @s container.0 pink_wool run \
+execute if score lobby.handler lobby.timer.voteStage matches 711 as @e[type=item] if items entity @s container.0 magenta_wool \ 
+        at @s positioned as @s run setblock ~ ~ ~ magenta_wool
+execute if score lobby.handler lobby.timer.voteStage matches 711 as @e[type=item] if items entity @s container.0 magenta_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 709 in lobby:lobby run \
         fill 16 41 4 16 41 18 air replace orange_wool destroy
@@ -377,12 +377,12 @@ execute if score lobby.handler lobby.timer.voteStage matches 714 as @e[type=item
 execute if score lobby.handler lobby.timer.voteStage matches 714 as @e[type=item] if items entity @s container.0 red_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 712 in lobby:lobby run \
-        fill 16 41 -18 16 41 -4 air replace pink_wool destroy
-execute if score lobby.handler lobby.timer.voteStage matches 713 as @e[type=item] if items entity @s container.0 pink_wool run \
+        fill 16 41 -18 16 41 -4 air replace magenta_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 713 as @e[type=item] if items entity @s container.0 magenta_wool run \
         execute at @s store result score lobby.greenGoats lobby.voting.blitzCount if items block ~ ~1 ~ container.* sunflower
-execute if score lobby.handler lobby.timer.voteStage matches 714 as @e[type=item] if items entity @s container.0 pink_wool \ 
-        at @s positioned as @s run setblock ~ ~ ~ pink_wool
-execute if score lobby.handler lobby.timer.voteStage matches 714 as @e[type=item] if items entity @s container.0 pink_wool run \
+execute if score lobby.handler lobby.timer.voteStage matches 714 as @e[type=item] if items entity @s container.0 magenta_wool \ 
+        at @s positioned as @s run setblock ~ ~ ~ magenta_wool
+execute if score lobby.handler lobby.timer.voteStage matches 714 as @e[type=item] if items entity @s container.0 magenta_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 712 in lobby:lobby run \
         fill 16 41 -18 16 41 -4 air replace orange_wool destroy
@@ -443,12 +443,12 @@ execute if score lobby.handler lobby.timer.voteStage matches 717 as @e[type=item
 execute if score lobby.handler lobby.timer.voteStage matches 717 as @e[type=item] if items entity @s container.0 red_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 715 in lobby:lobby run \
-        fill 16 41 -40 16 41 -26 air replace pink_wool destroy
-execute if score lobby.handler lobby.timer.voteStage matches 716 as @e[type=item] if items entity @s container.0 pink_wool run \
+        fill 16 41 -40 16 41 -26 air replace magenta_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 716 as @e[type=item] if items entity @s container.0 magenta_wool run \
         execute at @s store result score lobby.cyanCougars lobby.voting.blitzCount if items block ~ ~1 ~ container.* sunflower
-execute if score lobby.handler lobby.timer.voteStage matches 717 as @e[type=item] if items entity @s container.0 pink_wool \ 
-        at @s positioned as @s run setblock ~ ~ ~ pink_wool
-execute if score lobby.handler lobby.timer.voteStage matches 717 as @e[type=item] if items entity @s container.0 pink_wool run \
+execute if score lobby.handler lobby.timer.voteStage matches 717 as @e[type=item] if items entity @s container.0 magenta_wool \ 
+        at @s positioned as @s run setblock ~ ~ ~ magenta_wool
+execute if score lobby.handler lobby.timer.voteStage matches 717 as @e[type=item] if items entity @s container.0 magenta_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 715 in lobby:lobby run \
         fill 16 41 -40 16 41 -26 air replace orange_wool destroy
@@ -509,12 +509,12 @@ execute if score lobby.handler lobby.timer.voteStage matches 720 as @e[type=item
 execute if score lobby.handler lobby.timer.voteStage matches 720 as @e[type=item] if items entity @s container.0 red_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 718 in lobby:lobby run \
-        fill 16 41 -62 16 41 -48 air replace pink_wool destroy
-execute if score lobby.handler lobby.timer.voteStage matches 719 as @e[type=item] if items entity @s container.0 pink_wool run \
+        fill 16 41 -62 16 41 -48 air replace magenta_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 719 as @e[type=item] if items entity @s container.0 magenta_wool run \
         execute at @s store result score lobby.purplePenguins lobby.voting.blitzCount if items block ~ ~1 ~ container.* sunflower
-execute if score lobby.handler lobby.timer.voteStage matches 720 as @e[type=item] if items entity @s container.0 pink_wool \ 
-        at @s positioned as @s run setblock ~ ~ ~ pink_wool
-execute if score lobby.handler lobby.timer.voteStage matches 720 as @e[type=item] if items entity @s container.0 pink_wool run \
+execute if score lobby.handler lobby.timer.voteStage matches 720 as @e[type=item] if items entity @s container.0 magenta_wool \ 
+        at @s positioned as @s run setblock ~ ~ ~ magenta_wool
+execute if score lobby.handler lobby.timer.voteStage matches 720 as @e[type=item] if items entity @s container.0 magenta_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 718 in lobby:lobby run \
         fill 16 41 -62 16 41 -48 air replace orange_wool destroy
@@ -575,12 +575,12 @@ execute if score lobby.handler lobby.timer.voteStage matches 723 as @e[type=item
 execute if score lobby.handler lobby.timer.voteStage matches 723 as @e[type=item] if items entity @s container.0 red_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 721 in lobby:lobby run \
-        fill 16 41 -84 16 41 -70 air replace pink_wool destroy
-execute if score lobby.handler lobby.timer.voteStage matches 722 as @e[type=item] if items entity @s container.0 pink_wool run \
+        fill 16 41 -84 16 41 -70 air replace magenta_wool destroy
+execute if score lobby.handler lobby.timer.voteStage matches 722 as @e[type=item] if items entity @s container.0 magenta_wool run \
         execute at @s store result score lobby.blueBears lobby.voting.blitzCount if items block ~ ~1 ~ container.* sunflower
-execute if score lobby.handler lobby.timer.voteStage matches 723 as @e[type=item] if items entity @s container.0 pink_wool \ 
-        at @s positioned as @s run setblock ~ ~ ~ pink_wool
-execute if score lobby.handler lobby.timer.voteStage matches 723 as @e[type=item] if items entity @s container.0 pink_wool run \
+execute if score lobby.handler lobby.timer.voteStage matches 723 as @e[type=item] if items entity @s container.0 magenta_wool \ 
+        at @s positioned as @s run setblock ~ ~ ~ magenta_wool
+execute if score lobby.handler lobby.timer.voteStage matches 723 as @e[type=item] if items entity @s container.0 magenta_wool run \
         kill @s
 execute if score lobby.handler lobby.timer.voteStage matches 721 in lobby:lobby run \
         fill 16 41 -84 16 41 -70 air replace orange_wool destroy
@@ -782,9 +782,9 @@ execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.
         run function trials:start
 execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.trialsCount = .lobby .voteMax \
         run return 0
-#execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
+execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
         run function collect:start
-#execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
+execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
         run function mine:start
@@ -794,9 +794,9 @@ execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.
         run function extract:start
 execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
         run return 0
-#execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
+execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
         run function blitz:start
-#execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
+execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 865 if score lobby.handler lobby.voting.brawlCount = .lobby .voteMax \
         run function survival_games:start
@@ -829,7 +829,7 @@ execute if score lobby.handler lobby.timer.voteStage matches 861 if score lobby.
 execute if score lobby.handler lobby.timer.voteStage matches 861 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
         in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 861 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
-        in lobby:lobby run fill 15 40 -86 26 45 86 air replace pink_wool destroy
+        in lobby:lobby run fill 15 40 -86 26 45 86 air replace magenta_wool destroy
 execute if score lobby.handler lobby.timer.voteStage matches 861 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
         in lobby:lobby run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 861 if score lobby.handler lobby.voting.brawlCount = .lobby .voteMax \
@@ -851,8 +851,8 @@ execute if score lobby.handler lobby.timer.voteStage matches 862 in lobby:lobby 
         run setblock ~ ~ ~ gray_wool
 execute if score lobby.handler lobby.timer.voteStage matches 862 in lobby:lobby as @e[type=item] if items entity @s container.0 red_wool \
         run setblock ~ ~ ~ red_wool
-execute if score lobby.handler lobby.timer.voteStage matches 862 in lobby:lobby as @e[type=item] if items entity @s container.0 pink_wool \
-        run setblock ~ ~ ~ pink_wool
+execute if score lobby.handler lobby.timer.voteStage matches 862 in lobby:lobby as @e[type=item] if items entity @s container.0 magenta_wool \
+        run setblock ~ ~ ~ magenta_wool
 execute if score lobby.handler lobby.timer.voteStage matches 862 in lobby:lobby as @e[type=item] if items entity @s container.0 orange_wool \
         run setblock ~ ~ ~ orange_wool
 execute if score lobby.handler lobby.timer.voteStage matches 862 in lobby:lobby as @e[type=item] if items entity @s container.0 #wool \

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "BDB",
+        "BBB"
+    ],
+    "key": {
+        "#": "minecraft:stone",
+        "B": "minecraft:black_concrete_powder",
+        "D": "minecraft:diamond"
+    },
+    "result": {
+        "id": "minecraft:enderman_spawn_egg",
+        "count": 1
+    }
+}

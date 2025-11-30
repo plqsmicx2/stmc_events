@@ -1,0 +1,69 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "required": false,
+            "id": "red_concrete"
+        },
+        {
+            "required": false,
+            "id": "orange_concrete"
+        },
+        {
+            "required": false,
+            "id": "yellow_concrete"
+        },
+        {
+            "required": false,
+            "id": "lime_concrete"
+        },
+        {
+            "required": false,
+            "id": "green_concrete"
+        },
+        {
+            "required": false,
+            "id": "cyan_concrete"
+        },
+        {
+            "required": false,
+            "id": "light_blue_concrete"
+        },
+        {
+            "required": false,
+            "id": "blue_concrete"
+        },
+        {
+            "required": false,
+            "id": "purple_concrete"
+        },
+        {
+            "required": false,
+            "id": "magenta_concrete"
+        },
+        {
+            "required": false,
+            "id": "pink_concrete"
+        },
+        {
+            "required": false,
+            "id": "brown_concrete"
+        },
+        {
+            "required": false,
+            "id": "black_concrete"
+        },
+        {
+            "required": false,
+            "id": "gray_concrete"
+        },
+        {
+            "required": false,
+            "id": "light_gray_concrete"
+        },
+        {
+            "required": false,
+            "id": "white_concrete"
+        }
+    ]
+}

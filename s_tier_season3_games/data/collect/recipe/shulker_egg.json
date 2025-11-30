@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#D#",
+        "#P#"
+    ],
+    "key": {
+        "#": "minecraft:end_stone",
+        "D": "minecraft:diamond",
+        "P": "minecraft:purple_concrete"
+    },
+    "result": {
+        "id": "minecraft:shulker_spawn_egg",
+        "count": 1
+    }
+}

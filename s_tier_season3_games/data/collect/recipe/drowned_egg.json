@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#L#",
+        "#W#"
+    ],
+    "key": {
+        "#": "minecraft:coarse_dirt",
+        "L": "minecraft:lapis_lazuli",
+        "W": "minecraft:water_bucket"
+    },
+    "result": {
+        "id": "minecraft:drowned_spawn_egg",
+        "count": 1
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#R#",
+        "#F#"
+    ],
+    "key": {
+        "#": "minecraft:nether_bricks",
+        "R": "minecraft:redstone",
+        "F": "minecraft:flint_and_steel"
+    },
+    "result": {
+        "id": "minecraft:blaze_spawn_egg",
+        "count": 1
+    }
+}

@@ -24,16 +24,16 @@ execute as kale15156686 unless entity @s[team=] run team join YELLOW_YAKS kale15
 execute as t3mprano unless entity @s[team=] run team join GREEN_GOATS t3mprano
 execute as SenkuXsummers unless entity @s[team=] run team join GREEN_GOATS SenkuXsummers
 execute as stompppy unless entity @s[team=] run team join GREEN_GOATS stompppy
-#execute as GOFYGAMER unless entity @s[team=] run team join GREEN_GOATS ..
+execute as Gofygamer18 unless entity @s[team=] run team join GREEN_GOATS Gofygamer18
 # CYAN COUGARS
 execute as notsxnset unless entity @s[team=] run team join CYAN_COUGARS notsxnset
 execute as Exrry unless entity @s[team=] run team join CYAN_COUGARS Exrry
 execute as SpringsMCJV unless entity @s[team=] run team join CYAN_COUGARS SpringsMCJV
-execute as NotPanda911 unless entity @s[team=] run team join CYAN_COUGARS NotPanda911
+execute as .FIamermelts unless entity @s[team=] run team join CYAN_COUGARS .FIamermelts
 # PURPLE PENGUINS
 execute as damien_____ unless entity @s[team=] run team join PURPLE_PENGUINS damien_____
 execute as Ocean_Titan unless entity @s[team=] run team join PURPLE_PENGUINS Ocean_Titan
-#execute as TBD unless entity @s[team=] run team join PURPLE_PENGUINS ..
+execute as PCxCrim unless entity @s[team=] run team join PURPLE_PENGUINS PCxCrim
 execute as MadsAlleyway unless entity @s[team=] run team join PURPLE_PENGUINS MadsAlleyway
 # BLUE BEARS
 execute as plqsmic unless entity @s[team=] run team join BLUE_BEARS plqsmic

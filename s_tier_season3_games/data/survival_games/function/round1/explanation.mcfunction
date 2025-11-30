@@ -34,7 +34,7 @@ execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @
                                                                                     {"text":"  |  ","color":"gold"},{"text":"4th: ","color":"gold"},{"text":"24","color":"dark_red"},{"text":" points","color":"gold"}]
 execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"5th: ","color":"gold"},{"text":"16","color":"dark_red"},{"text":" points","color":"gold"}, \
                                                                                     {"text":"  |  ","color":"gold"},{"text":"6th: ","color":"gold"},{"text":"8","color":"dark_red"},{"text":" points","color":"gold"}]
-execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"7th: ","color":"gold"},{"text":"4","color":"dark_red"},{"text":" points","color":"gold"}, \
+#execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a [{"text":"7th: ","color":"gold"},{"text":"4","color":"dark_red"},{"text":" points","color":"gold"}, \
                                                                                     {"text":"  |  ","color":"gold"},{"text":"8th: ","color":"gold"},{"text":"0","color":"dark_red"},{"text":" points","color":"gold"}]
 execute if score sg.r1.handler sg.r1.timer.explanation matches 320 run tellraw @a {"text":" "}
 
