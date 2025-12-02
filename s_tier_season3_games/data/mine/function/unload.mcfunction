@@ -16,10 +16,6 @@ kill @e[type=hoglin]
 kill @e[type=creaking]
 kill @e[type=endermite]
 kill @e[type=item]
-tp @e[type=zombie] 0 -300 0
-tp @e[type=skeleton] 0 -300 0
-tp @e[type=stray] 0 -300 0
-tp @e[type=drowned] 0 -300 0
 
 scoreboard players set mine.handler mine.stage.lobby 0
 scoreboard players set mine.handler mine.stage.creaking 0
