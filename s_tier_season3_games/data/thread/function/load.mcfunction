@@ -71,6 +71,8 @@ scoreboard objectives add event.paused dummy
 scoreboard objectives add event.stage dummy
 # records if teams should be automatically assigned
 scoreboard objectives add event.teamAssignment dummy
+# records # of players in the event
+scoreboard objectives add event.players dummy
 # tracks points of team [is always set based on sum of @a[team=...] indiv]
 scoreboard objectives add stats.points.team dummy
 scoreboard objectives add stats.points.team.rank dummy

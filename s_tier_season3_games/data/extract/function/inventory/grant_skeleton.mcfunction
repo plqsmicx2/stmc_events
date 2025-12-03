@@ -17,7 +17,8 @@ item replace entity @s hotbar.1 with iron_pickaxe[can_break=[{blocks:"diamond_bl
 
 # skeleton specific items
 item replace entity @s armor.legs with leather_leggings[enchantments={"minecraft:binding_curse":1}]
+item replace entity @s armor.legs with leather_boots[enchantments={"minecraft:binding_curse":1}]
 item replace entity @s hotbar.0 with wooden_sword
-item replace entity @s hotbar.2 with bow
+item replace entity @s hotbar.2 with crossbow[enchantments={"minecraft:quick_charge":2}]
 item replace entity @s hotbar.3 with arrow 6
-item replace entity @s hotbar.4 with gray_concrete[can_place_on={blocks:"#extract:all"}] 2
+item replace entity @s hotbar.4 with gray_concrete[can_place_on={blocks:"#extract:all"}] 1
