@@ -53,7 +53,7 @@ execute in extract:extract as @e[tag=witch] on attacker run function extract:inv
 execute in extract:extract as @e[type=interaction] run data remove entity @s attack
 
 # prevent extra items at the start of the round
-execute in extract:extract if score extract.handler extract.timer.game.round4 matches ..300 run effect clear @a
+execute in extract:extract if score extract.handler extract.timer.game.round4 matches 10..300 run effect clear @a
 execute in extract:extract if score extract.handler extract.timer.game.round4 matches ..300 run kill @e[type=item]
 
 # countdown at 5 seconds

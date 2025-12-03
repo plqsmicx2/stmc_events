@@ -21,4 +21,4 @@ item replace entity @s armor.feet with leather_boots[attribute_modifiers= \
         [{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}], \ 
         enchantments={"minecraft:binding_curse":1}]
 item replace entity @s hotbar.0 with iron_sword
-item replace entity @s hotbar.2 with wind_charge 1
+item replace entity @s hotbar.2 with wind_charge 2
