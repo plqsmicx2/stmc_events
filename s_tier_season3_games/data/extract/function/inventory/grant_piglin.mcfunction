@@ -1,19 +1,21 @@
 # executes as @s (whoever had the piglin_head item)
 # overwrites the inventory of @s with the piglin class inventory
 
+# check that no one on the team has this kit
+execute if entity @s[team=RED_RACCOONS] as @a[team=RED_RACCOONS] if score @s extract.stats.kit matches 2 run return 0
+execute if entity @s[team=ORANGE_OTTERS] as @a[team=ORANGE_OTTERS] if score @s extract.stats.kit matches 2 run return 0
+execute if entity @s[team=PINK_PIKAS] as @a[team=PINK_PIKAS] if score @s extract.stats.kit matches 2 run return 0
+execute if entity @s[team=YELLOW_YAKS] as @a[team=YELLOW_YAKS] if score @s extract.stats.kit matches 2 run return 0
+execute if entity @s[team=GREEN_GOATS] as @a[team=GREEN_GOATS] if score @s extract.stats.kit matches 2 run return 0
+execute if entity @s[team=CYAN_COUGARS] as @a[team=CYAN_COUGARS] if score @s extract.stats.kit matches 2 run return 0
+execute if entity @s[team=PURPLE_PENGUINS] as @a[team=PURPLE_PENGUINS] if score @s extract.stats.kit matches 2 run return 0
+execute if entity @s[team=BLUE_BEARS] as @a[team=BLUE_BEARS] if score @s extract.stats.kit matches 2 run return 0
+
+# set player's kit to medic
+scoreboard players set @s extract.stats.kit 2
+
 # base items
-clear @s
-item replace entity @s armor.head with leather_helmet[enchantments={"minecraft:binding_curse":1}]
-item replace entity @s armor.chest with leather_chestplate[enchantments={"minecraft:binding_curse":1}]
-item replace entity @s armor.legs with chainmail_leggings[enchantments={"minecraft:binding_curse":1}]
-item replace entity @s armor.feet with chainmail_boots[attribute_modifiers= \ 
-        [{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}], \ 
-        enchantments={"minecraft:binding_curse":1}]
-item replace entity @s hotbar.0 with stone_sword
-item replace entity @s hotbar.1 with iron_pickaxe[can_break=[{blocks:"diamond_block"},{blocks:"gold_block"}], \ 
-                tool={default_mining_speed:0.1,damage_per_block:0, \ 
-                rules:[{speed:500,correct_for_drops:true,blocks:"gold_block"},{speed:450,correct_for_drops:true,blocks:"diamond_block"}]}, \ 
-                custom_name={"color":"yellow","text":"Ore Breaker"}]
+function extract:inventory/grant_base
 
 # piglin specific items
 item replace entity @s armor.legs with leather_leggings[enchantments={"minecraft:binding_curse":1}]
