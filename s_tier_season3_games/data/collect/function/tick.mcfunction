@@ -9,7 +9,7 @@
 
 # update points every tick (regardless of stage)
 function collect:points-update
-function collect:sidebar
+function collect:sidebar with storage stmc:global
 
 # calculate players on each team
 scoreboard players set collect.RedRaccoons collect.stats.players 0

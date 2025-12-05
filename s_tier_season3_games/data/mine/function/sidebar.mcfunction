@@ -11,7 +11,8 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add mine.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
+scoreboard objectives add mine.sidebar dummy
+$scoreboard objectives modify mine.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar mine.sidebar
 
 # <===== CALCULATE PLAYER POINTS =====>

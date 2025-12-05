@@ -9,16 +9,19 @@
 
 # run functions every tick
 execute if score extract.handler extract.stage matches 3..4 run function extract:points_update
-function extract:sidebar
+function extract:sidebar with storage stmc:global
 
 # determine players on a team
 function extract:helper/player_count
 
+# run automatic pause
+execute unless score extract.handler extract.stage matches 3 run function thread:automatic_pause
+
 # if we're in stage 0, increment timer
 execute if score extract.handler extract.stage matches 0 run scoreboard players add extract.handler extract.timer.delay1 1
-execute if score extract.handler extract.stage matches 0 if score extract.handler extract.timer.delay1 matches 400.. run scoreboard players set extract.handler extract.stage 1
+execute if score extract.handler extract.stage matches 0 if score extract.handler extract.timer.delay1 matches 200.. run scoreboard players set extract.handler extract.stage 1
 # add forceload
-execute in extract:extract if score extract.handler extract.timer.delay1 matches 200 run forceload add 350 75 -20 0
+execute in extract:extract if score extract.handler extract.timer.delay1 matches 100 run forceload add 350 75 -20 0
 
 # if we're in stage 1, increment timer & run explanation
 execute if score extract.handler extract.stage matches 1 run scoreboard players add extract.handler extract.timer.explanation 1

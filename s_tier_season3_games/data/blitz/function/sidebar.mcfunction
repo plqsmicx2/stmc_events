@@ -10,7 +10,8 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add blitz.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
+scoreboard objectives add blitz.sidebar dummy
+$scoreboard objectives modify blitz.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar blitz.sidebar
 
 # <===== RANK TEAMS =====>
@@ -31,15 +32,15 @@ scoreboard players reset blitz.BlueBears blitz.sidebar
 
 # track teams' core status:
 
-#scoreboard players set blitz.RedRaccoons blitz.sidebar 1
-#execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.RedRaccoons blitz.sidebar {"text": "✔ Red Raccoons", "color": "red"}
-#execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.RedRaccoons blitz.sidebar {"text": "✘ Red Raccoons", "color": "red"}
+scoreboard players set blitz.RedRaccoons blitz.sidebar 1
+execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.RedRaccoons blitz.sidebar {"text": "✔ Red Raccoons", "color": "red"}
+execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.RedRaccoons blitz.sidebar {"text": "✘ Red Raccoons", "color": "red"}
 scoreboard players set blitz.OrangeOtters blitz.sidebar 1
 execute if score blitz.OrangeOtters blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.OrangeOtters blitz.sidebar {"text": "✔ Orange Otters", "color": "gold"}
 execute if score blitz.OrangeOtters blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.OrangeOtters blitz.sidebar {"text": "✘ Orange Otters", "color": "gold"}
-#scoreboard players set blitz.PinkPikas blitz.sidebar 1
-#execute if score blitz.PinkPikas blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.PinkPikas blitz.sidebar {"text": "✔ Pink Pikas", "color": "light_purple"}
-#execute if score blitz.PinkPikas blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.PinkPikas blitz.sidebar {"text": "✘ Pink Pikas", "color": "light_purple"}
+scoreboard players set blitz.PinkPikas blitz.sidebar 1
+execute if score blitz.PinkPikas blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.PinkPikas blitz.sidebar {"text": "✔ Pink Pikas", "color": "light_purple"}
+execute if score blitz.PinkPikas blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.PinkPikas blitz.sidebar {"text": "✘ Pink Pikas", "color": "light_purple"}
 scoreboard players set blitz.YellowYaks blitz.sidebar 1
 execute if score blitz.YellowYaks blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.YellowYaks blitz.sidebar {"text": "✔ Yellow Yaks", "color": "yellow"}
 execute if score blitz.YellowYaks blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.YellowYaks blitz.sidebar {"text": "✘ Yellow Yaks", "color": "yellow"}

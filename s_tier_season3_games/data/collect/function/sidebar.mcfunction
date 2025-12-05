@@ -11,7 +11,8 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add collect.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
+scoreboard objectives add collect.sidebar dummy
+$scoreboard objectives modify collect.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar collect.sidebar
 
 # <===== RANK TEAMS =====>
@@ -32,12 +33,12 @@ scoreboard players reset collect.BlueBears collect.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
-#execute if score collect.RedRaccoons collect.points.team.rank matches 1..3 run scoreboard players operation collect.RedRaccoons collect.sidebar = collect.RedRaccoons collect.points.team
-#execute if score collect.RedRaccoons collect.points.team.rank matches 1..3 run scoreboard players display name collect.RedRaccoons collect.sidebar {"text": "  Red Raccoons", "color": "red"}
+execute if score collect.RedRaccoons collect.points.team.rank matches 1..3 run scoreboard players operation collect.RedRaccoons collect.sidebar = collect.RedRaccoons collect.points.team
+execute if score collect.RedRaccoons collect.points.team.rank matches 1..3 run scoreboard players display name collect.RedRaccoons collect.sidebar {"text": "  Red Raccoons", "color": "red"}
 execute if score collect.OrangeOtters collect.points.team.rank matches 1..3 run scoreboard players operation collect.OrangeOtters collect.sidebar = collect.OrangeOtters collect.points.team
 execute if score collect.OrangeOtters collect.points.team.rank matches 1..3 run scoreboard players display name collect.OrangeOtters collect.sidebar {"text": "  Orange Otters", "color": "gold"}
-#execute if score collect.PinkPikas collect.points.team.rank matches 1..3 run scoreboard players operation collect.PinkPikas collect.sidebar = collect.PinkPikas collect.points.team
-#execute if score collect.PinkPikas collect.points.team.rank matches 1..3 run scoreboard players display name collect.PinkPikas collect.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+execute if score collect.PinkPikas collect.points.team.rank matches 1..3 run scoreboard players operation collect.PinkPikas collect.sidebar = collect.PinkPikas collect.points.team
+execute if score collect.PinkPikas collect.points.team.rank matches 1..3 run scoreboard players display name collect.PinkPikas collect.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 execute if score collect.YellowYaks collect.points.team.rank matches 1..3 run scoreboard players operation collect.YellowYaks collect.sidebar = collect.YellowYaks collect.points.team
 execute if score collect.YellowYaks collect.points.team.rank matches 1..3 run scoreboard players display name collect.YellowYaks collect.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 execute if score collect.GreenGoats collect.points.team.rank matches 1..3 run scoreboard players operation collect.GreenGoats collect.sidebar = collect.GreenGoats collect.points.team

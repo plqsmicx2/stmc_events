@@ -11,7 +11,8 @@ execute as @a if score @s spleef.points.placement matches ..16 run scoreboard pl
 execute as @a if score @s spleef.points.placement matches ..16 run scoreboard players operation @s spleef.points.indiv -= @s spleef.points.placement
 
 # placement
-execute as @a if score @s spleef.points.placement matches ..24 run scoreboard players add @s spleef.points.indiv 4
+execute as @a if score @s spleef.points.placement matches ..24 run scoreboard players add @s spleef.points.indiv 2
+execute as @a if score @s spleef.points.placement matches ..20 run scoreboard players add @s spleef.points.indiv 2
 execute as @a if score @s spleef.points.placement matches ..8 run scoreboard players add @s spleef.points.indiv 1
 execute as @a if score @s spleef.points.placement matches ..4 run scoreboard players add @s spleef.points.indiv 1
 execute as @a if score @s spleef.points.placement matches ..2 run scoreboard players add @s spleef.points.indiv 1

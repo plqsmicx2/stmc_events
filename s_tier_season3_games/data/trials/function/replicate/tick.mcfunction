@@ -14,7 +14,10 @@ execute unless score replicate.handler replicate.stage matches 0.. run function 
 
 # update sidebar
 function trials:replicate/point_update
-function trials:replicate/sidebar
+function trials:replicate/sidebar with storage stmc:global
+
+# run automatic pause
+execute unless score replicate.handler replicate.stage matches 3 run function thread:automatic_pause
 
 # STAGE ZERO:
 
@@ -26,7 +29,7 @@ execute if score replicate.handler replicate.stage matches 0 run \
 execute if score replicate.handler replicate.timer.delay1 matches 3 run function trials:replicate/reset_world
 
 # update stage
-execute if score replicate.handler replicate.stage matches 0 if score replicate.handler replicate.timer.delay1 matches 400.. run \
+execute if score replicate.handler replicate.stage matches 0 if score replicate.handler replicate.timer.delay1 matches 200.. run \
         scoreboard players set replicate.handler replicate.stage 1
 
 # STAGE ONE:
@@ -47,22 +50,22 @@ execute if score replicate.handler replicate.stage matches 1 if score replicate.
 execute if score replicate.handler replicate.stage matches 2 run scoreboard players add replicate.handler replicate.timer.delay2 1
 
 # 5 second countdown with sound effects
-execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 300 run title @a actionbar {"text": "5 seconds!", "color": "aqua", "bold":true}
-execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 320 run title @a actionbar {"text": "4 seconds!", "color": "aqua", "bold":true}
-execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 340 run title @a actionbar {"text": "3 seconds!", "color": "aqua", "bold":true}
-execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 360 run title @a actionbar {"text": "2 seconds!", "color": "aqua", "bold":true}
-execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 380 run title @a actionbar {"text": "1 second!", "color": "aqua", "bold":true}
-execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 399 run title @a title {"text":"Go!", "color":"green"}
+execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 100 run title @a actionbar {"text": "5 seconds!", "color": "aqua", "bold":true}
+execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 120 run title @a actionbar {"text": "4 seconds!", "color": "aqua", "bold":true}
+execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 140 run title @a actionbar {"text": "3 seconds!", "color": "aqua", "bold":true}
+execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 160 run title @a actionbar {"text": "2 seconds!", "color": "aqua", "bold":true}
+execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 180 run title @a actionbar {"text": "1 second!", "color": "aqua", "bold":true}
+execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 199 run title @a title {"text":"Go!", "color":"green"}
 
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 300 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 320 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.1
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 340 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.2
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 360 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.3
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 380 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.4
-execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 399 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 2
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 100 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 120 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.1
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 140 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.2
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 160 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.3
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 180 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.4
+execute as @a at @s if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 199 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 2
 
 # update stage
-execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 400.. run scoreboard players set replicate.handler replicate.stage 3
+execute if score replicate.handler replicate.stage matches 2 if score replicate.handler replicate.timer.delay2 matches 200.. run scoreboard players set replicate.handler replicate.stage 3
 
 # STAGE THREE:
 

@@ -9,6 +9,7 @@ execute if score stmc.handler event.teamAssignment matches 1 run function thread
 # update player points & determine rankings from that
 function thread:points_update
 function thread:calculate_rankings
+execute unless score stmc.handler event.paused matches 0 run function thread:default_sidebar with storage stmc:global
 
 # before event perms
 execute unless score stmc.handler event.paused matches 0.. run gamemode adventure @a

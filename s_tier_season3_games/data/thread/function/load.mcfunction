@@ -6,6 +6,9 @@
 # sets team color
 # sets team prefix
 
+# set the name of the event
+data modify storage stmc:global eventName set value "  STMC Reloaded II  "
+
 # Red Raccoons
 team add RED_RACCOONS {"text": "Red Raccoons", "color": "red"}
 team modify RED_RACCOONS color red

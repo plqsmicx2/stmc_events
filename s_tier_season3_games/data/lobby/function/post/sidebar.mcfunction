@@ -29,12 +29,12 @@ scoreboard players reset team.PurplePenguins lobby.sidebar
 scoreboard players reset team.BlueBears lobby.sidebar
 
 # they'll be automatically ranked by the scoreboard itself
-#scoreboard players operation team.RedRaccoons lobby.sidebar = team.RedRaccoons stats.points.team
-#scoreboard players display name team.RedRaccoons lobby.sidebar {"text": "  Red Raccoons", "color": "red"}
+scoreboard players operation team.RedRaccoons lobby.sidebar = team.RedRaccoons stats.points.team
+scoreboard players display name team.RedRaccoons lobby.sidebar {"text": "  Red Raccoons", "color": "red"}
 scoreboard players operation team.OrangeOtters lobby.sidebar = team.OrangeOtters stats.points.team
 scoreboard players display name team.OrangeOtters lobby.sidebar {"text": "  Orange Otters", "color": "gold"}
-#scoreboard players operation team.PinkPikas lobby.sidebar = team.PinkPikas stats.points.team
-#scoreboard players display name team.PinkPikas lobby.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+scoreboard players operation team.PinkPikas lobby.sidebar = team.PinkPikas stats.points.team
+scoreboard players display name team.PinkPikas lobby.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 scoreboard players operation team.YellowYaks lobby.sidebar = team.YellowYaks stats.points.team
 scoreboard players display name team.YellowYaks lobby.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 scoreboard players operation team.GreenGoats lobby.sidebar = team.GreenGoats stats.points.team

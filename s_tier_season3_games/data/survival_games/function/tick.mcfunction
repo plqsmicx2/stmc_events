@@ -31,4 +31,4 @@ execute unless score sg.BlueBears sg.points.team matches 0.. run scoreboard play
 
 # update the sidebar
 # this happens after our tick to reflect point changes the round/tick may have tracked
-function survival_games:sidebar
+function survival_games:sidebar with storage stmc:global

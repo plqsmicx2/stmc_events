@@ -12,6 +12,9 @@ execute if score spleef.handler spleef.timer.game matches 2.. run item replace e
 
 # <==== DURING GAME ====>
 
+# check for deaths (before sidebar so it will reflect this tick's new points)
+function trials:spleef/death_handler
+
 # kill entities (prevents unnecessary lag & clears dropped items)
 execute if score spleef.handler spleef.timer.game matches 2.. run kill @e[type=!player]
 

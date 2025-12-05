@@ -12,8 +12,15 @@
 
 # <===== run the lobbies & games =====>
 
-function trials:sidebar
+function trials:sidebar with storage stmc:global
 # sidebar also runs points update
+
+# run automatic pause
+execute if score tr.handler tr.stage matches 0 run function thread:automatic_pause
+execute if score tr.handler tr.stage matches 2 run function thread:automatic_pause
+execute if score tr.handler tr.stage matches 4 run function thread:automatic_pause
+execute if score tr.handler tr.stage matches 6 run function thread:automatic_pause
+execute if score tr.handler tr.stage matches 8 run function thread:automatic_pause
 
 # lobby 1
 execute if score tr.handler tr.stage matches 0 run scoreboard players add tr.handler tr.timer.lobby1 1
@@ -23,7 +30,7 @@ execute if score tr.handler tr.stage matches 0 run function trials:lobby1
 execute if score tr.handler tr.stage matches 1 if score tr.handler tr.stage.game1 matches 1 run function trials:disco/tick
 execute if score tr.handler tr.stage matches 1 if score tr.handler tr.stage.game1 matches 2 run function trials:replicate/tick
 execute if score tr.handler tr.stage matches 1 if score tr.handler tr.stage.game1 matches 3 run function trials:spleef/tick
-execute if score tr.handler tr.stage matches 1 if score tr.handler tr.stage.game1 matches 4 run function trials:ascend/tick
+execute if score tr.handler tr.stage matches 1 if score tr.handler tr.stage.game1 matches 4 run function trials:towers/tick
 
 # lobby 2
 execute if score tr.handler tr.stage matches 2 run scoreboard players add tr.handler tr.timer.lobby2 1
@@ -33,7 +40,7 @@ execute if score tr.handler tr.stage matches 2 run function trials:lobby2
 execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 1 run function trials:disco/tick
 execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 2 run function trials:replicate/tick
 execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 3 run function trials:spleef/tick
-execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 4 run function trials:ascend/tick
+execute if score tr.handler tr.stage matches 3 if score tr.handler tr.stage.game2 matches 4 run function trials:towers/tick
 
 # lobby 3
 execute if score tr.handler tr.stage matches 4 run scoreboard players add tr.handler tr.timer.lobby3 1
@@ -43,7 +50,7 @@ execute if score tr.handler tr.stage matches 4 run function trials:lobby3
 execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 1 run function trials:disco/tick
 execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 2 run function trials:replicate/tick
 execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 3 run function trials:spleef/tick
-execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 4 run function trials:ascend/tick
+execute if score tr.handler tr.stage matches 5 if score tr.handler tr.stage.game3 matches 4 run function trials:towers/tick
 
 # lobby 4
 execute if score tr.handler tr.stage matches 6 run scoreboard players add tr.handler tr.timer.lobby4 1
@@ -53,7 +60,7 @@ execute if score tr.handler tr.stage matches 6 run function trials:lobby4
 execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 1 run function trials:disco/tick
 execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 2 run function trials:replicate/tick
 execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 3 run function trials:spleef/tick
-execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 4 run function trials:ascend/tick
+execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game4 matches 4 run function trials:towers/tick
 
 # points announcement
 execute if score tr.handler tr.stage matches 8 run scoreboard players add tr.handler tr.timer.pointsAnnouncement 1

@@ -11,7 +11,8 @@
 # <team color>#2 - player<team color>
 # <team color>#3 - player<team color>
 
-scoreboard objectives add race.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
+scoreboard objectives add race.sidebar dummy
+$scoreboard objectives modify race.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar race.sidebar
 
 # <===== RANK TEAMS =====>

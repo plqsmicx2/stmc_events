@@ -32,7 +32,7 @@ execute as @a[team=BLUE_BEARS] run scoreboard players add ascend.BlueBears ascen
 
 # update sidebar
 function trials:ascend/points_update
-function trials:ascend/sidebar
+function trials:ascend/sidebar with storage stmc:global
 
 # set world protections
 execute as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150,attribute_modifiers=[{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value"},{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]

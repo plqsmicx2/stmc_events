@@ -11,7 +11,8 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add ascend.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
+scoreboard objectives add ascend.sidebar dummy
+$scoreboard objectives modify ascend.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar ascend.sidebar
 
 # <===== BUILD FROM THE BOTTOM =====>
@@ -28,12 +29,12 @@ scoreboard players reset ascend.BlueBears ascend.sidebar
 
 # add teams' build completion #
 # they'll be automatically ranked by the scoreboard itself
-#scoreboard players operation ascend.RedRaccoons ascend.sidebar = ascend.RedRaccoons ascend.completed
-#scoreboard players display name ascend.RedRaccoons ascend.sidebar {"text": "  Red Raccoons", "color": "red"}
+scoreboard players operation ascend.RedRaccoons ascend.sidebar = ascend.RedRaccoons ascend.completed
+scoreboard players display name ascend.RedRaccoons ascend.sidebar {"text": "  Red Raccoons", "color": "red"}
 scoreboard players operation ascend.OrangeOtters ascend.sidebar = ascend.OrangeOtters ascend.completed
 scoreboard players display name ascend.OrangeOtters ascend.sidebar {"text": "  Orange Otters", "color": "gold"}
-#scoreboard players operation ascend.PinkPikas ascend.sidebar = ascend.PinkPikas ascend.completed
-#scoreboard players display name ascend.PinkPikas ascend.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+scoreboard players operation ascend.PinkPikas ascend.sidebar = ascend.PinkPikas ascend.completed
+scoreboard players display name ascend.PinkPikas ascend.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 scoreboard players operation ascend.YellowYaks ascend.sidebar = ascend.YellowYaks ascend.completed
 scoreboard players display name ascend.YellowYaks ascend.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 scoreboard players operation ascend.GreenGoats ascend.sidebar = ascend.GreenGoats ascend.completed

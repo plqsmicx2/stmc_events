@@ -37,6 +37,9 @@ execute as @a if score extract.handler extract.timer.game.round matches 60 run f
 # automatically pause between rounds (but not during build round phase or <2s before start)
 execute if score extract.handler extract.timer.game.round matches 61..360 run function thread:automatic_pause
 
+# teleport players @62 ticks (to ensure dced players still get it)
+execute if score extract.handler extract.timer.game.round matches 62 run function extract:helper/player_teleport
+
 # check for interactions
 execute in extract:extract as @e[tag=zombie] on attacker run function extract:inventory/grant_zombie
 execute in extract:extract as @e[tag=piglin] on attacker run function extract:inventory/grant_piglin

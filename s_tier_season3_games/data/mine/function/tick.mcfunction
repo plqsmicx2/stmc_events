@@ -11,7 +11,7 @@
 execute unless score mine.handler mine.stage matches 0.. run function mine:load
 
 # run functions every tick
-function mine:sidebar
+function mine:sidebar with storage stmc:global
 
 # if we're in stage 0, increment timer
 execute if score mine.handler mine.stage matches 0 run scoreboard players add mine.handler mine.timer.delay1 1

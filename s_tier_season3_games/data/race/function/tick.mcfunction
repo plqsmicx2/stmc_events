@@ -12,7 +12,7 @@ execute unless score race.handler race.stage matches 0.. run function race:load
 
 # run functions every tick
 function race:points_update
-function race:sidebar
+function race:sidebar with storage stmc:global
 
 # if we're in stage 0, increment timer
 execute if score race.handler race.stage matches 0 run scoreboard players add race.handler race.timer.delay1 1

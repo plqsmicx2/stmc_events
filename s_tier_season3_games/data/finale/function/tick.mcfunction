@@ -9,7 +9,7 @@
 # run load function if this is our first time here
 execute unless score finale.handler finale.stage matches 0.. run function finale:load
 
-function lobby:final/sidebar
+function lobby:final/sidebar with storage stmc:global
 
 # reset attributes
 execute as @a run attribute @s attack_damage base reset

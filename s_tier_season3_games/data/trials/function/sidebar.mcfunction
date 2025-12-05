@@ -17,7 +17,8 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add tr.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
+scoreboard objectives add tr.sidebar dummy
+$scoreboard objectives modify tr.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar tr.sidebar
 
 # <===== POINTS UPDATE =====>
@@ -61,12 +62,12 @@ scoreboard players reset tr.PurplePenguins tr.sidebar
 scoreboard players reset tr.BlueBears tr.sidebar
 
 # they'll be automatically ranked by the scoreboard itself
-#scoreboard players operation tr.RedRaccoons tr.sidebar = tr.RedRaccoons tr.points.team
-#scoreboard players display name tr.RedRaccoons tr.sidebar {"text": "  Red Raccoons", "color": "red"}
+scoreboard players operation tr.RedRaccoons tr.sidebar = tr.RedRaccoons tr.points.team
+scoreboard players display name tr.RedRaccoons tr.sidebar {"text": "  Red Raccoons", "color": "red"}
 scoreboard players operation tr.OrangeOtters tr.sidebar = tr.OrangeOtters tr.points.team
 scoreboard players display name tr.OrangeOtters tr.sidebar {"text": "  Orange Otters", "color": "gold"}
-#scoreboard players operation tr.PinkPikas tr.sidebar = tr.PinkPikas tr.points.team
-#scoreboard players display name tr.PinkPikas tr.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+scoreboard players operation tr.PinkPikas tr.sidebar = tr.PinkPikas tr.points.team
+scoreboard players display name tr.PinkPikas tr.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 scoreboard players operation tr.YellowYaks tr.sidebar = tr.YellowYaks tr.points.team
 scoreboard players display name tr.YellowYaks tr.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 scoreboard players operation tr.GreenGoats tr.sidebar = tr.GreenGoats tr.points.team

@@ -1,7 +1,7 @@
 # tick function for lobbies between games (and the first one)
 
 # run every tick
-function lobby:between/sidebar
+function lobby:between/sidebar with storage stmc:global
 
 # update timer
 scoreboard players add lobby.handler lobby.timer 1

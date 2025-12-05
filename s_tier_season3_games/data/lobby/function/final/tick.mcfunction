@@ -1,7 +1,7 @@
 # tick function for the final lobby
 
 # run every tick
-function lobby:final/sidebar
+function lobby:final/sidebar with storage stmc:global
 
 # set the players' actionbar to their individual rank & points
 execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]

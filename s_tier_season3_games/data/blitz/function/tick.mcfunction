@@ -9,7 +9,7 @@
 
 # update points every tick (regardless of stage)
 function blitz:points-update
-function blitz:sidebar
+function blitz:sidebar with storage stmc:global
 
 # if we're in stage 0, we only need to increment our timer & check if 20 seconds have elapsed
 # and then update our stage to 1

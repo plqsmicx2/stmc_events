@@ -11,7 +11,8 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add sg.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
+scoreboard objectives add sg.sidebar dummy
+$scoreboard objectives modify sg.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar sg.sidebar
 
 # <===== RANK TEAMS =====>
@@ -32,12 +33,12 @@ scoreboard players reset sg.BlueBears sg.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
-#execute if score sg.RedRaccoons sg.points.team.rank matches 1..3 run scoreboard players operation sg.RedRaccoons sg.sidebar = sg.RedRaccoons sg.points.team.temp
-#execute if score sg.RedRaccoons sg.points.team.rank matches 1..3 run scoreboard players display name sg.RedRaccoons sg.sidebar {"text": "  Red Raccoons", "color": "red"}
+execute if score sg.RedRaccoons sg.points.team.rank matches 1..3 run scoreboard players operation sg.RedRaccoons sg.sidebar = sg.RedRaccoons sg.points.team.temp
+execute if score sg.RedRaccoons sg.points.team.rank matches 1..3 run scoreboard players display name sg.RedRaccoons sg.sidebar {"text": "  Red Raccoons", "color": "red"}
 execute if score sg.OrangeOtters sg.points.team.rank matches 1..3 run scoreboard players operation sg.OrangeOtters sg.sidebar = sg.OrangeOtters sg.points.team.temp
 execute if score sg.OrangeOtters sg.points.team.rank matches 1..3 run scoreboard players display name sg.OrangeOtters sg.sidebar {"text": "  Orange Otters", "color": "gold"}
-#execute if score sg.PinkPikas sg.points.team.rank matches 1..3 run scoreboard players operation sg.PinkPikas sg.sidebar = sg.PinkPikas sg.points.team.temp
-#execute if score sg.PinkPikas sg.points.team.rank matches 1..3 run scoreboard players display name sg.PinkPikas sg.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+execute if score sg.PinkPikas sg.points.team.rank matches 1..3 run scoreboard players operation sg.PinkPikas sg.sidebar = sg.PinkPikas sg.points.team.temp
+execute if score sg.PinkPikas sg.points.team.rank matches 1..3 run scoreboard players display name sg.PinkPikas sg.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 execute if score sg.YellowYaks sg.points.team.rank matches 1..3 run scoreboard players operation sg.YellowYaks sg.sidebar = sg.YellowYaks sg.points.team.temp
 execute if score sg.YellowYaks sg.points.team.rank matches 1..3 run scoreboard players display name sg.YellowYaks sg.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 execute if score sg.GreenGoats sg.points.team.rank matches 1..3 run scoreboard players operation sg.GreenGoats sg.sidebar = sg.GreenGoats sg.points.team.temp

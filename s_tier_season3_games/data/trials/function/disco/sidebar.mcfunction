@@ -11,7 +11,8 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add disco.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
+scoreboard objectives add disco.sidebar dummy
+$scoreboard objectives modify disco.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar disco.sidebar
 
 # <===== RANK TEAMS =====>
@@ -33,12 +34,12 @@ scoreboard players reset disco.BlueBears disco.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
-#execute if score disco.RedRaccoons disco.points.team.rank matches 1..3 run scoreboard players operation disco.RedRaccoons disco.sidebar = disco.RedRaccoons disco.points.team.temp
-#execute if score disco.RedRaccoons disco.points.team.rank matches 1..3 run scoreboard players display name disco.RedRaccoons disco.sidebar {"text": "  Red Raccoons", "color": "red"}
+execute if score disco.RedRaccoons disco.points.team.rank matches 1..3 run scoreboard players operation disco.RedRaccoons disco.sidebar = disco.RedRaccoons disco.points.team.temp
+execute if score disco.RedRaccoons disco.points.team.rank matches 1..3 run scoreboard players display name disco.RedRaccoons disco.sidebar {"text": "  Red Raccoons", "color": "red"}
 execute if score disco.OrangeOtters disco.points.team.rank matches 1..3 run scoreboard players operation disco.OrangeOtters disco.sidebar = disco.OrangeOtters disco.points.team.temp
 execute if score disco.OrangeOtters disco.points.team.rank matches 1..3 run scoreboard players display name disco.OrangeOtters disco.sidebar {"text": "  Orange Otters", "color": "gold"}
-#execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players operation disco.PinkPikas disco.sidebar = disco.PinkPikas disco.points.team.temp
-#execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players display name disco.PinkPikas disco.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players operation disco.PinkPikas disco.sidebar = disco.PinkPikas disco.points.team.temp
+execute if score disco.PinkPikas disco.points.team.rank matches 1..3 run scoreboard players display name disco.PinkPikas disco.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
 execute if score disco.YellowYaks disco.points.team.rank matches 1..3 run scoreboard players operation disco.YellowYaks disco.sidebar = disco.YellowYaks disco.points.team.temp
 execute if score disco.YellowYaks disco.points.team.rank matches 1..3 run scoreboard players display name disco.YellowYaks disco.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
 execute if score disco.GreenGoats disco.points.team.rank matches 1..3 run scoreboard players operation disco.GreenGoats disco.sidebar = disco.GreenGoats disco.points.team.temp
