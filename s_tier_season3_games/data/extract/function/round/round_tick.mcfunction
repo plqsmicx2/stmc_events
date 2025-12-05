@@ -32,7 +32,7 @@ execute if score extract.handler extract.timer.game.round matches 0..60 store re
 execute if score extract.handler extract.timer.game.round matches 0..60 run function extract:build_world with storage extract:map
 
 # give players base items
-function extract:inventory/grant_base
+execute as @a if score extract.handler extract.timer.game.round matches 60 run function extract:inventory/grant_base
 
 # automatically pause between rounds (but not during build round phase or <2s before start)
 execute if score extract.handler extract.timer.game.round matches 61..360 run function thread:automatic_pause

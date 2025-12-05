@@ -28,13 +28,13 @@ execute if score extract.handler extract.stage matches 1 if score extract.handle
 # if we're in stage 2, increment timer & countdown at 5 seconds
 execute if score extract.handler extract.stage matches 2 run scoreboard players add extract.handler extract.timer.delay2 1
 # countdown
-execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 300 run title @a actionbar {"text":"5 seconds!", "color":"red"}
-execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 320 run title @a actionbar {"text":"4 seconds!", "color":"red"}
-execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 340 run title @a actionbar {"text":"3 seconds!", "color":"red"}
-execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 360 run title @a actionbar {"text":"2 seconds!", "color":"red"}
-execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 380 run title @a actionbar {"text":"1 second!", "color":"red"}
+execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 100 run title @a actionbar {"text":"5 seconds!", "color":"red"}
+execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 120 run title @a actionbar {"text":"4 seconds!", "color":"red"}
+execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 140 run title @a actionbar {"text":"3 seconds!", "color":"red"}
+execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 160 run title @a actionbar {"text":"2 seconds!", "color":"red"}
+execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 180 run title @a actionbar {"text":"1 second!", "color":"red"}
 
-execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 400.. run scoreboard players set extract.handler extract.stage 3
+execute if score extract.handler extract.stage matches 2 if score extract.handler extract.timer.delay2 matches 200.. run function extract:helper/game_start
 
 # if we're in stage 3, increment timer & run game
 execute if score extract.handler extract.stage matches 3 run scoreboard players add extract.handler extract.timer.game 1

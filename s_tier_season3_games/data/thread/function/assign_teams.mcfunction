@@ -1,20 +1,20 @@
 # automatically add our players to their respective teams
 
 # RED RACCOONS
-#execute as Quacken_ unless entity @s[team=] run team join RED_RACCOONS Quacken_
-#execute as SeagullSpams unless entity @s[team=] run team join RED_RACCOONS SeagullSpams
-#execute as Epix809 unless entity @s[team=] run team join RED_RACCOONS Epix809
-#execute as .yungGeorge8249 unless entity @s[team=] run team join RED_RACCOONS .yungGeorge8249
+execute as Quacken_ unless entity @s[team=] run team join RED_RACCOONS Quacken_
+execute as SeagullSpams unless entity @s[team=] run team join RED_RACCOONS SeagullSpams
+execute as Epix809 unless entity @s[team=] run team join RED_RACCOONS Epix809
+execute as .yungGeorge8249 unless entity @s[team=] run team join RED_RACCOONS .yungGeorge8249
 # ORANGE OTTERS
 execute as Limeae unless entity @s[team=] run team join ORANGE_OTTERS Limeae
 execute as Quacken_ unless entity @s[team=] run team join ORANGE_OTTERS Quacken_
 execute as MinttRose unless entity @s[team=] run team join ORANGE_OTTERS MinttRose
 execute as Gioboiiii unless entity @s[team=] run team join ORANGE_OTTERS Gioboiiii
 # PINK PIKAS
-#execute as damien_____ unless entity @s[team=] run team join PINK_PIKAS damien_____
-#execute as authentic_flame unless entity @s[team=] run team join PINK_PIKAS authentic_flame
-#execute as SpringsMCJV unless entity @s[team=] run team join PINK_PIKAS SpringsMCJV
-#execute as Alivemc unless entity @s[team=] run team join PINK_PIKAS Alivemc
+execute as damien_____ unless entity @s[team=] run team join PINK_PIKAS damien_____
+execute as authentic_flame unless entity @s[team=] run team join PINK_PIKAS authentic_flame
+execute as SpringsMCJV unless entity @s[team=] run team join PINK_PIKAS SpringsMCJV
+execute as Alivemc unless entity @s[team=] run team join PINK_PIKAS Alivemc
 # YELLOW YAKS
 execute as Krisppy_ unless entity @s[team=] run team join YELLOW_YAKS Krisppy_
 execute as NitroSlash unless entity @s[team=] run team join YELLOW_YAKS NitroSlash

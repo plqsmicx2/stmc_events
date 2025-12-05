@@ -8,7 +8,6 @@ function extract:death_handler
 # ROUND TICK
 function extract:round/round_tick
 
-
 # Deprecated:
 # <===== ROUND 1 =====>
 
@@ -40,5 +39,5 @@ function extract:round/round_tick
 
 # <===== END GAME =====>
 
-#execute if score extract.handler extract.stats.roundsCompleted matches 7 run scoreboard players set extract.handler extract.stage 4
+execute if score extract.handler extract.stats.roundsCompleted matches 7 run scoreboard players set extract.handler extract.stage 4
 
