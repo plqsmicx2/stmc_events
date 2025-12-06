@@ -49,12 +49,12 @@ execute if score race.handler race.stage matches 2 if score race.handler race.ti
 
 # if we're in stage 3, increment timer & run game
 execute if score race.handler race.stage matches 3 run scoreboard players add race.handler race.timer.game 1
-execute if score race.handler race.stage matches 3 run function race:game_tick
+execute if score race.handler race.stage matches 3 run function race:game_tick with storage stmc:global
 
 # if we're in stage 4, run reset & point announcement
 execute if score race.handler race.stage matches 4 run scoreboard players add race.handler race.timer.delay3 1
 execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 3 run gamemode spectator @a
 execute if score race.handler race.timer.delay3 matches 100 run function race:player_announcements
 execute if score race.handler race.timer.delay3 matches 300 run function race:fastest_lap_announcement
-execute if score race.handler race.timer.delay3 matches 500 run function race:team_announcement
+execute if score race.handler race.timer.delay3 matches 500 run function race:team_announcement with storage stmc:global
 execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 600.. run function race:reset

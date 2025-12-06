@@ -88,11 +88,11 @@ execute if score replicate.handler replicate.timer.delay3 matches 2 run \
 
 # announce performance
 execute if score replicate.handler replicate.timer.delay3 matches 100 run \
-        function trials:replicate/overall_announcements
+        function trials:replicate/overall_announcements with storage stmc:global
 
 # announce performance
 execute if score replicate.handler replicate.timer.delay3 matches 300 run \
-        function trials:replicate/room_announcements
+        function trials:replicate/room_announcements with storage stmc:global
 
 # reset & move to next trials stage
 execute if score replicate.handler replicate.stage matches 4 if score replicate.handler replicate.timer.delay3 matches 400.. run \

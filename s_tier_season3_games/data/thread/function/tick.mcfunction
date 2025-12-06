@@ -6,6 +6,12 @@
 # automatically assign teams if applicable
 execute if score stmc.handler event.teamAssignment matches 1 run function thread:assign_teams
 
+# calculate # of players
+scoreboard objectives add .players dummy
+execute as @a unless entity @s[team=SPECTATORS] run scoreboard players add stmc.handler .players 1
+execute store result storage stmc:global players int 1 run scoreboard players get stmc.handler .players
+scoreboard objectives remove .players
+
 # update player points & determine rankings from that
 function thread:points_update
 function thread:calculate_rankings

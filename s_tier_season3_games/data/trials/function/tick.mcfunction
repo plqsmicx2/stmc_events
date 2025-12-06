@@ -64,7 +64,8 @@ execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game
 
 # points announcement
 execute if score tr.handler tr.stage matches 8 run scoreboard players add tr.handler tr.timer.pointsAnnouncement 1
-execute if score tr.handler tr.stage matches 8 run function trials:point_announcements
+execute if score tr.handler tr.timer.pointsAnnouncement matches 100 run function trials:player_announcements
+execute if score tr.handler tr.timer.pointsAnnouncement matches 300 run function trials:team_announcements with storage stmc:global
 execute if score tr.handler tr.timer.pointsAnnouncement matches 401.. run scoreboard players set tr.handler tr.stage 9
 
 # send us back to main lobby

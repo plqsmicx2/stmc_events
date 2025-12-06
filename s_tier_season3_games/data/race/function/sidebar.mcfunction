@@ -91,39 +91,39 @@ scoreboard players set §a race.sidebar 11
 
 # round number
 scoreboard players set race.playersCompleted race.sidebar 12
-execute if score race.handler race.players_completed matches 0 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 0/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 1 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 1/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 2 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 2/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 3 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 3/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 4 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 4/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 5 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 5/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 6 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 6/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 7 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 7/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 8 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 8/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 9 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 9/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 10 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 10/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 11 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 11/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 12 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 12/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 13 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 13/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 14 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 14/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 15 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 15/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 16 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 16/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 17 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 17/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 18 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 18/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 19 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 19/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 20 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 20/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 21 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 21/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 22 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 22/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 23 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 23/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 24 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 24/24", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 25 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 25/32", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 26 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 26/32", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 27 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 27/32", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 28 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 28/32", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 29 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 29/32", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 30 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 30/32", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 31 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 31/32", "color": "gold", "bold": true}
-execute if score race.handler race.players_completed matches 32 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 32/32", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 0 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 0/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 1 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 1/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 2 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 2/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 3 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 3/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 4 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 4/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 5 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 5/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 6 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 6/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 7 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 7/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 8 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 8/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 9 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 9/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 10 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 10/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 11 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 11/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 12 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 12/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 13 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 13/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 14 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 14/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 15 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 15/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 16 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 16/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 17 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 17/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 18 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 18/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 19 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 19/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 20 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 20/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 21 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 21/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 22 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 22/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 23 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 23/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 24 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 24/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 25 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 25/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 26 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 26/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 27 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 27/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 28 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 28/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 29 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 29/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 30 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 30/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 31 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 31/$(players)", "color": "gold", "bold": true}
+$execute if score race.handler race.players_completed matches 32 run scoreboard players display name race.playersCompleted race.sidebar {"text": "Players Completed: 32/$(players)", "color": "gold", "bold": true}
 
 # current game
 scoreboard players set Disco race.sidebar 13

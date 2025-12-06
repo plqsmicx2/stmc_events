@@ -63,21 +63,21 @@ scoreboard players reset tr.BlueBears tr.sidebar
 
 # they'll be automatically ranked by the scoreboard itself
 scoreboard players operation tr.RedRaccoons tr.sidebar = tr.RedRaccoons tr.points.team
-scoreboard players display name tr.RedRaccoons tr.sidebar {"text": "  Red Raccoons", "color": "red"}
+$scoreboard players display name tr.RedRaccoons tr.sidebar {"text": "  $(redName)", "color": "red"}
 scoreboard players operation tr.OrangeOtters tr.sidebar = tr.OrangeOtters tr.points.team
-scoreboard players display name tr.OrangeOtters tr.sidebar {"text": "  Orange Otters", "color": "gold"}
+$scoreboard players display name tr.OrangeOtters tr.sidebar {"text": "  $(orangeName)", "color": "gold"}
 scoreboard players operation tr.PinkPikas tr.sidebar = tr.PinkPikas tr.points.team
-scoreboard players display name tr.PinkPikas tr.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+$scoreboard players display name tr.PinkPikas tr.sidebar {"text": "  $(pinkName)", "color": "light_purple"}
 scoreboard players operation tr.YellowYaks tr.sidebar = tr.YellowYaks tr.points.team
-scoreboard players display name tr.YellowYaks tr.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
+$scoreboard players display name tr.YellowYaks tr.sidebar {"text": "  $(yellowName)", "color": "yellow"}
 scoreboard players operation tr.GreenGoats tr.sidebar = tr.GreenGoats tr.points.team
-scoreboard players display name tr.GreenGoats tr.sidebar {"text": "  Green Goats", "color": "dark_green"}
+$scoreboard players display name tr.GreenGoats tr.sidebar {"text": "  $(greenName)", "color": "dark_green"}
 scoreboard players operation tr.CyanCougars tr.sidebar = tr.CyanCougars tr.points.team
-scoreboard players display name tr.CyanCougars tr.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
+$scoreboard players display name tr.CyanCougars tr.sidebar {"text": "  $(cyanName)", "color": "dark_aqua"}
 scoreboard players operation tr.PurplePenguins tr.sidebar = tr.PurplePenguins tr.points.team
-scoreboard players display name tr.PurplePenguins tr.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
+$scoreboard players display name tr.PurplePenguins tr.sidebar {"text": "  $(purpleName)", "color": "dark_purple"}
 scoreboard players operation tr.BlueBears tr.sidebar = tr.BlueBears tr.points.team
-scoreboard players display name tr.BlueBears tr.sidebar {"text": "  Blue Bears", "color": "blue"}
+$scoreboard players display name tr.BlueBears tr.sidebar {"text": "  $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS tr.RedRaccoons

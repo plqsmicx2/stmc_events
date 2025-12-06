@@ -8,61 +8,28 @@
 
 # set the name of the event
 data modify storage stmc:global eventName set value "  STMC Reloaded II  "
+data modify storage stmc:global redName set value "Red Raccoons"
+data modify storage stmc:global orangeName set value "Orange Otters"
+data modify storage stmc:global pinkName set value "Pink Pikas"
+data modify storage stmc:global yellowName set value "Yellow Yaks"
+data modify storage stmc:global greenName set value "Green Goats"
+data modify storage stmc:global cyanName set value "Cyan Cougars"
+data modify storage stmc:global purpleName set value "Purple Penguins"
+data modify storage stmc:global blueName set value "Cobalt"
 
-# Red Raccoons
-team add RED_RACCOONS {"text": "Red Raccoons", "color": "red"}
-team modify RED_RACCOONS color red
-team modify RED_RACCOONS prefix {"text": "\ua000", "font": "team_logos:red_raccoons"}
+# reset our booleans tracking if games have been played (& set games not being played to -1)
+data modify storage stmc:global racePlayed set value 0
+data modify storage stmc:global solvePlayed set value 0
+data modify storage stmc:global trialsPlayed set value 0
+data modify storage stmc:global collectPlayed set value -1
+data modify storage stmc:global delvePlayed set value -1
+data modify storage stmc:global minePlayed set value 0
+data modify storage stmc:global extractPlayed set value 0
+data modify storage stmc:global blitzPlayed set value 0
+data modify storage stmc:global brawlPlayed set value 0
 
-# Orange Otters
-team add ORANGE_OTTERS {"text": "Orange Otters", "color": "gold"}
-team modify ORANGE_OTTERS color gold
-team modify ORANGE_OTTERS prefix {"text": "\ua000", "font": "team_logos:orange_otters"}
-
-# Pink Pikas
-team add PINK_PIKAS {"text": "Pink Pikas", "color": "light_purple"}
-team modify PINK_PIKAS color light_purple
-team modify PINK_PIKAS prefix {"text": "\ua000", "font": "team_logos:pink_pikas"}
-
-# Yellow Yaks
-team add YELLOW_YAKS {"text": "Yellow Yaks", "color": "yellow"}
-team modify YELLOW_YAKS color yellow
-team modify YELLOW_YAKS prefix {"text": "\ua000", "font": "team_logos:yellow_yaks"}
-
-# Green Goats
-team add GREEN_GOATS {"text": "Green Goats", "color": "dark_green"}
-team modify GREEN_GOATS color dark_green
-team modify GREEN_GOATS prefix {"text": "\ua000", "font": "team_logos:green_goats"}
-
-# Cyan Cougars
-team add CYAN_COUGARS {"text": "Cyan Cougars", "color": "dark_aqua"}
-team modify CYAN_COUGARS color dark_aqua
-team modify CYAN_COUGARS prefix {"text": "\ua000", "font": "team_logos:cyan_cougars"}
-
-# Purple Penguins
-team add PURPLE_PENGUINS {"text": "Purple Penguins", "color": "dark_purple"}
-team modify PURPLE_PENGUINS color dark_purple
-team modify PURPLE_PENGUINS prefix {"text": "\ua000", "font": "team_logos:purple_penguins"}
-
-# Blue Bears
-team add BLUE_BEARS {"text": "Blue Bears", "color": "blue"}
-team modify BLUE_BEARS color blue
-team modify BLUE_BEARS prefix {"text": "\ua000", "font": "team_logos:blue_bears"}
-
-# Spectators
-team add SPECTATORS {"text": "Spectators", "color": "gray"}
-team modify SPECTATORS color gray
-
-# prevent killing teammates
-team modify RED_RACCOONS friendlyFire false
-team modify ORANGE_OTTERS friendlyFire false
-team modify PINK_PIKAS friendlyFire false
-team modify YELLOW_YAKS friendlyFire false
-team modify GREEN_GOATS friendlyFire false
-team modify CYAN_COUGARS friendlyFire false
-team modify PURPLE_PENGUINS friendlyFire false
-team modify BLUE_BEARS friendlyFire false
-team modify SPECTATORS friendlyFire false
+# create teams
+function thread:create_teams with storage stmc:global
 
 # set some global defaults
 execute as @a run attribute @s max_health base set 20

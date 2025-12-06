@@ -1,5 +1,5 @@
 # Top per room
-execute run tellraw @a {text:"Top teams per room:",color:white}
+tellraw @a {text:"Top teams per room:",color:yellow}
 
 execute if score solve.RedRaccoons solve.timer.game.room1.rank matches 1 run tellraw @a [{text:"Room 1: ",color:yellow},{text:"Red Raccoons",color:red}]
 execute if score solve.OrangeOtters solve.timer.game.room1.rank matches 1 run tellraw @a [{text:"Room 1: ",color:yellow},{text:"Orange Otters",color:gold}]

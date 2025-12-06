@@ -34,21 +34,21 @@ scoreboard players reset extract.BlueBears extract.sidebar
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
 execute if score extract.RedRaccoons extract.points.team.rank matches 1..3 run scoreboard players operation extract.RedRaccoons extract.sidebar = extract.RedRaccoons extract.points.team
-execute if score extract.RedRaccoons extract.points.team.rank matches 1..3 run scoreboard players display name extract.RedRaccoons extract.sidebar {"text": "  Red Raccoons", "color": "red"}
+$execute if score extract.RedRaccoons extract.points.team.rank matches 1..3 run scoreboard players display name extract.RedRaccoons extract.sidebar {"text": "  $(redName)", "color": "red"}
 execute if score extract.OrangeOtters extract.points.team.rank matches 1..3 run scoreboard players operation extract.OrangeOtters extract.sidebar = extract.OrangeOtters extract.points.team
-execute if score extract.OrangeOtters extract.points.team.rank matches 1..3 run scoreboard players display name extract.OrangeOtters extract.sidebar {"text": "  Orange Otters", "color": "gold"}
+$execute if score extract.OrangeOtters extract.points.team.rank matches 1..3 run scoreboard players display name extract.OrangeOtters extract.sidebar {"text": "  $(orangeName)", "color": "gold"}
 execute if score extract.PinkPikas extract.points.team.rank matches 1..3 run scoreboard players operation extract.PinkPikas extract.sidebar = extract.PinkPikas extract.points.team
-execute if score extract.PinkPikas extract.points.team.rank matches 1..3 run scoreboard players display name extract.PinkPikas extract.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+$execute if score extract.PinkPikas extract.points.team.rank matches 1..3 run scoreboard players display name extract.PinkPikas extract.sidebar {"text": "  $(pinkName)", "color": "light_purple"}
 execute if score extract.YellowYaks extract.points.team.rank matches 1..3 run scoreboard players operation extract.YellowYaks extract.sidebar = extract.YellowYaks extract.points.team
-execute if score extract.YellowYaks extract.points.team.rank matches 1..3 run scoreboard players display name extract.YellowYaks extract.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
+$execute if score extract.YellowYaks extract.points.team.rank matches 1..3 run scoreboard players display name extract.YellowYaks extract.sidebar {"text": "  $(yellowName)", "color": "yellow"}
 execute if score extract.GreenGoats extract.points.team.rank matches 1..3 run scoreboard players operation extract.GreenGoats extract.sidebar = extract.GreenGoats extract.points.team
-execute if score extract.GreenGoats extract.points.team.rank matches 1..3 run scoreboard players display name extract.GreenGoats extract.sidebar {"text": "  Green Goats", "color": "dark_green"}
+$execute if score extract.GreenGoats extract.points.team.rank matches 1..3 run scoreboard players display name extract.GreenGoats extract.sidebar {"text": "  $(greenName)", "color": "dark_green"}
 execute if score extract.CyanCougars extract.points.team.rank matches 1..3 run scoreboard players operation extract.CyanCougars extract.sidebar = extract.CyanCougars extract.points.team
-execute if score extract.CyanCougars extract.points.team.rank matches 1..3 run scoreboard players display name extract.CyanCougars extract.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
+$execute if score extract.CyanCougars extract.points.team.rank matches 1..3 run scoreboard players display name extract.CyanCougars extract.sidebar {"text": "  $(cyanName)", "color": "dark_aqua"}
 execute if score extract.PurplePenguins extract.points.team.rank matches 1..3 run scoreboard players operation extract.PurplePenguins extract.sidebar = extract.PurplePenguins extract.points.team
-execute if score extract.PurplePenguins extract.points.team.rank matches 1..3 run scoreboard players display name extract.PurplePenguins extract.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
+$execute if score extract.PurplePenguins extract.points.team.rank matches 1..3 run scoreboard players display name extract.PurplePenguins extract.sidebar {"text": "  $(purpleName)", "color": "dark_purple"}
 execute if score extract.BlueBears extract.points.team.rank matches 1..3 run scoreboard players operation extract.BlueBears extract.sidebar = extract.BlueBears extract.points.team
-execute if score extract.BlueBears extract.points.team.rank matches 1..3 run scoreboard players display name extract.BlueBears extract.sidebar {"text": "  Blue Bears", "color": "blue"}
+$execute if score extract.BlueBears extract.points.team.rank matches 1..3 run scoreboard players display name extract.BlueBears extract.sidebar {"text": "  $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS extract.RedRaccoons

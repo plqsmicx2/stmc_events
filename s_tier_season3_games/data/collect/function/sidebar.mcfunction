@@ -34,21 +34,21 @@ scoreboard players reset collect.BlueBears collect.sidebar
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
 execute if score collect.RedRaccoons collect.points.team.rank matches 1..3 run scoreboard players operation collect.RedRaccoons collect.sidebar = collect.RedRaccoons collect.points.team
-execute if score collect.RedRaccoons collect.points.team.rank matches 1..3 run scoreboard players display name collect.RedRaccoons collect.sidebar {"text": "  Red Raccoons", "color": "red"}
+$execute if score collect.RedRaccoons collect.points.team.rank matches 1..3 run scoreboard players display name collect.RedRaccoons collect.sidebar {"text": "  $(redName)", "color": "red"}
 execute if score collect.OrangeOtters collect.points.team.rank matches 1..3 run scoreboard players operation collect.OrangeOtters collect.sidebar = collect.OrangeOtters collect.points.team
-execute if score collect.OrangeOtters collect.points.team.rank matches 1..3 run scoreboard players display name collect.OrangeOtters collect.sidebar {"text": "  Orange Otters", "color": "gold"}
+$execute if score collect.OrangeOtters collect.points.team.rank matches 1..3 run scoreboard players display name collect.OrangeOtters collect.sidebar {"text": "  $(orangeName)", "color": "gold"}
 execute if score collect.PinkPikas collect.points.team.rank matches 1..3 run scoreboard players operation collect.PinkPikas collect.sidebar = collect.PinkPikas collect.points.team
-execute if score collect.PinkPikas collect.points.team.rank matches 1..3 run scoreboard players display name collect.PinkPikas collect.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+$execute if score collect.PinkPikas collect.points.team.rank matches 1..3 run scoreboard players display name collect.PinkPikas collect.sidebar {"text": "  $(pinkName)", "color": "light_purple"}
 execute if score collect.YellowYaks collect.points.team.rank matches 1..3 run scoreboard players operation collect.YellowYaks collect.sidebar = collect.YellowYaks collect.points.team
-execute if score collect.YellowYaks collect.points.team.rank matches 1..3 run scoreboard players display name collect.YellowYaks collect.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
+$execute if score collect.YellowYaks collect.points.team.rank matches 1..3 run scoreboard players display name collect.YellowYaks collect.sidebar {"text": "  $(yellowName)", "color": "yellow"}
 execute if score collect.GreenGoats collect.points.team.rank matches 1..3 run scoreboard players operation collect.GreenGoats collect.sidebar = collect.GreenGoats collect.points.team
-execute if score collect.GreenGoats collect.points.team.rank matches 1..3 run scoreboard players display name collect.GreenGoats collect.sidebar {"text": "  Green Goats", "color": "dark_green"}
+$execute if score collect.GreenGoats collect.points.team.rank matches 1..3 run scoreboard players display name collect.GreenGoats collect.sidebar {"text": "  $(greenName)", "color": "dark_green"}
 execute if score collect.CyanCougars collect.points.team.rank matches 1..3 run scoreboard players operation collect.CyanCougars collect.sidebar = collect.CyanCougars collect.points.team
-execute if score collect.CyanCougars collect.points.team.rank matches 1..3 run scoreboard players display name collect.CyanCougars collect.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
+$execute if score collect.CyanCougars collect.points.team.rank matches 1..3 run scoreboard players display name collect.CyanCougars collect.sidebar {"text": "  $(cyanName)", "color": "dark_aqua"}
 execute if score collect.PurplePenguins collect.points.team.rank matches 1..3 run scoreboard players operation collect.PurplePenguins collect.sidebar = collect.PurplePenguins collect.points.team
-execute if score collect.PurplePenguins collect.points.team.rank matches 1..3 run scoreboard players display name collect.PurplePenguins collect.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
+$execute if score collect.PurplePenguins collect.points.team.rank matches 1..3 run scoreboard players display name collect.PurplePenguins collect.sidebar {"text": "  $(purpleName)", "color": "dark_purple"}
 execute if score collect.BlueBears collect.points.team.rank matches 1..3 run scoreboard players operation collect.BlueBears collect.sidebar = collect.BlueBears collect.points.team
-execute if score collect.BlueBears collect.points.team.rank matches 1..3 run scoreboard players display name collect.BlueBears collect.sidebar {"text": "  Blue Bears", "color": "blue"}
+$execute if score collect.BlueBears collect.points.team.rank matches 1..3 run scoreboard players display name collect.BlueBears collect.sidebar {"text": "  $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS collect.RedRaccoons

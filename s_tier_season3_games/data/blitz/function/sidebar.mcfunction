@@ -33,29 +33,29 @@ scoreboard players reset blitz.BlueBears blitz.sidebar
 # track teams' core status:
 
 scoreboard players set blitz.RedRaccoons blitz.sidebar 1
-execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.RedRaccoons blitz.sidebar {"text": "✔ Red Raccoons", "color": "red"}
-execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.RedRaccoons blitz.sidebar {"text": "✘ Red Raccoons", "color": "red"}
+$execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.RedRaccoons blitz.sidebar {"text": "✔ $(redName)", "color": "red"}
+$execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.RedRaccoons blitz.sidebar {"text": "✘ $(redName)", "color": "red"}
 scoreboard players set blitz.OrangeOtters blitz.sidebar 1
-execute if score blitz.OrangeOtters blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.OrangeOtters blitz.sidebar {"text": "✔ Orange Otters", "color": "gold"}
-execute if score blitz.OrangeOtters blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.OrangeOtters blitz.sidebar {"text": "✘ Orange Otters", "color": "gold"}
+$execute if score blitz.OrangeOtters blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.OrangeOtters blitz.sidebar {"text": "✔ $(orangeName)", "color": "gold"}
+$execute if score blitz.OrangeOtters blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.OrangeOtters blitz.sidebar {"text": "✘ $(orangeName)", "color": "gold"}
 scoreboard players set blitz.PinkPikas blitz.sidebar 1
-execute if score blitz.PinkPikas blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.PinkPikas blitz.sidebar {"text": "✔ Pink Pikas", "color": "light_purple"}
-execute if score blitz.PinkPikas blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.PinkPikas blitz.sidebar {"text": "✘ Pink Pikas", "color": "light_purple"}
+$execute if score blitz.PinkPikas blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.PinkPikas blitz.sidebar {"text": "✔ $(pinkName)", "color": "light_purple"}
+$execute if score blitz.PinkPikas blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.PinkPikas blitz.sidebar {"text": "✘ $(pinkName)", "color": "light_purple"}
 scoreboard players set blitz.YellowYaks blitz.sidebar 1
-execute if score blitz.YellowYaks blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.YellowYaks blitz.sidebar {"text": "✔ Yellow Yaks", "color": "yellow"}
-execute if score blitz.YellowYaks blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.YellowYaks blitz.sidebar {"text": "✘ Yellow Yaks", "color": "yellow"}
+$execute if score blitz.YellowYaks blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.YellowYaks blitz.sidebar {"text": "✔ $(yellowName)", "color": "yellow"}
+$execute if score blitz.YellowYaks blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.YellowYaks blitz.sidebar {"text": "✘ $(yellowName)", "color": "yellow"}
 scoreboard players set blitz.GreenGoats blitz.sidebar 1
-execute if score blitz.GreenGoats blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.GreenGoats blitz.sidebar {"text": "✔ Green Goats", "color": "green"}
-execute if score blitz.GreenGoats blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.GreenGoats blitz.sidebar {"text": "✘ Green Goats", "color": "green"}
+$execute if score blitz.GreenGoats blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.GreenGoats blitz.sidebar {"text": "✔ $(greenName)", "color": "green"}
+$execute if score blitz.GreenGoats blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.GreenGoats blitz.sidebar {"text": "✘ $(greenName)", "color": "green"}
 scoreboard players set blitz.CyanCougars blitz.sidebar 1
-execute if score blitz.CyanCougars blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.CyanCougars blitz.sidebar {"text": "✔ Cyan Cougars", "color": "dark_aqua"}
-execute if score blitz.CyanCougars blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.CyanCougars blitz.sidebar {"text": "✘ Cyan Cougars", "color": "dark_aqua"}
+$execute if score blitz.CyanCougars blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.CyanCougars blitz.sidebar {"text": "✔ $(cyanName)", "color": "dark_aqua"}
+$execute if score blitz.CyanCougars blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.CyanCougars blitz.sidebar {"text": "✘ $(cyanName)", "color": "dark_aqua"}
 scoreboard players set blitz.PurplePenguins blitz.sidebar 1
-execute if score blitz.PurplePenguins blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.PurplePenguins blitz.sidebar {"text": "✔ Purple Penguins", "color": "dark_purple"}
-execute if score blitz.PurplePenguins blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.PurplePenguins blitz.sidebar {"text": "✘ Purple Penguins", "color": "dark_purple"}
+$execute if score blitz.PurplePenguins blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.PurplePenguins blitz.sidebar {"text": "✔ $(purpleName)", "color": "dark_purple"}
+$execute if score blitz.PurplePenguins blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.PurplePenguins blitz.sidebar {"text": "✘ $(purpleName)", "color": "dark_purple"}
 scoreboard players set blitz.BlueBears blitz.sidebar 1
-execute if score blitz.BlueBears blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.BlueBears blitz.sidebar {"text": "✔ Blue Bears", "color": "blue"}
-execute if score blitz.BlueBears blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.BlueBears blitz.sidebar {"text": "✘ Blue Bears", "color": "blue"}
+$execute if score blitz.BlueBears blitz.stats.coreIntact matches 1 run scoreboard players display name blitz.BlueBears blitz.sidebar {"text": "✔ $(blueName)", "color": "blue"}
+$execute if score blitz.BlueBears blitz.stats.coreIntact matches 0 run scoreboard players display name blitz.BlueBears blitz.sidebar {"text": "✘ $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS blitz.RedRaccoons

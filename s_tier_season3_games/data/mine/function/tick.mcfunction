@@ -32,5 +32,5 @@ execute if score mine.handler mine.stage.creaking matches 2 if score mine.handle
 execute if score mine.handler mine.stage matches 3 run scoreboard players add mine.handler mine.timer.delay2 1
 execute if score mine.handler mine.stage matches 3 if score mine.handler mine.timer.delay2 matches 3 run gamemode spectator @a
 execute if score mine.handler mine.timer.delay2 matches 100 run function mine:player_announcements
-execute if score mine.handler mine.timer.delay2 matches 300 run function mine:team_announcements
+execute if score mine.handler mine.timer.delay2 matches 300 run function mine:team_announcements with storage stmc:global
 execute if score mine.handler mine.stage matches 3 if score mine.handler mine.timer.delay2 matches 400.. run function mine:reset

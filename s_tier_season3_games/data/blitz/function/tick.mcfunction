@@ -47,5 +47,5 @@ execute if score blitz.handler blitz.stage matches 3 run function blitz:game_tic
 # and then update sg.stage to 1
 execute if score blitz.handler blitz.stage matches 4 run scoreboard players add blitz.handler blitz.timer.delay3 1
 execute if score blitz.handler blitz.stage matches 4 if score blitz.handler blitz.timer.delay3 matches 100 run function blitz:player_announcements
-execute if score blitz.handler blitz.stage matches 4 if score blitz.handler blitz.timer.delay3 matches 300 run function blitz:team_announcements
+execute if score blitz.handler blitz.stage matches 4 if score blitz.handler blitz.timer.delay3 matches 300 run function blitz:team_announcements with storage stmc:global
 execute if score blitz.handler blitz.stage matches 4 if score blitz.handler blitz.timer.delay3 matches 400.. run function blitz:reset

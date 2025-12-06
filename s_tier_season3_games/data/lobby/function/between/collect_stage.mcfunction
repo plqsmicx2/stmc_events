@@ -111,4 +111,4 @@ execute unless score stmc.handler event.stage matches 0 if score lobby.handler l
         
 # at 20s, announce current team scores
 execute unless score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 400 run \
-        function lobby:between/team_announcements
+        function lobby:between/team_announcements with storage stmc:global

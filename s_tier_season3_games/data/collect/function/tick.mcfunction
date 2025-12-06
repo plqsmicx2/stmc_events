@@ -65,5 +65,5 @@ execute if score collect.handler collect.stage matches 3 run function collect:ga
 # if we're in stage 4, we just need to increment its timer [points are not announced after this round]
 # and then update sg.stage to 1
 execute if score collect.handler collect.stage matches 4 run scoreboard players add collect.handler collect.timer.delay3 1
-execute if score collect.handler collect.stage matches 4 if score collect.handler collect.timer.delay3 matches 100 run function collect:team_announcements
+execute if score collect.handler collect.stage matches 4 if score collect.handler collect.timer.delay3 matches 100 run function collect:team_announcements with storage stmc:global
 execute if score collect.handler collect.stage matches 4 if score collect.handler collect.timer.delay3 matches 200.. run function collect:reset

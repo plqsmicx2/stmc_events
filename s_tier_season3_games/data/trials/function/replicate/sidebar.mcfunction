@@ -30,21 +30,21 @@ scoreboard players reset replicate.BlueBears replicate.sidebar
 # add teams' build completion #
 # they'll be automatically ranked by the scoreboard itself
 scoreboard players operation replicate.RedRaccoons replicate.sidebar = replicate.RedRaccoons replicate.stage
-scoreboard players display name replicate.RedRaccoons replicate.sidebar {"text": "  Red Raccoons", "color": "red"}
+$scoreboard players display name replicate.RedRaccoons replicate.sidebar {"text": "  $(redName)", "color": "red"}
 scoreboard players operation replicate.OrangeOtters replicate.sidebar = replicate.OrangeOtters replicate.stage
-scoreboard players display name replicate.OrangeOtters replicate.sidebar {"text": "  Orange Otters", "color": "gold"}
+$scoreboard players display name replicate.OrangeOtters replicate.sidebar {"text": "  $(orangeName)", "color": "gold"}
 scoreboard players operation replicate.PinkPikas replicate.sidebar = replicate.PinkPikas replicate.stage
-scoreboard players display name replicate.PinkPikas replicate.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+$scoreboard players display name replicate.PinkPikas replicate.sidebar {"text": "  $(pinkName)", "color": "light_purple"}
 scoreboard players operation replicate.YellowYaks replicate.sidebar = replicate.YellowYaks replicate.stage
-scoreboard players display name replicate.YellowYaks replicate.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
+$scoreboard players display name replicate.YellowYaks replicate.sidebar {"text": "  $(yellowName)", "color": "yellow"}
 scoreboard players operation replicate.GreenGoats replicate.sidebar = replicate.GreenGoats replicate.stage
-scoreboard players display name replicate.GreenGoats replicate.sidebar {"text": "  Green Goats", "color": "dark_green"}
+$scoreboard players display name replicate.GreenGoats replicate.sidebar {"text": "  $(greenName)", "color": "dark_green"}
 scoreboard players operation replicate.CyanCougars replicate.sidebar = replicate.CyanCougars replicate.stage
-scoreboard players display name replicate.CyanCougars replicate.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
+$scoreboard players display name replicate.CyanCougars replicate.sidebar {"text": "  $(cyanName)", "color": "dark_aqua"}
 scoreboard players operation replicate.PurplePenguins replicate.sidebar = replicate.PurplePenguins replicate.stage
-scoreboard players display name replicate.PurplePenguins replicate.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
+$scoreboard players display name replicate.PurplePenguins replicate.sidebar {"text": "  $(purpleName)", "color": "dark_purple"}
 scoreboard players operation replicate.BlueBears replicate.sidebar = replicate.BlueBears replicate.stage
-scoreboard players display name replicate.BlueBears replicate.sidebar {"text": "  Blue Bears", "color": "blue"}
+$scoreboard players display name replicate.BlueBears replicate.sidebar {"text": "  $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS replicate.RedRaccoons

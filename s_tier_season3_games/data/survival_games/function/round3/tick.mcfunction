@@ -46,5 +46,5 @@ execute if score sg.r3.handler sg.r3.stage matches 1 run function survival_games
 execute if score sg.r3.handler sg.r3.stage matches 2 run scoreboard players add sg.r3.handler sg.r3.timer.delay2 1
 execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 200 run function survival_games:round3/kill_announcement
 execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 400 run function survival_games:round3/player_announcement
-execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 600 run function survival_games:round3/team_announcement
+execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 600 run function survival_games:round3/team_announcement with storage stmc:global
 execute if score sg.r3.handler sg.r3.stage matches 2 if score sg.r3.handler sg.r3.timer.delay2 matches 700.. run scoreboard players set sg.handler sg.stage 3

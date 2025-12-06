@@ -23,7 +23,7 @@ execute in lobby:lobby if score lobby.handler lobby.timer matches 2..20 run setb
 execute if score lobby.handler lobby.timer matches 200 run function lobby:final/player_announcements
 
 # dramatic team announcements
-execute if score lobby.handler lobby.timer matches 400..600 run function lobby:final/team_announcements
+execute if score lobby.handler lobby.timer matches 400..701 run function lobby:final/team_announcements with storage stmc:global
 
 # start finale
 execute if score lobby.handler lobby.timer matches 1200.. run function finale:start

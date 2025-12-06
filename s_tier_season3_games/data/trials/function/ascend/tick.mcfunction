@@ -148,7 +148,7 @@ execute if score ascend.handler ascend.timer.delay3 matches 2 run \
 
 # announce performance
 execute if score ascend.handler ascend.timer.delay3 matches 100 run \
-        function trials:ascend/team_announcements
+        function trials:ascend/team_announcements with storage stmc:global
 
 # reset & move to next trials stage
 execute if score ascend.handler ascend.stage matches 4 if score ascend.handler ascend.timer.delay3 matches 200.. run \

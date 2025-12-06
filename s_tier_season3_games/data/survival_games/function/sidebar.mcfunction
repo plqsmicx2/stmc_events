@@ -33,22 +33,22 @@ scoreboard players reset sg.BlueBears sg.sidebar
 
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
-execute if score sg.RedRaccoons sg.points.team.rank matches 1..3 run scoreboard players operation sg.RedRaccoons sg.sidebar = sg.RedRaccoons sg.points.team.temp
-execute if score sg.RedRaccoons sg.points.team.rank matches 1..3 run scoreboard players display name sg.RedRaccoons sg.sidebar {"text": "  Red Raccoons", "color": "red"}
-execute if score sg.OrangeOtters sg.points.team.rank matches 1..3 run scoreboard players operation sg.OrangeOtters sg.sidebar = sg.OrangeOtters sg.points.team.temp
-execute if score sg.OrangeOtters sg.points.team.rank matches 1..3 run scoreboard players display name sg.OrangeOtters sg.sidebar {"text": "  Orange Otters", "color": "gold"}
-execute if score sg.PinkPikas sg.points.team.rank matches 1..3 run scoreboard players operation sg.PinkPikas sg.sidebar = sg.PinkPikas sg.points.team.temp
-execute if score sg.PinkPikas sg.points.team.rank matches 1..3 run scoreboard players display name sg.PinkPikas sg.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
-execute if score sg.YellowYaks sg.points.team.rank matches 1..3 run scoreboard players operation sg.YellowYaks sg.sidebar = sg.YellowYaks sg.points.team.temp
-execute if score sg.YellowYaks sg.points.team.rank matches 1..3 run scoreboard players display name sg.YellowYaks sg.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
-execute if score sg.GreenGoats sg.points.team.rank matches 1..3 run scoreboard players operation sg.GreenGoats sg.sidebar = sg.GreenGoats sg.points.team.temp
-execute if score sg.GreenGoats sg.points.team.rank matches 1..3 run scoreboard players display name sg.GreenGoats sg.sidebar {"text": "  Green Goats", "color": "dark_green"}
-execute if score sg.CyanCougars sg.points.team.rank matches 1..3 run scoreboard players operation sg.CyanCougars sg.sidebar = sg.CyanCougars sg.points.team.temp
-execute if score sg.CyanCougars sg.points.team.rank matches 1..3 run scoreboard players display name sg.CyanCougars sg.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
-execute if score sg.PurplePenguins sg.points.team.rank matches 1..3 run scoreboard players operation sg.PurplePenguins sg.sidebar = sg.PurplePenguins sg.points.team.temp
-execute if score sg.PurplePenguins sg.points.team.rank matches 1..3 run scoreboard players display name sg.PurplePenguins sg.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
-execute if score sg.BlueBears sg.points.team.rank matches 1..3 run scoreboard players operation sg.BlueBears sg.sidebar = sg.BlueBears sg.points.team.temp
-execute if score sg.BlueBears sg.points.team.rank matches 1..3 run scoreboard players display name sg.BlueBears sg.sidebar {"text": "  Blue Bears", "color": "blue"}
+execute if score sg.RedRaccoons sg.points.team.rank matches 1..3 run scoreboard players operation sg.RedRaccoons sg.sidebar = sg.RedRaccoons sg.points.team
+$execute if score sg.RedRaccoons sg.points.team.rank matches 1..3 run scoreboard players display name sg.RedRaccoons sg.sidebar {"text": "  $(redName)", "color": "red"}
+execute if score sg.OrangeOtters sg.points.team.rank matches 1..3 run scoreboard players operation sg.OrangeOtters sg.sidebar = sg.OrangeOtters sg.points.team
+$execute if score sg.OrangeOtters sg.points.team.rank matches 1..3 run scoreboard players display name sg.OrangeOtters sg.sidebar {"text": "  $(orangeName)", "color": "gold"}
+execute if score sg.PinkPikas sg.points.team.rank matches 1..3 run scoreboard players operation sg.PinkPikas sg.sidebar = sg.PinkPikas sg.points.team
+$execute if score sg.PinkPikas sg.points.team.rank matches 1..3 run scoreboard players display name sg.PinkPikas sg.sidebar {"text": "  $(pinkName)", "color": "light_purple"}
+execute if score sg.YellowYaks sg.points.team.rank matches 1..3 run scoreboard players operation sg.YellowYaks sg.sidebar = sg.YellowYaks sg.points.team
+$execute if score sg.YellowYaks sg.points.team.rank matches 1..3 run scoreboard players display name sg.YellowYaks sg.sidebar {"text": "  $(yellowName)", "color": "yellow"}
+execute if score sg.GreenGoats sg.points.team.rank matches 1..3 run scoreboard players operation sg.GreenGoats sg.sidebar = sg.GreenGoats sg.points.team
+$execute if score sg.GreenGoats sg.points.team.rank matches 1..3 run scoreboard players display name sg.GreenGoats sg.sidebar {"text": "  $(greenName)", "color": "dark_green"}
+execute if score sg.CyanCougars sg.points.team.rank matches 1..3 run scoreboard players operation sg.CyanCougars sg.sidebar = sg.CyanCougars sg.points.team
+$execute if score sg.CyanCougars sg.points.team.rank matches 1..3 run scoreboard players display name sg.CyanCougars sg.sidebar {"text": "  $(cyanName)", "color": "dark_aqua"}
+execute if score sg.PurplePenguins sg.points.team.rank matches 1..3 run scoreboard players operation sg.PurplePenguins sg.sidebar = sg.PurplePenguins sg.points.team
+$execute if score sg.PurplePenguins sg.points.team.rank matches 1..3 run scoreboard players display name sg.PurplePenguins sg.sidebar {"text": "  $(purpleName)", "color": "dark_purple"}
+execute if score sg.BlueBears sg.points.team.rank matches 1..3 run scoreboard players operation sg.BlueBears sg.sidebar = sg.BlueBears sg.points.team
+$execute if score sg.BlueBears sg.points.team.rank matches 1..3 run scoreboard players display name sg.BlueBears sg.sidebar {"text": "  $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS sg.RedRaccoons

@@ -8,9 +8,6 @@ scoreboard players set extract.handler extract.stats.roundsCompleted 0
 scoreboard objectives remove .doubleValueDiamond
 scoreboard objectives remove .doubleValueGold
 
-# increment rounds played
-scoreboard players add extract.handler extract.stats.roundsCompleted 1
-
 # reset scoreboards
 scoreboard players set extract.handler extract.timer.game.round 0
 

@@ -21,4 +21,4 @@ function extract:inventory/grant_base
 item replace entity @s armor.chest with chainmail_chestplate[enchantments={"minecraft:binding_curse":1}]
 item replace entity @s hotbar.0 with air
 item replace entity @s weapon.offhand with shield
-item replace entity @s hotbar.2 with fishing_rod[enchantments={"knockback":1},damage=1]
+item replace entity @s hotbar.2 with fishing_rod[enchantments={"knockback":1}]

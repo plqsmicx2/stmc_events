@@ -1,4 +1,4 @@
-# lobby sidebar
+# finale sidebar
 
 # sidebar looks like this:
 # <lime>STMC Open<lime>
@@ -13,20 +13,21 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add lobby.sidebar dummy {"text": "  STMC Invitational II  ", "color": "green", "bold": true}
-scoreboard objectives setdisplay sidebar lobby.sidebar
+scoreboard objectives add finale.sidebar dummy
+$scoreboard objectives modify finale.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
+scoreboard objectives setdisplay sidebar finale.sidebar
 
 # <===== BUILD FROM THE BOTTOM =====>
 
 # reset teams
-scoreboard players reset team.RedRaccoons lobby.sidebar
-scoreboard players reset team.OrangeOtters lobby.sidebar
-scoreboard players reset team.PinkPikas lobby.sidebar
-scoreboard players reset team.YellowYaks lobby.sidebar
-scoreboard players reset team.GreenGoats lobby.sidebar
-scoreboard players reset team.CyanCougars lobby.sidebar
-scoreboard players reset team.PurplePenguins lobby.sidebar
-scoreboard players reset team.BlueBears lobby.sidebar
+scoreboard players reset team.RedRaccoons finale.sidebar
+scoreboard players reset team.OrangeOtters finale.sidebar
+scoreboard players reset team.PinkPikas finale.sidebar
+scoreboard players reset team.YellowYaks finale.sidebar
+scoreboard players reset team.GreenGoats finale.sidebar
+scoreboard players reset team.CyanCougars finale.sidebar
+scoreboard players reset team.PurplePenguins finale.sidebar
+scoreboard players reset team.BlueBears finale.sidebar
 
 # they'll be automatically ranked by the scoreboard itself
 scoreboard players operation team.RedRaccoons lobby.sidebar = team.RedRaccoons stats.points.team
@@ -60,16 +61,18 @@ team join BLUE_BEARS team.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: lobby.sidebar 5000
+scoreboard players set §e§lPoints: finale.sidebar 5000
 
 # blank line
-scoreboard players set §a lobby.sidebar 5001
+scoreboard players set §a finale.sidebar 5001
 
-scoreboard players set lobby.header lobby.sidebar 5002
-scoreboard players display name lobby.header lobby.sidebar {text:"Thanks for Playing!",color:white,bold:true}
+# timer
+scoreboard players set finale.timer finale.sidebar 5002
+execute if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name finale.timer finale.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+execute if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name finale.timer finale.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+
+scoreboard players set finale.header finale.sidebar 5003
+scoreboard players display name finale.header finale.sidebar {text:"Finale!",color:white,bold:true}
 
 # blank line
-scoreboard players set §b lobby.sidebar 5003
-
-# set the players' actionbar to their individual rank & points
-execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]
+scoreboard players set §b finale.sidebar 5004

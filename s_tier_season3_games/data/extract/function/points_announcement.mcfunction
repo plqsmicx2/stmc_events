@@ -70,4 +70,4 @@ execute as @a if score @s extract.points.indiv.rank matches 4 if score extract.h
 execute as @a if score @s extract.points.indiv.rank matches 5 if score extract.handler extract.timer.delay3 matches 400 run tellraw @a [{text:"[#5]: ",color:red},{selector:"@s"},{text:" - ",color:red},{score:{name:"@s",objective:"extract.points.indiv"},color:red},{text:" points",color:red}]
 
 # team announcement
-execute if score extract.handler extract.timer.delay3 matches 600 run function extract:team_announcement
+execute if score extract.handler extract.timer.delay3 matches 600 run function extract:team_announcement with storage stmc:global

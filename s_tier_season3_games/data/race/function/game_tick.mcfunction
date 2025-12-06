@@ -28,7 +28,7 @@ execute if score race.handler race.timer.game matches 1 as @a[team=BLUE_BEARS] r
 execute if score race.handler race.timer.game matches 14400.. run scoreboard players set race.handler race.stage 4
 
 # end by all players completed
-execute if score race.handler race.teams_completed matches 6 run scoreboard players set race.handler race.stage 4
+$execute if score race.handler race.players_completed matches $(players) run scoreboard players set race.handler race.stage 4
 
 # <===== INCREMENT TIMERS =====>
 
@@ -73,36 +73,9 @@ execute in race:race as @a[x=67,y=115,z=47,dx=1,dy=5,dz=5] run item replace enti
 # set players to spectator mode & announce if they have completed all laps
 execute as @a[gamemode=!spectator] if score @s race.laps_completed matches 4.. run gamemode spectator @s
 
-# update players & teams completed
+# update players completed
 scoreboard players set race.handler race.players_completed 0
 execute as @a[scores={race.laps_completed=4..}] run scoreboard players add race.handler race.players_completed 1
-
-scoreboard players set race.RedRaccoons race.players_completed 0
-scoreboard players set race.OrangeOtters race.players_completed 0
-scoreboard players set race.PinkPikas race.players_completed 0
-scoreboard players set race.YellowYaks race.players_completed 0
-scoreboard players set race.GreenGoats race.players_completed 0
-scoreboard players set race.CyanCougars race.players_completed 0
-scoreboard players set race.PurplePenguins race.players_completed 0
-scoreboard players set race.BlueBears race.players_completed 0
-execute as @a[scores={race.laps_completed=4..},team=RED_RACCOONS] run scoreboard players add race.RedRaccoons race.players_completed 1
-execute as @a[scores={race.laps_completed=4..},team=ORANGE_OTTERS] run scoreboard players add race.OrangeOtters race.players_completed 1
-execute as @a[scores={race.laps_completed=4..},team=PINK_PIKAS] run scoreboard players add race.PinkPikas race.players_completed 1
-execute as @a[scores={race.laps_completed=4..},team=YELLOW_YAKS] run scoreboard players add race.YellowYaks race.players_completed 1
-execute as @a[scores={race.laps_completed=4..},team=GREEN_GOATS] run scoreboard players add race.GreenGoats race.players_completed 1
-execute as @a[scores={race.laps_completed=4..},team=CYAN_COUGARS] run scoreboard players add race.CyanCougars race.players_completed 1
-execute as @a[scores={race.laps_completed=4..},team=PURPLE_PENGUINS] run scoreboard players add race.PurplePenguins race.players_completed 1
-execute as @a[scores={race.laps_completed=4..},team=BLUE_BEARS] run scoreboard players add race.BlueBears race.players_completed 1
-
-scoreboard players set race.handler race.teams_completed 0
-execute if score race.RedRaccoons race.players_completed matches 4.. run scoreboard players add race.handler race.teams_completed 1
-execute if score race.OrangeOtters race.players_completed matches 4.. run scoreboard players add race.handler race.teams_completed 1
-execute if score race.PinkPikas race.players_completed matches 4.. run scoreboard players add race.handler race.teams_completed 1
-execute if score race.YellowYaks race.players_completed matches 4.. run scoreboard players add race.handler race.teams_completed 1
-execute if score race.GreenGoats race.players_completed matches 4.. run scoreboard players add race.handler race.teams_completed 1
-execute if score race.CyanCougars race.players_completed matches 4.. run scoreboard players add race.handler race.teams_completed 1
-execute if score race.PurplePenguins race.players_completed matches 4.. run scoreboard players add race.handler race.teams_completed 1
-execute if score race.BlueBears race.players_completed matches 4.. run scoreboard players add race.handler race.teams_completed 1
 
 # store player/team completion ranks & announce completion
 execute as @a if score @s race.laps_completed matches 4.. unless score @s race.completion.rank matches 1.. if score @s race.laptime.seconds matches 0..9 run tellraw @a ["",{selector:"@s"},{text:" finished #",color:"green"},{score:{name:"race.handler",objective:"race.players_completed"},bold:true,color:"red"},{text:" in ",color:"green"},{score:{name:"@s",objective:"race.laptime.mins"},bold:true,color:"gold"},{text:":0",bold:true,color:"gold"},{score:{name:"@s",objective:"race.laptime.seconds"},bold:true,color:"gold"},{text:"!",color:"green"},{text:"!",color:"green"}]

@@ -35,21 +35,21 @@ scoreboard players reset towers.BlueBears towers.sidebar
 # add teams if their rank is between 1 and 3
 # they'll be automatically ranked by the scoreboard itself
 execute if score towers.RedRaccoons towers.points.team.rank matches 1..3 run scoreboard players operation towers.RedRaccoons towers.sidebar = towers.RedRaccoons towers.points.team
-execute if score towers.RedRaccoons towers.points.team.rank matches 1..3 run scoreboard players display name towers.RedRaccoons towers.sidebar {"text": "  Red Raccoons", "color": "red"}
+$execute if score towers.RedRaccoons towers.points.team.rank matches 1..3 run scoreboard players display name towers.RedRaccoons towers.sidebar {"text": "  $(redName)", "color": "red"}
 execute if score towers.OrangeOtters towers.points.team.rank matches 1..3 run scoreboard players operation towers.OrangeOtters towers.sidebar = towers.OrangeOtters towers.points.team
-execute if score towers.OrangeOtters towers.points.team.rank matches 1..3 run scoreboard players display name towers.OrangeOtters towers.sidebar {"text": "  Orange Otters", "color": "gold"}
+$execute if score towers.OrangeOtters towers.points.team.rank matches 1..3 run scoreboard players display name towers.OrangeOtters towers.sidebar {"text": "  $(orangeName)", "color": "gold"}
 execute if score towers.PinkPikas towers.points.team.rank matches 1..3 run scoreboard players operation towers.PinkPikas towers.sidebar = towers.PinkPikas towers.points.team
-execute if score towers.PinkPikas towers.points.team.rank matches 1..3 run scoreboard players display name towers.PinkPikas towers.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+$execute if score towers.PinkPikas towers.points.team.rank matches 1..3 run scoreboard players display name towers.PinkPikas towers.sidebar {"text": "  $(pinkName)", "color": "light_purple"}
 execute if score towers.YellowYaks towers.points.team.rank matches 1..3 run scoreboard players operation towers.YellowYaks towers.sidebar = towers.YellowYaks towers.points.team
-execute if score towers.YellowYaks towers.points.team.rank matches 1..3 run scoreboard players display name towers.YellowYaks towers.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
+$execute if score towers.YellowYaks towers.points.team.rank matches 1..3 run scoreboard players display name towers.YellowYaks towers.sidebar {"text": "  $(yellowName)", "color": "yellow"}
 execute if score towers.GreenGoats towers.points.team.rank matches 1..3 run scoreboard players operation towers.GreenGoats towers.sidebar = towers.GreenGoats towers.points.team
-execute if score towers.GreenGoats towers.points.team.rank matches 1..3 run scoreboard players display name towers.GreenGoats towers.sidebar {"text": "  Green Goats", "color": "dark_green"}
+$execute if score towers.GreenGoats towers.points.team.rank matches 1..3 run scoreboard players display name towers.GreenGoats towers.sidebar {"text": "  $(greenName)", "color": "dark_green"}
 execute if score towers.CyanCougars towers.points.team.rank matches 1..3 run scoreboard players operation towers.CyanCougars towers.sidebar = towers.CyanCougars towers.points.team
-execute if score towers.CyanCougars towers.points.team.rank matches 1..3 run scoreboard players display name towers.CyanCougars towers.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
+$execute if score towers.CyanCougars towers.points.team.rank matches 1..3 run scoreboard players display name towers.CyanCougars towers.sidebar {"text": "  $(cyanName)", "color": "dark_aqua"}
 execute if score towers.PurplePenguins towers.points.team.rank matches 1..3 run scoreboard players operation towers.PurplePenguins towers.sidebar = towers.PurplePenguins towers.points.team
-execute if score towers.PurplePenguins towers.points.team.rank matches 1..3 run scoreboard players display name towers.PurplePenguins towers.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
+$execute if score towers.PurplePenguins towers.points.team.rank matches 1..3 run scoreboard players display name towers.PurplePenguins towers.sidebar {"text": "  $(purpleName)", "color": "dark_purple"}
 execute if score towers.BlueBears towers.points.team.rank matches 1..3 run scoreboard players operation towers.BlueBears towers.sidebar = towers.BlueBears towers.points.team
-execute if score towers.BlueBears towers.points.team.rank matches 1..3 run scoreboard players display name towers.BlueBears towers.sidebar {"text": "  Blue Bears", "color": "blue"}
+$execute if score towers.BlueBears towers.points.team.rank matches 1..3 run scoreboard players display name towers.BlueBears towers.sidebar {"text": "  $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS towers.RedRaccoons
