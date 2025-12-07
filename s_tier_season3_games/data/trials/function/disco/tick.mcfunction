@@ -22,8 +22,7 @@ execute unless score disco.handler disco.stage matches 0.. run function trials:d
 
 # if we're in stage 0, increment the timer & reset the platform
 execute if score disco.handler disco.stage matches 0 run scoreboard players add disco.handler disco.timer.delay1 1
-execute if score disco.handler disco.stage matches 0 in trials:disco if score disco.handler disco.timer.delay1 matches 3 run fill -5 103 -5 5 103 5 tinted_glass
-execute if score disco.handler disco.stage matches 0 in trials:disco if score disco.handler disco.timer.delay1 matches 3 run fill -4 107 -4 4 107 4 tinted_glass
+execute if score disco.handler disco.stage matches 0 in trials:disco if score disco.handler disco.timer.delay1 matches 3 run fill -7 116 -7 7 116 7 tinted_glass
 # move to next stage after 20 seconds
 execute if score disco.handler disco.stage matches 0 if score disco.handler disco.timer.delay1 matches 200.. run scoreboard players set disco.handler disco.stage 1
 

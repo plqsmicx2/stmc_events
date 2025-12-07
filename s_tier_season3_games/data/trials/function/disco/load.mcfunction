@@ -1,7 +1,7 @@
 # this function runs whenever beginning the disco game
 
 # teleport players to spawn platform
-execute in trials:disco run tp @a 0 109 0
+execute in trials:disco run tp @a 0 117 0
 
 # force gamemode
 gamemode adventure @a

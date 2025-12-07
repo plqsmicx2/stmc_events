@@ -10,8 +10,7 @@ execute as @a[scores={disco.alive=1..}] at @s run summon minecraft:firework_rock
 execute as @a[scores={disco.alive=1..}] at @s run summon minecraft:firework_rocket ~1 ~ ~ {LifeTime:40}
 
 # reset platform
-execute in trials:disco run fill -5 103 -5 5 103 5 gold_block
-execute in trials:disco run fill -4 107 -4 4 107 4 gold_block
+execute in trials:disco run fill -7 116 -7 7 116 7 gold_block
 
 # clear all players' hotbars
 execute as @a run clear @s
