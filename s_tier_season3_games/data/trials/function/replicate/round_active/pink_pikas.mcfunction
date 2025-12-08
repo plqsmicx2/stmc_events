@@ -60,11 +60,6 @@ execute if score replicate.PinkPikas replicate.stage matches 3 run scoreboard pl
 execute if score replicate.PinkPikas replicate.stage matches 4 run scoreboard players add replicate.PinkPikas replicate.timer.build5 1
 execute if score replicate.PinkPikas replicate.stage matches 5 run scoreboard players add replicate.PinkPikas replicate.timer.build6 1
 
-# end game if we're in stage 6
-execute if score replicate.PinkPikas replicate.stage matches 6 run scoreboard players set replicate.PinkPikas replicate.completed 1
-execute if score replicate.PinkPikas replicate.stage matches 6 run gamemode spectator @a[team=PINK_PIKAS]
-execute if score replicate.PinkPikas replicate.stage matches 6 run return 0
-
 # determine # of players completed with active build
 scoreboard players set replicate.PinkPikas replicate.playersCompleted 0
 

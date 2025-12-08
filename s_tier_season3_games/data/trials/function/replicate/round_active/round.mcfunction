@@ -64,6 +64,9 @@ execute if score replicate.handler replicate.timer.game.secondsLeft matches -1 r
 execute as @a if score replicate.handler replicate.timer.game.secondsLeft matches 10.. run title @s actionbar ["",{"score": {"name": "replicate.handler", "objective": "replicate.timer.game.minsLeft"},"color":"aqua"}, {"text": ":","color":"aqua"}, {"score": {"name": "replicate.handler", "objective": "replicate.timer.game.secondsLeft"},"color":"aqua"}, {"text": " remaining","color":"aqua"}]
 execute as @a if score replicate.handler replicate.timer.game.secondsLeft matches ..9 run title @s actionbar ["",{"score": {"name": "replicate.handler", "objective": "replicate.timer.game.minsLeft"},"color":"aqua"}, {"text": ":0","color":"aqua"}, {"score": {"name": "replicate.handler", "objective": "replicate.timer.game.secondsLeft"},"color":"aqua"}, {"text": " remaining","color":"aqua"}]
 
+# check for teams who've completed all builds
+function trials:replicate/round_active/round_end with storage stmc:global
+
 # <===== RED RACCOONS =====>
 
 execute unless score replicate.RedRaccoons replicate.completed matches 1 run function trials:replicate/round_active/red_raccoons

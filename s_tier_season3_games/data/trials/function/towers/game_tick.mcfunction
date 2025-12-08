@@ -45,52 +45,52 @@ execute if score towers.handler towers.timer.game.secondsElapsed matches 10.. ru
 # <===== POINT AWARDS =====>
 
 # 15 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 300 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 300 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 15 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 300 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 300 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 15 seconds survived!",bold:true,color:"red"}]
 
 # 30 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 600 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 600 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 30 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 600 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 600 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 30 seconds survived!",bold:true,color:"red"}]
 
 # 45 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 900 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 900 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 45 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 900 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 900 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 45 seconds survived!",bold:true,color:"red"}]
 
 # 60 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1200 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1200 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 60 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1200 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1200 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 60 seconds survived!",bold:true,color:"red"}]
 
 # 75 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1500 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1500 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 75 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1500 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1500 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 75 seconds survived!",bold:true,color:"red"}]
 
 # 90 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1800 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1800 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 90 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1800 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1800 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 90 seconds survived!",bold:true,color:"red"}]
 
 # 105 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2100 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2100 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 105 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2100 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2100 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 105 seconds survived!",bold:true,color:"red"}]
 
 # 120 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2400 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2400 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2 minutes survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2400 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2400 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2 minutes survived!",bold:true,color:"red"}]
 
 # 135 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2700 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2700 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2:15 minutes survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2700 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2700 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2:15 minutes survived!",bold:true,color:"red"}]
 
 # 150 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 3000 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 3000 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2:30 minutes survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3000 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3000 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2:30 minutes survived!",bold:true,color:"red"}]
 
 # 165 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 3300 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 3300 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2:45 minutes survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3300 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3300 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2:45 minutes survived!",bold:true,color:"red"}]
 
 # 180 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 3600 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 3600 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 3 minutes survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3600 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3600 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+1 point",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 3 minutes survived!",bold:true,color:"red"}]
 
 # <===== END GAME =====>
 

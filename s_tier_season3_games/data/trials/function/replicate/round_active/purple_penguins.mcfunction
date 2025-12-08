@@ -60,11 +60,6 @@ execute if score replicate.PurplePenguins replicate.stage matches 3 run scoreboa
 execute if score replicate.PurplePenguins replicate.stage matches 4 run scoreboard players add replicate.PurplePenguins replicate.timer.build5 1
 execute if score replicate.PurplePenguins replicate.stage matches 5 run scoreboard players add replicate.PurplePenguins replicate.timer.build6 1
 
-# end game if we're in stage 6
-execute if score replicate.PurplePenguins replicate.stage matches 6 run scoreboard players set replicate.PurplePenguins replicate.completed 1
-execute if score replicate.PurplePenguins replicate.stage matches 6 run gamemode spectator @a[team=PURPLE_PENGUINS]
-execute if score replicate.PurplePenguins replicate.stage matches 6 run return 0
-
 # determine # of players completed with active build
 scoreboard players set replicate.PurplePenguins replicate.playersCompleted 0
 

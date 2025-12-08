@@ -60,11 +60,6 @@ execute if score replicate.BlueBears replicate.stage matches 3 run scoreboard pl
 execute if score replicate.BlueBears replicate.stage matches 4 run scoreboard players add replicate.BlueBears replicate.timer.build5 1
 execute if score replicate.BlueBears replicate.stage matches 5 run scoreboard players add replicate.BlueBears replicate.timer.build6 1
 
-# end game if we're in stage 6
-execute if score replicate.BlueBears replicate.stage matches 6 run scoreboard players set replicate.BlueBears replicate.completed 1
-execute if score replicate.BlueBears replicate.stage matches 6 run gamemode spectator @a[team=BLUE_BEARS]
-execute if score replicate.BlueBears replicate.stage matches 6 run return 0
-
 # determine # of players completed with active build
 scoreboard players set replicate.BlueBears replicate.playersCompleted 0
 

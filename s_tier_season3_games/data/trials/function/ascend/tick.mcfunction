@@ -44,6 +44,9 @@ execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with mine
 execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,attribute_modifiers=[{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value"},{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 execute as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=3949738,attribute_modifiers=[{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value"},{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
+# automatically pause
+execute unless score ascend.handler ascend.stage matches 3 run function thread:automatic_pause
+
 # STAGE ZERO:
 
 # increment timer
