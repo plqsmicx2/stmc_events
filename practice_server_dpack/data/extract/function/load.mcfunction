@@ -10,6 +10,7 @@ scoreboard objectives add extract.alive dummy
 scoreboard objectives add extract.stats.kills playerKillCount
 scoreboard objectives add extract.stats.diamondsMined minecraft.mined:minecraft.diamond_block
 scoreboard objectives add extract.stats.goldMined minecraft.mined:minecraft.gold_block
+scoreboard objectives add extract.stats.kit dummy
 
 # and set those stats
 scoreboard players set @a extract.stats.kills 0

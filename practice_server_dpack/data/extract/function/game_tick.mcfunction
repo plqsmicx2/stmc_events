@@ -2,6 +2,9 @@
 scoreboard players add extract.handler extract.timer.game 1
 execute store result bossbar extract.timer value run scoreboard players get extract.handler extract.timer.game
 
+# grant items at start of round
+execute in extract:extract if score extract.handler extract.timer.game matches 60 run function extract:inventory/grant_base
+
 # check for interactions
 execute in extract:extract as @e[tag=zombie] on target run function extract:inventory/grant_zombie
 execute in extract:extract as @e[tag=piglin] on target run function extract:inventory/grant_piglin
@@ -12,8 +15,8 @@ execute in extract:extract as @e[tag=witch] on target run function extract:inven
 execute in extract:extract as @e[type=interaction] run data remove entity @s interaction
 
 # prevent extra items at the start of the round
-execute in extract:extract if score extract.handler extract.timer.game matches ..400 run effect clear @a
-execute in extract:extract if score extract.handler extract.timer.game matches ..400 run kill @e[type=item]
+execute in extract:extract if score extract.handler extract.timer.game matches 60..400 run effect clear @a
+execute in extract:extract if score extract.handler extract.timer.game matches 60..400 run kill @e[type=item]
 
 # countdown at 5 seconds
 execute if score extract.handler extract.timer.game matches 300 run title @a actionbar {text:"5 seconds!",color:red,bold:true}

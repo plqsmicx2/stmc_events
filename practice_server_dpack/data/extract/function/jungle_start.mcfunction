@@ -21,6 +21,7 @@ effect give @a[team=dim.extract] instant_health 1 110 true
 effect give @a[team=dim.extract] saturation 1 5 true
 scoreboard players set extract.handler extract.timer.game 0
 scoreboard players set extract.handler extract.gamesActive 1
+scoreboard players set @a[team=dim.extract] extract.stats.kit -1
 
 # bossbar
 bossbar add extract.timer {text:"Round",color:red}
