@@ -320,74 +320,74 @@ scoreboard players operation team.BlueBears stats.points.indiv.g8 *= #math event
 scoreboard players operation team.BlueBears stats.points.indiv.g8 /= #math event.multipliers.precision
 
 # and then for each team, we sum their game scores
-execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g1
-execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g2
-execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g3
-execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g4
-execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g5
-execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g6
-execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g7
-execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g8
+scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g1
+scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g2
+scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g3
+scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g4
+scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g5
+scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g6
+scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g7
+scoreboard players operation team.RedRaccoons stats.points.team += team.RedRaccoons stats.points.indiv.g8
 
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g1
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g2
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g3
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g4
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g5
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g6
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g7
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g8
+scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g1
+scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g2
+scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g3
+scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g4
+scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g5
+scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g6
+scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g7
+scoreboard players operation team.OrangeOtters stats.points.team += team.OrangeOtters stats.points.indiv.g8
 
-execute as @a[team=PINK_PIKAS] run scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g1
-execute as @a[team=PINK_PIKAS] run scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g2
-execute as @a[team=PINK_PIKAS] run scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g3
-execute as @a[team=PINK_PIKAS] run scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g4
-execute as @a[team=PINK_PIKAS] run scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g5
-execute as @a[team=PINK_PIKAS] run scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g6
-execute as @a[team=PINK_PIKAS] run scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g7
-execute as @a[team=PINK_PIKAS] run scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g8
+scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g1
+scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g2
+scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g3
+scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g4
+scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g5
+scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g6
+scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g7
+scoreboard players operation team.PinkPikas stats.points.team += team.PinkPikas stats.points.indiv.g8
 
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g1
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g2
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g3
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g4
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g5
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g6
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g7
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g8
+scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g1
+scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g2
+scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g3
+scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g4
+scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g5
+scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g6
+scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g7
+scoreboard players operation team.YellowYaks stats.points.team += team.YellowYaks stats.points.indiv.g8
 
-execute as @a[team=GREEN_GOATS] run scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g1
-execute as @a[team=GREEN_GOATS] run scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g2
-execute as @a[team=GREEN_GOATS] run scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g3
-execute as @a[team=GREEN_GOATS] run scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g4
-execute as @a[team=GREEN_GOATS] run scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g5
-execute as @a[team=GREEN_GOATS] run scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g6
-execute as @a[team=GREEN_GOATS] run scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g7
-execute as @a[team=GREEN_GOATS] run scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g8
+scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g1
+scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g2
+scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g3
+scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g4
+scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g5
+scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g6
+scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g7
+scoreboard players operation team.GreenGoats stats.points.team += team.GreenGoats stats.points.indiv.g8
 
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g1
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g2
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g3
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g4
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g5
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g6
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g7
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g8
+scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g1
+scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g2
+scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g3
+scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g4
+scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g5
+scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g6
+scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g7
+scoreboard players operation team.CyanCougars stats.points.team += team.CyanCougars stats.points.indiv.g8
 
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g1
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g2
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g3
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g4
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g5
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g6
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g7
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g8
+scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g1
+scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g2
+scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g3
+scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g4
+scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g5
+scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g6
+scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g7
+scoreboard players operation team.PurplePenguins stats.points.team += team.PurplePenguins stats.points.indiv.g8
 
-execute as @a[team=BLUE_BEARS] run scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g1
-execute as @a[team=BLUE_BEARS] run scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g2
-execute as @a[team=BLUE_BEARS] run scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g3
-execute as @a[team=BLUE_BEARS] run scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g4
-execute as @a[team=BLUE_BEARS] run scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g5
-execute as @a[team=BLUE_BEARS] run scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g6
-execute as @a[team=BLUE_BEARS] run scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g7
-execute as @a[team=BLUE_BEARS] run scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g8
+scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g1
+scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g2
+scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g3
+scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g4
+scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g5
+scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g6
+scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g7
+scoreboard players operation team.BlueBears stats.points.team += team.BlueBears stats.points.indiv.g8
