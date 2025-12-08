@@ -41,6 +41,8 @@ scoreboard objectives add event.paused dummy
 scoreboard objectives add event.stage dummy
 # records if teams should be automatically assigned
 scoreboard objectives add event.teamAssignment dummy
+# records if the default sidebar should be loaded
+scoreboard objectives add event.defSidebar dummy
 # records # of players in the event
 scoreboard objectives add event.players dummy
 # tracks points of team [is always set based on sum of @a[team=...] indiv]
@@ -100,6 +102,8 @@ scoreboard players set stmc.handler event.paused 1
 scoreboard players set stmc.handler event.stage 0
 # will be turned off if a player's team must be swapped
 scoreboard players set stmc.handler event.teamAssignment 1
+# will be turned off if a different sidebar should be loaded
+scoreboard players set stmc.handler event.defSidebar 1
 
 # everyone starts with 0 invested tokens
 scoreboard players set @a event.voting.investedTokens 0

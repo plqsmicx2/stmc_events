@@ -2,6 +2,9 @@
 effect clear @a
 clear @a
 
+# set points from team to indiv
+function mine:points/team_split
+
 # update points
 execute as @a if score stmc.handler event.stage matches 1 run scoreboard players operation @s stats.points.indiv.g1 = @s mine.points.indiv
 execute as @a if score stmc.handler event.stage matches 3 run scoreboard players operation @s stats.points.indiv.g2 = @s mine.points.indiv

@@ -26,7 +26,7 @@ scoreboard players set team.CyanCougars stats.points.team 0
 scoreboard players set team.PurplePenguins stats.points.team 0
 scoreboard players set team.BlueBears stats.points.team 0
 
-# now we set indiv to the appropriate sum
+# now we set player indiv to the appropriate sum
 execute as @a run scoreboard players operation @s stats.points.indiv += @s stats.points.indiv.g1
 execute as @a run scoreboard players operation @s stats.points.indiv += @s stats.points.indiv.g2
 execute as @a run scoreboard players operation @s stats.points.indiv += @s stats.points.indiv.g3
@@ -40,10 +40,18 @@ execute as @a run scoreboard players operation @s stats.points.indiv += @s stats
 # we save these individual game values in "indiv" scores just for convenience to reuse a scoreboard
 
 # Red Raccoons
+
+# reset point value for game
 scoreboard players set team.RedRaccoons stats.points.indiv.g1 0
+
+# sum all player points for that game into team score
 execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.indiv.g1 += @s stats.points.indiv.g1
+
+# apply multiplier
 scoreboard players operation team.RedRaccoons stats.points.indiv.g1 *= #math event.multipliers.g1
 scoreboard players operation team.RedRaccoons stats.points.indiv.g1 /= #math event.multipliers.precision
+
+# repeat for all games
 scoreboard players set team.RedRaccoons stats.points.indiv.g2 0
 execute as @a[team=RED_RACCOONS] run scoreboard players operation team.RedRaccoons stats.points.indiv.g2 += @s stats.points.indiv.g2
 scoreboard players operation team.RedRaccoons stats.points.indiv.g2 *= #math event.multipliers.g2

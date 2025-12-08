@@ -200,4 +200,5 @@ execute in lobby:lobby run summon villager -30 100 30 \
         buy:{id:"minecraft:sunflower",count:1,components:{"minecraft:item_name":{"color":"#FF6000","text":"Token"}}}, \
         sell:{id:"minecraft:paper",count:1,components:{"minecraft:item_name":{"color":"dark_green","text":"Invested Token"},"minecraft:custom_data":{invest:1b}}}}]}} 
 
+scoreboard players set stmc.handler event.defSidebar 0
 scoreboard objectives remove lobby.sidebar
