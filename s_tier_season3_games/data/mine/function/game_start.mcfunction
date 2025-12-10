@@ -1,9 +1,8 @@
 clear @a
 effect clear @a
 effect give @a saturation 1 255
-effect give @a hunger 5 20 true
 effect give @a instant_health 1 10
-effect give @a mining_fatigue 5 2 true
+effect give @a mining_fatigue 3 5 true
 gamemode adventure @a
 scoreboard players reset @a mine.game.mined.diamond_ore
 scoreboard players reset @a mine.game.deathcount
@@ -16,6 +15,8 @@ item replace entity @a hotbar.3 with golden_apple
 item replace entity @a hotbar.8 with lantern
 execute if score mine.handler mine.stage.creaking matches 1 run item replace entity @a hotbar.1 with cobweb[can_place_on=[{blocks:"minecraft:cyan_terracotta"}]]
 execute if score mine.handler mine.stage.creaking matches 1 run item replace entity @a hotbar.2 with lingering_potion[potion_contents={potion:strong_healing}]
+execute if score mine.handler mine.stage.creeper matches 1 run item replace entity @a hotbar.1 with shield
+execute if score mine.handler mine.stage.creeper matches 1 run item replace entity @a hotbar.2 with ocelot_spawn_egg[can_place_on=[{blocks:"minecraft:cyan_terracotta"}]]
 execute if score mine.handler mine.stage.hoglin matches 1 run item replace entity @a hotbar.1 with bow
 execute if score mine.handler mine.stage.hoglin matches 1 run item replace entity @a hotbar.2 with arrow 6
 execute if score mine.handler mine.stage.warden matches 1 run item replace entity @a hotbar.1 with snowball 4
@@ -29,6 +30,7 @@ forceload add -49 -49 49 49
 
 kill @e[type=warden]
 kill @e[type=hoglin]
+kill @e[type=creeper]
 kill @e[type=creaking]
 kill @e[type=endermite]
 kill @e[type=item]

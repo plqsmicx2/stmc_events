@@ -1,14 +1,28 @@
-# randomize current rotation
-execute store result storage mine:data rot int 1 run random value -179..180
 
-execute as @e[type=silverfish] at @s store success entity @s Pos[1] double -300 run summon endermite
 
-execute as @a[scores={mine.game.mined.diamond_ore=1..}] at @s at @n[type=item,nbt={Item:{id:"minecraft:diamond"}}] run playsound minecraft:block.amethyst_cluster.hit player @s ~ ~ ~ 0.8 1.2 0
-
-execute as @e[type=item,nbt={Item:{id:"minecraft:diamond"}}] unless data entity @s Item.components."minecraft:lore" run data modify entity @s Item.components."minecraft:lore" set value [{color:"dark_gray",text:"can be safely discarded",italic:0b},{color:"red",text:"crafting removes points",italic:0b}]
+function mine:game/chicken
+function mine:game/compass
+function mine:game/diamond
+function mine:game/endermite
+function mine:game/endermite_clear
+function mine:game/lantern
+function mine:game/openwalls
+function mine:game/snowball
 
 execute as @a[gamemode=adventure,scores={mine.game.deathcount=1}] run gamemode spectator @s
 
-execute as @e store result score @s mine.game.y run data get entity @s Pos[1] .2
+execute unless entity @a[gamemode=adventure] run function mine:general_end
 
-function mine:game/spectp
+
+execute if score mine.handler mine.timer matches 20 run title @a title "Mine"
+execute if score mine.handler mine.timer matches 40 run title @a title "Creaking"
+
+execute if score mine.handler mine.timer matches 100 run function mine:game/openwalls
+
+
+
+execute if score mine.handler mine.timer matches 100 if score mine.handler mine.stage.creaking matches 1 run function mine:mobs/creaking
+execute if score mine.handler mine.timer matches 100 if score mine.handler mine.stage.creaking matches 1 run function mine:mobs/creaking
+execute if score mine.handler mine.timer matches 100 if score mine.handler mine.stage.creaking matches 1 run function mine:mobs/creaking
+
+

@@ -1,11 +1,8 @@
+
 execute as @a[gamemode=adventure] if items entity @s weapon.offhand compass at @s positioned ~-20 ~-1 ~-20 run function mine:game/compass
-
 execute as @a[gamemode=adventure] run function mine:game/lantern
-
 function mine:game/diamond
-
 function mine:game/endermite
-
 function mine:game/endermite_clear
 
 
