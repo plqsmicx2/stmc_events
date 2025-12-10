@@ -4,7 +4,7 @@
 # excluding anything done in the parent load function
 
 # teleport players to spawn platform
-execute in survival_games:sg1 run tp @a 0 178 0
+execute in survival_games:sg1 run tp @a 0 172 0
 
 # force gamemode
 gamemode adventure @a
@@ -38,7 +38,7 @@ xp set @a 0
 execute in survival_games:sg1 run kill @e[type=!player]
 
 # failsafe spawn point
-execute in survival_games:sg1 run spawnpoint @a 0 178 0
+execute in survival_games:sg1 run spawnpoint @a 0 172 0
 
 # set worldborder
 worldborder center 0 0
@@ -80,14 +80,16 @@ scoreboard players set @a sg.r3.teamPlacementPoints 0
 scoreboard players set sg.RedRaccoons sg.r3.teamPlacement 0
 scoreboard players set sg.OrangeOtters sg.r3.teamPlacement 0
 scoreboard players set sg.PinkPikas sg.r3.teamPlacement 0
+scoreboard players set sg.YellowYaks sg.r3.teamPlacement 0
 scoreboard players set sg.GreenGoats sg.r3.teamPlacement 0
 scoreboard players set sg.CyanCougars sg.r3.teamPlacement 0
 scoreboard players set sg.PurplePenguins sg.r3.teamPlacement 0
+scoreboard players set sg.BlueBears sg.r3.teamPlacement 0
 
 # and reset timers
-scoreboard players reset sg.r3.handler sg.r3.timer.delay1
-scoreboard players reset sg.r3.handler sg.r3.timer.round
-scoreboard players reset sg.r3.handler sg.r3.timer.delay2
+scoreboard players set sg.r3.handler sg.r3.timer.delay1 0
+scoreboard players set sg.r3.handler sg.r3.timer.round 0
+scoreboard players set sg.r3.handler sg.r3.timer.delay2 0
 
 # reset players alive
 execute as @a[team=!SPECTATORS] at @s run scoreboard players set @s sg.alive 1

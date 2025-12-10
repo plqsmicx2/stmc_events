@@ -68,6 +68,9 @@ execute as @a[team=PURPLE_PENGUINS] at @s run scoreboard players operation sg.Pu
 scoreboard players set sg.BlueBears sg.r1.points 0
 execute as @a[team=BLUE_BEARS] at @s run scoreboard players operation sg.BlueBears sg.r1.points += @s sg.r1.points
 
+# update main points update with new values
+function survival_games:points_update
+
 # <===== Actionbar =====>
 
 # sets player actionbar to Kills: # | Indiv Points: ## | Distance From Border: ##

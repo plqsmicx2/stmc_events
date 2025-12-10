@@ -1,4 +1,4 @@
-# reset function for round 1 of survival games
+# reset function for round 3 of survival games
 
 # this function acts as the "end" of the round
 # thus, it will handle the removal of all unnecessary scoreboards
@@ -8,7 +8,6 @@
 
 # first, remove temporary scoreboards
 scoreboard objectives remove sg.r3.timer.delay1
-scoreboard objectives remove sg.r3.timer.delay2
 scoreboard objectives remove sg.r3.timer.round
 scoreboard objectives remove sg.r3.death
 scoreboard objectives remove sg.r3.currentPlacement
@@ -19,14 +18,14 @@ execute as @a run attribute @s block_break_speed base set 1
 
 # next, assign the winning team a placement of 1
 # this is successful because this function is only called when ONE team matches 1..4
-execute if score sg.RedRaccoons sg.players_alive matches 1..4 run scoreboard players set sg.RedRaccoons sg.r3.teamPlacement 1
-execute if score sg.OrangeOtters sg.players_alive matches 1..4 run scoreboard players set sg.OrangeOtters sg.r3.teamPlacement 1
-execute if score sg.PinkPikas sg.players_alive matches 1..4 run scoreboard players set sg.PinkPikas sg.r3.teamPlacement 1
-execute if score sg.YellowYaks sg.players_alive matches 1..4 run scoreboard players set sg.YellowYaks sg.r3.teamPlacement 1
-execute if score sg.GreenGoats sg.players_alive matches 1..4 run scoreboard players set sg.GreenGoats sg.r3.teamPlacement 1
-execute if score sg.CyanCougars sg.players_alive matches 1..4 run scoreboard players set sg.CyanCougars sg.r3.teamPlacement 1
-execute if score sg.PurplePenguins sg.players_alive matches 1..4 run scoreboard players set sg.PurplePenguins sg.r3.teamPlacement 1
-execute if score sg.BlueBears sg.players_alive matches 1..4 run scoreboard players set sg.BlueBears sg.r3.teamPlacement 1
+execute unless score sg.RedRaccoons sg.r3.teamPlacement matches 2.. run scoreboard players set sg.RedRaccoons sg.r3.teamPlacement 1
+execute unless score sg.OrangeOtters sg.r3.teamPlacement matches 2.. run scoreboard players set sg.OrangeOtters sg.r3.teamPlacement 1
+execute unless score sg.PinkPikas sg.r3.teamPlacement matches 2.. run scoreboard players set sg.PinkPikas sg.r3.teamPlacement 1
+execute unless score sg.YellowYaks sg.r3.teamPlacement matches 2.. run scoreboard players set sg.YellowYaks sg.r3.teamPlacement 1
+execute unless score sg.GreenGoats sg.r3.teamPlacement matches 2.. run scoreboard players set sg.GreenGoats sg.r3.teamPlacement 1
+execute unless score sg.CyanCougars sg.r3.teamPlacement matches 2.. run scoreboard players set sg.CyanCougars sg.r3.teamPlacement 1
+execute unless score sg.PurplePenguins sg.r3.teamPlacement matches 2.. run scoreboard players set sg.PurplePenguins sg.r3.teamPlacement 1
+execute unless score sg.BlueBears sg.r3.teamPlacement matches 2.. run scoreboard players set sg.BlueBears sg.r3.teamPlacement 1
 
 # then, award team placement points
 # we do this through manually checking which placement each team has
@@ -108,13 +107,13 @@ execute as @a at @s run scoreboard players operation @s sg.r3.teamPlacementPoint
 
 # & announce team placement points
 execute as @a if score @s sg.r3.teamPlacementPoints matches 0 run tellraw @s ["",{"text":"[8th Team]: +","bold":true,"color":"yellow"},{"text":"0","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
-execute as @a if score @s sg.r3.teamPlacementPoints matches 15 run tellraw @s ["",{"text":"[7th Team]: +","bold":true,"color":"yellow"},{"text":"15","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
-execute as @a if score @s sg.r3.teamPlacementPoints matches 30 run tellraw @s ["",{"text":"[6th Team]: +","bold":true,"color":"yellow"},{"text":"30","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
-execute as @a if score @s sg.r3.teamPlacementPoints matches 45 run tellraw @s ["",{"text":"[5th Team]: +","bold":true,"color":"yellow"},{"text":"45","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
-execute as @a if score @s sg.r3.teamPlacementPoints matches 60 run tellraw @s ["",{"text":"[4th Team]: +","bold":true,"color":"yellow"},{"text":"60","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
-execute as @a if score @s sg.r3.teamPlacementPoints matches 75 run tellraw @s ["",{"text":"[3rd Team]: +","bold":true,"color":"yellow"},{"text":"75","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
-execute as @a if score @s sg.r3.teamPlacementPoints matches 90 run tellraw @s ["",{"text":"[2nd Team]: +","bold":true,"color":"yellow"},{"text":"90","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
-execute as @a if score @s sg.r3.teamPlacementPoints matches 110 run tellraw @s ["",{"text":"[1st Team]: +","bold":true,"color":"yellow"},{"text":"110","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
+execute as @a if score @s sg.r3.teamPlacementPoints matches 1 run tellraw @s ["",{"text":"[7th Team]: +","bold":true,"color":"yellow"},{"text":"1","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
+execute as @a if score @s sg.r3.teamPlacementPoints matches 2 run tellraw @s ["",{"text":"[6th Team]: +","bold":true,"color":"yellow"},{"text":"2","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
+execute as @a if score @s sg.r3.teamPlacementPoints matches 4 run tellraw @s ["",{"text":"[5th Team]: +","bold":true,"color":"yellow"},{"text":"4","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
+execute as @a if score @s sg.r3.teamPlacementPoints matches 6 run tellraw @s ["",{"text":"[4th Team]: +","bold":true,"color":"yellow"},{"text":"6","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
+execute as @a if score @s sg.r3.teamPlacementPoints matches 8 run tellraw @s ["",{"text":"[3rd Team]: +","bold":true,"color":"yellow"},{"text":"8","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
+execute as @a if score @s sg.r3.teamPlacementPoints matches 10 run tellraw @s ["",{"text":"[2nd Team]: +","bold":true,"color":"yellow"},{"text":"10","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
+execute as @a if score @s sg.r3.teamPlacementPoints matches 13 run tellraw @s ["",{"text":"[1st Team]: +","bold":true,"color":"yellow"},{"text":"13","bold":true,"color":"red"},{"text":" points bonus","bold":true,"color":"yellow"}]
 
 # & set title to winning team
 execute as @a if score sg.RedRaccoons sg.r3.teamPlacement matches 1 run title @a title {"text":"RED RACCOONS WIN","bold":true,"color":"red"}
@@ -127,4 +126,4 @@ execute as @a if score sg.PurplePenguins sg.r3.teamPlacement matches 1 run title
 execute as @a if score sg.BlueBears sg.r3.teamPlacement matches 1 run title @a title {"text":"BLUE BEARS WIN","bold":true,"color":"blue"}
 
 # lastly, update sg.r3.stage
-scoreboard players set sg.r3.handler sg.r3.stage 4
+scoreboard players set sg.r3.handler sg.r3.stage 2

@@ -12,14 +12,17 @@ execute unless score race.handler race.stage matches 0.. run function race:load
 
 # run functions every tick
 function race:points_update
-function race:sidebar
+function race:sidebar with storage stmc:global
+
+# auto pause
+execute unless score race.handler race.stage matches 3 run function thread:automatic_pause
 
 # if we're in stage 0, increment timer
 execute if score race.handler race.stage matches 0 run scoreboard players add race.handler race.timer.delay1 1
 # reset world
 execute in race:race if score race.handler race.timer.delay1 matches 3 run fill -15 106 10 -11 109 10 spruce_fence
 execute in race:race if score race.handler race.timer.delay1 matches 3 run fill -15 106 17 -11 108 17 red_stained_glass
-execute if score race.handler race.stage matches 0 if score race.handler race.timer.delay1 matches 400.. run scoreboard players set race.handler race.stage 1
+execute if score race.handler race.stage matches 0 if score race.handler race.timer.delay1 matches 200.. run scoreboard players set race.handler race.stage 1
 
 # if we're in stage 1, increment timer & run explanation
 execute if score race.handler race.stage matches 1 run scoreboard players add race.handler race.timer.explanation 1
@@ -49,12 +52,12 @@ execute if score race.handler race.stage matches 2 if score race.handler race.ti
 
 # if we're in stage 3, increment timer & run game
 execute if score race.handler race.stage matches 3 run scoreboard players add race.handler race.timer.game 1
-execute if score race.handler race.stage matches 3 run function race:game_tick
+execute if score race.handler race.stage matches 3 run function race:game_tick with storage stmc:global
 
 # if we're in stage 4, run reset & point announcement
 execute if score race.handler race.stage matches 4 run scoreboard players add race.handler race.timer.delay3 1
 execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 3 run gamemode spectator @a
 execute if score race.handler race.timer.delay3 matches 100 run function race:player_announcements
 execute if score race.handler race.timer.delay3 matches 300 run function race:fastest_lap_announcement
-execute if score race.handler race.timer.delay3 matches 500 run function race:team_announcement
+execute if score race.handler race.timer.delay3 matches 500 run function race:team_announcement with storage stmc:global
 execute if score race.handler race.stage matches 4 if score race.handler race.timer.delay3 matches 600.. run function race:reset

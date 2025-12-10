@@ -8,29 +8,42 @@
 # works by rotating an entity at the center rapidly & creating a particle <radius> blocks away
 
 # re-center marker on armor stand
-execute in survival_games:sg1 positioned as @e[tag=sg.worldborder.center] rotated as @e[tag=sg.worldborder.centerVisual1] run tp @e[tag=sg.worldborder.centerVisual1] ~ 120 ~
-execute in survival_games:sg1 positioned as @e[tag=sg.worldborder.center] rotated as @e[tag=sg.worldborder.centerVisual1] run tp @e[tag=sg.worldborder.centerVisual2] ~ 120 ~
-execute in survival_games:sg1 positioned as @e[tag=sg.worldborder.center] rotated as @e[tag=sg.worldborder.centerVisual1] run tp @e[tag=sg.worldborder.centerVisual3] ~ 120 ~
-execute in survival_games:sg1 positioned as @e[tag=sg.worldborder.center] rotated as @e[tag=sg.worldborder.centerVisual1] run tp @e[tag=sg.worldborder.centerVisual4] ~ 120 ~
+execute in survival_games:sg1 positioned as @e[tag=sg.worldborder.center] rotated as @e[tag=sg.worldborder.centerVisual] run tp @e[tag=sg.worldborder.centerVisual] ~ 120 ~
 
 # rotate marker by 6 degrees
 execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual1] at @s run tp @s ~ ~ ~ ~6 0
-execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual2] at @s run tp @s ~ ~ ~ ~96 0
-execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual3] at @s run tp @s ~ ~ ~ ~186 0
-execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual4] at @s run tp @s ~ ~ ~ ~276 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual2] at @s run tp @s ~ ~ ~ ~30 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual3] at @s run tp @s ~ ~ ~ ~54 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual4] at @s run tp @s ~ ~ ~ ~78 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual5] at @s run tp @s ~ ~ ~ ~102 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual6] at @s run tp @s ~ ~ ~ ~126 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual7] at @s run tp @s ~ ~ ~ ~150 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual8] at @s run tp @s ~ ~ ~ ~174 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual9] at @s run tp @s ~ ~ ~ ~198 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual10] at @s run tp @s ~ ~ ~ ~222 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual11] at @s run tp @s ~ ~ ~ ~246 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual12] at @s run tp @s ~ ~ ~ ~270 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual13] at @s run tp @s ~ ~ ~ ~294 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual14] at @s run tp @s ~ ~ ~ ~318 0
+execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual15] at @s run tp @s ~ ~ ~ ~342 0
 
-# summon particle in direction marker is facing, from y=120 to y=160
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^0 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^4 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^8 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^12 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^16 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^20 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^24 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^28 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^32 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^36 ^$(radius) 0.0 2.0 0.0 0 2 force
-$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^40 ^$(radius) 0.0 2.0 0.0 0 2 force
+# summon particle in direction marker is facing, from y=100 to y=160
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^-20 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^-16 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^-12 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^-8 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^-4 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^0 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^4 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^8 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^12 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^16 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^20 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^24 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^28 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^32 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^36 ^$(radius) 0.0 2.0 0.0 0 2 force
+$execute in survival_games:sg1 as @e[tag=sg.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:10} ^ ^40 ^$(radius) 0.0 2.0 0.0 0 2 force
 
 # <===== PLAYER DAMAGE =====>
 

@@ -3,7 +3,9 @@
 # the function is super simple since most logic is handled in other functions
 
 # every tick stuff
-kill @e[type=minecraft:item]
+execute in trials:towers run kill @e[type=minecraft:item]
+scoreboard players add towers.handler towers.timer.game 1
+function trials:towers/death_handler
 
 # <===== POWDER SPAWNS =====>
 
@@ -14,9 +16,11 @@ scoreboard players add towers.handler towers.timer.game.summon 1
 execute in trials:towers as @a[team=RED_RACCOONS,scores={towers.alive=1}] at @s if score towers.handler towers.timer.game.summon matches 4 run setblock ~ ~4 ~ minecraft:red_concrete_powder
 execute in trials:towers as @a[team=ORANGE_OTTERS,scores={towers.alive=1}] at @s if score towers.handler towers.timer.game.summon matches 4 run setblock ~ ~4 ~ minecraft:orange_concrete_powder
 execute in trials:towers as @a[team=PINK_PIKAS,scores={towers.alive=1}] at @s if score towers.handler towers.timer.game.summon matches 4 run setblock ~ ~4 ~ minecraft:pink_concrete_powder
+execute in trials:towers as @a[team=YELLOW_YAKS,scores={towers.alive=1}] at @s if score towers.handler towers.timer.game.summon matches 4 run setblock ~ ~4 ~ minecraft:yellow_concrete_powder
 execute in trials:towers as @a[team=GREEN_GOATS,scores={towers.alive=1}] at @s if score towers.handler towers.timer.game.summon matches 4 run setblock ~ ~4 ~ minecraft:green_concrete_powder
 execute in trials:towers as @a[team=CYAN_COUGARS,scores={towers.alive=1}] at @s if score towers.handler towers.timer.game.summon matches 4 run setblock ~ ~4 ~ minecraft:cyan_concrete_powder
 execute in trials:towers as @a[team=PURPLE_PENGUINS,scores={towers.alive=1}] at @s if score towers.handler towers.timer.game.summon matches 4 run setblock ~ ~4 ~ minecraft:purple_concrete_powder
+execute in trials:towers as @a[team=BLUE_BEARS,scores={towers.alive=1}] at @s if score towers.handler towers.timer.game.summon matches 4 run setblock ~ ~4 ~ minecraft:blue_concrete_powder
 
 # reset timer
 execute if score towers.handler towers.timer.game.summon matches 4 run scoreboard players set towers.handler towers.timer.game.summon 0
@@ -40,39 +44,46 @@ execute if score towers.handler towers.timer.game.secondsElapsed matches 10.. ru
 
 # <===== POINT AWARDS =====>
 
+# 15 seconds
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 300 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+
 # 30 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 600 run scoreboard players add @s towers.points.indiv 25
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 600 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 600 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+25 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 30 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 600 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+
+# 45 seconds
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 900 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
 
 # 60 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1200 run scoreboard players add @s towers.points.indiv 25
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1200 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1200 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+25 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 60 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1200 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+
+# 75 seconds
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1500 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
 
 # 90 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1800 run scoreboard players add @s towers.points.indiv 25
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1800 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 1800 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+25 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 90 seconds survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 1800 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+
+# 105 seconds
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2100 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
 
 # 120 seconds
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2400 run scoreboard players add @s towers.points.indiv 50
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2400 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
-execute as @a[scores={towers.alive=1}] if score towers.handler towers.timer.game matches 2400 run tellraw @s ["",{text:"[",bold:true,color:"gray"},{text:"+50 points",bold:true,color:"red"},{text:"]",bold:true,color:"gray"},{text:" 2 minutes survived!",bold:true,color:"red"}]
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2400 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
 
-# <===== RIFTS =====>
+# 135 seconds
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 2700 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
 
-# create rifts after 30 seconds
-execute in trials:towers if score towers.handler towers.timer.game matches 600 run fill -20 100 -20 20 105 20 minecraft:air replace minecraft:red_wool
-execute if score towers.handler towers.timer.game matches 600 run tellraw @a {"text":"Rifts have now generated. Good luck!", "color":"aqua"}
+# 150 seconds
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3000 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
 
-# remove night vision after 1 minute
-execute if score towers.handler towers.timer.game matches 1200 run effect clear @a[scores={towers.alive=1}] minecraft:night_vision
+# 165 seconds
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3300 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
+
+# 180 seconds
+execute as @a[scores={towers.alive=1}] at @s if score towers.handler towers.timer.game matches 3600 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 4.0 2.0
 
 # <===== END GAME =====>
 
 # no players alive
-execute if score towers.handler towers.players_alive matches 0 run scoreboard players set towers.handler towers.stage 4
+execute if score towers.handler towers.players_alive matches 0 run function trials:towers/game_end
 
-# 2 minutes elapsed
-execute if score towers.handler towers.timer.game matches 2400.. run scoreboard players set towers.handler towers.stage 4
+# 3 minutes elapsed
+execute if score towers.handler towers.timer.game matches 3600.. run function trials:towers/game_end

@@ -27,13 +27,16 @@ clear @a
 effect clear @a
 
 # ensure full health & hunger
-effect give @a saturation 1 1 true
+execute as @a run attribute @s max_health base set 20
+execute as @a run attribute @s max_health modifier remove all
+effect give @a saturation 1 110 true
 effect give @a regeneration 5 1 true
 effect give @a resistance infinite 4 true
 effect give @a mining_fatigue infinite 4 true
 
 # set xp
-xp set @a 0
+xp set @a 0 levels
+xp set @a 0 points
 
 # kill all entities
 execute in extract:extract run kill @e[type=!player]
@@ -44,6 +47,7 @@ scoreboard objectives add extract.timer.delay1 dummy
 scoreboard objectives add extract.timer.explanation dummy
 scoreboard objectives add extract.timer.delay2 dummy
 scoreboard objectives add extract.timer.game dummy
+scoreboard objectives add extract.timer.game.round dummy
 scoreboard objectives add extract.timer.game.round1 dummy
 scoreboard objectives add extract.timer.game.round2 dummy
 scoreboard objectives add extract.timer.game.round3 dummy
@@ -61,6 +65,9 @@ scoreboard objectives add extract.stats.deaths deathCount
 scoreboard objectives add extract.stats.roundsCompleted dummy
 scoreboard objectives add extract.stats.diamondsMined minecraft.mined:minecraft.diamond_block
 scoreboard objectives add extract.stats.goldMined minecraft.mined:minecraft.gold_block
+scoreboard objectives add extract.stats.doubleDiamond dummy
+scoreboard objectives add extract.stats.doubleGold dummy
+scoreboard objectives add extract.stats.kit dummy
 scoreboard objectives add extract.stats.game1completed dummy
 scoreboard objectives add extract.stats.game2completed dummy
 scoreboard objectives add extract.stats.game3completed dummy
@@ -84,6 +91,7 @@ scoreboard players set extract.handler extract.timer.delay1 0
 scoreboard players set extract.handler extract.timer.explanation 0
 scoreboard players set extract.handler extract.timer.delay2 0
 scoreboard players set extract.handler extract.timer.game 0
+scoreboard players set extract.handler extract.timer.game.round 0
 scoreboard players set extract.handler extract.timer.game.round1 0
 scoreboard players set extract.handler extract.timer.game.round2 0
 scoreboard players set extract.handler extract.timer.game.round3 0
@@ -98,6 +106,9 @@ scoreboard players set extract.handler extract.stats.roundsCompleted 0
 scoreboard players set @a extract.stats.deaths 0
 scoreboard players set @a extract.stats.diamondsMined 0
 scoreboard players set @a extract.stats.goldMined 0
+scoreboard players set @a extract.stats.doubleDiamond 0
+scoreboard players set @a extract.stats.doubleGold 0
+scoreboard players set @a extract.stats.kit 0
 scoreboard players set extract.handler extract.stats.game1completed 0
 scoreboard players set extract.handler extract.stats.game2completed 0
 scoreboard players set extract.handler extract.stats.game3completed 0

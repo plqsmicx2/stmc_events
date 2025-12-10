@@ -35,9 +35,11 @@ execute in extract:extract if score extract.handler extract.timer.explanation ma
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:"You may earn the following points when playing:",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Diamond Block: +",color:"red"},{text:"2",color:"dark_red"},{text:" point",color:"red"}]
-execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Gold Block: +",color:"red"},{text:"1",color:"dark_red"},{text:" point",color:"red"}]
+execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Diamond Block: +",color:"red"},{text:"2",color:"dark_red"},{text:" points",color:"red"}]
+execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Gold Block: +",color:"red"},{text:"1",color:"dark_red"},{text:" points",color:"red"}]
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a [{text:"Kill: +",color:"red"},{text:"1",color:"dark_red"},{text:" point",color:"red"}]
+execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
+execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:"Points earned from mining in the first 20 seconds will be worth double.",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
 
 # blurb #5
@@ -53,7 +55,7 @@ execute if score extract.handler extract.timer.explanation matches 799 run gamem
 execute if score extract.handler extract.timer.explanation matches 799 run gamemode spectator @a[team=SPECTATORS]
 execute in extract:extract if score extract.handler extract.timer.explanation matches 799 run teleport @a 0 101 -18 0 0
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:" "}
-execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:"The first round begins in about 20 seconds.",color:"red"}
+execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:"The first round begins in about 10 seconds.",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:"Good luck!",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:" "}

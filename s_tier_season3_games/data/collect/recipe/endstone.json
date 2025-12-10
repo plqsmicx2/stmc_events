@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#",
+        "WEW",
+        "#W#"
+    ],
+    "key": {
+        "#": "minecraft:cobblestone",
+        "W": "minecraft:white_dye",
+        "E": "minecraft:ender_pearl"
+    },
+    "result": {
+        "id": "minecraft:end_stone",
+        "count": 4
+    }
+}

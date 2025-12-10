@@ -23,7 +23,7 @@ execute if score spleef.handler spleef.timer.explanation matches 160 run tellraw
 # blurb #3
 execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 320 run tp @a -21 104 20 -135 -15
 execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:"There are three levels, each of which are smaller than the one above it.",color:"aqua"}
+execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:"There are three levels, each of which are equal size to the one above it.",color:"aqua"}
 execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:" "}
 execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:"The bottom layer will be unbreakable until thirty seconds have passed.",color:"aqua"}
 execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:" "}
@@ -39,7 +39,7 @@ execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a ["",{text:"You may also earn the following bonuses:",color:"aqua"}]
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a ["",{text:"Top 24: +",color:"aqua"},{"text":"4 points","color":"red"},{text:" | Top 16: +",color:"aqua"},{"text":"1 point","color":"red"}]
+execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a ["",{text:"Top 24: +",color:"aqua"},{"text":"2 points","color":"red"},{text:" | Top 20: +",color:"aqua"},{"text":"2 points","color":"red"}]
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a ["",{text:"Top 8: +",color:"aqua"},{"text":"1 point","color":"red"},{text:" | Top 4: +",color:"aqua"},{"text":"1 point","color":"red"}]
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a ["",{text:"Top 2: +",color:"aqua"},{"text":"1 point","color":"red"},{text:" | Top 1: +",color:"aqua"},{"text":"1 point","color":"red"}]
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}

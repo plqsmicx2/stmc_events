@@ -4,22 +4,25 @@
 execute as @a in trials:disco run spawnpoint @s ~ ~ ~
 
 # if the player falls into this region, kill them & give them a placement
-execute in trials:disco as @a[scores={disco.alive=1},x=-5,y=100,z=-5,dx=11,dy=2,dz=11] run scoreboard players set disco.handler disco.deathThisTick 1
-execute in trials:disco as @a[scores={disco.alive=1},x=-5,y=100,z=-5,dx=11,dy=2,dz=11] run scoreboard players set @s disco.alive 0
-execute in trials:disco as @a[scores={disco.alive=1},x=-5,y=100,z=-5,dx=11,dy=2,dz=11] run kill @s
+execute in trials:disco as @a[scores={disco.alive=1},x=-7,y=100,z=-7,dx=15,dy=13,dz=15] run scoreboard players set disco.handler disco.deathThisTick 1
+execute in trials:disco as @a[scores={disco.alive=1},x=-7,y=100,z=-7,dx=15,dy=13,dz=15] run tellraw @a [{text:"💀: ",color:red},{selector:"@s"}]
+execute in trials:disco as @a[scores={disco.alive=1},x=-7,y=100,z=-7,dx=15,dy=13,dz=15] run scoreboard players set @s disco.alive 0
 execute as @a[gamemode=!spectator,scores={disco.alive=0}] at @s run playsound minecraft:entity.player.death master @s ~ ~ ~
 execute as @a[gamemode=!spectator,scores={disco.alive=0}] run gamemode spectator @s
 
 # and award points to players still alive
 execute as @a[scores={disco.alive=1}] if score disco.handler disco.stage matches 3 if score disco.handler disco.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
 
+# check total # of players alive
+scoreboard players set disco.handler disco.players_alive 0
+execute as @a[scores={disco.alive=1}] run scoreboard players add disco.handler disco.players_alive 1
+
 # give everyone the placement of the current # of players alive IF they are still alive
 execute as @a[scores={disco.alive=1}] run scoreboard players set @s disco.points.placement 0
 execute as @a[scores={disco.alive=1}] run scoreboard players operation @s disco.points.placement = disco.handler disco.players_alive
 
-# check total # of players alive
-scoreboard players set disco.handler disco.players_alive 0
-execute as @a[scores={disco.alive=1}] run scoreboard players add disco.handler disco.players_alive 1
+# announce current placement/survival points
+function trials:disco/helper/point_announcements
 
 # next, let's check up on our teams
 # first we update the players alive of each team

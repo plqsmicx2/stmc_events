@@ -166,157 +166,14 @@ execute in extract:extract if score .extractData .time matches 40 \
         if score .extractData .slot8 matches 8 run clone 302 29 37 342 -3 64 -70 130 60
 
 # teleport players to their respective slots
-
-# slot 1-1
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot1 matches 1 as @a[team=RED_RACCOONS] run tp @s 50 134 50
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot1 matches 2 as @a[team=ORANGE_OTTERS] run tp @s 50 134 50
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot1 matches 3 as @a[team=PINK_PIKAS] run tp @s 50 134 50
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot1 matches 4 as @a[team=YELLOW_YAKS] run tp @s 50 134 50
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot1 matches 5 as @a[team=GREEN_GOATS] run tp @s 50 134 50
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot1 matches 6 as @a[team=CYAN_COUGARS] run tp @s 50 134 50
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot1 matches 7 as @a[team=PURPLE_PENGUINS] run tp @s 50 134 50
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot1 matches 8 as @a[team=BLUE_BEARS] run tp @s 50 134 50
-
-# slot 1-2
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot2 matches 1 as @a[team=RED_RACCOONS] run tp @s 50 134 4
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot2 matches 2 as @a[team=ORANGE_OTTERS] run tp @s 50 134 4
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot2 matches 3 as @a[team=PINK_PIKAS] run tp @s 50 134 4
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot2 matches 4 as @a[team=YELLOW_YAKS] run tp @s 50 134 4
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot2 matches 5 as @a[team=GREEN_GOATS] run tp @s 50 134 4
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot2 matches 6 as @a[team=CYAN_COUGARS] run tp @s 50 134 4
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot2 matches 7 as @a[team=PURPLE_PENGUINS] run tp @s 50 134 4
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot2 matches 8 as @a[team=BLUE_BEARS] run tp @s 50 134 4
-
-# slot 2-1
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot3 matches 1 as @a[team=RED_RACCOONS] run tp @s 50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot3 matches 2 as @a[team=ORANGE_OTTERS] run tp @s 50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot3 matches 3 as @a[team=PINK_PIKAS] run tp @s 50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot3 matches 4 as @a[team=YELLOW_YAKS] run tp @s 50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot3 matches 5 as @a[team=GREEN_GOATS] run tp @s 50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot3 matches 6 as @a[team=CYAN_COUGARS] run tp @s 50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot3 matches 7 as @a[team=PURPLE_PENGUINS] run tp @s 50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot3 matches 8 as @a[team=BLUE_BEARS] run tp @s 50 134 110
-
-# slot 2-2
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot4 matches 1 as @a[team=RED_RACCOONS] run tp @s 50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot4 matches 2 as @a[team=ORANGE_OTTERS] run tp @s 50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot4 matches 3 as @a[team=PINK_PIKAS] run tp @s 50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot4 matches 4 as @a[team=YELLOW_YAKS] run tp @s 50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot4 matches 5 as @a[team=GREEN_GOATS] run tp @s 50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot4 matches 6 as @a[team=CYAN_COUGARS] run tp @s 50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot4 matches 7 as @a[team=PURPLE_PENGUINS] run tp @s 50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot4 matches 8 as @a[team=BLUE_BEARS] run tp @s 50 134 64
-
-# slot 3-1
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot5 matches 1 as @a[team=RED_RACCOONS] run tp @s 0 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot5 matches 2 as @a[team=ORANGE_OTTERS] run tp @s 0 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot5 matches 3 as @a[team=PINK_PIKAS] run tp @s 0 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot5 matches 4 as @a[team=YELLOW_YAKS] run tp @s 0 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot5 matches 5 as @a[team=GREEN_GOATS] run tp @s 0 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot5 matches 6 as @a[team=CYAN_COUGARS] run tp @s 0 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot5 matches 7 as @a[team=PURPLE_PENGUINS] run tp @s 0 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot5 matches 8 as @a[team=BLUE_BEARS] run tp @s 0 134 110
-
-# slot 3-2
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot6 matches 1 as @a[team=RED_RACCOONS] run tp @s 0 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot6 matches 2 as @a[team=ORANGE_OTTERS] run tp @s 0 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot6 matches 3 as @a[team=PINK_PIKAS] run tp @s 0 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot6 matches 4 as @a[team=YELLOW_YAKS] run tp @s 0 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot6 matches 5 as @a[team=GREEN_GOATS] run tp @s 0 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot6 matches 6 as @a[team=CYAN_COUGARS] run tp @s 0 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot6 matches 7 as @a[team=PURPLE_PENGUINS] run tp @s 0 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot6 matches 8 as @a[team=BLUE_BEARS] run tp @s 0 134 64
-
-# slot 4-1
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot7 matches 1 as @a[team=RED_RACCOONS] run tp @s -50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot7 matches 2 as @a[team=ORANGE_OTTERS] run tp @s -50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot7 matches 3 as @a[team=PINK_PIKAS] run tp @s -50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot7 matches 4 as @a[team=YELLOW_YAKS] run tp @s -50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot7 matches 5 as @a[team=GREEN_GOATS] run tp @s -50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot7 matches 6 as @a[team=CYAN_COUGARS] run tp @s -50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot7 matches 7 as @a[team=PURPLE_PENGUINS] run tp @s -50 134 110
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot7 matches 8 as @a[team=BLUE_BEARS] run tp @s -50 134 110
-
-# slot 4-2
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot8 matches 1 as @a[team=RED_RACCOONS] run tp @s -50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot8 matches 2 as @a[team=ORANGE_OTTERS] run tp @s -50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot8 matches 3 as @a[team=PINK_PIKAS] run tp @s -50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot8 matches 4 as @a[team=YELLOW_YAKS] run tp @s -50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot8 matches 5 as @a[team=GREEN_GOATS] run tp @s -50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot8 matches 6 as @a[team=CYAN_COUGARS] run tp @s -50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot8 matches 7 as @a[team=PURPLE_PENGUINS] run tp @s -50 134 64
-execute in extract:extract if score .extractData .time matches 40 \
-        if score .extractData .slot8 matches 8 as @a[team=BLUE_BEARS] run tp @s -50 134 64
+execute in extract:extract if score .extractData .time matches 40 run function extract:helper/player_teleport with storage extract:map
 
 # summon armor stands & interaction entities
 
 # slot 1-1
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 55 134 50 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon interaction 55 134 50 {width:1f,height:2f,Tags:["zombie"]}
 
@@ -353,7 +210,7 @@ execute in extract:extract if score .extractData .time matches 45 run \
 # slot 1-2
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 45 134 4 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon interaction 45 134 4 {width:1f,height:2f,Tags:["zombie"]}
 
@@ -390,7 +247,7 @@ execute in extract:extract if score .extractData .time matches 45 run \
 # slot 2-1
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 55 134 110 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon interaction 55 134 110 {width:1f,height:2f,Tags:["zombie"]}
 
@@ -427,7 +284,7 @@ execute in extract:extract if score .extractData .time matches 45 run \
 # slot 2-2
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 45 134 64 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon interaction 45 134 64 {width:1f,height:2f,Tags:["zombie"]}
 
@@ -464,7 +321,7 @@ execute in extract:extract if score .extractData .time matches 45 run \
 # slot 3-1
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 5 134 110 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon interaction 5 134 110 {width:1f,height:2f,Tags:["zombie"]}
 
@@ -501,7 +358,7 @@ execute in extract:extract if score .extractData .time matches 45 run \
 # slot 3-2
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -5 134 64 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon interaction -5 134 64 {width:1f,height:2f,Tags:["zombie"]}
 
@@ -538,7 +395,7 @@ execute in extract:extract if score .extractData .time matches 45 run \
 # slot 4-1
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -45 134 110 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon interaction -45 134 110 {width:1f,height:2f,Tags:["zombie"]}
 
@@ -575,7 +432,7 @@ execute in extract:extract if score .extractData .time matches 45 run \
 # slot 4-2
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -55 134 64 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:iron_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in extract:extract if score .extractData .time matches 45 run \ 
         summon interaction -55 134 64 {width:1f,height:2f,Tags:["zombie"]}
 

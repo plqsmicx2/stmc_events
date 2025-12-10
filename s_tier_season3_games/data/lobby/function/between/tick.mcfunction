@@ -1,20 +1,22 @@
 # tick function for lobbies between games (and the first one)
 
 # run every tick
-function lobby:between/sidebar
-
-# run start function if needed
-execute unless score lobby.handler lobby.stage matches 0.. run function lobby:between/start
+function lobby:between/sidebar with storage stmc:global
 
 # update timer
 scoreboard players add lobby.handler lobby.timer 1
 
-# update elapsed secs & mins
-scoreboard players add lobby.handler lobby.timer.temp 1
-execute if score lobby.handler lobby.timer.temp matches 20 run scoreboard players add lobby.handler lobby.timer.secs 1
-execute if score lobby.handler lobby.timer.temp matches 20 run scoreboard players set lobby.handler lobby.timer.temp 0
-execute if score lobby.handler lobby.timer.secs matches 60 run scoreboard players add lobby.handler lobby.timer.mins 1
-execute if score lobby.handler lobby.timer.secs matches 60 run scoreboard players set lobby.handler lobby.timer.secs 0
+# prevent weird red wool bug
+execute in lobby:lobby if score lobby.handler lobby.timer matches 2..20 run setblock 0 100 0 air
+
+# reset voting chests
+execute in lobby:lobby if score lobby.handler lobby.timer matches 1 run forceload add -100 -100 100 100
+execute in lobby:lobby if score lobby.handler lobby.timer matches 2 run kill @e[type=item]
+execute in lobby:lobby if score lobby.handler lobby.timer matches 2 run fill 10 45 90 30 40 -90 air replace chest[facing=east] destroy
+execute in lobby:lobby if score lobby.handler lobby.timer matches 3 as @e[type=item] at @s positioned as @s run \
+        setblock ~ ~ ~ chest[facing=east]
+execute in lobby:lobby if score lobby.handler lobby.timer matches 4 run kill @e[type=item,nbt={Item:{id:"minecraft:chest"}}]
+execute in lobby:lobby if score lobby.handler lobby.timer matches 5 run forceload remove -100 -100 100 100
 
 # run collect stage if we haven't reached switch time
 execute if score lobby.handler lobby.timer < lobby.handler lobby.timer.switch run function lobby:between/collect_stage

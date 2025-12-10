@@ -7,12 +7,9 @@
 # 3- game
 # 4- delay3 (reset & point announcement)
 
-# run load function if this is our first time here
-execute unless score solve.handler solve.stage matches 0.. run function solve:load
-
 # run functions every tick
 execute if score solve.handler solve.stage matches 3..4 run function solve:points_update
-function solve:sidebar
+function solve:sidebar with storage stmc:global
 
 # if we're in stage 0, increment timer
 execute if score solve.handler solve.stage matches 0 run scoreboard players add solve.handler solve.timer.delay1 1

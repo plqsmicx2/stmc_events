@@ -52,11 +52,11 @@ scoreboard players set sg.r1.handler sg.r1.currentPlacement 1
 scoreboard players operation sg.r1.handler sg.r1.currentPlacement += sg.r1.handler sg.teams_alive
 
 # and if any teams need their placement set, let's do that now
-execute if score sg.RedRaccoons sg.players_alive matches 0 unless score sg.RedRaccoons sg.r1.teamPlacement matches 1..6 run scoreboard players operation sg.RedRaccoons sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
-execute if score sg.OrangeOtters sg.players_alive matches 0 unless score sg.OrangeOtters sg.r1.teamPlacement matches 1..6 run scoreboard players operation sg.OrangeOtters sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
-execute if score sg.PinkPikas sg.players_alive matches 0 unless score sg.PinkPikas sg.r1.teamPlacement matches 1..6 run scoreboard players operation sg.PinkPikas sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
-execute if score sg.YellowYaks sg.players_alive matches 0 unless score sg.YellowYaks sg.r1.teamPlacement matches 1..6 run scoreboard players operation sg.YellowYaks sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
-execute if score sg.GreenGoats sg.players_alive matches 0 unless score sg.GreenGoats sg.r1.teamPlacement matches 1..6 run scoreboard players operation sg.GreenGoats sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
-execute if score sg.CyanCougars sg.players_alive matches 0 unless score sg.CyanCougars sg.r1.teamPlacement matches 1..6 run scoreboard players operation sg.CyanCougars sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
-execute if score sg.PurplePenguins sg.players_alive matches 0 unless score sg.PurplePenguins sg.r1.teamPlacement matches 1..6 run scoreboard players operation sg.PurplePenguins sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
-execute if score sg.BlueBears sg.players_alive matches 0 unless score sg.BlueBears sg.r1.teamPlacement matches 1..6 run scoreboard players operation sg.BlueBears sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
+execute if score sg.RedRaccoons sg.players_alive matches 0 unless score sg.RedRaccoons sg.r1.teamPlacement matches 1..8 run scoreboard players operation sg.RedRaccoons sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
+execute if score sg.OrangeOtters sg.players_alive matches 0 unless score sg.OrangeOtters sg.r1.teamPlacement matches 1..8 run scoreboard players operation sg.OrangeOtters sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
+execute if score sg.PinkPikas sg.players_alive matches 0 unless score sg.PinkPikas sg.r1.teamPlacement matches 1..8 run scoreboard players operation sg.PinkPikas sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
+execute if score sg.YellowYaks sg.players_alive matches 0 unless score sg.YellowYaks sg.r1.teamPlacement matches 1..8 run scoreboard players operation sg.YellowYaks sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
+execute if score sg.GreenGoats sg.players_alive matches 0 unless score sg.GreenGoats sg.r1.teamPlacement matches 1..8 run scoreboard players operation sg.GreenGoats sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
+execute if score sg.CyanCougars sg.players_alive matches 0 unless score sg.CyanCougars sg.r1.teamPlacement matches 1..8 run scoreboard players operation sg.CyanCougars sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
+execute if score sg.PurplePenguins sg.players_alive matches 0 unless score sg.PurplePenguins sg.r1.teamPlacement matches 1..8 run scoreboard players operation sg.PurplePenguins sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement
+execute if score sg.BlueBears sg.players_alive matches 0 unless score sg.BlueBears sg.r1.teamPlacement matches 1..8 run scoreboard players operation sg.BlueBears sg.r1.teamPlacement = sg.r1.handler sg.r1.currentPlacement

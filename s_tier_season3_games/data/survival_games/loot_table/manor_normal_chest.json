@@ -2,11 +2,11 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "rolls": 10,
+      "rolls": 8,
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 395
+          "weight": 250
         },
         {
           "type": "minecraft:item",
@@ -183,11 +183,6 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_helmet",
           "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:shield",
-          "weight": 4
         },
         {
           "type": "minecraft:item",

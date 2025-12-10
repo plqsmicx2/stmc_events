@@ -15,5 +15,8 @@ execute if score stmc.handler event.stage matches 14 run scoreboard players set 
 # increment stage
 scoreboard players add stmc.handler event.stage 1
 
+# update lobby stage
+scoreboard players reset lobby.handler lobby.stage
+
 # run brawl load function
 function survival_games:load

@@ -6,66 +6,45 @@
 # sets team color
 # sets team prefix
 
-# Red Raccoons
-team add RED_RACCOONS {"text": "Red Raccoons", "color": "red"}
-team modify RED_RACCOONS color red
-team modify RED_RACCOONS prefix {"text": "\ua000", "font": "team_logos:red_raccoons"}
+# set the name of the event
+data modify storage stmc:global eventName set value "  STMC Reloaded II  "
+data modify storage stmc:global redName set value "Red Raccoons"
+data modify storage stmc:global orangeName set value "Orange Otters"
+data modify storage stmc:global pinkName set value "Pink Pikas"
+data modify storage stmc:global yellowName set value "Yellow Yaks"
+data modify storage stmc:global greenName set value "Green Goats"
+data modify storage stmc:global cyanName set value "Cyan Cougars"
+data modify storage stmc:global purpleName set value "Purple Penguins"
+data modify storage stmc:global blueName set value "Cobalt"
 
-# Orange Otters
-team add ORANGE_OTTERS {"text": "Orange Otters", "color": "gold"}
-team modify ORANGE_OTTERS color gold
-team modify ORANGE_OTTERS prefix {"text": "\ua000", "font": "team_logos:orange_otters"}
+# reset our booleans tracking if games have been played (& set games not being played to -1)
+data modify storage stmc:global racePlayed set value 0
+data modify storage stmc:global solvePlayed set value 0
+data modify storage stmc:global trialsPlayed set value 0
+data modify storage stmc:global collectPlayed set value -1
+data modify storage stmc:global delvePlayed set value -1
+data modify storage stmc:global minePlayed set value 0
+data modify storage stmc:global extractPlayed set value 0
+data modify storage stmc:global blitzPlayed set value 0
+data modify storage stmc:global brawlPlayed set value 0
 
-# Pink Pikas
-team add PINK_PIKAS {"text": "Pink Pikas", "color": "light_purple"}
-team modify PINK_PIKAS color light_purple
-team modify PINK_PIKAS prefix {"text": "\ua000", "font": "team_logos:pink_pikas"}
+# create teams
+function thread:create_teams with storage stmc:global
 
-# Yellow Yaks
-team add YELLOW_YAKS {"text": "Yellow Yaks", "color": "yellow"}
-team modify YELLOW_YAKS color yellow
-team modify YELLOW_YAKS prefix {"text": "\ua000", "font": "team_logos:yellow_yaks"}
-
-# Green Goats
-team add GREEN_GOATS {"text": "Green Goats", "color": "dark_green"}
-team modify GREEN_GOATS color dark_green
-team modify GREEN_GOATS prefix {"text": "\ua000", "font": "team_logos:green_goats"}
-
-# Cyan Cougars
-team add CYAN_COUGARS {"text": "Cyan Cougars", "color": "dark_aqua"}
-team modify CYAN_COUGARS color dark_aqua
-team modify CYAN_COUGARS prefix {"text": "\ua000", "font": "team_logos:cyan_cougars"}
-
-# Purple Penguins
-team add PURPLE_PENGUINS {"text": "Purple Penguins", "color": "dark_purple"}
-team modify PURPLE_PENGUINS color dark_purple
-team modify PURPLE_PENGUINS prefix {"text": "\ua000", "font": "team_logos:purple_penguins"}
-
-# Blue Bears
-team add BLUE_BEARS {"text": "Blue Bears", "color": "blue"}
-team modify BLUE_BEARS color blue
-team modify BLUE_BEARS prefix {"text": "\ua000", "font": "team_logos:blue_bears"}
-
-# Spectators
-team add SPECTATORS {"text": "Spectators", "color": "gray"}
-team modify SPECTATORS color gray
-
-# prevent killing teammates
-team modify RED_RACCOONS friendlyFire false
-team modify ORANGE_OTTERS friendlyFire false
-team modify PINK_PIKAS friendlyFire false
-team modify YELLOW_YAKS friendlyFire false
-team modify GREEN_GOATS friendlyFire false
-team modify CYAN_COUGARS friendlyFire false
-team modify PURPLE_PENGUINS friendlyFire false
-team modify BLUE_BEARS friendlyFire false
-team modify SPECTATORS friendlyFire false
+# set some global defaults
+execute as @a run attribute @s max_health base set 20
 
 # create global scoreboards
 # records if the event is currently paused
 scoreboard objectives add event.paused dummy
 # records the current stage
 scoreboard objectives add event.stage dummy
+# records if teams should be automatically assigned
+scoreboard objectives add event.teamAssignment dummy
+# records if the default sidebar should be loaded
+scoreboard objectives add event.defSidebar dummy
+# records # of players in the event
+scoreboard objectives add event.players dummy
 # tracks points of team [is always set based on sum of @a[team=...] indiv]
 scoreboard objectives add stats.points.team dummy
 scoreboard objectives add stats.points.team.rank dummy
@@ -121,28 +100,32 @@ scoreboard objectives add event.timer.post_game dummy
 scoreboard players set stmc.handler event.paused 1
 # /reset functions will increment the stage
 scoreboard players set stmc.handler event.stage 0
+# will be turned off if a player's team must be swapped
+scoreboard players set stmc.handler event.teamAssignment 1
+# will be turned off if a different sidebar should be loaded
+scoreboard players set stmc.handler event.defSidebar 1
 
 # everyone starts with 0 invested tokens
 scoreboard players set @a event.voting.investedTokens 0
 scoreboard players set @a event.voting.investedTokensTemp 0
 
 # and set some multiplier values
-scoreboard players set stmc.handler event.multipliers.g1 100
-scoreboard players set stmc.handler event.multipliers.g2 100
-scoreboard players set stmc.handler event.multipliers.g3 125
-scoreboard players set stmc.handler event.multipliers.g4 125
-scoreboard players set stmc.handler event.multipliers.g5 150
-scoreboard players set stmc.handler event.multipliers.g6 150
-scoreboard players set stmc.handler event.multipliers.g7 175
-scoreboard players set stmc.handler event.multipliers.g8 200
-scoreboard players set stmc.handler event.multipliers.precision 100
+scoreboard players set #math event.multipliers.g1 100
+scoreboard players set #math event.multipliers.g2 100
+scoreboard players set #math event.multipliers.g3 125
+scoreboard players set #math event.multipliers.g4 125
+scoreboard players set #math event.multipliers.g5 150
+scoreboard players set #math event.multipliers.g6 150
+scoreboard players set #math event.multipliers.g7 175
+scoreboard players set #math event.multipliers.g8 200
+scoreboard players set #math event.multipliers.precision 100
 
 # and reset each timer
 scoreboard players set stmc.handler event.timer.pre_game 0
 scoreboard players set stmc.handler event.timer.bgActive 0
 scoreboard players set stmc.handler event.timer.bgTickCount 0
 scoreboard players set stmc.handler event.timer.bgSecs 0
-scoreboard players set stmc.handler event.timer.bgMins 2
+scoreboard players set stmc.handler event.timer.bgMins 0
 scoreboard players set stmc.handler event.timer.post_game 0
 
 # and finally, create each game thread's scoreboard
@@ -155,6 +138,7 @@ scoreboard objectives add delve.stage dummy
 scoreboard objectives add sg.stage dummy
 scoreboard objectives add mine.stage dummy
 scoreboard objectives add blitz.stage dummy
+scoreboard objectives add collect.stage dummy
 scoreboard objectives add finale.stage dummy
 
 # and reset handlers associated with each one
@@ -165,8 +149,9 @@ scoreboard players reset solve.handler solve.stage
 scoreboard players reset tr.handler tr.stage
 scoreboard players reset delve.handler delve.stage
 scoreboard players reset sg.handler sg.stage
-scoreboard players reset mine.handler sg.stage
-scoreboard players reset blitz.handler sg.stage
+scoreboard players reset mine.handler mine.stage
+scoreboard players reset blitz.handler blitz.stage
+scoreboard players reset collect.handler collect.stage
 scoreboard players reset finale.handler finale.stage
 
 # reset player points
@@ -178,5 +163,16 @@ scoreboard players set @a stats.points.indiv.g5 0
 scoreboard players set @a stats.points.indiv.g6 0
 scoreboard players set @a stats.points.indiv.g7 0
 scoreboard players set @a stats.points.indiv.g8 0
-function lobby:points_update
-function lobby:sidebar
+
+# reset team stats
+scoreboard players set team.RedRaccoons stats.winningTeam 0
+scoreboard players set team.OrangeOtters stats.winningTeam 0
+scoreboard players set team.PinkPikas stats.winningTeam 0
+scoreboard players set team.YellowYaks stats.winningTeam 0
+scoreboard players set team.GreenGoats stats.winningTeam 0
+scoreboard players set team.CyanCougars stats.winningTeam 0
+scoreboard players set team.PurplePenguins stats.winningTeam 0
+scoreboard players set team.BlueBears stats.winningTeam 0
+
+scoreboard objectives remove lobby.sidebar
+function thread:default_sidebar

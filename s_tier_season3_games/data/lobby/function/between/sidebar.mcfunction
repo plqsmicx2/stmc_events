@@ -13,7 +13,8 @@
 # <team color><Team>: <TeamPoints><team color>
 # <team color><Team>: <TeamPoints><team color>
 
-scoreboard objectives add lobby.sidebar dummy {"text": "  STMC Open  ", "color": "green", "bold": true}
+scoreboard objectives add lobby.sidebar dummy
+$scoreboard objectives modify lobby.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar lobby.sidebar
 
 # <===== BUILD FROM THE BOTTOM =====>
@@ -30,21 +31,21 @@ scoreboard players reset team.BlueBears lobby.sidebar
 
 # they'll be automatically ranked by the scoreboard itself
 scoreboard players operation team.RedRaccoons lobby.sidebar = team.RedRaccoons stats.points.team
-scoreboard players display name team.RedRaccoons lobby.sidebar {"text": "  Red Raccoons", "color": "red"}
+$scoreboard players display name team.RedRaccoons lobby.sidebar {"text": "  $(redName)", "color": "red"}
 scoreboard players operation team.OrangeOtters lobby.sidebar = team.OrangeOtters stats.points.team
-scoreboard players display name team.OrangeOtters lobby.sidebar {"text": "  Orange Otters", "color": "gold"}
+$scoreboard players display name team.OrangeOtters lobby.sidebar {"text": "  $(orangeName)", "color": "gold"}
 scoreboard players operation team.PinkPikas lobby.sidebar = team.PinkPikas stats.points.team
-scoreboard players display name team.PinkPikas lobby.sidebar {"text": "  Pink Pikas", "color": "light_purple"}
+$scoreboard players display name team.PinkPikas lobby.sidebar {"text": "  $(pinkName)", "color": "light_purple"}
 scoreboard players operation team.YellowYaks lobby.sidebar = team.YellowYaks stats.points.team
-scoreboard players display name team.YellowYaks lobby.sidebar {"text": "  Yellow Yaks", "color": "yellow"}
+$scoreboard players display name team.YellowYaks lobby.sidebar {"text": "  $(yellowName)", "color": "yellow"}
 scoreboard players operation team.GreenGoats lobby.sidebar = team.GreenGoats stats.points.team
-scoreboard players display name team.GreenGoats lobby.sidebar {"text": "  Green Goats", "color": "dark_green"}
+$scoreboard players display name team.GreenGoats lobby.sidebar {"text": "  $(greenName)", "color": "dark_green"}
 scoreboard players operation team.CyanCougars lobby.sidebar = team.CyanCougars stats.points.team
-scoreboard players display name team.CyanCougars lobby.sidebar {"text": "  Cyan Cougars", "color": "dark_aqua"}
+$scoreboard players display name team.CyanCougars lobby.sidebar {"text": "  $(cyanName)", "color": "dark_aqua"}
 scoreboard players operation team.PurplePenguins lobby.sidebar = team.PurplePenguins stats.points.team
-scoreboard players display name team.PurplePenguins lobby.sidebar {"text": "  Purple Penguins", "color": "dark_purple"}
+$scoreboard players display name team.PurplePenguins lobby.sidebar {"text": "  $(purpleName)", "color": "dark_purple"}
 scoreboard players operation team.BlueBears lobby.sidebar = team.BlueBears stats.points.team
-scoreboard players display name team.BlueBears lobby.sidebar {"text": "  Blue Bears", "color": "blue"}
+$scoreboard players display name team.BlueBears lobby.sidebar {"text": "  $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS team.RedRaccoons
@@ -60,20 +61,18 @@ team join BLUE_BEARS team.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: lobby.sidebar 20000
+scoreboard players set §e§lPoints: lobby.sidebar 5000
 
 # blank line
-scoreboard players set §a lobby.sidebar 20001
+scoreboard players set §a lobby.sidebar 5001
 
 # timer
-scoreboard players set lobby.timer lobby.sidebar 20002
-execute unless score stmc.handler event.stage matches 13.. if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
-execute unless score stmc.handler event.stage matches 13.. if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
-execute if score stmc.handler event.stage matches 13 run scoreboard players display name lobby.timer lobby.sidebar {text:"Finale!",color:white,bold:true}
-execute if score stmc.handler event.stage matches 14 run scoreboard players display name lobby.timer lobby.sidebar {text:"THANKS FOR PLAYING!",color:red,bold:true}
+scoreboard players set lobby.timer lobby.sidebar 5002
+execute if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+execute if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
 
 # blank line
-scoreboard players set §b lobby.sidebar 20003
+scoreboard players set §b lobby.sidebar 5003
 
 # set the players' actionbar to their individual rank & points
 execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]

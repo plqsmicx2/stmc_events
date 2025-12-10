@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#S#",
+        "SCS",
+        "#S#"
+    ],
+    "key": {
+        "#": "minecraft:blue_wool",
+        "S": "minecraft:sand",
+        "C": "minecraft:cooked_cod"
+    },
+    "result": {
+        "id": "minecraft:heart_of_the_sea",
+        "count": 1
+    }
+}

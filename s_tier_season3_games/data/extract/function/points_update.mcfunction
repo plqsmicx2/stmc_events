@@ -4,90 +4,135 @@
 
 # the function will then sum up team points
 
-# and finally set total lap time as the actionbar
+# and finally set individual points as the actionbar
 
-# <===== PLAYER POINTS =====>
-
-# diamonds
+# helpers
+scoreboard objectives add .double dummy
+scoreboard players set #math .double 2
 scoreboard objectives add extract.points.diamondPoints dummy
+scoreboard objectives add extract.points.goldPoints dummy
+scoreboard objectives add extract.points.killPoints dummy
 
+# <===== TEAM POINTS =====>
+
+# red
 scoreboard players set extract.RedRaccoons extract.points.diamondPoints 0
+execute as @a[team=RED_RACCOONS] run scoreboard players operation extract.RedRaccoons extract.points.diamondPoints += @s extract.stats.doubleDiamond
+scoreboard players operation extract.RedRaccoons extract.points.diamondPoints *= #math .double
 execute as @a[team=RED_RACCOONS] run scoreboard players operation extract.RedRaccoons extract.points.diamondPoints += @s extract.stats.diamondsMined
 scoreboard players operation extract.RedRaccoons extract.points.diamondPoints *= extract.handler extract.points.diamondValue
-scoreboard players set extract.OrangeOtters extract.points.diamondPoints 0
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation extract.OrangeOtters extract.points.diamondPoints += @s extract.stats.diamondsMined
-scoreboard players operation extract.OrangeOtters extract.points.diamondPoints *= extract.handler extract.points.diamondValue
-scoreboard players set extract.PinkPikas extract.points.diamondPoints 0
-execute as @a[team=PINK_PIKAS] run scoreboard players operation extract.PinkPikas extract.points.diamondPoints += @s extract.stats.diamondsMined
-scoreboard players operation extract.PinkPikas extract.points.diamondPoints *= extract.handler extract.points.diamondValue
-scoreboard players set extract.YellowYaks extract.points.diamondPoints 0
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation extract.YellowYaks extract.points.diamondPoints += @s extract.stats.diamondsMined
-scoreboard players operation extract.YellowYaks extract.points.diamondPoints *= extract.handler extract.points.diamondValue
-scoreboard players set extract.GreenGoats extract.points.diamondPoints 0
-execute as @a[team=GREEN_GOATS] run scoreboard players operation extract.GreenGoats extract.points.diamondPoints += @s extract.stats.diamondsMined
-scoreboard players operation extract.GreenGoats extract.points.diamondPoints *= extract.handler extract.points.diamondValue
-scoreboard players set extract.CyanCougars extract.points.diamondPoints 0
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation extract.CyanCougars extract.points.diamondPoints += @s extract.stats.diamondsMined
-scoreboard players operation extract.CyanCougars extract.points.diamondPoints *= extract.handler extract.points.diamondValue
-scoreboard players set extract.PurplePenguins extract.points.diamondPoints 0
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation extract.PurplePenguins extract.points.diamondPoints += @s extract.stats.diamondsMined
-scoreboard players operation extract.PurplePenguins extract.points.diamondPoints *= extract.handler extract.points.diamondValue
-scoreboard players set extract.BlueBears extract.points.diamondPoints 0
-execute as @a[team=BLUE_BEARS] run scoreboard players operation extract.BlueBears extract.points.diamondPoints += @s extract.stats.diamondsMined
-scoreboard players operation extract.BlueBears extract.points.diamondPoints *= extract.handler extract.points.diamondValue
-
-# gold
-scoreboard objectives add extract.points.goldPoints dummy
 
 scoreboard players set extract.RedRaccoons extract.points.goldPoints 0
+execute as @a[team=RED_RACCOONS] run scoreboard players operation extract.RedRaccoons extract.points.goldPoints += @s extract.stats.doubleGold
+scoreboard players operation extract.RedRaccoons extract.points.goldPoints *= #math .double
 execute as @a[team=RED_RACCOONS] run scoreboard players operation extract.RedRaccoons extract.points.goldPoints += @s extract.stats.goldMined
 scoreboard players operation extract.RedRaccoons extract.points.goldPoints *= extract.handler extract.points.goldValue
-scoreboard players set extract.OrangeOtters extract.points.goldPoints 0
-execute as @a[team=ORANGE_OTTERS] run scoreboard players operation extract.OrangeOtters extract.points.goldPoints += @s extract.stats.goldMined
-scoreboard players operation extract.OrangeOtters extract.points.goldPoints *= extract.handler extract.points.goldValue
-scoreboard players set extract.PinkPikas extract.points.goldPoints 0
-execute as @a[team=PINK_PIKAS] run scoreboard players operation extract.PinkPikas extract.points.goldPoints += @s extract.stats.goldMined
-scoreboard players operation extract.PinkPikas extract.points.goldPoints *= extract.handler extract.points.goldValue
-scoreboard players set extract.YellowYaks extract.points.goldPoints 0
-execute as @a[team=YELLOW_YAKS] run scoreboard players operation extract.YellowYaks extract.points.goldPoints += @s extract.stats.goldMined
-scoreboard players operation extract.YellowYaks extract.points.goldPoints *= extract.handler extract.points.goldValue
-scoreboard players set extract.GreenGoats extract.points.goldPoints 0
-execute as @a[team=GREEN_GOATS] run scoreboard players operation extract.GreenGoats extract.points.goldPoints += @s extract.stats.goldMined
-scoreboard players operation extract.GreenGoats extract.points.goldPoints *= extract.handler extract.points.goldValue
-scoreboard players set extract.CyanCougars extract.points.goldPoints 0
-execute as @a[team=CYAN_COUGARS] run scoreboard players operation extract.CyanCougars extract.points.goldPoints += @s extract.stats.goldMined
-scoreboard players operation extract.CyanCougars extract.points.goldPoints *= extract.handler extract.points.goldValue
-scoreboard players set extract.PurplePenguins extract.points.goldPoints 0
-execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation extract.PurplePenguins extract.points.goldPoints += @s extract.stats.goldMined
-scoreboard players operation extract.PurplePenguins extract.points.goldPoints *= extract.handler extract.points.goldValue
-scoreboard players set extract.BlueBears extract.points.goldPoints 0
-execute as @a[team=BLUE_BEARS] run scoreboard players operation extract.BlueBears extract.points.goldPoints += @s extract.stats.goldMined
-scoreboard players operation extract.BlueBears extract.points.goldPoints *= extract.handler extract.points.goldValue
-
-# kills
-scoreboard objectives add extract.points.killPoints dummy
 
 scoreboard players set extract.RedRaccoons extract.points.killPoints 0
 execute as @a[team=RED_RACCOONS] run scoreboard players operation extract.RedRaccoons extract.points.killPoints += @s extract.stats.kills
 scoreboard players operation extract.RedRaccoons extract.points.killPoints *= extract.handler extract.points.killValue
+
+# orange
+scoreboard players set extract.OrangeOtters extract.points.diamondPoints 0
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation extract.OrangeOtters extract.points.diamondPoints += @s extract.stats.doubleDiamond
+scoreboard players operation extract.OrangeOtters extract.points.diamondPoints *= #math .double
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation extract.OrangeOtters extract.points.diamondPoints += @s extract.stats.diamondsMined
+scoreboard players operation extract.OrangeOtters extract.points.diamondPoints *= extract.handler extract.points.diamondValue
+scoreboard players set extract.OrangeOtters extract.points.goldPoints 0
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation extract.OrangeOtters extract.points.goldPoints += @s extract.stats.doubleGold
+scoreboard players operation extract.OrangeOtters extract.points.goldPoints *= #math .double
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation extract.OrangeOtters extract.points.goldPoints += @s extract.stats.goldMined
+scoreboard players operation extract.OrangeOtters extract.points.goldPoints *= extract.handler extract.points.goldValue
 scoreboard players set extract.OrangeOtters extract.points.killPoints 0
 execute as @a[team=ORANGE_OTTERS] run scoreboard players operation extract.OrangeOtters extract.points.killPoints += @s extract.stats.kills
 scoreboard players operation extract.OrangeOtters extract.points.killPoints *= extract.handler extract.points.killValue
+
+# pink
+scoreboard players set extract.PinkPikas extract.points.diamondPoints 0
+execute as @a[team=PINK_PIKAS] run scoreboard players operation extract.PinkPikas extract.points.diamondPoints += @s extract.stats.doubleDiamond
+scoreboard players operation extract.PinkPikas extract.points.diamondPoints *= #math .double
+execute as @a[team=PINK_PIKAS] run scoreboard players operation extract.PinkPikas extract.points.diamondPoints += @s extract.stats.diamondsMined
+scoreboard players operation extract.PinkPikas extract.points.diamondPoints *= extract.handler extract.points.diamondValue
+scoreboard players set extract.PinkPikas extract.points.goldPoints 0
+execute as @a[team=PINK_PIKAS] run scoreboard players operation extract.PinkPikas extract.points.goldPoints += @s extract.stats.doubleGold
+scoreboard players operation extract.PinkPikas extract.points.goldPoints *= #math .double
+execute as @a[team=PINK_PIKAS] run scoreboard players operation extract.PinkPikas extract.points.goldPoints += @s extract.stats.goldMined
+scoreboard players operation extract.PinkPikas extract.points.goldPoints *= extract.handler extract.points.goldValue
 scoreboard players set extract.PinkPikas extract.points.killPoints 0
 execute as @a[team=PINK_PIKAS] run scoreboard players operation extract.PinkPikas extract.points.killPoints += @s extract.stats.kills
 scoreboard players operation extract.PinkPikas extract.points.killPoints *= extract.handler extract.points.killValue
-scoreboard players set extract.GreenGoats extract.points.killPoints 0
+
+# yellow
+scoreboard players set extract.YellowYaks extract.points.diamondPoints 0
+execute as @a[team=YELLOW_YAKS] run scoreboard players operation extract.YellowYaks extract.points.diamondPoints += @s extract.stats.doubleDiamond
+scoreboard players operation extract.YellowYaks extract.points.diamondPoints *= #math .double
+execute as @a[team=YELLOW_YAKS] run scoreboard players operation extract.YellowYaks extract.points.diamondPoints += @s extract.stats.diamondsMined
+scoreboard players operation extract.YellowYaks extract.points.diamondPoints *= extract.handler extract.points.diamondValue
+scoreboard players set extract.YellowYaks extract.points.goldPoints 0
+execute as @a[team=YELLOW_YAKS] run scoreboard players operation extract.YellowYaks extract.points.goldPoints += @s extract.stats.doubleGold
+scoreboard players operation extract.YellowYaks extract.points.goldPoints *= #math .double
+execute as @a[team=YELLOW_YAKS] run scoreboard players operation extract.YellowYaks extract.points.goldPoints += @s extract.stats.goldMined
+scoreboard players operation extract.YellowYaks extract.points.goldPoints *= extract.handler extract.points.goldValue
 scoreboard players set extract.YellowYaks extract.points.killPoints 0
 execute as @a[team=YELLOW_YAKS] run scoreboard players operation extract.YellowYaks extract.points.killPoints += @s extract.stats.kills
 scoreboard players operation extract.YellowYaks extract.points.killPoints *= extract.handler extract.points.killValue
+
+# green
+scoreboard players set extract.GreenGoats extract.points.diamondPoints 0
+execute as @a[team=GREEN_GOATS] run scoreboard players operation extract.GreenGoats extract.points.diamondPoints += @s extract.stats.doubleDiamond
+scoreboard players operation extract.GreenGoats extract.points.diamondPoints *= #math .double
+execute as @a[team=GREEN_GOATS] run scoreboard players operation extract.GreenGoats extract.points.diamondPoints += @s extract.stats.diamondsMined
+scoreboard players operation extract.GreenGoats extract.points.diamondPoints *= extract.handler extract.points.diamondValue
+scoreboard players set extract.GreenGoats extract.points.goldPoints 0
+execute as @a[team=GREEN_GOATS] run scoreboard players operation extract.GreenGoats extract.points.goldPoints += @s extract.stats.doubleGold
+scoreboard players operation extract.GreenGoats extract.points.goldPoints *= #math .double
+execute as @a[team=GREEN_GOATS] run scoreboard players operation extract.GreenGoats extract.points.goldPoints += @s extract.stats.goldMined
+scoreboard players operation extract.GreenGoats extract.points.goldPoints *= extract.handler extract.points.goldValue
+scoreboard players set extract.GreenGoats extract.points.killPoints 0
 execute as @a[team=GREEN_GOATS] run scoreboard players operation extract.GreenGoats extract.points.killPoints += @s extract.stats.kills
 scoreboard players operation extract.GreenGoats extract.points.killPoints *= extract.handler extract.points.killValue
+
+# cyan
+scoreboard players set extract.CyanCougars extract.points.diamondPoints 0
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation extract.CyanCougars extract.points.diamondPoints += @s extract.stats.doubleDiamond
+scoreboard players operation extract.CyanCougars extract.points.diamondPoints *= #math .double
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation extract.CyanCougars extract.points.diamondPoints += @s extract.stats.diamondsMined
+scoreboard players operation extract.CyanCougars extract.points.diamondPoints *= extract.handler extract.points.diamondValue
+scoreboard players set extract.CyanCougars extract.points.goldPoints 0
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation extract.CyanCougars extract.points.goldPoints += @s extract.stats.doubleGold
+scoreboard players operation extract.CyanCougars extract.points.goldPoints *= #math .double
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation extract.CyanCougars extract.points.goldPoints += @s extract.stats.goldMined
+scoreboard players operation extract.CyanCougars extract.points.goldPoints *= extract.handler extract.points.goldValue
 scoreboard players set extract.CyanCougars extract.points.killPoints 0
 execute as @a[team=CYAN_COUGARS] run scoreboard players operation extract.CyanCougars extract.points.killPoints += @s extract.stats.kills
 scoreboard players operation extract.CyanCougars extract.points.killPoints *= extract.handler extract.points.killValue
+
+# purple
+scoreboard players set extract.PurplePenguins extract.points.diamondPoints 0
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation extract.PurplePenguins extract.points.diamondPoints += @s extract.stats.doubleDiamond
+scoreboard players operation extract.PurplePenguins extract.points.diamondPoints *= #math .double
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation extract.PurplePenguins extract.points.diamondPoints += @s extract.stats.diamondsMined
+scoreboard players operation extract.PurplePenguins extract.points.diamondPoints *= extract.handler extract.points.diamondValue
+scoreboard players set extract.PurplePenguins extract.points.goldPoints 0
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation extract.PurplePenguins extract.points.goldPoints += @s extract.stats.doubleGold
+scoreboard players operation extract.PurplePenguins extract.points.goldPoints *= #math .double
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation extract.PurplePenguins extract.points.goldPoints += @s extract.stats.goldMined
+scoreboard players operation extract.PurplePenguins extract.points.goldPoints *= extract.handler extract.points.goldValue
 scoreboard players set extract.PurplePenguins extract.points.killPoints 0
 execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation extract.PurplePenguins extract.points.killPoints += @s extract.stats.kills
 scoreboard players operation extract.PurplePenguins extract.points.killPoints *= extract.handler extract.points.killValue
+
+# blue
+scoreboard players set extract.BlueBears extract.points.diamondPoints 0
+execute as @a[team=BLUE_BEARS] run scoreboard players operation extract.BlueBears extract.points.diamondPoints += @s extract.stats.doubleDiamond
+scoreboard players operation extract.BlueBears extract.points.diamondPoints *= #math .double
+execute as @a[team=BLUE_BEARS] run scoreboard players operation extract.BlueBears extract.points.diamondPoints += @s extract.stats.diamondsMined
+scoreboard players operation extract.BlueBears extract.points.diamondPoints *= extract.handler extract.points.diamondValue
+scoreboard players set extract.BlueBears extract.points.goldPoints 0
+execute as @a[team=BLUE_BEARS] run scoreboard players operation extract.BlueBears extract.points.goldPoints += @s extract.stats.doubleGold
+scoreboard players operation extract.BlueBears extract.points.goldPoints *= #math .double
+execute as @a[team=BLUE_BEARS] run scoreboard players operation extract.BlueBears extract.points.goldPoints += @s extract.stats.goldMined
+scoreboard players operation extract.BlueBears extract.points.goldPoints *= extract.handler extract.points.goldValue
 scoreboard players set extract.BlueBears extract.points.killPoints 0
 execute as @a[team=BLUE_BEARS] run scoreboard players operation extract.BlueBears extract.points.killPoints += @s extract.stats.kills
 scoreboard players operation extract.BlueBears extract.points.killPoints *= extract.handler extract.points.killValue
@@ -155,3 +200,9 @@ execute as @a[team=BLUE_BEARS] run scoreboard players operation @s extract.point
 
 # <===== SET ACTIONBAR =====>
 execute as @a run title @s actionbar [{text:"Individual Points: ",color:yellow},{score:{name:"@s",objective:"extract.points.indiv"},color:red}]
+
+# remove helpers
+scoreboard objectives remove .double
+scoreboard objectives remove extract.points.diamondPoints
+scoreboard objectives remove extract.points.goldPoints
+scoreboard objectives remove extract.points.killPoints

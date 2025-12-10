@@ -7,8 +7,10 @@
 scoreboard players set @a disco.points.indiv 0
 
 # placement
+execute as @a if score @s disco.points.placement matches ..8 run scoreboard players set @s disco.points.indiv 9
+execute as @a if score @s disco.points.placement matches ..8 run scoreboard players operation @s disco.points.indiv -= @s disco.points.placement
+
 execute as @a if score @s disco.points.placement matches ..16 run scoreboard players add @s disco.points.indiv 1
-execute as @a if score @s disco.points.placement matches ..8 run scoreboard players add @s disco.points.indiv 1
 execute as @a if score @s disco.points.placement matches ..4 run scoreboard players add @s disco.points.indiv 1
 execute as @a if score @s disco.points.placement matches ..2 run scoreboard players add @s disco.points.indiv 1
 
@@ -58,4 +60,4 @@ execute as @a[team=BLUE_BEARS] at @s run scoreboard players operation disco.Blue
 # <===== Actionbar =====>
 
 # sets player actionbar to their points
-execute as @a if score disco.handler disco.stage matches 3..4 run title @s actionbar ["",{text:"Current Placement: ",bold:true,color:"yellow"},{score:{name:"disco.handler",objective:"disco.players_alive"},bold:true,color:"red"},{text:" | Individual Points: ",bold:true,color:"yellow"},{score:{name:"@s",objective:"disco.points.indiv"},bold:true,color:"red"}]
+execute as @a if score disco.handler disco.stage matches 3 run title @s actionbar ["",{text:"Current Placement: ",bold:true,color:"yellow"},{score:{name:"disco.handler",objective:"disco.players_alive"},bold:true,color:"red"},{text:" | Individual Points: ",bold:true,color:"yellow"},{score:{name:"@s",objective:"disco.points.indiv"},bold:true,color:"red"}]

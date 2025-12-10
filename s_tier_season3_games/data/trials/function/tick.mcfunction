@@ -12,8 +12,12 @@
 
 # <===== run the lobbies & games =====>
 
-function trials:sidebar
-# sidebar also runs points update
+# run automatic pause
+execute if score tr.handler tr.stage matches 0 run function thread:automatic_pause
+execute if score tr.handler tr.stage matches 2 run function thread:automatic_pause
+execute if score tr.handler tr.stage matches 4 run function thread:automatic_pause
+execute if score tr.handler tr.stage matches 6 run function thread:automatic_pause
+execute if score tr.handler tr.stage matches 8 run function thread:automatic_pause
 
 # lobby 1
 execute if score tr.handler tr.stage matches 0 run scoreboard players add tr.handler tr.timer.lobby1 1
@@ -57,8 +61,9 @@ execute if score tr.handler tr.stage matches 7 if score tr.handler tr.stage.game
 
 # points announcement
 execute if score tr.handler tr.stage matches 8 run scoreboard players add tr.handler tr.timer.pointsAnnouncement 1
-execute if score tr.handler tr.stage matches 8 run function trials:point_announcements
+execute if score tr.handler tr.timer.pointsAnnouncement matches 100 run function trials:player_announcements
+execute if score tr.handler tr.timer.pointsAnnouncement matches 300 run function trials:team_announcements with storage stmc:global
 execute if score tr.handler tr.timer.pointsAnnouncement matches 401.. run scoreboard players set tr.handler tr.stage 9
 
 # send us back to main lobby
-execute if score tr.handler tr.stage matches 9 run scoreboard players add stmc.handler event.stage 1
+execute if score tr.handler tr.stage matches 9 run function trials:reset

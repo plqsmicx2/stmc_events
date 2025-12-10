@@ -1,0 +1,62 @@
+
+# <===== POINTS =====>
+
+# by build placement
+tellraw @a [""]
+tellraw @a ["",{"text": "Top Team Per Build:", "color": "aqua",bold:true}]
+tellraw @a [""]
+
+# build 1
+$execute if score replicate.RedRaccoons replicate.points.rank.build1 matches 1 run tellraw @a ["",{"text": "Build #1: ", "color": "aqua"}, {"text": " $(redName)", "color": "dark_red"}]
+$execute if score replicate.OrangeOtters replicate.points.rank.build1 matches 1 run tellraw @a ["",{"text": "Build #1: ", "color": "aqua"}, {"text": " $(orangeName)", "color": "gold"}]
+$execute if score replicate.PinkPikas replicate.points.rank.build1 matches 1 run tellraw @a ["",{"text": "Build #1: ", "color": "aqua"}, {"text": " $(pinkName)", "color": "light_purple"}]
+$execute if score replicate.YellowYaks replicate.points.rank.build1 matches 1 run tellraw @a ["",{"text": "Build #1: ", "color": "aqua"}, {"text": " $(yellowName)", "color": "yellow"}]
+$execute if score replicate.GreenGoats replicate.points.rank.build1 matches 1 run tellraw @a ["",{"text": "Build #1: ", "color": "aqua"}, {"text": " $(greenName)", "color": "dark_green"}]
+$execute if score replicate.CyanCougars replicate.points.rank.build1 matches 1 run tellraw @a ["",{"text": "Build #1: ", "color": "aqua"}, {"text": " $(cyanName)", "color": "dark_aqua"}]
+$execute if score replicate.PurplePenguins replicate.points.rank.build1 matches 1 run tellraw @a ["",{"text": "Build #1: ", "color": "aqua"}, {"text": " $(purpleName)", "color": "dark_purple"}]
+$execute if score replicate.BlueBears replicate.points.rank.build1 matches 1 run tellraw @a ["",{"text": "Build #1: ", "color": "aqua"}, {"text": " $(blueName)", "color": "blue"}]
+
+$execute if score replicate.RedRaccoons replicate.points.rank.build2 matches 1 run tellraw @a ["",{"text": "Build #2: ", "color": "aqua"}, {"text": " $(redName)", "color": "dark_red"}]
+$execute if score replicate.OrangeOtters replicate.points.rank.build2 matches 1 run tellraw @a ["",{"text": "Build #2: ", "color": "aqua"}, {"text": " $(orangeName)", "color": "gold"}]
+$execute if score replicate.PinkPikas replicate.points.rank.build2 matches 1 run tellraw @a ["",{"text": "Build #2: ", "color": "aqua"}, {"text": " $(pinkName)", "color": "light_purple"}]
+$execute if score replicate.YellowYaks replicate.points.rank.build2 matches 1 run tellraw @a ["",{"text": "Build #2: ", "color": "aqua"}, {"text": " $(yellowName)", "color": "yellow"}]
+$execute if score replicate.GreenGoats replicate.points.rank.build2 matches 1 run tellraw @a ["",{"text": "Build #2: ", "color": "aqua"}, {"text": " $(greenName)", "color": "dark_green"}]
+$execute if score replicate.CyanCougars replicate.points.rank.build2 matches 1 run tellraw @a ["",{"text": "Build #2: ", "color": "aqua"}, {"text": " $(cyanName)", "color": "dark_aqua"}]
+$execute if score replicate.PurplePenguins replicate.points.rank.build2 matches 1 run tellraw @a ["",{"text": "Build #2: ", "color": "aqua"}, {"text": " $(purpleName)", "color": "dark_purple"}]
+$execute if score replicate.BlueBears replicate.points.rank.build2 matches 1 run tellraw @a ["",{"text": "Build #2: ", "color": "aqua"}, {"text": " $(blueName)", "color": "blue"}]
+
+$execute if score replicate.RedRaccoons replicate.points.rank.build3 matches 1 run tellraw @a ["",{"text": "Build #3: ", "color": "aqua"}, {"text": " $(redName)", "color": "dark_red"}]
+$execute if score replicate.OrangeOtters replicate.points.rank.build3 matches 1 run tellraw @a ["",{"text": "Build #3: ", "color": "aqua"}, {"text": " $(orangeName)", "color": "gold"}]
+$execute if score replicate.PinkPikas replicate.points.rank.build3 matches 1 run tellraw @a ["",{"text": "Build #3: ", "color": "aqua"}, {"text": " $(pinkName)", "color": "light_purple"}]
+$execute if score replicate.YellowYaks replicate.points.rank.build3 matches 1 run tellraw @a ["",{"text": "Build #3: ", "color": "aqua"}, {"text": " $(yellowName)", "color": "yellow"}]
+$execute if score replicate.GreenGoats replicate.points.rank.build3 matches 1 run tellraw @a ["",{"text": "Build #3: ", "color": "aqua"}, {"text": " $(greenName)", "color": "dark_green"}]
+$execute if score replicate.CyanCougars replicate.points.rank.build3 matches 1 run tellraw @a ["",{"text": "Build #3: ", "color": "aqua"}, {"text": " $(cyanName)", "color": "dark_aqua"}]
+$execute if score replicate.PurplePenguins replicate.points.rank.build3 matches 1 run tellraw @a ["",{"text": "Build #3: ", "color": "aqua"}, {"text": " $(purpleName)", "color": "dark_purple"}]
+$execute if score replicate.BlueBears replicate.points.rank.build3 matches 1 run tellraw @a ["",{"text": "Build #3: ", "color": "aqua"}, {"text": " $(blueName)", "color": "blue"}]
+
+$execute if score replicate.RedRaccoons replicate.points.rank.build4 matches 1 run tellraw @a ["",{"text": "Build #4: ", "color": "aqua"}, {"text": " $(redName)", "color": "dark_red"}]
+$execute if score replicate.OrangeOtters replicate.points.rank.build4 matches 1 run tellraw @a ["",{"text": "Build #4: ", "color": "aqua"}, {"text": " $(orangeName)", "color": "gold"}]
+$execute if score replicate.PinkPikas replicate.points.rank.build4 matches 1 run tellraw @a ["",{"text": "Build #4: ", "color": "aqua"}, {"text": " $(pinkName)", "color": "light_purple"}]
+$execute if score replicate.YellowYaks replicate.points.rank.build4 matches 1 run tellraw @a ["",{"text": "Build #4: ", "color": "aqua"}, {"text": " $(yellowName)", "color": "yellow"}]
+$execute if score replicate.GreenGoats replicate.points.rank.build4 matches 1 run tellraw @a ["",{"text": "Build #4: ", "color": "aqua"}, {"text": " $(greenName)", "color": "dark_green"}]
+$execute if score replicate.CyanCougars replicate.points.rank.build4 matches 1 run tellraw @a ["",{"text": "Build #4: ", "color": "aqua"}, {"text": " $(cyanName)", "color": "dark_aqua"}]
+$execute if score replicate.PurplePenguins replicate.points.rank.build4 matches 1 run tellraw @a ["",{"text": "Build #4: ", "color": "aqua"}, {"text": " $(purpleName)", "color": "dark_purple"}]
+$execute if score replicate.BlueBears replicate.points.rank.build4 matches 1 run tellraw @a ["",{"text": "Build #4: ", "color": "aqua"}, {"text": " $(blueName)", "color": "blue"}]
+
+$execute if score replicate.RedRaccoons replicate.points.rank.build5 matches 1 run tellraw @a ["",{"text": "Build #5: ", "color": "aqua"}, {"text": " $(redName)", "color": "dark_red"}]
+$execute if score replicate.OrangeOtters replicate.points.rank.build5 matches 1 run tellraw @a ["",{"text": "Build #5: ", "color": "aqua"}, {"text": " $(orangeName)", "color": "gold"}]
+$execute if score replicate.PinkPikas replicate.points.rank.build5 matches 1 run tellraw @a ["",{"text": "Build #5: ", "color": "aqua"}, {"text": " $(pinkName)", "color": "light_purple"}]
+$execute if score replicate.YellowYaks replicate.points.rank.build5 matches 1 run tellraw @a ["",{"text": "Build #5: ", "color": "aqua"}, {"text": " $(yellowName)", "color": "yellow"}]
+$execute if score replicate.GreenGoats replicate.points.rank.build5 matches 1 run tellraw @a ["",{"text": "Build #5: ", "color": "aqua"}, {"text": " $(greenName)", "color": "dark_green"}]
+$execute if score replicate.CyanCougars replicate.points.rank.build5 matches 1 run tellraw @a ["",{"text": "Build #5: ", "color": "aqua"}, {"text": " $(cyanName)", "color": "dark_aqua"}]
+$execute if score replicate.PurplePenguins replicate.points.rank.build5 matches 1 run tellraw @a ["",{"text": "Build #5: ", "color": "aqua"}, {"text": " $(purpleName)", "color": "dark_purple"}]
+$execute if score replicate.BlueBears replicate.points.rank.build5 matches 1 run tellraw @a ["",{"text": "Build #5: ", "color": "aqua"}, {"text": " $(blueName)", "color": "blue"}]
+
+$execute if score replicate.RedRaccoons replicate.points.rank.build6 matches 1 run tellraw @a ["",{"text": "Build #6: ", "color": "aqua"}, {"text": " $(redName)", "color": "dark_red"}]
+$execute if score replicate.OrangeOtters replicate.points.rank.build6 matches 1 run tellraw @a ["",{"text": "Build #6: ", "color": "aqua"}, {"text": " $(orangeName)", "color": "gold"}]
+$execute if score replicate.PinkPikas replicate.points.rank.build6 matches 1 run tellraw @a ["",{"text": "Build #6: ", "color": "aqua"}, {"text": " $(pinkName)", "color": "light_purple"}]
+$execute if score replicate.YellowYaks replicate.points.rank.build6 matches 1 run tellraw @a ["",{"text": "Build #6: ", "color": "aqua"}, {"text": " $(yellowName)", "color": "yellow"}]
+$execute if score replicate.GreenGoats replicate.points.rank.build6 matches 1 run tellraw @a ["",{"text": "Build #6: ", "color": "aqua"}, {"text": " $(greenName)", "color": "dark_green"}]
+$execute if score replicate.CyanCougars replicate.points.rank.build6 matches 1 run tellraw @a ["",{"text": "Build #6: ", "color": "aqua"}, {"text": " $(cyanName)", "color": "dark_aqua"}]
+$execute if score replicate.PurplePenguins replicate.points.rank.build6 matches 1 run tellraw @a ["",{"text": "Build #6: ", "color": "aqua"}, {"text": " $(purpleName)", "color": "dark_purple"}]
+$execute if score replicate.BlueBears replicate.points.rank.build6 matches 1 run tellraw @a ["",{"text": "Build #6: ", "color": "aqua"}, {"text": " $(blueName)", "color": "blue"}]

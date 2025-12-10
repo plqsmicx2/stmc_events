@@ -33,13 +33,13 @@ execute if score extract.handler extract.timer.game.round4 matches 1 run item re
 
 # build world
 execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot1:1}
-execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot2:5}
-execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot3:2}
-execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot4:6}
-execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot5:3}
-execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot6:8}
-execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot7:4}
-execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot8:7}
+execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot2:2}
+execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot3:3}
+execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot4:5}
+execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot5:4}
+execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot6:7}
+execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot7:6}
+execute if score extract.handler extract.timer.game.round4 matches 1 run data merge storage extract:map {slot8:8}
 execute if score extract.handler extract.timer.game.round4 matches 0..60 store result storage extract:map time int 1 run scoreboard players get extract.handler extract.timer.game.round4
 execute if score extract.handler extract.timer.game.round4 matches 0..60 run function extract:build_world with storage extract:map
 
@@ -53,6 +53,7 @@ execute in extract:extract as @e[tag=witch] on attacker run function extract:inv
 execute in extract:extract as @e[type=interaction] run data remove entity @s attack
 
 # prevent extra items at the start of the round
+execute in extract:extract if score extract.handler extract.timer.game.round4 matches 45..300 run effect clear @a
 execute in extract:extract if score extract.handler extract.timer.game.round4 matches ..300 run kill @e[type=item]
 
 # countdown at 5 seconds

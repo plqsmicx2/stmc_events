@@ -13,11 +13,14 @@ function survival_games:round1/points_update
 # first, we call our load function if this is the first time we're here
 execute unless score sg.r1.handler sg.r1.stage matches 0.. run function survival_games:round1/load
 
+# automatically pause
+execute unless score sg.r1.handler sg.r1.stage matches 3 run function thread:automatic_pause
+
 # if we're in stage 0, we only need to increment our timer & check if 20 seconds have elapsed
 # and then update our stage to 1
 execute if score sg.r1.handler sg.r1.stage matches 0 run scoreboard players add sg.r1.handler sg.r1.timer.delay1 1
 execute in survival_games:sg1 if score sg.r1.handler sg.r1.timer.delay1 matches 1..80 run function survival_games:round1/reset_world
-execute if score sg.r1.handler sg.r1.stage matches 0 if score sg.r1.handler sg.r1.timer.delay1 matches 400.. run scoreboard players set sg.r1.handler sg.r1.stage 1
+execute if score sg.r1.handler sg.r1.stage matches 0 if score sg.r1.handler sg.r1.timer.delay1 matches 200.. run scoreboard players set sg.r1.handler sg.r1.stage 1
 
 # if we're in stage 1, we need to increment the timer, call our explanation function, & check if 30 seconds have elapsed
 execute if score sg.r1.handler sg.r1.stage matches 1 run scoreboard players add sg.r1.handler sg.r1.timer.explanation 1

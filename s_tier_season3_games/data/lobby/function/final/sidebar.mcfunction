@@ -1,0 +1,78 @@
+# lobby sidebar
+
+# sidebar looks like this:
+# <lime>STMC Open<lime>
+# 
+# <yellow>Points:<yellow>
+# <team color><Team>: <TeamPoints><team color>
+# <team color><Team>: <TeamPoints><team color>
+# <team color><Team>: <TeamPoints><team color>
+# <team color><Team>: <TeamPoints><team color>
+# <team color><Team>: <TeamPoints><team color>
+# <team color><Team>: <TeamPoints><team color>
+# <team color><Team>: <TeamPoints><team color>
+# <team color><Team>: <TeamPoints><team color>
+
+scoreboard objectives add lobby.sidebar dummy
+$scoreboard objectives modify lobby.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
+scoreboard objectives setdisplay sidebar lobby.sidebar
+
+# <===== BUILD FROM THE BOTTOM =====>
+
+# reset teams
+scoreboard players reset team.RedRaccoons lobby.sidebar
+scoreboard players reset team.OrangeOtters lobby.sidebar
+scoreboard players reset team.PinkPikas lobby.sidebar
+scoreboard players reset team.YellowYaks lobby.sidebar
+scoreboard players reset team.GreenGoats lobby.sidebar
+scoreboard players reset team.CyanCougars lobby.sidebar
+scoreboard players reset team.PurplePenguins lobby.sidebar
+scoreboard players reset team.BlueBears lobby.sidebar
+
+# they'll be automatically ranked by the scoreboard itself
+scoreboard players operation team.RedRaccoons lobby.sidebar = team.RedRaccoons stats.points.team
+scoreboard players display name team.RedRaccoons lobby.sidebar {"text": "????", "color": "dark_gray"}
+scoreboard players operation team.OrangeOtters lobby.sidebar = team.OrangeOtters stats.points.team
+scoreboard players display name team.OrangeOtters lobby.sidebar {"text": "????", "color": "dark_gray"}
+scoreboard players operation team.PinkPikas lobby.sidebar = team.PinkPikas stats.points.team
+scoreboard players display name team.PinkPikas lobby.sidebar {"text": "????", "color": "dark_gray"}
+scoreboard players operation team.YellowYaks lobby.sidebar = team.YellowYaks stats.points.team
+scoreboard players display name team.YellowYaks lobby.sidebar {"text": "????", "color": "dark_gray"}
+scoreboard players operation team.GreenGoats lobby.sidebar = team.GreenGoats stats.points.team
+scoreboard players display name team.GreenGoats lobby.sidebar {"text": "????", "color": "dark_gray"}
+scoreboard players operation team.CyanCougars lobby.sidebar = team.CyanCougars stats.points.team
+scoreboard players display name team.CyanCougars lobby.sidebar {"text": "????", "color": "dark_gray"}
+scoreboard players operation team.PurplePenguins lobby.sidebar = team.PurplePenguins stats.points.team
+scoreboard players display name team.PurplePenguins lobby.sidebar {"text": "????", "color": "dark_gray"}
+scoreboard players operation team.BlueBears lobby.sidebar = team.BlueBears stats.points.team
+scoreboard players display name team.BlueBears lobby.sidebar {"text": "????", "color": "dark_gray"}
+
+# add each fakeplayer to the team they are representing (to load the prefixes accordingly)
+team join RED_RACCOONS team.RedRaccoons
+team join ORANGE_OTTERS team.OrangeOtters
+team join PINK_PIKAS team.PinkPikas
+team join YELLOW_YAKS team.YellowYaks
+team join GREEN_GOATS team.GreenGoats
+team join CYAN_COUGARS team.CyanCougars
+team join PURPLE_PENGUINS team.PurplePenguins
+team join BLUE_BEARS team.BlueBears
+
+# <==== HEADER INFO =====>
+
+# points header
+# no need to override display since it can be done in one line
+scoreboard players set §e§lPoints: lobby.sidebar 5000
+
+# blank line
+scoreboard players set §a lobby.sidebar 5001
+
+# timer
+scoreboard players set lobby.timer lobby.sidebar 5002
+execute if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+execute if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
+
+scoreboard players set lobby.header lobby.sidebar 5003
+scoreboard players display name lobby.header lobby.sidebar {text:"Finale!",color:white,bold:true}
+
+# blank line
+scoreboard players set §b lobby.sidebar 5004

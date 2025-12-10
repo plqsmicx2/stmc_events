@@ -88,5 +88,9 @@ scoreboard players set @a sg.r1.points 0
 scoreboard players set @a sg.r2.points 0
 scoreboard players set @a sg.r3.points 0
 
+# global resets
+execute as @a run attribute @s max_health base set 20
+execute as @a run attribute @s max_health modifier remove all
+
 # reset the sidebar
 scoreboard objectives remove sg.sidebar

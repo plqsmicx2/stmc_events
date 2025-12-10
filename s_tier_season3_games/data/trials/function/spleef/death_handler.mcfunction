@@ -13,13 +13,16 @@ execute in trials:spleef as @a[scores={spleef.alive=1},x=-30,y=60,z=-30,dx=60,dy
 # and award points to players still alive
 execute as @a[scores={spleef.alive=1}] if score spleef.handler spleef.stage matches 3 if score spleef.handler spleef.deathThisTick matches 1 at @s run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 10.0 0.2
 
+# check total # of players alive
+scoreboard players set spleef.handler spleef.players_alive 0
+execute as @a[scores={spleef.alive=1}] run scoreboard players add spleef.handler spleef.players_alive 1
+
 # give everyone the placement of the current # of players alive IF they are still alive
 execute as @a[scores={spleef.alive=1}] run scoreboard players set @s spleef.points.placement 0
 execute as @a[scores={spleef.alive=1}] run scoreboard players operation @s spleef.points.placement = spleef.handler spleef.players_alive
 
-# check total # of players alive
-scoreboard players set spleef.handler spleef.players_alive 0
-execute as @a[scores={spleef.alive=1}] run scoreboard players add spleef.handler spleef.players_alive 1
+# announce placement points
+function trials:spleef/helper/points_announcements
 
 # next, let's check up on our teams
 # first we update the players alive of each team
