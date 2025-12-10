@@ -1,5 +1,8 @@
 # first lobby instance of trials game
 
+function trials:sidebar with storage stmc:global
+# sidebar also runs points update
+
 # explains how the trials game works
 
 # then randomly chooses game 1
@@ -54,7 +57,7 @@ execute if score tr.handler tr.timer.lobby1 matches 520 store result score tr.ha
 execute if score tr.handler tr.timer.lobby1 matches 520 if score tr.handler tr.stage.game1 matches 1 run title @a title {"text":"SCRAMBLE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby1 matches 520 if score tr.handler tr.stage.game1 matches 2 run title @a title {"text":"REPLICATE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby1 matches 520 if score tr.handler tr.stage.game1 matches 3 run title @a title {"text":"SPLEEF",color:"dark_aqua"}
-execute if score tr.handler tr.timer.lobby1 matches 520 if score tr.handler tr.stage.game1 matches 4 run title @a title {"text":"ASCEND",color:"dark_aqua"}
+execute if score tr.handler tr.timer.lobby1 matches 520 if score tr.handler tr.stage.game1 matches 4 run title @a title {"text":"TOWERS",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby1 matches 521 run title @a subtitle {"text":"Teleporting in 5 seconds.","color":"dark_aqua"}
 
 # teleport to game 1

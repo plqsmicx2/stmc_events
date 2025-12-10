@@ -11,7 +11,7 @@ execute as @a at @s in trials:towers run spawnpoint @s ~ ~50 ~
 #execute in trials:towers as @a[scores={towers.alive=1},x=-20,y=100,z=-20,dx=40,dy=1,dz=40] run scoreboard players set @s towers.alive 0
 
 # or if the player dies from suffocation, set them to spectator & set their scores
-#execute as @a[gamemode=!spectator, scores={towers.deathCounter=1..}] run scoreboard players set towers.handler towers.deathThisTick 1
+execute as @a[gamemode=!spectator, scores={towers.deathCounter=1..}] run scoreboard players set towers.handler towers.deathThisTick 1
 execute as @a[gamemode=!spectator, scores={towers.deathCounter=1..}] run scoreboard players set @s towers.alive 0
 gamemode spectator @a[gamemode=!spectator, scores={towers.deathCounter=1..}]
 
@@ -20,8 +20,11 @@ scoreboard players set towers.handler towers.players_alive 0
 execute as @a[scores={towers.alive=1}] run scoreboard players add towers.handler towers.players_alive 1
 
 # update player scores
-execute as @a run scoreboard players operation @s towers.stats.survival = towers.handler towers.timer.game
-execute as @a run scoreboard players operation @s towers.stats.placement = towers.handler towers.players_alive
+execute as @a[scores={towers.alive=1}] run scoreboard players operation @s towers.stats.survival = towers.handler towers.timer.game
+execute as @a[scores={towers.alive=1}] run scoreboard players operation @s towers.stats.placement = towers.handler towers.players_alive
+
+# announce point awards
+function trials:towers/helper/point_announcements
 
 # next, let's check up on our teams
 # first we update the players alive of each team

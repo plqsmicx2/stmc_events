@@ -1,36 +1,23 @@
 # helper function that sets the current round length
 
 # set current round length
+
+# keep at 60 for five rounds
 execute if score disco.handler disco.rounds_played matches 0..4 run scoreboard players set disco.handler disco.current_round_length 60
-execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 0 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
 
-execute if score disco.handler disco.rounds_played matches 5..9 run scoreboard players set disco.handler disco.current_round_length 50
-execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 5 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
-execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 5 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
+# decrease by one until we reach 10 ticks
+execute if score disco.handler disco.rounds_played matches 5..54 run scoreboard players remove disco.handler disco.current_round_length 1
 
-execute if score disco.handler disco.rounds_played matches 10..14 run scoreboard players set disco.handler disco.current_round_length 40
-execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 10 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
-execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 10 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
-
-execute if score disco.handler disco.rounds_played matches 15..24 run scoreboard players set disco.handler disco.current_round_length 30
-execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 15 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
-execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 15 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
-
-execute if score disco.handler disco.rounds_played matches 25..34 run scoreboard players set disco.handler disco.current_round_length 25
-execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 25 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
-execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 25 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
-
-execute if score disco.handler disco.rounds_played matches 35..44 run scoreboard players set disco.handler disco.current_round_length 20
-execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 35 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
-execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 35 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
-
-execute if score disco.handler disco.rounds_played matches 45..54 run scoreboard players set disco.handler disco.current_round_length 15
-execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 45 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
-execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 45 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
-
+# set at 10 for final rounds
 execute if score disco.handler disco.rounds_played matches 55..60 run scoreboard players set disco.handler disco.current_round_length 10
-execute if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 55 run tellraw @a {text:"Speeding Up!",bold:true,color:"green"}
-execute as @a at @s if score disco.handler disco.timer.game matches 1 if score disco.handler disco.rounds_played matches 55 run playsound minecraft:block.amethyst_cluster.break master @s ~ ~ ~
 
+# add end of round delay
 scoreboard players set disco.handler disco.current_round_length_delay 40
 scoreboard players operation disco.handler disco.current_round_length_delay += disco.handler disco.current_round_length
+
+# set the bossbar to publish the round length
+bossbar set disco.timer name [{text:"Round Length: ",color:dark_aqua},{score:{name:"disco.handler",objective:"disco.current_round_length"},color:dark_aqua},{text:" ticks",color:"dark_aqua"}]
+execute store result bossbar disco.timer max run scoreboard players get disco.handler disco.current_round_length
+bossbar set disco.timer color blue
+bossbar set disco.timer players @a
+bossbar set disco.timer visible true

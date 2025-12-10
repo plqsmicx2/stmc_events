@@ -84,7 +84,7 @@ execute if score blitz.OrangeOtters blitz.stats.players matches 1.. in blitz:bli
         CustomName:{"color":"green","text":"Tools"}, \ 
         active_effects:[{id:"minecraft:resistance",amplifier:10,duration:-1,show_particles:0b}], \ 
         Offers:{Recipes:[ \ 
-        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:orange_concrete",components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
+        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:orange_concrete",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:iron_axe",count:1,components:{"minecraft:custom_data":{return:1b},"can_break":[{blocks:"oak_planks"}]}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:oak_planks",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:4},sell:{id:"minecraft:golden_apple",count:1}}, \ 
@@ -107,7 +107,7 @@ execute if score blitz.PinkPikas blitz.stats.players matches 1.. in blitz:blitz 
         CustomName:{"color":"green","text":"Tools"}, \ 
         active_effects:[{id:"minecraft:resistance",amplifier:10,duration:-1,show_particles:0b}], \ 
         Offers:{Recipes:[ \ 
-        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:pink_concrete",components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
+        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:pink_concrete",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:iron_axe",count:1,components:{"minecraft:custom_data":{return:1b},"can_break":[{blocks:"oak_planks"}]}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:oak_planks",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:4},sell:{id:"minecraft:golden_apple",count:1}}, \ 
@@ -130,7 +130,7 @@ execute if score blitz.YellowYaks blitz.stats.players matches 1.. in blitz:blitz
         CustomName:{"color":"green","text":"Tools"}, \ 
         active_effects:[{id:"minecraft:resistance",amplifier:10,duration:-1,show_particles:0b}], \ 
         Offers:{Recipes:[ \ 
-        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:yellow_concrete",components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
+        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:yellow_concrete",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:iron_axe",count:1,components:{"minecraft:custom_data":{return:1b},"can_break":[{blocks:"oak_planks"}]}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:oak_planks",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:4},sell:{id:"minecraft:golden_apple",count:1}}, \ 
@@ -153,7 +153,7 @@ execute if score blitz.GreenGoats blitz.stats.players matches 1.. in blitz:blitz
         CustomName:{"color":"green","text":"Tools"}, \ 
         active_effects:[{id:"minecraft:resistance",amplifier:10,duration:-1,show_particles:0b}], \ 
         Offers:{Recipes:[ \ 
-        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:green_concrete",components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
+        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:green_concrete",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:iron_axe",count:1,components:{"minecraft:custom_data":{return:1b},"can_break":[{blocks:"oak_planks"}]}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:oak_planks",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:4},sell:{id:"minecraft:golden_apple",count:1}}, \ 
@@ -176,7 +176,7 @@ execute if score blitz.CyanCougars blitz.stats.players matches 1.. in blitz:blit
         CustomName:{"color":"green","text":"Tools"}, \ 
         active_effects:[{id:"minecraft:resistance",amplifier:10,duration:-1,show_particles:0b}], \ 
         Offers:{Recipes:[ \ 
-        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:cyan_concrete",components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
+        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:cyan_concrete",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:iron_axe",count:1,components:{"minecraft:custom_data":{return:1b},"can_break":[{blocks:"oak_planks"}]}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:oak_planks",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:4},sell:{id:"minecraft:golden_apple",count:1}}, \ 
@@ -199,7 +199,7 @@ execute if score blitz.PurplePenguins blitz.stats.players matches 1.. in blitz:b
         CustomName:{"color":"green","text":"Tools"}, \ 
         active_effects:[{id:"minecraft:resistance",amplifier:10,duration:-1,show_particles:0b}], \ 
         Offers:{Recipes:[ \ 
-        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:purple_concrete",components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
+        {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:iron_ingot",count:1},sell:{id:"minecraft:purple_concrete",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:iron_axe",count:1,components:{"minecraft:custom_data":{return:1b},"can_break":[{blocks:"oak_planks"}]}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:2},sell:{id:"minecraft:oak_planks",count:8,components:{"minecraft:can_place_on":[{"blocks":"#extract:all"}],"tooltip_display":{hidden_components:[can_place_on]}}}}, \ 
         {rewardExp:0b,maxUses:999999,uses:0,buy:{id:"minecraft:gold_ingot",count:4},sell:{id:"minecraft:golden_apple",count:1}}, \ 

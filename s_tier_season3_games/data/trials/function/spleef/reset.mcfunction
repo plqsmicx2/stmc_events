@@ -18,6 +18,7 @@ execute as @a[scores={spleef.alive=1}] at @s run playsound minecraft:entity.fire
 
 # announce winner
 execute as @a[scores={spleef.alive=1}] run tellraw @a ["",{selector:"@s"},{text:" survived!",color:"white"}]
+tellraw @a[scores={spleef.alive=1}] [{text:"[",color:gray},{text:"+1",color:"dark_aqua"},{text:"]",color:gray},{text:" Top 2",color:"dark_aqua"}]
 
 # reset some stuff
 effect clear @a

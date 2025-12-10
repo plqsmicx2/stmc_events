@@ -132,6 +132,6 @@ scoreboard players set @a race.currentPlacement 0
 scoreboard players set @a race.soundThisTick 0
 
 scoreboard players set @a race.points.indiv 0
-scoreboard players set race.handler race.points.placement 3
+scoreboard players set race.handler race.points.placement 2
 
 scoreboard objectives remove race.sidebar

@@ -13,6 +13,9 @@ function survival_games:round2/points_update
 # first, we call our load function if this is the first time we're here
 execute unless score sg.r2.handler sg.r2.stage matches 0.. run function survival_games:round2/load
 
+# automatically pause
+execute unless score sg.r2.handler sg.r2.stage matches 3 run function thread:automatic_pause
+
 # if we're in stage 0, we only need to increment our timer & check if 20 seconds have elapsed
 # and then update our stage to 1
 execute if score sg.r2.handler sg.r2.stage matches 0 run scoreboard players add sg.r2.handler sg.r2.timer.delay1 1

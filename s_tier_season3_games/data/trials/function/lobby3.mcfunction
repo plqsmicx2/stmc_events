@@ -1,4 +1,7 @@
-# second lobby instance of trials game
+# third lobby instance of trials game
+
+function trials:sidebar with storage stmc:global
+# sidebar also runs points update
 
 # timer update
 execute if score tr.handler tr.timer.lobby3 matches 1 run scoreboard players set tr.handler tr.timer.tickCount 0
@@ -88,7 +91,7 @@ execute if score tr.handler tr.timer.lobby3 matches 400 if score tr.handler tr.s
 execute if score tr.handler tr.timer.lobby3 matches 400 if score tr.handler tr.stage.game3 matches 1 run title @a title {"text":"SCRAMBLE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby3 matches 400 if score tr.handler tr.stage.game3 matches 2 run title @a title {"text":"REPLICATE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby3 matches 400 if score tr.handler tr.stage.game3 matches 3 run title @a title {"text":"SPLEEF",color:"dark_aqua"}
-execute if score tr.handler tr.timer.lobby3 matches 400 if score tr.handler tr.stage.game3 matches 4 run title @a title {"text":"ASCEND",color:"dark_aqua"}
+execute if score tr.handler tr.timer.lobby3 matches 400 if score tr.handler tr.stage.game3 matches 4 run title @a title {"text":"TOWERS",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby3 matches 401 run title @a subtitle {"text":"Teleporting in 5 seconds.","color":"dark_aqua"}
 
 # teleport to game 2

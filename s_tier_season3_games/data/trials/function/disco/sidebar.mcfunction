@@ -72,82 +72,22 @@ scoreboard players set §a disco.sidebar 101
 
 # teams alive
 scoreboard players set disco.teamsAlive disco.sidebar 102
-execute if score disco.handler disco.teams_alive matches 8 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 8/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 7 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 7/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 6 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 6/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 5 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 5/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 4 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 4/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 3 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 3/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 2 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 2/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 1 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 1/6", "color": "red", "bold": true}
-execute if score disco.handler disco.teams_alive matches 0 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 0/6", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 8 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 8/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 7 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 7/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 6 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 6/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 5 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 5/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 4 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 4/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 3 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 3/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 2 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 2/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 1 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 1/8", "color": "red", "bold": true}
+execute if score disco.handler disco.teams_alive matches 0 run scoreboard players display name disco.teamsAlive disco.sidebar {"text": "Teams Alive: 0/8", "color": "red", "bold": true}
 
 # blank line
 scoreboard players set §b disco.sidebar 103
 
 # round number
 scoreboard players set disco.roundsPlayed disco.sidebar 104
-execute if score disco.handler disco.rounds_played matches 0 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 0", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 1 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 1", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 2 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 2", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 3 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 3", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 4 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 4", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 5 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 5", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 6 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 6", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 7 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 7", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 8 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 8", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 9 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 9", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 10 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 10", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 11 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 11", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 12 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 12", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 13 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 13", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 14 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 14", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 15 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 15", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 16 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 16", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 17 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 17", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 18 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 18", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 19 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 19", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 20 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 20", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 21 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 21", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 22 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 22", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 23 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 23", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 24 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 24", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 25 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 25", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 26 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 26", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 27 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 27", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 28 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 28", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 29 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 29", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 30 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 30", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 31 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 31", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 32 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 32", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 33 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 33", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 34 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 34", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 35 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 35", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 36 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 36", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 37 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 37", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 38 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 38", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 39 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 39", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 40 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 40", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 41 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 41", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 42 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 42", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 43 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 43", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 44 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 44", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 45 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 45", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 46 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 46", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 47 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 47", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 48 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 48", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 49 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 49", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 50 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 50", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 51 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 51", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 52 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 52", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 53 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 53", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 54 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 54", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 55 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 55", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 56 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 56", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 57 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 57", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 58 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 58", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 59 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 59", "color": "dark_red", "bold": true}
-execute if score disco.handler disco.rounds_played matches 60 run scoreboard players display name disco.roundsPlayed disco.sidebar {"text": "Rounds Played: 60", "color": "dark_red", "bold": true}
+scoreboard players display name disco.roundsPlayed disco.sidebar [{"text": "Rounds Played: ", "color": "dark_red", "bold": true},{score:{name:"disco.handler",objective:"disco.rounds_played"},color:dark_red,bold:true},{text:"/60",color:"dark_red",bold:true}]
 
 # current game
 scoreboard players set Disco disco.sidebar 105

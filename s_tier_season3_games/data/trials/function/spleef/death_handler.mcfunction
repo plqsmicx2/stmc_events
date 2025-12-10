@@ -21,6 +21,9 @@ execute as @a[scores={spleef.alive=1}] run scoreboard players add spleef.handler
 execute as @a[scores={spleef.alive=1}] run scoreboard players set @s spleef.points.placement 0
 execute as @a[scores={spleef.alive=1}] run scoreboard players operation @s spleef.points.placement = spleef.handler spleef.players_alive
 
+# announce placement points
+function trials:spleef/helper/points_announcements
+
 # next, let's check up on our teams
 # first we update the players alive of each team
 scoreboard players set spleef.RedRaccoons spleef.players_alive 0

@@ -1,4 +1,7 @@
-# second lobby instance of trials game
+# fourth lobby instance of trials game
+
+function trials:sidebar with storage stmc:global
+# sidebar also runs points update
 
 # timer update
 execute if score tr.handler tr.timer.lobby4 matches 1 run scoreboard players set tr.handler tr.timer.tickCount 0
@@ -15,8 +18,7 @@ execute if score tr.handler tr.timer.secs matches 60 run scoreboard players set 
 
 # randomly chooses game 4
 
-# reset
-execute if score tr.handler tr.timer.lobby4 matches 2 run clear @a
+# reset 2 run clear @a
 execute if score tr.handler tr.timer.lobby4 matches 2 run effect clear @a
 execute if score tr.handler tr.timer.lobby4 matches 2 run effect give @a instant_health 1 100 true
 execute if score tr.handler tr.timer.lobby4 matches 2 run effect give @a resistance infinite 10 true
@@ -61,7 +63,7 @@ execute if score tr.handler tr.timer.lobby4 matches 400 if score tr.handler tr.s
 execute if score tr.handler tr.timer.lobby4 matches 400 if score tr.handler tr.stage.game4 matches 1 run title @a title {"text":"SCRAMBLE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby4 matches 400 if score tr.handler tr.stage.game4 matches 2 run title @a title {"text":"REPLICATE",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby4 matches 400 if score tr.handler tr.stage.game4 matches 3 run title @a title {"text":"SPLEEF",color:"dark_aqua"}
-execute if score tr.handler tr.timer.lobby4 matches 400 if score tr.handler tr.stage.game4 matches 4 run title @a title {"text":"ASCEND",color:"dark_aqua"}
+execute if score tr.handler tr.timer.lobby4 matches 400 if score tr.handler tr.stage.game4 matches 4 run title @a title {"text":"TOWERS",color:"dark_aqua"}
 execute if score tr.handler tr.timer.lobby4 matches 401 run title @a subtitle {"text":"Teleporting in 5 seconds.","color":"dark_aqua"}
 
 # teleport to game 4

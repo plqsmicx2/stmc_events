@@ -47,7 +47,7 @@ execute if score disco.handler disco.timer.delay2 matches 180 run title @a actio
 execute as @a at @s if score disco.handler disco.timer.delay2 matches 180 run playsound minecraft:block.amethyst_cluster.hit master @s ~ ~ ~ 0.7 2.0
 # move to next stage after 20 seconds
 execute if score disco.handler disco.timer.delay2 matches 199 run title @a title {"text":"Go!","color":"dark_aqua","bold":true}
-execute if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 200.. run scoreboard players set disco.handler disco.stage 3
+execute if score disco.handler disco.stage matches 2 if score disco.handler disco.timer.delay2 matches 200.. run function trials:disco/helper/game_start
 
 # if we're in stage 3 (game in progress), increment the game timer & run the main game function
 execute if score disco.handler disco.stage matches 3 run scoreboard players add disco.handler disco.timer.game 1
@@ -56,6 +56,6 @@ execute if score disco.handler disco.stage matches 3 run function trials:disco/r
 # if we're in stage 4, increment the timer
 execute if score disco.handler disco.stage matches 4 run scoreboard players add disco.handler disco.timer.delay3 1
 execute if score disco.handler disco.stage matches 4 if score disco.handler disco.timer.delay3 matches 3 run function trials:disco/reset
-execute if score disco.handler disco.stage matches 4 if score disco.handler disco.timer.delay3 matches 200 run function trials:disco/point_announcements
+execute if score disco.handler disco.stage matches 4 if score disco.handler disco.timer.delay3 matches 200 run function trials:disco/player_announcements
 # move to next stage after 15 seconds
 execute if score disco.handler disco.stage matches 4 if score disco.handler disco.timer.delay3 matches 300.. run scoreboard players add tr.handler tr.stage 1

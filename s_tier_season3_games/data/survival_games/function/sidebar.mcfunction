@@ -73,13 +73,13 @@ scoreboard players set §a sg.sidebar 502
 scoreboard players set sg.teamsAlive sg.sidebar 503
 execute if score sg.handler sg.teams_alive matches 8 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 8/8", "color": "red", "bold": true}
 execute if score sg.handler sg.teams_alive matches 7 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 7/8", "color": "red", "bold": true}
-execute if score sg.handler sg.teams_alive matches 6 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 6/6", "color": "red", "bold": true}
-execute if score sg.handler sg.teams_alive matches 5 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 5/6", "color": "red", "bold": true}
-execute if score sg.handler sg.teams_alive matches 4 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 4/6", "color": "red", "bold": true}
-execute if score sg.handler sg.teams_alive matches 3 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 3/6", "color": "red", "bold": true}
-execute if score sg.handler sg.teams_alive matches 2 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 2/6", "color": "red", "bold": true}
-execute if score sg.handler sg.teams_alive matches 1 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 1/6", "color": "red", "bold": true}
-execute if score sg.handler sg.teams_alive matches 0 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 0/6", "color": "red", "bold": true}
+execute if score sg.handler sg.teams_alive matches 6 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 6/8", "color": "red", "bold": true}
+execute if score sg.handler sg.teams_alive matches 5 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 5/8", "color": "red", "bold": true}
+execute if score sg.handler sg.teams_alive matches 4 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 4/8", "color": "red", "bold": true}
+execute if score sg.handler sg.teams_alive matches 3 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 3/8", "color": "red", "bold": true}
+execute if score sg.handler sg.teams_alive matches 2 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 2/8", "color": "red", "bold": true}
+execute if score sg.handler sg.teams_alive matches 1 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 1/8", "color": "red", "bold": true}
+execute if score sg.handler sg.teams_alive matches 0 run scoreboard players display name sg.teamsAlive sg.sidebar {"text": "Teams Alive: 0/8", "color": "red", "bold": true}
 
 # blank line
 scoreboard players set §b sg.sidebar 504

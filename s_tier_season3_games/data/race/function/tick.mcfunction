@@ -14,12 +14,15 @@ execute unless score race.handler race.stage matches 0.. run function race:load
 function race:points_update
 function race:sidebar with storage stmc:global
 
+# auto pause
+execute unless score race.handler race.stage matches 3 run function thread:automatic_pause
+
 # if we're in stage 0, increment timer
 execute if score race.handler race.stage matches 0 run scoreboard players add race.handler race.timer.delay1 1
 # reset world
 execute in race:race if score race.handler race.timer.delay1 matches 3 run fill -15 106 10 -11 109 10 spruce_fence
 execute in race:race if score race.handler race.timer.delay1 matches 3 run fill -15 106 17 -11 108 17 red_stained_glass
-execute if score race.handler race.stage matches 0 if score race.handler race.timer.delay1 matches 400.. run scoreboard players set race.handler race.stage 1
+execute if score race.handler race.stage matches 0 if score race.handler race.timer.delay1 matches 200.. run scoreboard players set race.handler race.stage 1
 
 # if we're in stage 1, increment timer & run explanation
 execute if score race.handler race.stage matches 1 run scoreboard players add race.handler race.timer.explanation 1

@@ -12,9 +12,6 @@
 
 # <===== run the lobbies & games =====>
 
-function trials:sidebar with storage stmc:global
-# sidebar also runs points update
-
 # run automatic pause
 execute if score tr.handler tr.stage matches 0 run function thread:automatic_pause
 execute if score tr.handler tr.stage matches 2 run function thread:automatic_pause

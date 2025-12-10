@@ -100,8 +100,8 @@ scoreboard players set §a tr.sidebar 301
 
 # timer
 scoreboard players set tr.timer tr.sidebar 302
-execute if score tr.handler tr.timer.secs matches ..9 run scoreboard players display name tr.timer tr.sidebar [{text:"Time: ",color:aqua,bold:true},{score:{name:"tr.handler",objective:"tr.timer.mins"},color:aqua},{text:":0",color:aqua},{score:{name:"tr.handler",objective:"tr.timer.secs"},color:aqua}]
-execute if score tr.handler tr.timer.secs matches 10..59 run scoreboard players display name tr.timer tr.sidebar [{text:"Time: ",color:aqua,bold:true},{score:{name:"tr.handler",objective:"tr.timer.mins"},color:aqua},{text:":",color:aqua},{score:{name:"tr.handler",objective:"tr.timer.secs"},color:aqua}]
+execute if score tr.handler tr.timer.secs matches ..9 run scoreboard players display name tr.timer tr.sidebar [{score:{name:"tr.handler",objective:"tr.timer.mins"},color:aqua},{text:":0",color:aqua},{score:{name:"tr.handler",objective:"tr.timer.secs"},color:aqua}]
+execute if score tr.handler tr.timer.secs matches 10..59 run scoreboard players display name tr.timer tr.sidebar [{score:{name:"tr.handler",objective:"tr.timer.mins"},color:aqua},{text:":",color:aqua},{score:{name:"tr.handler",objective:"tr.timer.secs"},color:aqua}]
 
 # game name
 scoreboard players set tr.game tr.sidebar 303

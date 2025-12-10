@@ -11,7 +11,7 @@ execute if score stmc.handler event.stage matches 0 run function lobby:between/t
 # game stage
 
 execute if score stmc.handler event.stage matches 1 if score stmc.handler stats.game1 matches 0 run function race:tick
-execute if score stmc.handler event.stage matches 1 if score stmc.handler stats.game1 matches 1 run function solve:tick
+execute if score stmc.handler event.stage matches 1 if score stmc.handler stats.game1 matches 1 run function sprint:tick
 execute if score stmc.handler event.stage matches 1 if score stmc.handler stats.game1 matches 2 run function trials:tick
 execute if score stmc.handler event.stage matches 1 if score stmc.handler stats.game1 matches 3 run function collect:tick
 execute if score stmc.handler event.stage matches 1 if score stmc.handler stats.game1 matches 4 run function mine:tick
@@ -28,7 +28,7 @@ execute if score stmc.handler event.stage matches 2 run function lobby:between/t
 # game stage
 
 execute if score stmc.handler event.stage matches 3 if score stmc.handler stats.game2 matches 0 run function race:tick
-execute if score stmc.handler event.stage matches 3 if score stmc.handler stats.game2 matches 1 run function solve:tick
+execute if score stmc.handler event.stage matches 3 if score stmc.handler stats.game2 matches 1 run function sprint:tick
 execute if score stmc.handler event.stage matches 3 if score stmc.handler stats.game2 matches 2 run function trials:tick
 execute if score stmc.handler event.stage matches 3 if score stmc.handler stats.game2 matches 3 run function collect:tick
 execute if score stmc.handler event.stage matches 3 if score stmc.handler stats.game2 matches 4 run function mine:tick
@@ -45,7 +45,7 @@ execute if score stmc.handler event.stage matches 4 run function lobby:between/t
 # game stage
 
 execute if score stmc.handler event.stage matches 5 if score stmc.handler stats.game3 matches 0 run function race:tick
-execute if score stmc.handler event.stage matches 5 if score stmc.handler stats.game3 matches 1 run function solve:tick
+execute if score stmc.handler event.stage matches 5 if score stmc.handler stats.game3 matches 1 run function sprint:tick
 execute if score stmc.handler event.stage matches 5 if score stmc.handler stats.game3 matches 2 run function trials:tick
 execute if score stmc.handler event.stage matches 5 if score stmc.handler stats.game3 matches 3 run function collect:tick
 execute if score stmc.handler event.stage matches 5 if score stmc.handler stats.game3 matches 4 run function mine:tick
@@ -62,7 +62,7 @@ execute if score stmc.handler event.stage matches 6 run function lobby:between/t
 # game stage
 
 execute if score stmc.handler event.stage matches 7 if score stmc.handler stats.game4 matches 0 run function race:tick
-execute if score stmc.handler event.stage matches 7 if score stmc.handler stats.game4 matches 1 run function solve:tick
+execute if score stmc.handler event.stage matches 7 if score stmc.handler stats.game4 matches 1 run function sprint:tick
 execute if score stmc.handler event.stage matches 7 if score stmc.handler stats.game4 matches 2 run function trials:tick
 execute if score stmc.handler event.stage matches 7 if score stmc.handler stats.game4 matches 3 run function collect:tick
 execute if score stmc.handler event.stage matches 7 if score stmc.handler stats.game4 matches 4 run function mine:tick
@@ -79,7 +79,7 @@ execute if score stmc.handler event.stage matches 8 run function lobby:between/t
 # game stage
 
 execute if score stmc.handler event.stage matches 9 if score stmc.handler stats.game5 matches 0 run function race:tick
-execute if score stmc.handler event.stage matches 9 if score stmc.handler stats.game5 matches 1 run function solve:tick
+execute if score stmc.handler event.stage matches 9 if score stmc.handler stats.game5 matches 1 run function sprint:tick
 execute if score stmc.handler event.stage matches 9 if score stmc.handler stats.game5 matches 2 run function trials:tick
 execute if score stmc.handler event.stage matches 9 if score stmc.handler stats.game5 matches 3 run function collect:tick
 execute if score stmc.handler event.stage matches 9 if score stmc.handler stats.game5 matches 4 run function mine:tick
@@ -96,7 +96,7 @@ execute if score stmc.handler event.stage matches 10 run function lobby:between/
 # game stage
 
 execute if score stmc.handler event.stage matches 11 if score stmc.handler stats.game6 matches 0 run function race:tick
-execute if score stmc.handler event.stage matches 11 if score stmc.handler stats.game6 matches 1 run function solve:tick
+execute if score stmc.handler event.stage matches 11 if score stmc.handler stats.game6 matches 1 run function sprint:tick
 execute if score stmc.handler event.stage matches 11 if score stmc.handler stats.game6 matches 2 run function trials:tick
 execute if score stmc.handler event.stage matches 11 if score stmc.handler stats.game6 matches 3 run function collect:tick
 execute if score stmc.handler event.stage matches 11 if score stmc.handler stats.game6 matches 4 run function mine:tick
@@ -113,7 +113,7 @@ execute if score stmc.handler event.stage matches 12 run function lobby:between/
 # game stage
 
 execute if score stmc.handler event.stage matches 13 if score stmc.handler stats.game7 matches 0 run function race:tick
-execute if score stmc.handler event.stage matches 13 if score stmc.handler stats.game7 matches 1 run function solve:tick
+execute if score stmc.handler event.stage matches 13 if score stmc.handler stats.game7 matches 1 run function sprint:tick
 execute if score stmc.handler event.stage matches 13 if score stmc.handler stats.game7 matches 2 run function trials:tick
 execute if score stmc.handler event.stage matches 13 if score stmc.handler stats.game7 matches 3 run function collect:tick
 execute if score stmc.handler event.stage matches 13 if score stmc.handler stats.game7 matches 4 run function mine:tick
@@ -130,7 +130,7 @@ execute if score stmc.handler event.stage matches 14 run function lobby:between/
 # game stage
 
 execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 0 run function race:tick
-execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 1 run function solve:tick
+execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 1 run function sprint:tick
 execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 2 run function trials:tick
 execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 3 run function collect:tick
 execute if score stmc.handler event.stage matches 15 if score stmc.handler stats.game8 matches 4 run function mine:tick
