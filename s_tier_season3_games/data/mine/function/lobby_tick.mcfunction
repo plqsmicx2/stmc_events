@@ -5,7 +5,9 @@ function mine:game/diamond
 function mine:game/endermite
 function mine:game/endermite_clear
 
-
+execute if score mine.handler mine.timer matches 1 run function mine:inventory/creaking
+item replace entity @a hotbar.1 with air
+item replace entity @a hotbar.2 with air
 
 execute if score mine.handler mine.timer matches 20 run title @a title "Mine"
 execute if score mine.handler mine.timer matches 40 run title @a title "Lobby"

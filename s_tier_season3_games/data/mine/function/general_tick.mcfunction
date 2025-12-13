@@ -5,8 +5,7 @@ function mine:game/compass
 function mine:game/diamond
 function mine:game/endermite
 function mine:game/endermite_clear
-function mine:game/lantern
-function mine:game/openwalls
+execute as @a[gamemode=adventure] run function mine:game/lantern
 function mine:game/snowball
 
 execute as @a[gamemode=adventure,scores={mine.game.deathcount=1}] run gamemode spectator @s

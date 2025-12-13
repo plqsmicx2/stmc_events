@@ -5,6 +5,14 @@ execute as @a run attribute @s max_health base set 22
 clear @a
 effect clear @a
 
+# update trials points
+execute as @a run scoreboard players set @s tr.points.indiv 0
+execute as @a run scoreboard players operation @s tr.points.indiv += @s disco.points.indiv
+execute as @a run scoreboard players operation @s tr.points.indiv += @s replicate.points.indiv
+execute as @a run scoreboard players operation @s tr.points.indiv += @s spleef.points.indiv
+execute as @a run scoreboard players operation @s tr.points.indiv += @s towers.points.indiv
+execute as @a run scoreboard players operation @s tr.points.indiv += @s ascend.points.indiv
+
 # record trial points globally
 execute if score stmc.handler event.stage matches 1 as @a run scoreboard players operation @s stats.points.indiv.g1 = @s tr.points.indiv
 execute if score stmc.handler event.stage matches 3 as @a run scoreboard players operation @s stats.points.indiv.g2 = @s tr.points.indiv

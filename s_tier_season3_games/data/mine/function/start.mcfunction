@@ -19,4 +19,4 @@ scoreboard players add stmc.handler event.stage 1
 scoreboard players reset lobby.handler lobby.stage
 
 # run mine load function
-function mine:load
+execute in mine:lobby run function mine:load

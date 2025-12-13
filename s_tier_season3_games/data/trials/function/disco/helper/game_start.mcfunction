@@ -4,7 +4,7 @@
 scoreboard players set disco.handler disco.stage 3
 
 # start music
-execute in trials:disco if score disco.handler disco.rounds_played matches 0 if score disco.handler disco.timer.game matches 1 run playsound music_disc.otherside master @a 0 116 0 0.9
+execute in trials:disco run playsound music_disc.otherside master @a 0 116 0 0.9
 
 # create bossbar
 bossbar add disco.timer [{text:"Round Length",color:"dark_aqua"}]

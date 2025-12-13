@@ -1,10 +1,9 @@
 clear @a
 effect clear @a
 effect give @a saturation 1 255
-effect give @a hunger 5 5 true
 effect give @a instant_health 1 10
-effect give @a mining_fatigue 20 2 true
-effect give @a strength 20 0 true
+effect give @a mining_fatigue 5 2 true
+gamemode spectator @a[team=SPECTATORS]
 gamemode adventure @a
 scoreboard players reset @a mine.game.mined.diamond_ore
 scoreboard players reset @a mine.game.deathcount
@@ -15,23 +14,12 @@ spawnpoint @a 0 90 0
 
 forceload add -49 -49 49 49
 
-recipe take @a mine:mine_creaking_archer
-recipe take @a mine:mine_creaking_builder
-recipe take @a mine:mine_hoglin_archer
-recipe take @a mine:mine_hoglin_builder
-recipe take @a mine:mine_hoglin_tracker
-recipe take @a mine:mine_warden_archer
-recipe take @a mine:mine_warden_builder
-
+kill @e[type=creeper]
 kill @e[type=warden]
 kill @e[type=hoglin]
 kill @e[type=creaking]
 kill @e[type=endermite]
 kill @e[type=item]
-tp @e[type=zombie] 0 -300 0
-tp @e[type=skeleton] 0 -300 0
-tp @e[type=stray] 0 -300 0
-tp @e[type=drowned] 0 -300 0
 
 clone 59 5 59 -59 0 -59 -59 20 -59
 clone 59 5 59 -59 0 -59 -59 40 -59
@@ -50,3 +38,8 @@ tp @a[team=ORANGE_OTTERS] 0 102 0
 tp @a[team=YELLOW_YAKS] 0 122 0
 tp @a[team=BLUE_BEARS] 0 142 0
 tp @a[team=PINK_PIKAS] 0 162 0
+
+execute if score mine.handler mine.stage.creaking matches 1 run function mine:inventory/creaking
+execute if score mine.handler mine.stage.hoglin matches 1 run function mine:inventory/hoglin
+execute if score mine.handler mine.stage.warden matches 1 run function mine:inventory/warden
+execute if score mine.handler mine.stage.creeper matches 1 run function mine:inventory/creeper
