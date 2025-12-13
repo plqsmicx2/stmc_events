@@ -1,0 +1,2 @@
+execute as @e[type=chicken] at @s positioned ~-8 ~-1 ~-8 as @e[type=warden,dx=16,dz=16,dy=2] run data remove entity @s anger.suspects[1]
+execute as @e[type=chicken] at @s positioned ~-8 ~-1 ~-8 at @e[type=warden,dx=16,dz=16,dy=2] run data modify entity @n anger.suspects[0].uuid set from entity @s UUID

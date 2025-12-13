@@ -72,19 +72,7 @@
           "weight": 4,
           "quality": 1,
           "name": "minecraft:lantern",
-          "functions": [
-            {
-              "function": "set_lore",
-              "lore": [
-                {
-                  "color": "blue",
-                  "italic": false,
-                  "text": "hold in offhand"
-                }
-              ],
-              "mode": "append"
-            }
-          ]
+          "functions": []
         },
         {
           "type": "item",
@@ -110,7 +98,7 @@
           "functions": [
             {
               "function": "set_count",
-              "count": 1
+              "count": 2
             }
           ]
         },

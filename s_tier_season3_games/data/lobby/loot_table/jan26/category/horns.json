@@ -1,0 +1,90 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 5,
+          "quality": 4,
+          "name": "minecraft:goat_horn",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:instrument": "minecraft:ponder_goat_horn"
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "quality": 4,
+          "name": "minecraft:goat_horn",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:instrument": "minecraft:sing_goat_horn"
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "quality": 4,
+          "name": "minecraft:goat_horn",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:instrument": "minecraft:seek_goat_horn"
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 5,
+          "quality": 4,
+          "name": "minecraft:goat_horn",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:instrument": "minecraft:feel_goat_horn"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:potion_duration_scale": 0.2
+      }
+    }
+  ]
+}

@@ -7,14 +7,14 @@
       "entries": [
         {
           "type": "item",
-          "weight": 4,
+          "weight": 2,
           "quality": 1,
           "name": "minecraft:totem_of_undying",
           "functions": []
         },
         {
           "type": "item",
-          "weight": 4,
+          "weight": 2,
           "quality": 1,
           "name": "minecraft:enchanted_golden_apple",
           "functions": [
@@ -26,7 +26,7 @@
         },
         {
           "type": "item",
-          "weight": 6,
+          "weight": 4,
           "quality": 1,
           "name": "minecraft:splash_potion",
           "functions": [
@@ -46,7 +46,7 @@
         },
         {
           "type": "item",
-          "weight": 6,
+          "weight": 4,
           "quality": 1,
           "name": "minecraft:splash_potion",
           "functions": [
@@ -66,7 +66,7 @@
         },
         {
           "type": "item",
-          "weight": 6,
+          "weight": 4,
           "quality": 1,
           "name": "minecraft:potion",
           "functions": [
@@ -98,7 +98,7 @@
         },
         {
           "type": "item",
-          "weight": 10,
+          "weight": 8,
           "quality": 1,
           "name": "minecraft:potion",
           "functions": [
@@ -130,7 +130,7 @@
         },
         {
           "type": "item",
-          "weight": 12,
+          "weight": 16,
           "quality": 1,
           "name": "minecraft:cooked_beef",
           "functions": [
@@ -142,7 +142,7 @@
         },
         {
           "type": "item",
-          "weight": 20,
+          "weight": 24,
           "quality": 1,
           "name": "minecraft:bread",
           "functions": [
@@ -154,7 +154,7 @@
         },
         {
           "type": "item",
-          "weight": 20,
+          "weight": 24,
           "quality": 1,
           "name": "minecraft:baked_potato",
           "functions": [

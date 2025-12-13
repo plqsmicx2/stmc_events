@@ -4,12 +4,9 @@ execute as @a run attribute @s max_health base set 20
 execute as @a run attribute @s max_health modifier remove all
 effect give @a saturation 1 255
 effect give @a instant_health 1 10
-effect give @a resistance infinite 3
-effect give @a strength 20 0 true
 gamemode adventure @a
 scoreboard objectives add mine.stage dummy
 scoreboard objectives add mine.timer dummy
-scoreboard objectives add mine.timer.summon dummy
 scoreboard objectives add mine.timer.delay1 dummy
 scoreboard objectives add mine.timer.explanation dummy
 scoreboard objectives add mine.timer.delay2 dummy
@@ -19,38 +16,27 @@ scoreboard players set @a mine.points.indiv 0
 scoreboard players reset @a mine.game.mined.diamond_ore
 scoreboard players reset @a mine.game.deathcount
 scoreboard players reset mine.handler mine.timer
-scoreboard players reset mine.handler mine.timer.summon
 scoreboard players reset mine.handler mine.timer.delay1
 scoreboard players reset mine.handler mine.timer.explanation
 scoreboard players reset mine.handler mine.timer.delay2
 
 scoreboard players set mine.handler mine.stage.creaking 0
+scoreboard players set mine.handler mine.stage.creeper 0
 scoreboard players set mine.handler mine.stage.hoglin 0
 scoreboard players set mine.handler mine.stage.warden 0
 
-execute in mine:lobby run spawnpoint @a 0 100 0
-
-recipe give @a mine:mine_creaking_archer
-recipe give @a mine:mine_creaking_builder
-recipe give @a mine:mine_hoglin_archer
-recipe give @a mine:mine_hoglin_builder
-recipe give @a mine:mine_hoglin_tracker
-recipe give @a mine:mine_warden_archer
-recipe give @a mine:mine_warden_builder
+spawnpoint @a 0 100 0
 
 kill @e[type=warden]
 kill @e[type=hoglin]
+kill @e[type=creeper]
 kill @e[type=creaking]
 kill @e[type=endermite]
 kill @e[type=item]
-tp @e[type=zombie] 0 -300 0
-tp @e[type=skeleton] 0 -300 0
-tp @e[type=stray] 0 -300 0
-tp @e[type=drowned] 0 -300 0
 
-execute in mine:lobby run tp @a 0 100 0
+tp @a 0 100 0
 
-execute in mine:lobby run clone 59 84 59 -59 79 -59 -59 99 -59
+clone 59 84 59 -59 79 -59 -59 99 -59
 
 scoreboard players set mine.handler mine.stage.lobby 1
 

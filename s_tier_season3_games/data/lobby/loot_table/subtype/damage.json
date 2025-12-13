@@ -28,22 +28,6 @@
         },
         {
           "type": "item",
-          "weight": 3,
-          "quality": 1,
-          "name": "minecraft:trident",
-          "functions": [
-            {
-              "function": "set_components",
-              "components": {
-                "minecraft:enchantments": {
-                  "riptide": 2
-                }
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
           "weight": 4,
           "quality": 1,
           "name": "minecraft:iron_sword",
@@ -60,26 +44,6 @@
               "components": {
                 "minecraft:potion_contents": {
                   "potion": "minecraft:strong_harming"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "type": "item",
-          "weight": 4,
-          "quality": 1,
-          "name": "minecraft:tipped_arrow",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": 1
-            },
-            {
-              "function": "set_components",
-              "components": {
-                "minecraft:potion_contents": {
-                  "potion": "minecraft:weakness"
                 }
               }
             }
@@ -121,18 +85,6 @@
           "quality": 1,
           "name": "minecraft:crossbow",
           "functions": []
-        },
-        {
-          "type": "item",
-          "weight": 4,
-          "quality": 1,
-          "name": "minecraft:spectral_arrow",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": 2
-            }
-          ]
         },
         {
           "type": "item",

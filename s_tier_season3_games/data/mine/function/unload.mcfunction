@@ -7,21 +7,15 @@ scoreboard players reset @a mine.game.mined.diamond_ore
 scoreboard players reset @a mine.game.deathcount
 scoreboard players reset mine.handler mine.timer
 
+scoreboard players set mine.handler mine.stage.lobby 0
 scoreboard players set mine.handler mine.stage.creaking 0
+scoreboard players set mine.handler mine.stage.creeper 0
 scoreboard players set mine.handler mine.stage.hoglin 0
 scoreboard players set mine.handler mine.stage.warden 0
 
 kill @e[type=warden]
 kill @e[type=hoglin]
+kill @e[type=creeper]
 kill @e[type=creaking]
 kill @e[type=endermite]
 kill @e[type=item]
-tp @e[type=zombie] 0 -300 0
-tp @e[type=skeleton] 0 -300 0
-tp @e[type=stray] 0 -300 0
-tp @e[type=drowned] 0 -300 0
-
-scoreboard players set mine.handler mine.stage.lobby 0
-scoreboard players set mine.handler mine.stage.creaking 0
-scoreboard players set mine.handler mine.stage.hoglin 0
-scoreboard players set mine.handler mine.stage.warden 0

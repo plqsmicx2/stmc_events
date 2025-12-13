@@ -1,0 +1,1 @@
+execute as @e[type=snowball] at @s run data modify entity @s Owner set from entity @n[type=warden,dy=-3] UUID

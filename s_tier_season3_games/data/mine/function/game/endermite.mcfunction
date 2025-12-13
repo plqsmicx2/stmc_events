@@ -1,0 +1,1 @@
+execute as @e[type=silverfish] at @s store success entity @s Pos[1] double -300 run summon endermite

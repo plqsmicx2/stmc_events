@@ -3,8 +3,8 @@
   "pools": [
     {
       "rolls": {
-        "min": 16,
-        "max": 20
+        "min": 11,
+        "max": 15
       },
       "bonus_rolls": 0,
       "entries": [
@@ -13,13 +13,6 @@
           "weight": 48,
           "quality": 1,
           "value": "lobby:subtype/armor",
-          "functions": []
-        },
-        {
-          "type": "loot_table",
-          "weight": 36,
-          "quality": 1,
-          "value": "lobby:subtype/craft",
           "functions": []
         },
         {
@@ -38,7 +31,7 @@
         },
         {
           "type": "loot_table",
-          "weight": 88,
+          "weight": 33,
           "quality": 1,
           "value": "lobby:subtype/heal",
           "functions": []
@@ -59,7 +52,14 @@
         },
         {
           "type": "loot_table",
-          "weight": 60,
+          "weight": 30,
+          "quality": 1,
+          "value": "lobby:subtype/rare",
+          "functions": []
+        },
+        {
+          "type": "loot_table",
+          "weight": 40,
           "quality": 1,
           "value": "lobby:subtype/token",
           "functions": []
@@ -68,7 +68,7 @@
       "functions": [
         {
           "function": "set_damage",
-          "damage": 0.06
+          "damage": 0.05
         }
       ]
     }
