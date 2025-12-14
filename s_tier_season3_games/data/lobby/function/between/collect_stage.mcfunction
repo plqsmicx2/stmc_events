@@ -25,10 +25,8 @@ execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby
 # announce event start
 execute in lobby:lobby if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 10 run \
         tp @a -40 135 -35 -50 25
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 10 run \
-        title @a title ["",{text:"STMC Open",color:green,bold:true}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 11 run \
-        title @a subtitle ["",{text:"8 Minigames + a Finale!",color:green}]
+$execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 10 run \
+        title @a title ["",{text:"$(event_name)",color:green,bold:true}]
 
 # quick event explanation
 execute in lobby:lobby if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 160 run \

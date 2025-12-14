@@ -37,4 +37,7 @@ scoreboard players set @a race.checkpoints_completed 0
 scoreboard players set @a race.soundThisTick 0
 
 # return to hub if carrot on a stick is used
-scoreboard objectives add race.return used:carrot_on_a_stick
+scoreboard objectives add .return used:carrot_on_a_stick
+
+# return to last checkpoint if warped fungus is used
+scoreboard objectives add race.return used:warped_fungus_on_a_stick

@@ -9,7 +9,7 @@ execute if score race.handler race.timer.explanation matches 1 run title @a titl
 execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:"Race is a simple game.",color:"green"}
 execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:"Your objective is to complete four laps in the least time possible.",color:"green"}
+execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:"Your objective is to complete three laps in the least time possible.",color:"green"}
 execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:" "}
 
 # blurb #2

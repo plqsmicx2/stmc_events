@@ -72,6 +72,3 @@ scoreboard players display name lobby.timer lobby.sidebar [{text:"Starting Soon.
 
 # blank line
 scoreboard players set §b lobby.sidebar 5003
-
-# set the players' actionbar to their individual rank & points
-execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]

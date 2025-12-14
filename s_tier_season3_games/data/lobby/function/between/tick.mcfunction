@@ -44,7 +44,7 @@ execute as @a if items entity @s hotbar.* suspicious_stew[tooltip_display={hide_
 execute as @a if items entity @s hotbar.* suspicious_stew[tooltip_display={hide_tooltip:true}] run clear @s suspicious_stew[tooltip_display={hide_tooltip:true}] 1
 
 # run collect stage if we haven't reached switch time
-execute if score lobby.handler lobby.timer < lobby.handler lobby.timer.switch run function lobby:between/collect_stage
+execute if score lobby.handler lobby.timer < lobby.handler lobby.timer.switch run function lobby:between/collect_stage with storage stmc:global
 
 # run voting stage otherwise
 execute if score lobby.handler lobby.timer >= lobby.handler lobby.timer.switch run function lobby:between/vote_stage

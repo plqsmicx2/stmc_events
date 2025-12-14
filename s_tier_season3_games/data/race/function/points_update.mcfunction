@@ -13,7 +13,7 @@
 execute as @a run scoreboard players set @s race.points.indiv 0
 
 # indiv placement
-scoreboard players set race.handler race.points.placement 3
+scoreboard players set race.handler race.points.placement 2
 execute as @a if score @s race.completion.rank matches 1.. run scoreboard players set @s race.points.indiv 32
 execute as @a if score @s race.completion.rank matches 1.. run scoreboard players operation @s race.points.indiv -= @s race.completion.rank
 execute as @a if score @s race.completion.rank matches 1.. run scoreboard players operation @s race.points.indiv *= race.handler race.points.placement

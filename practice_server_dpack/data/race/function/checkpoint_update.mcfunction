@@ -57,19 +57,24 @@ execute if score @s race.checkpoints_completed matches 10 if entity @s[x=67,y=11
 execute as @s if entity @s[x=67,y=115,z=47,dx=1,dy=5,dz=5] run function race:checkpoint
 
 # CHECKPOINT #12
-execute if score @s race.checkpoints_completed matches 11 if entity @s[x=46,y=105,z=-7,dx=1,dy=5,dz=6] unless score @s race.checkpoints_completed matches 12 run scoreboard players set @s race.soundThisTick 1
-execute if score @s race.checkpoints_completed matches 11 if entity @s[x=46,y=105,z=-7,dx=1,dy=5,dz=6] run scoreboard players set @s race.checkpoints_completed 12
-execute as @s if entity @s[x=46,y=105,z=-7,dx=1,dy=5,dz=6] run function race:checkpoint
+execute if score @s race.checkpoints_completed matches 11 if entity @s[x=74,y=102,z=24,dx=1,dy=3,dz=4] unless score @s race.checkpoints_completed matches 12 run scoreboard players set @s race.soundThisTick 1
+execute if score @s race.checkpoints_completed matches 11 if entity @s[x=74,y=102,z=24,dx=1,dy=3,dz=4] run scoreboard players set @s race.checkpoints_completed 12
+execute as @s if entity @s[x=74,y=102,z=24,dx=1,dy=3,dz=4] run function race:checkpoint
 
 # CHECKPOINT #13
-execute if score @s race.checkpoints_completed matches 12 if entity @s[x=6,y=104,z=-4,dx=3,dy=5,dz=1] unless score @s race.checkpoints_completed matches 13 run scoreboard players set @s race.soundThisTick 1
-execute if score @s race.checkpoints_completed matches 12 if entity @s[x=6,y=104,z=-4,dx=3,dy=5,dz=1] run scoreboard players set @s race.checkpoints_completed 13
+execute if score @s race.checkpoints_completed matches 12 if entity @s[x=46,y=105,z=-7,dx=1,dy=5,dz=6] unless score @s race.checkpoints_completed matches 13 run scoreboard players set @s race.soundThisTick 1
+execute if score @s race.checkpoints_completed matches 12 if entity @s[x=46,y=105,z=-7,dx=1,dy=5,dz=6] run scoreboard players set @s race.checkpoints_completed 13
+execute as @s if entity @s[x=46,y=105,z=-7,dx=1,dy=5,dz=6] run function race:checkpoint
+
+# CHECKPOINT #14
+execute if score @s race.checkpoints_completed matches 13 if entity @s[x=6,y=104,z=-4,dx=3,dy=5,dz=1] unless score @s race.checkpoints_completed matches 14 run scoreboard players set @s race.soundThisTick 1
+execute if score @s race.checkpoints_completed matches 13 if entity @s[x=6,y=104,z=-4,dx=3,dy=5,dz=1] run scoreboard players set @s race.checkpoints_completed 14
 execute as @s if entity @s[x=6,y=104,z=-4,dx=3,dy=5,dz=1] run function race:checkpoint
 
-# CHECKPOINT #14 (last)
-execute if score @s race.checkpoints_completed matches 13 if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] unless score @s race.checkpoints_completed matches 0 run scoreboard players add @s race.laps_completed 1
-execute if score @s race.checkpoints_completed matches 13 if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] unless score @s race.checkpoints_completed matches 0 if score @s race.laptime.seconds matches 0..9 run tellraw @a [{selector:"@s"},{text:" completed lap #",color:green},{score:{name:"@s",objective:"race.laps_completed"},color:green},{text:" in ",color:green},{score:{name:"@s",objective:"race.laptime.mins"},color:"green"},{text:":0",color:"green"},{score:{name:"@s",objective:"race.laptime.seconds"},color:"green"}]
-execute if score @s race.checkpoints_completed matches 13 if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] unless score @s race.checkpoints_completed matches 0 if score @s race.laptime.seconds matches 10.. run tellraw @a [{selector:"@s"},{text:" completed lap #",color:green},{score:{name:"@s",objective:"race.laps_completed"},color:green},{text:" in ",color:green},{score:{name:"@s",objective:"race.laptime.mins"},color:"green"},{text:":",color:"green"},{score:{name:"@s",objective:"race.laptime.seconds"},color:"green"}]
-execute if score @s race.checkpoints_completed matches 13 in race:race at @s if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] unless score @s race.checkpoints_completed matches 0 run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1.2 0.8
-execute if score @s race.checkpoints_completed matches 13 if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] run scoreboard players set @s race.checkpoints_completed 0
+# CHECKPOINT #15 (last)
+execute if score @s race.checkpoints_completed matches 14 if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] unless score @s race.checkpoints_completed matches 0 run scoreboard players add @s race.laps_completed 1
+execute if score @s race.checkpoints_completed matches 14 if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] unless score @s race.checkpoints_completed matches 0 if score @s race.laptime.seconds matches 0..9 run tellraw @a [{selector:"@s"},{text:" completed lap #",color:green},{score:{name:"@s",objective:"race.laps_completed"},color:green},{text:" in ",color:green},{score:{name:"@s",objective:"race.laptime.mins"},color:"green"},{text:":0",color:"green"},{score:{name:"@s",objective:"race.laptime.seconds"},color:"green"}]
+execute if score @s race.checkpoints_completed matches 14 if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] unless score @s race.checkpoints_completed matches 0 if score @s race.laptime.seconds matches 10.. run tellraw @a [{selector:"@s"},{text:" completed lap #",color:green},{score:{name:"@s",objective:"race.laps_completed"},color:green},{text:" in ",color:green},{score:{name:"@s",objective:"race.laptime.mins"},color:"green"},{text:":",color:"green"},{score:{name:"@s",objective:"race.laptime.seconds"},color:"green"}]
+execute if score @s race.checkpoints_completed matches 14 in race:race at @s if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] unless score @s race.checkpoints_completed matches 0 run playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1.2 0.8
+execute if score @s race.checkpoints_completed matches 14 if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] run scoreboard players set @s race.checkpoints_completed 0
 execute as @s if entity @s[x=-16,y=105,z=9,dx=7,dy=6,dz=1] run function race:checkpoint

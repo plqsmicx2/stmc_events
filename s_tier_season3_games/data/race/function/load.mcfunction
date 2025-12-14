@@ -100,6 +100,9 @@ scoreboard objectives add race.points.team dummy
 scoreboard objectives add race.points.team.rank dummy
 scoreboard objectives add race.points.placement dummy
 
+# reset checkpoint value
+scoreboard objectives add race.return minecraft.used:carrot_on_a_stick
+
 # (re)set all necessary values
 scoreboard players set race.handler race.stage 0
 
