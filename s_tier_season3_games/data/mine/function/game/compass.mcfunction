@@ -2,6 +2,6 @@ setblock 0 -63 0 barrel{Items:[{Slot:0b,id:"minecraft:compass",count:1,component
 
 data modify block 0 -63 0 Items[0].components."minecraft:lodestone_tracker".target.dimension set from entity @s Dimension
 
-execute as @n[type=!player,type=!item,dx=40,dy=2,dz=40] run data modify block 0 -63 0 Items[0].components."minecraft:lodestone_tracker".target.pos set from entity @s Pos
+execute at @s as @e[type=!player,type=!item,sort=furthest] positioned ~-20 ~-1 ~-20 if entity @s[dx=40,dy=2,dz=40] run data modify block 0 -63 0 Items[0].components."minecraft:lodestone_tracker".target.pos set from entity @s Pos
 
 item replace entity @s weapon.offhand from block 0 -63 0 container.0

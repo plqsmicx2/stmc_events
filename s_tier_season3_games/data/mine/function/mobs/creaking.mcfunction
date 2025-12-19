@@ -20,12 +20,12 @@ $execute as @r[gamemode=adventure,team=PINK_PIKAS] at @s rotated $(rot) 0 positi
 {PersistenceRequired:1b,Invulnerable:1b,attributes:[{id:"minecraft:attack_damage",base:5},{id:"minecraft:movement_efficiency",base:0.0001},{id:"minecraft:movement_speed",base:0.4}],DeathLootTable:"minecraft:empty"}
 
 #guarantee spawn in air
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
-execute as @e[type=creaking] at @s unless block ~ ~ ~ air unless block ~ ~ ~ cobweb run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
+execute as @e[type=creaking] at @s unless block ~ ~ ~ air run tp @s ~1 ~ ~1
