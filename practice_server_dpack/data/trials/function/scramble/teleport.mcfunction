@@ -1,11 +1,11 @@
-# acts as the 'load' function for trials
+# acts as the 'load' function for scramble
 # teleports player to the dimension & sets lots of default values for them
 
 # function is run on @s
 
-execute in trials:lobby run tp @s 0 101 0
+execute in trials:scramble run tp @s 0 101 0
 
-execute in trials:lobby at @s positioned ~ ~ ~ run playsound block.portal.travel master @s ~ ~ ~ 0.1 1.1
+execute in trials:scramble at @s positioned ~ ~ ~ run playsound block.portal.travel master @s ~ ~ ~ 0.1 1.1
 
 gamemode adventure @s
 

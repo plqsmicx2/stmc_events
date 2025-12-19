@@ -58,6 +58,8 @@ execute in race:race as @s[x=-3,y=120,z=8,dx=3,dy=3] run item replace entity @s 
 execute as @s unless score @s race.checkpoints_completed matches 8 if items entity @s armor.chest minecraft:elytra unless entity @s[nbt={FallFlying:1b}] run \
         clear @s firework_rocket
 execute as @s unless score @s race.checkpoints_completed matches 8 if items entity @s armor.chest minecraft:elytra unless entity @s[nbt={FallFlying:1b}] run \
+        clear @s slime_ball
+execute as @s unless score @s race.checkpoints_completed matches 8 if items entity @s armor.chest minecraft:elytra unless entity @s[nbt={FallFlying:1b}] run \
         clear @s elytra
 
 # run reset on players once they complete

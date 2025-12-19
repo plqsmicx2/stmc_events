@@ -8,14 +8,14 @@
 
 # set the name of the event
 data modify storage stmc:global eventName set value "  STMC Reloaded II  "
-data modify storage stmc:global redName set value "Red Raccoons"
-data modify storage stmc:global orangeName set value "Orange Otters"
-data modify storage stmc:global pinkName set value "Pink Pikas"
-data modify storage stmc:global yellowName set value "the rapers"
-data modify storage stmc:global greenName set value "Green Goats"
-data modify storage stmc:global cyanName set value "Cyan Cougars"
-data modify storage stmc:global purpleName set value "Purple Penguins"
-data modify storage stmc:global blueName set value "67"
+data modify storage stmc:global redName set value "Red Rabbis"
+data modify storage stmc:global orangeName set value "Seamen"
+data modify storage stmc:global pinkName set value "Pink Tips"
+data modify storage stmc:global yellowName set value "Air Bud"
+data modify storage stmc:global greenName set value "Green Goys"
+data modify storage stmc:global cyanName set value "Cyan Slimers"
+data modify storage stmc:global purpleName set value "Purple Drank"
+data modify storage stmc:global blueName set value "Blue"
 
 # reset our booleans tracking if games have been played (& set games not being played to -1)
 data modify storage stmc:global racePlayed set value 0

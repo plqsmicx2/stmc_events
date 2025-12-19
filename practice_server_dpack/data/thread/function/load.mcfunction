@@ -21,7 +21,10 @@ team modify dim.tr.ascend color dark_red
 # load other games' scoreboards
 function race:load
 function extract:load
+function trials:load
 
 # reset sidebars
 scoreboard objectives remove lobby.sidebar
 scoreboard objectives remove race.sidebar
+scoreboard objectives remove extract.sidebar
+scoreboard objectives remove trials.sidebar

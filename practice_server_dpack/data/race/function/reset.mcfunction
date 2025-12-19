@@ -46,6 +46,12 @@ execute store result score race.handler .record run data get storage race:data r
 execute if score @s race.laptime.total < race.handler .record as @s run function race:update_record
 scoreboard objectives remove .record
 
+# determine if player set a new record
+scoreboard objectives add .recordLap dummy
+execute store result score race.handler .recordLap run data get storage race:data record.lap.time
+execute if score @s race.fastest_lap < race.handler .recordLap as @s run function race:update_lap_record
+scoreboard objectives remove .recordLap
+
 # teleport player back to race lobby
 execute in race:race run tp @s 0 100 197
 

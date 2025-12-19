@@ -7,6 +7,8 @@ execute in lobby:lobby run tp @s 0 100 0 0 0
 clear @s
 effect clear @s
 
+effect give @s saturation infinite 1 true
+
 execute in lobby:lobby run spawnpoint @s 0 100 0
 
 scoreboard players set @s race.gameActive 0

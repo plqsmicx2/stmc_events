@@ -36,6 +36,8 @@ scoreboard players set @a race.fastest_lap 0
 scoreboard players set @a race.checkpoints_completed 0
 scoreboard players set @a race.soundThisTick 0
 
+scoreboard objectives remove race.sidebar
+
 # return to hub if carrot on a stick is used
 scoreboard objectives add .return used:carrot_on_a_stick
 
