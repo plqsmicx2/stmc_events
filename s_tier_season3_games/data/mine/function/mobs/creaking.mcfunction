@@ -1,5 +1,3 @@
-# randomize current rotation
-execute store result storage mine:data rot int 1 run random value -179..180
 
 #spawn 1 per team
 $execute as @r[gamemode=adventure,team=CYAN_COUGARS] at @s rotated $(rot) 0 positioned ^ ^ ^10 run summon creaking ~ ~ ~ \

@@ -24,6 +24,12 @@ execute if score mine.handler mine.timer matches 200 if score mine.handler mine.
 execute if score mine.handler mine.timer matches 200 run tellraw @a [{"color":"dark_gray","text":" | "}]
 
 # sum votes for each game
+execute if score mine.handler mine.timer matches 500 run scoreboard players reset mine.handler mine.vote.creaking
+execute if score mine.handler mine.timer matches 500 run scoreboard players reset mine.handler mine.vote.hoglin
+execute if score mine.handler mine.timer matches 500 run scoreboard players reset mine.handler mine.vote.warden
+execute if score mine.handler mine.timer matches 500 run scoreboard players reset mine.handler mine.vote.creeper
+
+# sum votes for each game
 execute if score mine.handler mine.timer matches 500 as @a[gamemode=adventure,scores={mine.vote=0}] run scoreboard players add mine.handler mine.vote.creaking 1
 execute if score mine.handler mine.timer matches 500 as @a[gamemode=adventure,scores={mine.vote=1}] run scoreboard players add mine.handler mine.vote.hoglin 1
 execute if score mine.handler mine.timer matches 500 as @a[gamemode=adventure,scores={mine.vote=2}] run scoreboard players add mine.handler mine.vote.warden 1
