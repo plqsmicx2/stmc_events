@@ -2,7 +2,7 @@
   "providers": [
     {
       "type": "bitmap",
-      "file": "team_logos:item/yellow_yak.png",
+      "file": "team_logos:item/reloaded_two/air_bud.png",
       "height": 8,
       "ascent": 8,
       "chars": [

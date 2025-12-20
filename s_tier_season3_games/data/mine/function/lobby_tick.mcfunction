@@ -1,4 +1,7 @@
 
+# automatic pause
+function thread:automatic_pause
+
 execute as @a[gamemode=adventure] run function mine:game/lantern
 function mine:game/diamond
 function mine:game/endermite

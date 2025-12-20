@@ -2,7 +2,7 @@
   "providers": [
     {
       "type": "bitmap",
-      "file": "team_logos:item/blue_bear.png",
+      "file": "team_logos:item/reloaded_two/blue_moon.png",
       "height": 8,
       "ascent": 8,
       "chars": [

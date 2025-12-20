@@ -15,7 +15,7 @@ data modify storage stmc:global yellowName set value "Air Bud"
 data modify storage stmc:global greenName set value "Green Goys"
 data modify storage stmc:global cyanName set value "Cyan Slimers"
 data modify storage stmc:global purpleName set value "Purple Drank"
-data modify storage stmc:global blueName set value "Blue"
+data modify storage stmc:global blueName set value "Blue Moon"
 
 # reset our booleans tracking if games have been played (& set games not being played to -1)
 data modify storage stmc:global racePlayed set value 0

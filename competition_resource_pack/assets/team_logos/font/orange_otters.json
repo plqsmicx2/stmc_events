@@ -2,7 +2,7 @@
   "providers": [
     {
       "type": "bitmap",
-      "file": "team_logos:item/orange_otter.png",
+      "file": "team_logos:item/reloaded_two/seamen.png",
       "height": 8,
       "ascent": 8,
       "chars": [

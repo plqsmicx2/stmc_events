@@ -10,12 +10,15 @@
 # run load function if this is our first time here
 execute unless score mine.handler mine.stage matches 0.. run function mine:load
 
+# automatically pause
+execute unless score mine.handler mine.stage matches 2 run function thread:automatic_pause
+
 # run functions every tick
 function mine:sidebar with storage stmc:global
 
 # if we're in stage 0, increment timer
 execute if score mine.handler mine.stage matches 0 run scoreboard players add mine.handler mine.timer.delay1 1
-execute if score mine.handler mine.stage matches 0 if score mine.handler mine.timer.delay1 matches 400.. run scoreboard players set mine.handler mine.stage 1
+execute if score mine.handler mine.stage matches 0 if score mine.handler mine.timer.delay1 matches 200.. run scoreboard players set mine.handler mine.stage 1
 
 # if we're in stage 1, increment timer & run explanation
 execute if score mine.handler mine.stage matches 1 run scoreboard players add mine.handler mine.timer.explanation 1
