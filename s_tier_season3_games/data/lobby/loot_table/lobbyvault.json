@@ -41,7 +41,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:darkness",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 250
                     }
                   ]
@@ -68,7 +68,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:wither",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 1800
                     }
                   ]
@@ -224,7 +224,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:levitation",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 100
                     }
                   ]
