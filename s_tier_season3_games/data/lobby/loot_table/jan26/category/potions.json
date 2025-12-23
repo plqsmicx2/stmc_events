@@ -314,7 +314,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:levitation",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 500
                     }
                   ]
@@ -350,7 +350,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:darkness",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 800
                     }
                   ]
@@ -626,7 +626,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:levitation",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 340
                     }
                   ]
@@ -662,7 +662,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:darkness",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 600
                     }
                   ]

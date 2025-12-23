@@ -285,7 +285,7 @@
                 ],
                 "minecraft:entity_data": {
                   "id": "minecraft:wolf",
-                  "Invulnerable": 1,
+                  "Invulnerable": true,
                   "attributes": [
                     {
                       "id": "minecraft:attack_damage",
@@ -346,7 +346,7 @@
                 ],
                 "minecraft:entity_data": {
                   "id": "minecraft:pig",
-                  "Invulnerable": 1
+                  "Invulnerable": true
                 },
                 "minecraft:tooltip_display": {
                   "hidden_components": [
@@ -413,7 +413,7 @@
                 ],
                 "minecraft:entity_data": {
                   "id": "minecraft:happy_ghast",
-                  "Invulnerable": 1
+                  "Invulnerable": true
                 },
                 "minecraft:tooltip_display": {
                   "hidden_components": [
@@ -468,7 +468,7 @@
                 ],
                 "minecraft:entity_data": {
                   "id": "minecraft:cat",
-                  "Invulnerable": 1
+                  "Invulnerable": true
                 }
               }
             }
@@ -1480,7 +1480,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:levitation",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 500
                     }
                   ]
@@ -1516,7 +1516,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:darkness",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 800
                     }
                   ]
@@ -1792,7 +1792,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:levitation",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 340
                     }
                   ]
@@ -1828,7 +1828,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:darkness",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 600
                     }
                   ]
@@ -2491,7 +2491,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:darkness",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 400
                     }
                   ]
@@ -2530,7 +2530,7 @@
                   "custom_effects": [
                     {
                       "id": "minecraft:levitation",
-                      "amplifier": 0,
+                      "amplifier": 1,
                       "duration": 280
                     }
                   ]

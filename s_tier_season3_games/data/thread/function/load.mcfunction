@@ -139,6 +139,8 @@ scoreboard objectives add sg.stage dummy
 scoreboard objectives add mine.stage dummy
 scoreboard objectives add blitz.stage dummy
 scoreboard objectives add collect.stage dummy
+scoreboard objectives add sprint.stage dummy
+scoreboard objectives add dungeons.stage dummy
 scoreboard objectives add finale.stage dummy
 
 # and reset handlers associated with each one
@@ -152,6 +154,8 @@ scoreboard players reset sg.handler sg.stage
 scoreboard players reset mine.handler mine.stage
 scoreboard players reset blitz.handler blitz.stage
 scoreboard players reset collect.handler collect.stage
+scoreboard players reset sprint.handler sprint.stage
+scoreboard players reset dungeons.handler dungeons.stage
 scoreboard players reset finale.handler finale.stage
 
 # reset player points
