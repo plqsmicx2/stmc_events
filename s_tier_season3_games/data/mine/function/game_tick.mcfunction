@@ -10,8 +10,8 @@ execute if score mine.handler mine.stage.warden matches 1 if score mine.handler 
 #tick
 execute if score mine.handler mine.stage.creaking matches 1 in mine:creaking run function mine:general_tick with storage mine:data
 execute if score mine.handler mine.stage.creeper matches 1 in mine:creaking run function mine:general_tick with storage mine:data
-execute if score mine.handler mine.stage.hoglin matches 1 in mine:hoglin run function mine:general_tick with storage mine:data
-execute if score mine.handler mine.stage.warden matches 1 in mine:warden run function mine:general_tick with storage mine:data
+execute if score mine.handler mine.stage.hoglin matches 1 in mine:creaking run function mine:general_tick with storage mine:data
+execute if score mine.handler mine.stage.warden matches 1 in mine:creaking run function mine:general_tick with storage mine:data
 
 #lobby tick
 execute if score mine.handler mine.stage.lobby matches 1 in mine:lobby run function mine:lobby_tick
