@@ -218,7 +218,7 @@
             "minecraft:multishot",
             "minecraft:quick_charge",
             "minecraft:sharpness",
-            "dungeon:reach"
+            "dungeons:reach"
           ],
           "conditions": [
             {
@@ -324,7 +324,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "dungeon:reach": 3
+                  "dungeons:reach": 3
                 }
               }
             }

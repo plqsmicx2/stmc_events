@@ -285,7 +285,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "dungeon:reach": 1
+                  "dungeons:reach": 1
                 }
               }
             }

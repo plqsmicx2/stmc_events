@@ -15,97 +15,97 @@ gamerule doMobSpawning true
 gamerule pvp false
 
 #scores setup
-function dungeon:scores
+function dungeons:scores
 
 #reset timers
-scoreboard players reset dungeon.handler dungeon.timer
-scoreboard players set dungeon.handler dungeon.timer_inverse 18000
+scoreboard players reset dungeons.handler dungeons.timer
+scoreboard players set dungeons.handler dungeons.timer_inverse 18000
 
 #reset all room completions
 #room 2 and 5 have multiple doors (rooms) to open
-scoreboard players set BLUE_BEARS dungeon.room 0
-scoreboard players set CYAN_COUGARS dungeon.room 0
-scoreboard players set RED_RACCOONS dungeon.room 0
-scoreboard players set GREEN_GOATS dungeon.room 0
-scoreboard players set PURPLE_PENGUINS dungeon.room 0
-scoreboard players set ORANGE_OTTERS dungeon.room 0
-scoreboard players set YELLOW_YAKS dungeon.room 0
-scoreboard players set PINK_PIKAS dungeon.room 0
-scoreboard players reset BLUE_BEARS dungeon.timer.0
-scoreboard players reset CYAN_COUGARS dungeon.timer.0
-scoreboard players reset RED_RACCOONS dungeon.timer.0
-scoreboard players reset GREEN_GOATS dungeon.timer.0
-scoreboard players reset PURPLE_PENGUINS dungeon.timer.0
-scoreboard players reset ORANGE_OTTERS dungeon.timer.0
-scoreboard players reset YELLOW_YAKS dungeon.timer.0
-scoreboard players reset PINK_PIKAS dungeon.timer.0
-scoreboard players reset BLUE_BEARS dungeon.timer.1
-scoreboard players reset CYAN_COUGARS dungeon.timer.1
-scoreboard players reset RED_RACCOONS dungeon.timer.1
-scoreboard players reset GREEN_GOATS dungeon.timer.1
-scoreboard players reset PURPLE_PENGUINS dungeon.timer.1
-scoreboard players reset ORANGE_OTTERS dungeon.timer.1
-scoreboard players reset YELLOW_YAKS dungeon.timer.1
-scoreboard players reset PINK_PIKAS dungeon.timer.1
-scoreboard players reset BLUE_BEARS dungeon.timer.3
-scoreboard players reset CYAN_COUGARS dungeon.timer.3
-scoreboard players reset RED_RACCOONS dungeon.timer.3
-scoreboard players reset GREEN_GOATS dungeon.timer.3
-scoreboard players reset PURPLE_PENGUINS dungeon.timer.3
-scoreboard players reset ORANGE_OTTERS dungeon.timer.3
-scoreboard players reset YELLOW_YAKS dungeon.timer.3
-scoreboard players reset PINK_PIKAS dungeon.timer.3
-scoreboard players reset BLUE_BEARS dungeon.timer.4
-scoreboard players reset CYAN_COUGARS dungeon.timer.4
-scoreboard players reset RED_RACCOONS dungeon.timer.4
-scoreboard players reset GREEN_GOATS dungeon.timer.4
-scoreboard players reset PURPLE_PENGUINS dungeon.timer.4
-scoreboard players reset ORANGE_OTTERS dungeon.timer.4
-scoreboard players reset YELLOW_YAKS dungeon.timer.4
-scoreboard players reset PINK_PIKAS dungeon.timer.4
-scoreboard players reset BLUE_BEARS dungeon.timer.5
-scoreboard players reset CYAN_COUGARS dungeon.timer.5
-scoreboard players reset RED_RACCOONS dungeon.timer.5
-scoreboard players reset GREEN_GOATS dungeon.timer.5
-scoreboard players reset PURPLE_PENGUINS dungeon.timer.5
-scoreboard players reset ORANGE_OTTERS dungeon.timer.5
-scoreboard players reset YELLOW_YAKS dungeon.timer.5
-scoreboard players reset PINK_PIKAS dungeon.timer.5
-scoreboard players reset BLUE_BEARS dungeon.timer.8
-scoreboard players reset CYAN_COUGARS dungeon.timer.8
-scoreboard players reset RED_RACCOONS dungeon.timer.8
-scoreboard players reset GREEN_GOATS dungeon.timer.8
-scoreboard players reset PURPLE_PENGUINS dungeon.timer.8
-scoreboard players reset ORANGE_OTTERS dungeon.timer.8
-scoreboard players reset YELLOW_YAKS dungeon.timer.8
-scoreboard players reset PINK_PIKAS dungeon.timer.8
-scoreboard players reset BLUE_BEARS dungeon.timer.8
-scoreboard players reset CYAN_COUGARS dungeon.timer.8
-scoreboard players reset RED_RACCOONS dungeon.timer.8
-scoreboard players reset GREEN_GOATS dungeon.timer.8
-scoreboard players reset PURPLE_PENGUINS dungeon.timer.8
-scoreboard players reset ORANGE_OTTERS dungeon.timer.8
-scoreboard players reset YELLOW_YAKS dungeon.timer.8
-scoreboard players reset PINK_PIKAS dungeon.timer.8
+scoreboard players set BLUE_BEARS dungeons.room 0
+scoreboard players set CYAN_COUGARS dungeons.room 0
+scoreboard players set RED_RACCOONS dungeons.room 0
+scoreboard players set GREEN_GOATS dungeons.room 0
+scoreboard players set PURPLE_PENGUINS dungeons.room 0
+scoreboard players set ORANGE_OTTERS dungeons.room 0
+scoreboard players set YELLOW_YAKS dungeons.room 0
+scoreboard players set PINK_PIKAS dungeons.room 0
+scoreboard players reset BLUE_BEARS dungeons.timer.0
+scoreboard players reset CYAN_COUGARS dungeons.timer.0
+scoreboard players reset RED_RACCOONS dungeons.timer.0
+scoreboard players reset GREEN_GOATS dungeons.timer.0
+scoreboard players reset PURPLE_PENGUINS dungeons.timer.0
+scoreboard players reset ORANGE_OTTERS dungeons.timer.0
+scoreboard players reset YELLOW_YAKS dungeons.timer.0
+scoreboard players reset PINK_PIKAS dungeons.timer.0
+scoreboard players reset BLUE_BEARS dungeons.timer.1
+scoreboard players reset CYAN_COUGARS dungeons.timer.1
+scoreboard players reset RED_RACCOONS dungeons.timer.1
+scoreboard players reset GREEN_GOATS dungeons.timer.1
+scoreboard players reset PURPLE_PENGUINS dungeons.timer.1
+scoreboard players reset ORANGE_OTTERS dungeons.timer.1
+scoreboard players reset YELLOW_YAKS dungeons.timer.1
+scoreboard players reset PINK_PIKAS dungeons.timer.1
+scoreboard players reset BLUE_BEARS dungeons.timer.3
+scoreboard players reset CYAN_COUGARS dungeons.timer.3
+scoreboard players reset RED_RACCOONS dungeons.timer.3
+scoreboard players reset GREEN_GOATS dungeons.timer.3
+scoreboard players reset PURPLE_PENGUINS dungeons.timer.3
+scoreboard players reset ORANGE_OTTERS dungeons.timer.3
+scoreboard players reset YELLOW_YAKS dungeons.timer.3
+scoreboard players reset PINK_PIKAS dungeons.timer.3
+scoreboard players reset BLUE_BEARS dungeons.timer.4
+scoreboard players reset CYAN_COUGARS dungeons.timer.4
+scoreboard players reset RED_RACCOONS dungeons.timer.4
+scoreboard players reset GREEN_GOATS dungeons.timer.4
+scoreboard players reset PURPLE_PENGUINS dungeons.timer.4
+scoreboard players reset ORANGE_OTTERS dungeons.timer.4
+scoreboard players reset YELLOW_YAKS dungeons.timer.4
+scoreboard players reset PINK_PIKAS dungeons.timer.4
+scoreboard players reset BLUE_BEARS dungeons.timer.5
+scoreboard players reset CYAN_COUGARS dungeons.timer.5
+scoreboard players reset RED_RACCOONS dungeons.timer.5
+scoreboard players reset GREEN_GOATS dungeons.timer.5
+scoreboard players reset PURPLE_PENGUINS dungeons.timer.5
+scoreboard players reset ORANGE_OTTERS dungeons.timer.5
+scoreboard players reset YELLOW_YAKS dungeons.timer.5
+scoreboard players reset PINK_PIKAS dungeons.timer.5
+scoreboard players reset BLUE_BEARS dungeons.timer.8
+scoreboard players reset CYAN_COUGARS dungeons.timer.8
+scoreboard players reset RED_RACCOONS dungeons.timer.8
+scoreboard players reset GREEN_GOATS dungeons.timer.8
+scoreboard players reset PURPLE_PENGUINS dungeons.timer.8
+scoreboard players reset ORANGE_OTTERS dungeons.timer.8
+scoreboard players reset YELLOW_YAKS dungeons.timer.8
+scoreboard players reset PINK_PIKAS dungeons.timer.8
+scoreboard players reset BLUE_BEARS dungeons.timer.8
+scoreboard players reset CYAN_COUGARS dungeons.timer.8
+scoreboard players reset RED_RACCOONS dungeons.timer.8
+scoreboard players reset GREEN_GOATS dungeons.timer.8
+scoreboard players reset PURPLE_PENGUINS dungeons.timer.8
+scoreboard players reset ORANGE_OTTERS dungeons.timer.8
+scoreboard players reset YELLOW_YAKS dungeons.timer.8
+scoreboard players reset PINK_PIKAS dungeons.timer.8
 #reset displayed room completions
-scoreboard players set BLUE_BEARS dungeon.roomdisplay 0
-scoreboard players set CYAN_COUGARS dungeon.roomdisplay 0
-scoreboard players set RED_RACCOONS dungeon.roomdisplay 0
-scoreboard players set GREEN_GOATS dungeon.roomdisplay 0
-scoreboard players set PURPLE_PENGUINS dungeon.roomdisplay 0
-scoreboard players set ORANGE_OTTERS dungeon.roomdisplay 0
-scoreboard players set YELLOW_YAKS dungeon.roomdisplay 0
-scoreboard players set PINK_PIKAS dungeon.roomdisplay 0
+scoreboard players set BLUE_BEARS dungeons.roomdisplay 0
+scoreboard players set CYAN_COUGARS dungeons.roomdisplay 0
+scoreboard players set RED_RACCOONS dungeons.roomdisplay 0
+scoreboard players set GREEN_GOATS dungeons.roomdisplay 0
+scoreboard players set PURPLE_PENGUINS dungeons.roomdisplay 0
+scoreboard players set ORANGE_OTTERS dungeons.roomdisplay 0
+scoreboard players set YELLOW_YAKS dungeons.roomdisplay 0
+scoreboard players set PINK_PIKAS dungeons.roomdisplay 0
 
 #sidebar temporary
-scoreboard objectives setdisplay sidebar dungeon.roomdisplay
-scoreboard players set ------ dungeon.roomdisplay 10
+scoreboard objectives setdisplay sidebar dungeons.roomdisplay
+scoreboard players set ------ dungeons.roomdisplay 10
 
 #bossbar timer
-bossbar add dungeon.timer "Time Remaining"
-bossbar set minecraft:dungeon.timer players @a
-bossbar set minecraft:dungeon.timer max 18000
-bossbar set minecraft:dungeon.timer value 18000
+bossbar add dungeons.timer "Time Remaining"
+bossbar set minecraft:dungeons.timer players @a
+bossbar set minecraft:dungeons.timer max 18000
+bossbar set minecraft:dungeons.timer value 18000
 
 #items
 item replace entity @a hotbar.0 with wooden_sword[unbreakable={}]
