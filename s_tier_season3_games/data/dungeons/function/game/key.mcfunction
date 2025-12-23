@@ -21,5 +21,6 @@ execute if entity @a[scores={dungeon.glass=1..}] run function event:dungeon/game
 execute if entity @a[scores={dungeon.glass=1..}] run function event:dungeon/game/display/room_3
 execute if entity @a[scores={dungeon.glass=1..}] run function event:dungeon/game/display/room_4
 execute if entity @a[scores={dungeon.glass=1..}] run function event:dungeon/game/display/room_5
+#room 6 in end
 
 scoreboard players reset @a dungeon.glass

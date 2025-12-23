@@ -14,6 +14,9 @@ gamerule doMobSpawning true
 #may allow mob spawning in other dimensions
 gamerule pvp false
 
+#scores setup
+function dungeon:scores
+
 #reset timers
 scoreboard players reset dungeon.handler dungeon.timer
 scoreboard players set dungeon.handler dungeon.timer_inverse 18000
@@ -93,8 +96,6 @@ scoreboard players set PURPLE_PENGUINS dungeon.roomdisplay 0
 scoreboard players set ORANGE_OTTERS dungeon.roomdisplay 0
 scoreboard players set YELLOW_YAKS dungeon.roomdisplay 0
 scoreboard players set PINK_PIKAS dungeon.roomdisplay 0
-scoreboard players set event.handler event.stage.lobby 0
-scoreboard players set event.handler event.stage.dungeon 1
 
 #sidebar temporary
 scoreboard objectives setdisplay sidebar dungeon.roomdisplay
