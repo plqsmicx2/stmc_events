@@ -7,7 +7,7 @@ gamemode adventure @a
 scoreboard objectives setdisplay sidebar
 
 
-bossbar remove dungeon.timer
+bossbar remove dungeons.timer
 
 forceload remove -16 -3 14 140
 

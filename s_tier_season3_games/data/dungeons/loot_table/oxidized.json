@@ -1,0 +1,656 @@
+{
+  "type": "chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "functions": [
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:unbreakable": {}
+          }
+        },
+        {
+          "function": "minecraft:enchant_with_levels",
+          "levels": 12,
+          "options": [
+            "minecraft:protection"
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.6
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "weight": 19,
+          "name": "minecraft:iron_helmet",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 19,
+          "name": "minecraft:iron_chestplate",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 19,
+          "name": "minecraft:iron_leggings",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 19,
+          "name": "minecraft:iron_boots",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "minecraft:diamond_helmet",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "minecraft:diamond_chestplate",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "minecraft:diamond_leggings",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "minecraft:diamond_boots",
+          "functions": []
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "item",
+          "weight": 8,
+          "name": "minecraft:firework_rocket",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_fireworks",
+              "flight_duration": 1,
+              "explosions": {
+                "values": [
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  },
+                  {
+                    "shape": "burst",
+                    "colors": [
+                      16773360
+                    ],
+                    "fade_colors": []
+                  }
+                ],
+                "mode": "append"
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 46,
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:harming"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 45,
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:weakness"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 25,
+          "name": "minecraft:tipped_arrow",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_harming"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:unbreakable": {}
+          }
+        },
+        {
+          "function": "minecraft:enchant_with_levels",
+          "levels": 12,
+          "options": [
+            "minecraft:power",
+            "minecraft:quick_charge",
+            "minecraft:sharpness",
+            "dungeons:reach"
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.6
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "weight": 13,
+          "name": "minecraft:shield",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 13,
+          "name": "minecraft:bow",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 13,
+          "name": "minecraft:crossbow",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 3,
+          "name": "minecraft:diamond_axe",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 8,
+          "name": "minecraft:copper_axe",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 11,
+          "name": "minecraft:iron_axe",
+          "functions": []
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "item",
+          "weight": 160,
+          "name": "minecraft:experience_bottle",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 13,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "power": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 13,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "sharpness": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "quick_charge": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "power": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "sharpness": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 17,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "dungeons:reach": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 15,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "quick_charge": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 11,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "power": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 11,
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "sharpness": 3
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "item",
+          "weight": 25,
+          "name": "minecraft:cooked_beef",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 50,
+          "name": "minecraft:golden_carrot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 38,
+          "name": "minecraft:golden_apple",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "minecraft:enchanted_golden_apple",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "minecraft:milk_bucket",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_swiftness"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_regeneration"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_strength"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_swiftness"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_regeneration"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 11,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_strength"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 13,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_healing"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 13,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_harming"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:harming"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "minecraft:blocks/chest"
+}
