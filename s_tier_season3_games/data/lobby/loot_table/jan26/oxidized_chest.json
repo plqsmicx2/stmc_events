@@ -1,8 +1,11 @@
 {
   "pools": [
     {
-      "rolls": 18,
-      "bonus_rolls": 0,
+      "rolls": {
+        "min": 7,
+        "max": 8
+      },
+      "bonus_rolls": 2,
       "entries": [
         {
           "type": "item",
@@ -1996,26 +1999,14 @@
                 "minecraft:potion_contents": {
                   "custom_effects": [
                     {
-                      "id": "minecraft:instant_damage",
-                      "amplifier": 4,
-                      "duration": 1
-                    }
-                  ]
-                },
-                "minecraft:death_protection": {
-                  "death_effects": [
-                    {
-                      "type": "minecraft:clear_all_effects"
+                      "id": "minecraft:wither",
+                      "amplifier": 1,
+                      "duration": 120000
                     },
                     {
-                      "type": "minecraft:apply_effects",
-                      "effects": [
-                        {
-                          "id": "minecraft:resistance",
-                          "amplifier": 4,
-                          "duration": -1
-                        }
-                      ]
+                      "id": "minecraft:darkness",
+                      "amplifier": 1,
+                      "duration": 120000
                     }
                   ]
                 }
@@ -2779,7 +2770,7 @@
     {
       "function": "minecraft:set_components",
       "components": {
-        "minecraft:potion_duration_scale": 0.3
+        "minecraft:potion_duration_scale": 0.2
       }
     }
   ]

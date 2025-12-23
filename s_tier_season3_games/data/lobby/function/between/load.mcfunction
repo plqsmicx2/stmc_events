@@ -12,7 +12,8 @@ execute as @a in lobby:lobby run spawnpoint @s 0 100 0 0 0
 gamemode adventure @a
 
 # set time
-time set 4000
+#night time
+time set 22000
 
 # set weather
 weather clear
