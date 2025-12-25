@@ -1,0 +1,43 @@
+{
+  "anvil_cost": 120,
+  "description": {
+    "translate": "Hoglin Armor"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:apply_mob_effect",
+          "to_apply": "instant_damage",
+          "min_duration": 1,
+          "max_duration": 1,
+          "min_amplifier": 0,
+          "max_amplifier": 0
+        },
+        "enchanted": "attacker",
+        "requirements": {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "is_direct": true
+          }
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 240,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 120,
+    "per_level_above_first": 0
+  },
+  "primary_items": "#minecraft:enchantable/sharp_weapon",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:enchantable/fire_aspect",
+  "weight": 2
+}

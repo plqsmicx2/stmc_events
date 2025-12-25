@@ -1,0 +1,125 @@
+{
+  "type": "chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "quality": 1,
+          "name": "minecraft:mace",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "quality": 1,
+          "name": "minecraft:golden_sword",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 2,
+          "quality": 1,
+          "name": "minecraft:golden_axe",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "quality": 1,
+          "name": "minecraft:iron_sword",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 4,
+          "quality": 1,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_harming"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 6,
+          "quality": 1,
+          "name": "minecraft:stone_sword",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 6,
+          "quality": 1,
+          "name": "minecraft:stone_axe",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 6,
+          "quality": 1,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:harming"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 8,
+          "quality": 1,
+          "name": "minecraft:crossbow",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "quality": 1,
+          "name": "minecraft:wooden_sword",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 10,
+          "quality": 1,
+          "name": "minecraft:wooden_axe",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 14,
+          "quality": 1,
+          "name": "minecraft:bow",
+          "functions": []
+        },
+        {
+          "type": "item",
+          "weight": 12,
+          "quality": 1,
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
