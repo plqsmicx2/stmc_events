@@ -6,14 +6,7 @@ execute as @a[scores={dungeons.glass=1..}] if items entity @s hotbar.* trial_key
 execute as @a[scores={dungeons.glass=1..}] run clear @s trial_key 1
 
 #progress room
-execute as @a[scores={dungeons.glass=1..},team=BLUE_BEARS] run scoreboard players add BLUE_BEARS dungeons.room 1
-execute as @a[scores={dungeons.glass=1..},team=RED_RACCOONS] run scoreboard players add RED_RACCOONS dungeons.room 1
-execute as @a[scores={dungeons.glass=1..},team=CYAN_COUGARS] run scoreboard players add CYAN_COUGARS dungeons.room 1
-execute as @a[scores={dungeons.glass=1..},team=GREEN_GOATS] run scoreboard players add GREEN_GOATS dungeons.room 1
-execute as @a[scores={dungeons.glass=1..},team=PURPLE_PENGUINS] run scoreboard players add PURPLE_PENGUINS dungeons.room 1
-execute as @a[scores={dungeons.glass=1..},team=ORANGE_OTTERS] run scoreboard players add ORANGE_OTTERS dungeons.room 1
-execute as @a[scores={dungeons.glass=1..},team=YELLOW_YAKS] run scoreboard players add YELLOW_YAKS dungeons.room 1
-execute as @a[scores={dungeons.glass=1..},team=PINK_PIKAS] run scoreboard players add PINK_PIKAS dungeons.room 1
+function stmc:games/dungeons/game/increment_room
 
 #display progress
 execute if entity @a[scores={dungeons.glass=1..}] run function stmc:games/dungeons/game/display/room_1

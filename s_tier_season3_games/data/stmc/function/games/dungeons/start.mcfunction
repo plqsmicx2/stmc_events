@@ -19,4 +19,7 @@ scoreboard players add stmc.handler event.stage 1
 scoreboard players reset lobby.handler lobby.stage
 
 # run dungeons load function
-function stmc:games/dungeons/load
+execute in stmc:dungeons run function stmc:games/dungeons/load
+
+# start game
+scoreboard players set dungeons.handler dungeons.stage 0

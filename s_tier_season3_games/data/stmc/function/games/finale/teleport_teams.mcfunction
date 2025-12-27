@@ -1,29 +1,29 @@
 # helper function that teleports the top 2 teams to their respective platforms
-execute in stmc:finale run tp @a -11 152 0 -90 35
+execute in stmc:finale run tp @a -10 88 0 -90 10
 
-execute if score team.RedRaccoons stats.points.team.rank matches 1 in stmc:finale run tp @a[team=RED_RACCOONS] 0 147 10 180 0
-execute if score team.RedRaccoons stats.points.team.rank matches 2 in stmc:finale run tp @a[team=RED_RACCOONS] 0 147 -10 0 0
+execute if score team.RedRaccoons stats.points.team.rank matches 1 in stmc:finale run tp @a[team=RED_RACCOONS] 0 83 10 180 0
+execute if score team.RedRaccoons stats.points.team.rank matches 2 in stmc:finale run tp @a[team=RED_RACCOONS] 0 83 -10 0 0
 
-execute if score team.OrangeOtters stats.points.team.rank matches 1 in stmc:finale run tp @a[team=ORANGE_OTTERS] 0 147 10 180 0
-execute if score team.OrangeOtters stats.points.team.rank matches 2 in stmc:finale run tp @a[team=ORANGE_OTTERS] 0 147 -10 0 0
+execute if score team.OrangeOtters stats.points.team.rank matches 1 in stmc:finale run tp @a[team=ORANGE_OTTERS] 0 83 10 180 0
+execute if score team.OrangeOtters stats.points.team.rank matches 2 in stmc:finale run tp @a[team=ORANGE_OTTERS] 0 83 -10 0 0
 
-execute if score team.PinkPikas stats.points.team.rank matches 1 in stmc:finale run tp @a[team=PINK_PIKAS] 0 147 10 180 0
-execute if score team.PinkPikas stats.points.team.rank matches 2 in stmc:finale run tp @a[team=PINK_PIKAS] 0 147 -10 0 0
+execute if score team.PinkPikas stats.points.team.rank matches 1 in stmc:finale run tp @a[team=PINK_PIKAS] 0 83 10 180 0
+execute if score team.PinkPikas stats.points.team.rank matches 2 in stmc:finale run tp @a[team=PINK_PIKAS] 0 83 -10 0 0
 
-execute if score team.YellowYaks stats.points.team.rank matches 1 in stmc:finale run tp @a[team=YELLOW_YAKS] 0 147 10 180 0
-execute if score team.YellowYaks stats.points.team.rank matches 2 in stmc:finale run tp @a[team=YELLOW_YAKS] 0 147 -10 0 0
+execute if score team.YellowYaks stats.points.team.rank matches 1 in stmc:finale run tp @a[team=YELLOW_YAKS] 0 83 10 180 0
+execute if score team.YellowYaks stats.points.team.rank matches 2 in stmc:finale run tp @a[team=YELLOW_YAKS] 0 83 -10 0 0
 
-execute if score team.GreenGoats stats.points.team.rank matches 1 in stmc:finale run tp @a[team=GREEN_GOATS] 0 147 10 180 0
-execute if score team.GreenGoats stats.points.team.rank matches 2 in stmc:finale run tp @a[team=GREEN_GOATS] 0 147 -10 0 0
+execute if score team.GreenGoats stats.points.team.rank matches 1 in stmc:finale run tp @a[team=GREEN_GOATS] 0 83 10 180 0
+execute if score team.GreenGoats stats.points.team.rank matches 2 in stmc:finale run tp @a[team=GREEN_GOATS] 0 83 -10 0 0
 
-execute if score team.CyanCougars stats.points.team.rank matches 1 in stmc:finale run tp @a[team=CYAN_COUGARS] 0 147 10 180 0
-execute if score team.CyanCougars stats.points.team.rank matches 2 in stmc:finale run tp @a[team=CYAN_COUGARS] 0 147 -10 0 0
+execute if score team.CyanCougars stats.points.team.rank matches 1 in stmc:finale run tp @a[team=CYAN_COUGARS] 0 83 10 180 0
+execute if score team.CyanCougars stats.points.team.rank matches 2 in stmc:finale run tp @a[team=CYAN_COUGARS] 0 83 -10 0 0
 
-execute if score team.PurplePenguins stats.points.team.rank matches 1 in stmc:finale run tp @a[team=PURPLE_PENGUINS] 0 147 10 180 0
-execute if score team.PurplePenguins stats.points.team.rank matches 2 in stmc:finale run tp @a[team=PURPLE_PENGUINS] 0 147 -10 0 0
+execute if score team.PurplePenguins stats.points.team.rank matches 1 in stmc:finale run tp @a[team=PURPLE_PENGUINS] 0 83 10 180 0
+execute if score team.PurplePenguins stats.points.team.rank matches 2 in stmc:finale run tp @a[team=PURPLE_PENGUINS] 0 83 -10 0 0
 
-execute if score team.BlueBears stats.points.team.rank matches 1 in stmc:finale run tp @a[team=BLUE_BEARS] 0 147 10 180 0
-execute if score team.BlueBears stats.points.team.rank matches 2 in stmc:finale run tp @a[team=BLUE_BEARS] 0 147 -10 0 0
+execute if score team.BlueBears stats.points.team.rank matches 1 in stmc:finale run tp @a[team=BLUE_BEARS] 0 83 10 180 0
+execute if score team.BlueBears stats.points.team.rank matches 2 in stmc:finale run tp @a[team=BLUE_BEARS] 0 83 -10 0 0
 
 # also sets glass barrier in place
 execute if score team.RedRaccoons stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:red_stained_glass

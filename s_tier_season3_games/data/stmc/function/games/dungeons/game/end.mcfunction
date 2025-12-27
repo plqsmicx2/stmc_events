@@ -1,5 +1,5 @@
 
-execute if score dungeons.handler dungeons.timer matches 18000 run function stmc:games/dungeons/unload
+execute if score dungeons.handler dungeons.timer matches 18000 in stmc:dungeons run function stmc:games/dungeons/unload
 
 execute as @a[team=BLUE_BEARS] if items entity @s hotbar.* ominous_trial_key run scoreboard players set BLUE_BEARS dungeons.room 9
 execute as @a[team=RED_RACCOONS] if items entity @s hotbar.* ominous_trial_key run scoreboard players set RED_RACCOONS dungeons.room 9

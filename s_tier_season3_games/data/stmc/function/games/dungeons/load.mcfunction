@@ -1,23 +1,53 @@
 
+# Game Settings
+
+# scores
+data modify storage dungeons:data roomOne set value 8
+data modify storage dungeons:data roomTwo set value 16
+data modify storage dungeons:data roomThree set value 24
+data modify storage dungeons:data roomFour set value 32
+data modify storage dungeons:data roomFive set value 40
+data modify storage dungeons:data roomSix set value 60
+
+data modify storage dungeons:data roomFirst set value 8
+data modify storage dungeons:data roomSecond set value 6
+data modify storage dungeons:data roomThird set value 4
+data modify storage dungeons:data roomFourth set value 2
+
+data modify storage dungeons:data overallFirst set value 60
+data modify storage dungeons:data overallSecond set value 48
+data modify storage dungeons:data overallThird set value 40
+data modify storage dungeons:data overallFourth set value 32
+data modify storage dungeons:data overallFifth set value 24
+data modify storage dungeons:data overallSixth set value 16
+data modify storage dungeons:data overallSeventh set value 8
+data modify storage dungeons:data overallEighth set value 0
+
 #effects
 clear @a
 effect clear @a
 effect give @a saturation 1 255
-effect give @a instant_health 1 10
+effect give @a instant_health 1 110
+effect give @a night_vision infinite 0 true
 xp set @a 0 levels
 xp set @a 0 points
 gamemode adventure @a
 
 #gamerules
 gamerule mob_drops false
-gamerule spawn_mobs true
+gamerule spawn_mobs false
 #may allow mob spawning in other dimensions
 gamerule pvp false
 
-#scores setup
+#scoreboard setup
 function stmc:games/dungeons/scores
 
 #reset timers
+scoreboard players set dungeons.handler dungeons.timer.delay1 0
+scoreboard players set dungeons.handler dungeons.timer.explanation 0
+scoreboard players set dungeons.handler dungeons.timer.delay2 0
+scoreboard players set dungeons.handler dungeons.timer.announcements 0
+
 scoreboard players reset dungeons.handler dungeons.timer
 scoreboard players set dungeons.handler dungeons.timer_inverse 18000
 
@@ -114,22 +144,16 @@ item replace entity @a hotbar.8 with lantern
 
 forceload add -16 -3 14 140
 
-clone 14 7 140 -16 -4 -3 -16 26 -3
-clone 14 7 140 -16 -4 -3 -16 56 -3
-clone 14 7 140 -16 -4 -3 -16 86 -3
-clone 14 7 140 -16 -4 -3 -16 116 -3
-clone 14 7 140 -16 -4 -3 -16 146 -3
-clone 14 7 140 -16 -4 -3 -16 176 -3
-clone 14 7 140 -16 -4 -3 -16 206 -3
-clone 14 7 140 -16 -4 -3 -16 236 -3
-
 kill @e[type=!player]
 
 tp @a[team=BLUE_BEARS] 0 30 0
-#tp @a[team=CYAN_COUGARS] 0 60 0
-#tp @a[team=RED_RACCOONS] 0 90 0
-#tp @a[team=GREEN_GOATS] 0 120 0
-#tp @a[team=PURPLE_PENGUINS] 0 150 0
-#tp @a[team=ORANGE_OTTERS] 0 180 0
-#tp @a[team=YELLOW_YAKS] 0 210 0
-#tp @a[team=PINK_PIKAS] 0 240 0
+tp @a[team=CYAN_COUGARS] 0 60 0
+tp @a[team=RED_RACCOONS] 0 90 0
+tp @a[team=GREEN_GOATS] 0 120 0
+tp @a[team=PURPLE_PENGUINS] 0 150 0
+tp @a[team=ORANGE_OTTERS] 0 180 0
+tp @a[team=YELLOW_YAKS] 0 210 0
+tp @a[team=PINK_PIKAS] 0 240 0
+
+# reset sidebar
+scoreboard objectives remove dungeons.sidebar

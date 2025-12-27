@@ -96,7 +96,6 @@
             },
             {
               "function": "minecraft:set_fireworks",
-              "shape": "burst",
               "flight_duration": 1,
               "explosions": {
                 "values": [
@@ -218,7 +217,7 @@
             "minecraft:multishot",
             "minecraft:quick_charge",
             "minecraft:sharpness",
-            "dungeons:reach"
+            "stmc:dungeons/reach"
           ],
           "conditions": [
             {
@@ -324,7 +323,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:stored_enchantments": {
-                  "dungeons:reach": 3
+                  "stmc:dungeons/reach": 3
                 }
               }
             }

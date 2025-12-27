@@ -5,14 +5,14 @@
 
 # store values in a temporary place
 scoreboard objectives add solve.timer.room1.temp dummy
-scoreboard players operation solve.RedRaccoons solve.timer.room1.temp = solve.RedRaccoons solve.timer.game.room1.rank
-scoreboard players operation solve.OrangeOtters solve.timer.room1.temp = solve.OrangeOtters solve.timer.game.room1.rank
-scoreboard players operation solve.PinkPikas solve.timer.room1.temp = solve.PinkPikas solve.timer.game.room1.rank
-scoreboard players operation solve.YellowYaks solve.timer.room1.temp = solve.YellowYaks solve.timer.game.room1.rank
-scoreboard players operation solve.GreenGoats solve.timer.room1.temp = solve.GreenGoats solve.timer.game.room1.rank
-scoreboard players operation solve.CyanCougars solve.timer.room1.temp = solve.CyanCougars solve.timer.game.room1.rank
-scoreboard players operation solve.PurplePenguins solve.timer.room1.temp = solve.PurplePenguins solve.timer.game.room1.rank
-scoreboard players operation solve.BlueBears solve.timer.room1.temp = solve.BlueBears solve.timer.game.room1.rank
+scoreboard players operation solve.RedRaccoons solve.timer.room1.temp = solve.RedRaccoons solve.timer.game.room1
+scoreboard players operation solve.OrangeOtters solve.timer.room1.temp = solve.OrangeOtters solve.timer.game.room1
+scoreboard players operation solve.PinkPikas solve.timer.room1.temp = solve.PinkPikas solve.timer.game.room1
+scoreboard players operation solve.YellowYaks solve.timer.room1.temp = solve.YellowYaks solve.timer.game.room1
+scoreboard players operation solve.GreenGoats solve.timer.room1.temp = solve.GreenGoats solve.timer.game.room1
+scoreboard players operation solve.CyanCougars solve.timer.room1.temp = solve.CyanCougars solve.timer.game.room1
+scoreboard players operation solve.PurplePenguins solve.timer.room1.temp = solve.PurplePenguins solve.timer.game.room1
+scoreboard players operation solve.BlueBears solve.timer.room1.temp = solve.BlueBears solve.timer.game.room1
 
 # then reset ranks
 scoreboard players set solve.RedRaccoons solve.timer.game.room1.rank -1

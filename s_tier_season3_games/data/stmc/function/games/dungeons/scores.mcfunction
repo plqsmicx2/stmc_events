@@ -1,4 +1,9 @@
 
+# main thread timers
+scoreboard objectives add dungeons.timer.delay1 dummy
+scoreboard objectives add dungeons.timer.explanation dummy
+scoreboard objectives add dungeons.timer.delay2 dummy
+scoreboard objectives add dungeons.timer.announcements dummy
 
 scoreboard objectives add dungeons.timer dummy
 scoreboard objectives add dungeons.timer_inverse dummy
@@ -15,6 +20,22 @@ scoreboard objectives add dungeons.timer.3 dummy
 scoreboard objectives add dungeons.timer.4 dummy
 scoreboard objectives add dungeons.timer.5 dummy
 scoreboard objectives add dungeons.timer.8 dummy
+scoreboard objectives add dungeons.timer.overall dummy
+
+scoreboard objectives add dungeons.timer.0.rank dummy
+scoreboard objectives add dungeons.timer.1.rank dummy
+scoreboard objectives add dungeons.timer.3.rank dummy
+scoreboard objectives add dungeons.timer.4.rank dummy
+scoreboard objectives add dungeons.timer.5.rank dummy
+scoreboard objectives add dungeons.timer.8.rank dummy
+scoreboard objectives add dungeons.timer.overall.rank dummy
+
+# points
+scoreboard objectives add dungeons.points.team dummy
+scoreboard objectives add dungeons.points.team.rank dummy
+scoreboard objectives add dungeons.points.indiv dummy
+
+scoreboard objectives add dungeons.stats.players dummy
 
 #minutes and seconds
 scoreboard objectives add dungeons.timer.0.min dummy

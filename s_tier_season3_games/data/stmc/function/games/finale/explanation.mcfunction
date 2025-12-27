@@ -27,23 +27,25 @@ execute if score finale.handler finale.timer.explanation matches 30 if score tea
 execute if score finale.handler finale.timer.explanation matches 30 run tellraw @a {text:" "}
 
 # blurb #2
-execute if score finale.handler finale.timer.explanation matches 160 in stmc:finale run tp @a 0 152 14 180 30
-execute if score finale.handler finale.timer.explanation matches 160 run tellraw @a {text:" "}
-execute if score finale.handler finale.timer.explanation matches 160 run tellraw @a {text:"Your objective is to knock all of your opponents off the platform.",color:white}
-execute if score finale.handler finale.timer.explanation matches 160 run tellraw @a {text:" "}
-execute if score finale.handler finale.timer.explanation matches 160 run tellraw @a {text:"Each player has one life.",color:white}
-execute if score finale.handler finale.timer.explanation matches 160 run tellraw @a {text:" "}
+execute if score finale.handler finale.timer.explanation matches 100 in stmc:finale run tp @a 0 152 14 180 30
+execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:" "}
+execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:"These two teams will play a best of three rounds.",color:white}
+execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:" "}
+execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:"Each round will be unique: Fight, Shoot, and Sumo.",color:white}
+execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:" "}
 
 # blurb #3
-execute if score finale.handler finale.timer.explanation matches 320 in stmc:finale run tp @a 0 152 -14 0 30
-execute if score finale.handler finale.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score finale.handler finale.timer.explanation matches 320 run tellraw @a {text:"There will be three rounds.",color:white}
-execute if score finale.handler finale.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score finale.handler finale.timer.explanation matches 320 run tellraw @a {text:"The first team to win two rounds will be crowned the winner!",color:white}
-execute if score finale.handler finale.timer.explanation matches 320 run tellraw @a {text:" "}
+execute if score finale.handler finale.timer.explanation matches 200 in stmc:finale run tp @a 0 152 -14 0 30
+execute if score finale.handler finale.timer.explanation matches 200 run tellraw @a {text:" "}
+execute if score finale.handler finale.timer.explanation matches 200 run tellraw @a {text:"The first place team will select the two rounds to play first.",color:white}
+execute if score finale.handler finale.timer.explanation matches 200 run tellraw @a {text:" "}
+execute if score finale.handler finale.timer.explanation matches 200 run tellraw @a {text:"The round they do not select will be left as a tiebreaker.",color:white}
+execute if score finale.handler finale.timer.explanation matches 200 run tellraw @a {text:" "}
 
 # blurb #5
-execute in stmc:finale if score finale.handler finale.timer.explanation matches 480 run function stmc:games/finale/start_round
-execute if score finale.handler finale.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score finale.handler finale.timer.explanation matches 480 run tellraw @a {text:"Good luck!",color:white}
-execute if score finale.handler finale.timer.explanation matches 480 run tellraw @a {text:" "}
+execute if score finale.handler finale.timer.explanation matches 300 run tellraw @a {text:" "}
+execute if score finale.handler finale.timer.explanation matches 300 run tellraw @a {text:"Good luck!",color:white}
+execute if score finale.handler finale.timer.explanation matches 300 run tellraw @a {text:" "}
+
+# move out of explanation phase
+execute if score finale.handler finale.timer.explanation matches 300 run scoreboard players set finale.handler finale.stage 2

@@ -1,25 +1,10 @@
-# load function for finale
+# load function for sumo
 
 # teleport players to spawn
 execute in stmc:finale run tp @a -10 88 0 -90 10
 
-# manual spawn
-execute in stmc:finale run spawnpoint @a -10 88 0 -90 10
-
 # force gamemode
 gamemode adventure @a
-
-# set time
-time set 4000
-
-# set weather
-weather clear
-
-# set appropriate gamerules
-gamerule advance_time false
-gamerule advance_weather false
-gamerule immediate_respawn true
-gamerule natural_health_regeneration false
 
 # clear inventories
 clear @a
@@ -41,52 +26,14 @@ execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with mine
 execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 execute as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=3949738,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
-# set xp
-xp set @a 0 points
-xp set @a 0 levels
-
-# kill all entities
-execute in stmc:finale run kill @e[type=!player]
-
 # and wrap it up with some scoreboard stuff
 # timers
-scoreboard objectives add finale.timer.delay1 dummy
-scoreboard objectives add finale.timer.explanation dummy
-scoreboard objectives add finale.timer.delay2 dummy
-scoreboard objectives add finale.timer.game dummy
-scoreboard objectives add finale.timer.delay3 dummy
+scoreboard objectives add sumo.timer dummy
 # stats
-scoreboard objectives add finale.stats.alive dummy
-scoreboard objectives add finale.stats.deaths deathCount
-# round stuff
-scoreboard objectives add finale.round.stage dummy
-scoreboard objectives add finale.round.completed dummy
-scoreboard objectives add finale.round.timer dummy
+scoreboard objectives add sumo.alive dummy
+scoreboard objectives add sumo.deaths dummy
 
-# (re)set all necessary values
-scoreboard players set finale.handler finale.stage 0
+scoreboard players set sumo.handler sumo.timer 0
 
-scoreboard players set finale.handler finale.timer.delay1 0
-scoreboard players set finale.handler finale.timer.explanation 0
-scoreboard players set finale.handler finale.timer.delay2 0
-scoreboard players set finale.handler finale.timer.game 0
-scoreboard players set finale.handler finale.timer.delay3 0
-
-scoreboard players set @a finale.stats.deaths 0
-
-scoreboard players set finale.handler finale.round.stage 0
-scoreboard players set finale.handler finale.round.completed 0
-scoreboard players set finale.handler finale.round.timer 0
-
-# reset teams' win counts
-scoreboard players set finale.RedRaccoons finale.round.completed 0
-scoreboard players set finale.OrangeOtters finale.round.completed 0
-scoreboard players set finale.PinkPikas finale.round.completed 0
-scoreboard players set finale.YellowYaks finale.round.completed 0
-scoreboard players set finale.GreenGoats finale.round.completed 0
-scoreboard players set finale.CyanCougars finale.round.completed 0
-scoreboard players set finale.PurplePenguins finale.round.completed 0
-scoreboard players set finale.BlueBears finale.round.completed 0
-
-# reset sidebar
-scoreboard objectives remove lobby.sidebar
+scoreboard players set @a sumo.alive 1
+scoreboard players set @a sumo.deaths 0
