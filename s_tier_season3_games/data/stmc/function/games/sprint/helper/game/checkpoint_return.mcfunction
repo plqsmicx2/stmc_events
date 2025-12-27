@@ -75,3 +75,113 @@ execute if score @s sprint.stats.currentSection matches 1 if score @s sprint.sta
         if score @s sprint.stats.currentDifficulty matches 2 run tp @s -274.35 101.00 0.54 452.73 5.70
 execute if score @s sprint.stats.currentSection matches 1 if score @s sprint.stats.currentCheckpoint matches 9 \
         if score @s sprint.stats.currentDifficulty matches 3 run tp @s -274.60 101.00 -16.45 90.93 12.75
+
+# Dropper Section
+
+# Level #1
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 1 \
+        if score @s sprint.stats.currentDifficulty matches 1 run tp @s -15.00 101.00 216.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 1 \
+        if score @s sprint.stats.currentDifficulty matches 2 run tp @s -15.00 101.00 200.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 1 \
+        if score @s sprint.stats.currentDifficulty matches 3 run tp @s -15.00 101.00 184.00 90 10
+
+# Level #2
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 2 \
+        if score @s sprint.stats.currentDifficulty matches 1 run tp @s -47.00 101.00 216.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 2 \
+        if score @s sprint.stats.currentDifficulty matches 2 run tp @s -47.00 101.00 200.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 2 \
+        if score @s sprint.stats.currentDifficulty matches 3 run tp @s -47.00 101.00 184.00 90 10
+
+# Level #3
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 3 \
+        if score @s sprint.stats.currentDifficulty matches 1 run tp @s -79.00 101.00 216.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 3 \
+        if score @s sprint.stats.currentDifficulty matches 2 run tp @s -79.00 101.00 200.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 3 \
+        if score @s sprint.stats.currentDifficulty matches 3 run tp @s -79.00 101.00 184.00 90 10
+
+# Level #4
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 4 \
+        if score @s sprint.stats.currentDifficulty matches 1 run tp @s -111.00 101.00 216.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 4 \
+        if score @s sprint.stats.currentDifficulty matches 2 run tp @s -111.00 101.00 200.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 4 \
+        if score @s sprint.stats.currentDifficulty matches 3 run tp @s -111.00 101.00 184.00 90 10
+
+# Level #5
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 5 \
+        if score @s sprint.stats.currentDifficulty matches 1 run tp @s -143.00 101.00 216.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 5 \
+        if score @s sprint.stats.currentDifficulty matches 2 run tp @s -143.00 101.00 200.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 5 \
+        if score @s sprint.stats.currentDifficulty matches 3 run tp @s -143.00 101.00 184.00 90 10
+
+# Level #6
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 6 \
+        if score @s sprint.stats.currentDifficulty matches 1 run tp @s -175.00 101.00 216.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 6 \
+        if score @s sprint.stats.currentDifficulty matches 2 run tp @s -175.00 101.00 200.00 90 10
+execute if score @s sprint.stats.currentSection matches 2 if score @s sprint.stats.currentCheckpoint matches 6 \
+        if score @s sprint.stats.currentDifficulty matches 3 run tp @s -175.00 101.00 184.00 90 10
+
+# Elytra Section
+
+# reset flying & boosts
+execute if score @s sprint.stats.currentSection matches 3 run \
+        clear @s elytra
+execute if score @s sprint.stats.currentSection matches 3 run \
+        clear @s firework_rocket
+execute if score @s sprint.stats.currentSection matches 3 run \
+        scoreboard players set @s sprint.elytra.boost 155
+
+# Level #1
+execute if score @s sprint.stats.currentSection matches 3 if score @s sprint.stats.currentCheckpoint matches 1 \
+        run tp @s -17 101 400 90 0
+
+# Level #2
+execute if score @s sprint.stats.currentSection matches 3 if score @s sprint.stats.currentCheckpoint matches 2 \
+        run tp @s -204 91 400 90 0
+
+# Level #3
+execute if score @s sprint.stats.currentSection matches 3 if score @s sprint.stats.currentCheckpoint matches 3 \
+        run tp @s -398 81 398 90 0
+
+# Level #4
+execute if score @s sprint.stats.currentSection matches 3 if score @s sprint.stats.currentCheckpoint matches 4 \
+        run tp @s -593 88 398 90 0
+
+# Spear
+
+# Level #1
+execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 1 \
+        run tp @s -18 101 600 90 0
+
+# Level #2
+execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 2 \
+        run tp @s -95 102 600 90 0
+
+# Level #3
+execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 3 \
+        run tp @s -172 105 600 90 0
+
+# Level #4
+execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 4 \
+        run tp @s -203 112 600 90 0
+
+# Level #5
+execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 5 \
+        run tp @s -297 116 600 90 0
+
+# Level #6
+execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 6 \
+        run tp @s -379 119 599 90 0
+
+# Level #7
+execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 7 \
+        run tp @s -457 123 599 90 0
+
+# Level #8
+execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 8 \
+        run tp @s -570 125 600 90 0

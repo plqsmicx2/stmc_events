@@ -4,7 +4,7 @@
 
 # blurb #1
 execute if score spleef.handler spleef.timer.explanation matches 1 run gamemode spectator @a
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 1 run tp @a 20 128 -20 45 35
+execute in stmc:trials/spleef if score spleef.handler spleef.timer.explanation matches 1 run tp @a 20 128 -20 45 35
 execute if score spleef.handler spleef.timer.explanation matches 1 run title @a title {text:"SPLEEF",color:"dark_aqua"}
 execute if score spleef.handler spleef.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score spleef.handler spleef.timer.explanation matches 1 run tellraw @a {text:"Spleef is a very simple & traditional game.",color:"aqua"}
@@ -13,7 +13,7 @@ execute if score spleef.handler spleef.timer.explanation matches 1 run tellraw @
 execute if score spleef.handler spleef.timer.explanation matches 1 run tellraw @a {text:" "}
 
 # blurb #2
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 160 run tp @a 25 140 25 135 33
+execute in stmc:trials/spleef if score spleef.handler spleef.timer.explanation matches 160 run tp @a 25 140 25 135 33
 execute if score spleef.handler spleef.timer.explanation matches 160 run tellraw @a {text:" "}
 execute if score spleef.handler spleef.timer.explanation matches 160 run tellraw @a {text:"When the game begins, you will fall onto the arena below.",color:"aqua"}
 execute if score spleef.handler spleef.timer.explanation matches 160 run tellraw @a {text:" "}
@@ -21,7 +21,7 @@ execute if score spleef.handler spleef.timer.explanation matches 160 run tellraw
 execute if score spleef.handler spleef.timer.explanation matches 160 run tellraw @a {text:" "}
 
 # blurb #3
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 320 run tp @a -21 104 20 -135 -15
+execute in stmc:trials/spleef if score spleef.handler spleef.timer.explanation matches 320 run tp @a -21 104 20 -135 -15
 execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:" "}
 execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:"There are three levels, each of which are equal size to the one above it.",color:"aqua"}
 execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:" "}
@@ -31,7 +31,7 @@ execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw
 execute if score spleef.handler spleef.timer.explanation matches 320 run tellraw @a {text:" "}
 
 # blurb #4
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 480 run tp @a -21 104 20 -135 -15
+execute in stmc:trials/spleef if score spleef.handler spleef.timer.explanation matches 480 run tp @a -21 104 20 -135 -15
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:"All points are determined by placement.",color:"aqua"}
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}
@@ -45,9 +45,9 @@ execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw
 execute if score spleef.handler spleef.timer.explanation matches 480 run tellraw @a {text:" "}
 
 # blurb #5
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 640 run tp @a 0 121 0 -180 90
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 640 run gamemode survival @a
-execute in trials:spleef if score spleef.handler spleef.timer.explanation matches 640 run gamemode spectator @a[team=SPECTATORS]
+execute in stmc:trials/spleef if score spleef.handler spleef.timer.explanation matches 640 run tp @a 0 121 0 -180 90
+execute in stmc:trials/spleef if score spleef.handler spleef.timer.explanation matches 640 run gamemode survival @a
+execute in stmc:trials/spleef if score spleef.handler spleef.timer.explanation matches 640 run gamemode spectator @a[team=SPECTATORS]
 execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 execute if score spleef.handler spleef.timer.explanation matches 640 as @a[team=PINK_PIKAS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=15961002,attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]

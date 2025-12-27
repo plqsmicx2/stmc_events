@@ -49,3 +49,4 @@ execute as @a if score brawl.BlueBears brawl.round.teamPlacement matches 1 run t
 
 # lastly, reset this round
 execute unless score brawl.handler brawl.roundsCompleted matches 2 run schedule function stmc:games/brawl/round/helper/return 5s
+execute if score brawl.handler brawl.roundsCompleted matches 2 run scoreboard players add brawl.handler brawl.roundsCompleted 1

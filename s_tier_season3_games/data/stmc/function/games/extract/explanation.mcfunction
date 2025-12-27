@@ -6,7 +6,7 @@
 # blurb #1
 execute if score extract.handler extract.timer.explanation matches 1 run title @a title {text:"EXTRACT",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 1 run gamemode spectator @a
-execute in extract:extract if score extract.handler extract.timer.explanation matches 1 run teleport @a 19 112 0 90 30
+execute in stmc:extract if score extract.handler extract.timer.explanation matches 1 run teleport @a 19 112 0 90 30
 execute if score extract.handler extract.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 1 run tellraw @a {text:"Extract is a round-robin pvp game.",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 1 run tellraw @a {text:" "}
@@ -14,7 +14,7 @@ execute if score extract.handler extract.timer.explanation matches 1 run tellraw
 execute if score extract.handler extract.timer.explanation matches 1 run tellraw @a {text:" "}
 
 # blurb #2
-execute in extract:extract if score extract.handler extract.timer.explanation matches 160 run teleport @a 19 118 19 135 35
+execute in stmc:extract if score extract.handler extract.timer.explanation matches 160 run teleport @a 19 118 19 135 35
 execute if score extract.handler extract.timer.explanation matches 160 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 160 run tellraw @a {text:"This is the map teams will play each other on.",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 160 run tellraw @a {text:" "}
@@ -22,7 +22,7 @@ execute if score extract.handler extract.timer.explanation matches 160 run tellr
 execute if score extract.handler extract.timer.explanation matches 160 run tellraw @a {text:" "}
 
 # blurb #3
-execute in extract:extract if score extract.handler extract.timer.explanation matches 320 run teleport @a -5 103 18 -40 10
+execute in stmc:extract if score extract.handler extract.timer.explanation matches 320 run teleport @a -5 103 18 -40 10
 execute if score extract.handler extract.timer.explanation matches 320 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 320 run tellraw @a {text:"Before each round, there will be a short period to choose which class you would like to use.",color:red}
 execute if score extract.handler extract.timer.explanation matches 320 run tellraw @a {text:"You may switch your class before the round starts, but make sure you always pick one. They do not save between rounds.",color:red}
@@ -31,7 +31,7 @@ execute if score extract.handler extract.timer.explanation matches 320 run tellr
 execute if score extract.handler extract.timer.explanation matches 320 run tellraw @a {text:" "}
 
 # blurb #4
-execute in extract:extract if score extract.handler extract.timer.explanation matches 480 run teleport @a -5 102 3 -117.5 7
+execute in stmc:extract if score extract.handler extract.timer.explanation matches 480 run teleport @a -5 102 3 -117.5 7
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:"You may earn the following points when playing:",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
@@ -43,7 +43,7 @@ execute if score extract.handler extract.timer.explanation matches 480 run tellr
 execute if score extract.handler extract.timer.explanation matches 480 run tellraw @a {text:" "}
 
 # blurb #5
-execute in extract:extract if score extract.handler extract.timer.explanation matches 640 run teleport @a 18 107 18 135 20
+execute in stmc:extract if score extract.handler extract.timer.explanation matches 640 run teleport @a 18 107 18 135 20
 execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:"You will play each other team once.",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 640 run tellraw @a {text:" "}
@@ -53,7 +53,7 @@ execute if score extract.handler extract.timer.explanation matches 640 run tellr
 # blurb #6
 execute if score extract.handler extract.timer.explanation matches 799 run gamemode adventure @a
 execute if score extract.handler extract.timer.explanation matches 799 run gamemode spectator @a[team=SPECTATORS]
-execute in extract:extract if score extract.handler extract.timer.explanation matches 799 run teleport @a 0 101 -18 0 0
+execute in stmc:extract if score extract.handler extract.timer.explanation matches 799 run teleport @a 0 101 -18 0 0
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:" "}
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:"The first round begins in about 10 seconds.",color:"red"}
 execute if score extract.handler extract.timer.explanation matches 799 run tellraw @a {text:" "}

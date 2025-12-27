@@ -60,16 +60,16 @@ team join BLUE_BEARS team.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: lobby.sidebar 5000
+scoreboard players set §e§lPoints: lobby.sidebar 7000
 
 # blank line
-scoreboard players set §a lobby.sidebar 5001
+scoreboard players set §a lobby.sidebar 7001
 
-scoreboard players set lobby.header lobby.sidebar 5002
+scoreboard players set lobby.header lobby.sidebar 7002
 scoreboard players display name lobby.header lobby.sidebar {text:"Thanks for Playing!",color:white,bold:true}
 
 # blank line
-scoreboard players set §b lobby.sidebar 5003
+scoreboard players set §b lobby.sidebar 7003
 
 # set the players' actionbar to their individual rank & points
 execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]

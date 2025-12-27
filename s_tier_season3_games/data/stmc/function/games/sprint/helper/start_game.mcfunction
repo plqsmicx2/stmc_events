@@ -39,8 +39,8 @@ scoreboard players set @a sprint.stats.mediumCompletions 0
 scoreboard players set @a sprint.stats.hardCompletions 0
 scoreboard players set @a sprint.stats.elytraCompletions 0
 scoreboard players set @a sprint.stats.spearCompletions 0
-scoreboard players set @a sprint.stats.currentSection 0
-scoreboard players set @a sprint.stats.currentCheckpoint 0
+scoreboard players set @a sprint.stats.currentSection 1
+scoreboard players set @a sprint.stats.currentCheckpoint 1
 
 scoreboard players set @a sprint.stats.completed 0
 

@@ -24,7 +24,7 @@ scoreboard objectives setdisplay sidebar tr.sidebar
 # <===== POINTS UPDATE =====>
 
 execute as @a run scoreboard players set @s tr.points.indiv 0
-execute as @a run scoreboard players operation @s tr.points.indiv += @s disco.points.indiv
+execute as @a run scoreboard players operation @s tr.points.indiv += @s scramble.points.indiv
 execute as @a run scoreboard players operation @s tr.points.indiv += @s replicate.points.indiv
 execute as @a run scoreboard players operation @s tr.points.indiv += @s spleef.points.indiv
 execute as @a run scoreboard players operation @s tr.points.indiv += @s towers.points.indiv
@@ -93,19 +93,19 @@ team join BLUE_BEARS tr.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: tr.sidebar 300
+scoreboard players set §e§lPoints: tr.sidebar 400
 
 # blank line
-scoreboard players set §a tr.sidebar 301
+scoreboard players set §a tr.sidebar 401
 
 # timer
-scoreboard players set tr.timer tr.sidebar 302
+scoreboard players set tr.timer tr.sidebar 402
 execute if score tr.handler tr.timer.secs matches ..9 run scoreboard players display name tr.timer tr.sidebar [{score:{name:"tr.handler",objective:"tr.timer.mins"},color:aqua},{text:":0",color:aqua},{score:{name:"tr.handler",objective:"tr.timer.secs"},color:aqua}]
 execute if score tr.handler tr.timer.secs matches 10..59 run scoreboard players display name tr.timer tr.sidebar [{score:{name:"tr.handler",objective:"tr.timer.mins"},color:aqua},{text:":",color:aqua},{score:{name:"tr.handler",objective:"tr.timer.secs"},color:aqua}]
 
 # game name
-scoreboard players set tr.game tr.sidebar 303
+scoreboard players set tr.game tr.sidebar 403
 scoreboard players display name tr.game tr.sidebar {"text": "Trials", "color": "dark_aqua", "bold": true}
 
 # blank line
-scoreboard players set §b tr.sidebar 304
+scoreboard players set §b tr.sidebar 404

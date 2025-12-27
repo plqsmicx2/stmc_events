@@ -56,7 +56,6 @@ effect give @a instant_health 1 110 true
 
 # give effects
 effect give @a saturation infinite 0 true
-effect give @a resistance infinite 10 true
 
 # set xp
 xp set @a 0 levels
@@ -93,6 +92,9 @@ scoreboard objectives add sprint.timer.delay1 dummy
 scoreboard objectives add sprint.timer.explanation dummy
 scoreboard objectives add sprint.timer.delay2 dummy
 scoreboard objectives add sprint.timer.game dummy
+scoreboard objectives add sprint.timer.game.mins dummy
+scoreboard objectives add sprint.timer.game.secs dummy
+scoreboard objectives add sprint.timer.game.tick dummy
 scoreboard objectives add sprint.timer.delay3 dummy
 
 # points
@@ -116,11 +118,19 @@ scoreboard objectives add sprint.stats.currentCheckpoint dummy
 scoreboard objectives add sprint.stats.currentDifficulty dummy
 scoreboard objectives add sprint.stats.completed dummy
 
+scoreboard objectives add sprint.return minecraft.used:carrot_on_a_stick
+scoreboard objectives add sprint.skip minecraft.used:warped_fungus_on_a_stick
+scoreboard objectives add sprint.dropper.onGround dummy
+scoreboard objectives add sprint.elytra.boost dummy
+
 # reset scoreboards
 scoreboard players set sprint.handler sprint.timer.delay1 0
 scoreboard players set sprint.handler sprint.timer.explanation 0
 scoreboard players set sprint.handler sprint.timer.delay2 0
 scoreboard players set sprint.handler sprint.timer.game 0
+scoreboard players set sprint.handler sprint.timer.game.mins 0
+scoreboard players set sprint.handler sprint.timer.game.secs 0
+scoreboard players set sprint.handler sprint.timer.game.tick 0
 scoreboard players set sprint.handler sprint.timer.delay3 0
 
 scoreboard players set sprint.handler sprint.stats.playersCompleted 0
@@ -133,10 +143,29 @@ scoreboard players set @a sprint.stats.mediumCompletions 0
 scoreboard players set @a sprint.stats.hardCompletions 0
 scoreboard players set @a sprint.stats.elytraCompletions 0
 scoreboard players set @a sprint.stats.spearCompletions 0
-scoreboard players set @a sprint.stats.currentSection 0
-scoreboard players set @a sprint.stats.currentCheckpoint 0
+scoreboard players set @a sprint.stats.currentSection 1
+scoreboard players set @a sprint.stats.currentCheckpoint 1
 scoreboard players set @a sprint.stats.currentDifficulty 2
 scoreboard players set @a sprint.stats.completed 0
+
+scoreboard players set @a sprint.return 0
+scoreboard players set @a sprint.skip 0
+scoreboard players set @a sprint.dropper.onGround 0
+scoreboard players set @a sprint.elytra.boost 0
+
+# set game timer from settings
+scoreboard objectives add .precision dummy
+scoreboard players set #math .precision 1200
+execute store result score sprint.handler sprint.timer.game.mins run data get storage sprint:data max_time
+scoreboard players operation sprint.handler sprint.timer.game.mins /= #math .precision
+
+scoreboard players operation #remove .precision = sprint.handler sprint.timer.game.mins
+scoreboard players operation #remove .precision *= #math .precision
+scoreboard players set #math .precision 20
+execute store result score sprint.handler sprint.timer.game.secs run data get storage sprint:data max_time
+scoreboard players operation sprint.handler sprint.timer.game.secs -= #remove .precision
+scoreboard players operation sprint.handler sprint.timer.game.secs /= #math .precision
+scoreboard objectives remove .precision
 
 # reset game-specific scoreboard
 scoreboard objectives remove sprint.sidebar

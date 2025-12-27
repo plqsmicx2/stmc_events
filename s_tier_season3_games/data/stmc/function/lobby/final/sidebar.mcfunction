@@ -61,18 +61,18 @@ team join BLUE_BEARS team.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: lobby.sidebar 5000
+scoreboard players set §e§lPoints: lobby.sidebar 7000
 
 # blank line
-scoreboard players set §a lobby.sidebar 5001
+scoreboard players set §a lobby.sidebar 7001
 
 # timer
-scoreboard players set lobby.timer lobby.sidebar 5002
+scoreboard players set lobby.timer lobby.sidebar 7002
 execute if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
 execute if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
 
-scoreboard players set lobby.header lobby.sidebar 5003
+scoreboard players set lobby.header lobby.sidebar 7003
 scoreboard players display name lobby.header lobby.sidebar {text:"Finale!",color:white,bold:true}
 
 # blank line
-scoreboard players set §b lobby.sidebar 5004
+scoreboard players set §b lobby.sidebar 7004

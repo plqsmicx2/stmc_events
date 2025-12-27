@@ -61,14 +61,14 @@ team join BLUE_BEARS team.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lTeams: lobby.sidebar 5000
+scoreboard players set §e§lTeams: lobby.sidebar 7000
 
 # blank line
-scoreboard players set §a lobby.sidebar 5001
+scoreboard players set §a lobby.sidebar 7001
 
 # timer
-scoreboard players set lobby.timer lobby.sidebar 5002
+scoreboard players set lobby.timer lobby.sidebar 7002
 scoreboard players display name lobby.timer lobby.sidebar [{text:"Starting Soon.",color:red,bold:true}]
 
 # blank line
-scoreboard players set §b lobby.sidebar 5003
+scoreboard players set §b lobby.sidebar 7003

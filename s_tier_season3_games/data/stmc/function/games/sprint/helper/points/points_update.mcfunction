@@ -10,7 +10,7 @@
 scoreboard objectives add sprint.points.completions dummy
 
 # calculate completions
-execute as @a run function sprint:helper/points/completions
+execute as @a run function stmc:games/sprint/helper/points/completions
 
 # multiplier
 
@@ -18,7 +18,7 @@ execute as @a run function sprint:helper/points/completions
 scoreboard objectives add sprint.points.multiplier dummy
 
 # calculate completions
-execute as @a run function sprint:helper/points/multiplier
+execute as @a run function stmc:games/sprint/helper/points/multiplier
 
 # time bonus
 
@@ -26,7 +26,7 @@ execute as @a run function sprint:helper/points/multiplier
 scoreboard objectives add sprint.points.bonus dummy
 
 # calculate team bonus
-execute as @a if score @s sprint.stats.completed matches 1 run function sprint:helper/points/bonus/time_bonus
+execute as @a if score @s sprint.stats.completed matches 1 run function stmc:games/sprint/helper/points/bonus/time_bonus
 
 # apply multiplier
 scoreboard objectives add .precision dummy
