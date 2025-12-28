@@ -30,6 +30,13 @@ execute as @a if items entity @s inventory.* iron_sword[minecraft:custom_data={r
         if items entity @s inventory.* wooden_sword[minecraft:custom_data={replace:1b}] run clear @s wooden_sword
 
 # armor
-execute as @a if items entity @s hotbar.* chainmail_leggings[minecraft:custom_data={replace:1b}] as @s run function blitz:helper/armor_items/chainmail
-execute as @a if items entity @s hotbar.* iron_leggings[minecraft:custom_data={replace:1b}] as @s run function blitz:helper/armor_items/iron
-execute as @a if items entity @s hotbar.* diamond_leggings[minecraft:custom_data={replace:1b}] as @s run function blitz:helper/armor_items/diamond
+execute as @a if items entity @s hotbar.* chainmail_leggings[minecraft:custom_data={replace:1b}] as @s run function stmc:games/blitz/helper/replace_item/chainmail
+execute as @a if items entity @s hotbar.* iron_leggings[minecraft:custom_data={replace:1b}] as @s run function stmc:games/blitz/helper/replace_item/iron
+execute as @a if items entity @s hotbar.* diamond_leggings[minecraft:custom_data={replace:1b}] as @s run function stmc:games/blitz/helper/replace_item/diamond
+
+execute as @a if items entity @s inventory.* chainmail_leggings[minecraft:custom_data={replace:1b}] as @s run function stmc:games/blitz/helper/replace_item/chainmail
+execute as @a if items entity @s inventory.* iron_leggings[minecraft:custom_data={replace:1b}] as @s run function stmc:games/blitz/helper/replace_item/iron
+execute as @a if items entity @s inventory.* diamond_leggings[minecraft:custom_data={replace:1b}] as @s run function stmc:games/blitz/helper/replace_item/diamond
+
+# concrete items
+execute in stmc:blitz run function stmc:games/blitz/helper/replace_item/concrete

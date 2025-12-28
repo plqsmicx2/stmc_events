@@ -5,7 +5,10 @@
 # the function also creates & instantiates game-specific scoreboards
 
 # forceload the region
-execute in stmc:blitz run forceload add -200 -200 200 200
+execute in stmc:blitz run forceload add -200 -200 0 0
+execute in stmc:blitz run forceload add 200 -200 0 0
+execute in stmc:blitz run forceload add -200 200 0 0
+execute in stmc:blitz run forceload add 200 200 0 0
 
 # teleport players to spawn platform
 execute in stmc:blitz run tp @a 0 172 0
@@ -25,6 +28,7 @@ gamerule advance_time false
 gamerule advance_weather false
 gamerule immediate_respawn true
 gamerule keep_inventory true
+gamerule show_death_messages false
 
 # clear inventories
 clear @a
@@ -166,17 +170,17 @@ scoreboard players set blitz.CyanCougars blitz.stats.teamPlacement -1
 scoreboard players set blitz.PurplePenguins blitz.stats.teamPlacement -1
 scoreboard players set blitz.BlueBears blitz.stats.teamPlacement -1
 
-scoreboard players set blitz.handler blitz.FINALKILL.VALUE 2
-scoreboard players set blitz.handler blitz.CORE.VALUE 20
-scoreboard players set blitz.handler blitz.CRATE.VALUE 10
-scoreboard players set blitz.handler blitz.PLACE.ONE.VALUE 100
-scoreboard players set blitz.handler blitz.PLACE.TWO.VALUE 80
-scoreboard players set blitz.handler blitz.PLACE.THREE.VALUE 64
-scoreboard players set blitz.handler blitz.PLACE.FOUR.VALUE 48
-scoreboard players set blitz.handler blitz.PLACE.FIVE.VALUE 32
-scoreboard players set blitz.handler blitz.PLACE.SIX.VALUE 16
-scoreboard players set blitz.handler blitz.PLACE.SEVEN.VALUE 0
-scoreboard players set blitz.handler blitz.PLACE.EIGHT.VALUE 0
+scoreboard players set blitz.handler blitz.FINALKILL.VALUE 1
+scoreboard players set blitz.handler blitz.CORE.VALUE 25
+scoreboard players set blitz.handler blitz.CRATE.VALUE 8
+scoreboard players set blitz.handler blitz.PLACE.ONE.VALUE 140
+scoreboard players set blitz.handler blitz.PLACE.TWO.VALUE 100
+scoreboard players set blitz.handler blitz.PLACE.THREE.VALUE 80
+scoreboard players set blitz.handler blitz.PLACE.FOUR.VALUE 60
+scoreboard players set blitz.handler blitz.PLACE.FIVE.VALUE 40
+scoreboard players set blitz.handler blitz.PLACE.SIX.VALUE 24
+scoreboard players set blitz.handler blitz.PLACE.SEVEN.VALUE 16
+scoreboard players set blitz.handler blitz.PLACE.EIGHT.VALUE 8
 scoreboard players set blitz.handler blitz.splitFour 4
 
 scoreboard players set blitz.RedRaccoons blitz.stats.coreIntact 1

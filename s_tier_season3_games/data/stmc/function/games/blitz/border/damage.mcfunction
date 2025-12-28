@@ -8,10 +8,22 @@
 # works by rotating an entity at the center rapidly & creating a particle <radius> blocks away
 
 # rotate armor stands by 6 degrees
-execute in stmc:blitz as @e[tag=blitz.worldborder.center1] at @s run tp @s ~ ~ ~ ~6 0
-execute in stmc:blitz as @e[tag=blitz.worldborder.center2] at @s run tp @s ~ ~ ~ ~6 0
-execute in stmc:blitz as @e[tag=blitz.worldborder.center3] at @s run tp @s ~ ~ ~ ~6 0
-execute in stmc:blitz as @e[tag=blitz.worldborder.center4] at @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center1] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center2] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center3] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center4] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center5] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center6] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center7] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center8] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center9] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center10] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center11] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center12] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center13] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center14] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center15] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
+execute in stmc:blitz as @e[tag=blitz.worldborder.center16] at @s rotated as @s run tp @s ~ ~ ~ ~6 0
 
 # summon particle in direction marker is facing, from y=90 to y=130
 $execute in stmc:blitz as @e[tag=blitz.worldborder.centerVisual] at @s run particle minecraft:raid_omen{scale:9} ^ ^0 ^$(radius) 0.0 2.0 0.0 0 2 force

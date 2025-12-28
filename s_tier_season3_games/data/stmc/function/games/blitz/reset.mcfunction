@@ -3,11 +3,15 @@
 # handle important resets
 effect clear @a
 clear @a
-execute in stmc:blitz run forceload remove -200 -200 200 200
+execute in stmc:blitz run forceload remove -200 -200 0 0
+execute in stmc:blitz run forceload remove 200 -200 0 0
+execute in stmc:blitz run forceload remove -200 200 0 0
+execute in stmc:blitz run forceload remove 200 200 0 0
 gamerule keep_inventory false
+gamerule show_death_messages true
 
 # set player points
-function stmc:games/blitz/points-update
+function stmc:games/blitz/points/points-update
 execute as @a if score stmc.handler event.stage matches 1 run scoreboard players operation @s stats.points.indiv.g1 = @s blitz.points.indiv
 execute as @a if score stmc.handler event.stage matches 3 run scoreboard players operation @s stats.points.indiv.g2 = @s blitz.points.indiv
 execute as @a if score stmc.handler event.stage matches 5 run scoreboard players operation @s stats.points.indiv.g3 = @s blitz.points.indiv

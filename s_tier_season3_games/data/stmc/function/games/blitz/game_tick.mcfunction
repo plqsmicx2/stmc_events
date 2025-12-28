@@ -27,51 +27,33 @@ execute in stmc:blitz run kill @e[type=item,nbt={Item:{id:"minecraft:cyan_wool"}
 execute in stmc:blitz run kill @e[type=item,nbt={Item:{id:"minecraft:purple_wool"}}]
 execute in stmc:blitz run kill @e[type=item,nbt={Item:{id:"minecraft:blue_wool"}}]
 
+# at 3 minutes, remove crate barriers
+execute if score blitz.handler blitz.timer.game matches 3600 in stmc:blitz run fill -35 103 -35 35 118 35 air replace tinted_glass
+execute if score blitz.handler blitz.timer.game matches 3600 run tellraw @a {text:"Crates have been unlocked!",color:"light_purple",bold:true}
+execute if score blitz.handler blitz.timer.game matches 3600 as @a at @s run playsound block.amethyst_block.break player @s ~ ~ ~ 10 1
+
+# at 7 minutes, destroy all cores
+execute if score blitz.handler blitz.timer.game matches 8400 in stmc:blitz run fill -97 106 -97 97 106 97 air replace #wool
+execute if score blitz.handler blitz.timer.game matches 8400 run tellraw @a {text:"Cores have been broken!",color:"light_purple",bold:true}
+execute if score blitz.handler blitz.timer.game matches 8400 as @a at @s run playsound entity.dragon_fireball.explode player @s ~ ~ ~ 10 0.5
+execute if score blitz.handler blitz.timer.game matches 8400 as @a at @s run playsound entity.ender_dragon.growl player @s ~ ~ ~ 6 1
+
 # ore generation
 function stmc:games/blitz/helper/generate
 
+# kill players too low in the void
+execute in stmc:blitz as @a at @s if entity @s[y=0,dy=-100] run kill @s
+
 # check for deaths
+# also updates # of players/teams alive
 function stmc:games/blitz/helper/death_handler
 
 # handle players' items
 function stmc:games/blitz/helper/item_replace
 
 # check for cores broken
-
-execute in stmc:blitz if score blitz.RedRaccoons blitz.stats.coreIntact matches 1 unless block -36 106 97 red_wool run scoreboard players set blitz.RedRaccoons blitz.stats.coreIntact 2
-execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 2 run tellraw @a ["",{text:"The Red Raccoons' core has been broken!",color:red}]
-execute if score blitz.RedRaccoons blitz.stats.coreIntact matches 2 run scoreboard players set blitz.RedRaccoons blitz.stats.coreIntact 0
-
-execute in stmc:blitz if score blitz.OrangeOtters blitz.stats.coreIntact matches 1 unless block -36 106 -97 orange_wool run scoreboard players set blitz.OrangeOtters blitz.stats.coreIntact 2
-execute if score blitz.OrangeOtters blitz.stats.coreIntact matches 2 run tellraw @a ["",{text:"The Orange Otters' core has been broken!",color:red}]
-execute if score blitz.OrangeOtters blitz.stats.coreIntact matches 2 run scoreboard players set blitz.OrangeOtters blitz.stats.coreIntact 0
-
-execute in stmc:blitz if score blitz.PinkPikas blitz.stats.coreIntact matches 1 unless block 97 106 -36 pink_wool run scoreboard players set blitz.PinkPikas blitz.stats.coreIntact 2
-execute if score blitz.PinkPikas blitz.stats.coreIntact matches 2 run tellraw @a ["",{text:"The Pink Pikas' core has been broken!",color:red}]
-execute if score blitz.PinkPikas blitz.stats.coreIntact matches 2 run scoreboard players set blitz.PinkPikas blitz.stats.coreIntact 0
-
-execute in stmc:blitz if score blitz.YellowYaks blitz.stats.coreIntact matches 1 unless block 97 106 36 yellow_wool run scoreboard players set blitz.YellowYaks blitz.stats.coreIntact 2
-execute if score blitz.YellowYaks blitz.stats.coreIntact matches 2 run tellraw @a ["",{text:"The Yellow Yaks' core has been broken!",color:red}]
-execute if score blitz.YellowYaks blitz.stats.coreIntact matches 2 run scoreboard players set blitz.YellowYaks blitz.stats.coreIntact 0
-
-execute in stmc:blitz if score blitz.GreenGoats blitz.stats.coreIntact matches 1 unless block 36 106 -97 green_wool run scoreboard players set blitz.GreenGoats blitz.stats.coreIntact 2
-execute if score blitz.GreenGoats blitz.stats.coreIntact matches 2 run tellraw @a ["",{text:"The Green Goats' core has been broken!",color:red}]
-execute if score blitz.GreenGoats blitz.stats.coreIntact matches 2 run scoreboard players set blitz.GreenGoats blitz.stats.coreIntact 0
-
-execute in stmc:blitz if score blitz.CyanCougars blitz.stats.coreIntact matches 1 unless block -97 106 -36 cyan_wool run scoreboard players set blitz.CyanCougars blitz.stats.coreIntact 2
-execute if score blitz.CyanCougars blitz.stats.coreIntact matches 2 run tellraw @a ["",{text:"The Cyan Cougars' core has been broken!",color:red}]
-execute if score blitz.CyanCougars blitz.stats.coreIntact matches 2 run scoreboard players set blitz.CyanCougars blitz.stats.coreIntact 0
-
-execute in stmc:blitz if score blitz.PurplePenguins blitz.stats.coreIntact matches 1 unless block -97 106 36 purple_wool run scoreboard players set blitz.PurplePenguins blitz.stats.coreIntact 2
-execute if score blitz.PurplePenguins blitz.stats.coreIntact matches 2 run tellraw @a ["",{text:"The Purple Penguins' core has been broken!",color:red}]
-execute if score blitz.PurplePenguins blitz.stats.coreIntact matches 2 run scoreboard players set blitz.PurplePenguins blitz.stats.coreIntact 0
-
-execute in stmc:blitz if score blitz.BlueBears blitz.stats.coreIntact matches 1 unless block 36 106 97 blue_wool run scoreboard players set blitz.BlueBears blitz.stats.coreIntact 2
-execute if score blitz.BlueBears blitz.stats.coreIntact matches 2 run tellraw @a ["",{text:"The Blue Bears' core has been broken!",color:red}]
-execute if score blitz.BlueBears blitz.stats.coreIntact matches 2 run scoreboard players set blitz.BlueBears blitz.stats.coreIntact 0
-
-# at 3 minutes, remove crate barriers
-execute if score blitz.handler blitz.timer.game matches 3600 in stmc:blitz run fill -35 103 -35 35 118 35 air replace tinted_glass
+# also announces if they are broken
+execute in stmc:blitz run function stmc:games/blitz/helper/game/core_check with storage stmc:global
 
 # end game
-execute if score blitz.handler blitz.stats.teamsAlive matches 1 run function stmc:games/blitz/helper/game_end
+#execute if score blitz.handler blitz.stats.teamsAlive matches 1 run function stmc:games/blitz/helper/game_end

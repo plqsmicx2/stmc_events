@@ -1,6 +1,6 @@
 # determine ranking
-function stmc:games/blitz/points-update
-function stmc:games/blitz/calculate_rankings
+function stmc:games/blitz/points/points-update
+function stmc:games/blitz/points/calculate_rankings
 
 # announce top 5 indiv
 tellraw @a {text:"Top Individual Points:",color:red}

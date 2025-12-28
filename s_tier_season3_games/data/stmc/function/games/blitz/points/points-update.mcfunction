@@ -24,6 +24,47 @@ execute as @a run scoreboard players operation @s blitz.coresBroken += @s blitz.
 scoreboard objectives add .corePoints dummy
 execute as @a run scoreboard players operation @s .corePoints = @s blitz.coresBroken
 execute as @a run scoreboard players operation @s .corePoints *= blitz.handler blitz.CORE.VALUE
+
+scoreboard players set blitz.RedRaccoons .corePoints 0
+execute as @a[team=RED_RACCOONS] run scoreboard players operation blitz.RedRaccoons .corePoints += @s .corePoints
+execute as @a[team=RED_RACCOONS] run scoreboard players operation @s .corePoints = blitz.RedRaccoons .corePoints
+execute as @a[team=RED_RACCOONS] run scoreboard players operation @s .corePoints = blitz.RedRaccoons blitz.stats.players
+
+scoreboard players set blitz.OrangeOtters .corePoints 0
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation blitz.OrangeOtters .corePoints += @s .corePoints
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation @s .corePoints = blitz.OrangeOtters .corePoints
+execute as @a[team=ORANGE_OTTERS] run scoreboard players operation @s .corePoints = blitz.OrangeOtters blitz.stats.players
+
+scoreboard players set blitz.PinkPikas .corePoints 0
+execute as @a[team=PINK_PIKAS] run scoreboard players operation blitz.PinkPikas .corePoints += @s .corePoints
+execute as @a[team=PINK_PIKAS] run scoreboard players operation @s .corePoints = blitz.PinkPikas .corePoints
+execute as @a[team=PINK_PIKAS] run scoreboard players operation @s .corePoints = blitz.PinkPikas blitz.stats.players
+
+scoreboard players set blitz.YellowYaks .corePoints 0
+execute as @a[team=YELLOW_YAKS] run scoreboard players operation blitz.YellowYaks .corePoints += @s .corePoints
+execute as @a[team=YELLOW_YAKS] run scoreboard players operation @s .corePoints = blitz.YellowYaks .corePoints
+execute as @a[team=YELLOW_YAKS] run scoreboard players operation @s .corePoints = blitz.YellowYaks blitz.stats.players
+
+scoreboard players set blitz.GreenGoats .corePoints 0
+execute as @a[team=GREEN_GOATS] run scoreboard players operation blitz.GreenGoats .corePoints += @s .corePoints
+execute as @a[team=GREEN_GOATS] run scoreboard players operation @s .corePoints = blitz.GreenGoats .corePoints
+execute as @a[team=GREEN_GOATS] run scoreboard players operation @s .corePoints = blitz.GreenGoats blitz.stats.players
+
+scoreboard players set blitz.CyanCougars .corePoints 0
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation blitz.CyanCougars .corePoints += @s .corePoints
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation @s .corePoints = blitz.CyanCougars .corePoints
+execute as @a[team=CYAN_COUGARS] run scoreboard players operation @s .corePoints = blitz.CyanCougars blitz.stats.players
+
+scoreboard players set blitz.PurplePenguins .corePoints 0
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation blitz.PurplePenguins .corePoints += @s .corePoints
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation @s .corePoints = blitz.PurplePenguins .corePoints
+execute as @a[team=PURPLE_PENGUINS] run scoreboard players operation @s .corePoints = blitz.PurplePenguins blitz.stats.players
+
+scoreboard players set blitz.BlueBears .corePoints 0
+execute as @a[team=BLUE_BEARS] run scoreboard players operation blitz.BlueBears .corePoints += @s .corePoints
+execute as @a[team=BLUE_BEARS] run scoreboard players operation @s .corePoints = blitz.BlueBears .corePoints
+execute as @a[team=BLUE_BEARS] run scoreboard players operation @s .corePoints = blitz.BlueBears blitz.stats.players
+
 execute as @a run scoreboard players operation @s blitz.points.indiv += @s .corePoints
 scoreboard objectives remove .corePoints
 
