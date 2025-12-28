@@ -46,3 +46,6 @@ execute if score mine.handler mine.timer matches 1740 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1760 run function stmc:games/mine/mobs/creeper with storage mine:data
 execute if score mine.handler mine.timer matches 1780 run function stmc:games/mine/mobs/creeper with storage mine:data
 execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/mobs/creeper with storage mine:data
+
+# ensure fuse timer is shorter
+execute as @e[type=creeper] run data modify entity @s Fuse set value 20

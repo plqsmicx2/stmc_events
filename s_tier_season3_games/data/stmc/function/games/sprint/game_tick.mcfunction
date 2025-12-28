@@ -112,7 +112,7 @@ execute as @a if score @s sprint.stats.currentSection matches 3 if score @s spri
         function stmc:games/sprint/helper/game/increment_section
         
 # Spear -> Completion
-execute as @a if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 5.. run \
+execute as @a if score @s sprint.stats.currentSection matches 8 if score @s sprint.stats.currentCheckpoint matches 5.. run \
         execute unless score @s sprint.stats.completed matches 1 run function stmc:games/sprint/helper/game/set_completion
 
 # Elytra:

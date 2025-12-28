@@ -4,6 +4,8 @@
 effect clear @a
 clear @a
 bossbar remove dungeons.timer
+gamerule pvp true
+gamerule spawn_mobs false
 
 # set player points
 execute as @a if score stmc.handler event.stage matches 1 run scoreboard players operation @s stats.points.indiv.g1 = @s dungeons.points.indiv

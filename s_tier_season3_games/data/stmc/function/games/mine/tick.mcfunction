@@ -29,7 +29,7 @@ execute if score mine.handler mine.stage matches 1 if score mine.handler mine.ti
 execute if score mine.handler mine.stage matches 2 run scoreboard players add mine.handler mine.timer 1
 execute if score mine.handler mine.stage matches 2 run function stmc:games/mine/game_tick
 # manually end game
-execute if score mine.handler mine.stage.creaking matches 2 if score mine.handler mine.stage.hoglin matches 2 if score mine.handler mine.stage.warden matches 2 run scoreboard players set mine.handler mine.stage 3
+execute if score mine.handler mine.stage.creaking matches 2 if score mine.handler mine.stage.hoglin matches 2 if score mine.handler mine.stage.warden matches 2 if score mine.handler mine.stage.creeper matches 2 run scoreboard players set mine.handler mine.stage 3
 
 # if we're in stage 3, run reset & point announcement
 execute if score mine.handler mine.stage matches 3 run scoreboard players add mine.handler mine.timer.delay2 1

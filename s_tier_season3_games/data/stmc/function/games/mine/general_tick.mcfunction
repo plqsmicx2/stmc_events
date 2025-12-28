@@ -1,7 +1,7 @@
 
 
 function stmc:games/mine/game/chicken
-execute as @a run function stmc:games/mine/game/compass
+execute as @a if items entity @s weapon.offhand compass run function stmc:games/mine/game/compass
 function stmc:games/mine/game/diamond
 function stmc:games/mine/game/endermite
 function stmc:games/mine/game/endermite_clear

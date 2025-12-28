@@ -32,9 +32,9 @@ scoreboard players set scramble.OrangeOtters scramble.players_alive 0
 execute as @a[team=ORANGE_OTTERS] if score @s scramble.alive matches 1 run scoreboard players add scramble.OrangeOtters scramble.players_alive 1
 scoreboard players set scramble.PinkPikas scramble.players_alive 0
 execute as @a[team=PINK_PIKAS] if score @s scramble.alive matches 1 run scoreboard players add scramble.PinkPikas scramble.players_alive 1
-scoreboard players set scramble.PinkPikas scramble.players_alive 0
-execute as @a[team=YELLOW_YAKS] if score @s scramble.alive matches 1 run scoreboard players add scramble.YellowYaks scramble.players_alive 1
 scoreboard players set scramble.YellowYaks scramble.players_alive 0
+execute as @a[team=YELLOW_YAKS] if score @s scramble.alive matches 1 run scoreboard players add scramble.YellowYaks scramble.players_alive 1
+scoreboard players set scramble.GreenGoats scramble.players_alive 0
 execute as @a[team=GREEN_GOATS] if score @s scramble.alive matches 1 run scoreboard players add scramble.GreenGoats scramble.players_alive 1
 scoreboard players set scramble.CyanCougars scramble.players_alive 0
 execute as @a[team=CYAN_COUGARS] if score @s scramble.alive matches 1 run scoreboard players add scramble.CyanCougars scramble.players_alive 1

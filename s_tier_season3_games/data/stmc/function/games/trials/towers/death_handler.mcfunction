@@ -13,6 +13,7 @@ execute as @a at @s in stmc:trials/towers run spawnpoint @s ~ ~50 ~
 # or if the player dies from suffocation, set them to spectator & set their scores
 execute as @a[gamemode=!spectator, scores={towers.deathCounter=1..}] run scoreboard players set towers.handler towers.deathThisTick 1
 execute as @a[gamemode=!spectator, scores={towers.deathCounter=1..}] run scoreboard players set @s towers.alive 0
+effect give @a[gamemode=!spectator,scores={towers.deathCounter=1..}] night_vision infinite
 gamemode spectator @a[gamemode=!spectator, scores={towers.deathCounter=1..}]
 
 # check how many players are alive in total

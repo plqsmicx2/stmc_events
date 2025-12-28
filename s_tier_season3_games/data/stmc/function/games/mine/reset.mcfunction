@@ -1,6 +1,7 @@
 # important resets
 effect clear @a
 clear @a
+gamerule pvp true
 
 # set points from team to indiv
 function stmc:games/mine/points/team_split

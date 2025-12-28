@@ -6,6 +6,7 @@ effect clear @a
 effect give @a saturation 1 255
 effect give @a instant_health 1 10
 gamemode adventure @a
+gamerule pvp false
 
 scoreboard players set @a mine.points.indiv 0
 scoreboard players reset @a mine.game.mined.diamond_ore

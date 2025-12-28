@@ -46,3 +46,9 @@ execute if score mine.handler mine.timer matches 1740 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1760 run function stmc:games/mine/mobs/hoglin with storage mine:data
 execute if score mine.handler mine.timer matches 1780 run function stmc:games/mine/mobs/hoglin with storage mine:data
 execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/mobs/hoglin with storage mine:data
+
+# make hoglins faster after 60s
+execute as @e[type=hoglin] if score mine.handler mine.timer matches ..1200 run \
+        effect give @s speed 1 1 true
+execute as @e[type=hoglin] if score mine.handler mine.timer matches 1200.. run \
+        effect give @s speed 1 2 true

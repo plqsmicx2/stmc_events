@@ -1,7 +1,7 @@
 # reset function for trials
 
 # important resets
-execute as @a run attribute @s max_health base set 22
+execute as @a run attribute @s max_health base set 20
 clear @a
 effect clear @a
 
@@ -11,7 +11,7 @@ execute as @a run scoreboard players operation @s tr.points.indiv += @s disco.po
 execute as @a run scoreboard players operation @s tr.points.indiv += @s replicate.points.indiv
 execute as @a run scoreboard players operation @s tr.points.indiv += @s spleef.points.indiv
 execute as @a run scoreboard players operation @s tr.points.indiv += @s towers.points.indiv
-execute as @a run scoreboard players operation @s tr.points.indiv += @s ascend.points.indiv
+#execute as @a run scoreboard players operation @s tr.points.indiv += @s ascend.points.indiv
 
 # record trial points globally
 execute if score stmc.handler event.stage matches 1 as @a run scoreboard players operation @s stats.points.indiv.g1 = @s tr.points.indiv

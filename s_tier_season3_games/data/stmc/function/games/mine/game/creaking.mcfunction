@@ -25,7 +25,7 @@ execute if score mine.handler mine.timer matches 1320 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1340 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1360 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1380 run function stmc:games/mine/mobs/creaking with storage mine:data
-execute if score mine.handler mine.timer matches 1400 run function stmc:games/mine/mobs/creaking with storage mine:data
+execute if score mine.handler mine.timer matches 1400 run function stmc:games/mine/game/creaking_reteleport
 execute if score mine.handler mine.timer matches 1420 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1440 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1460 run function stmc:games/mine/mobs/creaking with storage mine:data
@@ -45,4 +45,11 @@ execute if score mine.handler mine.timer matches 1720 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1740 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1760 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1780 run function stmc:games/mine/mobs/creaking with storage mine:data
-execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/mobs/creaking with storage mine:data
+execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/game/creaking_reteleport
+execute if score mine.handler mine.timer matches 2200 run function stmc:games/mine/game/creaking_reteleport
+
+# make creaking invisible after 60s
+execute as @e[type=creaking] if score mine.handler mine.timer matches 1200.. run \
+        effect give @s invisibility 1 0 true
+execute as @e[type=creaking] if score mine.handler mine.timer matches 1200.. run \
+        effect give @s speed 1 0 true

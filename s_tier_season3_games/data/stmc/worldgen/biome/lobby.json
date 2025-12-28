@@ -1,17 +1,17 @@
 {
   "attributes": {
     "minecraft:audio/ambient_sounds": {
+      "loop": "minecraft:music.dragon",
       "additions": {
         "sound": "minecraft:ambient.warped_forest.additions",
-        "tick_chance": 0.00111
-      },
-      "loop": "minecraft:music.dragon"
+        "tick_chance": 0.0011
+      }
     },
     "minecraft:audio/background_music": {
       "default": {
-        "max_delay": 24000,
+        "sound": "minecraft:music.creative",
         "min_delay": 18000,
-        "sound": "minecraft:music.creative"
+        "max_delay": 24000
       }
     },
     "minecraft:visual/ambient_particles": [
@@ -21,26 +21,20 @@
         },
         "probability": 0.16
       }
-    ],
-    "minecraft:visual/fog_color": "#685f70"
+    ]
   },
-  "carvers": "minecraft:nether_cave",
-  "downfall": 0.0,
+  "temperature": 0,
+  "downfall": 0,
+  "has_precipitation": true,
+  "temperature_modifier": "frozen",
+  "creature_spawn_probability": 0,
   "effects": {
     "water_color": "#3f76e4"
   },
-  "features": [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
-  ],
-  "has_precipitation": true,
-  "spawn_costs": {},
   "spawners": {},
-  "temperature": 0.0
+  "spawn_costs": {},
+  "carvers": [
+    "minecraft:nether_cave"
+  ],
+  "features": []
 }
