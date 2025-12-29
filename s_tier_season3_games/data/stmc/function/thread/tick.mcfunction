@@ -18,7 +18,7 @@ function stmc:thread/helper/points/calculate_rankings
 execute if score stmc.handler event.defSidebar matches 1 run function stmc:thread/helper/default_sidebar with storage stmc:global
 
 # before event perms
-execute unless score stmc.handler event.paused matches 0.. run gamemode adventure @a
+execute unless score stmc.handler event.paused matches 0.. run function stmc:thread/pre_game
 
 # and depending on our current stage, we call an update somewhere else in the world
 # but we only call that update if the event is unpaused

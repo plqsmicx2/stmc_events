@@ -31,12 +31,18 @@ execute as @a[team=BLUE_BEARS] if score @s blitz.stats.respawn matches 1 in stmc
 execute as @a if score @s blitz.stats.respawn matches 1 at @s in stmc:blitz run fill ~-1 ~ ~-1 ~1 ~2 ~1 air replace #stmc:concrete
 
 # announce active respawn timer
+execute as @a if score @s blitz.stats.respawn matches 100 run title @s title {text:"5",color:"light_purple"}
+execute as @a if score @s blitz.stats.respawn matches 100 at @s run \
+        playsound block.note_block.pling player @s ~ ~ ~ 2 1
+execute as @a if score @s blitz.stats.respawn matches 80 run title @s title {text:"4",color:"light_purple"}
+execute as @a if score @s blitz.stats.respawn matches 80 at @s run \
+        playsound block.note_block.pling player @s ~ ~ ~ 2 1.2
 execute as @a if score @s blitz.stats.respawn matches 60 run title @s title {text:"3",color:"light_purple"}
 execute as @a if score @s blitz.stats.respawn matches 60 at @s run \
-        playsound block.note_block.pling player @s ~ ~ ~ 2 1
+        playsound block.note_block.pling player @s ~ ~ ~ 2 1.4
 execute as @a if score @s blitz.stats.respawn matches 40 run title @s title {text:"2",color:"light_purple"}
 execute as @a if score @s blitz.stats.respawn matches 40 at @s run \
-        playsound block.note_block.pling player @s ~ ~ ~ 2 1.2
+        playsound block.note_block.pling player @s ~ ~ ~ 2 1.6
 execute as @a if score @s blitz.stats.respawn matches 20 run title @s title {text:"1",color:"light_purple"}
 execute as @a if score @s blitz.stats.respawn matches 20 at @s run \
         playsound block.note_block.pling player @s ~ ~ ~ 4 2

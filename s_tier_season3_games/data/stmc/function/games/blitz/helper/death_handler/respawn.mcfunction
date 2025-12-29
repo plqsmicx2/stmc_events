@@ -28,7 +28,12 @@ execute if score blitz.temp .kill matches 0.. run tellraw @a \
 scoreboard objectives remove .kill
 
 # set dead player to have a respawn cooldown
-scoreboard players set @s blitz.stats.respawn 100
+scoreboard players set @s blitz.stats.respawn 140
+
+# clear players' ores
+clear @s iron_ingot
+clear @s gold_ingot
+clear @s emerald
 
 # reset players' dead status
 gamemode spectator @s

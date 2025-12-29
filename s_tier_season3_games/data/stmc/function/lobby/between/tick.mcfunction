@@ -28,4 +28,4 @@ execute as @a run function stmc:lobby/villager_items
 execute if score lobby.handler lobby.timer < lobby.handler lobby.timer.switch run function stmc:lobby/between/collect_stage with storage stmc:global
 
 # run voting stage otherwise
-execute if score lobby.handler lobby.timer >= lobby.handler lobby.timer.switch run function stmc:lobby/between/vote_stage
+execute if score lobby.handler lobby.timer >= lobby.handler lobby.timer.switch run function stmc:lobby/between/voting/tick

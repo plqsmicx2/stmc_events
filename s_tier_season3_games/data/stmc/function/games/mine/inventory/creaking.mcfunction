@@ -4,4 +4,4 @@ item replace entity @a hotbar.3 with golden_apple
 item replace entity @a hotbar.8 with lantern
 
 item replace entity @a hotbar.1 with cobweb[can_place_on=[{blocks:["cyan_terracotta"]}]] 8
-item replace entity @a hotbar.2 with lingering_potion[potion_contents={potion:strong_healing}]
+item replace entity @a hotbar.2 with ender_pearl
