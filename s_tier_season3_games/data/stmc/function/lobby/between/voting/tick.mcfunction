@@ -44,7 +44,7 @@ execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.ha
 
 # create objectives
 execute if score lobby.handler lobby.timer.voteStage matches 20 run \
-        scoreboard objectives add lobby.vote dummy
+        scoreboard objectives add lobby.vote trigger
 execute as @a unless entity @s[team=SPECTATORS] if score lobby.handler lobby.timer.voteStage matches 20 run \
         scoreboard players enable @s lobby.vote
 
@@ -61,7 +61,7 @@ execute if score lobby.handler lobby.timer.voteStage matches 20 unless score spr
 execute if score lobby.handler lobby.timer.voteStage matches 20 unless score tr.handler tr.stage matches 1.. run \
         tellraw @a [{click_event:{action:run_command,command:"/trigger lobby.vote set 2"},color:aqua,text:"Trials"}]
 execute if score lobby.handler lobby.timer.voteStage matches 20 unless score dungeons.handler dungeons.stage matches 1.. run \
-        tellraw @a [{click_event:{action:run_command,command:"/trigger lobby.vote set 3"},color:dark_red,text:"Dungeons"}]
+        tellraw @a [{click_event:{action:run_command,command:"/trigger lobby.vote set 3"},color:dark_blue,text:"Dungeons"}]
 execute if score lobby.handler lobby.timer.voteStage matches 20 unless score mine.handler mine.stage matches 1.. run \
         tellraw @a [{click_event:{action:run_command,command:"/trigger lobby.vote set 4"},color:dark_gray,text:"Mine"}]
 execute if score lobby.handler lobby.timer.voteStage matches 20 unless score extract.handler extract.stage matches 1.. run \
@@ -74,4 +74,48 @@ execute if score lobby.handler lobby.timer.voteStage matches 20 unless score bra
 execute if score lobby.handler lobby.timer.voteStage matches 20 run tellraw @a {text:" "}
 
 # Announce vote
-execute if score lobby.handler lobby.timer.voteStage matches 525 run function stmc:lobby/between/determine_vote
+execute if score lobby.handler lobby.timer.voteStage matches 525 run function stmc:lobby/between/voting/check_max
+
+# run start function of winner
+execute if score lobby.handler lobby.timer.voteStage matches 560 run tellraw @a ["",{text:"Teleporting in 5 seconds.",color:green,bold:true}]
+
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.raceCount = .lobby .voteMax \
+        run function race:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.raceCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.sprintCount = .lobby .voteMax \
+        run function sprint:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.sprintCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
+        run function solve:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.trialsCount = .lobby .voteMax \
+        run function trials:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.trialsCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
+        run function collect:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.dungeonsCount = .lobby .voteMax \
+        run function dungeons:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.dungeonsCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
+        run function mine:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
+        run function extract:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
+        run function blitz:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
+        run return 0
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.brawlCount = .lobby .voteMax \
+        run function survival_games:start
+execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.brawlCount = .lobby .voteMax \
+        run return 0

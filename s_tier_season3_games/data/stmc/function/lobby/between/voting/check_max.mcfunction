@@ -2,32 +2,36 @@
 # the function manually sets that game to be the next one played
 
 # create temporary scoreboards
-scoreboard objectives add lobby.voting.raceCount dummy
-scoreboard objectives add lobby.voting.sprintCount dummy
-scoreboard objectives add lobby.voting.trialsCount dummy
-scoreboard objectives add lobby.voting.dungeonsCount dummy
-scoreboard objectives add lobby.voting.mineCount dummy
-scoreboard objectives add lobby.voting.extractCount dummy
-scoreboard objectives add lobby.voting.blitzCount dummy
-scoreboard objectives add lobby.voting.brawlCount dummy
+scoreboard objectives add lobby.voting.raceCount trigger
+scoreboard objectives add lobby.voting.sprintCount trigger
+scoreboard objectives add lobby.voting.trialsCount trigger
+scoreboard objectives add lobby.voting.dungeonsCount trigger
+scoreboard objectives add lobby.voting.mineCount trigger
+scoreboard objectives add lobby.voting.extractCount trigger
+scoreboard objectives add lobby.voting.blitzCount trigger
+scoreboard objectives add lobby.voting.brawlCount trigger
+
+# get # of votes for each player
+scoreboard objectives add .voteCount dummy
+execute as @a store result score @s .voteCount run clear @s sunflower 0
 
 # store values
 scoreboard players set lobby.handler lobby.voting.raceCount 0
-execute as @a[scores={lobby.vote=0}] run scoreboard players add lobby.handler lobby.voting.raceCount 1
+execute as @a[scores={lobby.vote=0}] run scoreboard players operation lobby.handler lobby.voting.raceCount += @s .voteCount
 scoreboard players set lobby.handler lobby.voting.sprintCount 0
-execute as @a[scores={lobby.vote=1}] run scoreboard players add lobby.handler lobby.voting.sprintCount 1
+execute as @a[scores={lobby.vote=1}] run scoreboard players operation lobby.handler lobby.voting.sprintCount += @s .voteCount
 scoreboard players set lobby.handler lobby.voting.trialsCount 0
-execute as @a[scores={lobby.vote=2}] run scoreboard players add lobby.handler lobby.voting.trialsCount 1
+execute as @a[scores={lobby.vote=2}] run scoreboard players operation lobby.handler lobby.voting.trialsCount += @s .voteCount
 scoreboard players set lobby.handler lobby.voting.dungeonsCount 0
-execute as @a[scores={lobby.vote=3}] run scoreboard players add lobby.handler lobby.voting.dungeonsCount 1
+execute as @a[scores={lobby.vote=3}] run scoreboard players operation lobby.handler lobby.voting.dungeonsCount += @s .voteCount
 scoreboard players set lobby.handler lobby.voting.mineCount 0
-execute as @a[scores={lobby.vote=4}] run scoreboard players add lobby.handler lobby.voting.mineCount 1
+execute as @a[scores={lobby.vote=4}] run scoreboard players operation lobby.handler lobby.voting.mineCount += @s .voteCount
 scoreboard players set lobby.handler lobby.voting.extractCount 0
-execute as @a[scores={lobby.vote=5}] run scoreboard players add lobby.handler lobby.voting.extractCount 1
+execute as @a[scores={lobby.vote=5}] run scoreboard players operation lobby.handler lobby.voting.extractCount += @s .voteCount
 scoreboard players set lobby.handler lobby.voting.blitzCount 0
-execute as @a[scores={lobby.vote=6}] run scoreboard players add lobby.handler lobby.voting.blitzCount 1
+execute as @a[scores={lobby.vote=6}] run scoreboard players operation lobby.handler lobby.voting.blitzCount += @s .voteCount
 scoreboard players set lobby.handler lobby.voting.brawlCount 0
-execute as @a[scores={lobby.vote=7}] run scoreboard players add lobby.handler lobby.voting.brawlCount 1
+execute as @a[scores={lobby.vote=7}] run scoreboard players operation lobby.handler lobby.voting.brawlCount += @s .voteCount
 
 # first, determine maximum score
 scoreboard objectives add .voteMax dummy
@@ -196,7 +200,7 @@ tellraw @a ["",{text:"The results are:",color:green}]
 tellraw @a ["",{text:"Race: ",color:green},{score:{objective:"lobby.voting.raceCount",name:"lobby.handler"},color:dark_green}]
 tellraw @a ["",{text:"Sprint: ",color:dark_green},{score:{objective:"lobby.voting.sprintCount",name:"lobby.handler"},color:dark_green}]
 tellraw @a ["",{text:"Trials: ",color:dark_aqua},{score:{objective:"lobby.voting.trialsCount",name:"lobby.handler"},color:dark_green}]
-tellraw @a ["",{text:"Dungeons: ",color:dark_red},{score:{objective:"lobby.voting.dungeonsCount",name:"lobby.handler"},color:dark_green}]
+tellraw @a ["",{text:"Dungeons: ",color:dark_blue},{score:{objective:"lobby.voting.dungeonsCount",name:"lobby.handler"},color:dark_green}]
 tellraw @a ["",{text:"Mine: ",color:gray},{score:{objective:"lobby.voting.mineCount",name:"lobby.handler"},color:dark_green}]
 tellraw @a ["",{text:"Extract: ",color:red},{score:{objective:"lobby.voting.extractCount",name:"lobby.handler"},color:dark_green}]
 tellraw @a ["",{text:"Blitz: ",color:light_purple},{score:{objective:"lobby.voting.blitzCount",name:"lobby.handler"},color:dark_green}]

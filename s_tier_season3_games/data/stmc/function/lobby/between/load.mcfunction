@@ -61,15 +61,6 @@ scoreboard objectives add lobby.timer.temp dummy
 scoreboard objectives add lobby.timer.secs dummy
 scoreboard objectives add lobby.timer.mins dummy
 scoreboard objectives add lobby.timer.switch dummy
-# stats
-scoreboard objectives add lobby.voting.raceCount dummy
-scoreboard objectives add lobby.voting.solveCount dummy
-scoreboard objectives add lobby.voting.trialsCount dummy
-scoreboard objectives add lobby.voting.collectCount dummy
-scoreboard objectives add lobby.voting.mineCount dummy
-scoreboard objectives add lobby.voting.extractCount dummy
-scoreboard objectives add lobby.voting.blitzCount dummy
-scoreboard objectives add lobby.voting.brawlCount dummy
 
 # (re)set all necessary values
 scoreboard players set lobby.handler lobby.timer 0
