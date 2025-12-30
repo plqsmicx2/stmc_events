@@ -37,8 +37,8 @@ execute if score brawl.handler brawl.timer.round matches 280 run title @a action
 execute as @a at @s if score brawl.handler brawl.timer.round matches 200 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1
 execute as @a at @s if score brawl.handler brawl.timer.round matches 220 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.1
 execute as @a at @s if score brawl.handler brawl.timer.round matches 240 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.2
-execute as @a at @s if score brawl.handler brawl.timer.round matches 260 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.3
-execute as @a at @s if score brawl.handler brawl.timer.round matches 280 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.4
+execute as @a at @s if score brawl.handler brawl.timer.round matches 260 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.4
+execute as @a at @s if score brawl.handler brawl.timer.round matches 280 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 0.8 1.6
 execute as @a at @s if score brawl.handler brawl.timer.round matches 300 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 1 2
 
 # start game

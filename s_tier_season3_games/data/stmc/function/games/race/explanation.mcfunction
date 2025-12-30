@@ -4,7 +4,7 @@
 
 # blurb #1
 execute if score race.handler race.timer.explanation matches 1 run gamemode spectator @a
-execute in stmc:race if score race.handler race.timer.explanation matches 1 run tp @a -13 111 25 -180 0
+execute if score race.handler race.timer.explanation matches 1 run tp @a -13 111 25 -180 0
 execute if score race.handler race.timer.explanation matches 1 run title @a title {text:"RACE",color:"green"}
 execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:"Race is a simple game.",color:"green"}
@@ -13,40 +13,27 @@ execute if score race.handler race.timer.explanation matches 1 run tellraw @a {t
 execute if score race.handler race.timer.explanation matches 1 run tellraw @a {text:" "}
 
 # blurb #2
-execute in stmc:race if score race.handler race.timer.explanation matches 160 run tp @a 18 110 -36 120 12
-execute if score race.handler race.timer.explanation matches 160 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 160 run tellraw @a {text:"To help you move faster, there are skips indicated by red wool.",color:"green"}
-execute if score race.handler race.timer.explanation matches 160 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 160 run tellraw @a {text:"These skips, while saving time, are risky due to their difficulty.",color:"green"}
-execute if score race.handler race.timer.explanation matches 160 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 100 run tp @a 18 110 -36 120 12
+execute if score race.handler race.timer.explanation matches 100 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 100 run tellraw @a {text:"To help you progress faster, there are skips indicated by red wool.",color:"green"}
+execute if score race.handler race.timer.explanation matches 100 run tellraw @a {text:" "}
 
 # blurb #3
-execute in stmc:race if score race.handler race.timer.explanation matches 320 run tp @a 58 112 65 -135 25
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"You will earn +",color:"green"},{text:"2",color:"dark_red"},{text:" points for each player outplaced.",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"You will earn the following bonus points for achieving each placement:",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 20: +",color:"green"},{text:"1",color:"dark_red"},{text:" points | Top 10: +",color:"green"},{text:"1",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a [{text:"Top 5: +",color:"green"},{text:"1",color:"dark_red"},{text:" points | Top 3: +",color:"green"},{text:"1",color:"dark_red"},{text:" points | Top 1: +",color:"green"},{text:"1",color:"dark_red"},{text:" point",color:"green"}]
-execute if score race.handler race.timer.explanation matches 320 run tellraw @a {text:" "}
-
-# blurb #4
-execute in stmc:race if score race.handler race.timer.explanation matches 480 run tp @a -32 109 -17 -85 -5
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a {text:"The players with the fastest laps will also earn the following bonuses:",color:"green"}
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"1st: +",color:"green"},{text:"10",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"2nd: +",color:"green"},{text:"8",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"3rd: +",color:"green"},{text:"6",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"4th: +",color:"green"},{text:"4",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a [{text:"5th: +",color:"green"},{text:"2",color:"dark_red"},{text:" points",color:"green"}]
-execute if score race.handler race.timer.explanation matches 480 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 200 run tp @a 58 112 65 -135 25
+execute if score race.handler race.timer.explanation matches 200 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 200 run tellraw @a [{text:"You will earn points for outplacing your opponents.",color:"green"}]
+execute if score race.handler race.timer.explanation matches 200 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 200 run tellraw @a [{text:"Bonus points are also provided for achieving certain placements and having one of the five fastest laps.",color:"green"}]
+execute if score race.handler race.timer.explanation matches 200 run tellraw @a {text:" "}
 
 # blurb #5
-execute if score race.handler race.timer.explanation matches 640 run gamemode adventure @a
-execute if score race.handler race.timer.explanation matches 640 run gamemode spectator @a[team=SPECTATORS]
-execute in stmc:race if score race.handler race.timer.explanation matches 640 run tp @a -13 106 14 -180 0
-execute if score race.handler race.timer.explanation matches 640 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 640 run tellraw @a {text:"The race begins in about 20 seconds.",color:"green"}
-execute if score race.handler race.timer.explanation matches 640 run tellraw @a {text:" "}
-execute if score race.handler race.timer.explanation matches 640 run tellraw @a {text:"Good luck!",color:"green"}
-execute if score race.handler race.timer.explanation matches 640 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 300 run gamemode adventure @a
+execute if score race.handler race.timer.explanation matches 300 run gamemode spectator @a[team=SPECTATORS]
+execute if score race.handler race.timer.explanation matches 300 run tp @a -13 106 14 -180 0
+execute if score race.handler race.timer.explanation matches 300 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 300 run tellraw @a {text:"The race begins in about 10 seconds.",color:"green"}
+execute if score race.handler race.timer.explanation matches 300 run tellraw @a {text:" "}
+execute if score race.handler race.timer.explanation matches 300 run tellraw @a {text:"Good luck!",color:"green"}
+execute if score race.handler race.timer.explanation matches 300 run tellraw @a {text:" "}
+
+execute if score race.handler race.timer.explanation matches 300.. run scoreboard players set race.handler race.stage 2

@@ -25,8 +25,7 @@ execute in stmc:extract if score extract.handler extract.timer.delay1 matches 10
 
 # if we're in stage 1, increment timer & run explanation
 execute if score extract.handler extract.stage matches 1 run scoreboard players add extract.handler extract.timer.explanation 1
-execute if score extract.handler extract.stage matches 1 run function stmc:games/extract/explanation
-execute if score extract.handler extract.stage matches 1 if score extract.handler extract.timer.explanation matches 800.. run scoreboard players set extract.handler extract.stage 2
+execute in stmc:extract if score extract.handler extract.stage matches 1 run function stmc:games/extract/explanation
 
 # if we're in stage 2, increment timer & countdown at 5 seconds
 execute if score extract.handler extract.stage matches 2 run scoreboard players add extract.handler extract.timer.delay2 1

@@ -22,8 +22,7 @@ execute if score mine.handler mine.stage matches 0 if score mine.handler mine.ti
 
 # if we're in stage 1, increment timer & run explanation
 execute if score mine.handler mine.stage matches 1 run scoreboard players add mine.handler mine.timer.explanation 1
-execute if score mine.handler mine.stage matches 1 run function stmc:games/mine/explanation
-execute if score mine.handler mine.stage matches 1 if score mine.handler mine.timer.explanation matches 641.. run scoreboard players set mine.handler mine.stage 2
+execute in stmc:mine/lobby if score mine.handler mine.stage matches 1 run function stmc:games/mine/explanation
 
 # if we're in stage 2, run game_tick (it handles everything lobby/game related, including delays)
 execute if score mine.handler mine.stage matches 2 run scoreboard players add mine.handler mine.timer 1

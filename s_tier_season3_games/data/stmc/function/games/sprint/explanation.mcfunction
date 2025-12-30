@@ -4,7 +4,7 @@
 
 # blurb #1
 execute if score sprint.handler sprint.timer.explanation matches 1 run gamemode spectator @a
-execute in stmc:sprint if score sprint.handler sprint.timer.explanation matches 1 run tp @a -20 110 200 90 60
+execute if score sprint.handler sprint.timer.explanation matches 1 run tp @a -20 110 200 90 60
 execute if score sprint.handler sprint.timer.explanation matches 1 run title @a title {text:"SPRINT",color:"dark_green"}
 execute if score sprint.handler sprint.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score sprint.handler sprint.timer.explanation matches 1 run tellraw @a {text:"Sprint is a parkour-focused game.",color:"dark_green"}
@@ -13,7 +13,7 @@ execute if score sprint.handler sprint.timer.explanation matches 1 run tellraw @
 execute if score sprint.handler sprint.timer.explanation matches 1 run tellraw @a {text:" "}
 
 # blurb #2
-execute in stmc:sprint if score sprint.handler sprint.timer.explanation matches 100 run tp @a -20 110 400 90 60
+execute if score sprint.handler sprint.timer.explanation matches 100 run tp @a -20 110 400 90 60
 execute if score sprint.handler sprint.timer.explanation matches 100 run tellraw @a {text:" "}
 execute if score sprint.handler sprint.timer.explanation matches 100 run tellraw @a {text:"You will be tasked with completing 9 parkour levels, 6 dropper levels,",color:"dark_green"}
 execute if score sprint.handler sprint.timer.explanation matches 100 run tellraw @a {text:"4 elytra courses, and 4 spear courses.,",color:"dark_green"}
@@ -23,7 +23,7 @@ execute if score sprint.handler sprint.timer.explanation matches 100 run tellraw
 execute if score sprint.handler sprint.timer.explanation matches 100 run tellraw @a {text:" "}
 
 # blurb #3
-execute in stmc:sprint if score sprint.handler sprint.timer.explanation matches 200 run tp @a -20 110 600 90 60
+execute if score sprint.handler sprint.timer.explanation matches 200 run tp @a -20 110 600 90 60
 execute if score sprint.handler sprint.timer.explanation matches 200 run tellraw @a {text:" "}
 execute if score sprint.handler sprint.timer.explanation matches 200 run tellraw @a {text:"All players will be allowed to Skip any level they need.",color:"dark_green"}
 execute if score sprint.handler sprint.timer.explanation matches 200 run tellraw @a {text:" "}
@@ -35,7 +35,7 @@ execute if score sprint.handler sprint.timer.explanation matches 200 run tellraw
 execute if score sprint.handler sprint.timer.explanation matches 300 run scoreboard players set sprint.handler sprint.stage 2
 execute if score sprint.handler sprint.timer.explanation matches 300 run gamemode adventure @a
 execute if score sprint.handler sprint.timer.explanation matches 300 run gamemode spectator @a[team=SPECTATORS]
-execute in stmc:sprint if score sprint.handler sprint.timer.explanation matches 300 run tp @a -1 102 0 90 0
+execute if score sprint.handler sprint.timer.explanation matches 300 run tp @a -1 102 0 90 0
 execute if score sprint.handler sprint.timer.explanation matches 300 run tellraw @a {text:" "}
 execute if score sprint.handler sprint.timer.explanation matches 300 run tellraw @a {text:"The game begins in about 10 seconds.",color:"dark_green"}
 execute if score sprint.handler sprint.timer.explanation matches 300 run tellraw @a {text:" "}

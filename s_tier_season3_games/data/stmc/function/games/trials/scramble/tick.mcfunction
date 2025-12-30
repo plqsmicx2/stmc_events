@@ -28,9 +28,7 @@ execute if score scramble.handler scramble.stage matches 0 if score scramble.han
 
 # if we're in stage 1, increment the timer & run the explanation function
 execute if score scramble.handler scramble.stage matches 1 run scoreboard players add scramble.handler scramble.timer.explanation 1
-execute if score scramble.handler scramble.stage matches 1 run function stmc:games/trials/scramble/explanation
-# move to next stage after 32 seconds
-execute if score scramble.handler scramble.stage matches 1 if score scramble.handler scramble.timer.explanation matches 640.. run scoreboard players set scramble.handler scramble.stage 2
+execute in stmc:trials/scramble if score scramble.handler scramble.stage matches 1 run function stmc:games/trials/scramble/explanation
 
 # if we're in stage 2, increment the timer, & reset player alive & location
 execute if score scramble.handler scramble.stage matches 2 run scoreboard players add scramble.handler scramble.timer.delay2 1

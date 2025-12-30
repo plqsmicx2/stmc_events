@@ -26,29 +26,28 @@ execute if score race.handler race.stage matches 0 if score race.handler race.ti
 
 # if we're in stage 1, increment timer & run explanation
 execute if score race.handler race.stage matches 1 run scoreboard players add race.handler race.timer.explanation 1
-execute if score race.handler race.stage matches 1 run function stmc:games/race/explanation
-execute if score race.handler race.stage matches 1 if score race.handler race.timer.explanation matches 641.. run scoreboard players set race.handler race.stage 2
+execute in stmc:race if score race.handler race.stage matches 1 run function stmc:games/race/explanation
 
 # if we're in stage 2, increment timer & countdown at 5 seconds
 execute if score race.handler race.stage matches 2 run scoreboard players add race.handler race.timer.delay2 1
 # invis
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 200 run effect give @a invisibility infinite 0 true
+execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 5 run effect give @a invisibility infinite 0 true
 # countdown
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 300 run title @a actionbar {"text":"5 seconds!", "color":"green"}
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 320 run title @a actionbar {"text":"4 seconds!", "color":"green"}
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 340 run title @a actionbar {"text":"3 seconds!", "color":"green"}
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 360 run title @a actionbar {"text":"2 seconds!", "color":"green"}
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 380 run title @a actionbar {"text":"1 second!", "color":"green"}
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 399 run title @a title {"text":"Go!", "color":"green"}
+execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 100 run title @a actionbar {"text":"5 seconds!", "color":"green"}
+execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 120 run title @a actionbar {"text":"4 seconds!", "color":"green"}
+execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 140 run title @a actionbar {"text":"3 seconds!", "color":"green"}
+execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 160 run title @a actionbar {"text":"2 seconds!", "color":"green"}
+execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 180 run title @a actionbar {"text":"1 second!", "color":"green"}
+execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 199 run title @a title {"text":"Go!", "color":"green"}
 
-execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 300 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1
-execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 320 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.1
-execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 340 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.2
-execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 360 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.3
-execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 380 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.4
-execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 399 run playsound minecraft:block.note_block.pling master @a -13 105 15 1 2
+execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 100 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1
+execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 120 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.1
+execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 140 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.2
+execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 160 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.3
+execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 180 run playsound minecraft:block.note_block.pling master @a -13 105 15 0.8 1.4
+execute as @a at @s if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 199 run playsound minecraft:block.note_block.pling master @a -13 105 15 1 2
 
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 400.. run scoreboard players set race.handler race.stage 3
+execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 200.. run scoreboard players set race.handler race.stage 3
 
 # if we're in stage 3, increment timer & run game
 execute if score race.handler race.stage matches 3 run scoreboard players add race.handler race.timer.game 1

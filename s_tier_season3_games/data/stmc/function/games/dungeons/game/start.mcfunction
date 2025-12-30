@@ -21,6 +21,7 @@ item replace entity @a hotbar.8 with lantern
 execute in stmc:dungeons run kill @e[type=!player]
 
 # announce start
+execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 2 2
 title @a title {"text":"Go!", "color":"dark_red"}
 
 # start games

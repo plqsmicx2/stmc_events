@@ -25,8 +25,7 @@ execute if score spleef.handler spleef.stage matches 0 if score spleef.handler s
 
 # if we're in stage 1, run explanation (40s)
 execute if score spleef.handler spleef.stage matches 1 run scoreboard players add spleef.handler spleef.timer.explanation 1
-execute if score spleef.handler spleef.stage matches 1 run function stmc:games/trials/spleef/explanation
-execute if score spleef.handler spleef.stage matches 1 if score spleef.handler spleef.timer.explanation matches 800.. run scoreboard players set spleef.handler spleef.stage 2
+execute in stmc:trials/spleef if score spleef.handler spleef.stage matches 1 run function stmc:games/trials/spleef/explanation
 
 # if we're in stage 2, wait 10 seconds & countdown at 5
 execute if score spleef.handler spleef.stage matches 2 run scoreboard players add spleef.handler spleef.timer.delay2 1

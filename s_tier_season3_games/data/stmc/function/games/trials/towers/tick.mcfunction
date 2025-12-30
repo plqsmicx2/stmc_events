@@ -30,9 +30,7 @@ execute if score towers.handler towers.stage matches 0 if score towers.handler t
 
 # if we're in stage 1, increment the timer & run the explanation function
 execute if score towers.handler towers.stage matches 1 run scoreboard players add towers.handler towers.timer.explanation 1
-execute if score towers.handler towers.stage matches 1 run function stmc:games/trials/towers/explanation
-# move to next stage when explanation ends
-execute if score towers.handler towers.stage matches 1 if score towers.handler towers.timer.explanation matches 640.. run scoreboard players set towers.handler towers.stage 2
+execute in stmc:trials/towers if score towers.handler towers.stage matches 1 run function stmc:games/trials/towers/explanation
 
 # if we're in stage 2, increment the timer & run countdown at 5 seconds
 execute if score towers.handler towers.stage matches 2 run scoreboard players add towers.handler towers.timer.delay2 1

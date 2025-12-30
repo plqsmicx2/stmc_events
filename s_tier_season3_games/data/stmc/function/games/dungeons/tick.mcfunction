@@ -26,13 +26,19 @@ execute in stmc:dungeons as @a if score dungeons.handler dungeons.stage matches 
 execute if score dungeons.handler dungeons.stage matches 2 run scoreboard players add dungeons.handler dungeons.timer.delay2 1
 
 # countdown
-execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 200 run title @a actionbar {"text":"5 seconds!", "color":"yellow"}
-execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 220 run title @a actionbar {"text":"4 seconds!", "color":"yellow"}
-execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 240 run title @a actionbar {"text":"3 seconds!", "color":"yellow"}
-execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 260 run title @a actionbar {"text":"2 seconds!", "color":"yellow"}
-execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 280 run title @a actionbar {"text":"1 second!", "color":"yellow"}
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 100 run title @a actionbar {"text":"5 seconds!", "color":"yellow"}
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 120 run title @a actionbar {"text":"4 seconds!", "color":"yellow"}
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 140 run title @a actionbar {"text":"3 seconds!", "color":"yellow"}
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 160 run title @a actionbar {"text":"2 seconds!", "color":"yellow"}
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 180 run title @a actionbar {"text":"1 second!", "color":"yellow"}
 
-execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 300.. run function stmc:games/dungeons/game/start
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 100 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 120 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1.1
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 140 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1.2
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 160 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1.4
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 180 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1.6
+
+execute if score dungeons.handler dungeons.stage matches 2 if score dungeons.handler dungeons.timer.delay2 matches 200.. run function stmc:games/dungeons/game/start
 
 # if we're in stage 3, run game
 execute in stmc:dungeons if score dungeons.handler dungeons.stage matches 3 run function stmc:games/dungeons/game_tick

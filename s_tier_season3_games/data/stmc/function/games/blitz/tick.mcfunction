@@ -19,7 +19,7 @@ execute if score blitz.handler blitz.stage matches 0 if score blitz.handler blit
 
 # if we're in stage 1, we need to increment the timer, call our explanation function, & check if 30 seconds have elapsed
 execute if score blitz.handler blitz.stage matches 1 run scoreboard players add blitz.handler blitz.timer.explanation 1
-execute if score blitz.handler blitz.stage matches 1 run function stmc:games/blitz/helper/explanation
+execute in stmc:blitz if score blitz.handler blitz.stage matches 1 run function stmc:games/blitz/helper/explanation
 
 # if we're in stage 2, we just need to increment the timer & update the actionbar
 execute if score blitz.handler blitz.stage matches 2 run scoreboard players add blitz.handler blitz.timer.delay2 1

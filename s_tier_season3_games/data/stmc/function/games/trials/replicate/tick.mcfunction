@@ -39,10 +39,7 @@ execute if score replicate.handler replicate.stage matches 1 run \
         scoreboard players add replicate.handler replicate.timer.explanation 1
 
 # run explanation
-execute if score replicate.handler replicate.stage matches 1 run function stmc:games/trials/replicate/explanation
-
-# update stage
-execute if score replicate.handler replicate.stage matches 1 if score replicate.handler replicate.timer.explanation matches 800.. run scoreboard players set replicate.handler replicate.stage 2
+execute in stmc:trials/replicate if score replicate.handler replicate.stage matches 1 run function stmc:games/trials/replicate/explanation
 
 # STAGE TWO:
 

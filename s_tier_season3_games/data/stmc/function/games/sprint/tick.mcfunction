@@ -27,7 +27,7 @@ execute if score sprint.handler sprint.stage matches 0 if score sprint.handler s
 
 # if we're in stage 1, increment timer & run explanation
 execute if score sprint.handler sprint.stage matches 1 run scoreboard players add sprint.handler sprint.timer.explanation 1
-execute if score sprint.handler sprint.stage matches 1 run function stmc:games/sprint/explanation
+execute in stmc:sprint if score sprint.handler sprint.stage matches 1 run function stmc:games/sprint/explanation
 
 # if we're in stage 2, increment timer & countdown at 5 seconds
 execute if score sprint.handler sprint.stage matches 2 run scoreboard players add sprint.handler sprint.timer.delay2 1

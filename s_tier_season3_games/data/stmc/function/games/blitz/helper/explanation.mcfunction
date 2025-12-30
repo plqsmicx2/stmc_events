@@ -5,7 +5,7 @@
 # blurb #1
 execute if score blitz.handler blitz.timer.explanation matches 1 run title @a title {"text":"BLITZ","color":"light_purple"}
 execute if score blitz.handler blitz.timer.explanation matches 1 run gamemode spectator @a
-execute if score blitz.handler blitz.timer.explanation matches 1 in stmc:blitz run teleport @a 60 130 60 135 20
+execute if score blitz.handler blitz.timer.explanation matches 1 run teleport @a 60 130 60 135 20
 execute if score blitz.handler blitz.timer.explanation matches 1 run tellraw @a {"text":" "}
 execute if score blitz.handler blitz.timer.explanation matches 1 run tellraw @a {"text":"Blitz is a bedwars-inspired sky battle royale.","color":"light_purple"}
 execute if score blitz.handler blitz.timer.explanation matches 1 run tellraw @a {"text":" "}
@@ -13,7 +13,7 @@ execute if score blitz.handler blitz.timer.explanation matches 1 run tellraw @a 
 execute if score blitz.handler blitz.timer.explanation matches 1 run tellraw @a {"text":" "}
 
 # blurb #2
-execute if score blitz.handler blitz.timer.explanation matches 100 in stmc:blitz run teleport @a -3 101 108 -20 20
+execute if score blitz.handler blitz.timer.explanation matches 100 run teleport @a -3 101 108 -20 20
 execute if score blitz.handler blitz.timer.explanation matches 100 run tellraw @a {"text":" "}
 execute if score blitz.handler blitz.timer.explanation matches 100 run tellraw @a {"text":"Your main objectives are to break other teams' cores (their wool) and mine point crates in the center of the map.","color":"light_purple"}
 execute if score blitz.handler blitz.timer.explanation matches 100 run tellraw @a {"text":" "}
@@ -25,7 +25,7 @@ execute if score blitz.handler blitz.timer.explanation matches 100 run tellraw @
 execute if score blitz.handler blitz.timer.explanation matches 100 run tellraw @a {"text":" "}
 
 # blurb #3
-execute if score blitz.handler blitz.timer.explanation matches 200 in stmc:blitz run teleport @a -29 115 41 145 -5
+execute if score blitz.handler blitz.timer.explanation matches 200 run teleport @a -29 115 41 145 -5
 execute if score blitz.handler blitz.timer.explanation matches 200 run tellraw @a {"text":" "}
 execute if score blitz.handler blitz.timer.explanation matches 200 run tellraw @a {"text":"The round will last twelve minutes.","color":"light_purple"}
 execute if score blitz.handler blitz.timer.explanation matches 200 run tellraw @a {"text":" "}
@@ -37,7 +37,7 @@ execute if score blitz.handler blitz.timer.explanation matches 200 run tellraw @
 execute if score blitz.handler blitz.timer.explanation matches 200 run tellraw @a {"text":" "}
 
 # blurb #4
-execute if score blitz.handler blitz.timer.explanation matches 300 in stmc:blitz run teleport @a 40 106 93 45 10
+execute if score blitz.handler blitz.timer.explanation matches 300 run teleport @a 40 106 93 45 10
 execute if score blitz.handler blitz.timer.explanation matches 300 run tellraw @a {"text":" "}
 execute if score blitz.handler blitz.timer.explanation matches 300 run tellraw @a {"text":"Players may respawn so long as their teams' cores are intact.","color":"light_purple"}
 execute if score blitz.handler blitz.timer.explanation matches 300 run tellraw @a {"text":" "}
@@ -45,7 +45,7 @@ execute if score blitz.handler blitz.timer.explanation matches 300 run tellraw @
 execute if score blitz.handler blitz.timer.explanation matches 300 run tellraw @a {"text":" "}
 
 # blurb #5
-execute if score blitz.handler blitz.timer.explanation matches 400 in stmc:blitz run teleport @a 0 172 0
+execute if score blitz.handler blitz.timer.explanation matches 400 run teleport @a 0 172 0
 execute if score blitz.handler blitz.timer.explanation matches 400 run gamemode adventure @a
 execute if score blitz.handler blitz.timer.explanation matches 400 run gamemode spectator @a[team=SPECTATORS]
 execute if score blitz.handler blitz.timer.explanation matches 400 run tellraw @a {text:" "}

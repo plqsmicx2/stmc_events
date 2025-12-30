@@ -11,12 +11,6 @@ execute unless score finale.handler finale.stage matches 0.. run function stmc:g
 
 function stmc:lobby/final/sidebar with storage stmc:global
 
-# reset attributes
-execute as @a run attribute @s attack_damage base reset
-execute as @a run attribute @s attack_knockback base reset
-execute as @a run attribute @s attack_speed base reset
-execute as @a run attribute @s knockback_resistance base reset
-
 # set world protections
 execute as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 execute as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261,attribute_modifiers=[{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
@@ -29,7 +23,7 @@ execute as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecr
 
 # if we're in stage 0, increment timer
 execute if score finale.handler finale.stage matches 0 run scoreboard players add finale.handler finale.timer.delay1 1
-execute if score finale.handler finale.stage matches 0 if score finale.handler finale.timer.delay1 matches 400.. run scoreboard players set finale.handler finale.stage 1
+execute if score finale.handler finale.stage matches 0 if score finale.handler finale.timer.delay1 matches 200.. run scoreboard players set finale.handler finale.stage 1
 
 # if we're in stage 1, increment timer & run explanation
 execute if score finale.handler finale.stage matches 1 run scoreboard players add finale.handler finale.timer.explanation 1
