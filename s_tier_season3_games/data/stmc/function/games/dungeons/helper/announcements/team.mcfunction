@@ -1,3 +1,7 @@
+# get points & rankings
+function stmc:games/dungeons/points/calculate_rankings
+function stmc:games/dungeons/points/point_update
+
 # Team scores
 
 execute run tellraw @a {text:"Team scores:",color:white}

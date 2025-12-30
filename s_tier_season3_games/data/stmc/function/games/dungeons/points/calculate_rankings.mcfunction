@@ -43,6 +43,9 @@ function stmc:games/dungeons/points/rankings/room6
 
 # <===== TEAM POINT RANKINGS =====>
 
+# update points from new rankings
+function stmc:games/dungeons/points/point_update
+
 # first, store our data in a temporary place to work with
 scoreboard objectives add dungeons.points.team.temp dummy
 scoreboard players operation RED_RACCOONS dungeons.points.team.temp = RED_RACCOONS dungeons.points.team

@@ -182,3 +182,4 @@ scoreboard players set team.BlueBears stats.winningTeam 0
 
 scoreboard objectives remove lobby.sidebar
 function stmc:thread/helper/default_sidebar
+scoreboard objectives setdisplay sidebar lobby.sidebar

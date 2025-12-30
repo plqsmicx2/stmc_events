@@ -15,7 +15,6 @@
 
 scoreboard objectives add lobby.sidebar dummy
 $scoreboard objectives modify lobby.sidebar displayname {"text": "$(eventName)", "color": "green", "bold": true}
-scoreboard objectives setdisplay sidebar lobby.sidebar
 
 # <===== BUILD FROM THE BOTTOM =====>
 

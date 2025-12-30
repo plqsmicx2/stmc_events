@@ -3,6 +3,7 @@
 
 # Determine Rank #1:
 
+# sum teams' room times
 function stmc:games/dungeons/points/rankings/sum_room_times
 
 # store values in a temporary place
@@ -46,24 +47,24 @@ execute if score BLUE_BEARS dungeons.roomdisplay matches ..5 run \
 
 # if any values are 0, set them to the max
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 9 run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 9 run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 9 run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 9 run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 9 run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 9 run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 9 run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 9 run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002
 
 # set our lowest value to the max time
-scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 14401
+scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 18001
 
 # determine lowest value
 execute if score RED_RACCOONS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
@@ -103,24 +104,24 @@ execute if score $dungeons.lowest dungeons.timer.overall.temp = BLUE_BEARS dunge
 
 # and reset the time of whichever team was just awarded a rank (to ensure they don't get double ranked)
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002
 
 # and repeat for each rank 2-8
-scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 14401
+scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 18001
 execute if score RED_RACCOONS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
         scoreboard players operation $dungeons.lowest dungeons.timer.overall.temp = RED_RACCOONS dungeons.timer.overall.temp
 execute if score ORANGE_OTTERS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
@@ -154,23 +155,23 @@ execute if score $dungeons.lowest dungeons.timer.overall.temp = PURPLE_PENGUINS 
 execute if score $dungeons.lowest dungeons.timer.overall.temp = BLUE_BEARS dungeons.timer.overall.temp run \
         scoreboard players set BLUE_BEARS dungeons.timer.overall.rank 2
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002
 
-scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 14401
+scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 18001
 execute if score RED_RACCOONS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
         scoreboard players operation $dungeons.lowest dungeons.timer.overall.temp = RED_RACCOONS dungeons.timer.overall.temp
 execute if score ORANGE_OTTERS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
@@ -204,23 +205,23 @@ execute if score $dungeons.lowest dungeons.timer.overall.temp = PURPLE_PENGUINS 
 execute if score $dungeons.lowest dungeons.timer.overall.temp = BLUE_BEARS dungeons.timer.overall.temp run \
         scoreboard players set BLUE_BEARS dungeons.timer.overall.rank 3
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002
 
-scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 14401
+scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 18001
 execute if score RED_RACCOONS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
         scoreboard players operation $dungeons.lowest dungeons.timer.overall.temp = RED_RACCOONS dungeons.timer.overall.temp
 execute if score ORANGE_OTTERS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
@@ -254,23 +255,23 @@ execute if score $dungeons.lowest dungeons.timer.overall.temp = PURPLE_PENGUINS 
 execute if score $dungeons.lowest dungeons.timer.overall.temp = BLUE_BEARS dungeons.timer.overall.temp run \
         scoreboard players set BLUE_BEARS dungeons.timer.overall.rank 4
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002
 
-scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 14401
+scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 18001
 execute if score RED_RACCOONS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
         scoreboard players operation $dungeons.lowest dungeons.timer.overall.temp = RED_RACCOONS dungeons.timer.overall.temp
 execute if score ORANGE_OTTERS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
@@ -304,23 +305,23 @@ execute if score $dungeons.lowest dungeons.timer.overall.temp = PURPLE_PENGUINS 
 execute if score $dungeons.lowest dungeons.timer.overall.temp = BLUE_BEARS dungeons.timer.overall.temp run \
         scoreboard players set BLUE_BEARS dungeons.timer.overall.rank 5
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002
 
-scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 14401
+scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 18001
 execute if score RED_RACCOONS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
         scoreboard players operation $dungeons.lowest dungeons.timer.overall.temp = RED_RACCOONS dungeons.timer.overall.temp
 execute if score ORANGE_OTTERS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
@@ -354,23 +355,23 @@ execute if score $dungeons.lowest dungeons.timer.overall.temp = PURPLE_PENGUINS 
 execute if score $dungeons.lowest dungeons.timer.overall.temp = BLUE_BEARS dungeons.timer.overall.temp run \
         scoreboard players set BLUE_BEARS dungeons.timer.overall.rank 6
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002
 
-scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 14401
+scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 18001
 execute if score RED_RACCOONS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
         scoreboard players operation $dungeons.lowest dungeons.timer.overall.temp = RED_RACCOONS dungeons.timer.overall.temp
 execute if score ORANGE_OTTERS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
@@ -404,23 +405,23 @@ execute if score $dungeons.lowest dungeons.timer.overall.temp = PURPLE_PENGUINS 
 execute if score $dungeons.lowest dungeons.timer.overall.temp = BLUE_BEARS dungeons.timer.overall.temp run \
         scoreboard players set BLUE_BEARS dungeons.timer.overall.rank 7
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002
 
-scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 14401
+scoreboard players set $dungeons.lowest dungeons.timer.overall.temp 18001
 execute if score RED_RACCOONS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
         scoreboard players operation $dungeons.lowest dungeons.timer.overall.temp = RED_RACCOONS dungeons.timer.overall.temp
 execute if score ORANGE_OTTERS dungeons.timer.overall.temp < $dungeons.lowest dungeons.timer.overall.temp run \
@@ -454,18 +455,18 @@ execute if score $dungeons.lowest dungeons.timer.overall.temp = PURPLE_PENGUINS 
 execute if score $dungeons.lowest dungeons.timer.overall.temp = BLUE_BEARS dungeons.timer.overall.temp run \
         scoreboard players set BLUE_BEARS dungeons.timer.overall.rank 8
 execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 14402
+        scoreboard players set RED_RACCOONS dungeons.timer.overall.temp 18002
 execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 14402
+        scoreboard players set ORANGE_OTTERS dungeons.timer.overall.temp 18002
 execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 14402
+        scoreboard players set PINK_PIKAS dungeons.timer.overall.temp 18002
 execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 14402
+        scoreboard players set YELLOW_YAKS dungeons.timer.overall.temp 18002
 execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 14402
+        scoreboard players set GREEN_GOATS dungeons.timer.overall.temp 18002
 execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 14402
+        scoreboard players set CYAN_COUGARS dungeons.timer.overall.temp 18002
 execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 14402
+        scoreboard players set PURPLE_PENGUINS dungeons.timer.overall.temp 18002
 execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1.. run \
-        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 14402
+        scoreboard players set BLUE_BEARS dungeons.timer.overall.temp 18002

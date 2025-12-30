@@ -1,3 +1,7 @@
+# get points & rankings
+function stmc:games/dungeons/points/calculate_rankings
+function stmc:games/dungeons/points/point_update
+
 # Top per room
 tellraw @a {text:"Top teams per room:",color:yellow}
 
@@ -54,3 +58,12 @@ execute if score CYAN_COUGARS dungeons.timer.8.rank matches 1 run tellraw @a [{t
 execute if score PURPLE_PENGUINS dungeons.timer.8.rank matches 1 run tellraw @a [{text:"Room 6: ",color:yellow},{text:"Purple Penguins",color:dark_purple}]
 execute if score YELLOW_YAKS dungeons.timer.8.rank matches 1 run tellraw @a [{text:"Room 6: ",color:yellow},{text:"Yellow Yaks",color:yellow}]
 execute if score BLUE_BEARS dungeons.timer.8.rank matches 1 run tellraw @a [{text:"Room 6: ",color:yellow},{text:"Blue Bears",color:blue}]
+
+execute if score RED_RACCOONS dungeons.timer.overall.rank matches 1 run tellraw @a [{text:"Overall: ",color:yellow},{text:"Red Raccoons",color:red}]
+execute if score ORANGE_OTTERS dungeons.timer.overall.rank matches 1 run tellraw @a [{text:"Overall: ",color:yellow},{text:"Orange Otters",color:gold}]
+execute if score PINK_PIKAS dungeons.timer.overall.rank matches 1 run tellraw @a [{text:"Overall: ",color:yellow},{text:"Pink Pikas",color:light_purple}]
+execute if score GREEN_GOATS dungeons.timer.overall.rank matches 1 run tellraw @a [{text:"Overall: ",color:yellow},{text:"Green Goats",color:green}]
+execute if score CYAN_COUGARS dungeons.timer.overall.rank matches 1 run tellraw @a [{text:"Overall: ",color:yellow},{text:"Cyan Cougars",color:dark_aqua}]
+execute if score PURPLE_PENGUINS dungeons.timer.overall.rank matches 1 run tellraw @a [{text:"Overall: ",color:yellow},{text:"Purple Penguins",color:dark_purple}]
+execute if score YELLOW_YAKS dungeons.timer.overall.rank matches 1 run tellraw @a [{text:"Overall: ",color:yellow},{text:"Yellow Yaks",color:yellow}]
+execute if score BLUE_BEARS dungeons.timer.overall.rank matches 1 run tellraw @a [{text:"Overall: ",color:yellow},{text:"Blue Bears",color:blue}]
