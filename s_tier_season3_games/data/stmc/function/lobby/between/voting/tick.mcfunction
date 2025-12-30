@@ -80,42 +80,42 @@ execute if score lobby.handler lobby.timer.voteStage matches 525 run function st
 execute if score lobby.handler lobby.timer.voteStage matches 560 run tellraw @a ["",{text:"Teleporting in 5 seconds.",color:green,bold:true}]
 
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.raceCount = .lobby .voteMax \
-        run function race:start
+        run function stmc:games/race/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.raceCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.sprintCount = .lobby .voteMax \
-        run function sprint:start
+        run function stmc:games/sprint/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.sprintCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
-        run function solve:start
+        run function stmc:games/solve/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.solveCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.trialsCount = .lobby .voteMax \
-        run function trials:start
+        run function stmc:games/trials/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.trialsCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
-        run function collect:start
+        run function stmc:games/collect/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.collectCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.dungeonsCount = .lobby .voteMax \
-        run function dungeons:start
+        run function stmc:games/dungeons/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.dungeonsCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
-        run function mine:start
+        run function stmc:games/mine/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.mineCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
-        run function extract:start
+        run function stmc:games/extract/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.extractCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
-        run function blitz:start
+        run function stmc:games/blitz/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.blitzCount = .lobby .voteMax \
         run return 0
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.brawlCount = .lobby .voteMax \
-        run function survival_games:start
+        run function stmc:games/brawl/start
 execute if score lobby.handler lobby.timer.voteStage matches 665 if score lobby.handler lobby.voting.brawlCount = .lobby .voteMax \
         run return 0
