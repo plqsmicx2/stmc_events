@@ -1,11 +1,21 @@
 # helper function that kills/resets players
 
 # teleport player to spawn
+execute in trials:scramble run tp @s 0 102 0
 
 # play sound effect
+execute at @s run playsound entity.player.death player @s ~ ~ ~ 1 1
 
 # announce death
+tellraw @a[team=dim.tr.scramble] [{selector:"@s",color:aqua,bold:true},{text:" died!",color:red,bold:false}]
 
 # track rounds completed (and update records if applicable)
+scoreboard players operation @s scramble.roundsCompleted = scramble.lobby1 scramble.roundsCompleted
+scoreboard objectives add .record dummy
+execute store result score scramble.handler .record run data get storage scramble:data record.rounds
+execute if score @s scramble.roundsCompleted > scramble.handler .record as @s run function trials:scramble/helper/update_record
+scoreboard objectives remove .record
 
 # reset scoreboards
+scoreboard players set @s scramble.alive 0
+scoreboard players set @s scramble.roundsCompleted 0

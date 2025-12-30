@@ -15,13 +15,21 @@ execute if score scramble.lobby1 scramble.timer.game matches 500 run \
 execute if score scramble.lobby1 scramble.timer.game matches 500 run \
         tellraw @a[team=dim.tr.scramble] {text:"Scramble Lobby #1 starting in 5 seconds!"}
 
+# start game for players in the arena
+execute if score scramble.lobby1 scramble.timer.game matches 599 run \
+        scoreboard players set @a[team=dim.tr.scramble,x=193,y=97,z=-7,dx=20,dy=10,dz=20] scramble.alive 1
+
 # handle each round
-$execute if score scramble.lobby1 scramble.timer.game matches 600.. run function trials:scramble/round_tick {x=193,y=$(y),z=-7}
+#data modify storage scramble:data x set value 193
+#data modify storage scramble:data z set value -7
+#execute if score scramble.lobby1 scramble.timer.game matches 600.. run function trials:scramble/round_tick with storage scramble:data
+execute in trials:scramble if score scramble.lobby1 scramble.timer.game matches 600.. run function trials:scramble/round_tick
 
 # check # of alive players
 scoreboard objectives add .players dummy
 scoreboard players set scramble.lobby1 .players 0
-$execute as @a[team=dim.tr.scramble,x=$(x),y=$(y),z=$(z),dx=20,dy=10,dz=20] run scoreboard players add scramble.lobby1 .players 1
+execute at @a as @s[team=dim.tr.scramble,x=193,y=97,z=-7,dx=20,dy=10,dz=20] run \
+        scoreboard players add scramble.lobby1 .players 1
 
 # and reset the whole game if no players are alive
 execute if score scramble.lobby1 .players matches 0 if score scramble.lobby1 scramble.roundsCompleted matches 1.. \

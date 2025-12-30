@@ -16,7 +16,8 @@ execute in trials:scramble run kill @e[type=item,nbt={Item:{id:"minecraft:light_
 execute in trials:scramble run kill @e[type=item,nbt={Item:{id:"minecraft:shroomlight"}}]
 
 # update games currently active
-execute as @a if score @s scramble.lobby1 matches 1.. run function trials:scramble/game_tick {x:191,y:96,z:-9}
-execute as @a if score @s scramble.lobby2 matches 1.. run function trials:scramble/game_tick {x:-9,y:96,z:191}
-execute as @a if score @s scramble.lobby3 matches 1.. run function trials:scramble/game_tick {x:-209,y:96,z:-9}
-execute as @a if score @s scramble.lobby4 matches 1.. run function trials:scramble/game_tick {x:-9,y:96,z:-209}
+function trials:scramble/game_tick
+#execute as @a if score @s scramble.lobby1 matches 1.. run function trials:scramble/game_tick {x:191,y:96,z:-9}
+#execute as @a if score @s scramble.lobby2 matches 1.. run function trials:scramble/game_tick {x:-9,y:96,z:191}
+#execute as @a if score @s scramble.lobby3 matches 1.. run function trials:scramble/game_tick {x:-209,y:96,z:-9}
+#execute as @a if score @s scramble.lobby4 matches 1.. run function trials:scramble/game_tick {x:-9,y:96,z:-209}

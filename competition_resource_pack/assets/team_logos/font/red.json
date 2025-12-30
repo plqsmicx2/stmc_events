@@ -2,7 +2,7 @@
   "providers": [
     {
       "type": "bitmap",
-      "file": "team_logos:item/reloaded_two/blue_moon.png",
+      "file": "team_logos:item/reloaded_two/red_rabbi.png",
       "height": 8,
       "ascent": 8,
       "chars": [

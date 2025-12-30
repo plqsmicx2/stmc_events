@@ -7,11 +7,12 @@ execute if score scramble.lobby1 scramble.timer.game matches 600.. run \
 execute if score scramble.lobby1 scramble.timer.game matches 600.. run \
         return 0
 
+forceload add 190 -10 210 10
+
+fill 193 100 -7 207 100 7 tinted_glass
+
 # teleport players
 teleport @s 200 101 0
-
-# set lobby to active
-execute unless score scramble.handler scramble.lobby1 matches 1 run scoreboard players set scramble.handler scramble.lobby1 1
 
 # reset scoreboards
 scoreboard players set @s scramble.alive 1
@@ -19,3 +20,6 @@ scoreboard players set @s scramble.alive 1
 execute unless score scramble.handler scramble.lobby1 matches 1 run scoreboard players set scramble.lobby1 scramble.timer.game 0
 execute unless score scramble.handler scramble.lobby1 matches 1 run scoreboard players set scramble.lobby1 scramble.timer.round 0
 execute unless score scramble.handler scramble.lobby1 matches 1 run scoreboard players set scramble.lobby1 scramble.roundsCompleted 0
+
+# set lobby to active
+execute unless score scramble.handler scramble.lobby1 matches 1 run scoreboard players set scramble.handler scramble.lobby1 1

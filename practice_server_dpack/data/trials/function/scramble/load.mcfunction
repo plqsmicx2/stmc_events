@@ -13,6 +13,12 @@ scoreboard players set scramble.handler scramble.lobby2 0
 scoreboard players set scramble.handler scramble.lobby3 0
 scoreboard players set scramble.handler scramble.lobby4 0
 
+# reset active lobbies
+scoreboard players set scramble.lobby1 scramble.timer.game 0
+scoreboard players set scramble.lobby2 scramble.timer.game 0
+scoreboard players set scramble.lobby3 scramble.timer.game 0
+scoreboard players set scramble.lobby4 scramble.timer.game 0
+
 # track players currently in-game
 scoreboard objectives add scramble.alive dummy
 scoreboard players set @a scramble.alive 0
