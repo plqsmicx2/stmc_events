@@ -19,3 +19,6 @@ execute if score mine.handler mine.timer matches 1620 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1680 run function stmc:games/mine/mobs/warden with storage mine:data
 execute if score mine.handler mine.timer matches 1740 run function stmc:games/mine/mobs/warden with storage mine:data
 execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/mobs/warden with storage mine:data
+
+#pull after rapid spawns
+execute if score mine.handler mine.timer matches 1300 in mine:creaking at @a as @e[type=warden,distance=4..10] at @s facing entity @p feet if block ^ ^ ^.36 air run tp @s ^ ^ ^.06
