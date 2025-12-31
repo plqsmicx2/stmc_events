@@ -22,5 +22,8 @@ execute as @a[team=BLUE_BEARS,scores={sumo.stats.alive=1..}] run \
 execute as @a[scores={sumo.stats.alive=1..}] at @s run particle firework ~ ~ ~ 2 1 2 1 20 force @a
 execute as @a[scores={sumo.stats.alive=1..}] at @s run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1 1
 
+# resets
+execute as @a run attribute @s fall_damage_multiplier base reset
+
 # increment stage
 scoreboard players add sumo.handler sumo.stage 1

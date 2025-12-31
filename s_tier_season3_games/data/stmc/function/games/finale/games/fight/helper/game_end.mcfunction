@@ -22,5 +22,8 @@ execute as @a[team=BLUE_BEARS,scores={fight.stats.alive=1..}] run \
 execute as @a[scores={fight.stats.alive=1..}] at @s run particle firework ~ ~ ~ 2 1 2 1 20 force @a
 execute as @a[scores={fight.stats.alive=1..}] at @s run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1 1
 
+# reset
+effect clear @a
+
 # increment stage
 scoreboard players add fight.handler fight.stage 1

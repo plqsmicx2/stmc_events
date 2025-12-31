@@ -22,5 +22,8 @@ execute as @a[team=BLUE_BEARS,scores={shoot.stats.alive=1..}] run \
 execute as @a[scores={shoot.stats.alive=1..}] at @s run particle firework ~ ~ ~ 2 1 2 1 20 force @a
 execute as @a[scores={shoot.stats.alive=1..}] at @s run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1 1
 
+# resets
+execute as @a run attribute @s attack_damage base reset
+
 # increment stage
 scoreboard players add shoot.handler shoot.stage 1

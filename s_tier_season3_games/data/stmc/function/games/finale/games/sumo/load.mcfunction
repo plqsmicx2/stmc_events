@@ -52,6 +52,7 @@ execute as @a run attribute @s attack_damage base reset
 execute as @a run attribute @s attack_knockback base reset
 execute as @a run attribute @s attack_speed base reset
 execute as @a run attribute @s knockback_resistance base reset
+execute as @a run attribute @s fall_damage_multiplier base set 0
 
 # and wrap it up with some scoreboard stuff
 # timers

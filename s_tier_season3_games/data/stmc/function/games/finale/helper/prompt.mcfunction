@@ -21,13 +21,13 @@ execute if score finale.handler finale.timer.game matches 1 run \
         tellraw @a[scores={finale.team1=1}] {text:"Vote for Game #1:",color:green}
 
 execute if score finale.handler finale.timer.game matches 1 run \
-        tellraw @a [{click_event:{action:run_command,command:"/trigger finale.vote set 1"},\
+        tellraw @a[scores={finale.team1=1}] [{click_event:{action:run_command,command:"/trigger finale.vote set 1"},\
         color:yellow,text:"Fight"}]
 execute if score finale.handler finale.timer.game matches 1 run \
-        tellraw @a [{click_event:{action:run_command,command:"/trigger finale.vote set 2"},\
+        tellraw @a[scores={finale.team1=1}] [{click_event:{action:run_command,command:"/trigger finale.vote set 2"},\
         color:yellow,text:"Sumo"}]
 execute if score finale.handler finale.timer.game matches 1 run \
-        tellraw @a [{click_event:{action:run_command,command:"/trigger finale.vote set 3"},\
+        tellraw @a[scores={finale.team1=1}] [{click_event:{action:run_command,command:"/trigger finale.vote set 3"},\
         color:yellow,text:"Shoot"}]
 
 # Determine game #1
@@ -58,13 +58,13 @@ execute if score finale.handler finale.timer.game matches 400 run \
         tellraw @a[scores={finale.team1=1}] {text:"Vote for Game #2:",color:green}
 
 execute if score finale.handler finale.timer.game matches 400 unless score finale.handler finale.game1 matches 1 run \
-        tellraw @a [{click_event:{action:run_command,command:"/trigger finale.vote set 1"},\
+        tellraw @a[scores={finale.team1=1}] [{click_event:{action:run_command,command:"/trigger finale.vote set 1"},\
         color:yellow,text:"Fight"}]
 execute if score finale.handler finale.timer.game matches 400 unless score finale.handler finale.game1 matches 2 run \
-        tellraw @a [{click_event:{action:run_command,command:"/trigger finale.vote set 2"},\
+        tellraw @a[scores={finale.team1=1}] [{click_event:{action:run_command,command:"/trigger finale.vote set 2"},\
         color:yellow,text:"Sumo"}]
 execute if score finale.handler finale.timer.game matches 400 unless score finale.handler finale.game1 matches 3 run \
-        tellraw @a [{click_event:{action:run_command,command:"/trigger finale.vote set 3"},\
+        tellraw @a[scores={finale.team1=1}] [{click_event:{action:run_command,command:"/trigger finale.vote set 3"},\
         color:yellow,text:"Shoot"}]
 
 # Determine game #2

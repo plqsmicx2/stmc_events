@@ -7,7 +7,7 @@ execute as @a[scores={finale.competitor=1..}] if score @s .arrows matches ..0 ru
 scoreboard objectives remove .arrows
 
 # set arrow damage
-execute in stmc:finale as @e[type=arrow,tag=!damage.set] run data merge entity @s {Tags:["damage.set"],damage:1d}
+execute in stmc:finale as @e[type=arrow,tag=!damage.set] run data merge entity @s {Tags:["damage.set"],damage:1.15d}
 
 # set glowing
 execute if score shoot.handler shoot.timer.game matches 1200.. run \
@@ -18,6 +18,8 @@ execute as @a[scores={shoot.stats.alive=1..,shoot.stats.deaths=1..}] run \
         teleport @s 0 109.5 0
 execute as @a[scores={shoot.stats.alive=1..,shoot.stats.deaths=1..}] run \
         gamemode adventure @s
+execute as @a[scores={shoot.stats.alive=1..,shoot.stats.deaths=1..}] run \
+        effect clear @s
 execute as @a[scores={shoot.stats.alive=1..,shoot.stats.deaths=1..}] run \
         scoreboard players set @s shoot.stats.alive 0
 

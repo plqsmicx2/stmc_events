@@ -1,14 +1,16 @@
 # thread handling when the game is active
 
 # give poison
-execute if score fight.handler fight.timer.game matches 1200.. run \
-        effect give @a[scores={fight.stats.alive=1..}] poison 1 0 false
+execute if score fight.handler fight.timer.game matches 1200 run \
+        effect give @a[scores={fight.stats.alive=1..}] poison infinite 0 false
 
 # check for dead players
 execute as @a[scores={fight.stats.alive=1..,fight.stats.deaths=1..}] run \
         teleport @s 0 109.5 0
 execute as @a[scores={fight.stats.alive=1..,fight.stats.deaths=1..}] run \
         gamemode adventure @s
+execute as @a[scores={fight.stats.alive=1..,fight.stats.deaths=1..}] run \
+        effect clear @s
 execute as @a[scores={fight.stats.alive=1..,fight.stats.deaths=1..}] run \
         scoreboard players set @s fight.stats.alive 0
 

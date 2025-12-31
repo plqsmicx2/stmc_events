@@ -49,7 +49,7 @@ xp set @a 0 levels
 execute in stmc:finale run kill @e[type=!player]
 
 # reset attributes
-execute as @a run attribute @s attack_damage base reset
+
 execute as @a run attribute @s attack_knockback base reset
 execute as @a run attribute @s attack_speed base reset
 execute as @a run attribute @s knockback_resistance base reset

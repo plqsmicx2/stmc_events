@@ -1,7 +1,7 @@
 # helper function that starts the shoot game
 
 # remove barriers
-execute in stmc:finale run fill -3 101 -24 3 104 24 air replace tinted_glass
+execute in stmc:finale run fill -3 64 88 3 66 112 air replace tinted_glass
 
 # reset data
 scoreboard players set @a[scores={finale.competitor=1..}] shoot.stats.alive 1

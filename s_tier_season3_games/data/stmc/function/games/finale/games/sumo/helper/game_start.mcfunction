@@ -29,5 +29,8 @@ execute in stmc:finale run fill -3 82 -5 3 84 5 air replace tinted_glass
 scoreboard players set @a sumo.stats.alive 1
 scoreboard players set @a sumo.stats.deaths 0
 
+# prevent punching damage
+effect give @a resistance infinite 10 true
+
 # increment stage
 scoreboard players set sumo.handler sumo.stage 3
