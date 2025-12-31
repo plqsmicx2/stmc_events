@@ -69,6 +69,9 @@ scoreboard objectives add brawl.currentPlacement dummy
 scoreboard objectives add brawl.round.killThisTick playerKillCount
 scoreboard objectives add brawl.round.deathThisTick deathCount
 
+# tracks if current round is complete or not
+scoreboard objectives add brawl.round.complete dummy
+
 # border
 scoreboard players set @a brawl.borderDistance 200
 
@@ -92,6 +95,7 @@ scoreboard players set @a brawl.round.deathThisTick 0
 # and reset timers
 scoreboard players set brawl.handler brawl.timer.round 0
 scoreboard players set brawl.handler brawl.timer.border 0
+scoreboard players set brawl.handler brawl.round.complete 0
 
 # reset players alive
 execute as @a[team=!SPECTATORS] at @s run scoreboard players set @s brawl.alive 1

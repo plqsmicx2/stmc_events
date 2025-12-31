@@ -24,6 +24,6 @@ execute if score YELLOW_YAKS dungeons.room matches 9 as @a[team=YELLOW_YAKS,game
 execute if score PINK_PIKAS dungeons.room matches 9 as @a[team=PINK_PIKAS,gamemode=adventure] run gamemode spectator @s
 
 #end after all completions
-#execute as @a if items entity @s hotbar.* ominous_trial_key unless score BLUE_BEARS dungeons.room matches 1..8 unless score RED_RACCOONS dungeons.room matches 1..8 unless score CYAN_COUGARS dungeons.room matches 1..8 unless score GREEN_GOATS dungeons.room matches 1..8 unless score PURPLE_PENGUINS dungeons.room matches 1..8 unless score ORANGE_OTTERS dungeons.room matches 1..8 unless score YELLOW_YAKS dungeons.room matches 1..8 unless score PINK_PIKAS dungeons.room matches 1..8 run function stmc:games/dungeons/unload
+execute as @a unless entity @s[gamemode=adventure] run function stmc:games/dungeons/unload
 
 execute as @a if items entity @s hotbar.* ominous_trial_key run clear @s ominous_trial_key

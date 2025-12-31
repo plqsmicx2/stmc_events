@@ -34,6 +34,9 @@ function stmc:thread/helper/teams/create_teams with storage stmc:global
 # set some global defaults
 execute as @a run attribute @s max_health base set 20
 effect clear @a
+difficulty normal
+
+time set 22000
 
 # create global scoreboards
 # records if the event is currently paused

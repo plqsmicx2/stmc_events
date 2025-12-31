@@ -2,6 +2,8 @@
 effect clear @a
 clear @a
 gamerule pvp true
+gamerule natural_health_regeneration true
+gamerule limited_crafting false
 
 # set points from team to indiv
 function stmc:games/mine/points/team_split

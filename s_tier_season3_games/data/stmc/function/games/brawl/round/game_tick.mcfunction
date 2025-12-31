@@ -26,4 +26,4 @@ scoreboard players set @a brawl.round.killThisTick 0
 scoreboard players set @a brawl.round.deathThisTick 0
 
 # check if round is complete & end it if it is
-function stmc:games/brawl/round/reset
+execute if score brawl.handler brawl.teams_alive matches 1 run function stmc:games/brawl/round/reset

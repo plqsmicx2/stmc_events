@@ -20,6 +20,9 @@ item replace entity @a hotbar.8 with lantern
 # clear mobs
 execute in stmc:dungeons run kill @e[type=!player]
 
+# create bossbar
+function stmc:games/dungeons/helper/bossbar
+
 # announce start
 execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 2 2
 title @a title {"text":"Go!", "color":"dark_red"}

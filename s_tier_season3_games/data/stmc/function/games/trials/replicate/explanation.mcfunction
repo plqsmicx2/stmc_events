@@ -54,7 +54,7 @@ execute if score replicate.handler replicate.timer.explanation matches 400 run g
 execute if score replicate.handler replicate.timer.explanation matches 400 run tellraw @a {text:" "}
 execute if score replicate.handler replicate.timer.explanation matches 400 run tellraw @a {text:"Good luck!","color":"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 400 run tellraw @a {text:" "}
-execute if score replicate.handler replicate.timer.explanation matches 400 run tellraw @a {text:"The game starts in 20 seconds!","color":"aqua"}
+execute if score replicate.handler replicate.timer.explanation matches 400 run tellraw @a {text:"The game starts in 10 seconds!","color":"aqua"}
 execute if score replicate.handler replicate.timer.explanation matches 400 run tellraw @a {text:" "}
 
 # update stage

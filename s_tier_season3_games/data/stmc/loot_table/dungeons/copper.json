@@ -391,7 +391,7 @@
         },
         {
           "type": "item",
-          "weight": 18,
+          "weight": 8,
           "name": "minecraft:enchanted_golden_apple",
           "functions": [
             {

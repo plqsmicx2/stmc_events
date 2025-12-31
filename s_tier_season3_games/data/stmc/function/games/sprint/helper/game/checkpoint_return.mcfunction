@@ -168,7 +168,7 @@ execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.sta
 
 # Level #4
 execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 4 \
-        run tp @s -203 112 600 90 0
+        run tp @s -229 113 600 90 0
 
 # Level #5
 execute if score @s sprint.stats.currentSection matches 4 if score @s sprint.stats.currentCheckpoint matches 5 \

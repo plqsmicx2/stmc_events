@@ -48,5 +48,7 @@ execute as @a if score brawl.PurplePenguins brawl.round.teamPlacement matches 1 
 execute as @a if score brawl.BlueBears brawl.round.teamPlacement matches 1 run title @a title {"text":"BLUE BEARS WIN","bold":true,"color":"blue"}
 
 # lastly, reset this round
+effect give @a resistance 5 10 true
+scoreboard players set brawl.handler brawl.round.complete 1
 execute unless score brawl.handler brawl.roundsCompleted matches 2 run schedule function stmc:games/brawl/round/helper/return 5s
 execute if score brawl.handler brawl.roundsCompleted matches 2 run scoreboard players add brawl.handler brawl.roundsCompleted 1

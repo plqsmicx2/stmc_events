@@ -131,12 +131,6 @@ scoreboard players set PINK_PIKAS dungeons.roomdisplay 0
 scoreboard objectives setdisplay sidebar dungeons.roomdisplay
 scoreboard players set ------ dungeons.roomdisplay 10
 
-#bossbar timer
-bossbar add dungeons.timer "Time Remaining"
-bossbar set minecraft:dungeons.timer players @a
-bossbar set minecraft:dungeons.timer max 18000
-bossbar set minecraft:dungeons.timer value 18000
-
 #items
 item replace entity @a hotbar.0 with wooden_sword[unbreakable={}]
 item replace entity @a hotbar.8 with lantern

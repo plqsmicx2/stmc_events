@@ -6,23 +6,17 @@ function stmc:lobby/between/sidebar with storage stmc:global
 # update timer
 scoreboard players add lobby.handler lobby.timer 1
 
-# prevent weird red wool bug
-execute in stmc:lobby/main if score lobby.handler lobby.timer matches 2..20 run setblock 0 100 0 air
-
-# reset voting chests
-execute in stmc:lobby/main if score lobby.handler lobby.timer matches 1 run forceload add -100 -100 100 100
-execute in stmc:lobby/main if score lobby.handler lobby.timer matches 2 run kill @e[type=item]
-execute in stmc:lobby/main if score lobby.handler lobby.timer matches 2 run fill 10 45 90 30 40 -90 air replace chest[facing=east] destroy
-execute in stmc:lobby/main if score lobby.handler lobby.timer matches 3 as @e[type=item] at @s positioned as @s run \
-        setblock ~ ~ ~ chest[facing=east]
-execute in stmc:lobby/main if score lobby.handler lobby.timer matches 4 run kill @e[type=item,nbt={Item:{id:"minecraft:chest"}}]
-execute in stmc:lobby/main if score lobby.handler lobby.timer matches 5 run forceload remove -100 -100 100 100
-
 #reset loot chests
 execute in stmc:lobby/main if score lobby.handler lobby.timer matches 4 run function stmc:lobby/chests
 
 #give random villager items
 execute as @a run function stmc:lobby/villager_items
+
+# check for invested tokens
+execute as @a store result score @s event.voting.investedTokensTemp run clear @s paper[custom_data={invest: 1b}] 0
+execute as @a run scoreboard players operation @s event.voting.investedTokens += @s event.voting.investedTokensTemp
+scoreboard players set @a event.voting.investedTokensTemp 0
+clear @a paper[custom_data={invest: 1b}]
 
 # run collect stage if we haven't reached switch time
 execute if score lobby.handler lobby.timer < lobby.handler lobby.timer.switch run function stmc:lobby/between/collect_stage with storage stmc:global

@@ -7,13 +7,7 @@ scoreboard players add lobby.handler lobby.timer.temp 1
 execute if score lobby.handler lobby.timer.temp matches 20 run scoreboard players remove stmc.handler event.timer.bgSecs 1
 execute if score lobby.handler lobby.timer.temp matches 20 run scoreboard players set lobby.handler lobby.timer.temp 0
 execute if score stmc.handler event.timer.bgSecs matches ..-1 run scoreboard players remove stmc.handler event.timer.bgMins 1
-execute if score stmc.handler event.timer.bgSecs matches ..-1 run scoreboard players set stmc.handler event.timer.bgSecs 60
-
-# check for invested tokens
-execute as @a store result score @s event.voting.investedTokensTemp run clear @s paper[custom_data={invest: 1b}] 0
-execute as @a run scoreboard players operation @s event.voting.investedTokens += @s event.voting.investedTokensTemp
-scoreboard players set @a event.voting.investedTokensTemp 0
-clear @a paper[custom_data={invest: 1b}]
+execute if score stmc.handler event.timer.bgSecs matches ..-1 run scoreboard players set stmc.handler event.timer.bgSecs 59
 
 # <===== TIME DEPENDENT =====>
 
@@ -29,52 +23,39 @@ $execute if score stmc.handler event.stage matches 0 if score lobby.handler lobb
         title @a title ["",{text:"$(eventName)",color:green,bold:true}]
 
 # quick event explanation
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 160 run \
+execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tp @a 11 95 47 -225 15
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 160 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tellraw @a ["",{text:"",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 160 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tellraw @a ["",{text:"The event will feature 8 custom-made minigames.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 160 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tellraw @a ["",{text:"Each minigame will award points based on a custom scoring system.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 160 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tellraw @a ["",{text:"After all 8 minigames conclude, the top 2 teams will compete in one final minigame.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 160 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tellraw @a ["",{text:"",color:green}]
 
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 320 run \
+execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 200 run \
         tp @a -15 98 40 120 0
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 320 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 200 run \
         tellraw @a ["",{text:"",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 320 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 200 run \
         tellraw @a ["",{text:"You will determine the order the minigames are played in by voting.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 320 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 200 run \
         tellraw @a ["",{text:"Minigames played later will be worth more points.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 320 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 200 run \
         tellraw @a ["",{text:"",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 320 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 300 run \
         tellraw @a ["",{text:"You will vote using tokens. You can accrue tokens by walking into sunflowers in the lobby.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 320 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 300 run \
         tellraw @a ["",{text:"You may also invest your tokens with a 25% interest by visiting the banker. These tokens will be returned to you after the next game ends with a 25% return on investment.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 320 run \
+execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 300 run \
         tellraw @a ["",{text:"",color:green}]
 
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tp @a 4 42 0 90 15
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"Once the collection phase concludes, you will be teleported to a voting room.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"Each team will have their own voting room.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"You will have 30 seconds to cast votes for which game will be played next. Any tokens not spent will be lost.",color:green}]
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 480 run \
-        tellraw @a ["",{text:"",color:green}]
-
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 800 run \
+execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 400 run \
         tp @a 0 101 0
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 800 run \
+execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 400 run \
         gamemode adventure @a
 
 # NOT FIRST LOBBY:

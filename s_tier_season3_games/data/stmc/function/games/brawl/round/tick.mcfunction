@@ -45,4 +45,5 @@ execute as @a at @s if score brawl.handler brawl.timer.round matches 300 run pla
 execute if score brawl.handler brawl.timer.round matches 300 run function stmc:games/brawl/round/start
 
 # run game_tick after 15s
-execute if score brawl.handler brawl.timer.round matches 300.. run function stmc:games/brawl/round/game_tick
+execute if score brawl.handler brawl.timer.round matches 300.. \
+        unless score brawl.handler brawl.round.complete matches 1 run function stmc:games/brawl/round/game_tick

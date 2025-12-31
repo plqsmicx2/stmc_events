@@ -4,9 +4,11 @@ function stmc:games/mine/score-setup/scores
 clear @a
 effect clear @a
 effect give @a saturation 1 255
-effect give @a instant_health 1 10
+effect give @a instant_health 1 110
 gamemode adventure @a
 gamerule pvp false
+gamerule natural_health_regeneration false
+difficulty normal
 
 scoreboard players set @a mine.points.indiv 0
 scoreboard players reset @a mine.game.mined.diamond_ore

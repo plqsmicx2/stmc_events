@@ -3,10 +3,10 @@
 # this function will run each round individually
 
 # check for deaths
-function extract:death_handler
+function stmc:games/extract/death_handler
 
 # ROUND TICK
-function extract:round/round_tick
+function stmc:games/extract/round/round_tick
 
 # Deprecated:
 # <===== ROUND 1 =====>

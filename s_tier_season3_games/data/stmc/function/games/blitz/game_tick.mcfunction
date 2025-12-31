@@ -56,4 +56,4 @@ function stmc:games/blitz/helper/item_replace
 execute in stmc:blitz run function stmc:games/blitz/helper/game/core_check with storage stmc:global
 
 # end game
-#execute if score blitz.handler blitz.stats.teamsAlive matches 1 run function stmc:games/blitz/helper/game_end
+execute if score blitz.handler blitz.stats.teamsAlive matches 1 run function stmc:games/blitz/helper/game_end

@@ -12,3 +12,9 @@ fill 0 85 0 150 135 150 air replace oak_planks
 fill 0 85 0 -150 135 150 air replace oak_planks
 fill 0 85 0 150 135 -150 air replace oak_planks
 fill 0 85 0 -150 135 -150 air replace oak_planks
+
+# remove placed ladders
+fill 0 85 0 150 135 150 air replace ladder
+fill 0 85 0 -150 135 150 air replace ladder
+fill 0 85 0 150 135 -150 air replace ladder
+fill 0 85 0 -150 135 -150 air replace ladder
