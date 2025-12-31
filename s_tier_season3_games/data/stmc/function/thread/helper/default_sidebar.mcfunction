@@ -72,3 +72,7 @@ scoreboard players display name lobby.timer lobby.sidebar [{text:"Starting Soon.
 
 # blank line
 scoreboard players set §b lobby.sidebar 7003
+
+# current game
+scoreboard players set .currentGame lobby.sidebar 7004
+$scoreboard players display name .currentGame lobby.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

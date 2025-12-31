@@ -27,8 +27,7 @@ execute if score finale.handler finale.stage matches 0 if score finale.handler f
 
 # if we're in stage 1, increment timer & run explanation
 execute if score finale.handler finale.stage matches 1 run scoreboard players add finale.handler finale.timer.explanation 1
-execute if score finale.handler finale.stage matches 1 run function stmc:games/finale/explanation
-execute if score finale.handler finale.stage matches 1 if score finale.handler finale.timer.explanation matches 480.. run scoreboard players set finale.handler finale.stage 2
+execute in stmc:finale if score finale.handler finale.stage matches 1 run function stmc:games/finale/helper/explanation
 
 # if we're in stage 2, increment timer & run game
 execute if score finale.handler finale.stage matches 2 run scoreboard players add finale.handler finale.timer.game 1
@@ -36,5 +35,5 @@ execute if score finale.handler finale.stage matches 2 run function stmc:games/f
 
 # if we're in stage 3, increment timer & reset
 execute if score finale.handler finale.stage matches 3 run scoreboard players add finale.handler finale.timer.delay2 1
-execute if score finale.handler finale.stage matches 3 if score finale.handler finale.timer.delay2 matches 5 run function stmc:games/finale/announce_winner
+execute if score finale.handler finale.stage matches 3 if score finale.handler finale.timer.delay2 matches 5 run function stmc:games/finale/helper/announce_winner
 execute if score finale.handler finale.stage matches 3 if score finale.handler finale.timer.delay2 matches 60.. run function stmc:games/finale/reset

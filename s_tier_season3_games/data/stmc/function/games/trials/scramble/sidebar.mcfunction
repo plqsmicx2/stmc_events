@@ -95,3 +95,7 @@ scoreboard players display name Disco scramble.sidebar {"text": "Scramble", "col
 
 # blank line #2
 scoreboard players set § scramble.sidebar 106
+
+# current game
+scoreboard players set .currentGame scramble.sidebar 107
+$scoreboard players display name .currentGame scramble.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

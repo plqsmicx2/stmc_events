@@ -86,3 +86,7 @@ scoreboard players display name extract.name extract.sidebar {"text": "Extract",
 
 # blank line #2
 scoreboard players set § extract.sidebar 544
+
+# current game
+scoreboard players set .currentGame extract.sidebar 545
+$scoreboard players display name .currentGame extract.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

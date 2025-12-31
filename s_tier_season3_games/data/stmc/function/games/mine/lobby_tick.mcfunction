@@ -1,6 +1,6 @@
 
 # automatic pause
-function thread:automatic_pause
+function stmc:thread/helper/automatic_pause
 
 execute as @a[gamemode=adventure] run function stmc:games/mine/game/lantern
 function stmc:games/mine/game/diamond

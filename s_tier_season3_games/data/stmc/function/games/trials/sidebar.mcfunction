@@ -109,3 +109,7 @@ scoreboard players display name tr.game tr.sidebar {"text": "Trials", "color": "
 
 # blank line
 scoreboard players set §b tr.sidebar 404
+
+# current game
+scoreboard players set .currentGame tr.sidebar 405
+$scoreboard players display name .currentGame tr.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

@@ -40,3 +40,7 @@ scoreboard players display name sprint.name sprint.sidebar {"text": "Sprint", "c
 
 # blank line #2
 scoreboard players set § sprint.sidebar 5
+
+# current game
+scoreboard players set .currentGame sprint.sidebar 6
+$scoreboard players display name .currentGame sprint.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

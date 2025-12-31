@@ -76,3 +76,7 @@ scoreboard players display name Disco spleef.sidebar {"text": "Spleef", "color":
 
 # blank line #2
 scoreboard players set § spleef.sidebar 103
+
+# current game
+scoreboard players set .currentGame spleef.sidebar 104
+$scoreboard players display name .currentGame spleef.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

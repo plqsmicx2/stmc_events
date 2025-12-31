@@ -12,32 +12,25 @@ execute if score lobby.handler lobby.timer.voteStage matches 10 run \
 
 # Announce multiplier
 execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.handler event.stage matches 0 run \
-        tellraw @a [{text:"This game will have a ",color:green},\
-        {score:{name:"stmc.handler",objective:"event.multipliers.g1"},color:yellow,bold:true},\
+        tellraw @a [{text:"This game will have a 1",color:green},\
         {text:"x multiplier.",color:green}]
 execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.handler event.stage matches 2 run \
-        tellraw @a [{text:"This game will have a ",color:green},\
-        {score:{name:"stmc.handler",objective:"event.multipliers.g2"},color:yellow,bold:true},\
+        tellraw @a [{text:"This game will have a 1",color:green},\
         {text:"x multiplier.",color:green}]
 execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.handler event.stage matches 4 run \
-        tellraw @a [{text:"This game will have a ",color:green},\
-        {score:{name:"stmc.handler",objective:"event.multipliers.g3"},color:yellow,bold:true},\
+        tellraw @a [{text:"This game will have a 1.25",color:green},\
         {text:"x multiplier.",color:green}]
 execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.handler event.stage matches 6 run \
-        tellraw @a [{text:"This game will have a ",color:green},\
-        {score:{name:"stmc.handler",objective:"event.multipliers.g4"},color:yellow,bold:true},\
+        tellraw @a [{text:"This game will have a 1.25",color:green},\
         {text:"x multiplier.",color:green}]
 execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.handler event.stage matches 8 run \
-        tellraw @a [{text:"This game will have a ",color:green},\
-        {score:{name:"stmc.handler",objective:"event.multipliers.g5"},color:yellow,bold:true},\
+        tellraw @a [{text:"This game will have a 1.5",color:green},\
         {text:"x multiplier.",color:green}]
 execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.handler event.stage matches 10 run \
-        tellraw @a [{text:"This game will have a ",color:green},\
-        {score:{name:"stmc.handler",objective:"event.multipliers.g6"},color:yellow,bold:true},\
+        tellraw @a [{text:"This game will have a 1.5",color:green},\
         {text:"x multiplier.",color:green}]
 execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.handler event.stage matches 12 run \
-        tellraw @a [{text:"This game will have a ",color:green},\
-        {score:{name:"stmc.handler",objective:"event.multipliers.g7"},color:yellow,bold:true},\
+        tellraw @a [{text:"This game will have a 1.75",color:green},\
         {text:"x multiplier.",color:green}]
 
 # Commence vote

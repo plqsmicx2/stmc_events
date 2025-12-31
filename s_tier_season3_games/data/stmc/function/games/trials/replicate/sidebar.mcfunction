@@ -72,3 +72,7 @@ scoreboard players display name Replicate replicate.sidebar {"text": "Replicate"
 
 # blank line #2
 scoreboard players set § replicate.sidebar 14
+
+# current game
+scoreboard players set .currentGame replicate.sidebar 15
+$scoreboard players display name .currentGame replicate.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

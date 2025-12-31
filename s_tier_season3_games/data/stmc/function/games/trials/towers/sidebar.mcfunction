@@ -76,3 +76,7 @@ scoreboard players display name towers.head towers.sidebar {"text": "Towers", "c
 
 # blank line #2
 scoreboard players set § towers.sidebar 103
+
+# current game
+scoreboard players set .currentGame towers.sidebar 104
+$scoreboard players display name .currentGame towers.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

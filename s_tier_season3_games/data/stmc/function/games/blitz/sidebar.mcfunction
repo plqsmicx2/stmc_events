@@ -107,3 +107,7 @@ scoreboard players display name blitz.head blitz.sidebar {"text": "Blitz", "colo
 
 # blank line #2
 scoreboard players set § blitz.sidebar 14
+
+# current game
+scoreboard players set .currentGame blitz.sidebar 15
+$scoreboard players display name .currentGame blitz.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

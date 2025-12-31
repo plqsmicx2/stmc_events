@@ -75,3 +75,7 @@ scoreboard players display name display.name dungeons.sidebar {"text": "Dungeons
 
 # blank line #2
 scoreboard players set § dungeons.sidebar 13
+
+# current game
+scoreboard players set .currentGame dungeons.sidebar 14
+$scoreboard players display name .currentGame dungeons.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

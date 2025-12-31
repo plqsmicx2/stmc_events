@@ -69,16 +69,20 @@ team join BLUE_BEARS mine.BlueBears
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §e§lPoints: mine.sidebar 500
+scoreboard players set §e§lPoints: mine.sidebar 600
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set § mine.sidebar 501
+scoreboard players set § mine.sidebar 601
 
 # current game
-scoreboard players set Mine mine.sidebar 502
+scoreboard players set Mine mine.sidebar 602
 scoreboard players display name Mine mine.sidebar {"text": "Mine", "color": "gray", "bold": true}
 
 # points header
 # no need to override display since it can be done in one line
-scoreboard players set §a mine.sidebar 503
+scoreboard players set §a mine.sidebar 603
+
+# current game
+scoreboard players set .currentGame mine.sidebar 604
+$scoreboard players display name .currentGame mine.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

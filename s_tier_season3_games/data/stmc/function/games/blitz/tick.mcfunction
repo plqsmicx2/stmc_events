@@ -11,6 +11,9 @@
 function stmc:games/blitz/points/points-update
 function stmc:games/blitz/sidebar with storage stmc:global
 
+# automatic pause unless we're in-game
+execute unless score blitz.handler blitz.stage matches 3 run function stmc:thread/helper/automatic_pause
+
 # if we're in stage 0, we only need to increment our timer & check if 20 seconds have elapsed
 # and then update our stage to 1
 execute if score blitz.handler blitz.stage matches 0 run scoreboard players add blitz.handler blitz.timer.delay1 1

@@ -70,7 +70,7 @@ scoreboard players set lobby.handler lobby.timer.secs 0
 scoreboard players set lobby.handler lobby.timer.mins 0
 
 # manually set time to switch to voting stage
-execute if score stmc.handler event.stage matches 0 run scoreboard players set lobby.handler lobby.timer.switch 4800
+execute if score stmc.handler event.stage matches 0 run scoreboard players set lobby.handler lobby.timer.switch 2400
 execute if score stmc.handler event.stage matches 2 run scoreboard players set lobby.handler lobby.timer.switch 1800
 execute if score stmc.handler event.stage matches 4 run scoreboard players set lobby.handler lobby.timer.switch 1800
 execute if score stmc.handler event.stage matches 6 run scoreboard players set lobby.handler lobby.timer.switch 1800
@@ -80,7 +80,7 @@ execute if score stmc.handler event.stage matches 12 run scoreboard players set 
 execute if score stmc.handler event.stage matches 14 run scoreboard players set lobby.handler lobby.timer.switch 1200
 
 # and set the max time for the sidebar
-execute if score stmc.handler event.stage matches 0 run scoreboard players set stmc.handler event.timer.bgMins 4
+execute if score stmc.handler event.stage matches 0 run scoreboard players set stmc.handler event.timer.bgMins 2
 execute if score stmc.handler event.stage matches 0 run scoreboard players set stmc.handler event.timer.bgSecs 0
 execute if score stmc.handler event.stage matches 2 run scoreboard players set stmc.handler event.timer.bgMins 1
 execute if score stmc.handler event.stage matches 2 run scoreboard players set stmc.handler event.timer.bgSecs 30

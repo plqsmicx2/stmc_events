@@ -88,3 +88,7 @@ scoreboard players display name SurvivalGames brawl.sidebar {"text": "Brawl", "c
 
 # blank line #2
 scoreboard players set § brawl.sidebar 607
+
+# current game
+scoreboard players set .currentGame brawl.sidebar 608
+$scoreboard players display name .currentGame brawl.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}

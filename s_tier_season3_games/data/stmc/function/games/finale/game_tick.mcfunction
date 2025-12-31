@@ -1,15 +1,9 @@
-# function running the thread for the finale game
+# function running the thread for the finale games
 
-# important things being tracked:
-# round.timer --> start_round & end_round set to 0
-# round.completed --> # of rounds completed & # of wins per team
+# stages:
+# 0- winning team voting phase
+# 1- game #1
+# 2- game #2
+# 3- game #3 (if necessary)
 
-# if round timer is zero, but only 1 team is alive start round
-execute if score finale.handler finale.stats.alive matches 1 if score finale.handler finale.round.timer matches 0 run \
-        function stmc:games/finale/start_round
-
-# increment timer
-scoreboard players add finale.handler finale.round.timer 1
-
-# run round tick
-function stmc:games/finale/round_tick
+# Prompt winning team for which games to play

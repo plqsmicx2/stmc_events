@@ -12,6 +12,9 @@ execute as @a unless entity @s[team=SPECTATORS] run scoreboard players add stmc.
 execute store result storage stmc:global players int 1 run scoreboard players get stmc.handler .players
 scoreboard objectives remove .players
 
+# store current game
+function stmc:thread/helper/store_game
+
 # update player points & determine rankings from that
 function stmc:thread/helper/points/points_update
 function stmc:thread/helper/points/calculate_rankings

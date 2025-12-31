@@ -74,5 +74,9 @@ execute if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard p
 # blank line
 scoreboard players set §b lobby.sidebar 7003
 
+# current game
+scoreboard players set .currentGame lobby.sidebar 7004
+$scoreboard players display name .currentGame lobby.sidebar {text:"[ Game $(currentGame)/8 ]",color:gray}
+
 # set the players' actionbar to their individual rank & points
 execute as @a run title @s actionbar [{text:"[#",color:gold},{score:{name:"@s",objective:"stats.points.indiv.rank"}},{text:"]: ",color:gold},{score:{name:"@s",objective:"stats.points.indiv"}},{text:" points",color:gold}]
