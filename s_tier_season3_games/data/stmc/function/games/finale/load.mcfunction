@@ -1,16 +1,16 @@
 # load function for finale
 
 # teleport players to spawn
-execute in stmc:finale run tp @a -10 88 0 -90 10
+execute in stmc:finale run tp @a 0 69.5 0
 
 # manual spawn
-execute in stmc:finale run spawnpoint @a -10 88 0 -90 10
+execute in stmc:finale run spawnpoint @a 0 70 0
 
 # force gamemode
-gamemode spectator @a
+gamemode adventure @a
 
 # set time
-time set 4000
+time set 19000
 
 # set weather
 weather clear
@@ -18,8 +18,6 @@ weather clear
 # set appropriate gamerules
 gamerule advance_time false
 gamerule advance_weather false
-gamerule immediate_respawn true
-gamerule natural_health_regeneration false
 
 # clear inventories
 clear @a
@@ -60,17 +58,17 @@ scoreboard objectives add finale.timer.delay1 dummy
 scoreboard objectives add finale.timer.explanation dummy
 scoreboard objectives add finale.timer.delay2 dummy
 scoreboard objectives add finale.timer.game dummy
-# stats
-scoreboard objectives add finale.stats.alive dummy
-scoreboard objectives add finale.stats.deaths deathCount
 # round stuff
 scoreboard objectives add finale.round.stage dummy
 scoreboard objectives add finale.round.completed dummy
-scoreboard objectives add finale.round.timer dummy
 # data scoreboards
 scoreboard objectives add finale.competitor dummy
 scoreboard objectives add finale.team1 dummy
 scoreboard objectives add finale.team2 dummy
+scoreboard objectives add finale.game1 dummy
+scoreboard objectives add finale.game2 dummy
+scoreboard objectives add finale.game3 dummy
+scoreboard objectives add finale.round dummy
 
 # (re)set all necessary values
 scoreboard players set finale.handler finale.stage 0
@@ -80,11 +78,8 @@ scoreboard players set finale.handler finale.timer.explanation 0
 scoreboard players set finale.handler finale.timer.delay2 0
 scoreboard players set finale.handler finale.timer.game 0
 
-scoreboard players set @a finale.stats.deaths 0
-
 scoreboard players set finale.handler finale.round.stage 0
 scoreboard players set finale.handler finale.round.completed 0
-scoreboard players set finale.handler finale.round.timer 0
 
 # reset teams' win counts
 scoreboard players set finale.RedRaccoons finale.round.completed 0
@@ -99,6 +94,11 @@ scoreboard players set finale.BlueBears finale.round.completed 0
 # set competitors
 scoreboard players set @a finale.team1 0
 scoreboard players set @a finale.team2 0
+
+# set games
+scoreboard players set finale.handler finale.game1 -1
+scoreboard players set finale.handler finale.game2 -1
+scoreboard players set finale.handler finale.game3 -1
 
 execute if score team.RedRaccoons stats.points.team.rank matches 1 run scoreboard players set @a[team=RED_RACCOONS] finale.team1 1
 execute if score team.RedRaccoons stats.points.team.rank matches 2 run scoreboard players set @a[team=RED_RACCOONS] finale.team2 1
@@ -128,5 +128,13 @@ scoreboard players set @a finale.competitor 0
 execute as @a if score @s finale.team1 matches 1.. run scoreboard players set @s finale.competitor 1
 execute as @a if score @s finale.team2 matches 1.. run scoreboard players set @s finale.competitor 1
 
+# reset games
+scoreboard objectives add fight.stage dummy
+scoreboard objectives add sumo.stage dummy
+scoreboard objectives add shoot.stage dummy
+scoreboard players reset fight.handler fight.stage
+scoreboard players reset sumo.handler sumo.stage
+scoreboard players reset shoot.handler shoot.stage
+
 # reset sidebar
-scoreboard objectives remove lobby.sidebar
+scoreboard objectives remove finale.sidebar

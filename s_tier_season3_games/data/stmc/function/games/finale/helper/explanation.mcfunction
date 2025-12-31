@@ -3,8 +3,6 @@
 # every 8 seconds, each blurb will be told to the players
 
 # blurb #1
-execute if score finale.handler finale.timer.explanation matches 1 run gamemode spectator @a
-execute if score finale.handler finale.timer.explanation matches 1 run tp @a 6 154 0 90 65
 execute if score finale.handler finale.timer.explanation matches 1 run title @a title {text:"FINALE",color:"white"}
 execute if score finale.handler finale.timer.explanation matches 1 run tellraw @a {text:" "}
 execute if score finale.handler finale.timer.explanation matches 10 if score team.RedRaccoons stats.points.team.rank matches 1 run tellraw @a {text:"Red Raccoons",color:red}
@@ -27,7 +25,6 @@ execute if score finale.handler finale.timer.explanation matches 30 if score tea
 execute if score finale.handler finale.timer.explanation matches 30 run tellraw @a {text:" "}
 
 # blurb #2
-execute if score finale.handler finale.timer.explanation matches 100 run tp @a 0 152 14 180 30
 execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:" "}
 execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:"These two teams will play a best of three rounds.",color:white}
 execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:" "}
@@ -35,7 +32,6 @@ execute if score finale.handler finale.timer.explanation matches 100 run tellraw
 execute if score finale.handler finale.timer.explanation matches 100 run tellraw @a {text:" "}
 
 # blurb #3
-execute if score finale.handler finale.timer.explanation matches 200 run tp @a 0 152 -14 0 30
 execute if score finale.handler finale.timer.explanation matches 200 run tellraw @a {text:" "}
 execute if score finale.handler finale.timer.explanation matches 200 run tellraw @a {text:"The first place team will select the two rounds to play first.",color:white}
 execute if score finale.handler finale.timer.explanation matches 200 run tellraw @a {text:" "}

@@ -30,22 +30,22 @@ scoreboard players reset team.PurplePenguins lobby.sidebar
 scoreboard players reset team.BlueBears lobby.sidebar
 
 # they'll be automatically ranked by the scoreboard itself
-scoreboard players set team.RedRaccoons lobby.sidebar 1
-scoreboard players display name team.RedRaccoons lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players set team.OrangeOtters lobby.sidebar 1
-scoreboard players display name team.OrangeOtters lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players set team.PinkPikas lobby.sidebar 1
-scoreboard players display name team.PinkPikas lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players set team.YellowYaks lobby.sidebar 1
-scoreboard players display name team.YellowYaks lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players set team.GreenGoats lobby.sidebar 1
-scoreboard players display name team.GreenGoats lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players set team.CyanCougars lobby.sidebar 1
-scoreboard players display name team.CyanCougars lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players set team.PurplePenguins lobby.sidebar 1
-scoreboard players display name team.PurplePenguins lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players set team.BlueBears lobby.sidebar 1
-scoreboard players display name team.BlueBears lobby.sidebar {"text": "????", "color": "dark_gray"}
+scoreboard players operation team.RedRaccoons lobby.sidebar = team.RedRaccoons stats.points.team
+$scoreboard players display name team.RedRaccoons lobby.sidebar {"text": "  $(redName)", "color": "red"}
+scoreboard players operation team.OrangeOtters lobby.sidebar = team.OrangeOtters stats.points.team
+$scoreboard players display name team.OrangeOtters lobby.sidebar {"text": "  $(orangeName)", "color": "gold"}
+scoreboard players operation team.PinkPikas lobby.sidebar = team.PinkPikas stats.points.team
+$scoreboard players display name team.PinkPikas lobby.sidebar {"text": "  $(pinkName)", "color": "light_purple"}
+scoreboard players operation team.YellowYaks lobby.sidebar = team.YellowYaks stats.points.team
+$scoreboard players display name team.YellowYaks lobby.sidebar {"text": "  $(yellowName)", "color": "yellow"}
+scoreboard players operation team.GreenGoats lobby.sidebar = team.GreenGoats stats.points.team
+$scoreboard players display name team.GreenGoats lobby.sidebar {"text": "  $(greenName)", "color": "dark_green"}
+scoreboard players operation team.CyanCougars lobby.sidebar = team.CyanCougars stats.points.team
+$scoreboard players display name team.CyanCougars lobby.sidebar {"text": "  $(cyanName)", "color": "dark_aqua"}
+scoreboard players operation team.PurplePenguins lobby.sidebar = team.PurplePenguins stats.points.team
+$scoreboard players display name team.PurplePenguins lobby.sidebar {"text": "  $(purpleName)", "color": "dark_purple"}
+scoreboard players operation team.BlueBears lobby.sidebar = team.BlueBears stats.points.team
+$scoreboard players display name team.BlueBears lobby.sidebar {"text": "  $(blueName)", "color": "blue"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
 team join RED_RACCOONS team.RedRaccoons

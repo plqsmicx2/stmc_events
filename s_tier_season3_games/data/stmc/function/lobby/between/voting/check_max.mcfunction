@@ -33,6 +33,24 @@ execute as @a[scores={lobby.vote=6}] run scoreboard players operation lobby.hand
 scoreboard players set lobby.handler lobby.voting.brawlCount 0
 execute as @a[scores={lobby.vote=7}] run scoreboard players operation lobby.handler lobby.voting.brawlCount += @s .voteCount
 
+# set vote counts to -1 if the game has already been played
+execute if score race.handler race.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.raceCount -1
+execute if score sprint.handler sprint.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.sprintCount -1
+execute if score tr.handler tr.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.trialsCount -1
+execute if score dungeons.handler dungeons.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.dungeonsCount -1
+execute if score mine.handler mine.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.mineCount -1
+execute if score extract.handler extract.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.extractCount -1
+execute if score blitz.handler blitz.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.blitzCount -1
+execute if score brawl.handler brawl.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.brawlCount -1
+
 # first, determine maximum score
 scoreboard objectives add .voteMax dummy
 scoreboard players set .lobby .voteMax 0

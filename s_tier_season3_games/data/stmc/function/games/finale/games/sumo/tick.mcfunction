@@ -1,39 +1,60 @@
+# tick function for sumo [finale]
 
+# stages:
+# 0- 10s delay1
+# 1- explanation
+# 2- 10s delay2
+# 3- game
+# 4- 10s delay3
+
+# run functions every tick
+function stmc:games/finale/sidebar with storage stmc:global
+
+# run load
+execute unless score sumo.handler sumo.stage matches 0.. run function stmc:games/finale/games/sumo/load
+
+# run automatic pause
+execute unless score sumo.handler sumo.stage matches 3 run function stmc:thread/helper/automatic_pause
+
+# check for dead players
+execute as @a at @s in stmc:finale if score @s sumo.stats.alive matches 1.. if entity @s[x=-13,y=75,z=-23,dx=27,dy=3,dz=47] run \
+        scoreboard players add @s sumo.stats.deaths 1
+
+# teleport player back to platform if round is not yet started
+execute if score sumo.handler sumo.stage matches 0..2 \
+        as @a if score @s sumo.stats.deaths matches 1.. if score @s sumo.stats.alive matches 1 \
+        in stmc:finale run function stmc:games/finale/games/sumo/helper/platform_return
+
+# if we're in stage 0, increment timer
+execute if score sumo.handler sumo.stage matches 0 run scoreboard players add sumo.handler sumo.timer.delay1 1
+execute if score sumo.handler sumo.stage matches 0 if score sumo.handler sumo.timer.delay1 matches 200.. \
+        run scoreboard players set sumo.handler sumo.stage 1
+
+# if we're in stage 1, increment timer & run explanation
+execute if score sumo.handler sumo.stage matches 1 run scoreboard players add sumo.handler sumo.timer.explanation 1
+execute in stmc:finale if score sumo.handler sumo.stage matches 1 run function stmc:games/finale/games/sumo/helper/explanation
+
+# if we're in stage 2, increment timer & countdown at 5 seconds
+execute if score sumo.handler sumo.stage matches 2 run scoreboard players add sumo.handler sumo.timer.delay2 1
 # countdown
-execute if score finale.handler finale.round.timer matches 300 run title @a actionbar {"text":"5 seconds!", "color":white}
-execute if score finale.handler finale.round.timer matches 320 run title @a actionbar {"text":"4 seconds!", "color":white}
-execute if score finale.handler finale.round.timer matches 340 run title @a actionbar {"text":"3 seconds!", "color":white}
-execute if score finale.handler finale.round.timer matches 360 run title @a actionbar {"text":"2 seconds!", "color":white}
-execute if score finale.handler finale.round.timer matches 380 run title @a actionbar {"text":"1 second!", "color":white}
+execute if score sumo.handler sumo.timer.delay2 matches 100 run title @a actionbar {"text":"5 seconds!", "color":"red"}
+execute if score sumo.handler sumo.timer.delay2 matches 120 run title @a actionbar {"text":"4 seconds!", "color":"red"}
+execute if score sumo.handler sumo.timer.delay2 matches 140 run title @a actionbar {"text":"3 seconds!", "color":"red"}
+execute if score sumo.handler sumo.timer.delay2 matches 160 run title @a actionbar {"text":"2 seconds!", "color":"red"}
+execute if score sumo.handler sumo.timer.delay2 matches 180 run title @a actionbar {"text":"1 second!", "color":"red"}
+execute if score sumo.handler sumo.timer.delay2 matches 100 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1
+execute if score sumo.handler sumo.timer.delay2 matches 120 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1.1
+execute if score sumo.handler sumo.timer.delay2 matches 140 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1.2
+execute if score sumo.handler sumo.timer.delay2 matches 160 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1.4
+execute if score sumo.handler sumo.timer.delay2 matches 180 as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 1 1.6
 
-execute as @a at @s if score finale.handler finale.round.timer matches 300 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1
-execute as @a at @s if score finale.handler finale.round.timer matches 320 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.1
-execute as @a at @s if score finale.handler finale.round.timer matches 340 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.2
-execute as @a at @s if score finale.handler finale.round.timer matches 360 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.3
-execute as @a at @s if score finale.handler finale.round.timer matches 380 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.8 1.4
-execute as @a at @s if score finale.handler finale.round.timer matches 400 run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 2
+execute if score sumo.handler sumo.stage matches 2 if score sumo.handler sumo.timer.delay2 matches 200.. run function stmc:games/finale/games/sumo/helper/game_start
 
-# also sets glass barrier in place
-execute if score team.RedRaccoons stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:red_stained_glass
-execute if score team.RedRaccoons stats.points.team.rank matches 2 in stmc:finale run fill -3 146 -8 3 149 -8 minecraft:red_stained_glass
+# if we're in stage 3, increment timer & run game
+execute if score sumo.handler sumo.stage matches 3 run scoreboard players add sumo.handler sumo.timer.game 1
+execute if score sumo.handler sumo.stage matches 3 run function stmc:games/finale/games/sumo/game_tick
 
-execute if score team.OrangeOtters stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:orange_stained_glass
-execute if score team.OrangeOtters stats.points.team.rank matches 2 in stmc:finale run fill -3 146 -8 3 149 -8 minecraft:orange_stained_glass
-
-execute if score team.PinkPikas stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:pink_stained_glass
-execute if score team.PinkPikas stats.points.team.rank matches 2 in stmc:finale run fill -3 146 -8 3 149 -8 minecraft:pink_stained_glass
-
-execute if score team.YellowYaks stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:yellow_stained_glass
-execute if score team.YellowYaks stats.points.team.rank matches 2 in stmc:finale run fill -3 146 -8 3 149 -8 minecraft:yellow_stained_glass
-
-execute if score team.GreenGoats stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:green_stained_glass
-execute if score team.GreenGoats stats.points.team.rank matches 2 in stmc:finale run fill -3 146 -8 3 149 -8 minecraft:green_stained_glass
-
-execute if score team.CyanCougars stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:cyan_stained_glass
-execute if score team.CyanCougars stats.points.team.rank matches 2 in stmc:finale run fill -3 146 -8 3 149 -8 minecraft:cyan_stained_glass
-
-execute if score team.PurplePenguins stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:purple_stained_glass
-execute if score team.PurplePenguins stats.points.team.rank matches 2 in stmc:finale run fill -3 146 -8 3 149 -8 minecraft:purple_stained_glass
-
-execute if score team.BlueBears stats.points.team.rank matches 1 in stmc:finale run fill -3 146 8 3 149 8 minecraft:blue_stained_glass
-execute if score team.BlueBears stats.points.team.rank matches 2 in stmc:finale run fill -3 146 -8 3 149 -8 minecraft:blue_stained_glass
+# if we're in stage 4, delay for 10s
+execute if score sumo.handler sumo.stage matches 4 run scoreboard players add sumo.handler sumo.timer.delay3 1
+execute if score sumo.handler sumo.stage matches 4 if score sumo.handler sumo.timer.delay3 matches 200.. run \
+        scoreboard players add finale.handler finale.round.stage 1

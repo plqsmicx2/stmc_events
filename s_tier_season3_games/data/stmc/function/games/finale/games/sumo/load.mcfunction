@@ -1,10 +1,33 @@
-# load function for sumo
+# load function for finale
 
 # teleport players to spawn
-execute in stmc:finale run tp @a -10 88 0 -90 10
+execute in stmc:finale run tp @a 10 87.5 0 90 10
+
+# and each competing team to their spawns
+execute in stmc:finale run tp @a[scores={finale.team1=1..}] 0 82 9 180 0
+execute in stmc:finale run tp @a[scores={finale.team2=1..}] 0 82 -9 0 0
+
+# manual spawn
+execute in stmc:finale run spawnpoint @a 10 88 0
+
+# set barriers
+execute in stmc:finale run fill -3 82 -5 3 84 -5 tinted_glass
+execute in stmc:finale run fill -3 82 5 3 84 5 tinted_glass
 
 # force gamemode
 gamemode adventure @a
+
+# set time
+time set 19000
+
+# set weather
+weather clear
+
+# set appropriate gamerules
+gamerule advance_time false
+gamerule advance_weather false
+gamerule immediate_respawn true
+gamerule natural_health_regeneration false
 
 # clear inventories
 clear @a
@@ -15,25 +38,41 @@ effect clear @a
 # ensure full health & hunger
 effect give @a saturation 1 110 true
 effect give @a instant_health 1 110 true
+effect give @a resistance 1 10 true
 
-# other protections
-execute as @a[team=RED_RACCOONS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=11546150,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
-execute as @a[team=ORANGE_OTTERS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16351261,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
-execute as @a[team=PINK_PIKAS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=15961002,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
-execute as @a[team=YELLOW_YAKS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=16701501,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
-execute as @a[team=GREEN_GOATS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=6192150,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
-execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=1481884,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
-execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
-execute as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=3949738,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
+# set xp
+xp set @a 0 points
+xp set @a 0 levels
+
+# kill all entities
+execute in stmc:finale run kill @e[type=!player]
+
+# reset attributes
+execute as @a run attribute @s attack_damage base reset
+execute as @a run attribute @s attack_knockback base reset
+execute as @a run attribute @s attack_speed base reset
+execute as @a run attribute @s knockback_resistance base reset
 
 # and wrap it up with some scoreboard stuff
 # timers
-scoreboard objectives add sumo.timer dummy
+scoreboard objectives add sumo.timer.delay1 dummy
+scoreboard objectives add sumo.timer.explanation dummy
+scoreboard objectives add sumo.timer.delay2 dummy
+scoreboard objectives add sumo.timer.game dummy
+scoreboard objectives add sumo.timer.delay3 dummy
 # stats
-scoreboard objectives add sumo.alive dummy
-scoreboard objectives add sumo.deaths dummy
+scoreboard objectives add sumo.stats.alive dummy
+scoreboard objectives add sumo.stats.deaths deathCount
 
-scoreboard players set sumo.handler sumo.timer 0
+# (re)set all necessary values
+scoreboard players set sumo.handler sumo.stage 0
 
-scoreboard players set @a sumo.alive 1
-scoreboard players set @a sumo.deaths 0
+scoreboard players set sumo.handler sumo.timer.delay1 0
+scoreboard players set sumo.handler sumo.timer.explanation 0
+scoreboard players set sumo.handler sumo.timer.delay2 0
+scoreboard players set sumo.handler sumo.timer.game 0
+scoreboard players set sumo.handler sumo.timer.delay3 0
+
+scoreboard players set @a sumo.stats.alive 0
+scoreboard players set @a[scores={finale.competitor=1..}] sumo.stats.alive 1
+scoreboard players set @a sumo.stats.deaths 0

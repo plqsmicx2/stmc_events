@@ -35,6 +35,9 @@ function stmc:thread/helper/teams/create_teams with storage stmc:global
 execute as @a run attribute @s max_health base set 20
 effect clear @a
 difficulty normal
+gamerule spawn_mobs false
+gamerule natural_health_regeneration true
+gamerule pvp true
 
 time set 22000
 
