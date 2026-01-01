@@ -12,6 +12,7 @@ execute as @a[team=PINK_PIKAS] if items entity @s hotbar.* ominous_trial_key run
 
 #display progress room 6
 execute as @a if items entity @s hotbar.* ominous_trial_key run function stmc:games/dungeons/game/display/room_6
+execute as @a if items entity @s inventory.* ominous_trial_key run function stmc:games/dungeons/game/display/room_6
 
 #spectator
 execute if score BLUE_BEARS dungeons.room matches 9 as @a[team=BLUE_BEARS,gamemode=adventure] run gamemode spectator @s
