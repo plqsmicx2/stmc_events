@@ -39,6 +39,16 @@ execute as @a[team=CYAN_COUGARS] run item replace entity @s armor.feet with mine
 execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=8991416,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 execute as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=3949738,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
+# remove nametags
+team modify RED_RACCOONS nametagVisibility hideForOtherTeams
+team modify ORANGE_OTTERS nametagVisibility hideForOtherTeams
+team modify PINK_PIKAS nametagVisibility hideForOtherTeams
+team modify YELLOW_YAKS nametagVisibility hideForOtherTeams
+team modify GREEN_GOATS nametagVisibility hideForOtherTeams
+team modify CYAN_COUGARS nametagVisibility hideForOtherTeams
+team modify PURPLE_PENGUINS nametagVisibility hideForOtherTeams
+team modify BLUE_BEARS nametagVisibility hideForOtherTeams
+
 # set xp
 xp set @a 0 points
 xp set @a 0 levels

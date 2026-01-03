@@ -77,5 +77,6 @@ scoreboard players set shoot.handler shoot.timer.delay2 0
 scoreboard players set shoot.handler shoot.timer.game 0
 scoreboard players set shoot.handler shoot.timer.delay3 0
 
-scoreboard players set @a[scores={finale.competitor=1..}] shoot.stats.alive 0
+scoreboard players set @a shoot.stats.alive 0
+scoreboard players set @a[scores={finale.competitor=1..}] shoot.stats.alive 1
 scoreboard players set @a shoot.stats.deaths 0

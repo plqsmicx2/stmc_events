@@ -58,13 +58,13 @@ execute as @a[team=PURPLE_PENGUINS] run item replace entity @s armor.feet with m
 execute as @a[team=BLUE_BEARS] run item replace entity @s armor.feet with minecraft:leather_boots[dyed_color=3949738,equippable={slot:"feet",asset_id:"minecraft:turtle_scute"},attribute_modifiers=[{id:"attack_damage",type:"attack_damage",amount:-2,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"knockback_resistance",type:"knockback_resistance",amount:10,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"block_break_speed",type:"block_break_speed",amount:-0.99,operation:"add_value",slot:"any",display:{type:"hidden"}},{id:"fall_damage_multiplier",type:"fall_damage_multiplier",amount:-1,operation:"add_value",slot:"any",display:{type:"hidden"}}],enchantments={"minecraft:binding_curse":1}]
 
 # give players recipes
-recipe give @a collect:blaze_egg
-recipe give @a collect:drowned_egg
-recipe give @a collect:enderman_egg
-recipe give @a collect:endstone
-recipe give @a collect:heart_of_the_sea
-recipe give @a collect:nether_bricks
-recipe give @a collect:shulker_egg
+recipe give @a stmc:collect/blaze_egg
+recipe give @a stmc:collect/drowned_egg
+recipe give @a stmc:collect/enderman_egg
+recipe give @a stmc:collect/endstone
+recipe give @a stmc:collect/heart_of_the_sea
+recipe give @a stmc:collect/nether_bricks
+recipe give @a stmc:collect/shulker_egg
 
 # and wrap it up with some scoreboard stuff
 # timers

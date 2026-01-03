@@ -16,7 +16,7 @@ execute if score finale.handler finale.round.stage matches 1 \
         if score finale.handler finale.game1 matches 2 run function stmc:games/finale/games/sumo/tick
 execute if score finale.handler finale.round.stage matches 1 \
         if score finale.handler finale.game1 matches 3 run function stmc:games/finale/games/shoot/tick
-        
+
 # play game #2
 execute if score finale.handler finale.round.stage matches 2 \
         if score finale.handler finale.game2 matches 1 run function stmc:games/finale/games/fight/tick
@@ -24,7 +24,7 @@ execute if score finale.handler finale.round.stage matches 2 \
         if score finale.handler finale.game2 matches 2 run function stmc:games/finale/games/sumo/tick
 execute if score finale.handler finale.round.stage matches 2 \
         if score finale.handler finale.game2 matches 3 run function stmc:games/finale/games/shoot/tick
-        
+
 # play game #3
 execute if score finale.handler finale.round.stage matches 3 \
         if score finale.handler finale.game3 matches 1 run function stmc:games/finale/games/fight/tick

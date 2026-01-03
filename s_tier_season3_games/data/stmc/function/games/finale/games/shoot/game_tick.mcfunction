@@ -6,6 +6,9 @@ execute as @a store result score @s .arrows run clear @s arrow 0
 execute as @a[scores={finale.competitor=1..}] if score @s .arrows matches ..0 run give @s arrow 1
 scoreboard objectives remove .arrows
 
+# prevent arrow items
+execute in stmc:finale run kill @e[type=item,nbt={Item:{id:"minecraft:arrow"}}]
+
 # set arrow damage
 execute in stmc:finale as @e[type=arrow,tag=!damage.set] run data merge entity @s {Tags:["damage.set"],damage:1.15d}
 

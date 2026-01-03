@@ -26,7 +26,8 @@ execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 2 2
 execute in stmc:finale run fill -3 82 -5 3 84 5 air replace tinted_glass
 
 # standardize player values
-scoreboard players set @a sumo.stats.alive 1
+scoreboard players set @a sumo.stats.alive 0
+scoreboard players set @a[scores={finale.competitor=1..}] sumo.stats.alive 1
 scoreboard players set @a sumo.stats.deaths 0
 
 # prevent punching damage

@@ -77,5 +77,6 @@ scoreboard players set fight.handler fight.timer.delay2 0
 scoreboard players set fight.handler fight.timer.game 0
 scoreboard players set fight.handler fight.timer.delay3 0
 
-scoreboard players set @a[scores={finale.competitor=1..}] fight.stats.alive 0
+scoreboard players set @a fight.stats.alive 0
+scoreboard players set @a[scores={finale.competitor=1..}] fight.stats.alive 1
 scoreboard players set @a fight.stats.deaths 0

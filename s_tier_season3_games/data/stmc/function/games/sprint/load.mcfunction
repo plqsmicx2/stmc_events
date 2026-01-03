@@ -15,7 +15,7 @@ data modify storage sprint:data easy_completion set value 1
 data modify storage sprint:data medium_completion set value 2
 data modify storage sprint:data hard_completion set value 3
 data modify storage sprint:data elytra_completion set value 2
-data modify storage sprint:data spear_completion set value 2
+data modify storage sprint:data spear_completion set value 1
 
 # percent bonus values
 # defaults: {easy:1,medium:2,hard:3,elytra:2,spear:2}
@@ -23,7 +23,7 @@ data modify storage sprint:data easy_multiplier set value 1
 data modify storage sprint:data medium_multiplier set value 2
 data modify storage sprint:data hard_multiplier set value 3
 data modify storage sprint:data elytra_multiplier set value 2
-data modify storage sprint:data spear_multiplier set value 2
+data modify storage sprint:data spear_multiplier set value 1
 
 # teleport players to spawn
 execute in stmc:sprint run tp @a 0 102 0

@@ -9,6 +9,8 @@ scoreboard players add lobby.handler lobby.timer.voteStage 1
 # Announce vote start
 execute if score lobby.handler lobby.timer.voteStage matches 10 run \
         tellraw @a {text:"Vote for which game to play next!",color:green,bold:true}
+execute if score lobby.handler lobby.timer.voteStage matches 10 as @a at @s run \
+        playsound block.note_block.pling player @s ~ ~ ~ 1 1.5 1
 
 # Announce multiplier
 execute if score lobby.handler lobby.timer.voteStage matches 15 if score stmc.handler event.stage matches 0 run \
