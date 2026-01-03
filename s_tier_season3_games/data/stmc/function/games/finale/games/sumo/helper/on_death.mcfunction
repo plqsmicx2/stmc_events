@@ -8,7 +8,7 @@ gamemode adventure @s
 execute in stmc:finale run teleport @s -10 88 0 -90 10
 
 # record player's death
-scoreboard players set @s finale.stats.alive 0
+scoreboard players set @s sumo.stats.alive 0
 
 # announce player's death
 tellraw @a [{text:"💀: ",color:red},{selector:"@s"}]

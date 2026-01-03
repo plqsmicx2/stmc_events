@@ -44,32 +44,4 @@ execute if score mine.handler mine.timer matches 500 as @a[gamemode=adventure,sc
 # determine winner of vote
 
 # determine max value
-
-# set max to 0
-execute if score mine.handler mine.timer matches 500 run scoreboard players set $mine.highest mine.vote 0
-
-# check if each one is greater
-execute unless score mine.handler mine.stage.creaking matches 1.. if score mine.handler mine.timer matches 500 if score mine.handler mine.vote.creaking > $mine.highest mine.vote run \
-        scoreboard players operation $mine.highest mine.vote = mine.handler mine.vote.creaking
-execute unless score mine.handler mine.stage.hoglin matches 1.. if score mine.handler mine.timer matches 500 if score mine.handler mine.vote.hoglin > $mine.highest mine.vote run \
-        scoreboard players operation $mine.highest mine.vote = mine.handler mine.vote.hoglin
-execute unless score mine.handler mine.stage.warden matches 1.. if score mine.handler mine.timer matches 500 if score mine.handler mine.vote.warden > $mine.highest mine.vote run \
-        scoreboard players operation $mine.highest mine.vote = mine.handler mine.vote.warden
-execute unless score mine.handler mine.stage.creeper matches 1.. if score mine.handler mine.timer matches 500 if score mine.handler mine.vote.creeper > $mine.highest mine.vote run \
-        scoreboard players operation $mine.highest mine.vote = mine.handler mine.vote.creeper
-
-# determine which one is that maximum
-execute if score mine.handler mine.timer matches 500 if score mine.handler mine.vote.creaking = $mine.highest mine.vote run \
-        scoreboard players set mine.handler mine.stage.creaking 1
-
-# for our other two, we manually ensure they are not also added if there is a tie
-execute if score mine.handler mine.timer matches 500 if score mine.handler mine.vote.hoglin = $mine.highest mine.vote run \
-        execute unless score mine.handler mine.stage.creaking matches 1 run \
-        scoreboard players set mine.handler mine.stage.hoglin 1
-execute if score mine.handler mine.timer matches 500 if score mine.handler mine.vote.warden = $mine.highest mine.vote run \
-        execute unless score mine.handler mine.stage.creaking matches 1 unless score mine.handler mine.stage.hoglin matches 1 run \
-        scoreboard players set mine.handler mine.stage.warden 1
-execute if score mine.handler mine.timer matches 500 if score mine.handler mine.vote.creeper = $mine.highest mine.vote run \
-        execute unless score mine.handler mine.stage.creaking matches 1 unless score mine.handler mine.stage.hoglin matches 1 run \
-        execute unless score mine.handler mine.stage.warden matches 1 run \
-        scoreboard players set mine.handler mine.stage.creeper 1
+execute if score mine.handler mine.timer matches 500 run function stmc:games/mine/helper/determine_max

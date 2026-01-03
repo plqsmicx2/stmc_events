@@ -23,16 +23,16 @@ scoreboard players set #math .tps 20
 scoreboard objectives add .secIncrement dummy
 
 # case: under 30s remaining
-execute if score @s sprint.timer.remainder matches ..600 run function sprint:helper/points/bonus/range1
+execute if score @s sprint.timer.remainder matches ..600 run function stmc:games/sprint/helper/points/bonus/range1
 
 # case: over 30s remaining
-execute if score @s sprint.timer.remainder matches 601..1800 run function sprint:helper/points/bonus/range2
+execute if score @s sprint.timer.remainder matches 601..1800 run function stmc:games/sprint/helper/points/bonus/range2
 
 # case: over 90s remaining
-execute if score @s sprint.timer.remainder matches 1801..3600 run function sprint:helper/points/bonus/range3
+execute if score @s sprint.timer.remainder matches 1801..3600 run function stmc:games/sprint/helper/points/bonus/range3
 
 # case: over 180s remaining
-execute if score @s sprint.timer.remainder matches 3601..6000 run function sprint:helper/points/bonus/range4
+execute if score @s sprint.timer.remainder matches 3601..6000 run function stmc:games/sprint/helper/points/bonus/range4
 
 # case: over 300s remaining
 # add maximum value

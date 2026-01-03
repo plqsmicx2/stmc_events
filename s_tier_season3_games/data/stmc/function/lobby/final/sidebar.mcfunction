@@ -30,21 +30,21 @@ scoreboard players reset team.PurplePenguins lobby.sidebar
 scoreboard players reset team.BlueBears lobby.sidebar
 
 # they'll be automatically ranked by the scoreboard itself
-scoreboard players operation team.RedRaccoons lobby.sidebar = team.RedRaccoons stats.points.team
+scoreboard players set team.RedRaccoons lobby.sidebar 1
 scoreboard players display name team.RedRaccoons lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players operation team.OrangeOtters lobby.sidebar = team.OrangeOtters stats.points.team
+scoreboard players set team.OrangeOtters lobby.sidebar 1
 scoreboard players display name team.OrangeOtters lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players operation team.PinkPikas lobby.sidebar = team.PinkPikas stats.points.team
+scoreboard players set team.PinkPikas lobby.sidebar 1
 scoreboard players display name team.PinkPikas lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players operation team.YellowYaks lobby.sidebar = team.YellowYaks stats.points.team
+scoreboard players set team.YellowYaks lobby.sidebar 1
 scoreboard players display name team.YellowYaks lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players operation team.GreenGoats lobby.sidebar = team.GreenGoats stats.points.team
+scoreboard players set team.GreenGoats lobby.sidebar 1
 scoreboard players display name team.GreenGoats lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players operation team.CyanCougars lobby.sidebar = team.CyanCougars stats.points.team
+scoreboard players set team.CyanCougars lobby.sidebar 1
 scoreboard players display name team.CyanCougars lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players operation team.PurplePenguins lobby.sidebar = team.PurplePenguins stats.points.team
+scoreboard players set team.PurplePenguins lobby.sidebar 1
 scoreboard players display name team.PurplePenguins lobby.sidebar {"text": "????", "color": "dark_gray"}
-scoreboard players operation team.BlueBears lobby.sidebar = team.BlueBears stats.points.team
+scoreboard players set team.BlueBears lobby.sidebar 1
 scoreboard players display name team.BlueBears lobby.sidebar {"text": "????", "color": "dark_gray"}
 
 # add each fakeplayer to the team they are representing (to load the prefixes accordingly)
@@ -66,13 +66,8 @@ scoreboard players set §e§lPoints: lobby.sidebar 7000
 # blank line
 scoreboard players set §a lobby.sidebar 7001
 
-# timer
-scoreboard players set lobby.timer lobby.sidebar 7002
-execute if score stmc.handler event.timer.bgSecs matches ..9 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":0",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
-execute if score stmc.handler event.timer.bgSecs matches 10..59 run scoreboard players display name lobby.timer lobby.sidebar [{text:"Time: ",color:red,bold:true},{score:{name:"stmc.handler",objective:"event.timer.bgMins"},color:red},{text:":",color:red},{score:{name:"stmc.handler",objective:"event.timer.bgSecs"},color:red}]
-
-scoreboard players set lobby.header lobby.sidebar 7003
+scoreboard players set lobby.header lobby.sidebar 7002
 scoreboard players display name lobby.header lobby.sidebar {text:"Finale!",color:white,bold:true}
 
 # blank line
-scoreboard players set §b lobby.sidebar 7004
+scoreboard players set §b lobby.sidebar 7003

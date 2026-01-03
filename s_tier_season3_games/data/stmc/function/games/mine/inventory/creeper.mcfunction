@@ -3,5 +3,5 @@ item replace entity @a hotbar.0 with iron_pickaxe[damage=0,can_break=[{blocks:["
 item replace entity @a hotbar.3 with golden_apple
 item replace entity @a hotbar.8 with lantern
 
-item replace entity @a hotbar.1 with shield
+item replace entity @a hotbar.1 with shield[damage=150]
 item replace entity @a hotbar.2 with ocelot_spawn_egg[can_place_on=[{blocks:["cyan_terracotta"]}]]

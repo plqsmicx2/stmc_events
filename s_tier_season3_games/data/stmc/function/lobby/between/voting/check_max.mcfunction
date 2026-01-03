@@ -33,6 +33,24 @@ execute as @a[scores={lobby.vote=6}] run scoreboard players operation lobby.hand
 scoreboard players set lobby.handler lobby.voting.brawlCount 0
 execute as @a[scores={lobby.vote=7}] run scoreboard players operation lobby.handler lobby.voting.brawlCount += @s .voteCount
 
+# set vote counts to -1 if the game has already been played
+execute if score race.handler race.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.raceCount -1
+execute if score sprint.handler sprint.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.sprintCount -1
+execute if score tr.handler tr.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.trialsCount -1
+execute if score dungeons.handler dungeons.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.dungeonsCount -1
+execute if score mine.handler mine.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.mineCount -1
+execute if score extract.handler extract.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.extractCount -1
+execute if score blitz.handler blitz.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.blitzCount -1
+execute if score brawl.handler brawl.stage matches 1.. run \
+        scoreboard players set lobby.handler lobby.voting.brawlCount -1
+
 # first, determine maximum score
 scoreboard objectives add .voteMax dummy
 scoreboard players set .lobby .voteMax 0
@@ -179,11 +197,19 @@ tellraw @a ["",{text:"Votes counted!",color:green}]
 tellraw @a ""
 tellraw @a ["",{text:"The results are:",color:green}]
 
-tellraw @a ["",{text:"Race: ",color:green},{score:{objective:"lobby.voting.raceCount",name:"lobby.handler"},color:dark_green}]
-tellraw @a ["",{text:"Sprint: ",color:dark_green},{score:{objective:"lobby.voting.sprintCount",name:"lobby.handler"},color:dark_green}]
-tellraw @a ["",{text:"Trials: ",color:dark_aqua},{score:{objective:"lobby.voting.trialsCount",name:"lobby.handler"},color:dark_green}]
-tellraw @a ["",{text:"Dungeons: ",color:dark_blue},{score:{objective:"lobby.voting.dungeonsCount",name:"lobby.handler"},color:dark_green}]
-tellraw @a ["",{text:"Mine: ",color:gray},{score:{objective:"lobby.voting.mineCount",name:"lobby.handler"},color:dark_green}]
-tellraw @a ["",{text:"Extract: ",color:red},{score:{objective:"lobby.voting.extractCount",name:"lobby.handler"},color:dark_green}]
-tellraw @a ["",{text:"Blitz: ",color:light_purple},{score:{objective:"lobby.voting.blitzCount",name:"lobby.handler"},color:dark_green}]
-tellraw @a ["",{text:"Brawl: ",color:gold},{score:{objective:"lobby.voting.brawlCount",name:"lobby.handler"},color:dark_green}]
+execute unless score lobby.handler lobby.voting.raceCount matches -1 run \
+        tellraw @a ["",{text:"Race: ",color:green},{score:{objective:"lobby.voting.raceCount",name:"lobby.handler"},color:dark_green}]
+execute unless score lobby.handler lobby.voting.sprintCount matches -1 run \
+        tellraw @a ["",{text:"Sprint: ",color:dark_green},{score:{objective:"lobby.voting.sprintCount",name:"lobby.handler"},color:dark_green}]
+execute unless score lobby.handler lobby.voting.trialsCount matches -1 run \
+        tellraw @a ["",{text:"Trials: ",color:dark_aqua},{score:{objective:"lobby.voting.trialsCount",name:"lobby.handler"},color:dark_green}]
+execute unless score lobby.handler lobby.voting.dungeonsCount matches -1 run \
+        tellraw @a ["",{text:"Dungeons: ",color:dark_blue},{score:{objective:"lobby.voting.dungeonsCount",name:"lobby.handler"},color:dark_green}]
+execute unless score lobby.handler lobby.voting.mineCount matches -1 run \
+        tellraw @a ["",{text:"Mine: ",color:gray},{score:{objective:"lobby.voting.mineCount",name:"lobby.handler"},color:dark_green}]
+execute unless score lobby.handler lobby.voting.extractCount matches -1 run \
+        tellraw @a ["",{text:"Extract: ",color:red},{score:{objective:"lobby.voting.extractCount",name:"lobby.handler"},color:dark_green}]
+execute unless score lobby.handler lobby.voting.blitzCount matches -1 run \
+        tellraw @a ["",{text:"Blitz: ",color:light_purple},{score:{objective:"lobby.voting.blitzCount",name:"lobby.handler"},color:dark_green}]
+execute unless score lobby.handler lobby.voting.brawlCount matches -1 run \
+        tellraw @a ["",{text:"Brawl: ",color:gold},{score:{objective:"lobby.voting.brawlCount",name:"lobby.handler"},color:dark_green}]

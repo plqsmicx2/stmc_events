@@ -91,7 +91,7 @@ scoreboard players set §a race.sidebar 11
 
 # round number
 scoreboard players set race.playersCompleted race.sidebar 12
-$execute if score race.handler race.players_completed matches 0 run scoreboard players display name race.playersCompleted race.sidebar [{"text": "Players Completed: ",color:gold,bold:true},\
+$scoreboard players display name race.playersCompleted race.sidebar [{"text": "Players Completed: ",color:gold,bold:true},\
         {score:{name:"race.handler",objective:"race.players_completed"},color:gold,bold:true},\
         {text:"/$(players)", "color": "gold", "bold": true}]
 

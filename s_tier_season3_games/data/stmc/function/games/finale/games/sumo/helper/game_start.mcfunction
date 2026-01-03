@@ -20,10 +20,18 @@ execute as @a[team=BLUE_BEARS] if score team.BlueBears stats.points.team.rank ma
 
 # announce start
 tellraw @a {text:"Go!",color:yellow}
+execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 2 2
 
 # remove barrier [glass]
-
+execute in stmc:finale run fill -3 82 -5 3 84 5 air replace tinted_glass
 
 # standardize player values
-scoreboard players set @a sumo.alive 1
-scoreboard players set @a sumo.deaths 0
+scoreboard players set @a sumo.stats.alive 0
+scoreboard players set @a[scores={finale.competitor=1..}] sumo.stats.alive 1
+scoreboard players set @a sumo.stats.deaths 0
+
+# prevent punching damage
+effect give @a resistance infinite 10 true
+
+# increment stage
+scoreboard players set sumo.handler sumo.stage 3
