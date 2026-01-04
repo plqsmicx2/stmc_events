@@ -1,6 +1,6 @@
 
 #force 1 key
-execute as @e[type=item,nbt={Item:{id:"minecraft:tripwire_hook"}}] at @s in stmc:dungeons run setblock ~ ~-1 ~ air replace trial_spawner
+execute as @e[type=item,nbt={Item:{id:"minecraft:tripwire_hook"}}] at @s in stmc:dungeons run fill ~ ~-1 ~ ~ ~-1 ~ air replace trial_spawner
 
 #use key to break glass
 execute as @a if items entity @s hotbar.* tripwire_hook at @s store success score @s dungeons.glass run fill ~-20 ~-3 ~3 ~20 ~4 ~3 air replace tinted_glass
