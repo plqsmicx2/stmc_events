@@ -18,6 +18,10 @@ execute as @a if score stmc.handler event.stage matches 11 run scoreboard player
 execute as @a if score stmc.handler event.stage matches 13 run scoreboard players operation @s stats.points.indiv.g7 = @s mine.points.indiv
 execute as @a if score stmc.handler event.stage matches 15 run scoreboard players operation @s stats.points.indiv.g8 = @s mine.points.indiv
 
+# records
+execute store result score #record mine.points.indiv run data get storage stmc:records mine.ores.value 1
+execute as @a if score @s mine.points.indiv > #record mine.points.indiv as @s run function stmc:games/mine/helper/records/update_ores
+
 # move to next stage
 execute unless score stmc.handler event.stage matches 15 run function stmc:lobby/between/start
 execute if score stmc.handler event.stage matches 15 run function stmc:lobby/final/start

@@ -21,6 +21,10 @@ execute as @a if score stmc.handler event.stage matches 11 run scoreboard player
 execute as @a if score stmc.handler event.stage matches 13 run scoreboard players operation @s stats.points.indiv.g7 = @s blitz.points.indiv
 execute as @a if score stmc.handler event.stage matches 15 run scoreboard players operation @s stats.points.indiv.g8 = @s blitz.points.indiv
 
+# records
+execute store result score #record blitz.points.indiv run data get storage stmc:records blitz.points.value 1
+execute as @a if score @s blitz.points.indiv > #record blitz.points.indiv as @s run function stmc:games/blitz/helper/records/update_indiv
+
 # move to next stage
 execute unless score stmc.handler event.stage matches 15 run function stmc:lobby/between/start
 execute if score stmc.handler event.stage matches 15 run function stmc:lobby/final/start

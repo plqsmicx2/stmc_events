@@ -134,7 +134,7 @@ execute if score @s sprint.stats.currentSection matches 3 run \
 execute if score @s sprint.stats.currentSection matches 3 run \
         clear @s firework_rocket
 execute if score @s sprint.stats.currentSection matches 3 run \
-        scoreboard players set @s sprint.elytra.boost 155
+        scoreboard players set @s sprint.elytra.boost 145
 
 # Level #1
 execute if score @s sprint.stats.currentSection matches 3 if score @s sprint.stats.currentCheckpoint matches 1 \

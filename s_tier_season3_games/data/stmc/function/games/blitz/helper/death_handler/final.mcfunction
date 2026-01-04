@@ -16,7 +16,7 @@ execute if score blitz.temp .kill matches 1.. run tellraw @a \
         {text:" killed ",color:red},{selector:"@s"}]
 
 # died otherwise
-execute if score blitz.temp .kill matches 0.. run tellraw @a \
+execute if score blitz.temp .kill matches 0 run tellraw @a \
         [{text:"FINAL: ",color:red},{selector:"@s"},\
         {text:" died.",color:red}]
 
