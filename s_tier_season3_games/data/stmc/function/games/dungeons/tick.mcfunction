@@ -45,6 +45,6 @@ execute in stmc:dungeons if score dungeons.handler dungeons.stage matches 3 run 
 
 # if we're in stage 4, run reset & point announcement
 execute if score dungeons.handler dungeons.stage matches 4 run scoreboard players add dungeons.handler dungeons.timer.announcements 1
-execute if score dungeons.handler dungeons.timer.announcements matches 100 run function stmc:games/dungeons/helper/announcements/rooms
-execute if score dungeons.handler dungeons.timer.announcements matches 300 run function stmc:games/dungeons/helper/announcements/team
+execute if score dungeons.handler dungeons.timer.announcements matches 100 run function stmc:games/dungeons/helper/announcements/rooms with storage stmc:global
+execute if score dungeons.handler dungeons.timer.announcements matches 300 run function stmc:games/dungeons/helper/announcements/team with storage stmc:global
 execute if score dungeons.handler dungeons.stage matches 4 if score dungeons.handler dungeons.timer.announcements matches 400.. run function stmc:games/dungeons/reset

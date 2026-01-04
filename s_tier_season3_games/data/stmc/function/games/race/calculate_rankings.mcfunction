@@ -314,17 +314,17 @@ execute as @a if score @s race.points.indiv.rank matches 24 run scoreboard playe
 # <===== FASTEST LAPS =====>
 
 # ensure no lap is incomplete
-execute as @a if score @s race.completion.rank matches 1.. if score @s race.laptime.1 matches ..1200 run scoreboard players set @s race.laptime.1 4800
-execute as @a if score @s race.completion.rank matches 1.. if score @s race.laptime.2 matches ..1200 run scoreboard players set @s race.laptime.2 4800
-execute as @a if score @s race.completion.rank matches 1.. if score @s race.laptime.3 matches ..1200 run scoreboard players set @s race.laptime.3 4800
-execute as @a if score @s race.completion.rank matches 1.. if score @s race.laptime.4 matches ..1200 run scoreboard players set @s race.laptime.4 4800
+execute as @a if score @s race.completion.rank matches 1.. if score @s race.laptime.1 matches ..600 run scoreboard players set @s race.laptime.1 4800
+execute as @a if score @s race.completion.rank matches 1.. if score @s race.laptime.2 matches ..600 run scoreboard players set @s race.laptime.2 4800
+execute as @a if score @s race.completion.rank matches 1.. if score @s race.laptime.3 matches ..600 run scoreboard players set @s race.laptime.3 4800
+execute as @a if score @s race.completion.rank matches 1.. if score @s race.laptime.4 matches ..600 run scoreboard players set @s race.laptime.4 4800
 
 # calculate fastest laps for each player
 scoreboard players set @a race.fastest_lap 4800
-execute as @a if score @s race.laptime.1 matches 1.. if score @s race.fastest_lap > @s race.laptime.1 run scoreboard players operation @s race.fastest_lap = @s race.laptime.1
-execute as @a if score @s race.laptime.2 matches 1.. if score @s race.fastest_lap > @s race.laptime.2 run scoreboard players operation @s race.fastest_lap = @s race.laptime.2
-execute as @a if score @s race.laptime.3 matches 1.. if score @s race.fastest_lap > @s race.laptime.3 run scoreboard players operation @s race.fastest_lap = @s race.laptime.3
-execute as @a if score @s race.laptime.4 matches 1.. if score @s race.fastest_lap > @s race.laptime.4 run scoreboard players operation @s race.fastest_lap = @s race.laptime.4
+execute as @a if score @s race.laps_completed matches 1.. if score @s race.fastest_lap > @s race.laptime.1 run scoreboard players operation @s race.fastest_lap = @s race.laptime.1
+execute as @a if score @s race.laps_completed matches 2.. if score @s race.fastest_lap > @s race.laptime.2 run scoreboard players operation @s race.fastest_lap = @s race.laptime.2
+execute as @a if score @s race.laps_completed matches 3.. if score @s race.fastest_lap > @s race.laptime.3 run scoreboard players operation @s race.fastest_lap = @s race.laptime.3
+execute as @a if score @s race.laps_completed matches 4.. if score @s race.fastest_lap > @s race.laptime.4 run scoreboard players operation @s race.fastest_lap = @s race.laptime.4
 
 # reset ranks
 execute as @a run scoreboard players set @s race.fastest_lap.rank -1

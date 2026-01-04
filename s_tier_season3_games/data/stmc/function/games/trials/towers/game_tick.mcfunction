@@ -7,6 +7,9 @@ execute in stmc:trials/towers run kill @e[type=minecraft:item]
 scoreboard players add towers.handler towers.timer.game 1
 function stmc:games/trials/towers/death_handler
 
+# force night vision
+effect give @a night_vision 1 0 true
+
 # <===== POWDER SPAWNS =====>
 
 # increment timer

@@ -31,7 +31,7 @@ execute in stmc:race if score race.handler race.stage matches 1 run function stm
 # if we're in stage 2, increment timer & countdown at 5 seconds
 execute if score race.handler race.stage matches 2 run scoreboard players add race.handler race.timer.delay2 1
 # invis
-execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 5 run effect give @a invisibility infinite 0 true
+#execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 5 run effect give @a invisibility infinite 0 true
 # countdown
 execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 100 run title @a actionbar {"text":"5 seconds!", "color":"green"}
 execute if score race.handler race.stage matches 2 if score race.handler race.timer.delay2 matches 120 run title @a actionbar {"text":"4 seconds!", "color":"green"}

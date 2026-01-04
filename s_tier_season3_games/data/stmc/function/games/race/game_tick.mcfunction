@@ -7,7 +7,7 @@ execute in stmc:race if score race.handler race.timer.game matches 1 run fill -1
 execute in stmc:race if score race.handler race.timer.game matches 1 run fill -15 106 17 -11 109 17 air replace minecraft:red_stained_glass
 
 # reapply effects & protective boots to ensure everyone has them
-execute if score race.handler race.timer.game matches 1 run effect give @a invisibility infinite 0 true
+#execute if score race.handler race.timer.game matches 1 run effect give @a invisibility infinite 0 true
 execute if score race.handler race.timer.game matches 1 run effect give @a saturation infinite 0 true
 execute if score race.handler race.timer.game matches 1 run effect give @a resistance infinite 10 true
 execute if score race.handler race.timer.game matches 1 run effect give @a dolphins_grace infinite 0 true

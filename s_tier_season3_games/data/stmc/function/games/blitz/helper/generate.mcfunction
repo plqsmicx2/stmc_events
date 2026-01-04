@@ -33,3 +33,11 @@ execute in stmc:blitz if score blitz.handler.emerald blitz.timer.game.generate m
 execute in stmc:blitz if score blitz.handler.emerald blitz.timer.game.generate matches 1200 run summon item -9 120 47 {Item:{id:"minecraft:emerald"}}
 execute in stmc:blitz if score blitz.handler.emerald blitz.timer.game.generate matches 1200 run summon item -9 120 -47 {Item:{id:"minecraft:emerald"}}
 execute in stmc:blitz if score blitz.handler.emerald blitz.timer.game.generate matches 1200 run scoreboard players set blitz.handler.emerald blitz.timer.game.generate 0
+
+# prevent blocks from obstructing items
+execute in stmc:blitz at @e[type=item,nbt={Item:{id:"minecraft:iron_ingot"}}] run setblock ~ ~ ~ air
+execute in stmc:blitz at @e[type=item,nbt={Item:{id:"minecraft:iron_ingot"}}] run setblock ~ ~1 ~ air
+execute in stmc:blitz at @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}}] run setblock ~ ~ ~ air
+execute in stmc:blitz at @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}}] run setblock ~ ~1 ~ air
+execute in stmc:blitz at @e[type=item,nbt={Item:{id:"minecraft:emerald"}}] run setblock ~ ~ ~ air
+execute in stmc:blitz at @e[type=item,nbt={Item:{id:"minecraft:emerald"}}] run setblock ~ ~1 ~ air

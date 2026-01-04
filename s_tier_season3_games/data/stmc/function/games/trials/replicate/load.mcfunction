@@ -29,6 +29,9 @@ clear @a
 # clear effects
 effect clear @a
 
+# set time
+time set 19000
+
 # ensure full health & hunger
 effect give @a saturation infinite 1 true
 effect give @a mining_fatigue infinite 2 true
