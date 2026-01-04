@@ -173,19 +173,19 @@ execute in stmc:extract if score .extractData .time matches 40 run function stmc
 # slot 1-1
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 55 134 50 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:fishing_rod",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 55 134 50 {width:1f,height:2f,Tags:["zombie"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 54 134 52 {CustomNameVisible:1b,Invulnerable:1b,Tags:["piglin"],Rotation:[117F,0F],DisabledSlots:4144959, \ 
-        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:golden_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
+        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:iron_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 54 134 52 {width:1f,height:2f,Tags:["piglin"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 52 134 53 {CustomNameVisible:1b,Invulnerable:1b,Tags:["skeleton"],DisabledSlots:4144959,Rotation:[147F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:bow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:crossbow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 52 134 53 {width:1f,height:2f,Tags:["skeleton"]}
 
@@ -210,19 +210,19 @@ execute in stmc:extract if score .extractData .time matches 45 run \
 # slot 1-2
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 45 134 4 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:fishing_rod",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 45 134 4 {width:1f,height:2f,Tags:["zombie"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 46 134 2 {CustomNameVisible:1b,Invulnerable:1b,Tags:["piglin"],Rotation:[-63F,0F],DisabledSlots:4144959, \ 
-        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:golden_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
+        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:iron_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 46 134 2 {width:1f,height:2f,Tags:["piglin"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 48 134 1 {CustomNameVisible:1b,Invulnerable:1b,Tags:["skeleton"],DisabledSlots:4144959,Rotation:[-33F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:bow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:crossbow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 48 134 1 {width:1f,height:2f,Tags:["skeleton"]}
 
@@ -247,19 +247,19 @@ execute in stmc:extract if score .extractData .time matches 45 run \
 # slot 2-1
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 55 134 110 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:fishing_rod",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 55 134 110 {width:1f,height:2f,Tags:["zombie"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 54 134 112 {CustomNameVisible:1b,Invulnerable:1b,Tags:["piglin"],Rotation:[117F,0F],DisabledSlots:4144959, \ 
-        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:golden_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
+        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:iron_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 54 134 112 {width:1f,height:2f,Tags:["piglin"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 52 134 113 {CustomNameVisible:1b,Invulnerable:1b,Tags:["skeleton"],DisabledSlots:4144959,Rotation:[147F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:bow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:crossbow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 52 134 113 {width:1f,height:2f,Tags:["skeleton"]}
 
@@ -284,19 +284,19 @@ execute in stmc:extract if score .extractData .time matches 45 run \
 # slot 2-2
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 45 134 64 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:fishing_rod",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 45 134 64 {width:1f,height:2f,Tags:["zombie"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 46 134 62 {CustomNameVisible:1b,Invulnerable:1b,Tags:["piglin"],Rotation:[-63F,0F],DisabledSlots:4144959, \ 
-        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:golden_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
+        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:iron_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 46 134 62 {width:1f,height:2f,Tags:["piglin"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 48 134 61 {CustomNameVisible:1b,Invulnerable:1b,Tags:["skeleton"],DisabledSlots:4144959,Rotation:[-33F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:bow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:crossbow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 48 134 61 {width:1f,height:2f,Tags:["skeleton"]}
 
@@ -321,19 +321,19 @@ execute in stmc:extract if score .extractData .time matches 45 run \
 # slot 3-1
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 5 134 110 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:fishing_rod",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 5 134 110 {width:1f,height:2f,Tags:["zombie"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 4 134 112 {CustomNameVisible:1b,Invulnerable:1b,Tags:["piglin"],Rotation:[117F,0F],DisabledSlots:4144959, \ 
-        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:golden_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
+        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:iron_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 4 134 112 {width:1f,height:2f,Tags:["piglin"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand 2 134 113 {CustomNameVisible:1b,Invulnerable:1b,Tags:["skeleton"],DisabledSlots:4144959,Rotation:[147F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:bow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:crossbow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction 2 134 113 {width:1f,height:2f,Tags:["skeleton"]}
 
@@ -358,19 +358,19 @@ execute in stmc:extract if score .extractData .time matches 45 run \
 # slot 3-2
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -5 134 64 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:fishing_rod",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -5 134 64 {width:1f,height:2f,Tags:["zombie"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -4 134 62 {CustomNameVisible:1b,Invulnerable:1b,Tags:["piglin"],Rotation:[-63F,0F],DisabledSlots:4144959, \ 
-        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:golden_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
+        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:iron_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -4 134 62 {width:1f,height:2f,Tags:["piglin"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -2 134 61 {CustomNameVisible:1b,Invulnerable:1b,Tags:["skeleton"],DisabledSlots:4144959,Rotation:[-33F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:bow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:crossbow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -2 134 61 {width:1f,height:2f,Tags:["skeleton"]}
 
@@ -395,19 +395,19 @@ execute in stmc:extract if score .extractData .time matches 45 run \
 # slot 4-1
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -45 134 110 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:fishing_rod",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -45 134 110 {width:1f,height:2f,Tags:["zombie"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -46 134 112 {CustomNameVisible:1b,Invulnerable:1b,Tags:["piglin"],Rotation:[117F,0F],DisabledSlots:4144959, \ 
-        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:golden_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
+        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:iron_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -46 134 112 {width:1f,height:2f,Tags:["piglin"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -48 134 113 {CustomNameVisible:1b,Invulnerable:1b,Tags:["skeleton"],DisabledSlots:4144959,Rotation:[147F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:bow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:crossbow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -48 134 113 {width:1f,height:2f,Tags:["skeleton"]}
 
@@ -432,19 +432,19 @@ execute in stmc:extract if score .extractData .time matches 45 run \
 # slot 4-2
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -55 134 64 {CustomNameVisible:1b,Invulnerable:1b,Tags:["zombie"],DisabledSlots:4144959,Rotation:[-90F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:wooden_axe",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:chainmail_leggings",count:1},chest:{id:"minecraft:chainmail_chestplate",count:1},head:{id:"minecraft:zombie_head",count:1},mainhand:{id:"minecraft:fishing_rod",count:1},offhand:{id:"minecraft:shield",count:1}},CustomName:{"bold":true,"color":"dark_green","text":"Zombie"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -55 134 64 {width:1f,height:2f,Tags:["zombie"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -54 134 62 {CustomNameVisible:1b,Invulnerable:1b,Tags:["piglin"],Rotation:[-63F,0F],DisabledSlots:4144959, \ 
-        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:golden_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
+        equipment:{feet:{id:"minecraft:leather_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:piglin_head",count:1},mainhand:{id:"minecraft:iron_sword",count:1},offhand:{id:"minecraft:wind_charge",count:1}},CustomName:{"bold":true,"color":"gold","text":"Piglin"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -54 134 62 {width:1f,height:2f,Tags:["piglin"]}
 
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon armor_stand -52 134 61 {CustomNameVisible:1b,Invulnerable:1b,Tags:["skeleton"],DisabledSlots:4144959,Rotation:[-33F,0F], \ 
-        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:bow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
+        equipment:{feet:{id:"minecraft:chainmail_boots",count:1},legs:{id:"minecraft:leather_leggings",count:1},chest:{id:"minecraft:leather_chestplate",count:1},head:{id:"minecraft:skeleton_skull",count:1},mainhand:{id:"minecraft:wooden_sword",count:1},offhand:{id:"minecraft:crossbow",count:1}},CustomName:{"bold":true,"color":"gray","text":"Skeleton"}}
 execute in stmc:extract if score .extractData .time matches 45 run \ 
         summon interaction -52 134 61 {width:1f,height:2f,Tags:["skeleton"]}
 
