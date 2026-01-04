@@ -81,6 +81,7 @@ execute if score extract.handler extract.timer.game.round matches 700 run tellra
 # make sure blocks are not dropped
 execute in stmc:extract run kill @e[type=item,nbt={Item:{id:"minecraft:diamond_block"}}]
 execute in stmc:extract run kill @e[type=item,nbt={Item:{id:"minecraft:gold_block"}}]
+execute in stmc:extract run kill @e[type=item,nbt={Item:{id:"minecraft:gray_concrete"}}]
 
 # round end check
 execute if score extract.handler extract.timer.game.round matches 2200 run function stmc:games/extract/round/round_end
