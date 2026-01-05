@@ -18,8 +18,8 @@ scoreboard players set @s extract.stats.kit 6
 function stmc:games/extract/inventory/grant_base
 
 # miner specific items
-item replace entity @s hotbar.1 with iron_pickaxe[can_break=[{blocks:"diamond_block"},{blocks:"gold_block"}], \ 
+item replace entity @s hotbar.1 with iron_pickaxe[can_break={blocks:["diamond_block","gold_block","gray_concrete"]}, \ 
                 tool={default_mining_speed:0.1,damage_per_block:0, \ 
-                rules:[{speed:800,correct_for_drops:true,blocks:"gold_block"},{speed:760,correct_for_drops:true,blocks:"diamond_block"}]}, \ 
+                rules:[{speed:800,blocks:"gray_concrete"},{speed:800,correct_for_drops:true,blocks:"gold_block"},{speed:760,correct_for_drops:true,blocks:"diamond_block"}]}, \ 
                 custom_name={"color":"yellow","text":"Ore Breaker II"}]
 item replace entity @s hotbar.2 with potion[potion_contents={potion:swiftness},potion_duration_scale=0.06]

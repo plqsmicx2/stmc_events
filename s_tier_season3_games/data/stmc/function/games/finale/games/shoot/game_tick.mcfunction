@@ -24,6 +24,8 @@ execute as @a[scores={shoot.stats.alive=1..,shoot.stats.deaths=1..}] run \
 execute as @a[scores={shoot.stats.alive=1..,shoot.stats.deaths=1..}] run \
         effect clear @s
 execute as @a[scores={shoot.stats.alive=1..,shoot.stats.deaths=1..}] run \
+        clear @s
+execute as @a[scores={shoot.stats.alive=1..,shoot.stats.deaths=1..}] run \
         scoreboard players set @s shoot.stats.alive 0
 
 # determine how many teams are left

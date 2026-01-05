@@ -4,6 +4,10 @@
 # force gamemode
 gamemode adventure @s
 
+# reset player
+clear @s
+effect clear @s
+
 # return to spectator platform
 execute in stmc:finale run teleport @s -10 88 0 -90 10
 

@@ -26,4 +26,4 @@ execute as @a[scores={shoot.stats.alive=1..}] at @s run playsound entity.firewor
 execute as @a run attribute @s attack_damage base reset
 
 # increment stage
-scoreboard players add shoot.handler shoot.stage 1
+scoreboard players set shoot.handler shoot.stage 4

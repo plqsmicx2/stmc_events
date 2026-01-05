@@ -15,7 +15,7 @@ execute as Gioboiiii unless entity @s[team=] run team join ORANGE_OTTERS Gioboii
 # PINK PIKAS
 execute as Limeae unless entity @s[team=] run team join PINK_PIKAS Limeae
 execute as AxelPowers unless entity @s[team=] run team join PINK_PIKAS AxelPowers
-execute as Ktay unless entity @s[team=] run team join PINK_PIKAS Ktay
+execute as Navahamsta unless entity @s[team=] run team join PINK_PIKAS Navahamsta
 execute as Loremasonn unless entity @s[team=] run team join PINK_PIKAS Loremasonn
 
 # YELLOW YAKS
@@ -25,7 +25,7 @@ execute as KAGMan05 unless entity @s[team=] run team join YELLOW_YAKS KAGMan05
 execute as ZeroStep2 unless entity @s[team=] run team join YELLOW_YAKS ZeroStep2
 
 # GREEN GOATS
-execute as Krisppy_ unless entity @s[team=] run team join GREEN_GOATS Krisppy_
+execute as aimei6432 unless entity @s[team=] run team join GREEN_GOATS aimei6432
 execute as IISona unless entity @s[team=] run team join GREEN_GOATS IISona
 execute as Xflames06 unless entity @s[team=] run team join GREEN_GOATS Xflames06
 execute as MinttRose unless entity @s[team=] run team join GREEN_GOATS MinttRose

@@ -1,6 +1,13 @@
 
 #force 1 key
-execute as @e[type=item,nbt={Item:{id:"minecraft:tripwire_hook"}}] at @s in stmc:dungeons run fill ~ ~-1 ~ ~ ~-1 ~ air replace trial_spawner
+execute as @e[type=item,nbt={Item:{id:"minecraft:tripwire_hook"}}] at @s in stmc:dungeons run \
+        fill ~ ~-0 ~ ~ ~-1 ~ air replace trial_spawner
+
+# backup check for 1 key
+execute as @a if items entity @s inventory.* tripwire_hook at @s run \
+        fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace trial_spawner[trial_spawner_state=ejecting_reward]
+execute as @a if items entity @s hotbar.* tripwire_hook at @s run \
+        fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace trial_spawner[trial_spawner_state=ejecting_reward]
 
 #use key to break glass
 execute as @a if items entity @s hotbar.* tripwire_hook at @s store success score @s dungeons.glass run fill ~-20 ~-3 ~3 ~20 ~4 ~3 air replace tinted_glass

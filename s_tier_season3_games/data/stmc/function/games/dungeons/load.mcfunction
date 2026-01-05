@@ -127,14 +127,9 @@ scoreboard players set ORANGE_OTTERS dungeons.roomdisplay 0
 scoreboard players set YELLOW_YAKS dungeons.roomdisplay 0
 scoreboard players set PINK_PIKAS dungeons.roomdisplay 0
 
-#sidebar temporary
-scoreboard objectives setdisplay sidebar dungeons.roomdisplay
-scoreboard players set ------ dungeons.roomdisplay 10
-
 #items
 item replace entity @a hotbar.0 with wooden_sword[unbreakable={}]
 item replace entity @a hotbar.8 with lantern
-
 
 forceload add -16 -3 14 140
 
@@ -148,6 +143,15 @@ tp @a[team=PURPLE_PENGUINS] 0 150 0
 tp @a[team=ORANGE_OTTERS] 0 180 0
 tp @a[team=YELLOW_YAKS] 0 210 0
 tp @a[team=PINK_PIKAS] 0 240 0
+
+spawnpoint @a[team=BLUE_BEARS] 0 30 0
+spawnpoint @a[team=CYAN_COUGARS] 0 60 0
+spawnpoint @a[team=RED_RACCOONS] 0 90 0
+spawnpoint @a[team=GREEN_GOATS] 0 120 0
+spawnpoint @a[team=PURPLE_PENGUINS] 0 150 0
+spawnpoint @a[team=ORANGE_OTTERS] 0 180 0
+spawnpoint @a[team=YELLOW_YAKS] 0 210 0
+spawnpoint @a[team=PINK_PIKAS] 0 240 0
 
 # reset sidebar
 scoreboard objectives remove dungeons.sidebar

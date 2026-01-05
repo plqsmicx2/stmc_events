@@ -12,6 +12,8 @@ execute as @a[scores={fight.stats.alive=1..,fight.stats.deaths=1..}] run \
 execute as @a[scores={fight.stats.alive=1..,fight.stats.deaths=1..}] run \
         effect clear @s
 execute as @a[scores={fight.stats.alive=1..,fight.stats.deaths=1..}] run \
+        clear @s
+execute as @a[scores={fight.stats.alive=1..,fight.stats.deaths=1..}] run \
         scoreboard players set @s fight.stats.alive 0
 
 # determine how many teams are left
