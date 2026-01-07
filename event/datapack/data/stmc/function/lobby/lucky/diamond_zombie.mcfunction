@@ -1,0 +1,2 @@
+
+summon zombie ~ ~ ~ {equipment:{feet:{id:"minecraft:diamond_boots",count:1,components:{"minecraft:enchantments":{"protection":4}}},legs:{id:"minecraft:diamond_leggings",count:1,components:{"minecraft:enchantments":{"protection":4}}},chest:{id:"minecraft:diamond_chestplate",count:1,components:{"minecraft:enchantments":{"protection":4}}},head:{id:"minecraft:diamond_helmet",count:1,components:{"minecraft:enchantments":{"protection":4}}},mainhand:{id:"minecraft:diamond_sword",count:1,components:{"minecraft:enchantments":{"sharpness":5}}}}}

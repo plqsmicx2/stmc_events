@@ -10,10 +10,13 @@ function stmc:thread/helper/automatic_pause
 scoreboard players add lobby.handler lobby.timer 1
 
 #reset loot chests
-execute in stmc:lobby/main if score lobby.handler lobby.timer matches 4 run function stmc:lobby/chests
+#execute in stmc:lobby/main if score lobby.handler lobby.timer matches 4 run function stmc:lobby/chests
 
 #give random villager items
-execute as @a run function stmc:lobby/villager_items
+#execute as @a run function stmc:lobby/villager_items
+
+#lucky blocks
+execute as @a[scores={lobby.wetsponge=1..}] at @s at @n[type=item,nbt={Item:{id:"minecraft:wet_sponge"}}] run function stmc:lobby/lucky_block
 
 # check for invested tokens
 execute as @a store result score @s event.voting.investedTokensTemp run clear @s paper[custom_data={invest: 1b}] 0
