@@ -11,11 +11,15 @@ scoreboard objectives add mine.vote.creaking dummy
 scoreboard objectives add mine.vote.creeper dummy
 scoreboard objectives add mine.vote.hoglin dummy
 scoreboard objectives add mine.vote.warden dummy
+scoreboard objectives add mine.vote.witch dummy
+scoreboard objectives add mine.vote.spider dummy
 
 scoreboard objectives add mine.stage.creaking dummy
 scoreboard objectives add mine.stage.creeper dummy
 scoreboard objectives add mine.stage.hoglin dummy
 scoreboard objectives add mine.stage.warden dummy
+scoreboard objectives add mine.stage.witch dummy
+scoreboard objectives add mine.stage.spider dummy
 scoreboard objectives add mine.stage.lobby dummy
 
 scoreboard objectives add mine.endermite_damaged minecraft.custom:minecraft.damage_taken

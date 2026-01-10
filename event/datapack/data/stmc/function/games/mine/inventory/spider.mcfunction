@@ -3,5 +3,4 @@ item replace entity @a hotbar.0 with iron_pickaxe[damage=0,can_break=[{blocks:["
 item replace entity @a hotbar.2 with golden_apple
 item replace entity @a hotbar.8 with lantern
 
-item replace entity @a hotbar.1 with shield[damage=150]
-#item replace entity @a hotbar.2 with ocelot_spawn_egg[can_place_on=[{blocks:["cyan_terracotta"]}]]
+item replace entity @a hotbar.1 with splash_potion[potion_contents={potion:"minecraft:invisibility"},potion_duration_scale=0.09]
