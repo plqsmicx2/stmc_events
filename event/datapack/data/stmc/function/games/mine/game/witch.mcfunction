@@ -27,3 +27,6 @@ execute if score mine.handler mine.timer matches 1680 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1720 run function stmc:games/mine/mobs/witch with storage mine:data
 execute if score mine.handler mine.timer matches 1760 run function stmc:games/mine/mobs/witch with storage mine:data
 execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/mobs/witch with storage mine:data
+
+#speed
+execute as @e[type=witch] run effect give @s speed 1 0

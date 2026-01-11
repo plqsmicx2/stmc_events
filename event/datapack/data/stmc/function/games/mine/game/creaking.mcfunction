@@ -4,13 +4,9 @@ execute store result storage mine:data rot int 1 run random value -179..180
 
 #summons creaking at: {5,15,25,35,45,50,55,#60,62,..,88,90}
 execute if score mine.handler mine.timer matches 100 run function stmc:games/mine/mobs/creaking with storage mine:data
-execute if score mine.handler mine.timer matches 200 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 300 run function stmc:games/mine/mobs/creaking with storage mine:data
-execute if score mine.handler mine.timer matches 400 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 500 run function stmc:games/mine/mobs/creaking with storage mine:data
-execute if score mine.handler mine.timer matches 600 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 700 run function stmc:games/mine/mobs/creaking with storage mine:data
-execute if score mine.handler mine.timer matches 800 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 900 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1000 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1100 run function stmc:games/mine/mobs/creaking with storage mine:data

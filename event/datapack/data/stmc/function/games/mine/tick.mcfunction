@@ -28,10 +28,9 @@ execute in stmc:mine/lobby if score mine.handler mine.stage matches 1 run functi
 execute if score mine.handler mine.stage matches 2 run scoreboard players add mine.handler mine.timer 1
 execute if score mine.handler mine.stage matches 2 run function stmc:games/mine/game_tick
 # manually end game
-#execute if score mine.handler mine.stage.hoglin matches 2 run \
+execute if score mine.handler mine.stage.hoglin matches 2 run \
 execute if score mine.handler mine.stage.warden matches 2 run \
 execute if score mine.handler mine.stage.creaking matches 2 run \
-
 execute if score mine.handler mine.stage.creeper matches 2 run \
 execute if score mine.handler mine.stage.witch matches 2 run \
 execute if score mine.handler mine.stage.spider matches 2 run \
