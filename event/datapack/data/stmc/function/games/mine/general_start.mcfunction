@@ -22,6 +22,9 @@ kill @e[type=witch]
 kill @e[type=spider]
 kill @e[type=endermite]
 kill @e[type=item]
+kill @e[type=chicken]
+kill @e[type=arrow]
+kill @e[type=zombie]
 
 clone 59 5 59 -59 0 -59 -59 20 -59
 clone 59 5 59 -59 0 -59 -59 40 -59

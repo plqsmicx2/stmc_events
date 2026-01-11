@@ -8,6 +8,9 @@ function stmc:games/mine/game/endermite_clear
 execute as @a[gamemode=adventure] run function stmc:games/mine/game/lantern
 function stmc:games/mine/game/snowball
 
+execute as @a[scores={mine.damaged=-12..}] run scoreboard players remove @s mine.damaged 1
+
+
 execute as @a[gamemode=adventure,scores={mine.game.deathcount=1}] run gamemode spectator @s
 
 execute unless entity @a[gamemode=adventure] run function stmc:games/mine/game_end

@@ -23,6 +23,7 @@ scoreboard objectives add mine.stage.spider dummy
 scoreboard objectives add mine.stage.lobby dummy
 
 scoreboard objectives add mine.endermite_damaged minecraft.custom:minecraft.damage_taken
+scoreboard objectives add mine.damaged minecraft.custom:minecraft.damage_taken
 
 scoreboard objectives add mine.stage dummy
 scoreboard objectives add mine.timer dummy

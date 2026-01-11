@@ -35,6 +35,9 @@ kill @e[type=witch]
 kill @e[type=spider]
 kill @e[type=endermite]
 kill @e[type=item]
+kill @e[type=chicken]
+kill @e[type=arrow]
+kill @e[type=zombie]
 
 tp @a 0 100 0
 
