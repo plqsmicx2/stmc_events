@@ -20,6 +20,7 @@ kill @e[type=hoglin]
 kill @e[type=creaking]
 kill @e[type=witch]
 kill @e[type=spider]
+kill @e[type=zombie]
 kill @e[type=endermite]
 kill @e[type=item]
 
