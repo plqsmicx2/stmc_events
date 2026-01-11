@@ -47,11 +47,11 @@ execute if score mine.handler mine.vote.creeper = $mine.highest mine.vote run \
         execute unless score mine.handler mine.stage.creaking matches 1 unless score mine.handler mine.stage.hoglin matches 1 run \
         execute unless score mine.handler mine.stage.warden matches 1 run \
         scoreboard players set mine.handler mine.stage.creeper 1
-execute if score mine.handler mine.vote.creeper = $mine.highest mine.vote run \
+execute if score mine.handler mine.vote.witch = $mine.highest mine.vote run \
         execute unless score mine.handler mine.stage.creaking matches 1 unless score mine.handler mine.stage.hoglin matches 1 run \
         execute unless score mine.handler mine.stage.warden matches 1 unless score mine.handler mine.stage.creeper matches 1 run \
         scoreboard players set mine.handler mine.stage.witch 1
-execute if score mine.handler mine.vote.creeper = $mine.highest mine.vote run \
+execute if score mine.handler mine.vote.spider = $mine.highest mine.vote run \
         execute unless score mine.handler mine.stage.creaking matches 1 unless score mine.handler mine.stage.hoglin matches 1 run \
         execute unless score mine.handler mine.stage.warden matches 1 unless score mine.handler mine.stage.creeper matches 1 run \
         execute unless score mine.handler mine.stage.witch matches 1 run \
