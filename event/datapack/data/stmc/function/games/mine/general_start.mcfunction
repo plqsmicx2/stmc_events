@@ -43,3 +43,5 @@ execute if score mine.handler mine.stage.creaking matches 1 run function stmc:ga
 execute if score mine.handler mine.stage.hoglin matches 1 run function stmc:games/mine/inventory/hoglin
 execute if score mine.handler mine.stage.warden matches 1 run function stmc:games/mine/inventory/warden
 execute if score mine.handler mine.stage.creeper matches 1 run function stmc:games/mine/inventory/creeper
+execute if score mine.handler mine.stage.witch matches 1 run function stmc:games/mine/inventory/witch
+execute if score mine.handler mine.stage.spider matches 1 run function stmc:games/mine/inventory/spider
