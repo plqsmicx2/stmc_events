@@ -12,10 +12,14 @@ scoreboard players set mine.handler mine.stage.creaking 0
 scoreboard players set mine.handler mine.stage.creeper 0
 scoreboard players set mine.handler mine.stage.hoglin 0
 scoreboard players set mine.handler mine.stage.warden 0
+scoreboard players set mine.handler mine.stage.witch 0
+scoreboard players set mine.handler mine.stage.spider 0
 
 kill @e[type=warden]
 kill @e[type=hoglin]
 kill @e[type=creeper]
 kill @e[type=creaking]
+kill @e[type=witch]
+kill @e[type=spider]
 kill @e[type=endermite]
 kill @e[type=item]

@@ -14,12 +14,12 @@ execute unless entity @a[gamemode=adventure] run function stmc:games/mine/game_e
 
 
 execute if score mine.handler mine.timer matches 20 run title @a title "Mine"
-execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.creeper matches 1 run title @a title "Creeper"
-execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.creaking matches 1 run title @a title "Creaking"
-execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.hoglin matches 1 run title @a title "Hoglin"
-execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.warden matches 1 run title @a title "Warden"
-execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.witch matches 1 run title @a title "Witch"
-execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.spider matches 1 run title @a title "Spider"
+execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.creeper matches 1 run title @a title {"color":"green","text":"Creeper"}
+execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.creaking matches 1 run title @a title {"color":"dark_red","text":"Creaking"}
+execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.hoglin matches 1 run title @a title {"color":"gold","text":"Hoglin"}
+execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.warden matches 1 run title @a title {"color":"dark_aqua","text":"Warden"}
+execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.witch matches 1 run title @a title {"color":"dark_purple","text":"Witch"}
+execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.spider matches 1 run title @a title {"color":"red","text":"Spider"}
 
 execute if score mine.handler mine.timer matches 100 run function stmc:games/mine/game/openwalls
 

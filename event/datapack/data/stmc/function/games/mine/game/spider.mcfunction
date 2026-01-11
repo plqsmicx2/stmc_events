@@ -27,3 +27,10 @@ execute if score mine.handler mine.timer matches 1680 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1720 run function stmc:games/mine/mobs/spider with storage mine:data
 execute if score mine.handler mine.timer matches 1760 run function stmc:games/mine/mobs/spider with storage mine:data
 execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/mobs/spider with storage mine:data
+
+# strength and speed
+execute as @e[type=spider] run effect give @s speed 1 0 true
+execute as @e[type=spider] run effect give @s strength 1 0 true
+# make spiders speed after 60s
+execute as @e[type=spider] if score mine.handler mine.timer matches 1200.. run \
+        effect give @s speed 1 1 true

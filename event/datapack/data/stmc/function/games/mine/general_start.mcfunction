@@ -18,6 +18,8 @@ kill @e[type=creeper]
 kill @e[type=warden]
 kill @e[type=hoglin]
 kill @e[type=creaking]
+kill @e[type=witch]
+kill @e[type=spider]
 kill @e[type=endermite]
 kill @e[type=item]
 

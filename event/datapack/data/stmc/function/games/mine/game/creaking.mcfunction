@@ -32,6 +32,6 @@ execute if score mine.handler mine.timer matches 1720 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1760 run function stmc:games/mine/mobs/creaking with storage mine:data
 execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/mobs/creaking with storage mine:data
 
-# make creaking invisible after 60s
+# make creaking speed after 60s
 execute as @e[type=creaking] if score mine.handler mine.timer matches 1200.. run \
         effect give @s speed 1 0 true
