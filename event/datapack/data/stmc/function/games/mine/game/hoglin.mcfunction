@@ -48,10 +48,10 @@ execute if score mine.handler mine.timer matches 1780 run function stmc:games/mi
 execute if score mine.handler mine.timer matches 1800 run function stmc:games/mine/mobs/hoglin with storage mine:data
 
 #arrows bigger
-execute as @e[type=arrow] unless data entity @s inBlockState at @s in stmc:mine/creaking on origin run damage @n[type=hoglin,distance=..1.3] 1 arrow by @s
+execute as @e[type=arrow] unless data entity @s inBlockState at @s in stmc:mine/creaking on origin run damage @n[type=hoglin,distance=..1.5] 1 arrow by @s
 
 # make hoglins faster after 60s
 #execute as @e[type=hoglin] if score mine.handler mine.timer matches ..1200 run \
         effect give @s speed 1 1 true
 execute as @e[type=hoglin] if score mine.handler mine.timer matches 1200.. run \
-        effect give @s speed 1 1 true
+        effect give @s speed 1 0 true
