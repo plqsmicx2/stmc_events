@@ -24,18 +24,23 @@ execute if score mine.handler mine.timer matches 1..180 run effect give @a resis
 # randomize current rotation
 execute store result storage mine:data rot int 1 run random value -179..180
 #spawn mobs
-execute if score mine.handler mine.timer matches 60 run function stmc:games/mine/mobs/witch with storage mine:data
-execute if score mine.handler mine.timer matches 80 run function stmc:games/mine/mobs/spider with storage mine:data
-execute if score mine.handler mine.timer matches 100 run function stmc:games/mine/mobs/warden with storage mine:data
+execute if score mine.handler mine.timer matches 20 if score mine.handler mine.stage.witch matches 0 run function stmc:games/mine/mobs/witch with storage mine:data
+execute if score mine.handler mine.timer matches 30 if score mine.handler mine.stage.witch matches 0 run function stmc:games/mine/mobs/creeper with storage mine:data
+execute if score mine.handler mine.timer matches 40 if score mine.handler mine.stage.spider matches 0 run function stmc:games/mine/mobs/spider with storage mine:data
+execute if score mine.handler mine.timer matches 70 if score mine.handler mine.stage.warden matches 0 run function stmc:games/mine/mobs/warden with storage mine:data
+execute if score mine.handler mine.timer matches 90 if score mine.handler mine.stage.witch matches 0 run function stmc:games/mine/mobs/creeper with storage mine:data
 #kill mobs
-execute if score mine.handler mine.timer matches 200 run kill @e[type=warden]
-execute if score mine.handler mine.timer matches 200 run kill @e[type=witch]
-execute if score mine.handler mine.timer matches 200 run kill @e[type=spider]
-execute if score mine.handler mine.timer matches 200 run kill @e[type=endermite]
+execute if score mine.handler mine.timer matches 210 run kill @e[type=warden]
+execute if score mine.handler mine.timer matches 220 run kill @e[type=witch]
+execute if score mine.handler mine.timer matches 220 run kill @e[type=spider]
+execute if score mine.handler mine.timer matches 200 run kill @e[type=creeper]
+execute if score mine.handler mine.timer matches 210 run kill @e[type=endermite]
+execute if score mine.handler mine.timer matches 220 run effect clear @a poison
 #mob effects
 execute as @e[type=witch] run effect give @s speed 1 1
 execute as @e[type=spider] run effect give @s speed 1 1 true
 execute as @e[type=spider] run effect give @s strength 1 0 true
+execute as @e[type=creeper] run data modify entity @s Fuse set value 22
 
 #voting
 
