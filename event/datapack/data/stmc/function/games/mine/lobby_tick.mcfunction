@@ -23,8 +23,8 @@ execute as @a at @s if score mine.handler mine.timer matches 200 run playsound m
 execute if score mine.handler mine.timer matches 200 run scoreboard players set @a mine.vote -1
 
 execute if score mine.handler mine.timer matches 200 run tellraw @a [{"color":"yellow","text":"\nVote!\n"},{"color":"dark_gray","text":" | "}]
-execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.creaking matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 0"},"color":"dark_red","text":"Creaking"}]
-execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.hoglin matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 1"},"color":"gold","text":"Hoglin"}]
+#execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.creaking matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 0"},"color":"dark_red","text":"Creaking"}]
+#execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.hoglin matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 1"},"color":"gold","text":"Hoglin"}]
 execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.warden matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 2"},"color":"dark_aqua","text":"Warden"}]
 execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.creeper matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 3"},"color":"green","text":"Creeper"}]
 execute if score mine.handler mine.timer matches 200 if score mine.handler mine.stage.witch matches 0 run tellraw @a [{"click_event":{"action":"run_command","command":"/trigger mine.vote set 4"},"color":"dark_purple","text":"Witch"}]
