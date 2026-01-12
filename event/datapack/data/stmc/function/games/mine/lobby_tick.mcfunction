@@ -1,19 +1,43 @@
 
 # automatic pause
 function stmc:thread/helper/automatic_pause
-
+function stmc:games/mine/game/compass
 execute as @a[gamemode=adventure] run function stmc:games/mine/game/lantern
 function stmc:games/mine/game/diamond
 function stmc:games/mine/game/endermite
 function stmc:games/mine/game/endermite_clear
 
+#inventory
 execute if score mine.handler mine.timer matches 1 run function stmc:games/mine/inventory/witch
-item replace entity @a hotbar.1 with air
-#item replace entity @a hotbar.2 with air
+execute if score mine.handler mine.timer matches 1 run item replace entity @a hotbar.1 with air
 
+#clear light blocks
+execute if score mine.handler mine.timer matches 1 run fill -50 100 -50 50 101 50 air replace light
+
+#title
 execute if score mine.handler mine.timer matches 20 run title @a title "Mine"
 execute if score mine.handler mine.timer matches 40 run title @a title "Lobby"
 
+#resistance 4
+execute if score mine.handler mine.timer matches 1..180 run effect give @a resistance 1 3 true
+
+# randomize current rotation
+execute store result storage mine:data rot int 1 run random value -179..180
+#spawn mobs
+execute if score mine.handler mine.timer matches 60 run function stmc:games/mine/mobs/witch with storage mine:data
+execute if score mine.handler mine.timer matches 80 run function stmc:games/mine/mobs/spider with storage mine:data
+execute if score mine.handler mine.timer matches 100 run function stmc:games/mine/mobs/warden with storage mine:data
+#kill mobs
+execute if score mine.handler mine.timer matches 200 run kill @e[type=warden]
+execute if score mine.handler mine.timer matches 200 run kill @e[type=witch]
+execute if score mine.handler mine.timer matches 200 run kill @e[type=spider]
+execute if score mine.handler mine.timer matches 200 run kill @e[type=endermite]
+#mob effects
+execute as @e[type=witch] run effect give @s speed 1 1
+execute as @e[type=spider] run effect give @s speed 1 1 true
+execute as @e[type=spider] run effect give @s strength 1 0 true
+
+#voting
 
 execute if score mine.handler mine.timer matches 200..500 run scoreboard players enable @a mine.vote
 
