@@ -13,6 +13,10 @@ execute if score mine.handler mine.stage.warden matches 1.. run \
         scoreboard players set mine.handler mine.vote.warden -1
 execute if score mine.handler mine.stage.creeper matches 1.. run \
         scoreboard players set mine.handler mine.vote.creeper -1
+execute if score mine.handler mine.stage.witch matches 1.. run \
+        scoreboard players set mine.handler mine.vote.witch -1
+execute if score mine.handler mine.stage.spider matches 1.. run \
+        scoreboard players set mine.handler mine.vote.spider -1
 
 # check if each one is greater
 execute if score mine.handler mine.vote.creaking > $mine.highest mine.vote run \
@@ -23,6 +27,10 @@ execute if score mine.handler mine.vote.warden > $mine.highest mine.vote run \
         scoreboard players operation $mine.highest mine.vote = mine.handler mine.vote.warden
 execute if score mine.handler mine.vote.creeper > $mine.highest mine.vote run \
         scoreboard players operation $mine.highest mine.vote = mine.handler mine.vote.creeper
+execute if score mine.handler mine.vote.witch > $mine.highest mine.vote run \
+        scoreboard players operation $mine.highest mine.vote = mine.handler mine.vote.witch
+execute if score mine.handler mine.vote.spider > $mine.highest mine.vote run \
+        scoreboard players operation $mine.highest mine.vote = mine.handler mine.vote.spider
 
 # determine which one is that maximum
 execute if score mine.handler mine.vote.creaking = $mine.highest mine.vote run \
@@ -39,3 +47,12 @@ execute if score mine.handler mine.vote.creeper = $mine.highest mine.vote run \
         execute unless score mine.handler mine.stage.creaking matches 1 unless score mine.handler mine.stage.hoglin matches 1 run \
         execute unless score mine.handler mine.stage.warden matches 1 run \
         scoreboard players set mine.handler mine.stage.creeper 1
+execute if score mine.handler mine.vote.witch = $mine.highest mine.vote run \
+        execute unless score mine.handler mine.stage.creaking matches 1 unless score mine.handler mine.stage.hoglin matches 1 run \
+        execute unless score mine.handler mine.stage.warden matches 1 unless score mine.handler mine.stage.creeper matches 1 run \
+        scoreboard players set mine.handler mine.stage.witch 1
+execute if score mine.handler mine.vote.spider = $mine.highest mine.vote run \
+        execute unless score mine.handler mine.stage.creaking matches 1 unless score mine.handler mine.stage.hoglin matches 1 run \
+        execute unless score mine.handler mine.stage.warden matches 1 unless score mine.handler mine.stage.creeper matches 1 run \
+        execute unless score mine.handler mine.stage.witch matches 1 run \
+        scoreboard players set mine.handler mine.stage.spider 1

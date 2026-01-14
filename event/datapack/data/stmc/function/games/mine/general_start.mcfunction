@@ -18,8 +18,13 @@ kill @e[type=creeper]
 kill @e[type=warden]
 kill @e[type=hoglin]
 kill @e[type=creaking]
+kill @e[type=witch]
+kill @e[type=spider]
 kill @e[type=endermite]
 kill @e[type=item]
+kill @e[type=chicken]
+kill @e[type=arrow]
+kill @e[type=zombie]
 
 clone 59 5 59 -59 0 -59 -59 20 -59
 clone 59 5 59 -59 0 -59 -59 40 -59
@@ -43,3 +48,5 @@ execute if score mine.handler mine.stage.creaking matches 1 run function stmc:ga
 execute if score mine.handler mine.stage.hoglin matches 1 run function stmc:games/mine/inventory/hoglin
 execute if score mine.handler mine.stage.warden matches 1 run function stmc:games/mine/inventory/warden
 execute if score mine.handler mine.stage.creeper matches 1 run function stmc:games/mine/inventory/creeper
+execute if score mine.handler mine.stage.witch matches 1 run function stmc:games/mine/inventory/witch
+execute if score mine.handler mine.stage.spider matches 1 run function stmc:games/mine/inventory/spider

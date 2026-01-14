@@ -1,7 +1,11 @@
-setblock 0 255 0 barrel{Items:[{Slot:0b,id:"minecraft:compass",count:1,components:{"minecraft:lodestone_tracker":{target:{dimension:"minecraft:overworld",pos:[I;0,0,0]},tracked:false}}}]}
 
-data modify block 0 255 0 Items[0].components."minecraft:lodestone_tracker".target.dimension set from entity @s Dimension
-
-execute at @s as @e[type=!player,type=!item,sort=furthest] positioned ~-20 ~-1 ~-20 if entity @s[dx=40,dy=2,dz=40] run data modify block 0 255 0 Items[0].components."minecraft:lodestone_tracker".target.pos set from entity @s Pos
-
-item replace entity @s weapon.offhand from block 0 255 0 container.0
+execute as @a if items entity @s weapon.offhand compass run function stmc:games/mine/game/compass/offhand
+execute as @a if items entity @s hotbar.0 compass run function stmc:games/mine/game/compass/0
+execute as @a if items entity @s hotbar.1 compass run function stmc:games/mine/game/compass/1
+execute as @a if items entity @s hotbar.2 compass run function stmc:games/mine/game/compass/2
+execute as @a if items entity @s hotbar.3 compass run function stmc:games/mine/game/compass/3
+execute as @a if items entity @s hotbar.4 compass run function stmc:games/mine/game/compass/4
+execute as @a if items entity @s hotbar.5 compass run function stmc:games/mine/game/compass/5
+execute as @a if items entity @s hotbar.6 compass run function stmc:games/mine/game/compass/6
+execute as @a if items entity @s hotbar.7 compass run function stmc:games/mine/game/compass/7
+execute as @a if items entity @s hotbar.8 compass run function stmc:games/mine/game/compass/8

@@ -15,8 +15,13 @@ kill @e[type=warden]
 kill @e[type=hoglin]
 kill @e[type=creeper]
 kill @e[type=creaking]
+kill @e[type=witch]
+kill @e[type=spider]
 kill @e[type=endermite]
 kill @e[type=item]
+kill @e[type=chicken]
+kill @e[type=arrow]
+kill @e[type=zombie]
 
 execute in stmc:mine/lobby run tp @a 0 100 0
 
@@ -26,11 +31,15 @@ execute if score mine.handler mine.stage.creaking matches 1 run scoreboard playe
 execute if score mine.handler mine.stage.creeper matches 1 run scoreboard players set mine.handler mine.stage.creeper 2
 execute if score mine.handler mine.stage.hoglin matches 1 run scoreboard players set mine.handler mine.stage.hoglin 2
 execute if score mine.handler mine.stage.warden matches 1 run scoreboard players set mine.handler mine.stage.warden 2
+execute if score mine.handler mine.stage.witch matches 1 run scoreboard players set mine.handler mine.stage.witch 2
+execute if score mine.handler mine.stage.spider matches 1 run scoreboard players set mine.handler mine.stage.spider 2
 scoreboard players set mine.handler mine.stage.lobby 1
 
 scoreboard players reset mine.handler mine.vote.creaking
 scoreboard players reset mine.handler mine.vote.creeper
 scoreboard players reset mine.handler mine.vote.hoglin
 scoreboard players reset mine.handler mine.vote.warden
+scoreboard players reset mine.handler mine.vote.witch
+scoreboard players reset mine.handler mine.vote.spider
 
 scoreboard players reset @a mine.vote
