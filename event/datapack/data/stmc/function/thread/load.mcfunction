@@ -149,6 +149,9 @@ scoreboard objectives add blitz.stage dummy
 scoreboard objectives add collect.stage dummy
 scoreboard objectives add sprint.stage dummy
 scoreboard objectives add dungeons.stage dummy
+scoreboard objectives add arena.stage dummy
+scoreboard objectives add mystery.stage dummy
+scoreboard objectives add zombies.stage dummy
 scoreboard objectives add finale.stage dummy
 
 # and reset handlers associated with each one
@@ -164,6 +167,9 @@ scoreboard players reset blitz.handler blitz.stage
 scoreboard players reset collect.handler collect.stage
 scoreboard players reset sprint.handler sprint.stage
 scoreboard players reset dungeons.handler dungeons.stage
+scoreboard players reset arena.handler arena.stage
+scoreboard players reset mystery.handler mystery.stage
+scoreboard players reset zombies.handler zombies.stage
 scoreboard players reset finale.handler finale.stage
 
 # reset player points

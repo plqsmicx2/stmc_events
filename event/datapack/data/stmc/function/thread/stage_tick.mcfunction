@@ -15,6 +15,9 @@
 # 8: Collect
 # 9: Sprint
 # 10: Dungeons
+# 11: Arena
+# 12: Mystery
+# 13: Zombies
 
 # Default to lobby
 scoreboard players set stmc.handler stats.activeGame -1
@@ -66,6 +69,9 @@ execute if score stmc.handler stats.activeGame matches 7 run function stmc:games
 execute if score stmc.handler stats.activeGame matches 8 run function stmc:games/collect/tick
 execute if score stmc.handler stats.activeGame matches 9 run function stmc:games/sprint/tick
 execute if score stmc.handler stats.activeGame matches 10 run function stmc:games/dungeons/tick
+execute if score stmc.handler stats.activeGame matches 11 run function stmc:games/arena/tick
+execute if score stmc.handler stats.activeGame matches 12 run function stmc:games/mystery/tick
+execute if score stmc.handler stats.activeGame matches 13 run function stmc:games/zombies/tick
 
 # <===== FINAL LOBBY =====>
 
