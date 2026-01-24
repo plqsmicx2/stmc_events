@@ -12,8 +12,10 @@ scoreboard objectives add lobby.voting.blitzCount trigger
 scoreboard objectives add lobby.voting.brawlCount trigger
 
 # get # of votes for each player
+# everyone gets 1 vote
 scoreboard objectives add .voteCount dummy
-execute as @a store result score @s .voteCount run clear @s sunflower 0
+execute as @a run scoreboard players set @s .voteCount 1
+#execute as @a store result score @s .voteCount run clear @s sunflower 0
 
 # store values
 scoreboard players set lobby.handler lobby.voting.raceCount 0

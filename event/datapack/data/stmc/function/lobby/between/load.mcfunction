@@ -3,25 +3,29 @@
 # this function runs whenever instantiating a lobby
 
 # teleport players to spawn
-execute as @a in stmc:lobby/main run tp @s 0 100 0
+#execute as @a in stmc:lobby/main run tp @s 0 100 0
+tp @a -21 70 -5
 
 # spawnpoint players
-execute as @a in stmc:lobby/main run spawnpoint @s 0 100 0 0 0
+spawnpoint @a 0 64 0
 
 # force gamemode
-gamemode adventure @a
+gamemode survival @a
 
 # set time
 #night time
-time set 22000
+#time set 22000
 
 # set weather
 weather clear
 
 # set appropriate gamerules
-gamerule advance_time false
+gamerule advance_time true
 gamerule advance_weather false
 gamerule keep_inventory true
+gamerule spawn_mobs true
+gamerule spawn_monsters true
+gamerule pvp false
 
 # clear inventories
 clear @a
@@ -30,14 +34,10 @@ clear @a
 effect clear @a
 
 # ensure full health & hunger
-execute as @a run attribute @s max_health base set 20
-execute as @a run attribute @s max_health modifier remove all
 effect give @a saturation 1 110 true
 effect give @a instant_health 1 110 true
 
 # set attributes
-execute as @a run attribute @s attack_damage base set 0
-execute as @a run attribute @s knockback_resistance base set 1000
 
 # set xp
 xp set @a 0 levels
@@ -98,8 +98,8 @@ execute if score stmc.handler event.stage matches 14 run scoreboard players set 
 execute if score stmc.handler event.stage matches 14 run scoreboard players set stmc.handler event.timer.bgSecs 0
 
 # summon trading villager
-execute in stmc:lobby/main run kill @e[type=villager]
-execute in stmc:lobby/main run summon villager -30 100 30 \ 
+#execute in stmc:lobby/main run kill @e[type=villager]
+#execute in stmc:lobby/main run summon villager -30 100 30 \ 
         {Invulnerable:1b,Glowing:1b,PersistenceRequired:1b,NoAI:1b,Rotation:[-90F,0F], \
         CustomName:{"bold":true,"color":"dark_green","text":"Banker"}, \
         active_effects:[{id:"minecraft:regeneration",amplifier:4,duration:-1,show_particles:0b},{id:"minecraft:resistance",amplifier:10,duration:-1,show_particles:0b}], \

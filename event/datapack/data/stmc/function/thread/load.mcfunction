@@ -19,14 +19,14 @@ data modify storage stmc:global blueName set value "Blue Moon"
 
 # reset our booleans tracking if games have been played (& set games not being played to -1)
 data modify storage stmc:global racePlayed set value 0
-data modify storage stmc:global solvePlayed set value 0
-data modify storage stmc:global trialsPlayed set value 0
+data modify storage stmc:global solvePlayed set value -1
+data modify storage stmc:global trialsPlayed set value -1
 data modify storage stmc:global collectPlayed set value -1
 data modify storage stmc:global delvePlayed set value -1
-data modify storage stmc:global minePlayed set value 0
-data modify storage stmc:global extractPlayed set value 0
-data modify storage stmc:global blitzPlayed set value 0
-data modify storage stmc:global brawlPlayed set value 0
+data modify storage stmc:global minePlayed set value -1
+data modify storage stmc:global extractPlayed set value -1
+data modify storage stmc:global blitzPlayed set value -1
+data modify storage stmc:global brawlPlayed set value -1
 
 # create teams
 function stmc:thread/helper/teams/create_teams with storage stmc:global

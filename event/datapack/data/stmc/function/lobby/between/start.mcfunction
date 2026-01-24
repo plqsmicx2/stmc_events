@@ -7,4 +7,4 @@ execute unless score stmc.handler event.stage matches 0 run scoreboard players a
 function stmc:lobby/between/load
 
 # reset lobby
-execute if score stmc.handler event.stage matches 0 run function stmc:lobby/between/reset_world
+#execute if score stmc.handler event.stage matches 0 run function stmc:lobby/between/reset_world

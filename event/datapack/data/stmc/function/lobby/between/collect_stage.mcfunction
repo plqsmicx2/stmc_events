@@ -13,17 +13,17 @@ execute if score stmc.handler event.timer.bgSecs matches ..-1 run scoreboard pla
 
 # FIRST LOBBY:
 
-execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 10 run \
+#execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 10 run \
         gamemode spectator @a
 
 # announce event start
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 10 run \
+#execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 10 run \
         tp @a -40 135 -35 -50 25
 $execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 10 run \
         title @a title ["",{text:"$(eventName)",color:green,bold:true}]
 
 # quick event explanation
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
+#execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tp @a 11 95 47 -225 15
 execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tellraw @a ["",{text:"",color:green}]
@@ -36,7 +36,7 @@ execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby
 execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 100 run \
         tellraw @a ["",{text:"",color:green}]
 
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 200 run \
+#execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 200 run \
         tp @a -15 98 40 120 0
 execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 200 run \
         tellraw @a ["",{text:"",color:green}]
@@ -53,9 +53,9 @@ execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby
 execute if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 300 run \
         tellraw @a ["",{text:"",color:green}]
 
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 400 run \
+#execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 400 run \
         tp @a 0 101 0
-execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 400 run \
+#execute in stmc:lobby/main if score stmc.handler event.stage matches 0 if score lobby.handler lobby.timer matches 400 run \
         gamemode adventure @a
 
 # NOT FIRST LOBBY:
