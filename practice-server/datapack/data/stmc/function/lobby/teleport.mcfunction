@@ -13,3 +13,4 @@ execute in stmc:lobby/main run spawnpoint @s 0 100 0
 
 scoreboard players set @s race.gameActive 0
 scoreboard players set @s extract.gamesActive 0
+scoreboard players set @s sprint.gameActive 0

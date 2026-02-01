@@ -28,6 +28,7 @@ team modify dim.sprint color dark_green
 function stmc:games/race/load
 function stmc:games/extract/load
 function stmc:games/trials/load
+function stmc:games/sprint/load
 
 # reset sidebars
 scoreboard objectives remove lobby.sidebar

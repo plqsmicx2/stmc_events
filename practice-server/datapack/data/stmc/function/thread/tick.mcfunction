@@ -18,3 +18,4 @@ function stmc:lobby/tick
 function stmc:games/race/tick
 function stmc:games/extract/tick
 function stmc:games/trials/tick
+function stmc:games/sprint/tick
