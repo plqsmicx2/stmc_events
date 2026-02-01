@@ -30,3 +30,6 @@ scoreboard objectives add scramble.roundsCompleted dummy
 scoreboard objectives add scramble.current_round_block dummy
 scoreboard objectives add scramble.current_round_length dummy
 scoreboard objectives add scramble.current_round_length_delay dummy
+
+# reset sidebar
+scoreboard objectives remove scramble.sidebar

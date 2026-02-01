@@ -3,6 +3,18 @@
 # calculate fastest lap time
 function stmc:games/race/flap_calculation
 
+# determine if player set a new record
+scoreboard objectives add .record dummy
+execute store result score race.handler .record run data get storage race:data record.time
+execute if score @s race.laptime.total < race.handler .record as @s run function stmc:games/race/update_record
+scoreboard objectives remove .record
+
+# determine if player set a new record
+scoreboard objectives add .recordLap dummy
+execute store result score race.handler .recordLap run data get storage race:data record.lap.time
+execute if score @s race.fastest_lap < race.handler .recordLap as @s run function stmc:games/race/update_lap_record
+scoreboard objectives remove .recordLap
+
 # determine minutes
 scoreboard objectives add race.fastest_lap.mins dummy
 scoreboard objectives add race.fastest_lap.mins_temp dummy
@@ -39,18 +51,6 @@ execute if score @s race.fastest_lap.secs matches 0..9 if score @s race.laptime.
         [{selector:"@s"},{text:" completed the race in ",color:green},{score:{name:"@s",objective:race.laptime.mins},color:green},{text:":",color:green},{score:{name:"@s",objective:race.laptime.seconds},color:green},{text:".",color:green},{score:{name:"@s",objective:race.laptime.tick},color:green},{text:" (",color:green},{score:{name:"@s",objective:race.fastest_lap.mins},color:green},{text:":0",color:green},{score:{name:"@s",objective:race.fastest_lap.secs},color:green},{text:".",color:green},{score:{name:"@s",objective:race.fastest_lap},color:green},{text:")",color:green}]
 execute if score @s race.fastest_lap.secs matches 10.. if score @s race.laptime.seconds matches 10.. run tellraw @a[team=dim.race] \
         [{selector:"@s"},{text:" completed the race in ",color:green},{score:{name:"@s",objective:race.laptime.mins},color:green},{text:":",color:green},{score:{name:"@s",objective:race.laptime.seconds},color:green},{text:".",color:green},{score:{name:"@s",objective:race.laptime.tick},color:green},{text:" (",color:green},{score:{name:"@s",objective:race.fastest_lap.mins},color:green},{text:":",color:green},{score:{name:"@s",objective:race.fastest_lap.secs},color:green},{text:".",color:green},{score:{name:"@s",objective:race.fastest_lap},color:green},{text:")",color:green}]
-
-# determine if player set a new record
-scoreboard objectives add .record dummy
-execute store result score race.handler .record run data get storage race:data record.time
-execute if score @s race.laptime.total < race.handler .record as @s run function stmc:games/race/update_record
-scoreboard objectives remove .record
-
-# determine if player set a new record
-scoreboard objectives add .recordLap dummy
-execute store result score race.handler .recordLap run data get storage race:data record.lap.time
-execute if score @s race.fastest_lap < race.handler .recordLap as @s run function stmc:games/race/update_lap_record
-scoreboard objectives remove .recordLap
 
 # teleport player back to race lobby
 execute in stmc:race/daveys_descent run tp @s 0 100 197

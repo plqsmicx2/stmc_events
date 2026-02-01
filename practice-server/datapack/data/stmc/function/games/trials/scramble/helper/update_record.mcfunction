@@ -2,10 +2,12 @@
 # if @s set a new record
 
 # new record announcement!
-tellraw @a [{selector:"@s"},{text:" set a new Scramble rounds survived record!",color:aqua}]
+tellraw @a ["",{selector:"@s",bold:true},{text:" set a new Scramble rounds survived record! ",color:aqua},\
+        {storage:"scramble:data",nbt:"record.rounds",color:gold},{text:" --> ",color:aqua},\
+        {score:{name:"@s",objective:"scramble.roundsCompleted"},color:gold}]
 
 # store @s's rounds survived
-execute store result storage scramble:data record.rounds int 1 run scoreboard players get @s race.laptime.total
+execute store result storage scramble:data record.rounds int 1 run scoreboard players get @s scramble.roundsCompleted
 
 # store @s's nickname
 execute at @s in stmc:trials/scramble run summon item_display ~ ~ ~ {Tags:[profile]}

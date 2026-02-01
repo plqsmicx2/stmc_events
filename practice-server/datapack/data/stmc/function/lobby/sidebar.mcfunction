@@ -19,7 +19,7 @@ scoreboard players display numberformat blank.2 lobby.sidebar blank
 
 # server ip
 scoreboard players set lobby.ip lobby.sidebar 2
-scoreboard players display name lobby.ip lobby.sidebar {text: "mc-stmc.net", color: "white"}
+scoreboard players display name lobby.ip lobby.sidebar {text: "[mc-stmc.net]", color: "#BABABA"}
 scoreboard players display numberformat lobby.ip lobby.sidebar blank
 
 # status

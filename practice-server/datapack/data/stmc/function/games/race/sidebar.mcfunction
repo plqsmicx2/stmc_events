@@ -9,10 +9,20 @@
 # <white>.race<white>
 # <white>#:##.##<white>
 
-scoreboard objectives add race.sidebar dummy {"text": "  STMC Practice  ", "color": "green", "bold": true}
+scoreboard objectives add race.sidebar dummy {"text": "  Race  ", "color": "green", "bold": true}
 scoreboard objectives setdisplay sidebar.team.green race.sidebar
 
 # <===== BUILD FROM THE BOTTOM =====>
+
+# server ip
+scoreboard players set race.ip race.sidebar 1
+scoreboard players display name race.ip race.sidebar {text:"[mc.stmc.net]", color:"#BABABA"}
+scoreboard players display numberformat race.ip race.sidebar blank
+
+# blank line
+scoreboard players set race.empty1 race.sidebar 2
+scoreboard players display name race.empty1 race.sidebar {text:""}
+scoreboard players display numberformat race.empty1 race.sidebar blank
 
 # announce record lap
 execute store result score .raceLap race.laptime.total run data get storage race:data record.lap.time
@@ -42,15 +52,17 @@ scoreboard players set race.handler race.laptime.total 5
 scoreboard players operation .raceLap race.laptime.total *= race.handler race.laptime.total
 
 # record lap time
-scoreboard players set race.recordTimeLap race.sidebar 1
+scoreboard players set race.recordTimeLap race.sidebar 3
 execute if score .raceLap race.laptime.seconds matches 0..9 run scoreboard players display name race.recordTimeLap race.sidebar \
-        [{score:{name:".raceLap",objective:"race.laptime.mins"},color:white},{text:":0",color:white},{score:{name:".raceLap",objective:"race.laptime.seconds"},color:white},{text:".",color:white},{score:{name:".raceLap",objective:"race.laptime.total"},color:white}]
+        [{score:{name:".raceLap",objective:"race.laptime.mins"},color:gold},{text:":0",color:gold},{score:{name:".raceLap",objective:"race.laptime.seconds"},color:gold},{text:".",color:gold},{score:{name:".raceLap",objective:"race.laptime.total"},color:gold}]
 execute if score .raceLap race.laptime.seconds matches 10.. run scoreboard players display name race.recordTimeLap race.sidebar \
-        [{score:{name:".raceLap",objective:"race.laptime.mins"},color:white},{text:":",color:white},{score:{name:".raceLap",objective:"race.laptime.seconds"},color:white},{text:".",color:white},{score:{name:".raceLap",objective:"race.laptime.total"},color:white}]
+        [{score:{name:".raceLap",objective:"race.laptime.mins"},color:gold},{text:":",color:gold},{score:{name:".raceLap",objective:"race.laptime.seconds"},color:gold},{text:".",color:gold},{score:{name:".raceLap",objective:"race.laptime.total"},color:gold}]
+scoreboard players display numberformat race.recordTimeLap race.sidebar blank
 
 # record lap player
-scoreboard players set race.recordPlayerLap race.sidebar 2
-scoreboard players display name race.recordPlayerLap race.sidebar [{text:"Lap: ",color:yellow},{"storage":"race:data","nbt":"record.lap.name","color": "yellow"}]
+scoreboard players set race.recordPlayerLap race.sidebar 4
+scoreboard players display name race.recordPlayerLap race.sidebar [{text:"Lap: ",color:white},{"storage":"race:data","nbt":"record.lap.name","color": "gold"}]
+scoreboard players display numberformat race.recordPlayerLap race.sidebar blank
 
 # announce record
 execute store result score .race race.laptime.total run data get storage race:data record.time
@@ -80,31 +92,29 @@ scoreboard players set race.handler race.laptime.total 5
 scoreboard players operation .race race.laptime.total *= race.handler race.laptime.total
 
 # record time
-scoreboard players set race.recordTime race.sidebar 3
+scoreboard players set race.recordTime race.sidebar 5
 execute if score .race race.laptime.seconds matches 0..9 run scoreboard players display name race.recordTime race.sidebar \
-        [{score:{name:".race",objective:"race.laptime.mins"},color:white},{text:":0",color:white},{score:{name:".race",objective:"race.laptime.seconds"},color:white},{text:".",color:white},{score:{name:".race",objective:"race.laptime.total"},color:white}]
+        [{score:{name:".race",objective:"race.laptime.mins"},color:gold},{text:":0",color:gold},{score:{name:".race",objective:"race.laptime.seconds"},color:gold},{text:".",color:gold},{score:{name:".race",objective:"race.laptime.total"},color:gold}]
 execute if score .race race.laptime.seconds matches 10.. run scoreboard players display name race.recordTime race.sidebar \
-        [{score:{name:".race",objective:"race.laptime.mins"},color:white},{text:":",color:white},{score:{name:".race",objective:"race.laptime.seconds"},color:white},{text:".",color:white},{score:{name:".race",objective:"race.laptime.total"},color:white}]
+        [{score:{name:".race",objective:"race.laptime.mins"},color:gold},{text:":",color:gold},{score:{name:".race",objective:"race.laptime.seconds"},color:gold},{text:".",color:gold},{score:{name:".race",objective:"race.laptime.total"},color:gold}]
+scoreboard players display numberformat race.recordTime race.sidebar blank
 
 # record player
-scoreboard players set race.recordPlayer race.sidebar 4
-scoreboard players display name race.recordPlayer race.sidebar [{text:"Total: ",color:yellow},{"storage":"race:data","nbt":"record.name","color": "yellow"}]
+scoreboard players set race.recordPlayer race.sidebar 6
+scoreboard players display name race.recordPlayer race.sidebar [{text:"Total: ",color:white},{"storage":"race:data","nbt":"record.name","color": "gold"}]
+scoreboard players display numberformat race.recordPlayer race.sidebar blank
 
 # <==== HEADER INFO =====>
 
 # blank line #3
-scoreboard players set §b race.sidebar 5
+scoreboard players set §b race.sidebar 7
+scoreboard players display numberformat §b race.sidebar blank
 
 # record header
-scoreboard players set race.recordHead race.sidebar 6
+scoreboard players set race.recordHead race.sidebar 8
 scoreboard players display name race.recordHead race.sidebar {"text": "Current Records:", "color": "yellow"}
+scoreboard players display numberformat race.recordHead race.sidebar blank
 
 # blank line #2
-scoreboard players set §a race.sidebar 7
-
-# current game
-scoreboard players set race.name race.sidebar 8
-scoreboard players display name race.name race.sidebar {"text": "Race", "color": "green", "bold": true}
-
-# blank line #1
-scoreboard players set § race.sidebar 9
+scoreboard players set §a race.sidebar 9
+scoreboard players display numberformat §a race.sidebar blank

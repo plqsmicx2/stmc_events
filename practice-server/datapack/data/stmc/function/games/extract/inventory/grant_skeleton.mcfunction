@@ -23,4 +23,4 @@ item replace entity @s armor.legs with leather_boots[enchantments={"minecraft:bi
 item replace entity @s hotbar.0 with wooden_sword
 item replace entity @s hotbar.2 with crossbow[enchantments={"minecraft:quick_charge":1}]
 item replace entity @s hotbar.3 with arrow 6
-item replace entity @s hotbar.4 with gray_concrete[can_place_on={blocks:"#extract:all"}] 3
+item replace entity @s hotbar.4 with gray_concrete[can_place_on={blocks:"#stmc:all"}] 3

@@ -10,7 +10,8 @@ effect clear @s
 clear @s
 
 # announce death
-tellraw @a[team=dim.tr.scramble] [{selector:"@s",color:aqua,bold:true},{text:" died!",color:red,bold:false}]
+tellraw @a[team=dim.tr.scramble] ["",{text:"💀 ",color:red},\
+        {selector:"@s",color:aqua,bold:true},{text:" died!",color:red}]
 
 # track rounds completed (and update records if applicable)
 scoreboard players operation @s scramble.roundsCompleted = scramble.lobby1 scramble.roundsCompleted

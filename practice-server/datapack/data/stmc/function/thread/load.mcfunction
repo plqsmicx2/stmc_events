@@ -1,3 +1,5 @@
+tellraw @a {text:"Reloading Datapack!",color:green}
+
 # create teams
 team add dim.lobby
 team add dim.race
