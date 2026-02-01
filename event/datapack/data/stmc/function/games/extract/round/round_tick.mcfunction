@@ -35,7 +35,7 @@ execute if score extract.handler extract.timer.game.round matches 0..60 run func
 execute as @a if score extract.handler extract.timer.game.round matches 60 run function stmc:games/extract/inventory/grant_base
 
 # automatically pause between rounds (but not during build round phase or <2s before start)
-execute if score extract.handler extract.timer.game.round matches 61..360 run function thread:automatic_pause
+execute if score extract.handler extract.timer.game.round matches 61..360 run function stmc:thread/helper/automatic_pause
 
 # teleport players @62 ticks (to ensure dced players still get it)
 execute if score extract.handler extract.timer.game.round matches 62 run function stmc:games/extract/helper/player_teleport

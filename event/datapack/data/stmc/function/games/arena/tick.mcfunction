@@ -9,7 +9,7 @@
 
 # run functions every tick
 execute if score arena.handler arena.stage matches 3..4 run function stmc:games/arena/helper/points/update
-function stmc:games/arena/sidebar with storage stmc:global
+function stmc:games/arena/sidebar/sidebar with storage stmc:global
 
 # determine players on a team
 function stmc:games/arena/helper/game/player_count
