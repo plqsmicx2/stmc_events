@@ -1,4 +1,4 @@
-tellraw @a {text:"Reloading Datapack!",color:green}
+tellraw @a {text:"Datapack Reloaded!",color:green}
 
 # create teams
 team add dim.lobby

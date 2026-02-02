@@ -28,9 +28,11 @@ execute in stmc:trials/scramble if score scramble.lobby1 scramble.timer.game mat
 # check # of alive players
 scoreboard objectives add .players dummy
 scoreboard players set scramble.lobby1 .players 0
-execute at @a as @s[team=dim.tr.scramble,x=193,y=97,z=-7,dx=20,dy=10,dz=20] run \
+execute as @a at @s[team=dim.tr.scramble,x=193,y=97,z=-7,dx=20,dy=10,dz=20] run \
         scoreboard players add scramble.lobby1 .players 1
 
 # and reset the whole game if no players are alive
+execute if score scramble.lobby1 .players matches 0 if score scramble.lobby1 scramble.roundsCompleted matches 1.. \
+        run scoreboard players set scramble.lobby1 scramble.timer.game 0
 execute if score scramble.lobby1 .players matches 0 if score scramble.lobby1 scramble.roundsCompleted matches 1.. \
         run scoreboard players set scramble.handler scramble.lobby1 0

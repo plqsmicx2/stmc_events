@@ -6,7 +6,7 @@ effect clear @a
 execute in stmc:arena run forceload remove 350 75 -20 0
 
 # remove bossbar
-bossbar remove arena.timer
+#bossbar remove arena.timer
 
 # update points
 execute as @a if score stmc.handler event.stage matches 1 run scoreboard players operation @s stats.points.indiv.g1 = @s arena.points.indiv

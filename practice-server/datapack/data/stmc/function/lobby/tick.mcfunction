@@ -1,6 +1,12 @@
 # update lobby sidebar
 function stmc:lobby/sidebar
 
+# old dimension check
+execute as @a[nbt={Dimension:"lobby:lobby"}] in stmc:lobby/main run tp @s 0 100 0
+execute as @a[nbt={Dimension:"lobby:lobby"}] in stmc:lobby/main run spawnpoint @s 0 100 0
+execute as @a[nbt={Dimension:"race:race"}] in stmc:lobby/main run tp @s 0 100 0
+execute as @a[nbt={Dimension:"race:race"}] in stmc:lobby/main run spawnpoint @s 0 100 0
+
 # interaction check
 execute in stmc:lobby/main as @e[tag=race] on attacker run function stmc:games/race/teleport
 execute in stmc:lobby/main as @e[tag=extract] on attacker run function stmc:games/extract/teleport
