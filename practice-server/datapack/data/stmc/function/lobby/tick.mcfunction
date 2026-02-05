@@ -12,6 +12,9 @@ execute in stmc:lobby/main as @e[tag=race] on attacker run function stmc:games/r
 execute in stmc:lobby/main as @e[tag=extract] on attacker run function stmc:games/extract/teleport
 execute in stmc:lobby/main as @e[tag=trials] on attacker run function stmc:games/trials/teleport
 execute in stmc:lobby/main as @e[tag=sprint] on attacker run function stmc:games/sprint/teleport
+execute in stmc:lobby/main as @e[tag=arena] on attacker run function stmc:games/arena/teleport
+execute in stmc:lobby/main as @e[tag=brawl] on attacker run function stmc:games/brawl/teleport
+execute in stmc:lobby/main as @e[tag=mystery] on attacker run function stmc:games/mystery/teleport
 execute in stmc:lobby/main as @e[type=interaction] run data remove entity @s attack
 
 execute in stmc:lobby/main run kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]

@@ -6,6 +6,8 @@ execute in stmc:trials/lobby as @e[tag=replicate] on target run function stmc:ga
 execute in stmc:trials/lobby as @e[tag=scramble] on target run function stmc:games/trials/scramble/teleport
 execute in stmc:trials/lobby as @e[tag=spleef] on target run function stmc:games/trials/spleef/teleport
 execute in stmc:trials/lobby as @e[tag=towers] on target run function stmc:games/trials/towers/teleport
+execute in stmc:trials/lobby as @e[tag=solve] on target run function stmc:games/trials/solve/teleport
+execute in stmc:trials/lobby as @e[tag=joust] on target run function stmc:games/joust/teleport
 execute in stmc:trials/lobby as @e[type=interaction] run data remove entity @s interaction
 
 execute in stmc:trials/lobby run kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
@@ -21,3 +23,4 @@ function stmc:games/trials/replicate/tick
 function stmc:games/trials/scramble/tick
 function stmc:games/trials/spleef/tick
 function stmc:games/trials/towers/tick
+function stmc:games/trials/solve/tick
