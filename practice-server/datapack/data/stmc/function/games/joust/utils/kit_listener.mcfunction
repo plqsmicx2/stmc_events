@@ -1,13 +1,13 @@
 # listens for interactions with kits
 
 # standardize interact type
-execute in stmc:joust/main as @e[type=interaction] if data entity @s interaction run data modify entity @s attack set from entity @s interaction
+execute in stmc:joust/main as @e[type=interaction,distance=..1000] if data entity @s interaction run data modify entity @s attack set from entity @s interaction
 
 # potions
 
 # tag players with a potion
-execute in stmc:joust/main as @e[type=interaction] on attacker if items entity @s hotbar.* potion run tag @s add upgrade_potion
-execute in stmc:joust/main as @e[type=interaction] on attacker if items entity @s hotbar.* splash_potion run tag @s add upgrade_potion
+execute in stmc:joust/main as @e[type=interaction,distance=..1000] on attacker if items entity @s hotbar.* potion run tag @s add upgrade_potion
+execute in stmc:joust/main as @e[type=interaction,distance=..1000] on attacker if items entity @s hotbar.* splash_potion run tag @s add upgrade_potion
 
 # remove temporary empty potion
 execute as @a[team=dim.joust,tag=upgrade_potion] unless items entity @s hotbar.* splash_potion run clear @s potion 1
@@ -38,7 +38,7 @@ tag @a[team=dim.joust] remove upgrade_potion
 # spears
 
 # clear inventory of spears
-execute in stmc:joust/main as @e[type=interaction] on attacker run clear @s #spears
+execute in stmc:joust/main as @e[type=interaction,distance=..1000] on attacker run clear @s #spears
 
 # give new spear
 execute in stmc:joust/main as @e[tag=lifesteal] on attacker run give @s wooden_spear[unbreakable={},enchantments={"stmc:lifesteal":1}]
@@ -50,5 +50,5 @@ execute in stmc:joust/main as @e[tag=swiftness] on attacker run give @s diamond_
 execute in stmc:joust/main as @e[tag=sharpness] on attacker run give @s netherite_spear[unbreakable={},enchantments={sharpness:2}]
 
 # reset interaction data
-execute in stmc:joust/main as @e[type=interaction] run data remove entity @s attack
-execute in stmc:joust/main as @e[type=interaction] run data remove entity @s interaction
+execute in stmc:joust/main as @e[type=interaction,distance=..1000] run data remove entity @s attack
+execute in stmc:joust/main as @e[type=interaction,distance=..1000] run data remove entity @s interaction

@@ -2,13 +2,14 @@
 function stmc:games/trials/sidebar
 
 # interaction check
-execute in stmc:trials/lobby as @e[tag=replicate] on target run function stmc:games/trials/replicate/teleport
-execute in stmc:trials/lobby as @e[tag=scramble] on target run function stmc:games/trials/scramble/teleport
-execute in stmc:trials/lobby as @e[tag=spleef] on target run function stmc:games/trials/spleef/teleport
-execute in stmc:trials/lobby as @e[tag=towers] on target run function stmc:games/trials/towers/teleport
-execute in stmc:trials/lobby as @e[tag=solve] on target run function stmc:games/trials/solve/teleport
-execute in stmc:trials/lobby as @e[tag=joust] on target run function stmc:games/joust/teleport
-execute in stmc:trials/lobby as @e[type=interaction] run data remove entity @s interaction
+execute in stmc:trials/lobby as @e[type=interaction,distance=..1000] if data entity @s interaction run data modify entity @s attack set from entity @s interaction
+execute in stmc:trials/lobby as @e[tag=replicate] on attacker run function stmc:games/trials/replicate/teleport
+execute in stmc:trials/lobby as @e[tag=scramble] on attacker run function stmc:games/trials/scramble/teleport
+execute in stmc:trials/lobby as @e[tag=spleef] on attacker run function stmc:games/trials/spleef/teleport
+execute in stmc:trials/lobby as @e[tag=towers] on attacker run function stmc:games/trials/towers/teleport
+execute in stmc:trials/lobby as @e[tag=solve] on attacker run function stmc:games/trials/solve/teleport
+execute in stmc:trials/lobby as @e[tag=joust] on attacker run function stmc:games/joust/teleport
+execute in stmc:trials/lobby as @e[type=interaction,distance=..1000] run data remove entity @s attack
 
 execute in stmc:trials/lobby run kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
 execute in stmc:trials/lobby run kill @e[type=item,nbt={Item:{id:"minecraft:spruce_leaves"}}]
