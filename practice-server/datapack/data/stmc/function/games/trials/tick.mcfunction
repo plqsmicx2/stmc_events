@@ -9,6 +9,7 @@ execute in stmc:trials/lobby as @e[tag=spleef] on attacker run function stmc:gam
 execute in stmc:trials/lobby as @e[tag=towers] on attacker run function stmc:games/trials/towers/teleport
 execute in stmc:trials/lobby as @e[tag=solve] on attacker run function stmc:games/trials/solve/teleport
 execute in stmc:trials/lobby as @e[tag=joust] on attacker run function stmc:games/joust/teleport
+execute in stmc:trials/lobby as @e[type=interaction,distance=..1000] run data remove entity @s interaction
 execute in stmc:trials/lobby as @e[type=interaction,distance=..1000] run data remove entity @s attack
 
 execute in stmc:trials/lobby run kill @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick"}}]
