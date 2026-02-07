@@ -4,7 +4,7 @@
 scoreboard objectives add joust.return used:carrot_on_a_stick
 
 # every five kills scoreboard
-scoreboard objectives add joustKillsPotion dummy
+scoreboard objectives add joustKillsPotion killed:player
 
 # despawn kits & interactions
 execute in stmc:joust/main run kill @e[type=armor_stand]

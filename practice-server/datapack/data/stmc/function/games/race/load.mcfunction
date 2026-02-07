@@ -21,6 +21,7 @@ scoreboard objectives add race.laptime.mins dummy
 scoreboard objectives add race.fastest_lap dummy
 scoreboard objectives add race.checkpoints_completed dummy
 scoreboard objectives add race.soundThisTick dummy
+scoreboard objectives add race.effectDelay dummy
 
 # and set those scoreboards
 scoreboard players set @a race.laps_completed 0
@@ -35,7 +36,18 @@ scoreboard players set @a race.laptime.mins 0
 scoreboard players set @a race.fastest_lap 0
 scoreboard players set @a race.checkpoints_completed 0
 scoreboard players set @a race.soundThisTick 0
+scoreboard players set @a race.effectDelay 0
 
+# store players' personal records
+scoreboard objectives add race.daveysDivide.lap dummy
+scoreboard objectives add race.daveysDivide.time dummy
+scoreboard objectives add race.daveysDescent.lap dummy
+scoreboard objectives add race.daveysDescent.time dummy
+
+# create checkpoint entities
+execute in stmc:race/daveys_descent run function stmc:games/race/utils/spawn_checkpoints
+
+# reset sidebar
 scoreboard objectives remove race.sidebar
 
 # return to hub if carrot on a stick is used

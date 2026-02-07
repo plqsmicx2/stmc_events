@@ -6,7 +6,7 @@
 tellraw @s {text:" "}
 tellraw @s {text:"=========================",color:gray}
 tellraw @s {text:" "}
-tellraw @s {text:"Race is exactly what it sounds like: all players compete to run around a \
+tellraw @s {text:"In Race, all players compete to run around a \
         designated course. The players who complete the course faster earn more points.",color:green}
 tellraw @s {text:" "}
 tellraw @s {text:"The current map in rotation is Davey's Descent. The map for the Invitational III \

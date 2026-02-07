@@ -6,7 +6,7 @@
 # <gray>mc.stmc.net<gray>
 
 scoreboard objectives add joust.sidebar dummy {"text": "  Joust  ", "color": "#e6d96a", "bold": true}
-scoreboard objectives setdisplay sidebar.team.gold joust.sidebar
+scoreboard objectives setdisplay sidebar.team.gray joust.sidebar
 
 # <===== BUILD FROM THE BOTTOM =====>
 

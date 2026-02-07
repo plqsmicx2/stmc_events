@@ -8,4 +8,4 @@ function stmc:games/trials/replicate/load
 function stmc:games/trials/scramble/load
 function stmc:games/trials/spleef/load
 function stmc:games/trials/towers/load
-function stmc:games/trials/spleef/load
+function stmc:games/trials/solve/load

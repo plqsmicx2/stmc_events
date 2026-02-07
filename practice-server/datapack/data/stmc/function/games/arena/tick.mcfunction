@@ -6,6 +6,9 @@ execute as @a[team=dim.arena] run item replace entity @s hotbar.8 with carrot_on
 execute as @a if score @s arena.return matches 1.. run function stmc:lobby/teleport
 scoreboard players set @a arena.return 0
 
+# give saturation
+effect give @a[team=dim.arena] saturation 1 1 true
+
 # set arrow damage
 execute in stmc:arena/main as @e[type=arrow,tag=!damage.set] run \
         data merge entity @s {Tags:["damage.set"],damage:10d}

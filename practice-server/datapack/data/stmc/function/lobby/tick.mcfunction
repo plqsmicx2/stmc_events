@@ -8,7 +8,7 @@ execute as @a[nbt={Dimension:"race:race"}] in stmc:lobby/main run tp @s 0 100 0
 execute as @a[nbt={Dimension:"race:race"}] in stmc:lobby/main run spawnpoint @s 0 100 0
 
 # speed pad
-execute as @a at @s if block ~ ~-1 ~ pink_glazed_terracotta run effect give @s speed 5 0 true
+execute as @a at @s if block ~ ~-1 ~ pink_glazed_terracotta run function stmc:thread/grant_speed
 
 # interaction check
 execute in stmc:lobby/main as @e[type=interaction,distance=..1000] if data entity @s interaction run data modify entity @s attack set from entity @s interaction

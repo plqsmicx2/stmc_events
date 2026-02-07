@@ -1,19 +1,49 @@
 # function to reset a player once they complete all 4 laps
 
 # calculate fastest lap time
-function stmc:games/race/flap_calculation
+function stmc:games/race/api/flap_calculation
 
-# determine if player set a new record
+# determine if player set a new overall record
 scoreboard objectives add .record dummy
-execute store result score race.handler .record run data get storage race:data record.time
-execute if score @s race.laptime.total < race.handler .record as @s run function stmc:games/race/update_record
+execute if score @s race.gameActive matches 1 store result score race.handler .record run \
+        data get storage race:data record.Divide.time
+execute if score @s race.gameActive matches 2 store result score race.handler .record run \
+        data get storage race:data record.Descent.time
+
+execute if score @s race.laptime.total < race.handler .record as @s \
+        if score @s race.gameActive matches 1 run function stmc:games/race/api/records/update_time {map:"Divide"}
+
+execute if score @s race.laptime.total < race.handler .record as @s \
+        if score @s race.gameActive matches 2 run function stmc:games/race/api/records/update_time {map:"Descent"}
+
 scoreboard objectives remove .record
 
-# determine if player set a new record
+# determine if player set a new overall lap record
 scoreboard objectives add .recordLap dummy
-execute store result score race.handler .recordLap run data get storage race:data record.lap.time
-execute if score @s race.fastest_lap < race.handler .recordLap as @s run function stmc:games/race/update_lap_record
+execute if score @s race.gameActive matches 1 store result score race.handler .recordLap run \
+        data get storage race:data record.Divide.lap.time
+execute if score @s race.gameActive matches 2 store result score race.handler .recordLap run \
+        data get storage race:data record.Descent.lap.time
+
+execute if score @s race.fastest_lap < race.handler .recordLap as @s \
+        if score @s race.gameActive matches 1 run function stmc:games/race/api/records/update_lap {map:"Divide"}
+
+execute if score @s race.fastest_lap < race.handler .recordLap as @s \
+        if score @s race.gameActive matches 2 run function stmc:games/race/api/records/update_lap {map:"Descent"}
+
 scoreboard objectives remove .recordLap
+
+# determine if player set a new personal record
+execute if score @s race.gameActive matches 1 if score @s race.laptime.total < @s race.daveysDivide.time as @s \
+        run function stmc:games/race/api/records/update_personal_time {map:"Divide"}
+execute if score @s race.gameActive matches 2 if score @s race.laptime.total < @s race.daveysDescent.time as @s \
+        run function stmc:games/race/api/records/update_personal_time {map:"Descent"}
+
+# determine if player set a new personal lap record
+execute if score @s race.gameActive matches 1 if score @s race.fastest_lap < @s race.daveysDivide.lap as @s \
+        run function stmc:games/race/api/records/update_personal_lap {map:"Divide"}
+execute if score @s race.gameActive matches 2 if score @s race.fastest_lap < @s race.daveysDescent.lap as @s \
+        run function stmc:games/race/api/records/update_personal_lap {map:"Descent"}
 
 # determine minutes
 scoreboard objectives add race.fastest_lap.mins dummy

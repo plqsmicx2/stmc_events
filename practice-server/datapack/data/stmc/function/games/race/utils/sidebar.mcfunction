@@ -25,7 +25,7 @@ scoreboard players display name race.empty1 race.sidebar {text:""}
 scoreboard players display numberformat race.empty1 race.sidebar blank
 
 # announce record lap
-execute store result score .raceLap race.laptime.total run data get storage race:data record.lap.time
+execute store result score .raceLap race.laptime.total run data get storage race:data record.Descent.time
 
 # determine minutes
 scoreboard objectives add race.laptime.mins_temp dummy
@@ -61,11 +61,11 @@ scoreboard players display numberformat race.recordTimeLap race.sidebar blank
 
 # record lap player
 scoreboard players set race.recordPlayerLap race.sidebar 4
-scoreboard players display name race.recordPlayerLap race.sidebar [{text:"Lap: ",color:white},{"storage":"race:data","nbt":"record.lap.name","color": "gold"}]
+scoreboard players display name race.recordPlayerLap race.sidebar [{text:"Davey's Descent: ",color:white},{"storage":"race:data","nbt":"record.Descent.name","color": "gold"}]
 scoreboard players display numberformat race.recordPlayerLap race.sidebar blank
 
 # announce record
-execute store result score .race race.laptime.total run data get storage race:data record.time
+execute store result score .race race.laptime.total run data get storage race:data record.Divide.time
 
 # determine minutes
 scoreboard objectives add race.laptime.mins_temp dummy
@@ -101,7 +101,7 @@ scoreboard players display numberformat race.recordTime race.sidebar blank
 
 # record player
 scoreboard players set race.recordPlayer race.sidebar 6
-scoreboard players display name race.recordPlayer race.sidebar [{text:"Total: ",color:white},{"storage":"race:data","nbt":"record.name","color": "gold"}]
+scoreboard players display name race.recordPlayer race.sidebar [{text:"Davey's Divide: ",color:white},{"storage":"race:data","nbt":"record.Divide.name","color": "gold"}]
 scoreboard players display numberformat race.recordPlayer race.sidebar blank
 
 # <==== HEADER INFO =====>
@@ -112,7 +112,7 @@ scoreboard players display numberformat §b race.sidebar blank
 
 # record header
 scoreboard players set race.recordHead race.sidebar 8
-scoreboard players display name race.recordHead race.sidebar {"text": "Current Records:", "color": "yellow"}
+scoreboard players display name race.recordHead race.sidebar {"text": "Current Map Records:", "color": "yellow"}
 scoreboard players display numberformat race.recordHead race.sidebar blank
 
 # blank line #2
