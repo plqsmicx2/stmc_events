@@ -23,6 +23,10 @@ scoreboard objectives add race.checkpoints_completed dummy
 scoreboard objectives add race.soundThisTick dummy
 scoreboard objectives add race.effectDelay dummy
 
+#track ender pearls
+scoreboard objectives add race.daveysDescent.game.used_pearl used:minecraft.ender_pearl
+scoreboard objectives add race.daveysDescent.game.has_pearl dummy
+
 # and set those scoreboards
 scoreboard players set @a race.laps_completed 0
 scoreboard players set @a race.laptime.1 0
