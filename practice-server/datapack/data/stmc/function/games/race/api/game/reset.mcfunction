@@ -1,7 +1,7 @@
 # function to reset a player once they complete all 4 laps
 
 # calculate fastest lap time
-function stmc:games/race/api/flap_calculation
+execute as @s run function stmc:games/race/api/flap_calculation
 
 # determine if player set a new overall record
 scoreboard objectives add .record dummy

@@ -39,8 +39,8 @@ scoreboard players set @s race.effectDelay 0
 execute unless score @s race.daveysDivide.lap matches 0.. run \
         scoreboard players set @s race.daveysDivide.lap 14400
 execute unless score @s race.daveysDivide.time matches 0.. run \
-        scoreboard players set @s race.daveysDivide.lap 14400
+        scoreboard players set @s race.daveysDivide.time 14400
 execute unless score @s race.daveysDescent.lap matches 0.. run \
         scoreboard players set @s race.daveysDescent.lap 14400
 execute unless score @s race.daveysDescent.time matches 0.. run \
-        scoreboard players set @s race.daveysDescent.lap 14400
+        scoreboard players set @s race.daveysDescent.time 14400
