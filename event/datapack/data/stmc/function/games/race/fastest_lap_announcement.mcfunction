@@ -1,7 +1,7 @@
 # <===== FASTEST LAP CALCULATIONS =====>
 
 # quick ranking calculation
-function race:calculate_rankings
+function stmc:games/race/calculate_rankings
 
 # but timing calculations
 # deriving minutes & seconds from ticks

@@ -18,6 +18,13 @@ scoreboard players reset @s[scores={race.daveysDescent.game.has_pearl=0}] race.d
 execute as @s at @s if block ~ ~ ~ lava run scoreboard players set @s race.return 1
 execute as @s at @s if block ~ ~-1 ~ lava run scoreboard players set @s race.return 1
 
+# teleport players back if they're stuck in a block
+execute as @s at @s unless block ~ ~1 ~ air unless block ~ ~1 ~ water unless block ~ ~1 ~ lava unless block ~ ~1 ~ #cave_vines unless block ~ ~1 ~ weeping_vines unless block ~ ~1 ~ twisting_vines unless block ~ ~1 ~ structure_void unless block ~ ~1 ~ torch \
+        run scoreboard players add @s race.suffocation 1
+execute if score @s race.suffocation matches 40.. run scoreboard players set @s race.return 1
+execute if score @s race.suffocation matches 40.. run tellraw @s {text:"Resetting due to suffocation concerns.",color:gray,bold:true}
+execute if score @s race.suffocation matches 40.. run scoreboard players set @s race.suffocation 0
+
 # grant wind charge
 execute as @s at @s if block ~ ~-1 ~ white_concrete unless items entity @s hotbar.0 wind_charge run \
         item replace entity @s hotbar.0 with wind_charge 1

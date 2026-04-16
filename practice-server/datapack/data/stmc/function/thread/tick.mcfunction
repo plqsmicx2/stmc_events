@@ -3,6 +3,7 @@ execute as @a run team leave @s
 execute as @a[nbt={Dimension:"stmc:lobby/main"}] run team join dim.lobby
 execute as @a[nbt={Dimension:"stmc:race/daveys_divide"}] run team join dim.race
 execute as @a[nbt={Dimension:"stmc:race/daveys_descent"}] run team join dim.race
+execute as @a[nbt={Dimension:"stmc:race/daveys_dream"}] run team join dim.race
 execute as @a[nbt={Dimension:"stmc:extract/main"}] run team join dim.extract
 execute as @a[nbt={Dimension:"stmc:trials/lobby"}] run team join dim.trials
 execute as @a[nbt={Dimension:"stmc:trials/scramble"}] run team join dim.tr.scramble

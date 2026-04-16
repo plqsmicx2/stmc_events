@@ -1,5 +1,8 @@
 # helper function that creates & sets scoreboards
 
+# prevent stuck pressure plates
+execute in stmc:race/daveys_descent run forceload add -20 180 20 220
+
 # disable collision
 team modify dim.race collisionRule never
 
@@ -22,6 +25,9 @@ scoreboard objectives add race.fastest_lap dummy
 scoreboard objectives add race.checkpoints_completed dummy
 scoreboard objectives add race.soundThisTick dummy
 scoreboard objectives add race.effectDelay dummy
+
+# suffocation check
+scoreboard objectives add race.suffocation dummy
 
 #track ender pearls
 scoreboard objectives add race.daveysDescent.game.used_pearl used:minecraft.ender_pearl
@@ -47,6 +53,8 @@ scoreboard objectives add race.daveysDivide.lap dummy
 scoreboard objectives add race.daveysDivide.time dummy
 scoreboard objectives add race.daveysDescent.lap dummy
 scoreboard objectives add race.daveysDescent.time dummy
+scoreboard objectives add race.daveysDream.lap dummy
+scoreboard objectives add race.daveysDream.time dummy
 
 # create checkpoint entities
 execute in stmc:race/daveys_descent run function stmc:games/race/utils/spawn_checkpoints
@@ -59,3 +67,6 @@ scoreboard objectives add .return used:carrot_on_a_stick
 
 # return to last checkpoint if warped fungus is used
 scoreboard objectives add race.return used:warped_fungus_on_a_stick
+
+# reset course if apple is eaten
+scoreboard objectives add race.reset minecraft.used:apple

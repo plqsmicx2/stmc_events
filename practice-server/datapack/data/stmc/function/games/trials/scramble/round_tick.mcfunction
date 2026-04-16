@@ -44,37 +44,37 @@ execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:black_concrete
 
 # keep dark oak wood
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 1 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:snow_block
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 1 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:light_blue_wool
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 1 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:pink_wool
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 1 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:blackstone
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 1 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:moss_block
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 1 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:shroomlight
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 1 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:amethyst_block
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 1 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:tinted_glass
 
 # keep snow block
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 2 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:stripped_dark_oak_wood
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 2 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:light_blue_wool
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 2 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:calcite
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 2 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:blackstone
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 2 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:moss_block
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 2 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:shroomlight
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 2 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:amethyst_block
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 2 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:tinted_glass
 
 # keep light blue wool
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 3 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:stripped_dark_oak_wood
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 3 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:snow_block
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 3 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:calcite
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 3 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:pink_wool
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 3 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:moss_block
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 3 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:shroomlight
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 3 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:amethyst_block
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 3 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:tinted_glass
 
 # keep moss block
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:stripped_dark_oak_wood
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:snow_block
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:light_blue_wool
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:shroomlight
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:calcite
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:pink_wool
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:blackstone
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:amethyst_block
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 4 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:tinted_glass
 
-# keep shroomlight
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 5 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:stripped_dark_oak_wood
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 5 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:snow_block
-execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 5 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:light_blue_wool
+# keep amethyst_block
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 5 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:calcite
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 5 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:pink_wool
+execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 5 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:blackstone
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 5 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:moss_block
 execute if score scramble.lobby1 scramble.timer.round = scramble.lobby1 scramble.current_round_length if score scramble.lobby1 scramble.current_round_block matches 5 in stmc:trials/scramble run fill 193 100 -7 207 100 7 air replace minecraft:tinted_glass
 

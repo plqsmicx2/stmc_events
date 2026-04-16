@@ -19,7 +19,7 @@ execute if score scramble.handler scramble.timer.game matches 1 in stmc:trials/s
 execute as @e[tag=upper_level] store result entity @s Pos[0] double 1 run random value -25..10
 execute as @e[tag=upper_level] store result entity @s Pos[1] double 1 run random value 20..70
 execute as @e[tag=upper_level] store result entity @s Pos[2] double 1 run random value -25..10
-execute as @e[tag=upper_level] positioned as @s in stmc:trials/scramble run clone ~ ~ ~ ~14 ~ ~14 -7 116 -7
+execute as @e[tag=upper_level] positioned as @s in stmc:trials/scramble run clone ~ ~ ~ ~13 ~ ~13 -7 116 -7
 kill @e[tag=upper_level]
 
 # <===== FLOOR CLEAR =====>

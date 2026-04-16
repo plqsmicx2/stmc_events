@@ -60,7 +60,9 @@ execute as @s run function stmc:games/race/utils/effects/on_checkpoint
 scoreboard players remove @s race.soundThisTick 1
 
 # update player checkpoint
-execute if score .temp currCheckpoint matches 0 unless score @s race.effectDelay matches 1.. as @s \
+execute if score .temp currCheckpoint matches 0 \
+        if score @s race.checkpoints_completed matches 8.. \
+        unless score @s race.effectDelay matches 1.. as @s \
         run function stmc:games/race/api/checkpoint/increment_lap
 scoreboard players operation @s race.checkpoints_completed = .temp currCheckpoint
 scoreboard objectives remove currCheckpoint

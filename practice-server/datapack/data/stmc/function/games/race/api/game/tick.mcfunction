@@ -46,9 +46,23 @@ execute if score @s race.return matches 1.. as @s in stmc:race/daveys_descent if
         function stmc:games/race/api/checkpoint/daveys_descent/return
 scoreboard players set @s race.return 0
 
+# give reset course item
+item replace entity @s hotbar.6 with apple[\
+        item_model="orange_dye",\
+        custom_name={text:"Reset Course",color:red,bold:true},\
+        food={can_always_eat:true,nutrition:0,saturation:0},\
+        consumable={consume_seconds:0}\
+] 1
+
+# check for course resets
+execute if score @s race.reset matches 1.. if score @s race.gameActive matches 1.. as @s run \
+        function stmc:games/race/teleport
+scoreboard players set @s race.reset 0
+
 # tick individual maps
 execute as @s if score @s race.gameActive matches 1 run function stmc:games/race/api/game/daveys_divide/tick
 execute as @s if score @s race.gameActive matches 2 run function stmc:games/race/api/game/daveys_descent/tick
+execute as @s if score @s race.gameActive matches 3 run function stmc:games/race/api/game/daveys_dream/tick
 
 # run reset on players once they complete
 execute if score @s race.laps_completed matches 3.. as @s run function stmc:games/race/api/game/reset

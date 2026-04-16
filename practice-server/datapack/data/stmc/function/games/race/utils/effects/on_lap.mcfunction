@@ -7,3 +7,7 @@ execute if score @s race.soundThisTick matches 0.. run scoreboard players remove
 
 # particles in front of player
 execute as @s at @s if score @s race.soundThisTick matches 0.. run particle wax_off ^ ^1 ^2 0.3 0.2 0.3 4 6 force @s 
+
+# subtitle announcement
+title @s title " "
+title @s subtitle {text:"Lap Completed!",color:red,bold:true}

@@ -63,8 +63,8 @@ team join BLUE_BEARS solve.BlueBears
 
 # rooms stats.roomCompleted header
 # no need to override display since it can be done in one line
-scoreboard players set Roomsstats.roomCompleted solve.sidebar 10
-scoreboard players display name Roomsstats.roomCompleted solve.sidebar {"text": "Rooms stats.roomCompleted:", "color": "yellow", "bold": true}
+scoreboard players set Roomscompleted solve.sidebar 10
+scoreboard players display name Roomscompleted solve.sidebar {"text": "Rooms completed:", "color": "yellow", "bold": true}
 
 # blank line
 scoreboard players set §a solve.sidebar 11

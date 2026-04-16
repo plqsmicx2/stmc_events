@@ -22,7 +22,7 @@ execute unless score scramble.handler scramble.stage matches 0.. run function st
 
 # if we're in stage 0, increment the timer & reset the platform
 execute if score scramble.handler scramble.stage matches 0 run scoreboard players add scramble.handler scramble.timer.delay1 1
-execute if score scramble.handler scramble.stage matches 0 in stmc:trials/scramble if score scramble.handler scramble.timer.delay1 matches 3 run fill -7 116 -7 7 116 7 tinted_glass
+execute if score scramble.handler scramble.stage matches 0 in stmc:trials/scramble if score scramble.handler scramble.timer.delay1 matches 3 run fill -7 116 -7 6 116 6 tinted_glass
 # move to next stage after 20 seconds
 execute if score scramble.handler scramble.stage matches 0 if score scramble.handler scramble.timer.delay1 matches 200.. run scoreboard players set scramble.handler scramble.stage 1
 

@@ -35,6 +35,13 @@ scoreboard players set @s race.fastest_lap 0
 scoreboard players set @s race.checkpoints_completed 0
 scoreboard players set @s race.soundThisTick 0
 scoreboard players set @s race.effectDelay 0
+scoreboard players set @s race.suffocation 0
+
+scoreboard players set @s race.gameActive 0
+
+stopsound @a
+
+clear @s
 
 execute unless score @s race.daveysDivide.lap matches 0.. run \
         scoreboard players set @s race.daveysDivide.lap 14400
@@ -44,3 +51,7 @@ execute unless score @s race.daveysDescent.lap matches 0.. run \
         scoreboard players set @s race.daveysDescent.lap 14400
 execute unless score @s race.daveysDescent.time matches 0.. run \
         scoreboard players set @s race.daveysDescent.time 14400
+execute unless score @s race.daveysDream.lap matches 0.. run \
+        scoreboard players set @s race.daveysDream.lap 14400
+execute unless score @s race.daveysDream.time matches 0.. run \
+        scoreboard players set @s race.daveysDream.time 14400
